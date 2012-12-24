@@ -7,7 +7,6 @@ gem 'pg'
 
 # Models
 gem 'attribute_normalizer'
-gem 'rocket_tag'
 
 # Server
 gem 'thin'
