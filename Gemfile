@@ -14,6 +14,7 @@ gem 'thin'
 
 # Autenticación/autorización
 gem 'devise'
+gem 'cancan'
 
 # I18n
 gem 'rails-i18n'
