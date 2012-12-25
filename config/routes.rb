@@ -16,6 +16,12 @@ BibliotecaDelEter::Application.routes.draw do
     edit: 'editar'
   }
 
-  resources :cartas
+  # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
+  masculinos  = { new: "nuevo", edit: "editar" }
+  femeninos   = { new: "nueva", edit: "editar" }
+
+  with_options path_names: femeninos do |r|
+    r.resources :cartas
+  end
 
 end

@@ -67,6 +67,9 @@ module BibliotecaDelEter
 
     config.generators do |g|
       g.test_framework :mini_test, spec: true, fixture: false
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
     end
 
   end
