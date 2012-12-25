@@ -7,6 +7,7 @@ gem 'pg'
 
 # Models
 gem 'attribute_normalizer'
+gem 'inflections'
 
 # Server
 gem 'thin'
