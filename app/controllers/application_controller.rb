@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   # Cancan
-  check_authorization unless: :devise_controller?
+  load_and_authorize_resource unless: :devise_controller?
   alias_method  :current_user, :current_usuario
 end

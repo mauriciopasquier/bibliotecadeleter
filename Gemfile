@@ -15,7 +15,7 @@ gem 'draper'
 gem 'kaminari'
 
 # Controller
-gem 'inherited_resources'
+gem 'responders'
 gem 'has_scope'
 
 # Server
