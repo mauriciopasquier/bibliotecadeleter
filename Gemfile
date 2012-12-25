@@ -12,6 +12,13 @@ gem 'inflections'
 # Server
 gem 'thin'
 
+# Autenticación/autorización
+gem 'devise'
+
+# I18n
+gem 'rails-i18n'
+gem 'devise-i18n'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
