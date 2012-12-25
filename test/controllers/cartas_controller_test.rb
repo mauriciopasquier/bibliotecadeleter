@@ -1,0 +1,74 @@
+# encoding: utf-8
+require "minitest_helper"
+
+describe CartasController do
+
+  it "debe acceder al index anónimamente" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:cartas)
+  end
+
+  it "no debe acceder a new anónimamente" do
+    get :new
+    assert_redirected_to :root
+  end
+
+  it "debe acceder a new si está logueado" do
+    loguearse
+    get :new
+    assert_response :success
+  end
+
+  it "debe crear una carta si está logueado" do
+    loguearse
+    assert_difference('Carta.count') do
+      post :create, carta: attributes_for(:carta)
+    end
+
+    assert_redirected_to carta_path(assigns(:carta))
+  end
+
+  it "no debe crear una carta anónimamente" do
+    post :create, carta: attributes_for(:carta)
+    assert_redirected_to :root
+  end
+
+  it "debe mostrar una carta anónimamente" do
+    get :show, id: create(:carta)
+    assert_response :success
+  end
+
+  it "debe acceder a edit si está logueado" do
+    loguearse
+    get :edit, id: create(:carta)
+    assert_response :success
+  end
+
+  it "no debe acceder a edit anónimamente" do
+    get :edit, id: create(:carta)
+    assert_redirected_to :root
+  end
+
+  it "debe actualizar una carta si está logueado" do
+    loguearse
+    carta = create(:carta)
+    atributos = attributes_for(:carta)
+    put :update, id: carta, carta: atributos
+    assert_redirected_to carta_path(assigns(:carta))
+    carta.reload
+    assert_equal atributos[:texto], carta.texto, "No actualiza el texto"
+    assert_equal atributos[:nombre], carta.nombre, "No actualiza el nombre"
+  end
+
+  it "no debe actualizar una carta anónimamente" do
+    put :update, id: create(:carta), carta: attributes_for(:carta)
+    assert_redirected_to :root
+  end
+
+  it "debe destruir una carta si está logueado" do
+    delete :destroy, id: create(:carta)
+    assert_redirected_to :root
+  end
+
+end

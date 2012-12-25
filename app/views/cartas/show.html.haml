@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @carta.nombre
+%p
+  %b Texto:
+  = @carta.texto
+
+= link_to 'Edit', edit_carta_path(@carta)
+\|
+= link_to 'Back', cartas_path

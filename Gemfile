@@ -28,6 +28,7 @@ gem 'cancan'
 # I18n
 gem 'rails-i18n'
 gem 'devise-i18n'
+gem 'i18n_country_select'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
