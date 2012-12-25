@@ -30,6 +30,6 @@ group :development do
 end
 
 group :test do
-  gem 'turn', require: false   # Pretty printed test output
   gem 'factory_girl_rails'
+  gem 'minitest-rails-capybara'
 end
