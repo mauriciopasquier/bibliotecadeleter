@@ -5,9 +5,18 @@ gem 'rails', '3.2.9'
 # Database
 gem 'pg'
 
-# Models
+# Model
 gem 'attribute_normalizer'
 gem 'inflections'
+
+# View
+gem 'haml-rails'
+gem 'draper'
+gem 'kaminari'
+
+# Controller
+gem 'inherited_resources'
+gem 'has_scope'
 
 # Server
 gem 'thin'
@@ -19,11 +28,6 @@ gem 'cancan'
 # I18n
 gem 'rails-i18n'
 gem 'devise-i18n'
-
-# Presentación
-gem 'haml-rails'
-gem 'draper'
-gem 'kaminari'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
