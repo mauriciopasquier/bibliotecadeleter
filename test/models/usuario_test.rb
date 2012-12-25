@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "minitest_helper"
+require "./test/minitest_helper"
 
 describe Usuario do
   it "must be valid" do

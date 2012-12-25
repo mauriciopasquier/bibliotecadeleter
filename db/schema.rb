@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225185926) do
+ActiveRecord::Schema.define(:version => 20121225220523) do
 
   create_table "cartas", :force => true do |t|
     t.string   "nombre"
-    t.text     "texto"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -38,5 +37,21 @@ ActiveRecord::Schema.define(:version => 20121225185926) do
 
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
   add_index "usuarios", ["reset_password_token"], :name => "index_usuarios_on_reset_password_token", :unique => true
+
+  create_table "versiones", :force => true do |t|
+    t.text     "texto"
+    t.string   "tipo"
+    t.string   "supertipo"
+    t.string   "subtipo"
+    t.integer  "fue"
+    t.integer  "res"
+    t.string   "senda"
+    t.text     "ambientacion"
+    t.integer  "numero"
+    t.string   "rareza"
+    t.integer  "coste"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
 end

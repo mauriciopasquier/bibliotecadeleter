@@ -3,7 +3,6 @@
 %table
   %tr
     %th Nombre
-    %th Texto
     %th
     %th
     %th
@@ -11,7 +10,6 @@
   - @cartas.each do |carta|
     %tr
       %td= carta.nombre
-      %td= carta.texto
       %td= link_to 'Show', carta
       %td= link_to 'Edit', edit_carta_path(carta)
       %td= link_to 'Destroy', carta, method: :delete, data: { confirm: 'Are you sure?' }

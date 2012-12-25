@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "minitest_helper"
+require "./test/minitest_helper"
 
 describe CartasController do
 
@@ -57,7 +57,6 @@ describe CartasController do
     put :update, id: carta, carta: atributos
     assert_redirected_to carta_path(assigns(:carta))
     carta.reload
-    assert_equal atributos[:texto], carta.texto, "No actualiza el texto"
     assert_equal atributos[:nombre], carta.nombre, "No actualiza el nombre"
   end
 

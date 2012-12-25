@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Texto:
+  = @version.texto
+%p
+  %b Tipo:
+  = @version.tipo
+%p
+  %b Supertipo:
+  = @version.supertipo
+%p
+  %b Subtipo:
+  = @version.subtipo
+%p
+  %b Fue:
+  = @version.fue
+%p
+  %b Res:
+  = @version.res
+%p
+  %b Senda:
+  = @version.senda
+%p
+  %b Ambientacion:
+  = @version.ambientacion
+%p
+  %b Numero:
+  = @version.numero
+%p
+  %b Rareza:
+  = @version.rareza
+%p
+  %b Coste:
+  = @version.coste
+
+= link_to 'Edit', edit_version_path(@version)
+\|
+= link_to 'Back', versiones_path

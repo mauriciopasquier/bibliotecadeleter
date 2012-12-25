@@ -22,6 +22,7 @@ BibliotecaDelEter::Application.routes.draw do
 
   with_options path_names: femeninos do |r|
     r.resources :cartas
+    r.resources :versiones
   end
 
 end

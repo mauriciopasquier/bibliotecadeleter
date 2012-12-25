@@ -1,0 +1,39 @@
+%h1 Listing versiones
+
+%table
+  %tr
+    %th Texto
+    %th Tipo
+    %th Supertipo
+    %th Subtipo
+    %th Fue
+    %th Res
+    %th Senda
+    %th Ambientacion
+    %th Numero
+    %th Rareza
+    %th Coste
+    %th
+    %th
+    %th
+
+  - @versiones.each do |version|
+    %tr
+      %td= version.texto
+      %td= version.tipo
+      %td= version.supertipo
+      %td= version.subtipo
+      %td= version.fue
+      %td= version.res
+      %td= version.senda
+      %td= version.ambientacion
+      %td= version.numero
+      %td= version.rareza
+      %td= version.coste
+      %td= link_to 'Show', version
+      %td= link_to 'Edit', edit_version_path(version)
+      %td= link_to 'Destroy', version, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Version', new_version_path
