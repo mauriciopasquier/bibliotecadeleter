@@ -20,6 +20,9 @@ gem 'cancan'
 gem 'rails-i18n'
 gem 'devise-i18n'
 
+# Presentación
+gem 'haml-rails'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
