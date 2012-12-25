@@ -23,6 +23,7 @@ gem 'devise-i18n'
 # Presentación
 gem 'haml-rails'
 gem 'draper'
+gem 'kaminari'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
