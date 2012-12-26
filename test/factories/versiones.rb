@@ -5,12 +5,13 @@ FactoryGirl.define do
     tipo          'Aliado'
     supertipo     'Instantáneo'
     subtipo       'Humano'
-    fue           2
-    res           1
+    fue           { rand(10) }
+    res           { rand(10) }
     senda         'Locura'
     ambientacion  'Una frase épica.'
-    numero        111
+    numero        { rand(130) }
     rareza        'E'
-    coste         2
+    coste         { rand(13) }
+    canonica      false
   end
 end

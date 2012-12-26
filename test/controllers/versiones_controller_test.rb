@@ -53,7 +53,7 @@ describe VersionesController do
   it "debe actualizar una version si está logueado" do
     loguearse
     version = create(:version)
-    atributos = attributes_for(:version)
+    atributos = attributes_for(:version, canonica: true)
     put :update, id: version, version: atributos
     assert_redirected_to version_path(assigns(:version))
     version.reload
@@ -68,6 +68,7 @@ describe VersionesController do
     assert_equal atributos[:numero], version.numero, "No actualiza el numero"
     assert_equal atributos[:rareza], version.rareza, "No actualiza la rareza"
     assert_equal atributos[:coste], version.coste, "No actualiza el coste"
+    assert_equal atributos[:canonica], version.canonica, "No actualiza si es canonica"
   end
 
   it "no debe actualizar una version anónimamente" do
