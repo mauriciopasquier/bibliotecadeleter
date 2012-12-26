@@ -3,4 +3,5 @@ class Version < ActiveRecord::Base
                   :subtipo, :supertipo, :texto, :tipo, :canonica
 
   belongs_to :carta
+  belongs_to :artista, counter_cache: :cantidad_de_ilustraciones
 end

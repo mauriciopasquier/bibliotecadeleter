@@ -1,5 +1,7 @@
 BibliotecaDelEter::Application.routes.draw do
 
+
+
   root to: 'cartas#index'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
@@ -25,4 +27,7 @@ BibliotecaDelEter::Application.routes.draw do
     r.resources :versiones
   end
 
+  with_options path_names: masculinos do |r|
+    r.resources :artistas
+  end
 end
