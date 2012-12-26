@@ -1,8 +1,12 @@
 BibliotecaDelEter::Application.routes.draw do
 
+  authenticated do
+    root to: "inicio#panel"
+  end
 
-
-  root to: 'cartas#index'
+  unauthenticated do
+    root to: 'inicio#bienvenida'
+  end
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
   devise_for :usuarios, path_names: {

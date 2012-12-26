@@ -1,0 +1,11 @@
+es:
+  devise:
+    registrations:
+      new:
+        nick:             "No necesitamos tu nombre real :)"
+        email:            "viden@bibliotecadeleter.com.ar"
+      edit:
+        nick:             "No necesitamos tu nombre real :)"
+        email:            "viden@bibliotecadeleter.com.ar"
+        password:         "Dejala así si no vas a cambiarla"
+        current_password: "Tu clave actual para confirmar los cambios"
