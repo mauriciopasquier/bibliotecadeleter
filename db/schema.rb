@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226111258) do
+ActiveRecord::Schema.define(:version => 20121226145257) do
+
+  create_table "artistas", :force => true do |t|
+    t.string   "nombre"
+    t.string   "web"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "cartas", :force => true do |t|
     t.string   "nombre",     :null => false
@@ -54,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20121226111258) do
     t.datetime "updated_at",                      :null => false
     t.integer  "carta_id"
     t.boolean  "canonica",     :default => false
+    t.integer  "artista_id"
   end
 
 end
