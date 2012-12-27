@@ -1,16 +1,16 @@
 class CreateVersiones < ActiveRecord::Migration
   def change
     create_table :versiones do |t|
-      t.text :texto, default: ''
-      t.string :tipo, default: ''
-      t.string :supertipo, default: ''
-      t.string :subtipo, default: ''
+      t.text :texto
+      t.string :tipo
+      t.string :supertipo
+      t.string :subtipo
       t.integer :fue
       t.integer :res
-      t.string :senda, default: ''
-      t.text :ambientacion, default: ''
+      t.string :senda
+      t.text :ambientacion
       t.integer :numero
-      t.string :rareza, default: ''
+      t.string :rareza
       t.integer :coste
 
       t.timestamps

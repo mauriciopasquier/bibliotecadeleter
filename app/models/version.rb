@@ -4,4 +4,5 @@ class Version < ActiveRecord::Base
 
   belongs_to :carta
   belongs_to :artista, counter_cache: :cantidad_de_ilustraciones
+  belongs_to :expansion
 end

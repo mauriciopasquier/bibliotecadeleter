@@ -4,6 +4,6 @@ class RemoveTextoFromCartas < ActiveRecord::Migration
   end
 
   def down
-    add_column :cartas, :texto, :text, default: ''
+    add_column :cartas, :texto, :text
   end
 end
