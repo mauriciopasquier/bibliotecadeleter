@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @expansion.nombre
+%p
+  %b Lanzamiento:
+  = @expansion.lanzamiento
+%p
+  %b Presentacion:
+  = @expansion.presentacion
+%p
+  %b Notas:
+  = @expansion.notas
+%p
+  %b Saga:
+  = @expansion.saga
+%p
+  %b Total:
+  = @expansion.total
+
+= link_to 'Edit', edit_expansion_path(@expansion)
+\|
+= link_to 'Back', expansiones_path

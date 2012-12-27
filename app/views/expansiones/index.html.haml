@@ -1,0 +1,29 @@
+%h1 Listing expansiones
+
+%table
+  %tr
+    %th Nombre
+    %th Lanzamiento
+    %th Presentacion
+    %th Notas
+    %th Saga
+    %th Total
+    %th
+    %th
+    %th
+
+  - @expansiones.each do |expansion|
+    %tr
+      %td= expansion.nombre
+      %td= expansion.lanzamiento
+      %td= expansion.presentacion
+      %td= expansion.notas
+      %td= expansion.saga
+      %td= expansion.total
+      %td= link_to 'Show', expansion
+      %td= link_to 'Edit', edit_expansion_path(expansion)
+      %td= link_to 'Destroy', expansion, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Expansion', new_expansion_path
