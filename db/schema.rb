@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226210432) do
+ActiveRecord::Schema.define(:version => 20121227224835) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20121226210432) do
     t.integer  "carta_id"
     t.boolean  "canonica",     :default => false
     t.integer  "artista_id"
+    t.integer  "expansion_id"
   end
 
 end
