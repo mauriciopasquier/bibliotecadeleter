@@ -4,6 +4,7 @@ gem 'rails', '3.2.9'
 
 # Database
 gem 'pg'
+gem 'yaml_db'
 
 # Model
 gem 'attribute_normalizer'
