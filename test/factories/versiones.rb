@@ -13,5 +13,7 @@ FactoryGirl.define do
     rareza        'E'
     coste         { rand(13) }
     canonica      false
+
+    expansion
   end
 end
