@@ -1,20 +1,30 @@
 require "bundler/capistrano"
 
 set :application, "Biblioteca del Éter"
-set :repository,  "set your repository location here"
 
-set :scm, :git
+server            "hackcoop.com.ar", :app, :web, :db, primary: true
+set :user,        "eter"
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+set :scm,         :git
+set :repository,  "git@hackcoop.com.ar:eter.git"
 
 # if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
+set :keep_releases, 5
+after "deploy:restart", "deploy:cleanup"
 
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
+# Evita que capistrano haga un clone completo del repositorio cada deploy
+set :deploy_via, :remote_cache
+
+# Crea el link simbólico para las imágenes de las cartas
+namespace :deploy do
+  namespace :assets do
+    task :linkear_estaticos do
+      run "ln -s #{shared_path}/cartas #{release_path}/public/cartas"
+    end
+  end
+end
+
+after "deploy:update_code", "deploy:assets:linkear_estaticos"
 
 # If you are using Passenger mod_rails uncomment this:
 # namespace :deploy do
@@ -24,9 +34,3 @@ role :db,  "your slave db-server here"
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
-
-task :linkear_estaticos do
-  run "ln -s #{shared_path}/cartas #{release_path}/public/cartas"
-end
-
-after "deploy:update_code", :linkear_estaticos
