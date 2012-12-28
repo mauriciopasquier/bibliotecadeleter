@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121228071206) do
+ActiveRecord::Schema.define(:version => 20121228222036) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -35,7 +35,10 @@ ActiveRecord::Schema.define(:version => 20121228071206) do
     t.integer  "total"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "slug",         :null => false
   end
+
+  add_index "expansiones", ["slug"], :name => "index_expansiones_on_slug", :unique => true
 
   create_table "imagenes", :force => true do |t|
     t.integer  "version_id"
@@ -84,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20121228071206) do
     t.boolean  "canonica",     :default => false
     t.integer  "artista_id"
     t.integer  "expansion_id"
+    t.string   "slug",                            :null => false
   end
 
 end

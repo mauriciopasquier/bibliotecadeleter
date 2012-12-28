@@ -14,6 +14,7 @@ gem 'paperclip'
 gem 'haml-rails'
 gem 'draper'
 gem 'kaminari'
+gem 'friendly_id'
 
 # Controller
 gem 'responders'

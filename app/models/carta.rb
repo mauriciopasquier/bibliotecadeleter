@@ -1,9 +1,13 @@
 # encoding: utf-8
 class Carta < ActiveRecord::Base
+  include FriendlyId
+
   attr_accessible :nombre, :versiones_attributes
 
   has_one :canonica,  class_name: 'Version', conditions: { canonica: true },
                       dependent: :destroy
+
+  friendly_id :nombre, use: :slugged
 
   has_many :versiones, order: 'created_at DESC'
   has_many :imagenes, through: :versiones

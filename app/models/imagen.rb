@@ -9,4 +9,8 @@ class Imagen < ActiveRecord::Base
     { url: '/estaticos/cartas/:expansion/:numero-:nombre.:extension' }
 
   validates_attachment_presence :archivo
+
+  def extension
+    File.extname(archivo.path).delete('.')
+  end
 end

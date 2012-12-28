@@ -15,5 +15,9 @@ FactoryGirl.define do
     canonica      false
 
     expansion
+
+    factory :version_con_carta do
+      carta
+    end
   end
 end

@@ -23,37 +23,37 @@ describe VersionesController do
   it "debe crear una version si está logueado" do
     loguearse
     assert_difference('Version.count') do
-      post :create, version: attributes_for(:version)
+      post :create, version: attributes_for(:version_con_carta)
     end
 
     assert_redirected_to version_path(assigns(:version))
   end
 
   it "no debe crear una version anónimamente" do
-    post :create, version: attributes_for(:version)
+    post :create, version: attributes_for(:version_con_carta)
     assert_redirected_to :root
   end
 
   it "debe mostrar una version anónimamente" do
-    get :show, id: create(:version)
+    get :show, id: create(:version_con_carta)
     assert_response :success
   end
 
   it "debe acceder a edit si está logueado" do
     loguearse
-    get :edit, id: create(:version)
+    get :edit, id: create(:version_con_carta)
     assert_response :success
   end
 
   it "no debe acceder a edit anónimamente" do
-    get :edit, id: create(:version)
+    get :edit, id: create(:version_con_carta)
     assert_redirected_to :root
   end
 
   it "debe actualizar una version si está logueado" do
     loguearse
-    version = create(:version)
-    atributos = attributes_for(:version, canonica: true)
+    version = create(:version_con_carta)
+    atributos = attributes_for(:version_con_carta, canonica: true)
     put :update, id: version, version: atributos
     assert_redirected_to version_path(assigns(:version))
     version.reload
@@ -72,12 +72,12 @@ describe VersionesController do
   end
 
   it "no debe actualizar una version anónimamente" do
-    put :update, id: create(:version), version: attributes_for(:version)
+    put :update, id: create(:version_con_carta), version: attributes_for(:version)
     assert_redirected_to :root
   end
 
   it "debe destruir una version si está logueado" do
-    delete :destroy, id: create(:version)
+    delete :destroy, id: create(:version_con_carta)
     assert_redirected_to :root
   end
 
