@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "Biblioteca del Éter"
 set :repository,  "set your repository location here"
 
@@ -22,3 +24,9 @@ role :db,  "your slave db-server here"
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
+
+task :linkear_estaticos do
+  run "ln -s #{shared_path}/cartas #{release_path}/public/cartas"
+end
+
+after "deploy:update_code", :linkear_estaticos
