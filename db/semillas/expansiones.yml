@@ -1,0 +1,47 @@
+# Las ediciones hasta la fecha
+'Despertar':
+  total:        184
+  lanzamiento:  2011-02-07
+  presentacion: 2011-02-05
+  notas:
+    diseño_y_desarrollo:
+      - Guillermo Fernández
+      - Nicolás Fernández
+      - Daniel Fernández
+      - Germán Moltó
+      - Gonzalo Prado
+    diseño_gráfico:
+      - Verónica Vallejos
+'Insania':
+  saga:         Crónicas de Ubanna
+  total:        184
+  lanzamiento:  2011-08-02
+  presentacion: 2011-07-29
+  notas:
+    diseño_y_desarrollo:
+      - Guillermo Fernández
+      - Nicolás Fernández
+      - Daniel Fernández
+      - Juan Torrecilla
+    dirección_de_arte:
+      - Germán Nóbile
+    diseño_gráfico:
+      - Verónica Vallejos
+'Conquista':
+  saga:         Crónicas de Ubanna
+  total:        124
+  lanzamiento:  2012-05-07
+  presentacion: 2012-05-05
+  notas:
+    diseño_y_desarrollo:
+      - Daniel Fernández
+      - Guillermo Fernández
+      - Nicolás Fernández
+      - Juan Torrecilla
+    dirección_de_arte:
+      - Germán Nóbile
+    diseño_gráfico:
+      - Verónica Vallejos
+'Destino':
+  saga:         Crónicas de Ubanna
+  total:        124
