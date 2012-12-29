@@ -1,7 +1,7 @@
 # encoding: utf-8
 class Expansion < ActiveRecord::Base
   include FriendlyId
-  store :notas
+  serialize :notas, HashWithIndifferentAccess
 
   attr_accessible :lanzamiento, :nombre, :notas, :presentacion, :saga, :total
 
