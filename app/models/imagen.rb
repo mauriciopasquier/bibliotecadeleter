@@ -6,7 +6,8 @@ class Imagen < ActiveRecord::Base
   has_one :carta, through: :version
 
   has_attached_file :archivo,
-    { url: '/estaticos/cartas/:expansion/:numero-:nombre.:extension' }
+    { url:  "/estaticos/cartas/:expansion/:carta-:numero.:extension",
+      path: ":rails_root/public/cartas/:expansion/:carta-:numero.:extension" }
 
   validates_attachment_presence :archivo
 
