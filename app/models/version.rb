@@ -7,7 +7,7 @@ class Version < ActiveRecord::Base
                   :imagen_attributes, :carta
 
   belongs_to :carta
-  belongs_to :artista, counter_cache: :cantidad_de_ilustraciones
+  has_and_belongs_to_many :artistas
   belongs_to :expansion
   has_one :imagen
 

@@ -11,13 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121228234325) do
+ActiveRecord::Schema.define(:version => 20121229013551) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
     t.string   "web"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "artistas_versiones", :id => false, :force => true do |t|
+    t.integer "artista_id"
+    t.integer "version_id"
   end
 
   create_table "cartas", :force => true do |t|
@@ -88,7 +93,6 @@ ActiveRecord::Schema.define(:version => 20121228234325) do
     t.datetime "updated_at",                      :null => false
     t.integer  "carta_id"
     t.boolean  "canonica",     :default => false
-    t.integer  "artista_id"
     t.integer  "expansion_id"
     t.string   "slug",                            :null => false
   end
