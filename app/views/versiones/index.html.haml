@@ -31,9 +31,9 @@
       %td= version.rareza
       %td= version.coste
       %td= link_to 'Show', version
-      %td= link_to 'Edit', edit_version_path(version)
-      %td= link_to 'Destroy', version, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to 'Edit', edit_carta_version_path(@carta, version)
+      %td= link_to 'Destroy', [@carta, version], method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-= link_to 'New Version', new_version_path
+= link_to 'New Version', new_carta_version_path(@carta)
