@@ -21,7 +21,7 @@ end
 # Carga cada carta, versiones y artistas
 Expansion.all.each do |expansion|
   cargar_csv_de(expansion.nombre.parameterize, headers: true, col_sep: ',') do |carta|
-    c = Carta.create(atributos_de_la_carta(carta))
+    c = Carta.find_or_create_by_nombre(atributos_de_la_carta(carta))
     v = c.versiones.create(atributos_de_la_version(carta))
 
     # Divide en 2 caras los demonios, las demás cartas en 1
