@@ -4,16 +4,16 @@ class Version < ActiveRecord::Base
 
   attr_accessible :ambientacion, :coste, :fue, :numero, :rareza, :res, :senda,
                   :subtipo, :supertipo, :texto, :tipo, :canonica,
-                  :imagen_attributes, :carta
+                  :imagenes_attributes, :carta
 
   belongs_to :carta
   has_and_belongs_to_many :artistas
   belongs_to :expansion
-  has_one :imagen
+  has_many :imagenes
 
   friendly_id :numero_justificado, use: :scoped, scope: :expansion
 
-  accepts_nested_attributes_for :imagen
+  accepts_nested_attributes_for :imagenes
 
   validates_presence_of :carta
 
