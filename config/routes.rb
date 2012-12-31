@@ -27,8 +27,9 @@ BibliotecaDelEter::Application.routes.draw do
   femeninos   = { new: "nueva", edit: "editar" }
 
   with_options path_names: femeninos do |r|
-    r.resources :cartas
-    r.resources :versiones
+    r.resources :cartas do
+      r.resources :versiones
+    end
     r.resources :expansiones
   end
 

@@ -1,0 +1,7 @@
+Nombre,N°,Rareza,Tipo,Supertipo,Subtipo,Senda,Coste,FUE,RES,Arte,Habilidades,Texto de ambientación
+Desfigurar,10,I,Ritual,Instantáneo,,Caos,1,,,"Mariano Luengo","El aliado objetivo que controlas obtiene +3 FUE, -1 RES hasta el final del turno.",
+Quiebrahuesos,22,E,Arma,,,Caos,5,5,5,Gonzalo Ordoñez,"Siempre que el aliado equipado ataque a un demonio, Quiebrahuesos hace 5 puntos de daño a tu demonio.","Mientras Rasap entonaba el himno de batalla, la sacerdotisa intentó nuevamente levantar la espada. Ligera como el viento, la Quiebrahuesos fue sometida."
+Interrumpir,43,I,Ritual,Instantáneo,,Locura,1,,,Gastón Zubeldia,Cancela el ritual objetivo.,"""¿Querías decir algo? Ya me parecía."" - Ubanna"
+Agilidad,55,I,Ritual,Instantáneo,,Muerte,3,,,Fernando Heinz Furukawa - Rocio Zucchi,Endereza el aliado objetivo.,
+Gruwek,70,E,Aliado,,Abominación,Muerte,3,2,1,Carlos Cabrera,Exilia las dos primeras cartas de tu inferno: Gruwek obtiene +1 FUE hasta el final del turno. Exilia la primera carta de tu mazo: Pon Gruwek en tu mano.,"No existe un cuento de terror infantil, sin un Gruwek como protagonista."
+Vivificar,104,I,Ritual,,,Poder,2,,,Esteban Campos Millapel,Toma la primera carta de tu mazo y ponla en juego girada como recurso.,"""Madre reclama lo que por origen nos pertenece."" -Dämonin"

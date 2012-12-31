@@ -3,6 +3,6 @@ require "./test/minitest_helper"
 
 describe Carta do
   it "must be valid" do
-    build_stubbed(:carta).valid?.must_equal true
+    build(:carta).valid?.must_equal true
   end
 end

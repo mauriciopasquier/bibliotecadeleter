@@ -1,8 +1,8 @@
 # encoding: utf-8
 require "./test/minitest_helper"
 
-describe Expansion do
+describe Imagen do
   it "must be valid" do
-    build(:expansion).valid?.must_equal true
+    build_stubbed(:imagen).valid?.must_equal true
   end
 end

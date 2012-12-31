@@ -6,6 +6,6 @@ FactoryGirl.define do
     saga          "Las Crónicas de Imbanna"
     lanzamiento   { 2.years.ago.to_date }
     presentacion  { 2.years.ago.to_date }
-    notas         "<b>Notón</b>"
+    notas         { HashWithIndifferentAccess.new(r_y_d: 'los mismos de siempre') }
   end
 end

@@ -8,11 +8,13 @@ gem 'pg'
 # Model
 gem 'attribute_normalizer'
 gem 'inflections'
+gem 'paperclip'
 
 # View
 gem 'haml-rails'
 gem 'draper'
 gem 'kaminari'
+gem 'friendly_id'
 
 # Controller
 gem 'responders'
