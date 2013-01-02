@@ -1,5 +1,8 @@
 # encoding: utf-8
 class ArtistasController < ApplicationController
+
+  load_and_authorize_resource
+
   def index
     respond_with(@artistas)
   end
