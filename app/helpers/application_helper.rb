@@ -10,4 +10,8 @@ module ApplicationHelper
     html << '</div>'
   end
 
+  def titulo
+    "Biblioteca Del Eter#{@titulo ? " #{@titulo}" : nil}"
+  end
+
 end
