@@ -1,9 +1,12 @@
 require "bundler/capistrano"
 
-set :application, "Biblioteca del Éter"
+set :application, "BibliotecaDelEter"
 
 server            "hackcoop.com.ar", :app, :web, :db, primary: true
 set :user,        "eter"
+set :deploy_to,   "~/app"
+set :use_sudo,    false
+set :ssh_options, { forward_agent: true}
 
 set :scm,         :git
 set :repository,  "git@hackcoop.com.ar:eter.git"
@@ -18,13 +21,20 @@ set :deploy_via, :remote_cache
 # Crea el link simbólico para las imágenes de las cartas
 namespace :deploy do
   namespace :assets do
+    desc "Crea el link simbólico para las imágenes de las cartas"
     task :linkear_estaticos do
       run "ln -s #{shared_path}/cartas #{release_path}/public/cartas"
+    end
+
+    desc "Construye los estilos nuevos de paperclip"
+    task :refresh_styles, roles: :app do
+      run "cd #{release_path}; RAILS_ENV=production bundle exec rake paperclip:refresh:missing_styles"
     end
   end
 end
 
 after "deploy:update_code", "deploy:assets:linkear_estaticos"
+after "deploy:update_code", "deploy:assets:refresh_styles"
 
 # If you are using Passenger mod_rails uncomment this:
 # namespace :deploy do
