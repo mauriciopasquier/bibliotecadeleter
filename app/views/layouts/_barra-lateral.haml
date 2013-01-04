@@ -1,0 +1,12 @@
+%ul.menu.nav.nav-list
+  %li
+    %a#expansiones.plegable.nav-header{href: '#expansiones'} Expansiones
+    %ul
+      - expansiones.each do |e|
+        %li= link_to e.nombre, e
+  %li
+    %a#artistas.plegable.nav-header{href: '#artistas'} Artistas más prolíficos
+    %ul
+      - artistas(:top5).each do |a|
+        %li= link_to a.nombre, a
+      %li= link_to 'Todos los artistas', artistas_path
