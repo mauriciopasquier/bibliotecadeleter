@@ -1,3 +1,4 @@
-class CartaDecorator < Draper::Base
+# encoding: utf-8
+class CartaDecorator < ApplicationDecorator
   decorates :carta
 end
