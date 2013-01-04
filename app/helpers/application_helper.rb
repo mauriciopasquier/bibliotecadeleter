@@ -14,11 +14,11 @@ module ApplicationHelper
     "Biblioteca Del Eter#{@titulo ? " #{@titulo}" : nil}"
   end
 
-  def expansiones
-    Expansion.all
+  def expansiones(scope = :all)
+    Expansion.send scope
   end
 
-  def artistas(scope)
+  def artistas(scope = :all)
     Artista.send scope
   end
 
