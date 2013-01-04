@@ -14,6 +14,7 @@ cargar_yml_de('expansiones').each do |expansion|
     e.total = datos[:total]
     e.lanzamiento = datos[:lanzamiento]
     e.presentacion = datos[:presentacion]
+    e.saga = datos[:saga]
     e.notas = datos[:notas]
   end
 end
