@@ -2,18 +2,14 @@
 class ApplicationDecorator < Draper::Base
 
   # TODO Armarlo con las funciones de tags para evitar el != en haml
-  def hash_a_dl(hash, *clases)
-    clase = clases.extract_options!
-    html = "<dl #{clase[:dt].present? ? "class='#{clase[:dl]}'" : nil}>"
-    hash.each_pair do |dt, dd|
+  def hash_a_dl(*hash)
+    clase = hash.extract_options!
+    html = "<dl #{clase[:dl].present? ? "class='#{clase[:dl]}'" : nil}>"
+    hash.first.each_pair do |dt, dd|
       html << "<dt #{clase[:dt].present? ? "class='#{clase[:dt]}'" : nil}>#{dt.humanize}</dt>"
 
-      if dd.instance_of? Array
-        dd.each do |item|
-          html << "<dd #{clase[:dd].present? ? "class='#{clase[:dd]}'" : nil}>#{item}</dd>"
-        end
-      else
-        html << "<dd #{clase[:dd].present? ? "class='#{clase[:dd]}'" : nil}>#{dd}</dd>"
+      Array.wrap(dd).each do |item|
+        html << "<dd #{clase[:dd].present? ? "class='#{clase[:dd]}'" : nil}>#{item}</dd>"
       end
 
     end

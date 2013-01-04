@@ -3,18 +3,22 @@
 %p
   %b Nombre:
   = @expansion.nombre
-%p
-  %b Lanzamiento:
-  = @expansion.lanzamiento
-%p
-  %b Presentacion:
-  = @expansion.presentacion
-%p
-  %b Notas:
-  = @expansion.notas
-%p
-  %b Saga:
-  = @expansion.saga
+- if @expansion.lanzamiento?
+  %p
+    %b Lanzamiento:
+    = @expansion.lanzamiento
+- if @expansion.presentacion?
+  %p
+    %b Presentacion:
+    = @expansion.presentacion
+- if @expansion.notas?
+  %p
+    %b Notas:
+    != @expansion.notas
+- if @expansion.saga?
+  %p
+    %b Saga:
+    = @expansion.saga
 %p
   %b Total:
   = @expansion.total
