@@ -2,7 +2,7 @@
 class VersionesController < ApplicationController
 
   load_and_authorize_resource :carta
-  load_and_authorize_resource :version, through: :carta
+  load_and_authorize_resource through: :carta
 
   def index
     respond_with(@carta, @versiones)

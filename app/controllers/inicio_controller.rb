@@ -1,7 +1,7 @@
 # encoding: utf-8
 class InicioController < ApplicationController
 
-  skip_load_and_authorize_resource
+  # Saltea la autorización de CanCan dado que no hay un recurso Inicio
   skip_authorization_check
 
   def panel

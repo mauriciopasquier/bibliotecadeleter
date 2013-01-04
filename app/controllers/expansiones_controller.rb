@@ -1,4 +1,7 @@
 class ExpansionesController < ApplicationController
+
+  load_and_authorize_resource
+
   def index
     respond_with(@expansiones)
   end

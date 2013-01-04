@@ -10,4 +10,16 @@ module ApplicationHelper
     html << '</div>'
   end
 
+  def titulo
+    "Biblioteca Del Eter#{@titulo ? " #{@titulo}" : nil}"
+  end
+
+  def expansiones
+    Expansion.all
+  end
+
+  def artistas(scope)
+    Artista.send scope
+  end
+
 end

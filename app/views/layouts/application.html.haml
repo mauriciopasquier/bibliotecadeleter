@@ -1,18 +1,28 @@
-<!DOCTYPE html>
-%html{'xml:lang' => 'es_AR',  'xmlns' => 'http://www.w3.org/1999/xhtml'}
+!!! 5
+%html{'xml:lang' => 'es_AR', 'xmlns' => 'http://www.w3.org/1999/xhtml'}
   %head
-    %title Biblioteca Del Eter | #{@titulo}
+    %title titulo
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     = stylesheet_link_tag     "application", media: 'all'
     = javascript_include_tag  "application"
     = csrf_meta_tags
   %body
-    #cabecera
-      %ul#cuenta
-        = '|'
-        = render 'devise/menu/registration_items'
-        = '|'
-        = render 'devise/menu/login_items'
-        = '|'
+    #cabecera.navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          %a.brand Biblioteca del Éter
+          %ul#cuenta.nav.pull-right
+            - # TODO render 'devise/menu/registration_items'
+            - # TODO render 'devise/menu/login_items'
       #flash!= mensajes(flash)
-    #contenido
-      = yield
+    #contenido.container-fluid
+      .row-fluid
+        .span3= render 'layouts/barra-lateral'
+        .span9= yield
+      %footer.navbar.navbar-inverse.navbar-fixed-bottom
+        .navbar-inner
+          .container-fluid
+            %small.muted.nav-text.pull-right
+              Copyright &copy; #{Time.now.year} Asmodeus.
+              = link_to 'Inferno', 'http://playinferno.com'
+              es &copy; de OMG! entretenimiento.
