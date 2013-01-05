@@ -1,15 +1,9 @@
-# Be sure to restart your server when you modify this file.
+# La deshabilito en el Gemfile y la requiero acá porque de otra forma se carga
+# después que este archivo y borra las que defina acá.
+# TODO Contrib to inflections gem
+require 'inflections/es'
 
-# Add new inflection rules using the following format
-# (all these examples are active by default):
-# ActiveSupport::Inflector.inflections do |inflect|
-#   inflect.plural /^(ox)$/i, '\1en'
-#   inflect.singular /^(ox)en/i, '\1'
-#   inflect.irregular 'person', 'people'
-#   inflect.uncountable %w( fish sheep )
-# end
-#
-# These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+ActiveSupport::Inflector.inflections do |i|
+  i.irregular 'linkeable', 'linkeables'
+  i.irregular 'link', 'links'
+end

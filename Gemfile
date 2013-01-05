@@ -7,7 +7,7 @@ gem 'pg'
 
 # Model
 gem 'attribute_normalizer'
-gem 'inflections'
+gem 'inflections', require: false # Se carga después que las custom y las borra
 gem 'paperclip'
 
 # View
