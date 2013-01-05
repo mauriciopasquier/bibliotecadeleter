@@ -3,7 +3,6 @@
 %table
   %tr
     %th Nombre
-    %th Web
     %th
     %th
     %th
@@ -11,7 +10,6 @@
   - @artistas.each do |artista|
     %tr
       %td= artista.nombre
-      %td= artista.web
       %td= link_to 'Show', artista
       %td= link_to 'Edit', edit_artista_path(artista)
       %td= link_to 'Destroy', artista, method: :delete, data: { confirm: 'Are you sure?' }

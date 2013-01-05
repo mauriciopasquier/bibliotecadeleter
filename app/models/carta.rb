@@ -6,6 +6,7 @@ class Carta < ActiveRecord::Base
 
   has_one :canonica,  class_name: 'Version', conditions: { canonica: true },
                       dependent: :destroy
+  has_many :links, as: :linkeable
 
   friendly_id :nombre, use: :slugged
 

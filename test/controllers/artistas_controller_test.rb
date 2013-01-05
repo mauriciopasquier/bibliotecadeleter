@@ -58,7 +58,6 @@ describe ArtistasController do
     assert_redirected_to artista_path(assigns(:artista))
     artista.reload
     assert_equal atributos[:nombre], artista.nombre, "No actualiza el nombre"
-    assert_equal atributos[:web], artista.web, "No actualiza la web"
   end
 
   it "no debe actualizar una artista anónimamente" do
