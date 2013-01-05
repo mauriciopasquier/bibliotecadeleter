@@ -4,20 +4,25 @@ class ExpansionesController < ApplicationController
 
   def index
     @expansiones = @expansiones.decorate
+    @titulo = 'Expansiones'
     respond_with(@expansiones)
   end
 
   def show
     @expansion = @expansion.decorate
+    @titulo = @expansion.nombre
     respond_with(@expansion)
   end
 
   def new
     @expansion = @expansion.decorate
+    @titulo = @expansion.nombre
     respond_with(@expansion)
   end
 
   def edit
+    @expansion = @expansion.decorate
+    @titulo = @expansion.nombre
   end
 
   def create

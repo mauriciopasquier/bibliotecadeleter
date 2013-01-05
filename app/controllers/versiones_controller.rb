@@ -5,18 +5,22 @@ class VersionesController < ApplicationController
   load_and_authorize_resource through: :carta
 
   def index
+    @titulo = "Versiones de #{@carta.nombre}"
     respond_with(@carta, @versiones)
   end
 
   def show
+    @titulo = "#{@carta.nombre} de #{@version.expansion.nombre}"
     respond_with(@carta, @version)
   end
 
   def new
+    @titulo = "#{@carta.nombre} de #{@version.expansion.nombre}"
     respond_with(@carta, @version)
   end
 
   def edit
+    @titulo = "#{@carta.nombre} de #{@version.expansion.nombre}"
   end
 
   def create

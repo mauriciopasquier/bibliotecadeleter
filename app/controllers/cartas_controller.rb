@@ -4,18 +4,22 @@ class CartasController < ApplicationController
   load_and_authorize_resource
 
   def index
+    @titulo = 'Cartas'
     respond_with(@cartas)
   end
 
   def show
+    @titulo = @carta.nombre
     respond_with(@carta)
   end
 
   def new
+    @titulo = @carta.nombre
     respond_with(@carta)
   end
 
   def edit
+    @titulo = @carta.nombre
   end
 
   def create
