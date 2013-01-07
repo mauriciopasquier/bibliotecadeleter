@@ -1,28 +1,25 @@
-%p#notice= notice
+%h1= @titulo
 
-%p
-  %b Nombre:
-  = @expansion.nombre
-- if @expansion.lanzamiento?
-  %p
-    %b Lanzamiento:
-    = @expansion.lanzamiento
-- if @expansion.presentacion?
-  %p
-    %b Presentacion:
-    = @expansion.presentacion
-- if @expansion.notas?
-  %p
-    %b Notas:
-    != @expansion.notas
-- if @expansion.saga?
-  %p
-    %b Saga:
-    = @expansion.saga
-%p
-  %b Total:
-  = @expansion.total
+.row-fluid
+  .span3
+    %dl
+      - if @expansion.lanzamiento?
+        %dt Lanzamiento
+        %dd= @expansion.lanzamiento
+      - if @expansion.presentacion?
+        %dt Presentación
+        %dd= @expansion.presentacion
+      - if @expansion.saga?
+        %dt Saga
+        %dd= @expansion.saga
+      %dt Total
+      %dd= @expansion.total
+      - if @expansion.notas?
+        %dt Notas
+        %dd!= @expansion.notas
+  .span9.galeria
+    %ul.thumbnails
+    - @expansion.versiones.each do |v|
+      = v.link :thumb, class: 'thumbnail span3'
 
-= link_to 'Edit', edit_expansion_path(@expansion)
-\|
-= link_to 'Back', expansiones_path
+.btn= link_to 'Todas', expansiones_path

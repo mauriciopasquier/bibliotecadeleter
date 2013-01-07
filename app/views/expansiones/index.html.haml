@@ -1,4 +1,4 @@
-%h1 Listing expansiones
+%h1= @titulo
 
 %table
   %tr
@@ -7,9 +7,7 @@
     %th Presentacion
     %th Saga
     %th Cantidad de cartas
-    %th
-    %th
-    %th
+    %th.acciones
 
   - @expansiones.each do |expansion|
     %tr
@@ -18,10 +16,11 @@
       %td= expansion.presentacion
       %td= expansion.saga
       %td= expansion.total
-      %td= link_to 'Show', expansion
-      %td= link_to 'Edit', edit_expansion_path(expansion)
-      %td= link_to 'Destroy', expansion, method: :delete, data: { confirm: 'Are you sure?' }
+      %td.acciones
+        = link_to 'Mostrar', expansion
+        = link_to 'Editar', edit_expansion_path(expansion)
+        = link_to 'Eliminar', expansion, method: :delete,
+          data: { confirm: t(:confirmar) }
 
-%br
-
-= link_to 'New Expansion', new_expansion_path
+- if can? :create, Expansion
+  = link_to 'Nueva expansión', new_expansion_path

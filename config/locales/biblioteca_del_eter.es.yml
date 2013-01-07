@@ -9,3 +9,6 @@ es:
         email:            "viden@bibliotecadeleter.com.ar"
         password:         "Dejala así si no vas a cambiarla"
         current_password: "Tu clave actual para confirmar los cambios"
+  confirmar:  "Mirá que no hay vuelta atrás..."
+  imagen:
+    no_disponible:  "Imagen no disponible"
