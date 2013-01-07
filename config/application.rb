@@ -72,5 +72,7 @@ module BibliotecaDelEter
       g.helper false
     end
 
+    # Traduzco el path
+    config.assets.prefix = "/e"
   end
 end

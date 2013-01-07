@@ -6,8 +6,8 @@ class Imagen < ActiveRecord::Base
   has_one :carta, through: :version
 
   has_attached_file :archivo,
-    { url:  "/estaticos/cartas/:style/:expansion/:carta-:numero.:extension",
-      path: ":rails_root/public/cartas/:style/:expansion/:numero-:carta.:extension",
+    { url:  ":assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
+      path: ":rails_root/public/:assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
       styles: {
         thumb: "170x170" },
       convert_options: {
