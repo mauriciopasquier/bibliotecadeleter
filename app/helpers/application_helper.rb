@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def titulo
-    "Biblioteca Del Eter#{@titulo ? " #{@titulo}" : nil}"
+    "Biblioteca Del Eter#{@titulo ? " | #{@titulo}" : nil}"
   end
 
   def expansiones(scope = :all)

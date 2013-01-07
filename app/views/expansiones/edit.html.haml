@@ -1,7 +1,8 @@
-%h1 Editing expansion
+%h1= @titulo
 
 = render 'form'
 
-= link_to 'Show', @expansion
-\|
-= link_to 'Back', expansiones_path
+- if can? :read, @expansion
+  = link_to 'Mostrar', @expansion
+- if can? :read, Expansion
+  = link_to 'Todas', expansiones_path
