@@ -1,9 +1,17 @@
-%p#notice= notice
+%h1= @titulo
 
-%p
-  %b Nombre:
-  = @artista.nombre
+.row-fluid
+  .span3
+    %dl
+      %dt Links
+      - if @artista.links.any?
+        - @artista.links.each do |l|
+          %dd= link_to l.nombre, l.url
+      - else
+        %dd= I18n.t('artistas.sin_links')
+  .span9.galeria
+    - # TODO arreglar grid
+    - @artista.ilustraciones.each do |i|
+      = i.link :thumb, class: 'thumbnail span3'
 
-= link_to 'Edit', edit_artista_path(@artista)
-\|
-= link_to 'Back', artistas_path
+.btn= link_to 'Artistas', artistas_path

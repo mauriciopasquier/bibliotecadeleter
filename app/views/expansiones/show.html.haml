@@ -18,7 +18,7 @@
         %dt Notas
         %dd!= @expansion.notas
   .span9.galeria
-    %ul.thumbnails
+    - # TODO arreglar grid
     - @expansion.versiones.each do |v|
       = v.link :thumb, class: 'thumbnail span3'
 
