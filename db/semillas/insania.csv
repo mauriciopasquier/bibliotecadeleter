@@ -179,7 +179,7 @@ Vampiro sanador,177,I,Aliado,,Vampiro,Neutral,4,2,4,Verónica Vallejos / Nicolá
 Vampiro temprano,178,C,Aliado,Instantáneo,Vampiro,Neutral,2,2,1,Alejandro Machado / Franco Riesco,Thanatos. ,"""Los pequeños vampiros fueron los primeros. Hábiles y escurridizos, difíciles de alcanzar."""
 Viajero nocturno,179,C,Aliado,,Vampiro,Neutral,1,1,1,Luciano Comizzo,Thanatos. ,"""La ciudadela es una gran laberinto de trampas, cada callejón es una oportunidad."""
 Vigía de las tinieblas,180,C,Aliado,,Vampiro,Neutral,4,3,2,Luciano Comizzo,Thanatos. Protector.,"""Aguarda pacientemente, el momento indicado para su cacería"""
-Ficha,181,C,Aliado,,Kirch,Caos,,1,1,Guillermo Villarreal,Furia.,"""Puedo hacerlo mas grande, fuerte y... ¿mas veloz? También puedo hacerlo mas veloz"" -Tod, maestro de cirugía Kirch"
-Ficha,182,C,Objeto,,Bot,Locura,,,,Guillermo Villarreal,Destruir Bot: Remueve un contador de daño sobre el Cyborg objetivo,"""Pueden parecerte útiles herramientas, pero para mi son héroes."" -Efe, pionero de la rebelión"
-Ficha,183,C,Aliado,,Diablo,Muerte,,2,1,Lizzo,,
-Ficha,184,C,Aliado,,Vampiro,Neutral,,1,1,Sergio Tarquini / Franco Riesco,,
+"Ficha Caos Kirch 1/1 Furia",181,C,Aliado,,Kirch,Caos,,1,1,Guillermo Villarreal,Furia.,"""Puedo hacerlo mas grande, fuerte y... ¿mas veloz? También puedo hacerlo mas veloz"" -Tod, maestro de cirugía Kirch"
+"Ficha Locura Bot",182,C,Objeto,,Bot,Locura,,,,Guillermo Villarreal,Destruir Bot: Remueve un contador de daño sobre el Cyborg objetivo,"""Pueden parecerte útiles herramientas, pero para mi son héroes."" -Efe, pionero de la rebelión"
+"Ficha Muerte Diablo 2/1",183,C,Aliado,,Diablo,Muerte,,2,1,Lizzo,,
+"Ficha Neutral Vampiro 1/1",184,C,Aliado,,Vampiro,Neutral,,1,1,Sergio Tarquini / Franco Riesco,,

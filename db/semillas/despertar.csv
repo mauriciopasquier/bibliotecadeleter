@@ -179,7 +179,7 @@ Vampiro paciente,177,I,Aliado,,Vampiro,Neutral,3,2,2,Nicolás Fernández,"Si tus
 Vampiro pasomarchito,178,R,Aliado,,Vampiro,Neutral,4,3,3,Julián Nóbile - Germán Nóbile,El escenario pierde todas sus habilidades. Vínculo 0: Destruye el escenario objetivo.,Marchita la tierra tan rápido como se expanden en ella.
 Vigía de las ruinas,179,C,Aliado,,Humano,Neutral,4,2,4,Adrián Zotto,"Protector. Al final de tu turno, endereza Vigía de las ruinas.",Siempre listo.
 Vórtice al abismo,180,I,Ritual,Instantáneo,,Neutral,3,,,Julián Nóbile - Germán Nóbile,Exilia el aliado atacante objetivo.,"""Despídete de todos los mundos."" -Unwaj"
-Ficha,181,C,Aliado,,Kirch,Caos,,1,1,Paulo Barrios - Juan Martinez Pinilla,,
-Ficha,182,C,Aliado,,Cyborg,Locura,,1,1,Paulo Barrios - Juan Martinez Pinilla,"Protector (Puedes girar este aliado y hacer que defienda al atacante, en vez del defensor propuesto).",
-Ficha,183,C,Aliado,,Diablo,Muerte,,2,2,Paulo Barrios - Juan Martinez Pinilla,,
-Ficha,184,C,Aliado,,Barahai,Poder,,3,3,Paulo Barrios - Juan Martinez Pinilla,,
+"Ficha Caos Kirch 1/1",181,C,Aliado,,Kirch,Caos,,1,1,Paulo Barrios - Juan Martinez Pinilla,,
+"Ficha Locura Cyborg 1/1 Protector",182,C,Aliado,,Cyborg,Locura,,1,1,Paulo Barrios - Juan Martinez Pinilla,"Protector (Puedes girar este aliado y hacer que defienda al atacante, en vez del defensor propuesto).",
+"Ficha Muerte Diablo 2/2",183,C,Aliado,,Diablo,Muerte,,2,2,Paulo Barrios - Juan Martinez Pinilla,,
+"Ficha Poder Barahai 3/3",184,C,Aliado,,Barahai,Poder,,3,3,Paulo Barrios - Juan Martinez Pinilla,,
