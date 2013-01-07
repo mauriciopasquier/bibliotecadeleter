@@ -11,7 +11,7 @@ class Version < ActiveRecord::Base
   belongs_to :expansion
   has_many :imagenes
 
-  friendly_id :numero_justificado, use: :scoped, scope: :carta
+  friendly_id :numero_justificado, use: :scoped, scope: :expansion
 
   accepts_nested_attributes_for :imagenes
 

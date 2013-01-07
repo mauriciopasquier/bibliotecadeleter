@@ -8,10 +8,11 @@ class Carta < ActiveRecord::Base
                       dependent: :destroy
   has_many :links, as: :linkeable
 
-  friendly_id :nombre, use: :scoped, scope: :expansion
+  friendly_id :nombre, use: :slugged
 
   has_many :versiones, order: 'created_at DESC', dependent: :destroy
   has_many :imagenes, through: :versiones
+  has_many :expansiones, through: :versiones
 
   accepts_nested_attributes_for :versiones, allow_destroy: true
 
