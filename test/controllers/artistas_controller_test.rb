@@ -14,13 +14,13 @@ describe ArtistasController do
     assert_redirected_to :root
   end
 
-  it "debe acceder a new si está logueado" do
+  it "debe acceder a new si tiene permisos" do
     loguearse
     get :new
     assert_response :success
   end
 
-  it "debe crear un artista si está logueado" do
+  it "debe crear un artista si tiene permisos" do
     loguearse
     assert_difference('Artista.count') do
       post :create, artista: attributes_for(:artista)
@@ -39,7 +39,7 @@ describe ArtistasController do
     assert_response :success
   end
 
-  it "debe acceder a edit si está logueado" do
+  it "debe acceder a edit si tiene permisos" do
     loguearse
     get :edit, id: create(:artista)
     assert_response :success
@@ -50,7 +50,7 @@ describe ArtistasController do
     assert_redirected_to :root
   end
 
-  it "debe actualizar un artista si está logueado" do
+  it "debe actualizar un artista si tiene permisos" do
     loguearse
     artista = create(:artista)
     atributos = attributes_for(:artista)
@@ -65,7 +65,7 @@ describe ArtistasController do
     assert_redirected_to :root
   end
 
-  it "debe destruir una artista si está logueado" do
+  it "no debe destruir una artista anónimamente" do
     delete :destroy, id: create(:artista)
     assert_redirected_to :root
   end

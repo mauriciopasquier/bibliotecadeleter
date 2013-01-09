@@ -18,13 +18,13 @@ describe VersionesController do
     assert_redirected_to :root
   end
 
-  it "debe acceder a new si está logueado" do
+  it "debe acceder a new si tiene permisos" do
     loguearse
     get :new, carta_id: @carta
     assert_response :success
   end
 
-  it "debe crear una version si está logueado" do
+  it "debe crear una version si tiene permisos" do
     loguearse
     assert_difference('Version.count') do
       post :create, carta_id: @carta, version: attributes_for(:version_con_carta)
@@ -43,7 +43,7 @@ describe VersionesController do
     assert_response :success
   end
 
-  it "debe acceder a edit si está logueado" do
+  it "debe acceder a edit si tiene permisos" do
     loguearse
     get :edit, carta_id: @carta, id: create(:version_con_carta)
     assert_response :success
@@ -54,7 +54,7 @@ describe VersionesController do
     assert_redirected_to :root
   end
 
-  it "debe actualizar una version si está logueado" do
+  it "debe actualizar una version si tiene permisos" do
     loguearse
     version = create(:version_con_carta)
     atributos = attributes_for(:version_con_carta, canonica: true)
@@ -80,7 +80,7 @@ describe VersionesController do
     assert_redirected_to :root
   end
 
-  it "debe destruir una version si está logueado" do
+  it "no debe destruir una version anónimamente" do
     delete :destroy, carta_id: @carta, id: create(:version_con_carta)
     assert_redirected_to :root
   end
