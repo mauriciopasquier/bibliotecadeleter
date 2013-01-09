@@ -16,7 +16,7 @@ class ExpansionesController < ApplicationController
 
   def new
     @expansion = @expansion.decorate
-    @titulo = @expansion.nombre
+    @titulo = "Nueva expansión"
     respond_with(@expansion)
   end
 

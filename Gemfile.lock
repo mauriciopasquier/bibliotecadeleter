@@ -67,6 +67,7 @@ GEM
     draper (0.18.0)
       actionpack (~> 3.2)
       activesupport (~> 3.2)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     eventmachine (1.0.0)
     execjs (1.4.0)
@@ -226,6 +227,7 @@ DEPENDENCIES
   devise
   devise-i18n
   draper
+  dynamic_form
   factory_girl_rails
   friendly_id
   haml-rails

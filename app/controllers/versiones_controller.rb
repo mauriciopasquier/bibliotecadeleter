@@ -15,7 +15,7 @@ class VersionesController < ApplicationController
   end
 
   def new
-    @titulo = "#{@carta.nombre} de #{@version.expansion.nombre}"
+    @titulo = "Nueva carta"
     respond_with(@carta, @version)
   end
 
