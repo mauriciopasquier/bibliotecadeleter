@@ -11,6 +11,7 @@ gem 'inflections', require: false # Se carga después que las custom y las borra
 gem 'paperclip'
 
 # View
+gem 'dynamic_form'
 gem 'haml-rails'
 gem 'draper'
 gem 'kaminari'
