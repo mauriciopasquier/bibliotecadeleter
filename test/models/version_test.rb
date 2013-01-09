@@ -3,7 +3,6 @@ require "./test/minitest_helper"
 
 describe Version do
   it "must be valid" do
-    version = create(:carta_con_versiones).versiones.first
-    version.valid?.must_equal true
+    create(:version_con_carta).valid?.must_equal true
   end
 end
