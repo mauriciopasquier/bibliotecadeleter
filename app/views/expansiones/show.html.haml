@@ -1,7 +1,8 @@
 %h1= @titulo
 
 .row-fluid
-  .span3
+  .span12
+    %h2.plegable Datos sobre la expansión
     %dl
       - if @expansion.lanzamiento?
         %dt Lanzamiento
@@ -12,14 +13,16 @@
       - if @expansion.saga?
         %dt Saga
         %dd= @expansion.saga
-      %dt Total
-      %dd= @expansion.total
+      - if @expansion.total?
+        %dt Total
+        %dd= @expansion.total
       - if @expansion.notas?
         %dt Notas
         %dd!= @expansion.notas
-  .span9.galeria
-    - # TODO arreglar grid
-    - @expansion.versiones.each do |v|
-      = v.link :thumb, class: 'thumbnail span3'
+.row-fluid
+  .span12
+    %h2.plegable Lista de cartas
+    = render  partial: 'layouts/galeria',
+              locals: { imagenes: @expansion.versiones }
 
-.btn= link_to 'Todas', expansiones_path
+.btn= link_to 'Otras expansiones', expansiones_path

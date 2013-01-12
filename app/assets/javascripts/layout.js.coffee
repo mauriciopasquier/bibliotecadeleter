@@ -1,5 +1,5 @@
 jQuery ->
 
-  $('.menu .plegable').click ->
+  $('.plegable').click ->
     $(this).nextAll().toggle('fast')
     return false

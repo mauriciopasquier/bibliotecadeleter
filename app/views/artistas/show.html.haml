@@ -1,7 +1,8 @@
 %h1= @titulo
 
 .row-fluid
-  .span3
+  .span12
+    %h2.plegable Información sobre el artista
     %dl
       %dt Links
       - if @artista.links.any?
@@ -9,9 +10,10 @@
           %dd= link_to l.nombre, l.url
       - else
         %dd= I18n.t('artistas.sin_links')
-  .span9.galeria
-    - # TODO arreglar grid
-    - @artista.ilustraciones.each do |i|
-      = i.link :thumb, class: 'thumbnail span3'
+.row-fluid
+  .span12
+    %h2.plegable Galería de ilustraciones
+    = render  partial: 'layouts/galeria',
+              locals: { imagenes: @artista.ilustraciones }
 
-.btn= link_to 'Artistas', artistas_path
+.btn= link_to 'Otros artistas', artistas_path
