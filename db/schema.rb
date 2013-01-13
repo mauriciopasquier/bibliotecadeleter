@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130107032024) do
     t.string   "linkeable_type"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "nombre"
   end
 
   create_table "usuarios", :force => true do |t|

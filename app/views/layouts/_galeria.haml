@@ -1,0 +1,4 @@
+.galeria
+  %ul.thumbs
+    - imagenes.each do |v|
+      %li= v.link :thumb, class: 'thumb'

@@ -1,9 +1,19 @@
-%p#notice= notice
+%h1= @titulo
 
-%p
-  %b Nombre:
-  = @artista.nombre
+.row-fluid
+  .span12
+    %h2.plegable Información sobre el artista
+    %dl
+      %dt Links
+      - if @artista.links.any?
+        - @artista.links.each do |l|
+          %dd= link_to l.nombre, l.url
+      - else
+        %dd= I18n.t('artistas.sin_links')
+.row-fluid
+  .span12
+    %h2.plegable Galería de ilustraciones
+    = render  partial: 'layouts/galeria',
+              locals: { imagenes: @artista.ilustraciones }
 
-= link_to 'Edit', edit_artista_path(@artista)
-\|
-= link_to 'Back', artistas_path
+.btn= link_to 'Otros artistas', artistas_path

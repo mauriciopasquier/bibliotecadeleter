@@ -10,6 +10,11 @@
  *
  *= require_self
  *= require bootstrap
+ *
+ * Archivos de la aplicación a incluir
+ *
  *= require layout
+ *= require galeria
  *= require expansiones
+ *= require artistas
  */
