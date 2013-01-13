@@ -8,13 +8,10 @@
       margin: 5px;
     }
 
-    .thumb {
-      min-height: 170px;
-      min-width: 170px;
-    }
-
-    .no-disponible {
-      // TODO vertical align
+    .no-disponible * {
+      height: 169px;
+      width: 169px;
+      border: 1px black solid;
     }
   }
 }
