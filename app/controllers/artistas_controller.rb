@@ -1,12 +1,20 @@
 # encoding: utf-8
 class ArtistasController < ApplicationController
+  has_scope :pagina, default: 1
 
   load_and_authorize_resource
 
   def index
-    @artistas = @artistas.decorate
+    @artistas = apply_scopes(Artista).decorate
     @titulo = 'Artistas'
-    respond_with(@artistas)
+    respond_with(@artistas) do |format|
+      # TODO Esta es la mejor forma de usar
+      format.html do
+        if request.xhr?   # solicitud ajax para la paginación
+          render :index,  layout: false
+        end
+      end
+    end
   end
 
   def show
