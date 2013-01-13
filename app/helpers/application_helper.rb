@@ -19,7 +19,7 @@ module ApplicationHelper
   end
 
   def artistas(scope = :all)
-    Artista.send scope
+    Artista.unscoped.send scope
   end
 
 end

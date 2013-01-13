@@ -14,6 +14,10 @@ class Artista < ActiveRecord::Base
       .select('artistas.*, count(versiones.id) as cantidad')
   end
 
-  scope :top5, con_ilustraciones.order('cantidad DESC').limit(5)
+  def self.top5
+    unscoped.con_ilustraciones.order('cantidad DESC').limit(5)
+  end
+
+  default_scope order(:nombre)
 
 end
