@@ -16,6 +16,8 @@ class Expansion < ActiveRecord::Base
 
   scope :grandes, where('total >= ?', 100)
 
+  default_scope order(:lanzamiento)
+
   def to_s
     nombre
   end

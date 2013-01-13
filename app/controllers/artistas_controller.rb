@@ -6,9 +6,9 @@ class ArtistasController < ApplicationController
 
   def index
     @artistas = apply_scopes(Artista).decorate
-    @titulo = 'Artistas'
+    @titulo = 'Todos los Artistas'
     respond_with(@artistas) do |format|
-      # TODO Esta es la mejor forma de usar ajax + kaminari?
+      # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
       format.html do
         if request.xhr?   # solicitud ajax para la paginación
           render :index,  layout: false

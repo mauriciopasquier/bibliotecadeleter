@@ -1,3 +1,17 @@
 dl.notas {
   margin-left: 1em;
 }
+
+table#expansiones {
+
+  #nombre       { width: 30%; }
+  #lanzamiento  { width: 10%; }
+  #presentacion { width: 10%; }
+  #saga         { width: 20%; }
+  #total        { width: 20%; }
+
+  .total, .lanzamiento, .presentacion {
+    text-align: center;
+  }
+
+}
