@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def expansiones(scope = :all)
-    Expansion.send scope
+    Expansion.unscoped.send scope
   end
 
   def artistas(scope = :all)
