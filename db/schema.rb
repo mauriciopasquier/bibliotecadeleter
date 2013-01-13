@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107032024) do
+ActiveRecord::Schema.define(:version => 20130113035027) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20130107032024) do
     t.datetime "updated_at", :null => false
     t.string   "slug",       :null => false
   end
+
+  add_index "cartas", ["slug"], :name => "index_cartas_on_slug", :unique => true
 
   create_table "expansiones", :force => true do |t|
     t.string   "nombre",       :null => false
