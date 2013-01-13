@@ -5,3 +5,20 @@ body {
   padding-top: $navbarHeight * 1.5;
   padding-bottom: $navbarHeight * 1.5;
 }
+
+table {
+  background-color: #999;
+}
+
+.table-hover {
+  tbody {
+    tr {
+      &:hover {
+        td, th {
+          color: #ccc;
+          background-color: #333;
+        }
+      }
+    }
+  }
+}
