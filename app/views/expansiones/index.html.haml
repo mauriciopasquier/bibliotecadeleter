@@ -1,26 +1,42 @@
-%h1= @titulo
+#lista
+  %h1= @titulo
 
-%table
-  %tr
-    %th Nombre
-    %th Lanzamiento
-    %th Presentacion
-    %th Saga
-    %th Cantidad de cartas
-    %th.acciones
+  #paginacion
+    = paginate @expansiones, remote: true
 
-  - @expansiones.each do |expansion|
-    %tr
-      %td= expansion.nombre
-      %td= expansion.lanzamiento
-      %td= expansion.presentacion
-      %td= expansion.saga
-      %td= expansion.total
-      %td.acciones
-        = link_to 'Mostrar', expansion
-        = link_to 'Editar', edit_expansion_path(expansion)
-        = link_to 'Eliminar', expansion, method: :delete,
-          data: { confirm: t(:confirmar) }
+  %table#expansiones.table.table-striped.table-condensed.table-hover
+    %colgroup
+      %col#nombre
+      %col#lanzamiento
+      %col#presentacion
+      %col#saga
+      %col#total
+      %col#acciones
+    %thead
+      %tr
+        %th.nombre        Nombre
+        %th.lanzamiento   Lanzamiento
+        %th.presentacion  Presentacion
+        %th.saga          Saga
+        %th.total         Total de cartas
+        %th.acciones
 
-- if can? :create, Expansion
-  = link_to 'Nueva expansión', new_expansion_path
+    %tbody
+      - @expansiones.each do |expansion|
+        %tr
+          %td.nombre= expansion.nombre
+          %td.lanzamiento= expansion.lanzamiento
+          %td.presentacion= expansion.presentacion
+          %td.saga= expansion.saga
+          %td.total= expansion.total
+          %td.acciones
+            - if can? :read, expansion
+              = link_to 'Mostrar', expansion
+            - if can? :edit, expansion
+              = link_to 'Editar', edit_expansion_path(expansion)
+            - if can? :destroy, expansion
+              = link_to 'Eliminar', expansion, method: :delete,
+                data: { confirm: t(:confirmar) }
+
+  - if can? :create, Expansion
+    = link_to 'Crear nueva expansión', new_expansion_path
