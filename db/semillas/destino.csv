@@ -1,6 +1,7 @@
 Nombre,N°,Rareza,Tipo,Supertipo,Subtipo,Senda,Coste,FUE,RES,Arte,Habilidades,Texto de ambientación
 "Azuela del sirviente",6,C,Arma,,Vampiro,Caos,2,2,0,Emmanuel Bou,"Sangre débil (juega esta carta sólo si hay Thanatos).","Forjada con huesos y sangre de vampiros caídos."
 "Ghoul devoraalmas",66,R,Aliado,,Ghoul,Muerte,3,2,3,Aerozopher,"Golpe de gracia - Remueve todos los contadores de daño sobre este aliado. Este aliado se convierte en una copia del aliado destruido y gana esta habilidad.","""Cuando llegues a la abadía, recuerda mis palabras: No confíes en nadie."" - Caminante de la abadía"
-"Inductor de dolor",67,R,Objeto Aliado,,Marioneta,Muerte,4,4,3,Sandro Rybak,"Abismal. Los otros aliados con contadores de daño no pueden atacar.",
+"Inductor de dolor",67,R,Aliado Objeto,,Marioneta,Muerte,4,4,3,Sandro Rybak,"Abismal. Los otros aliados con contadores de daño no pueden atacar.",
 "Defensor de la enramada",86,E,Aliado,,Elemental,Poder,3,0,0,Sandro Rybak,"Agresor. ESTO obtiene +1 RES por cada recurso que controles. Siempre que un recurso entre en juego, remueve un contador de daño sobre ESTO.",
 "Revelación de Ubanna",114,R,Ritual,,,Neutral,10,,,Lizzo,"Bendición de Ubanna. Tienes un turno adicional después de éste.",
+"Ficha Poder Reptil 9/9",122,C,Aliado,,Reptil,Poder,,9,9,"N. R. Morales",,
