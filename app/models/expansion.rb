@@ -21,4 +21,13 @@ class Expansion < ActiveRecord::Base
   def to_s
     nombre
   end
+
+  # Determina de qué expansión son las promocionales
+  def base
+    if slug =~ /promocionales/
+      Expansion.find slug.gsub('promocionales-', '')
+    else
+      self
+    end
+  end
 end

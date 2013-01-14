@@ -10,8 +10,8 @@
       display: inline-block;
       margin: 5px;
 
-      // De bootstrap.thumbnail
       &:target {
+        // De bootstrap.thumbnail
         padding: 4px;
         line-height: $altura-linea;
         border: 1px solid $color-base;

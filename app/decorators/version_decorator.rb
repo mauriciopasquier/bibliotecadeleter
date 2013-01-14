@@ -50,7 +50,7 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def numeracion
-    "#{source.expansion.nombre} #{source.numero}/#{source.expansion.total}"
+    "#{expansion.base.nombre} #{source.numero}/#{expansion.base.total}"
   end
 
   def arte
