@@ -31,7 +31,7 @@ BibliotecaDelEter::Application.routes.draw do
       r.resources :versiones
 
       collection do
-        get :buscar
+        match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
       end
 
     end
