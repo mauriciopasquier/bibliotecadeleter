@@ -8,16 +8,14 @@
       margin: 5px;
     }
 
-    .no-disponible {
-      * { border: 1px black solid;  }
-      .thumb {
-        height: 169px;
-        width: 169px;
-      }
-      .original {
-        height: 512px;
-        width: 353px;
-      }
+    .thumb {
+      height: 169px;
+      width: 169px;
     }
+    .original {
+      height: 512px;
+      width: 353px;
+    }
+    .no-disponible {  border: 1px black solid;  }
   }
 }

@@ -15,9 +15,9 @@ class VersionDecorator < ApplicationDecorator
     if imagenes.any?
       imagenes.first.tag(estilo)
     else
-      opciones[:class] = "no-disponible #{opciones[:class]}"
       h.image_tag("imagen-no-disponible-#{estilo}.png",
-                  alt: I18n.t('imagen.no_disponible'))
+                  alt: I18n.t('imagen.no_disponible'),
+                  class: 'no-disponible')
     end
   end
 
