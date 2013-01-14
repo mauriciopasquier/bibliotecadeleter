@@ -1,5 +1,3 @@
-%h1= @titulo
-
 .row-fluid
   .span12
     %h2.plegable Información sobre el artista
@@ -16,4 +14,4 @@
     = render  partial: 'layouts/galeria',
               locals: { imagenes: @artista.ilustraciones }
 
-.btn= link_to 'Otros artistas', artistas_path
+= link_to 'Otros artistas', artistas_path, class: 'btn'

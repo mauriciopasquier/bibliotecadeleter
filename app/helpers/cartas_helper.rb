@@ -1,7 +1,13 @@
 # encoding: utf-8
 module CartasHelper
   def checkeado?(senda)
-    params[:q][:versiones_senda_eq_any].include? senda
+    if params[:q]
+      if params[:q][:versiones_senda_eq_any].present?
+        params[:q][:versiones_senda_eq_any].include? senda
+      end
+    else
+      true
+    end
   end
 
   def busqueda_simple

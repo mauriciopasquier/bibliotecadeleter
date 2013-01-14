@@ -15,7 +15,7 @@ namespace :cartas do
           puts i if ENV['log']
           # Asume imágenes guardadas de la forma `expansion/000. nombre.jpg`
           numero = File.basename(i).split('.').first
-          Expansion.find(expansion).versiones.find_by_slug(numero).imagenes.create(
+          Version.find_by_slug("#{expansion}-#{numero}").imagenes.create(
             archivo: File.open(i)
           )          
 

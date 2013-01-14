@@ -21,7 +21,7 @@ module SemillasHelper
   end
 
   # Extrae los atributos de las versiones del archivo csv
-  def atributos_de_la_version(csv)
+  def atributos_de_la_version(csv, expansion)
     { numero:       csv[1],
       rareza:       csv[2],
       tipo:         csv[3],
@@ -32,7 +32,8 @@ module SemillasHelper
       fue:          csv[8],
       res:          csv[9],
       texto:        csv[11],
-      ambientacion: csv[12] }
+      ambientacion: csv[12],
+      expansion:    expansion }
   end
 
   # Carga el archivo de semillas +archivo+, en formato yaml (con erb embebido) del

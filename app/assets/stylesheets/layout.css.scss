@@ -3,3 +3,12 @@
     list-style-type: none;
   }
 }
+
+table {
+  td.acciones {
+    * {
+      margin-left: 2px;
+    }
+  }
+  #acciones { width: 25%; }
+}

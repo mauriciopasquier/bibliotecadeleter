@@ -3,8 +3,10 @@ class CartasController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :decorar, only: [:index, :show, :edit]
+
   def index
-    @titulo = 'Cartas'
+    @titulo = 'Todas las cartas'
     respond_with(@cartas)
   end
 
@@ -14,7 +16,7 @@ class CartasController < ApplicationController
   end
 
   def new
-    @titulo = @carta.nombre
+    @titulo = "Nueva carta"
     respond_with(@carta)
   end
 
@@ -51,4 +53,14 @@ class CartasController < ApplicationController
       Carta.none
     end.decorate
   end
+
+  private
+
+    def decorar
+      if @cartas
+        @cartas = @cartas.decorate
+      else
+        @carta = @carta.decorate
+      end
+    end
 end
