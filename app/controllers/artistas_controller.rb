@@ -25,7 +25,7 @@ class ArtistasController < ApplicationController
 
   def new
     @artista = @artista.decorate
-    @titulo = @artista.nombre
+    @titulo = "Nueva artista"
     respond_with(@artista)
   end
 

@@ -20,7 +20,9 @@
     #contenido.container-fluid
       .row-fluid
         .span3= render 'layouts/barra-lateral'
-        .span9= yield
+        .span9
+          %h1= @titulo
+          = yield
       %footer.navbar.navbar-inverse.navbar-fixed-bottom
         .navbar-inner
           .container-fluid

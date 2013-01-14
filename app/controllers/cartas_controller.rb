@@ -4,7 +4,7 @@ class CartasController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @titulo = 'Cartas'
+    @titulo = 'Todas las cartas'
     respond_with(@cartas)
   end
 
@@ -14,7 +14,7 @@ class CartasController < ApplicationController
   end
 
   def new
-    @titulo = @carta.nombre
+    @titulo = "Nueva carta"
     respond_with(@carta)
   end
 
