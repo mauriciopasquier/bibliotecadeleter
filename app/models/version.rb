@@ -4,7 +4,7 @@ class Version < ActiveRecord::Base
 
   attr_accessible :ambientacion, :coste, :fue, :numero, :rareza, :res, :senda,
                   :subtipo, :supertipo, :texto, :tipo, :canonica,
-                  :imagenes_attributes, :carta, :expansion
+                  :imagenes_attributes, :carta, :expansion, :expansion_id
 
   belongs_to :carta
   has_and_belongs_to_many :artistas
@@ -24,7 +24,7 @@ class Version < ActiveRecord::Base
   private
 
     def expansion_y_numero
-      "#{expansion.slug}-#{numero_justificado}"
+      "#{expansion.try(:slug) || 'huerfanas'}-#{numero_justificado}"
     end
 
 end

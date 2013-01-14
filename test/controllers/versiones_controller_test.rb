@@ -23,8 +23,11 @@ describe VersionesController do
   it "debe crear una version si tiene permisos" do
     loguearse
     carta = create(:carta)
+    expansion = create(:expansion)
     assert_difference('Version.count') do
-      post :create, carta_id: carta, version: attributes_for(:version)
+      post :create, carta_id: carta,
+                    version: attributes_for(:version,
+                                            expansion_id: expansion.id)
     end
 
     assert_redirected_to carta_version_path(carta, assigns(:version))
