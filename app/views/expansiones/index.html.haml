@@ -23,8 +23,8 @@
       - @expansiones.each do |expansion|
         %tr
           %td.nombre= expansion.nombre
-          %td.lanzamiento= expansion.lanzamiento
-          %td.presentacion= expansion.presentacion
+          %td.lanzamiento= l(expansion.lanzamiento) if expansion.lanzamiento?
+          %td.presentacion= l(expansion.presentacion) if expansion.presentacion
           %td.saga= expansion.saga
           %td.total= expansion.total
           %td.acciones
