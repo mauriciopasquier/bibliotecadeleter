@@ -1,39 +1,10 @@
-%h1 Listing versiones
+%h1= @titulo
 
-%table
-  %tr
-    %th Texto
-    %th Tipo
-    %th Supertipo
-    %th Subtipo
-    %th Fue
-    %th Res
-    %th Senda
-    %th Ambientacion
-    %th Numero
-    %th Rareza
-    %th Coste
-    %th
-    %th
-    %th
+%h2 Todas las versiones
 
-  - @versiones.each do |version|
-    %tr
-      %td= version.texto
-      %td= version.tipo
-      %td= version.supertipo
-      %td= version.subtipo
-      %td= version.fue
-      %td= version.res
-      %td= version.senda
-      %td= version.ambientacion
-      %td= version.numero
-      %td= version.rareza
-      %td= version.coste
-      %td= link_to 'Show', [@carta, version]
-      %td= link_to 'Edit', edit_carta_version_path(@carta, version)
-      %td= link_to 'Destroy', [@carta, version], method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Version', new_carta_version_path(@carta)
+.row-fluid
+  .span12
+    .row-fluid
+      .span12= render partial: 'layouts/galeria',
+                      locals: { imagenes: @versiones,
+                                estilo: :original }

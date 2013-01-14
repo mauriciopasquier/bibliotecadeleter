@@ -48,4 +48,5 @@
         .span12= label_tag "#{@cartas.size} cartas encontradas."
     .row-fluid
       .span12= render partial: 'layouts/galeria',
-                      locals: { imagenes: @cartas }
+                      locals: { imagenes: @cartas,
+                                estilo: :original }
