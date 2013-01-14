@@ -1,7 +1,8 @@
 .row-fluid
   #carta.span6
     %h2 Texto oficial
-    = render @carta
+    = render partial: 'cartas/carta', locals: { carta: @carta,
+                                                version: @carta.canonica }
   .span6
     %h2 Imágenes
     = render partial: 'layouts/galeria',
