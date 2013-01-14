@@ -21,4 +21,49 @@ class VersionDecorator < ApplicationDecorator
     end
   end
 
+  def linea_de_tipos
+    (tipo + supertipo + subtipo).strip
+  end
+
+  def tipo
+    source.tipo || ''
+  end
+
+  def supertipo
+    if source.supertipo?
+      if source.tipo =~ /Arma/i and source.supertipo =~ /nstantáneo/
+        " #{source.supertipo.gsub('nstantáneo', 'nstantánea')}"
+      else
+        " #{source.supertipo}"
+      end
+    else
+      ''
+    end
+  end
+
+  def subtipo
+    if source.subtipo?
+      " - #{source.subtipo}"
+    else
+      ''
+    end
+  end
+
+  def numeracion
+    "#{source.expansion.nombre} #{source.numero}/#{source.expansion.total}"
+  end
+
+  def arte
+    "arte: #{artistas.collect(&:nombre).join(' - ')}"
+  end
+
+  def rareza
+    case source.rareza
+      when 'C' then 'Común'
+      when 'I' then 'Infrecuente'
+      when 'R' then 'Rara'
+      when 'E' then 'Épica'
+      else  '???'
+    end
+  end
 end

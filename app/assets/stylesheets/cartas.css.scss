@@ -1,0 +1,13 @@
+#carta {
+  .nombre       { text-align: center; }
+  .tipos        { text-align: center; }
+  .senda        { text-align: right; }
+  .ambientacion { text-align: center;
+                  font-style: italic;
+                  font-size: small;   }
+  .arte         { text-align: center; }
+  .rareza       { text-align: right; }
+  .caja-de-texto {
+    padding: 1em 0;
+  }
+}

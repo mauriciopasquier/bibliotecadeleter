@@ -1,7 +1,12 @@
 .row-fluid
-  .span6= render partial: 'layouts/galeria',
+  #carta.span6
+    %h2 Texto oficial
+    = render @carta
+  .span6
+    %h2 Imágenes
+    = render partial: 'layouts/galeria',
     locals: { imagenes: @carta.canonica.imagenes, estilo: :original }
-  .span6= render @carta
+
 
 - if @carta.versiones.size > 1
   .row-fluid
