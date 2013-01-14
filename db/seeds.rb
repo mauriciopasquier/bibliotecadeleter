@@ -23,7 +23,7 @@ end
 Expansion.all.each do |expansion|
   cargar_csv_de(expansion.nombre.parameterize, headers: true, col_sep: ',') do |carta|
     c = Carta.find_or_create_by_nombre(atributos_de_la_carta(carta))
-    v = c.versiones.create(atributos_de_la_version(carta))
+    v = c.versiones.create(atributos_de_la_version(carta, expansion))
 
     # Divide en 2 caras los demonios, las demás cartas en 1
     carta[10].split('/').each do |cara|
@@ -32,8 +32,6 @@ Expansion.all.each do |expansion|
         v.artistas << Artista.find_or_create_by_nombre(artista.strip)
       end
     end
-
-    v.expansion = expansion
 
     c.save!
   end
