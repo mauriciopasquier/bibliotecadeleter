@@ -6,3 +6,6 @@
       .span12= render partial: 'layouts/galeria',
                       locals: { imagenes: @versiones,
                                 estilo: :original }
+
+  .row-fluid
+    .span12= link_to 'Volver a la carta', @carta, class: 'btn'
