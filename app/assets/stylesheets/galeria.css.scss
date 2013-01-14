@@ -1,3 +1,6 @@
+@import 'twitter/bootstrap/mixins';
+@import 'constantes';
+
 .galeria {
   .thumbs {
     margin: 0;
@@ -6,6 +9,16 @@
       list-style: none;
       display: inline-block;
       margin: 5px;
+
+      // De bootstrap.thumbnail
+      &:target {
+        padding: 4px;
+        line-height: $altura-linea;
+        border: 1px solid $color-base;
+        background-color: $color-base;
+        @include border-radius(5px);
+        @include transition(all .2s ease-in-out);
+      }
     }
 
     .thumb {

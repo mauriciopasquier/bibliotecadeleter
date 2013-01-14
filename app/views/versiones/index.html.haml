@@ -1,11 +1,17 @@
 %h2 Todas las versiones
 
-.row-fluid
-  .span12
-    .row-fluid
-      .span12= render partial: 'layouts/galeria',
-                      locals: { imagenes: @versiones,
-                                estilo: :original }
+#versiones
+  .row-fluid
+    .span12
+      %ul.versiones
+        - @versiones.each do |v|
+          %li
+            .icon-arrow-right
+            = link_to "de #{v.expansion}", "##{v.slug}"
 
+  .row-fluid
+    .span12= render partial: 'layouts/galeria',
+                    locals: { imagenes: @versiones,
+                              estilo: :original }
   .row-fluid
     .span12= link_to 'Volver a la carta', @carta, class: 'btn'
