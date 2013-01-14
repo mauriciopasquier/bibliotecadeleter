@@ -36,4 +36,19 @@ class CartasController < ApplicationController
     @carta.destroy
     respond_with(@carta)
   end
+
+  def buscar
+    @busqueda = Carta.search(params[:q])
+    @titulo = 'Búsqueda de cartas'
+
+    @cartas = if params[:q].present?
+      @cartas
+        .joins(:versiones)
+        .select('cartas.*, versiones.senda')
+        .order('versiones.senda')
+        .search(params[:q]).result(distinct: true)
+    else
+      Carta.none
+    end.decorate
+  end
 end

@@ -16,6 +16,7 @@ gem 'haml-rails'
 gem 'draper'
 gem 'kaminari'
 gem 'friendly_id'
+gem 'ransack'
 
 # Controller
 gem 'responders'

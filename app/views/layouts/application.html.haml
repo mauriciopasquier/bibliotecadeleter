@@ -14,6 +14,8 @@
           %ul#cuenta.nav.pull-right
             - # TODO render 'devise/menu/registration_items'
             - # TODO render 'devise/menu/login_items'
+          %ul#cuenta.nav
+            %li#buscar= link_to 'Buscar', buscar_cartas_path
       #flash!= mensajes(flash)
     #contenido.container-fluid
       .row-fluid

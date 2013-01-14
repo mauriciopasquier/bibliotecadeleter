@@ -2,6 +2,7 @@
 module ApplicationHelper
 
   # Hay que llamarlo con != en haml para que interprete el html
+  # TODO convertir a _tag
   def mensajes(flash)
     html = "<div class='flash'>"
     flash.each do |tipo, mensaje|

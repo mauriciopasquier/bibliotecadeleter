@@ -29,6 +29,11 @@ BibliotecaDelEter::Application.routes.draw do
   with_options path_names: femeninos do |r|
     r.resources :cartas do
       r.resources :versiones
+
+      collection do
+        match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
+      end
+
     end
     r.resources :expansiones
   end

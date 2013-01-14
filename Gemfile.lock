@@ -138,6 +138,8 @@ GEM
       cocaine (~> 0.4.0)
       mime-types
     pg (0.14.1)
+    polyamorous (0.5.0)
+      activerecord (~> 3.0)
     polyglot (0.3.3)
     pry (0.9.10)
       coderay (~> 1.0.5)
@@ -170,6 +172,10 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (10.0.3)
+    ransack (0.7.1)
+      actionpack (~> 3.0)
+      activerecord (~> 3.0)
+      polyamorous (~> 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
     responders (0.9.3)
@@ -244,6 +250,7 @@ DEPENDENCIES
   pry-rails
   rails (= 3.2.9)
   rails-i18n
+  ransack
   responders
   sass-rails (~> 3.2.3)
   therubyracer (= 0.10.1)

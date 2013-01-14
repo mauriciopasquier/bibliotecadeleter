@@ -3,6 +3,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(usuario = nil)
+    alias_action :buscar, to: :read
+
     @usuario = usuario || Usuario.new # guest user (not logged in)
 
     if @usuario.persisted?
