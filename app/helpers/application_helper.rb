@@ -23,4 +23,21 @@ module ApplicationHelper
     Artista.unscoped.send scope
   end
 
+  def link_to_mostrar(recurso)
+    link_to recurso do
+      content_tag(:i, nil, class: 'icon-zoom-in') + 'Mostrar'
+    end
+  end
+
+  def link_to_editar(recurso)
+    link_to recurso do
+      content_tag(:i, nil, class: 'icon-pencil') + 'Editar'
+    end
+  end
+
+  def link_to_eliminar(recurso)
+    link_to recurso, method: :delete, data: { confirm: t(:confirmar) } do
+      content_tag(:i, nil, class: 'icon-remove-circle') + 'Eliminar'
+    end
+  end
 end

@@ -12,8 +12,8 @@
     %thead
       %tr
         %th Nombre
-        %th Cantidad de ilustraciones
-        %th
+        %th.cantidad Cantidad de ilustraciones
+        %th.acciones
 
     %tbody
       - @artistas.each do |artista|
@@ -23,19 +23,11 @@
           %td.acciones
             - # Aparecen al revés de como están dispuestas por el .pull-right
             - if can? :destroy, artista
-              .pull-right
-                = link_to artista, method: :delete, data: { confirm: t(:confirmar) } do
-                  = content_tag(:i, nil, class: 'icon-remove-circle')
-                  'Eliminar'
+              .pull-right= link_to_eliminar artista
             - if can? :edit, artista
-              .pull-right
-                = link_to edit_artista_path(artista) do
-                  = content_tag(:i, nil, class: 'icon-pencil')
-                  'Editar'
+              .pull-right= link_to_editar edit_artista_path(artista)
             - if can? :read, artista
-              .pull-right
-                = link_to artista do
-                  = content_tag(:i, nil, class: 'icon-zoom-in')
-                  'Mostrar'
+              .pull-right= link_to_mostrar artista
+
   - if can? :create, Artista
     = link_to 'Cargar Artista', new_artista_path
