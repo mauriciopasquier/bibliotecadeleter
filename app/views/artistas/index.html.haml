@@ -20,14 +20,22 @@
         %tr
           %td.nombre= artista.nombre
           %td.cantidad= artista.ilustraciones.size
-          %td
-            - if can? :read, artista
-              = link_to 'Mostrar', artista
-            - if can? :edit, artista
-              = link_to 'Editar', edit_artista_path(artista)
+          %td.acciones
+            - # Aparecen al revés de como están dispuestas por el .pull-right
             - if can? :destroy, artista
-              = link_to 'Eliminar', artista, method: :delete,
-                data: { confirm: t(:confirmar) }
-
+              .pull-right
+                = link_to artista, method: :delete, data: { confirm: t(:confirmar) } do
+                  = content_tag(:i, nil, class: 'icon-remove-circle')
+                  'Eliminar'
+            - if can? :edit, artista
+              .pull-right
+                = link_to edit_artista_path(artista) do
+                  = content_tag(:i, nil, class: 'icon-pencil')
+                  'Editar'
+            - if can? :read, artista
+              .pull-right
+                = link_to artista do
+                  = content_tag(:i, nil, class: 'icon-zoom-in')
+                  'Mostrar'
   - if can? :create, Artista
     = link_to 'Cargar Artista', new_artista_path
