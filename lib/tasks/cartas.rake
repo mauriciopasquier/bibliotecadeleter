@@ -10,7 +10,7 @@ namespace :cartas do
       next if expansion == '.' or expansion == '..' 
 
       begin
-        Dir.glob "#{Rails.root.join(dir, expansion)}/*.jpg" do |i|
+        Dir.glob("#{Rails.root.join(dir, expansion)}/*.jpg").sort.each do |i|
 
           puts i if ENV['log']
           # Asume imágenes guardadas de la forma `expansion/000. nombre.jpg`
@@ -18,6 +18,7 @@ namespace :cartas do
           Expansion.find(expansion).versiones.find_by_slug(numero).imagenes.create(
             archivo: File.open(i)
           )          
+
         end
       rescue => e
         puts "No se pudo adjuntar las imágenes de #{expansion}: #{e}"
