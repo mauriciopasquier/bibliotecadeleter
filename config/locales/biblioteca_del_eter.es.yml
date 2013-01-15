@@ -11,6 +11,11 @@ es:
         current_password: "Tu clave actual para confirmar los cambios"
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
-    no_disponible:  "Imagen no disponible"
+    no_disponible:  "Imagen no disponible."
   artistas:
-    sin_links:  "No hay links para este artista"
+    sin_links:  "No hay links para este artista."
+  cartas:
+    buscar:
+      encontradas:
+        one:  "1 carta encontrada."
+        other:  "%{count} cartas encontradas."
