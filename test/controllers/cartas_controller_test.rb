@@ -35,7 +35,7 @@ describe CartasController do
   end
 
   it "debe mostrar una carta anónimamente" do
-    get :show, id: create(:carta)
+    get :show, id: create(:carta_con_versiones)
     assert_response :success
   end
 

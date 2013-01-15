@@ -9,4 +9,12 @@ describe Version do
   it "debe crear una version huérfana" do
     create(:version_con_carta, expansion: nil).slug.must_match /huerfanas/
   end
+
+  it "debe crearse sólo una versión canónica" do
+    carta = create(:carta_con_versiones, cantidad_de_versiones: 3)
+    versiones = carta.versiones.all
+    versiones.must_include carta.canonica
+    versiones.collect(&:canonica).count {|c| c}.must_equal 1
+    versiones.collect(&:canonica).count {|c| !c}.must_equal 2
+  end
 end

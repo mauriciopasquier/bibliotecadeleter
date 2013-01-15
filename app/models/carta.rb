@@ -16,18 +16,7 @@ class Carta < ActiveRecord::Base
 
   accepts_nested_attributes_for :versiones, allow_destroy: true
 
-  after_save :determinar_version_canonica
-
   def to_s
     nombre
   end
-
-  private
-
-    def determinar_version_canonica
-      unless canonica.present? or versiones.empty?
-        versiones.first.update_attribute(:canonica, true)
-      end
-    end
-
 end
