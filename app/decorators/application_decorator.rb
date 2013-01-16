@@ -13,4 +13,15 @@ class ApplicationDecorator < Draper::Base
     end
   end
 
+  # Para evitar que `cycle` devuelva cadenas vacías cuando debería devolver
+  # nil, lo que genera tags con `class=""` en vez de nada.
+  def nil_cycle(first_value, *values)
+    r = h.cycle(first_value, *values)
+    case r
+      when ""
+        nil
+      else
+        r
+    end
+  end
 end

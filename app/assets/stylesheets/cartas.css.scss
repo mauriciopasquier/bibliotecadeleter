@@ -9,5 +9,10 @@
   .rareza       { text-align: right; }
   .caja-de-texto {
     padding: 1em 0;
+
+    p.infernal {
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
   }
 }
