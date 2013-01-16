@@ -7,7 +7,6 @@ class VersionDecorator < ApplicationDecorator
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
   def link(estilo = :original, opciones = {})
-    # TODO las promocionales van al mismo link que las normales por FriendlyID
     h.link_to tag(estilo), [source.carta, source], opciones
   end
 

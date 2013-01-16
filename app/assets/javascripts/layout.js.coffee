@@ -9,3 +9,6 @@ jQuery ->
     .live('ajax:success', (evt, data, status, xhr) ->
       $('#lista').replaceWith(data)
       $('body').css('cursor', 'auto') )
+
+  $(".alert button.close").show()
+  $(".alert").alert()

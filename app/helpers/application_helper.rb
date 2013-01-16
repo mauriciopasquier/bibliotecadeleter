@@ -1,14 +1,13 @@
 # encoding: utf-8
 module ApplicationHelper
 
-  # Hay que llamarlo con != en haml para que interprete el html
-  # TODO convertir a _tag
-  def mensajes(flash)
-    html = "<div class='flash'>"
-    flash.each do |tipo, mensaje|
-      html << "<div class='message #{tipo == :alert ? :error : tipo}'><p>#{mensaje }</p></div>"
-    end
-    html << '</div>'
+  def mensajes(lista)
+    lista.collect do |tipo, mensaje|
+      content_tag(:div, class: "#{alerta(tipo)}") do
+        content_tag(:button, '×', class: 'close', data: { dismiss: 'alert' }) +
+        content_tag(:p) { mensaje }
+      end
+    end.join.html_safe
   end
 
   def titulo
@@ -40,4 +39,22 @@ module ApplicationHelper
       content_tag(:i, nil, class: 'icon-remove-circle') + 'Eliminar'
     end
   end
+
+  private
+
+    def alerta(tipo)
+      'alert fade in ' +
+      case tipo
+        when :error
+          'alert-error'
+        when :notice
+          'alert-info'
+        when :success
+          'alert-success'
+        when :alert
+          '' # Usamos el estilo de .alert default
+        else
+          tipo
+      end
+    end
 end
