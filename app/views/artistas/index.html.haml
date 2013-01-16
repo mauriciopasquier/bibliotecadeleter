@@ -17,7 +17,7 @@
       - @artistas.each do |artista|
         %tr
           %td.nombre= artista.nombre
-          %td.cantidad= artista.ilustraciones.size
+          %td.cantidad= artista.cantidad
           %td.acciones
             - # Aparecen al revés de como están dispuestas por el .pull-right
             - if can? :destroy, artista

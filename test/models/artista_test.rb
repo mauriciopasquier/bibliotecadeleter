@@ -8,8 +8,8 @@ describe Artista do
 
   it "debe devolver artistas sin ilustraciones (outer join)" do
     artista_con = create(:artista)
-    ilustracion = create(:version_con_carta)
-    ilustracion.artistas << artista_con
+    imagen = create(:imagen)
+    artista_con.ilustraciones << imagen
     artista_sin = create(:artista)
 
     artista_con.ilustraciones.size.must_equal 1

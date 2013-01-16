@@ -9,6 +9,7 @@ gem 'pg'
 gem 'attribute_normalizer'
 gem 'inflections'
 gem 'paperclip'
+gem 'squeel'
 
 # View
 gem 'dynamic_form'

@@ -7,9 +7,9 @@ class Version < ActiveRecord::Base
                   :imagenes_attributes, :carta, :expansion, :expansion_id
 
   belongs_to :carta, inverse_of: :versiones
-  has_and_belongs_to_many :artistas
   belongs_to :expansion
   has_many :imagenes
+  has_many :artistas, through: :imagenes
 
   friendly_id :expansion_y_numero, use: :slugged
 
@@ -25,8 +25,9 @@ class Version < ActiveRecord::Base
 
   private
 
+    # Usá `slug` para llamar a esto
     def expansion_y_numero
-      "#{expansion.try(:slug) || 'huerfanas'}-#{numero_justificado}"
+      "#{numero_justificado}-#{expansion.try(:slug) || 'huerfanas'}"
     end
 
     def ver_si_es_canonica

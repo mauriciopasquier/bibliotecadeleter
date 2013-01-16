@@ -4,6 +4,7 @@ class Imagen < ActiveRecord::Base
 
   belongs_to :version
   has_one :carta, through: :version
+  has_and_belongs_to_many :artistas
 
   has_attached_file :archivo,
     { url:  ":assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
