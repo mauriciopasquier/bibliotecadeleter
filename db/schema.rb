@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116070959) do
+ActiveRecord::Schema.define(:version => 20130116163536) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(:version => 20130116070959) do
 
   add_index "artistas", ["slug"], :name => "index_artistas_on_slug", :unique => true
 
-  create_table "artistas_versiones", :id => false, :force => true do |t|
+  create_table "artistas_imagenes", :id => false, :force => true do |t|
     t.integer "artista_id"
-    t.integer "version_id"
+    t.integer "imagen_id"
   end
 
   create_table "cartas", :force => true do |t|

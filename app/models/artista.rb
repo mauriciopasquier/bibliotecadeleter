@@ -3,7 +3,7 @@ class Artista < ActiveRecord::Base
   include FriendlyId
 
   attr_accessible :nombre
-  has_and_belongs_to_many :ilustraciones, class_name: 'Version'
+  has_and_belongs_to_many :ilustraciones, class_name: 'Imagen'
   has_many :cartas, through: :ilustraciones
   has_many :links, as: :linkeable, dependent: :destroy
 
@@ -15,7 +15,7 @@ class Artista < ActiveRecord::Base
   def self.con_ilustraciones
     joins(:ilustraciones)
       .group('artistas.id')
-      .select('artistas.*, count(versiones.id) as cantidad')
+      .select('artistas.*, count(imagenes.id) as cantidad')
   end
 
   def self.top5
