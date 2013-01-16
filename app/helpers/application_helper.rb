@@ -2,14 +2,12 @@
 module ApplicationHelper
 
   def mensajes(lista)
-    flashes = []
-    lista.each do |tipo, mensaje|
-      flashes << content_tag(:div, class: "#{alerta(tipo)}") do
+    lista.collect do |tipo, mensaje|
+      content_tag(:div, class: "#{alerta(tipo)}") do
         content_tag(:button, '×', class: 'close', data: { dismiss: 'alert' }) +
         content_tag(:p) { mensaje }
       end
-    end
-    flashes.join.html_safe
+    end.join.html_safe
   end
 
   def titulo
