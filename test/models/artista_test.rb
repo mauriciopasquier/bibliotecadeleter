@@ -15,7 +15,7 @@ describe Artista do
     artista_con.ilustraciones.size.must_equal 1
     artista_sin.ilustraciones.size.must_equal 0
 
-    Artista.con_ilustraciones.includes(:ilustraciones).all.size.must_equal 2
+    Artista.con_ilustraciones.all.size.must_equal 2
   end
 
 end

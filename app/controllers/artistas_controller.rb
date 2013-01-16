@@ -5,7 +5,7 @@ class ArtistasController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @artistas = apply_scopes(Artista).decorate
+    @artistas = apply_scopes(Artista).con_ilustraciones.con_cantidad.decorate
     @titulo = 'Todos los Artistas'
     respond_with(@artistas) do |format|
       # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
