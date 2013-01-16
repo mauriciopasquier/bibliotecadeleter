@@ -7,4 +7,8 @@ class ExpansionDecorator < ApplicationDecorator
   def notas
     hash_a_dl source.notas, dl: 'notas'
   end
+
+  def to_s
+    source.nombre
+  end
 end

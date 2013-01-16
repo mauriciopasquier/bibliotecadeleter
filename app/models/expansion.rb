@@ -18,10 +18,6 @@ class Expansion < ActiveRecord::Base
 
   default_scope order(:lanzamiento)
 
-  def to_s
-    nombre
-  end
-
   # Determina de qué expansión son las promocionales
   def base
     if slug =~ /promocionales/

@@ -2,6 +2,7 @@
 class VersionDecorator < ApplicationDecorator
   decorates :version
   decorates_association :imagenes
+  decorates_association :expansion
 
   # genera una imagen/link a la versión.
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
