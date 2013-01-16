@@ -1,14 +1,14 @@
 .row-fluid
-  #carta.span6
+  #carta.span5
     %h2 Texto oficial
-    = render partial: 'cartas/carta', locals: { carta: @carta,
-                                                version: @carta.canonica }
-  .span6
+    = render  partial: 'cartas/carta',
+              locals: { carta: @carta,
+                        version: @carta.canonica }
+  .span7
     %h2 Imágenes
-    = render partial: 'layouts/galeria',
-    locals: { imagenes: @carta.canonica.imagenes, estilo: :original }
-
+    = render  partial: 'layouts/galeria',
+              locals: { imagenes: @carta.canonica.imagenes,
+                        estilo: :original }
 
 - if @carta.versiones.size > 1
-  .row-fluid
-    .span12= link_to 'Todas las versiones', carta_versiones_path(@carta), class: 'btn'
+  = link_to 'Todas las versiones', carta_versiones_path(@carta), class: 'btn'
