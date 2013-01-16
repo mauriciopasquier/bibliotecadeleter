@@ -26,7 +26,7 @@ class Version < ActiveRecord::Base
   private
 
     def expansion_y_numero
-      "#{expansion.try(:slug) || 'huerfanas'}-#{numero_justificado}"
+      "#{numero_justificado}-#{expansion.try(:slug) || 'huerfanas'}"
     end
 
     def ver_si_es_canonica
