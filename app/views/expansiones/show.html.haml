@@ -1,7 +1,7 @@
 .row-fluid
   .span12
     %h2.plegable Datos sobre la expansión
-    %dl
+    %dl.dl-horizontal
       - if @expansion.lanzamiento?
         %dt Lanzamiento
         %dd= l @expansion.lanzamiento
@@ -16,7 +16,8 @@
         %dd= @expansion.total
       - if @expansion.notas?
         %dt Notas
-        %dd!= @expansion.notas
+        %dd= @expansion.notas
+
 .row-fluid
   .span12
     %h2.plegable Lista de cartas

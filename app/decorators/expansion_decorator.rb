@@ -5,7 +5,7 @@ class ExpansionDecorator < ApplicationDecorator
   decorates_association :imagenes
 
   def notas
-    hash_a_dl source.notas, dl: 'notas'
+    hash_a_dl source.notas, dl: 'notas dl-horizontal'
   end
 
   def to_s

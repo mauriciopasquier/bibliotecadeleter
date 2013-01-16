@@ -2,7 +2,7 @@
 class ApplicationDecorator < Draper::Base
 
   def hash_a_dl(*hash)
-    clase = hash.extract_options!
+    clase = hash.size == 1 ? {} : hash.extract_options!
     h.content_tag(:dl, class: clase[:dl]) do
       hash.first.collect do |dt, dd|
         h.content_tag(:dt, class: clase[:dt]) { dt.humanize } +

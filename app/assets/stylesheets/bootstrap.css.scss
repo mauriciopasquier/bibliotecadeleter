@@ -32,3 +32,11 @@ body {
     }
   }
 }
+
+.dl-horizontal {
+  dd {
+    dl {
+      dt { clear: right; }
+    }
+  }
+}

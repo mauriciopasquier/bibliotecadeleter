@@ -1,7 +1,7 @@
 .row-fluid
   .span12
     %h2.plegable Información sobre el artista
-    %dl
+    %dl.dl-horizontal
       - if @artista.ilustraciones.size > 0
         %dt Ilustraciones para Inferno
         %dd= @artista.ilustraciones.size
