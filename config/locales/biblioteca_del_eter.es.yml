@@ -12,8 +12,6 @@ es:
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
     no_disponible:  "Imagen no disponible."
-  artistas:
-    sin_links:  "No hay links para este artista."
   cartas:
     buscar:
       encontradas:

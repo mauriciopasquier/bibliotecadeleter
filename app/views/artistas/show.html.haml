@@ -2,12 +2,12 @@
   .span12
     %h2.plegable Información sobre el artista
     %dl
-      %dt Links
+      %dt Ilustraciones para Inferno
+      %dd= @artista.ilustraciones.size
       - if @artista.links.any?
+        %dt Links
         - @artista.links.each do |l|
           %dd= link_to l.nombre, l.url
-      - else
-        %dd= I18n.t('artistas.sin_links')
 .row-fluid
   .span12
     %h2.plegable Galería de ilustraciones

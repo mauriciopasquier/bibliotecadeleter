@@ -5,7 +5,7 @@ class Artista < ActiveRecord::Base
   attr_accessible :nombre
   has_and_belongs_to_many :ilustraciones, class_name: 'Version'
   has_many :cartas, through: :ilustraciones
-  has_many :links, as: :linkeable
+  has_many :links, as: :linkeable, dependent: :destroy
 
   friendly_id :nombre, use: :slugged
 
