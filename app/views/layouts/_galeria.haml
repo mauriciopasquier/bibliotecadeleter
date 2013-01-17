@@ -1,7 +1,16 @@
 - # TODO endless pagination
-.galeria
-  %ul.thumbs
-    - imagenes.each do |v|
-      %li{id: v.to_param}
-        = v.link (defined?(estilo) ? estilo : :thumb),
-          class: (defined?(estilo) ? estilo : :thumb)
+#lista
+  - if defined?(paginar) ? paginar : false
+    #paginacion.pagination.pagination-centered
+      = paginate imagenes, remote: true, param_name: :pagina_galeria
+
+  #galeria.galeria
+    %ul.thumbs
+      - imagenes.each do |v|
+        %li
+          = v.link (defined?(estilo) ? estilo : :thumb),
+            class: (defined?(estilo) ? estilo : :thumb)
+
+  - if defined?(paginar) ? paginar : false
+    #paginacion.pagination.pagination-centered
+      = paginate imagenes, remote: true, param_name: :pagina_galeria

@@ -3,7 +3,7 @@
     %h2.plegable Información sobre el artista
     %dl.dl-horizontal
       - if @artista.ilustraciones.size > 0
-        %dt Ilustraciones para Inferno
+        %dt Ilustraciones
         %dd= @artista.ilustraciones.size
       - if @artista.links.any?
         %dt Links
@@ -15,6 +15,7 @@
     .span12
       %h2.plegable Galería de ilustraciones
       = render  partial: 'layouts/galeria',
-                locals: { imagenes: @artista.ilustraciones }
+                locals: { imagenes: @imagenes,
+                          paginar: true }
 
 = link_to 'Otros artistas', artistas_path, class: 'btn'

@@ -19,8 +19,19 @@ class ExpansionesController < ApplicationController
 
   def show
     @expansion = @expansion.decorate
+    @imagenes = @expansion.galeria(params[:pagina_galeria])
     @titulo = @expansion.nombre
-    respond_with(@expansion)
+    respond_with(@expansion) do |format|
+      format.html do
+        if request.xhr?   # solicitud ajax para la paginación
+          render  partial: 'layouts/galeria',
+                  locals: {
+                    imagenes: @imagenes,
+                    paginar: true
+                  }
+        end
+      end
+    end
   end
 
   def new

@@ -19,8 +19,20 @@ class ArtistasController < ApplicationController
 
   def show
     @artista = @artista.decorate
+    @imagenes = @artista.galeria(params[:pagina_galeria])
     @titulo = @artista.nombre
-    respond_with(@artista)
+    respond_with(@artista) do |format|
+      format.html do
+        if request.xhr?   # solicitud ajax para la paginación
+          render  partial: 'layouts/galeria',
+                  locals: {
+                    imagenes: @imagenes,
+                    paginar: true
+                  }
+        end
+      end
+    end
+
   end
 
   def new
