@@ -55,7 +55,7 @@ class VersionDecorator < ApplicationDecorator
 
   def arte
     imagenes.collect do |i|
-      h.content_tag(:p, class: nil_cycle(nil, 'infernal', name: 'arte')) do
+      h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'arte')) do
         "arte: #{i.artistas.collect(&:nombre).join(' - ')}"
       end
     end.join.html_safe
@@ -73,7 +73,7 @@ class VersionDecorator < ApplicationDecorator
 
   def texto
     source.texto.split('/').collect do |cara|
-      h.content_tag(:p, class: nil_cycle(nil, 'infernal', name: 'texto')) do
+      h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
         cara
       end
     end.join.html_safe
