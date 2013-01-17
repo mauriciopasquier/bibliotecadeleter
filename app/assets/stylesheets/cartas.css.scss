@@ -5,11 +5,13 @@
   .ambientacion { text-align: center;
                   font-style: italic;
                   font-size: small;   }
-  .arte         { text-align: center; }
   .rareza       { text-align: right; }
+  .arte {
+    text-align: left;
+    p { text-align: center; }
+  }
   .caja-de-texto {
     padding: 1em 0;
-
   }
   p.terrenal {
     border-top: 1px solid #eee;

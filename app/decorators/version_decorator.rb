@@ -50,13 +50,15 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def numeracion
-    "#{expansion.base.nombre} #{source.numero}/#{expansion.base.total}"
+    h.link_to(expansion.base.nombre, expansion.base) + " #{source.numero}/#{expansion.base.total}"
   end
 
   def arte
     imagenes.collect do |i|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'arte')) do
-        "arte: #{i.artistas.collect(&:nombre).join(' - ')}"
+        i.artistas.collect do |a|
+          h.link_to(a.nombre, a)
+        end.join(' - ').html_safe
       end
     end.join.html_safe
   end
