@@ -1,3 +1,22 @@
+@import 'twitter/bootstrap/mixins';
+@import 'constantes';
+
 ul.versiones {
   list-style-type: none;
+}
+
+#versiones {
+
+  .expansion {
+    &:target li {
+      // De bootstrap.thumbnail
+      padding: 4px;
+      line-height: $altura-linea;
+      border: 1px solid $color-base;
+      background-color: $color-base;
+      @include border-radius(5px);
+      @include transition(all .2s ease-in-out);
+    }
+  }
+
 }
