@@ -13,10 +13,10 @@ Paperclip.interpolates :carta do |adjunto, estilo|
 end
 
 Paperclip.interpolates :cara do |adjunto, estilo|
-  if adjunto.instance.archivo_file_name =~ /terrenal/
+  if adjunto.instance.archivo_file_name =~ /-.terrenal/
     '-terrenal'
   else
-    if adjunto.instance.archivo_file_name =~ /infernal/
+    if adjunto.instance.archivo_file_name =~ /-.infernal/
     '-infernal'
     else
       nil
