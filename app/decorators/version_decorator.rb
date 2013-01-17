@@ -67,6 +67,7 @@ class VersionDecorator < ApplicationDecorator
       when 'I' then 'Infrecuente'
       when 'R' then 'Rara'
       when 'E' then 'Épica'
+      when 'P' then 'Promocional'
       else  '???'
     end
   end
