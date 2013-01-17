@@ -54,7 +54,11 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def arte
-    "arte: #{artistas.collect(&:nombre).join(' - ')}"
+    imagenes.collect do |i|
+      h.content_tag(:p, class: nil_cycle(nil, 'infernal', name: 'arte')) do
+        "arte: #{i.artistas.collect(&:nombre).join(' - ')}"
+      end
+    end.join.html_safe
   end
 
   def rareza
@@ -69,7 +73,9 @@ class VersionDecorator < ApplicationDecorator
 
   def texto
     source.texto.split('/').collect do |cara|
-      h.content_tag(:p, class: nil_cycle(nil, 'infernal')) { cara }
+      h.content_tag(:p, class: nil_cycle(nil, 'infernal', name: 'texto')) do
+        cara
+      end
     end.join.html_safe
   end
 end

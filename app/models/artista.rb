@@ -27,5 +27,4 @@ class Artista < ActiveRecord::Base
   end
 
   default_scope order(:nombre)
-
 end
