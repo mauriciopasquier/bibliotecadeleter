@@ -31,9 +31,20 @@ namespace :deploy do
       run "cd #{release_path}; RAILS_ENV=production bundle exec rake paperclip:refresh:missing_styles"
     end
   end
+
+  namespace :config do
+    desc "Crea los links simbólicos de los archivos de configuración"
+    task :linkear_config do
+      run "ln -s #{shared_path}/config/devise.rb #{release_path}/config/initializers/devise.rb"
+      run "ln -s #{shared_path}/config/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
+      run "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+      run "ln -s #{shared_path}/config/production.rb #{release_path}/config/environments/production.rb"
+    end
+  end
 end
 
-after "deploy:update_code", "deploy:assets:linkear_estaticos"
+after "deploy:create_symlink", "deploy:config:linkear_config"
+after "deploy:create_symlink", "deploy:assets:linkear_estaticos"
 after "deploy:update_code", "deploy:assets:refresh_styles"
 
 # If you are using Passenger mod_rails uncomment this:
