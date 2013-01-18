@@ -1,0 +1,14 @@
+.avisos= mensajes(flash)
+%ul.menu.nav.nav-list
+  %li
+    %a#expansiones.plegable.nav-header{href: '#expansiones'} Expansiones grandes
+    %ul
+      - expansiones(:grandes).each do |e|
+        %li= link_to e.nombre, e
+      %li= link_to '...todas las expansiones', expansiones_path
+  %li
+    %a#artistas.plegable.nav-header{href: '#artistas'} Artistas más prolíficos
+    %ul
+      - artistas(:top5).each do |a|
+        %li= link_to a.nombre, a
+      %li= link_to '...todos los artistas', artistas_path

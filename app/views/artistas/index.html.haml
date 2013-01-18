@@ -1,21 +1,31 @@
-%h1 Listing artistas
+#lista
+  #paginacion
+    = paginate @artistas, remote: true
 
-%table
-  %tr
-    %th Nombre
-    %th Web
-    %th
-    %th
-    %th
+  %table#artistas.table.table-striped.table-condensed.table-hover
+    %colgroup
+      %col#nombre
+      %col#cantidad
+      %col#acciones
+    %thead
+      %tr
+        %th Nombre
+        %th.cantidad Cantidad de ilustraciones
+        %th.acciones
 
-  - @artistas.each do |artista|
-    %tr
-      %td= artista.nombre
-      %td= artista.web
-      %td= link_to 'Show', artista
-      %td= link_to 'Edit', edit_artista_path(artista)
-      %td= link_to 'Destroy', artista, method: :delete, data: { confirm: 'Are you sure?' }
+    %tbody
+      - @artistas.each do |artista|
+        %tr
+          %td.nombre= artista.nombre
+          %td.cantidad= artista.cantidad
+          %td.acciones
+            - # Aparecen al revés de como están dispuestas por el .pull-right
+            - if can? :destroy, artista
+              .pull-right= link_to_eliminar artista
+            - if can? :edit, artista
+              .pull-right= link_to_editar edit_artista_path(artista)
+            - if can? :read, artista
+              .pull-right= link_to_mostrar artista
 
-%br
-
-= link_to 'New Artista', new_artista_path
+  - if can? :create, Artista
+    = link_to 'Cargar Artista', new_artista_path

@@ -1,39 +1,14 @@
-%p#notice= notice
+.row-fluid
+  #carta.span5
+    %h2 Texto de esta versión
+    = render  partial: 'cartas/carta',
+              locals: { carta: @carta,
+                        version: @version }
+  .span7
+    %h2 Imágenes
+    = render  partial: 'layouts/galeria',
+              locals: { imagenes: @version.imagenes,
+                        estilo: :original }
 
-%p
-  %b Texto:
-  = @version.texto
-%p
-  %b Tipo:
-  = @version.tipo
-%p
-  %b Supertipo:
-  = @version.supertipo
-%p
-  %b Subtipo:
-  = @version.subtipo
-%p
-  %b Fue:
-  = @version.fue
-%p
-  %b Res:
-  = @version.res
-%p
-  %b Senda:
-  = @version.senda
-%p
-  %b Ambientacion:
-  = @version.ambientacion
-%p
-  %b Numero:
-  = @version.numero
-%p
-  %b Rareza:
-  = @version.rareza
-%p
-  %b Coste:
-  = @version.coste
-
-= link_to 'Edit', edit_version_path(@version)
-\|
-= link_to 'Back', versiones_path
+= link_to 'Ir a la carta', @carta, class: 'btn'
+= link_to 'Ir a la expansión', @version.expansion, class: 'btn'

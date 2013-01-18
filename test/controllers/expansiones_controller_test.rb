@@ -14,13 +14,13 @@ describe ExpansionesController do
     assert_redirected_to :root
   end
 
-  it "debe acceder a new si está logueado" do
+  it "debe acceder a new si tiene permisos" do
     loguearse
     get :new
     assert_response :success
   end
 
-  it "debe crear una expansión si está logueado" do
+  it "debe crear una expansión si tiene permisos" do
     loguearse
     assert_difference('Expansion.count') do
       post :create, expansion: attributes_for(:expansion)
@@ -39,7 +39,7 @@ describe ExpansionesController do
     assert_response :success
   end
 
-  it "debe acceder a edit si está logueado" do
+  it "debe acceder a edit si tiene permisos" do
     loguearse
     get :edit, id: create(:expansion)
     assert_response :success
@@ -50,7 +50,7 @@ describe ExpansionesController do
     assert_redirected_to :root
   end
 
-  it "debe actualizar una expansión si está logueado" do
+  it "debe actualizar una expansión si tiene permisos" do
     loguearse
     expansion = create(:expansion)
     atributos = attributes_for(:expansion)
@@ -72,7 +72,7 @@ describe ExpansionesController do
     assert_redirected_to :root
   end
 
-  it "debe destruir una expansión si está logueado" do
+  it "no debe destruir una expansión anónimamente" do
     delete :destroy, id: create(:expansion)
     assert_redirected_to :root
   end

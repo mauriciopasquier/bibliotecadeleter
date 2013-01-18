@@ -14,13 +14,13 @@ describe CartasController do
     assert_redirected_to :root
   end
 
-  it "debe acceder a new si está logueado" do
+  it "debe acceder a new si tiene permisos" do
     loguearse
     get :new
     assert_response :success
   end
 
-  it "debe crear una carta si está logueado" do
+  it "debe crear una carta si tiene permisos" do
     loguearse
     assert_difference('Carta.count') do
       post :create, carta: attributes_for(:carta)
@@ -35,11 +35,11 @@ describe CartasController do
   end
 
   it "debe mostrar una carta anónimamente" do
-    get :show, id: create(:carta)
+    get :show, id: create(:carta_con_versiones)
     assert_response :success
   end
 
-  it "debe acceder a edit si está logueado" do
+  it "debe acceder a edit si tiene permisos" do
     loguearse
     get :edit, id: create(:carta)
     assert_response :success
@@ -50,7 +50,7 @@ describe CartasController do
     assert_redirected_to :root
   end
 
-  it "debe actualizar una carta si está logueado" do
+  it "debe actualizar una carta si tiene permisos" do
     loguearse
     carta = create(:carta)
     atributos = attributes_for(:carta)
@@ -65,7 +65,7 @@ describe CartasController do
     assert_redirected_to :root
   end
 
-  it "debe destruir una carta si está logueado" do
+  it "no debe destruir una carta anónimamente" do
     delete :destroy, id: create(:carta)
     assert_redirected_to :root
   end

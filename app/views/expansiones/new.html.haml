@@ -1,5 +1,4 @@
-%h1 New expansion
-
 = render 'form'
 
-= link_to 'Back', expansiones_path
+- if can? :read, Expansion
+  = link_to 'Todas', expansiones_path

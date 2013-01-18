@@ -11,20 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121227224835) do
+ActiveRecord::Schema.define(:version => 20130116163536) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
-    t.string   "web"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug",       :null => false
+  end
+
+  add_index "artistas", ["slug"], :name => "index_artistas_on_slug", :unique => true
+
+  create_table "artistas_imagenes", :id => false, :force => true do |t|
+    t.integer "artista_id"
+    t.integer "imagen_id"
   end
 
   create_table "cartas", :force => true do |t|
     t.string   "nombre",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug",       :null => false
   end
+
+  add_index "cartas", ["slug"], :name => "index_cartas_on_slug", :unique => true
 
   create_table "expansiones", :force => true do |t|
     t.string   "nombre",       :null => false
@@ -35,6 +45,28 @@ ActiveRecord::Schema.define(:version => 20121227224835) do
     t.integer  "total"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "slug",         :null => false
+  end
+
+  add_index "expansiones", ["slug"], :name => "index_expansiones_on_slug", :unique => true
+
+  create_table "imagenes", :force => true do |t|
+    t.integer  "version_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "archivo_file_name"
+    t.string   "archivo_content_type"
+    t.integer  "archivo_file_size"
+    t.datetime "archivo_updated_at"
+  end
+
+  create_table "links", :force => true do |t|
+    t.string   "url"
+    t.integer  "linkeable_id"
+    t.string   "linkeable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "nombre"
   end
 
   create_table "usuarios", :force => true do |t|
@@ -72,8 +104,8 @@ ActiveRecord::Schema.define(:version => 20121227224835) do
     t.datetime "updated_at",                      :null => false
     t.integer  "carta_id"
     t.boolean  "canonica",     :default => false
-    t.integer  "artista_id"
     t.integer  "expansion_id"
+    t.string   "slug",                            :null => false
   end
 
 end

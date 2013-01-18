@@ -13,5 +13,11 @@ FactoryGirl.define do
     rareza        'E'
     coste         { rand(13) }
     canonica      false
+
+    expansion
+
+    factory :version_con_carta do
+      carta
+    end
   end
 end

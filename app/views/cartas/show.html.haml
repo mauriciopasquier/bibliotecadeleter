@@ -1,9 +1,14 @@
-%p#notice= notice
+.row-fluid
+  #carta.span5
+    %h2 Texto oficial
+    = render  partial: 'cartas/carta',
+              locals: { carta: @carta,
+                        version: @carta.canonica }
+  .span7
+    %h2 Imágenes
+    = render  partial: 'layouts/galeria',
+              locals: { imagenes: @carta.canonica.imagenes,
+                        estilo: :original }
 
-%p
-  %b Nombre:
-  = @carta.nombre
-
-= link_to 'Edit', edit_carta_path(@carta)
-\|
-= link_to 'Back', cartas_path
+- if @carta.versiones.size > 1
+  = link_to 'Todas las versiones', carta_versiones_path(@carta), class: 'btn'

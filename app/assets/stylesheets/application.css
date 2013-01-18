@@ -9,5 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require bootstrap
+ *
+ * Archivos de la aplicación a incluir
+ *
+ *= require layout
+ *= require galeria
+ *= require expansiones
+ *= require artistas
+ *= require cartas
+ *= require versiones
  */

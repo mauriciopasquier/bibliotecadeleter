@@ -4,58 +4,65 @@ require "./test/minitest_helper"
 describe VersionesController do
 
   it "debe acceder al index anónimamente" do
-    get :index
+    get :index, carta_id: create(:carta)
     assert_response :success
     assert_not_nil assigns(:versiones)
   end
 
   it "no debe acceder a new anónimamente" do
-    get :new
+    get :new, carta_id: create(:carta)
     assert_redirected_to :root
   end
 
-  it "debe acceder a new si está logueado" do
+  it "debe acceder a new si tiene permisos" do
     loguearse
-    get :new
+    get :new, carta_id: create(:carta)
     assert_response :success
   end
 
-  it "debe crear una version si está logueado" do
+  it "debe crear una version si tiene permisos" do
     loguearse
+    carta = create(:carta)
+    expansion = create(:expansion)
     assert_difference('Version.count') do
-      post :create, version: attributes_for(:version)
+      post :create, carta_id: carta,
+                    version: attributes_for(:version,
+                                            expansion_id: expansion.id)
     end
 
-    assert_redirected_to version_path(assigns(:version))
+    assert_redirected_to carta_version_path(carta, assigns(:version))
   end
 
   it "no debe crear una version anónimamente" do
-    post :create, version: attributes_for(:version)
+    post :create, carta_id: create(:carta), version: attributes_for(:version)
     assert_redirected_to :root
   end
 
   it "debe mostrar una version anónimamente" do
-    get :show, id: create(:version)
+    version = create(:version_con_carta)
+    get :show, carta_id: version.carta, id: version
     assert_response :success
   end
 
-  it "debe acceder a edit si está logueado" do
+  it "debe acceder a edit si tiene permisos" do
     loguearse
-    get :edit, id: create(:version)
+    version = create(:version_con_carta)
+    get :edit, carta_id: version.carta, id: version
     assert_response :success
   end
 
   it "no debe acceder a edit anónimamente" do
-    get :edit, id: create(:version)
+    version = create(:version_con_carta)
+    get :edit, carta_id: version.carta, id: version
     assert_redirected_to :root
   end
 
-  it "debe actualizar una version si está logueado" do
+  it "debe actualizar una version si tiene permisos" do
     loguearse
-    version = create(:version)
+    version = create(:version_con_carta)
     atributos = attributes_for(:version, canonica: true)
-    put :update, id: version, version: atributos
-    assert_redirected_to version_path(assigns(:version))
+    put :update, carta_id: version.carta, id: version, version: atributos
+    assert_redirected_to carta_version_path(version.carta, assigns(:version))
     version.reload
     assert_equal atributos[:texto], version.texto, "No actualiza el texto"
     assert_equal atributos[:tipo], version.tipo, "No actualiza el tipo"
@@ -72,12 +79,14 @@ describe VersionesController do
   end
 
   it "no debe actualizar una version anónimamente" do
-    put :update, id: create(:version), version: attributes_for(:version)
+    version = create(:version_con_carta)
+    put :update, carta_id: version.carta, id: version, version: attributes_for(:version)
     assert_redirected_to :root
   end
 
-  it "debe destruir una version si está logueado" do
-    delete :destroy, id: create(:version)
+  it "no debe destruir una version anónimamente" do
+    version = create(:version_con_carta)
+    delete :destroy, carta_id: version.carta, id: version
     assert_redirected_to :root
   end
 

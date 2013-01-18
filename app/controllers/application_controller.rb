@@ -14,10 +14,6 @@ class ApplicationController < ActionController::Base
   # controladores de devise
   check_authorization unless: :devise_controller?
 
-  # Carga y autoriza el recurso, creando las variables de instancia
-  # correspondientes
-  load_and_authorize_resource prepend: true, unless: :devise_controller?
-
   # Recupera las excepciones por tratar de acceder a un recurso sin
   # autorización
   rescue_from CanCan::AccessDenied do |e|
