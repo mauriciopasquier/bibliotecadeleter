@@ -9,7 +9,7 @@ extend SemillasHelper
 # Carga las ediciones
 cargar_yml_de('expansiones').each do |expansion|
   nombre, datos = expansion
-  puts "Cargando expansion #{nombre} ..."
+  puts "Creando expansion #{nombre} ..."
   Expansion.find_or_create_by_nombre(nombre) do |e|
     e.total = datos[:total]
     e.lanzamiento = datos[:lanzamiento]
@@ -28,7 +28,8 @@ Expansion.all.each do |expansion|
     dir = ENV['dir']
   end
 
-  imagenes_expansion = Dir.glob("#{Rails.root.join(dir, expansion.slug)}/*.jpg").sort
+  imagenes_expansion = Dir.glob("#{File.join(dir, expansion.slug)}/*.jpg").sort
+  puts "Cargando imágenes de #{File.join(dir, expansion.slug)}"
 
   cargar_csv_de(expansion.nombre.parameterize, headers: true, col_sep: ',') do |carta|
     c = Carta.find_or_create_by_nombre(atributos_de_la_carta(carta))
