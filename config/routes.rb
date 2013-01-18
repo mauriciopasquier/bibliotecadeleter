@@ -1,58 +1,44 @@
 BibliotecaDelEter::Application.routes.draw do
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+  authenticated do
+    root to: "inicio#panel"
+  end
 
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  unauthenticated do
+    root to: 'inicio#bienvenida'
+  end
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # TODO patchear devise para cambiar nested path_names (i.e. password/new)
+  devise_for :usuarios, path_names: {
+    sign_in: 'entrar',
+    sign_out: 'salir',
+    password: 'clave',
+    confirmation: 'verificacion',
+    unlock: 'desbloquear',
+    registration: 'cuenta',
+    sign_up: 'crear',
+    new: 'nueva',
+    cancel: 'cancelar',
+    edit: 'editar'
+  }
 
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
+  masculinos  = { new: "nuevo", edit: "editar" }
+  femeninos   = { new: "nueva", edit: "editar" }
 
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  with_options path_names: femeninos do |r|
+    r.resources :cartas do
+      r.resources :versiones
 
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
+      collection do
+        match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
+      end
 
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+    end
+    r.resources :expansiones
+  end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  with_options path_names: masculinos do |r|
+    r.resources :artistas
+  end
 end

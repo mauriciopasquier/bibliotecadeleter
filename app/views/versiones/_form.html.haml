@@ -1,0 +1,43 @@
+= form_for [@carta, @version] do |f|
+  - if @version.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@version.errors.count, "error")} prohibited this version from being saved:"
+      %ul
+        - @version.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :texto
+    = f.text_area :texto
+  .field
+    = f.label :tipo
+    = f.text_field :tipo
+  .field
+    = f.label :supertipo
+    = f.text_field :supertipo
+  .field
+    = f.label :subtipo
+    = f.text_field :subtipo
+  .field
+    = f.label :fue
+    = f.number_field :fue
+  .field
+    = f.label :res
+    = f.number_field :res
+  .field
+    = f.label :senda
+    = f.text_field :senda
+  .field
+    = f.label :ambientacion
+    = f.text_area :ambientacion
+  .field
+    = f.label :numero
+    = f.number_field :numero
+  .field
+    = f.label :rareza
+    = f.text_field :rareza
+  .field
+    = f.label :coste
+    = f.number_field :coste
+  .actions
+    = f.submit 'Save'

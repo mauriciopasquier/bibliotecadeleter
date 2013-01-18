@@ -1,0 +1,40 @@
+# encoding: utf-8
+class Version < ActiveRecord::Base
+  include FriendlyId
+
+  attr_accessible :ambientacion, :coste, :fue, :numero, :rareza, :res, :senda,
+                  :subtipo, :supertipo, :texto, :tipo, :canonica,
+                  :imagenes_attributes, :carta, :expansion, :expansion_id
+
+  belongs_to :carta, inverse_of: :versiones
+  belongs_to :expansion
+  has_many :imagenes
+  has_many :artistas, through: :imagenes
+
+  friendly_id :expansion_y_numero, use: :slugged
+
+  accepts_nested_attributes_for :imagenes
+
+  before_save :ver_si_es_canonica
+
+  validates_presence_of :carta
+
+  def numero_justificado
+    numero.to_s.rjust(3, '0')
+  end
+
+  private
+
+    # Usá `slug` para llamar a esto
+    def expansion_y_numero
+      "#{numero_justificado}-#{expansion.try(:slug) || 'huerfanas'}"
+    end
+
+    def ver_si_es_canonica
+      unless carta.versiones.where(canonica: true).any?
+        self.canonica = true
+      end
+      true # Para que siga guardandola
+    end
+
+end

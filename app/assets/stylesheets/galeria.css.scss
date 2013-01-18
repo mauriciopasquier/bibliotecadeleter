@@ -1,0 +1,21 @@
+.galeria {
+  .thumbs {
+    margin: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .thumb {
+      height: 169px;
+      width: 169px;
+    }
+    .original {
+      height: 512px;
+      width: 353px;
+    }
+    .no-disponible {  border: 1px #eee solid;  }
+  }
+}

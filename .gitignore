@@ -13,8 +13,13 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/app/assets/stylesheets/scaffolds.css.scss
 
 # Ignoro todo lo que depende del deploy
 config/environments/production.rb
 config/database.yml
 config/initializers/secret_token.rb
+config/initializers/devise.rb
+
+# Ignoro las imágenes de paperclip hasta nuevo aviso
+public/e/cartas
