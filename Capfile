@@ -1,7 +1,7 @@
 load 'deploy'
 
+# Regenera los assets
+load 'deploy/assets'
+
 # Configuración
 load 'config/deploy'
-
-# Assets
-load 'deploy/assets'
