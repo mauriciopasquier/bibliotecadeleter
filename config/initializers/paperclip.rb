@@ -5,7 +5,7 @@ Paperclip.interpolates :expansion do |adjunto,  estilo|
 end
 
 Paperclip.interpolates :numero do |adjunto, estilo|
-  adjunto.instance.version.to_param
+  adjunto.instance.version.numero_justificado
 end
 
 Paperclip.interpolates :carta do |adjunto, estilo|
