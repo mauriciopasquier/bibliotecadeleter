@@ -10,7 +10,7 @@
     #cabecera.navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
         .container-fluid
-          %a.brand Biblioteca del Éter
+          = link_to 'Biblioteca del Éter', :root, class: 'brand'
           %ul#cuenta.nav.pull-right
             - # TODO render 'devise/menu/registration_items'
             - # TODO render 'devise/menu/login_items'
@@ -26,6 +26,5 @@
         .navbar-inner
           .container-fluid
             %small.muted.nav-text.pull-right
-              Copyright &copy; #{Time.now.year} Asmodeus.
               = link_to 'Inferno', 'http://playinferno.com'
               es &copy; de OMG! entretenimiento.
