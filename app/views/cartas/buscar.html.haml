@@ -1,41 +1,28 @@
 .row-fluid
   .span12
-    %h2.plegable Simple
     = search_form_for @busqueda,  url: buscar_cartas_path,
                                       html: { method: :post, class: 'form-search'} do |f|
 
       .row-fluid
-        .span3
-          = f.label busqueda_simple, 'Por nombre, tipos o texto'
-        .span9
-          = f.text_field busqueda_simple, class: 'input-xlarge'
+        .span2
+          = label_tag 'En las sendas'
+        .span10
+          - sendas.each do |senda|
+            = busqueda_check_tag senda, "q[versiones_senda_eq_any][]"
 
       .row-fluid
-        .span3
-          = label_tag 'Sendas'
-        .span9
-          = label_tag :caos, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Caos', checkeado?('Caos'), id: 'caos'
-            Caos
-          = label_tag :locura, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Locura', checkeado?('Locura'), id: 'locura'
-            Locura
-          = label_tag :muerte, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Muerte', checkeado?('Muerte'), id: 'muerte'
-            Muerte
-          = label_tag :poder, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Poder', checkeado?('Poder'), id: 'poder'
-            Poder
-          = label_tag :neutral, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Neutral', checkeado?('Neutral'), id: 'neutral'
-            Neutral
+        .span2
+          = label_tag 'Filtradas por'
+        .span10
+          = busqueda_check_tag 'Nombre',  'incluir[]', nombre: 'nombre'
+          = busqueda_check_tag 'Tipos',   'incluir[]', nombre: versiones_tipos
+          = busqueda_check_tag 'Texto',   'incluir[]', nombre: 'versiones_texto'
+
       .row-fluid
-        .span12
+        .span2
+          = f.label busqueda, 'Que contienen'
+        .span10
+          = f.text_field busqueda, class: 'input-xlarge search-query'
           = f.submit class: 'btn'
 
 .row-fluid
@@ -46,5 +33,5 @@
         .span12= label_tag t '.encontradas', count: @cartas.size
     .row-fluid
       .span12= render partial: 'layouts/galeria',
-                      locals: { imagenes: @cartas,
+                      locals: { imagenes: @cartas.sort_by { |c| c.prioridad },
                                 estilo: :original }

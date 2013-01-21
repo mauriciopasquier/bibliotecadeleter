@@ -1,14 +1,10 @@
+// Alteraciones directas a los defaults de bootstrap
 @import 'twitter/bootstrap';
 @import 'twitter/bootstrap/responsive';
-
-body {
-  padding-top: $navbarHeight * 1.5;
-  padding-bottom: $navbarHeight * 1.5;
-}
+@import 'variables';
 
 .table {
   background-color: #999;
-
   a {
     color: #333;
   }

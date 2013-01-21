@@ -7,25 +7,27 @@
     = javascript_include_tag  "application"
     = csrf_meta_tags
   %body
-    #cabecera.navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container-fluid
-          %a.brand Biblioteca del Éter
-          %ul#cuenta.nav.pull-right
-            - # TODO render 'devise/menu/registration_items'
-            - # TODO render 'devise/menu/login_items'
-          %ul#cuenta.nav
-            %li#buscar= link_to 'Buscar', buscar_cartas_path
-    #contenido.container-fluid
-      .row-fluid
-        .span3= render 'layouts/barra-lateral'
-        .span9
-          %h1= @titulo
-          = yield
+    #contenido
+      #cabecera.navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+          .container-fluid
+            = link_to 'Biblioteca del Éter', :root, class: 'brand'
+            %ul#cuenta.nav.pull-right
+              %li= link_to 'Página oficial', 'http://playinferno.com'
+              %li= link_to 'Foros', 'http://foros.playinferno.com'
+              - # TODO render 'devise/menu/registration_items'
+              - # TODO render 'devise/menu/login_items'
+            %ul#cuenta.nav
+              %li#buscar= link_to 'Buscar', buscar_cartas_path
+      .container-fluid
+        .row-fluid
+          .span3= render 'layouts/barra-lateral'
+          .span9
+            %h1= @titulo
+            = yield
       %footer.navbar.navbar-inverse.navbar-fixed-bottom
         .navbar-inner
           .container-fluid
             %small.muted.nav-text.pull-right
-              Copyright &copy; #{Time.now.year} Asmodeus.
               = link_to 'Inferno', 'http://playinferno.com'
               es &copy; de OMG! entretenimiento.

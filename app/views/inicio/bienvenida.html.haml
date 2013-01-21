@@ -1,1 +1,15 @@
-%p Find me in app/views/inicio/bienvenida.html.haml
+.hero-unit
+  %blockquote
+    %p
+      Bienvenido,
+      = "#{@usuario.try(:nick) || 'mortal'},"
+      a la Biblioteca del Éter. En sus infinitos archivos, encontrarás la suma
+      del saber que los
+      = link_to 'demonios', buscar_demonios, method: :post
+      trajeron con ellos cuando irrumpieron gloriosamente en este mundo.
+    %p
+      Ten cuidado, pues hay
+      = link_to 'quienes', carta_path('bibliotecarios-estimulados')
+      pierden la cordura explorando sus tomos exquisitamente
+      = link_to 'decorados...', artistas_path
+    %small Homúnculo de la biblioteca
