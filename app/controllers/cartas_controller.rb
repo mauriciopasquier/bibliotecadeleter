@@ -5,6 +5,8 @@ class CartasController < ApplicationController
 
   before_filter :decorar, only: [:index, :show, :edit]
 
+  helper_method :busqueda, :versiones_tipos
+
   def index
     @titulo = 'Todas las cartas'
     respond_with(@cartas)
@@ -48,7 +50,7 @@ class CartasController < ApplicationController
         .joins(:versiones)
         .select('cartas.*, versiones.senda')
         .order('versiones.senda')
-        .search(params[:q]).result(distinct: true)
+        .search(preparar_consulta(params[:q])).result(distinct: true)
     else
       Carta.none
     end.decorate
@@ -63,4 +65,18 @@ class CartasController < ApplicationController
         @carta = @carta.decorate
       end
     end
+
+    def preparar_consulta(q)
+      query = q.delete busqueda
+      q.merge "#{params[:incluir].join('_or_')}_cont" => query
+    end
+
+    def busqueda
+      [versiones_tipos, 'versiones_texto', 'nombre'].join('_or_') + '_cont'
+    end
+
+    def versiones_tipos
+      ['versiones_tipo', 'versiones_supertipo', 'versiones_subtipo'].join('_or_')
+    end
+
 end

@@ -1,21 +1,28 @@
 .row-fluid
   .span12
-    %h2.plegable Simple
     = search_form_for @busqueda,  url: buscar_cartas_path,
                                       html: { method: :post, class: 'form-search'} do |f|
 
       .row-fluid
         .span3
-          = f.label busqueda_simple, 'Por nombre, tipos o texto'
+          = f.label busqueda, 'Por nombre, tipos o texto'
         .span9
-          = f.text_field busqueda_simple, class: 'input-xlarge'
+          = f.text_field busqueda, class: 'input-xlarge'
 
       .row-fluid
         .span3
           = label_tag 'Sendas'
         .span9
           - sendas.each do |senda|
-            = busqueda_check_tag senda, 'versiones_senda_eq_any'
+            = busqueda_check_tag senda, "q[versiones_senda_eq_any][]"
+
+      .row-fluid
+        .span3
+          = label_tag 'Filtros'
+        .span9
+          = busqueda_check_tag 'Nombre',  'incluir[]', nombre: 'nombre'
+          = busqueda_check_tag 'Tipos',   'incluir[]', nombre: versiones_tipos
+          = busqueda_check_tag 'Texto',   'incluir[]', nombre: 'versiones_texto'
 
       .row-fluid
         .span12
