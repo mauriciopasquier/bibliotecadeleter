@@ -1,4 +1,6 @@
 @import 'twitter/bootstrap/variables';
+@import 'twitter/bootstrap/mixins';
+@import 'variables';
 
 body {
   padding-top: $navbarHeight * 1.5;
@@ -22,6 +24,14 @@ body {
   }
 }
 
+.menu.nav > li > a {
+  &:hover {
+    color: #222;
+    text-shadow: none;
+    background: transparent $fondo 0 0 fixed;
+  }
+}
+
 table {
   td.acciones {
     * {
@@ -33,4 +43,12 @@ table {
 
 button.close {
   display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include border-radius(5px);
+  padding-left: 5px;
+  &:hover {
+    background: transparent $fondo 0 0 fixed;
+  }
 }
