@@ -46,5 +46,5 @@
         .span12= label_tag t '.encontradas', count: @cartas.size
     .row-fluid
       .span12= render partial: 'layouts/galeria',
-                      locals: { imagenes: @cartas,
+                      locals: { imagenes: @cartas.sort_by { |c| c.prioridad },
                                 estilo: :original }

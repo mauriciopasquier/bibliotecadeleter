@@ -23,6 +23,23 @@ class Version < ActiveRecord::Base
     numero.to_s.rjust(3, '0')
   end
 
+  # Permite ordenar los resultados con +sort_by+
+  def self.prioridad_de_senda(senda)
+    case senda.downcase.to_sym
+      when :caos    then 1
+      when :locura  then 2
+      when :muerte  then 3
+      when :poder   then 4
+      when :neutral then 5
+      else
+        nil
+    end
+  end
+
+  def prioridad
+    Version.prioridad_de_senda(self.senda)
+  end
+
   private
 
     # Usá `slug` para llamar a esto

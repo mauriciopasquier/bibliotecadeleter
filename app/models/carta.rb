@@ -14,9 +14,13 @@ class Carta < ActiveRecord::Base
   has_many :imagenes, through: :versiones
   has_many :expansiones, through: :versiones
 
+  default_scope includes(:canonica)
+
   accepts_nested_attributes_for :versiones, allow_destroy: true
 
   def to_s
     nombre
   end
+
+  delegate :prioridad, to: :canonica
 end
