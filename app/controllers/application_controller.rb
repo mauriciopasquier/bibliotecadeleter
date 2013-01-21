@@ -21,6 +21,8 @@ class ApplicationController < ActionController::Base
     volver
   end
 
+  helper_method :busqueda, :sendas, :versiones_tipos
+
   protected
 
     # Redirije hacia atrás o en caso de no exister, vuelve al inicio
@@ -30,6 +32,18 @@ class ApplicationController < ActionController::Base
       rescue ActionController::RedirectBackError
         redirect_to :root
       end
+    end
+
+    def busqueda
+      [versiones_tipos, 'versiones_texto', 'nombre'].join('_or_') + '_cont'
+    end
+
+    def versiones_tipos
+      ['versiones_tipo', 'versiones_supertipo', 'versiones_subtipo'].join('_or_')
+    end
+
+    def sendas
+      %w{ Caos Locura Muerte Poder Neutral }
     end
 
 end

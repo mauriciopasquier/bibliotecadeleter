@@ -48,7 +48,7 @@ class CartasController < ApplicationController
         .joins(:versiones)
         .select('cartas.*, versiones.senda')
         .order('versiones.senda')
-        .search(params[:q]).result(distinct: true)
+        .search(preparar_consulta(params[:q])).result(distinct: true)
     else
       Carta.none
     end.decorate
@@ -63,4 +63,13 @@ class CartasController < ApplicationController
         @carta = @carta.decorate
       end
     end
+
+    def preparar_consulta(q)
+      if params[:incluir]
+        query = q.delete busqueda
+        q.merge! "#{params[:incluir].join('_or_')}_cont" => query
+      end
+      q
+    end
+
 end
