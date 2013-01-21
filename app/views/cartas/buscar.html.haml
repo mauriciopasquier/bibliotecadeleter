@@ -14,26 +14,9 @@
         .span3
           = label_tag 'Sendas'
         .span9
-          = label_tag :caos, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Caos', checkeado?('Caos'), id: 'caos'
-            Caos
-          = label_tag :locura, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Locura', checkeado?('Locura'), id: 'locura'
-            Locura
-          = label_tag :muerte, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Muerte', checkeado?('Muerte'), id: 'muerte'
-            Muerte
-          = label_tag :poder, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Poder', checkeado?('Poder'), id: 'poder'
-            Poder
-          = label_tag :neutral, class: 'checkbox inline' do
-            = check_box_tag 'q[versiones_senda_eq_any][]',
-                            'Neutral', checkeado?('Neutral'), id: 'neutral'
-            Neutral
+          - sendas.each do |senda|
+            = busqueda_check_tag senda, 'versiones_senda_eq_any'
+
       .row-fluid
         .span12
           = f.submit class: 'btn'
