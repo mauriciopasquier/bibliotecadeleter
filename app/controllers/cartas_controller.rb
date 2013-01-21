@@ -65,8 +65,11 @@ class CartasController < ApplicationController
     end
 
     def preparar_consulta(q)
-      query = q.delete busqueda
-      q.merge "#{params[:incluir].join('_or_')}_cont" => query
+      if params[:incluir]
+        query = q.delete busqueda
+        q.merge! "#{params[:incluir].join('_or_')}_cont" => query
+      end
+      q
     end
 
 end

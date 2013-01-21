@@ -6,11 +6,11 @@ class InicioController < ApplicationController
 
   def panel
     @usuario = current_usuario
-    @titulo = "Bienvenido, #{@usuario.nick}"
+    @titulo = "Todo el conocimiento del Inferno"
     respond_with(@usuario)
   end
 
   def bienvenida
-    @titulo = "Bienvenido, mortal"
+    @titulo = "Todo el conocimiento del Inferno"
   end
 end
