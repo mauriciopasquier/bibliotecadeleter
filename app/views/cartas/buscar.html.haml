@@ -4,28 +4,25 @@
                                       html: { method: :post, class: 'form-search'} do |f|
 
       .row-fluid
-        .span3
-          = f.label busqueda, 'Por nombre, tipos o texto'
-        .span9
-          = f.text_field busqueda, class: 'input-xlarge'
-
-      .row-fluid
-        .span3
-          = label_tag 'Sendas'
-        .span9
+        .span2
+          = label_tag 'En las sendas'
+        .span10
           - sendas.each do |senda|
             = busqueda_check_tag senda, "q[versiones_senda_eq_any][]"
 
       .row-fluid
-        .span3
-          = label_tag 'Filtros'
-        .span9
+        .span2
+          = label_tag 'Filtradas por'
+        .span10
           = busqueda_check_tag 'Nombre',  'incluir[]', nombre: 'nombre'
           = busqueda_check_tag 'Tipos',   'incluir[]', nombre: versiones_tipos
           = busqueda_check_tag 'Texto',   'incluir[]', nombre: 'versiones_texto'
 
       .row-fluid
-        .span12
+        .span2
+          = f.label busqueda, 'Que contienen'
+        .span10
+          = f.text_field busqueda, class: 'input-xlarge search-query'
           = f.submit class: 'btn'
 
 .row-fluid
