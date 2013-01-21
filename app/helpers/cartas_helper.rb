@@ -11,10 +11,6 @@ module CartasHelper
     end
   end
 
-  def sendas
-    %w{ Caos Locura Muerte Poder Neutral }
-  end
-
   private
 
     # Revisa el hash params para determinar si el checkbox fue usado en la
