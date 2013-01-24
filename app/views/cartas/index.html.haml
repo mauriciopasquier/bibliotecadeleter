@@ -1,17 +1,23 @@
-%table
-  %tr
-    %th Nombre
-    %th
-    %th
-    %th
+#lista
+  #paginacion
+    = paginate @cartas, remote: true
 
-  - @cartas.each do |carta|
-    %tr
-      %td= carta.nombre
-      %td= link_to 'Show', carta
-      %td= link_to 'Edit', edit_carta_path(carta)
-      %td= link_to 'Destroy', carta, method: :delete, data: { confirm: 'Are you sure?' }
+  #cartas.tabla-fluida
+    #encabezado.row-fluid
+      .nombre.span9 Nombre
+      .acciones.span3
 
-%br
+    - @cartas.each do |carta|
+      .row-fluid{class: cycle('even', 'odd')}
+        .nombre.span9= carta.nombre
+        .acciones.span3
+          - # Aparecen al revés de como están dispuestas por el .pull-right
+          - if can? :destroy, carta
+            .pull-right= link_to_eliminar carta
+          - if can? :edit, carta
+            .pull-right= link_to_editar edit_carta_path(carta)
+          - if can? :read, carta
+            .pull-right= link_to_mostrar carta
 
-= link_to 'New Carta', new_carta_path
+  - if can? :create, Carta
+    = link_to 'Cargar Carta', new_carta_path
