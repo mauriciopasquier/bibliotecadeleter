@@ -6,7 +6,7 @@
 .table {
   background-color: #999;
   a {
-    color: #333;
+    color: $gris-oscuro;
   }
 }
 
@@ -15,10 +15,10 @@
     tr {
       &:hover {
         td, th {
-          color: #ccc;
-          background-color: #333;
+          color: $gris-claro;
+          background-color: $gris-oscuro;
           a {
-            color: #ccc;
+            color: $gris-claro;
             i {
               background-image: url("/e/twitter/bootstrap/glyphicons-halflings-white.png");
             }
