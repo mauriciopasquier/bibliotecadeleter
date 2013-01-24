@@ -50,7 +50,9 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def numeracion
-    h.link_to(expansion.base.nombre, expansion.base) + " #{source.numero}/#{expansion.base.total}"
+    if expansion.present?
+      h.link_to(expansion.base.nombre, expansion.base) + " #{source.numero}/#{expansion.base.total}"
+    end
   end
 
   def arte
@@ -79,6 +81,6 @@ class VersionDecorator < ApplicationDecorator
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
         cara
       end
-    end.join.html_safe
+    end.join.html_safe unless source.texto.nil?
   end
 end
