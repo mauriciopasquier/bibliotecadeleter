@@ -1,33 +1,6 @@
 // Alteraciones directas a los defaults de bootstrap
 @import 'twitter/bootstrap';
 @import 'twitter/bootstrap/responsive';
-@import 'variables';
-
-.table {
-  background-color: #999;
-  a {
-    color: $gris-oscuro;
-  }
-}
-
-.table-hover {
-  tbody {
-    tr {
-      &:hover {
-        td, th {
-          color: $gris-claro;
-          background-color: $gris-oscuro;
-          a {
-            color: $gris-claro;
-            i {
-              background-image: url("/e/twitter/bootstrap/glyphicons-halflings-white.png");
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 .dl-horizontal {
   dd {

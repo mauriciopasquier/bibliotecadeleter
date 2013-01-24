@@ -6,7 +6,18 @@
 
   .row-fluid {
     * { padding: 2px; }
-    &:hover { background-color: darken($gris-claro, 10%); }
+  }
+
+  // Hover
+  .row-fluid:not(#encabezado) {
+    &:hover {
+      background-color: $gris-oscuro;
+      color: $gris-claro;
+      a {
+        color: $gris-claro;
+        i { background-image: $iconos-blancos; }
+      }
+    }
   }
 
   .row-fluid > *:first-child {
