@@ -5,6 +5,7 @@ class ExpansionesController < ApplicationController
   load_and_authorize_resource
 
   def index
+    # TODO Revisar si aplica lo de CanCan
     @expansiones = apply_scopes(Expansion).decorate
     @titulo = 'Todas las Expansiones'
     respond_with(@expansiones) do |format|

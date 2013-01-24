@@ -2,14 +2,8 @@ dl.notas {
   margin-left: 1em;
 }
 
-table#expansiones {
-
-  #lanzamiento  { width: 10%; }
-  #presentacion { width: 10%; }
-  #total        { width: 12%; }
-
+#expansiones {
   .total, .lanzamiento, .presentacion {
     text-align: center;
   }
-
 }

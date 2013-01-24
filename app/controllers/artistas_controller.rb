@@ -5,6 +5,7 @@ class ArtistasController < ApplicationController
   load_and_authorize_resource
 
   def index
+    # TODO Revisar si aplica lo de CanCan
     @artistas = apply_scopes(Artista).con_ilustraciones.con_cantidad.decorate
     @titulo = 'Todos los Artistas'
     respond_with(@artistas) do |format|

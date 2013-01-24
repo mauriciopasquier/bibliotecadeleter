@@ -2,30 +2,24 @@
   #paginacion
     = paginate @artistas, remote: true
 
-  %table#artistas.table.table-striped.table-condensed.table-hover
-    %colgroup
-      %col#nombre
-      %col#cantidad
-      %col#acciones
-    %thead
-      %tr
-        %th Nombre
-        %th.cantidad Cantidad de ilustraciones
-        %th.acciones
+  #artistas.tabla-fluida
+    #encabezado.row-fluid
+      .nombre.span6 Nombre
+      .cantidad.span3 Cantidad de ilustraciones
+      .acciones.span3
 
-    %tbody
-      - @artistas.each do |artista|
-        %tr
-          %td.nombre= artista.nombre
-          %td.cantidad= artista.cantidad
-          %td.acciones
-            - # Aparecen al revés de como están dispuestas por el .pull-right
-            - if can? :destroy, artista
-              .pull-right= link_to_eliminar artista
-            - if can? :edit, artista
-              .pull-right= link_to_editar edit_artista_path(artista)
-            - if can? :read, artista
-              .pull-right= link_to_mostrar artista
+    - @artistas.each do |artista|
+      .row-fluid{class: cycle('even', 'odd')}
+        .nombre.span6= artista.nombre
+        .cantidad.span3= artista.cantidad
+        .acciones.span3
+          - # Aparecen al revés de como están dispuestas por el .pull-right
+          - if can? :destroy, artista
+            .pull-right= link_to_eliminar artista
+          - if can? :edit, artista
+            .pull-right= link_to_editar edit_artista_path(artista)
+          - if can? :read, artista
+            .pull-right= link_to_mostrar artista
 
   - if can? :create, Artista
     = link_to 'Cargar Artista', new_artista_path

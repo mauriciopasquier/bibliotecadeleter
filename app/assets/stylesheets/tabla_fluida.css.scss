@@ -1,0 +1,35 @@
+@import 'variables';
+
+.tabla-fluida {
+
+  a { color: $gris-oscuro; }
+
+  .row-fluid {
+    * { padding: 2px; }
+  }
+
+  // Hover
+  .row-fluid:not(#encabezado) {
+    &:hover {
+      background-color: $gris-oscuro;
+      color: $gris-claro;
+      a {
+        color: $gris-claro;
+        i { background-image: $iconos-blancos; }
+      }
+    }
+  }
+
+  .row-fluid > *:first-child {
+    padding-left: 10px;
+  }
+
+  #encabezado {
+    font-weight: bold;
+    background-color: $gris-claro;
+  }
+
+  .odd { background-color: $gris-claro; }
+
+  .acciones { padding-right: 10px; }
+}
