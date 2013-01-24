@@ -1,0 +1,24 @@
+@import 'variables';
+
+.tabla-fluida {
+
+  a { color: $gris-oscuro; }
+
+  .row-fluid {
+    * { padding: 2px; }
+    &:hover { background-color: darken($gris-claro, 10%); }
+  }
+
+  .row-fluid > *:first-child {
+    padding-left: 10px;
+  }
+
+  #encabezado {
+    font-weight: bold;
+    background-color: $gris-claro;
+  }
+
+  .odd { background-color: $gris-claro; }
+
+  .acciones { padding-right: 10px; }
+}
