@@ -4,8 +4,8 @@
 
   #artistas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span6 Nombre
-      .cantidad.span3 Cantidad de ilustraciones
+      .nombre.span6= sort_link @busqueda, :nombre, 'Nombre'
+      .cantidad.span3= sort_link @busqueda, :cantidad, 'Cantidad de ilustraciones'
       .acciones.span3
 
     - @artistas.each do |artista|

@@ -23,7 +23,7 @@ class Artista < ActiveRecord::Base
   end
 
   def self.top5
-    unscoped.con_ilustraciones.con_cantidad.order('cantidad DESC').limit(5)
+    con_ilustraciones.con_cantidad.reorder('cantidad DESC').limit(5)
   end
 
   default_scope order(:nombre)

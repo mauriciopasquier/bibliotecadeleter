@@ -4,10 +4,13 @@ class ArtistasController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :ordenar, only: :index
+
   def index
-    # TODO Revisar si aplica lo de CanCan
-    @artistas = apply_scopes(Artista).con_ilustraciones.con_cantidad.decorate
+    @artistas = apply_scopes(@artistas).con_ilustraciones.con_cantidad
+
     @titulo = 'Todos los Artistas'
+
     respond_with(@artistas) do |format|
       # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
       format.html do
@@ -64,4 +67,14 @@ class ArtistasController < ApplicationController
     @artista = @artista.decorate
     respond_with(@artista)
   end
+
+  private
+
+    def ordenar
+      # TODO hacer esto más lindo
+      if params[:q].present?
+        @artistas = @artistas.reorder(params[:q][:s])
+      end
+      @busqueda = Artista.search(params[:q])
+    end
 end
