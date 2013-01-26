@@ -4,11 +4,11 @@
 
   #expansiones.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span3 Nombre
-      .lanzamiento.span2 Lanzamiento
-      .presentacion.span2 Presentacion
-      .saga.span2 Saga
-      .total.span1 Cartas
+      .nombre.span3= sort_link @busqueda, :nombre
+      .lanzamiento.span2= sort_link @busqueda, :lanzamiento
+      .presentacion.span2= sort_link @busqueda, :presentacion, 'Presentación'
+      .saga.span2= sort_link @busqueda, :saga
+      .total.span1= sort_link @busqueda, :total, 'Cartas'
       .acciones.span2
 
     - @expansiones.each do |expansion|
@@ -18,7 +18,7 @@
         .presentacion.span2= l(expansion.presentacion) if expansion.presentacion
         .saga.span2= expansion.saga
         .total.span1= expansion.total
-        .acciones
+        .acciones.span2
           - # Aparecen al revés de como están dispuestas por el .pull-right
           - if can? :destroy, expansion
             .pull-right= link_to_eliminar expansion

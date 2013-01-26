@@ -1,12 +1,13 @@
 # encoding: utf-8
 class ExpansionesController < ApplicationController
   has_scope :pagina, default: 1
+  has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
   load_and_authorize_resource
 
   def index
-    # TODO Revisar si aplica lo de CanCan
-    @expansiones = apply_scopes(Expansion).decorate
+    @busqueda = apply_scopes(@expansiones.unscoped)
+    @expansiones = @busqueda.result.decorate
     @titulo = 'Todas las Expansiones'
     respond_with(@expansiones) do |format|
       # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
