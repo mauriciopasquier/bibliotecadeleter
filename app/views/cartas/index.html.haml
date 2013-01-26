@@ -4,13 +4,17 @@
 
   #cartas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span9 Nombre
-      .acciones.span3
+      .nombre.span4= sort_link @busqueda, :nombre
+      .nombre.span3 Tipo
+      .nombre.span3 Expansiones
+      .acciones.span2
 
     - @cartas.each do |carta|
       .row-fluid{class: cycle('even', 'odd')}
-        .nombre.span9= carta.nombre
-        .acciones.span3
+        .nombre.span4= carta.nombre
+        .tipo.span3= carta.canonica.linea_de_tipos
+        .tipo.span3= carta.lista_de_expansiones
+        .acciones.span2
           - # Aparecen al revés de como están dispuestas por el .pull-right
           - if can? :destroy, carta
             .pull-right= link_to_eliminar carta

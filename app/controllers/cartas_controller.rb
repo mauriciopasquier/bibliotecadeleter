@@ -1,14 +1,15 @@
 # encoding: utf-8
 class CartasController < ApplicationController
   has_scope :pagina, default: 1
+  has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
   load_and_authorize_resource
 
   before_filter :decorar, only: [:index, :show, :edit]
 
   def index
-    # TODO Revisar si aplica lo de CanCan
-    @cartas = apply_scopes(Carta).decorate
+    @busqueda = apply_scopes(@cartas.unscoped)
+    @cartas = @busqueda.result.decorate
     @titulo = 'Todas las cartas'
     respond_with(@cartas) do |format|
       # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
