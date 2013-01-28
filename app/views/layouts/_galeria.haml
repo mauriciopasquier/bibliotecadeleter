@@ -2,13 +2,14 @@
 #lista
   - if defined?(paginar) ? paginar : false
     = paginacion_tag imagenes
+    = mostrar_como_tag
 
   #galeria.galeria
     %ul.thumbs
       - imagenes.each do |v|
         %li
-          = v.link (defined?(estilo) ? estilo : :thumb),
-            class: (defined?(estilo) ? estilo : :thumb)
+          = v.link tipo_actual,
+            class: tipo_actual
 
   - if defined?(paginar) ? paginar : false
     = paginacion_tag imagenes, id: 'paginacion-inferior'

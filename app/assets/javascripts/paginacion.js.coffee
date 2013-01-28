@@ -13,3 +13,8 @@ jQuery ->
     .bind 'popstate', ->
       $.get location.href, (data) ->
         $('#lista').replaceWith(data)
+
+  $(document)
+    .on 'change', '.seleccion-estilos', (evt) ->
+      $.get URI(location.href).removeQuery('mostrar[tipo]').addQuery('mostrar[tipo]', this.value), (data) ->
+        $('#lista').replaceWith(data)

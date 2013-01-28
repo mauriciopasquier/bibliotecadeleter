@@ -34,4 +34,13 @@ module PaginacionHelper
       end.join.html_safe
     end
   end
+
+  def mostrar_como_tag(opciones = {})
+    opciones.reverse_merge!(
+      tipo: :thumb,
+      clases: 'mostrar-como'
+    )
+    select_tag opciones[:clases],
+      options_for_select(Imagen.estilos, tipo_actual), class: 'seleccion-estilos'
+  end
 end

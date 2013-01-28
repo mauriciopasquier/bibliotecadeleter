@@ -18,4 +18,8 @@ class Imagen < ActiveRecord::Base
     }
 
   validates_attachment_presence :archivo
+
+  def self.estilos
+    [ :original, :thumb ]
+  end
 end
