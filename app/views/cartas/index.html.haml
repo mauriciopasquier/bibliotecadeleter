@@ -1,6 +1,5 @@
 #lista
-  #paginacion.pagination.pagination-centered
-    = paginate @cartas, remote: true
+  = paginacion_tag @cartas
 
   #cartas.tabla-fluida
     #encabezado.row-fluid
@@ -22,6 +21,8 @@
             .pull-right= link_to_editar edit_carta_path(carta)
           - if can? :read, carta
             .pull-right= link_to_mostrar carta
+
+  = paginacion_tag @cartas, id: 'paginacion-inferior'
 
   - if can? :create, Carta
     = link_to 'Cargar Carta', new_carta_path
