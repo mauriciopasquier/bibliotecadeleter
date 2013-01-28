@@ -4,10 +4,6 @@ jQuery ->
     $(this).nextAll().toggle('fast')
     return false
 
-  # Maneja la respuesta del controlador que pregunta xhr?
-  $(document).on('ajax:success', '.pagination', (evt, data, status, xhr) ->
-      $('#lista').replaceWith(data)
-      history.pushState(null, '', this.href) )
-
+  # muestra el botón para cerrar la flash si hay js
   $(".alert button.close").show()
   $(".alert").alert()
