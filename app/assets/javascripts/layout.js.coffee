@@ -7,7 +7,7 @@ jQuery ->
   # Maneja la respuesta del controlador que pregunta xhr?
   $(document).on('ajax:success', '.pagination', (evt, data, status, xhr) ->
       $('#lista').replaceWith(data)
-      $('body').css('cursor', 'auto') )
+      history.pushState(null, '', this.href) )
 
   $(".alert button.close").show()
   $(".alert").alert()

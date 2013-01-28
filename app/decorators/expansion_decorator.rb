@@ -12,7 +12,7 @@ class ExpansionDecorator < ApplicationDecorator
     source.nombre
   end
 
-  def galeria(pagina = 1, cantidad = 10)
+  def galeria(pagina, cantidad = nil)
     versiones.paginar(pagina, cantidad).decorate
   end
 end

@@ -40,17 +40,6 @@ module ApplicationHelper
     end
   end
 
-  def paginacion_tag(recursos, opciones = {})
-    opciones.reverse_merge!(
-      id: 'paginacion',
-      clases: 'pagination pagination-centered',
-      kaminari: { remote: true }
-    )
-    content_tag(:div, id: opciones[:id], class: opciones[:clases]) do
-      paginate(recursos, opciones[:kaminari])
-    end
-  end
-
   private
 
     def alerta(tipo)

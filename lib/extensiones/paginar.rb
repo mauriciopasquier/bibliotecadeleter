@@ -1,5 +1,5 @@
 module Paginar
-  def paginar(pagina = 1, cantidad = 10)
+  def paginar(pagina, cantidad)
     pagina(pagina).per(cantidad)
   end
 end

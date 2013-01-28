@@ -20,6 +20,7 @@ gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
 gem 'turbolinks'
+gem 'historyjs-rails'
 
 # Controller
 gem 'responders'
