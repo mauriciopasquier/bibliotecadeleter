@@ -1,7 +1,7 @@
 - # TODO endless pagination
 #lista
   - if defined?(paginar) ? paginar : false
-    = paginacion_tag imagenes, kaminari: { param_name: :pagina_galeria }
+    = paginacion_tag imagenes
 
   #galeria.galeria
     %ul.thumbs
@@ -11,4 +11,4 @@
             class: (defined?(estilo) ? estilo : :thumb)
 
   - if defined?(paginar) ? paginar : false
-    = paginacion_tag imagenes, id: 'paginacion-inferior', kaminari: { param_name: :pagina_galeria }
+    = paginacion_tag imagenes, id: 'paginacion-inferior'

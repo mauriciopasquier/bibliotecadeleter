@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     volver
   end
 
-  helper_method :busqueda, :sendas, :versiones_tipos
+  helper_method :busqueda, :sendas, :versiones_tipos, :activo?
 
   protected
 
@@ -44,6 +44,11 @@ class ApplicationController < ActionController::Base
 
     def sendas
       %w{ Caos Locura Muerte Poder Neutral }
+    end
+
+    # Para determinar el elemento activo de la paginación
+    def activo?(elemento)
+      elemento == params[:mostrar]
     end
 
 end

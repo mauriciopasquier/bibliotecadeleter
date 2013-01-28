@@ -1,7 +1,8 @@
 # encoding: utf-8
 class ExpansionesController < ApplicationController
   has_scope :pagina, default: 1
-  has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
+  has_scope :per, as: :mostrar, using: :cantidad
+  has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
   load_and_authorize_resource
 
@@ -9,6 +10,7 @@ class ExpansionesController < ApplicationController
     @busqueda = apply_scopes(@expansiones.unscoped)
     @expansiones = @busqueda.result.decorate
     @titulo = 'Todas las Expansiones'
+
     respond_with(@expansiones) do |format|
       # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
       format.html do
@@ -21,7 +23,7 @@ class ExpansionesController < ApplicationController
 
   def show
     @expansion = @expansion.decorate
-    @imagenes = @expansion.galeria(params[:pagina_galeria])
+    @imagenes = apply_scopes(@expansion.versiones).decorate
     @titulo = @expansion.nombre
     respond_with(@expansion) do |format|
       format.html do

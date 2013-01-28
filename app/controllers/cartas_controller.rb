@@ -5,7 +5,7 @@ class CartasController < ApplicationController
 
   load_and_authorize_resource
 
-  before_filter :decorar, only: [:index, :show, :edit]
+  before_filter :decorar, only: [:show, :edit]
 
   def index
     @busqueda = apply_scopes(@cartas.unscoped)
@@ -68,11 +68,7 @@ class CartasController < ApplicationController
   private
 
     def decorar
-      if @cartas
-        @cartas = @cartas.decorate
-      else
-        @carta = @carta.decorate
-      end
+      @carta = @carta.decorate
     end
 
     def preparar_consulta(q)
