@@ -95,4 +95,3 @@ end
 
 before "deploy:finalize_update", "configurar:archivos"
 before "deploy:finalize_update", "configurar:directorios"
-after "deploy:assets:precompile", "deploy:assets:linkear_estaticos"
