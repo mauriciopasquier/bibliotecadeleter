@@ -9,10 +9,11 @@ jQuery ->
 
   # Intercepta el evento que larga el botón de volver para recargar el
   # contenido correcto
-  $(window)
-    .bind 'popstate', ->
-      $.get location.href, (data) ->
-        $('#lista').replaceWith(data)
+  if $('.pagination')
+    $(window)
+      .bind 'popstate', ->
+        $.get location.href, (data) ->
+          $('#lista').replaceWith(data)
 
   $(document)
     .on 'change', '.mostrar-tipo', (evt) ->
