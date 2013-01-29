@@ -4,6 +4,7 @@ class VersionesController < ApplicationController
   load_and_authorize_resource :carta
   load_and_authorize_resource through: :carta
 
+  before_filter :check_espia
   before_filter :decorar, only: [:index, :show, :edit]
 
   def index

@@ -5,7 +5,7 @@ class Expansion < ActiveRecord::Base
 
   attr_accessible :lanzamiento, :nombre, :notas, :presentacion, :saga, :total
 
-  has_many :versiones, order: 'slug ASC', extend: Paginar
+  has_many :versiones, order: 'slug ASC'
   has_many :cartas, through: :versiones
   has_many :imagenes, through: :versiones, order: 'versiones.slug ASC'
 

@@ -19,8 +19,14 @@ cargar_yml_de('expansiones').each do |expansion|
   end
 end
 
-# Carga cada carta, versiones y artistas
-Expansion.all.each do |expansion|
+expansiones = if ENV['expansiones']
+  ENV['expansiones'].split(',').collect { |e| Expansion.find e }
+else
+  Expansion.all
+end
+
+# Carga cada carta, versiones y artistas de las expansiones indicadas
+expansiones.each do |expansion|
 
   unless ENV['dir']
     raise ArgumentError, 'Necesitamos un directorio con las imágenes (dir=directorio)'

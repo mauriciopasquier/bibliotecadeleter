@@ -1,17 +1,28 @@
-%table
-  %tr
-    %th Nombre
-    %th
-    %th
-    %th
+#lista
+  = paginacion_tag @cartas
 
-  - @cartas.each do |carta|
-    %tr
-      %td= carta.nombre
-      %td= link_to 'Show', carta
-      %td= link_to 'Edit', edit_carta_path(carta)
-      %td= link_to 'Destroy', carta, method: :delete, data: { confirm: 'Are you sure?' }
+  #cartas.tabla-fluida
+    #encabezado.row-fluid
+      .nombre.span4= sort_link @busqueda, :nombre
+      .nombre.span3 Tipo
+      .nombre.span3 Expansiones
+      .acciones.span2
 
-%br
+    - @cartas.each do |carta|
+      .row-fluid{class: cycle('even', 'odd')}
+        .nombre.span4= carta.nombre
+        .tipo.span3= carta.canonica.linea_de_tipos
+        .tipo.span3= carta.lista_de_expansiones
+        .acciones.span2
+          - # Aparecen al revés de como están dispuestas por el .pull-right
+          - if can? :destroy, carta
+            .pull-right= link_to_eliminar carta
+          - if can? :edit, carta
+            .pull-right= link_to_editar edit_carta_path(carta)
+          - if can? :read, carta
+            .pull-right= link_to_mostrar carta
 
-= link_to 'New Carta', new_carta_path
+  = paginacion_tag @cartas, id: 'paginacion-inferior'
+
+  - if can? :create, Carta
+    = link_to 'Cargar Carta', new_carta_path

@@ -1,12 +1,18 @@
 # encoding: utf-8
 class ArtistasController < ApplicationController
   has_scope :pagina, default: 1
+  has_scope :per, as: :mostrar, using: :cantidad
 
   load_and_authorize_resource
 
+  # En vez de has_scope porque no puedo usar un atributo virtual con Ransack
+  before_filter :ordenar, only: :index
+
   def index
-    @artistas = apply_scopes(Artista).con_ilustraciones.con_cantidad.decorate
+    @artistas = apply_scopes(@artistas).con_ilustraciones.con_cantidad
+
     @titulo = 'Todos los Artistas'
+
     respond_with(@artistas) do |format|
       # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
       format.html do
@@ -19,8 +25,11 @@ class ArtistasController < ApplicationController
 
   def show
     @artista = @artista.decorate
-    @imagenes = @artista.galeria(params[:pagina_galeria])
+    @imagenes = apply_scopes(@artista.ilustraciones).decorate
     @titulo = @artista.nombre
+
+    tipo_actual params[:mostrar].try(:[], :tipo) || :arte
+
     respond_with(@artista) do |format|
       format.html do
         if request.xhr?   # solicitud ajax para la paginación
@@ -32,7 +41,6 @@ class ArtistasController < ApplicationController
         end
       end
     end
-
   end
 
   def new
@@ -63,4 +71,14 @@ class ArtistasController < ApplicationController
     @artista = @artista.decorate
     respond_with(@artista)
   end
+
+  private
+
+    def ordenar
+      # TODO hacer esto más lindo
+      if params[:q].present?
+        @artistas = @artistas.reorder(params[:q][:s])
+      end
+      @busqueda = Artista.search(params[:q])
+    end
 end

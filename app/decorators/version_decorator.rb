@@ -50,10 +50,13 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def numeracion
-    h.link_to(expansion.base.nombre, expansion.base) + " #{source.numero}/#{expansion.base.total}"
+    if expansion.present?
+      h.link_to(expansion.base.nombre, expansion.base) + " #{source.numero}/#{expansion.base.total}"
+    end
   end
 
   def arte
+    # TODO devolver una sola línea si ambas caras tienen los mismos artistas
     imagenes.collect do |i|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'arte')) do
         i.artistas.collect do |a|
@@ -79,6 +82,6 @@ class VersionDecorator < ApplicationDecorator
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
         cara
       end
-    end.join.html_safe
+    end.join.html_safe unless source.texto.nil?
   end
 end

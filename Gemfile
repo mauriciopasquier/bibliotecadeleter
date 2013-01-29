@@ -15,10 +15,13 @@ gem 'squeel'
 # View
 gem 'dynamic_form'
 gem 'haml-rails'
-gem 'draper'
+gem 'draper', '0.18.0'
 gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
+gem 'turbolinks'
+gem 'historyjs-rails'
+gem 'uri-js-rails'
 
 # Controller
 gem 'responders'

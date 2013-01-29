@@ -1,40 +1,32 @@
 #lista
-  #paginacion
-    = paginate @expansiones, remote: true
+  = paginacion_tag @expansiones
 
-  %table#expansiones.table.table-striped.table-condensed.table-hover
-    %colgroup
-      %col#nombre
-      %col#lanzamiento
-      %col#presentacion
-      %col#saga
-      %col#total
-      %col#acciones
-    %thead
-      %tr
-        %th.nombre        Nombre
-        %th.lanzamiento   Lanzamiento
-        %th.presentacion  Presentacion
-        %th.saga          Saga
-        %th.total         Total de cartas
-        %th.acciones
+  #expansiones.tabla-fluida
+    #encabezado.row-fluid
+      .nombre.span3= sort_link @busqueda, :nombre
+      .lanzamiento.span2= sort_link @busqueda, :lanzamiento
+      .presentacion.span2= sort_link @busqueda, :presentacion, 'Presentación'
+      .saga.span2= sort_link @busqueda, :saga
+      .total.span1= sort_link @busqueda, :total, 'Cartas'
+      .acciones.span2
 
-    %tbody
-      - @expansiones.each do |expansion|
-        %tr
-          %td.nombre= expansion.nombre
-          %td.lanzamiento= l(expansion.lanzamiento) if expansion.lanzamiento?
-          %td.presentacion= l(expansion.presentacion) if expansion.presentacion
-          %td.saga= expansion.saga
-          %td.total= expansion.total
-          %td.acciones
-            - # Aparecen al revés de como están dispuestas por el .pull-right
-            - if can? :destroy, expansion
-              .pull-right= link_to_eliminar expansion
-            - if can? :edit, expansion
-              .pull-right= link_to_editar edit_expansion_path(expansion)
-            - if can? :read, expansion
-              .pull-right= link_to_mostrar expansion
+    - @expansiones.each do |expansion|
+      .row-fluid{class: cycle('even', 'odd')}
+        .nombre.span3= expansion.nombre
+        .lanzamiento.span2= l(expansion.lanzamiento) if expansion.lanzamiento?
+        .presentacion.span2= l(expansion.presentacion) if expansion.presentacion
+        .saga.span2= expansion.saga
+        .total.span1= expansion.total
+        .acciones.span2
+          - # Aparecen al revés de como están dispuestas por el .pull-right
+          - if can? :destroy, expansion
+            .pull-right= link_to_eliminar expansion
+          - if can? :edit, expansion
+            .pull-right= link_to_editar edit_expansion_path(expansion)
+          - if can? :read, expansion
+            .pull-right= link_to_mostrar expansion
+
+  = paginacion_tag @expansiones, id: 'paginacion-inferior'
 
   - if can? :create, Expansion
     = link_to 'Crear nueva expansión', new_expansion_path
