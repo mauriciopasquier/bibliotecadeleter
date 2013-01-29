@@ -6,6 +6,8 @@ class Imagen < ActiveRecord::Base
   has_one :carta, through: :version
   has_and_belongs_to_many :artistas
 
+  # TODO revisar el asunto de las imágenes default y las no disponibles, para
+  # evitar perder información (dibujante de la versión) cuando es conocida
   has_attached_file :archivo,
     { url:  ":assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
       path: ":rails_root/public/:assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
