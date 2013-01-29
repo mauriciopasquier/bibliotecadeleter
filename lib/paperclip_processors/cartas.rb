@@ -6,7 +6,7 @@ module Paperclip
       unless crop?
         [ '-crop',
           "#{@target_geometry}" +
-          "#{@current_geometry.horizontal? ? '+177+70' : '+90+130'}"
+          "#{@current_geometry.horizontal? ? '+163+63' : '+83+120'}"
         ] + super
       end
     end

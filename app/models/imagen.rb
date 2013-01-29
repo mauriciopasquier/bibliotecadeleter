@@ -10,7 +10,8 @@ class Imagen < ActiveRecord::Base
     { url:  ":assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
       path: ":rails_root/public/:assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
       styles: {
-        thumb: "170x170" },
+        arte: "190x190",
+        mini: "50%" },
       convert_options: {
         # Remueve información de esquemas de colores y EXIF
         all: '-strip' },
@@ -20,6 +21,6 @@ class Imagen < ActiveRecord::Base
   validates_attachment_presence :archivo
 
   def self.estilos
-    [ :original, :thumb ]
+    [ :original, :mini, :arte ]
   end
 end
