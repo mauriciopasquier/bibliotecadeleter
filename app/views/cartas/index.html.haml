@@ -3,24 +3,19 @@
 
   #cartas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span4= sort_link @busqueda, :nombre
+      .nombre.span5= sort_link @busqueda, :nombre
       .nombre.span3 Tipo
-      .nombre.span3 Expansiones
-      .acciones.span2
+      .nombre.span4 Expansiones
 
     - @cartas.each do |carta|
       .row-fluid{class: cycle('even', 'odd')}
-        .nombre.span4= carta.nombre
-        .tipo.span3= carta.canonica.linea_de_tipos
-        .tipo.span3= carta.lista_de_expansiones
-        .acciones.span2
-          - # Aparecen al revés de como están dispuestas por el .pull-right
-          - if can? :destroy, carta
-            .pull-right= link_to_eliminar carta
-          - if can? :edit, carta
-            .pull-right= link_to_editar edit_carta_path(carta)
+        .nombre.span5
           - if can? :read, carta
-            .pull-right= link_to_mostrar carta
+            = link_to_mostrar carta, carta.nombre
+          - else
+            = carta.nombre
+        .tipo.span3= carta.canonica.linea_de_tipos
+        .tipo.span4= carta.lista_de_expansiones
 
   = paginacion_tag @cartas, id: 'paginacion-inferior'
 

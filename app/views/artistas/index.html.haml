@@ -3,22 +3,17 @@
 
   #artistas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span6= sort_link @busqueda, :nombre, 'Nombre'
-      .cantidad.span3= sort_link @busqueda, :cantidad, 'Cantidad de ilustraciones'
-      .acciones.span3
+      .nombre.span8= sort_link @busqueda, :nombre, 'Nombre'
+      .cantidad.span4= sort_link @busqueda, :cantidad, 'Cantidad de ilustraciones'
 
     - @artistas.each do |artista|
       .row-fluid{class: cycle('even', 'odd')}
-        .nombre.span6= artista.nombre
-        .cantidad.span3= artista.cantidad
-        .acciones.span3
-          - # Aparecen al revés de como están dispuestas por el .pull-right
-          - if can? :destroy, artista
-            .pull-right= link_to_eliminar artista
-          - if can? :edit, artista
-            .pull-right= link_to_editar edit_artista_path(artista)
+        .nombre.span8
           - if can? :read, artista
-            .pull-right= link_to_mostrar artista
+            = link_to_mostrar artista, artista.nombre
+          - else
+            = artista.nombre
+        .cantidad.span4= artista.cantidad
 
   = paginacion_tag @artistas, id: 'paginacion-inferior'
 
