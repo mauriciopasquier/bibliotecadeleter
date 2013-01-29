@@ -4,20 +4,35 @@ module PaginacionHelper
     opciones.reverse_merge!(
       id: 'paginacion',
       clases: 'pagination pagination-centered',
-      kaminari: { remote: true },
-      mostrar: {  clases: 'mostrar',
-                  remote: true }
+      paginar: {
+        remote: true
+      },
+      mostrar: {
+        cantidad: {
+          clases: 'mostrar-cantidad',
+          cantidades: %w{ 10 20 30 },
+          remote: true
+        },
+        tipo: {
+          tipo: :arte,
+          clases: 'mostrar-tipo'
+        }
+      }
     )
     content_tag(:div, id: opciones[:id], class: opciones[:clases]) do
-      paginate(recursos, opciones[:kaminari]) +
-      mostrar_cantidad_tag(opciones[:mostrar])
+      partes = ''
+      partes << paginate(recursos, opciones[:paginar]) if opciones[:paginar]
+      partes << mostrar_cantidad_tag(opciones[:mostrar][:cantidad]) if opciones[:mostrar][:cantidad]
+      partes << mostrar_como_tag(opciones[:mostrar][:tipo]) if opciones[:mostrar][:tipo]
+      partes.html_safe
     end
   end
 
   def mostrar_cantidad_tag(opciones = {})
     opciones.reverse_merge!(
-      clases: 'mostrar',
+      clases: 'mostrar-cantidad',
       cantidades: %w{ 10 20 30 },
+      remote: true
     )
     content_tag(:ul, class: opciones[:clases]) do
       opciones[:cantidades].collect do |cantidad|
@@ -37,10 +52,11 @@ module PaginacionHelper
 
   def mostrar_como_tag(opciones = {})
     opciones.reverse_merge!(
-      tipo: :thumb,
-      clases: 'mostrar-como'
+      id: nil,
+      tipo: :arte,
+      clases: 'mostrar-tipo'
     )
-    select_tag opciones[:clases],
-      options_for_select(Imagen.estilos, tipo_actual), class: 'seleccion-estilos'
+    select_tag opciones[:id],
+      options_for_select(Imagen.estilos, tipo_actual), class: opciones[:clases]
   end
 end

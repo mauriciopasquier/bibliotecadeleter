@@ -15,6 +15,6 @@ jQuery ->
         $('#lista').replaceWith(data)
 
   $(document)
-    .on 'change', '.seleccion-estilos', (evt) ->
+    .on 'change', '.mostrar-tipo', (evt) ->
       $.get URI(location.href).removeQuery('mostrar[tipo]').addQuery('mostrar[tipo]', this.value), (data) ->
         $('#lista').replaceWith(data)

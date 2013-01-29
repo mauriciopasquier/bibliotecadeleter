@@ -54,6 +54,8 @@ class CartasController < ApplicationController
     @busqueda = Carta.search(params[:q])
     @titulo = 'Búsqueda de cartas'
 
+    tipo_actual params[:mostrar].try(:[], :tipo) || :original
+
     @cartas = if params[:q].present?
       @cartas
         .joins(:versiones)

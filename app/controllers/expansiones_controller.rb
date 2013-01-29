@@ -25,6 +25,9 @@ class ExpansionesController < ApplicationController
     @expansion = @expansion.decorate
     @imagenes = apply_scopes(@expansion.versiones).decorate
     @titulo = @expansion.nombre
+
+    tipo_actual params[:mostrar].try(:[], :tipo) || :mini
+
     respond_with(@expansion) do |format|
       format.html do
         if request.xhr?   # solicitud ajax para la paginación

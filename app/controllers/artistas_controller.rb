@@ -27,6 +27,9 @@ class ArtistasController < ApplicationController
     @artista = @artista.decorate
     @imagenes = apply_scopes(@artista.ilustraciones).decorate
     @titulo = @artista.nombre
+
+    tipo_actual params[:mostrar].try(:[], :tipo) || :arte
+
     respond_with(@artista) do |format|
       format.html do
         if request.xhr?   # solicitud ajax para la paginación
