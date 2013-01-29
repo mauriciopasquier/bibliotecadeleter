@@ -21,6 +21,14 @@ class ApplicationController < ActionController::Base
     volver
   end
 
+  rescue_from ActionController::RoutingError do |e|
+    @mensaje = e.message
+    respond_to do |format|
+      format.html { render 'errores/404', status: 404 }
+      format.json { render json: @mensaje, status: 404 }
+    end
+  end
+
   helper_method :busqueda, :sendas, :versiones_tipos
 
   protected
@@ -47,6 +55,8 @@ class ApplicationController < ActionController::Base
     end
 
     def no_existe
-      raise ActionController::RoutingError.new 'No existe'
+      raise ActionController::RoutingError.new(
+        'No existe este registro en la Biblioteca del Éter o en la red...'
+      )
     end
 end
