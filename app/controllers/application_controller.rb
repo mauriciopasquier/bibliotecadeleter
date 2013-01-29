@@ -23,13 +23,14 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::RoutingError do |e|
     @mensaje = e.message
+    @titulo = '¿Error?'
     respond_to do |format|
       format.html { render 'errores/404', status: 404 }
       format.json { render json: @mensaje, status: 404 }
     end
   end
 
-  helper_method :busqueda, :sendas, :versiones_tipos
+  helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?
 
   protected
 
@@ -54,9 +55,24 @@ class ApplicationController < ActionController::Base
       %w{ Caos Locura Muerte Poder Neutral }
     end
 
+    # Para determinar el elemento activo de la paginación
+    def activo?(elemento)
+      elemento == params[:mostrar]
+    end
+
+    def tipo_actual(tipo = nil)
+      @tipo ||= (tipo || params[:tipo])
+    end
+
     def no_existe
       raise ActionController::RoutingError.new(
         'No existe este registro en la Biblioteca del Éter o en la red...'
       )
+    end
+
+    def check_espia
+      if @carta.present? and @carta.slug =~ /cyborg-espia/
+        no_existe
+      end
     end
 end

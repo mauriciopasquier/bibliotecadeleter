@@ -5,6 +5,7 @@ class CartasController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :check_espia
   before_filter :decorar, only: [:show, :edit]
 
   def index
@@ -23,7 +24,6 @@ class CartasController < ApplicationController
 
   def show
     @titulo = @carta.nombre
-    if @carta.slug =~ /cyborg-espia/ then no_existe end
     respond_with(@carta)
   end
 
