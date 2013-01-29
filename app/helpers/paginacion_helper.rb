@@ -3,7 +3,7 @@ module PaginacionHelper
   def paginacion_tag(recursos, opciones = {})
     opciones.reverse_merge!(
       id: 'paginacion',
-      clases: 'pagination pagination-centered',
+      clases: 'pagination',
       paginar: true,
       mostrar_cantidad: true,
       mostrar_tipo: false,
@@ -18,7 +18,7 @@ module PaginacionHelper
         },
         tipo: {
           tipo: :arte,
-          clases: 'mostrar-tipo'
+          clases: 'mostrar-tipo pull-right'
         }
       }
     )
@@ -57,7 +57,7 @@ module PaginacionHelper
     opciones.reverse_merge!(
       id: nil,
       tipo: :arte,
-      clases: 'mostrar-tipo'
+      clases: 'mostrar-tipo pull-right'
     )
     select_tag opciones[:id],
       options_for_select(Imagen.estilos, tipo_actual), class: opciones[:clases]
