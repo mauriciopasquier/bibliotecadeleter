@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     volver
   end
 
-  helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?
+  helper_method :busqueda, :sendas, :versiones_tipos
 
   protected
 
@@ -46,13 +46,7 @@ class ApplicationController < ActionController::Base
       %w{ Caos Locura Muerte Poder Neutral }
     end
 
-    # Para determinar el elemento activo de la paginación
-    def activo?(elemento)
-      elemento == params[:mostrar]
+    def no_existe
+      raise ActionController::RoutingError.new 'No existe'
     end
-
-    def tipo_actual(tipo = nil)
-      @tipo ||= (tipo || params[:tipo])
-    end
-
 end

@@ -23,6 +23,7 @@ class CartasController < ApplicationController
 
   def show
     @titulo = @carta.nombre
+    if @carta.slug =~ /cyborg-espia/ then no_existe end
     respond_with(@carta)
   end
 
