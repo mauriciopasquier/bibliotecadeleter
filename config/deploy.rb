@@ -69,7 +69,8 @@ namespace :db do
 
   desc "Populates the production database"
   task :seed do
-    run "cd #{current_path}; #{rake} db:seed dir=#{shared_path}/#{imagenes_seed}"
+    expansiones = ENV['expansiones'].present? ? "expansiones=#{ENV['expansiones']}" : nil
+    run "cd #{current_path}; #{rake} db:seed dir=#{shared_path}/#{imagenes_seed} #{expansiones}"
   end
 
   desc "Sets up the production database"

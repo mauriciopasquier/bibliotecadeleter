@@ -94,6 +94,8 @@ GEM
     highline (1.6.15)
     hike (1.2.1)
     hirb (0.7.0)
+    historyjs-rails (1.0.0)
+      railties (~> 3.0)
     i18n (0.6.1)
     i18n-country-translations (0.0.9)
       i18n (~> 0.5)
@@ -233,6 +235,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     uniform_notifier (1.1.1)
+    uri-js-rails (1.7.4)
     warden (1.2.1)
       rack (>= 1.0)
     websocket (1.0.6)
@@ -259,6 +262,7 @@ DEPENDENCIES
   haml-rails
   has_scope
   hirb
+  historyjs-rails
   i18n_country_select
   inflections
   jquery-rails
@@ -278,4 +282,5 @@ DEPENDENCIES
   thin
   turbolinks
   uglifier (>= 1.0.3)
+  uri-js-rails
   yaml_db

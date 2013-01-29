@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require history_jquery
 //= require turbolinks
+//= require URI
+//= require jquery.URI
 //= require twitter/bootstrap/alert
 //= require_tree .

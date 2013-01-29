@@ -1,9 +1,11 @@
 # encoding: utf-8
 class ArtistasController < ApplicationController
   has_scope :pagina, default: 1
+  has_scope :per, as: :mostrar, using: :cantidad
 
   load_and_authorize_resource
 
+  # En vez de has_scope porque no puedo usar un atributo virtual con Ransack
   before_filter :ordenar, only: :index
 
   def index
@@ -23,8 +25,11 @@ class ArtistasController < ApplicationController
 
   def show
     @artista = @artista.decorate
-    @imagenes = @artista.galeria(params[:pagina_galeria])
+    @imagenes = apply_scopes(@artista.ilustraciones).decorate
     @titulo = @artista.nombre
+
+    tipo_actual params[:mostrar].try(:[], :tipo) || :arte
+
     respond_with(@artista) do |format|
       format.html do
         if request.xhr?   # solicitud ajax para la paginación
@@ -36,7 +41,6 @@ class ArtistasController < ApplicationController
         end
       end
     end
-
   end
 
   def new
