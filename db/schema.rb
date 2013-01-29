@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116163536) do
+ActiveRecord::Schema.define(:version => 20130129041416) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(:version => 20130116163536) do
     t.integer "artista_id"
     t.integer "imagen_id"
   end
+
+  add_index "artistas_imagenes", ["artista_id"], :name => "index_artistas_imagenes_on_artista_id"
+  add_index "artistas_imagenes", ["imagen_id"], :name => "index_artistas_imagenes_on_imagen_id"
 
   create_table "cartas", :force => true do |t|
     t.string   "nombre",     :null => false
@@ -60,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20130116163536) do
     t.datetime "archivo_updated_at"
   end
 
+  add_index "imagenes", ["version_id"], :name => "index_imagenes_on_version_id"
+
   create_table "links", :force => true do |t|
     t.string   "url"
     t.integer  "linkeable_id"
@@ -68,6 +73,8 @@ ActiveRecord::Schema.define(:version => 20130116163536) do
     t.datetime "updated_at",     :null => false
     t.string   "nombre"
   end
+
+  add_index "links", ["linkeable_id", "linkeable_type"], :name => "index_links_on_linkeable_id_and_linkeable_type"
 
   create_table "usuarios", :force => true do |t|
     t.string   "nick",                                   :null => false
@@ -86,6 +93,7 @@ ActiveRecord::Schema.define(:version => 20130116163536) do
   end
 
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
+  add_index "usuarios", ["nick"], :name => "index_usuarios_on_nick", :unique => true
   add_index "usuarios", ["reset_password_token"], :name => "index_usuarios_on_reset_password_token", :unique => true
 
   create_table "versiones", :force => true do |t|
@@ -107,5 +115,8 @@ ActiveRecord::Schema.define(:version => 20130116163536) do
     t.integer  "expansion_id"
     t.string   "slug",                            :null => false
   end
+
+  add_index "versiones", ["carta_id"], :name => "index_versiones_on_carta_id"
+  add_index "versiones", ["expansion_id"], :name => "index_versiones_on_expansion_id"
 
 end
