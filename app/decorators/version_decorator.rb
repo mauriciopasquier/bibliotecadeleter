@@ -56,6 +56,7 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def arte
+    # TODO devolver una sola línea si ambas caras tienen los mismos artistas
     imagenes.collect do |i|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'arte')) do
         i.artistas.collect do |a|

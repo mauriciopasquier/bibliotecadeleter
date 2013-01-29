@@ -1,7 +1,7 @@
 - # TODO endless pagination
 #lista
   - if defined?(paginar) ? paginar : false
-    = paginacion_tag imagenes
+    = paginacion_tag imagenes, mostrar_tipo: true
 
   #galeria.galeria
     %ul.thumbs
@@ -11,4 +11,4 @@
             class: tipo_actual
 
   - if defined?(paginar) ? paginar : false
-    = paginacion_tag imagenes, id: 'paginacion-inferior'
+    = paginacion_tag imagenes, id: 'paginacion-inferior', mostrar_tipo: true

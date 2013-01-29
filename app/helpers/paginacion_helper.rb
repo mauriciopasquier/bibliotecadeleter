@@ -4,7 +4,10 @@ module PaginacionHelper
     opciones.reverse_merge!(
       id: 'paginacion',
       clases: 'pagination pagination-centered',
-      paginar: {
+      paginar: true,
+      mostrar_cantidad: true,
+      mostrar_tipo: false,
+      kaminari: {
         remote: true
       },
       mostrar: {
@@ -21,9 +24,9 @@ module PaginacionHelper
     )
     content_tag(:div, id: opciones[:id], class: opciones[:clases]) do
       partes = ''
-      partes << paginate(recursos, opciones[:paginar]) if opciones[:paginar]
-      partes << mostrar_cantidad_tag(opciones[:mostrar][:cantidad]) if opciones[:mostrar][:cantidad]
-      partes << mostrar_como_tag(opciones[:mostrar][:tipo]) if opciones[:mostrar][:tipo]
+      partes << paginate(recursos, opciones[:kaminari]) if opciones[:paginar]
+      partes << mostrar_cantidad_tag(opciones[:mostrar][:cantidad]) if opciones[:mostrar_cantidad]
+      partes << mostrar_como_tag(opciones[:mostrar][:tipo]) if opciones[:mostrar_tipo]
       partes.html_safe
     end
   end
