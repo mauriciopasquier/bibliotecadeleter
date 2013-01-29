@@ -9,7 +9,7 @@ jQuery ->
 
   # Intercepta el evento que larga el botón de volver para recargar el
   # contenido correcto
-  if $('.pagination')
+  if $('.pagination').length > 0
     $(window)
       .bind 'popstate', ->
         $.get location.href, (data) ->
