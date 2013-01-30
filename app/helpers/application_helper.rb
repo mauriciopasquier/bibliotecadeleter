@@ -22,9 +22,9 @@ module ApplicationHelper
     Artista.unscoped.send scope
   end
 
-  def link_to_mostrar(recurso)
+  def link_to_mostrar(recurso, texto = 'Mostrar')
     link_to recurso do
-      content_tag(:i, nil, class: 'icon-zoom-in') + 'Mostrar'
+      content_tag(:i, nil, class: 'icon-zoom-in') + texto
     end
   end
 

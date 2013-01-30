@@ -9,7 +9,7 @@ jQuery ->
 
   # Intercepta el evento que larga el botón de volver para recargar el
   # contenido correcto
-  if $('.pagination')
+  if $('.pagination').length > 0
     $(window)
       .bind 'popstate', ->
         $.get location.href, (data) ->
@@ -17,5 +17,7 @@ jQuery ->
 
   $(document)
     .on 'change', '.mostrar-tipo', (evt) ->
-      $.get URI(location.href).removeQuery('mostrar[tipo]').addQuery('mostrar[tipo]', this.value), (data) ->
+      url = URI(location.href).removeQuery('mostrar[tipo]').addQuery('mostrar[tipo]', this.value)
+      history.pushState(null, null, url)
+      $.get url, (data) ->
         $('#lista').replaceWith(data)
