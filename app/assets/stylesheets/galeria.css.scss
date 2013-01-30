@@ -1,3 +1,6 @@
+@import 'twitter/bootstrap/mixins';
+@import 'variables';
+
 .galeria {
   .thumbs {
     margin: 0;
@@ -16,6 +19,10 @@
       height: 512px;
       width: 353px;
     }
-    .no-disponible {  border: 1px #eee solid;  }
+    .no-disponible {
+      @include border-radius(10px);
+      background: transparent $fondo 0 0 fixed;
+      border: 1px #eee solid;
+    }
   }
 }
