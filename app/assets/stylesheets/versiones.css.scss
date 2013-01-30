@@ -12,8 +12,7 @@ ul.versiones {
       // De bootstrap.thumbnail
       padding: 4px;
       line-height: $altura-linea;
-      border: 1px solid $color-base;
-      background-color: $color-base;
+      background: transparent $fondo 0 0 fixed;
       @include border-radius(5px);
       @include transition(all .2s ease-in-out);
     }
