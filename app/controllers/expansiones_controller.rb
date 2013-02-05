@@ -6,19 +6,14 @@ class ExpansionesController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :mostrar, only: [:index, :show]
+
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
     @expansiones = @busqueda.result.decorate
     @titulo = 'Todas las Expansiones'
 
-    respond_with(@expansiones) do |format|
-      # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render :index,  layout: false
-        end
-      end
-    end
+    respond_with(@expansiones)
   end
 
   def show
@@ -28,17 +23,7 @@ class ExpansionesController < ApplicationController
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 
-    respond_with(@expansion) do |format|
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render  partial: 'layouts/galeria',
-                  locals: {
-                    imagenes: @imagenes,
-                    paginar: true
-                  }
-        end
-      end
-    end
+    respond_with(@expansion)
   end
 
   def new
@@ -69,4 +54,21 @@ class ExpansionesController < ApplicationController
     @expansion = @expansion.decorate
     respond_with(@expansion)
   end
+
+  private
+
+    def mostrar
+      if params[:mostrar].present?
+        if params[:mostrar][:cantidad] =~ /todo/i
+          params[:mostrar][:cantidad] = case params[:action]
+            when 'show'
+              @expansion.versiones.count.to_s
+            when 'index'
+              @expansiones.count.to_s
+            else
+              # Nada
+          end
+        end
+      end
+    end
 end

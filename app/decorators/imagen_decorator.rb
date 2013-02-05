@@ -2,6 +2,13 @@
 class ImagenDecorator < ApplicationDecorator
   decorates :imagen
 
+  def self.estilos_para_select
+    Imagen.estilos.inject({}) do |h, e|
+      h[e.to_s.humanize] = e
+      h
+    end
+  end
+
   def tag(estilo = :original)
     h.image_tag source.archivo.url(estilo), alt: source.carta.nombre
   end

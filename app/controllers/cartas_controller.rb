@@ -1,25 +1,20 @@
 # encoding: utf-8
 class CartasController < ApplicationController
   has_scope :pagina, default: 1
+  has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
   load_and_authorize_resource
 
   before_filter :check_espia
   before_filter :decorar, only: [:show, :edit]
+  before_filter :mostrar, only: :index
 
   def index
     @busqueda = apply_scopes(@cartas.unscoped)
     @cartas = @busqueda.result.decorate
     @titulo = 'Todas las cartas'
-    respond_with(@cartas) do |format|
-      # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render :index,  layout: false
-        end
-      end
-    end
+    respond_with(@cartas)
   end
 
   def show
@@ -82,4 +77,16 @@ class CartasController < ApplicationController
       q
     end
 
+    def mostrar
+      if params[:mostrar].present?
+        if params[:mostrar][:cantidad] =~ /todo/i
+          params[:mostrar][:cantidad] = case params[:action]
+            when 'index'
+              @cartas.count.to_s
+            else
+              # Nada
+          end
+        end
+      end
+    end
 end

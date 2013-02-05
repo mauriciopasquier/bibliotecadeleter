@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require history_jquery
 //= require URI
-//= require jquery.URI
+//= require turbolinks
 //= require twitter/bootstrap/alert
-//= require_tree .
+//
+//= Archivos de la aplicación a incluir
+//
+//= require layout
+//= require paginacion
