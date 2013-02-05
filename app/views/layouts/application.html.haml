@@ -17,8 +17,9 @@
               %li= link_to 'Foros', 'http://foros.playinferno.com'
               - # TODO render 'devise/menu/registration_items'
               - # TODO render 'devise/menu/login_items'
-            %ul#cuenta.nav
+            %ul.nav
               %li#buscar= link_to 'Buscar', buscar_cartas_path
+      #cargando.modal.hide.fade
       .container-fluid
         .row-fluid
           .span3= render 'layouts/barra-lateral'

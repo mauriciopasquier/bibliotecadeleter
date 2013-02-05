@@ -56,3 +56,14 @@ h1 {
   color: $gris-claro;
   text-decoration: line-through;
 }
+
+#cargando {
+  @include border-radius(50px);
+  background: transparent $fondo 0 100% fixed;
+  height: 100px;
+  width: 100px;
+  right: 0;
+  top: 50px;
+  left: auto;
+  margin-right: 10px;
+}
