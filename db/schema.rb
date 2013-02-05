@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205024542) do
+ActiveRecord::Schema.define(:version => 20130205052734) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -97,23 +97,24 @@ ActiveRecord::Schema.define(:version => 20130205024542) do
   add_index "usuarios", ["reset_password_token"], :name => "index_usuarios_on_reset_password_token", :unique => true
 
   create_table "versiones", :force => true do |t|
-    t.text     "texto",        :default => ""
-    t.string   "tipo",         :default => ""
-    t.string   "supertipo",    :default => ""
-    t.string   "subtipo",      :default => ""
+    t.text     "texto",            :default => ""
+    t.string   "tipo",             :default => ""
+    t.string   "supertipo",        :default => ""
+    t.string   "subtipo",          :default => ""
     t.integer  "fue"
     t.integer  "res"
-    t.string   "senda",        :default => ""
-    t.text     "ambientacion", :default => ""
+    t.string   "senda",            :default => ""
+    t.text     "ambientacion",     :default => ""
     t.integer  "numero"
-    t.string   "rareza",       :default => ""
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.string   "rareza",           :default => ""
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.integer  "carta_id"
-    t.boolean  "canonica",     :default => false
+    t.boolean  "canonica",         :default => false
     t.integer  "expansion_id"
-    t.string   "slug",                            :null => false
+    t.string   "slug",                                :null => false
     t.string   "coste"
+    t.integer  "coste_convertido"
   end
 
   add_index "versiones", ["carta_id"], :name => "index_versiones_on_carta_id"

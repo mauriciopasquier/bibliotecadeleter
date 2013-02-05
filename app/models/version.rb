@@ -4,7 +4,8 @@ class Version < ActiveRecord::Base
 
   attr_accessible :ambientacion, :coste, :fue, :numero, :rareza, :res, :senda,
                   :subtipo, :supertipo, :texto, :tipo, :canonica,
-                  :imagenes_attributes, :carta, :expansion, :expansion_id
+                  :coste_convertido, :imagenes_attributes, :carta, :expansion,
+                  :expansion_id
 
   belongs_to :carta, inverse_of: :versiones
   belongs_to :expansion
@@ -18,6 +19,10 @@ class Version < ActiveRecord::Base
   before_save :ver_si_es_canonica
 
   validates_presence_of :carta
+
+  def self.coste_convertido(coste = nil)
+    coste.nil? ? 0 : coste.gsub(/\D/, '').to_i
+  end
 
   def numero_justificado
     numero.to_s.rjust(3, '0')
