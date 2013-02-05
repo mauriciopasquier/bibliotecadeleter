@@ -21,6 +21,7 @@ gem 'friendly_id'
 gem 'ransack'
 gem 'historyjs-rails'
 gem 'uri-js-rails'
+gem 'turbolinks'
 
 # Controller
 gem 'responders'
