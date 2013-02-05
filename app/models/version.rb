@@ -20,8 +20,10 @@ class Version < ActiveRecord::Base
 
   validates_presence_of :carta
 
+  scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
+
   def self.coste_convertido(coste = nil)
-    coste.nil? ? 0 : coste.gsub(/\D/, '').to_i
+    coste.present? ? coste.to_s.gsub(/\D/, '').to_i : nil
   end
 
   def numero_justificado
