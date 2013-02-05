@@ -37,6 +37,8 @@ GEM
     builder (3.0.4)
     bullet (4.3.0)
       uniform_notifier
+    cache_digests (0.2.0)
+      actionpack (>= 3.2)
     cancan (1.6.8)
     capistrano (2.14.1)
       highline
@@ -253,6 +255,7 @@ DEPENDENCIES
   attribute_normalizer
   bootstrap-sass-rails
   bullet
+  cache_digests
   cancan
   capistrano
   coffee-rails (~> 3.2.1)

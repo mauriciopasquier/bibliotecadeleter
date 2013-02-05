@@ -29,6 +29,7 @@ gem 'has_scope'
 
 # Server
 gem 'thin'
+gem 'cache_digests'
 gem 'rails3_libmemcached_store'
 
 # Autenticación/autorización
