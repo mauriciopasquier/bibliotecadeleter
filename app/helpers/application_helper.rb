@@ -10,16 +10,24 @@ module ApplicationHelper
     end.join.html_safe
   end
 
+  def opciones_de_ordenar
+    request.query_parameters
+  end
+
   def titulo
     "Biblioteca Del Eter#{@titulo ? " | #{@titulo}" : nil}"
   end
 
-  def expansiones(scope = :all)
-    Expansion.unscoped.send scope
+  def expansiones
+    Expansion.unscoped
   end
 
-  def artistas(scope = :all)
-    Artista.unscoped.send scope
+  def artistas
+    Artista.unscoped
+  end
+
+  def cartas
+    Carta.unscoped
   end
 
   def link_to_mostrar(recurso, texto = 'Mostrar')

@@ -28,7 +28,6 @@ body {
   &:hover {
     color: #222;
     text-shadow: none;
-    background: transparent $fondo 0 0 fixed;
   }
 }
 
@@ -51,4 +50,9 @@ h1 {
   &:hover {
     background: transparent $fondo 0 0 fixed;
   }
+}
+
+.plegado {
+  color: $gris-claro;
+  text-decoration: line-through;
 }

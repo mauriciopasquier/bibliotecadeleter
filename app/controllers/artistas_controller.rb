@@ -7,20 +7,14 @@ class ArtistasController < ApplicationController
 
   # En vez de has_scope porque no puedo usar un atributo virtual con Ransack
   before_filter :ordenar, only: :index
+  before_filter :mostrar, only: [:index, :show]
 
   def index
     @artistas = apply_scopes(@artistas).con_ilustraciones.con_cantidad
 
     @titulo = 'Todos los Artistas'
 
-    respond_with(@artistas) do |format|
-      # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render :index,  layout: false
-        end
-      end
-    end
+    respond_with(@artistas)
   end
 
   def show
@@ -30,17 +24,7 @@ class ArtistasController < ApplicationController
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :arte
 
-    respond_with(@artista) do |format|
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render  partial: 'layouts/galeria',
-                  locals: {
-                    imagenes: @imagenes,
-                    paginar: true
-                  }
-        end
-      end
-    end
+    respond_with(@artista)
   end
 
   def new
@@ -80,5 +64,21 @@ class ArtistasController < ApplicationController
         @artistas = @artistas.reorder(params[:q][:s])
       end
       @busqueda = Artista.search(params[:q])
+    end
+
+    def mostrar
+      if params[:mostrar].present?
+        if params[:mostrar][:cantidad] =~ /todo/i
+          params[:mostrar][:cantidad] = case params[:action]
+            when 'show'
+              @artista.ilustraciones.count.to_s
+            when 'index'
+              @artistas.count.to_s
+            else
+              # Nada
+          end
+          params[:pagina] = '1'
+        end
+      end
     end
 end

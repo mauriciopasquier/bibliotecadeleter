@@ -3,19 +3,12 @@
 
   #cartas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span5= sort_link @busqueda, :nombre
+      .nombre.span4= sort_link @busqueda, :nombre, opciones_de_ordenar
+      .nombre.span1= sort_link @busqueda, :canonica_coste, opciones_de_ordenar
       .nombre.span3 Tipo
       .nombre.span4 Expansiones
 
-    - @cartas.each do |carta|
-      .row-fluid{class: cycle('even', 'odd')}
-        .nombre.span5
-          - if can? :read, carta
-            = link_to_mostrar carta, carta.nombre
-          - else
-            = carta.nombre
-        .tipo.span3= carta.canonica.linea_de_tipos
-        .tipo.span4= carta.lista_de_expansiones
+    = render @cartas
 
   = paginacion_tag @cartas, id: 'paginacion-inferior'
 

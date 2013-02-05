@@ -3,12 +3,18 @@
   %li
     %a#expansiones.plegable.nav-header{href: '#expansiones'} Expansiones grandes
     %ul
-      - expansiones(:grandes).each do |e|
+      - expansiones.grandes.each do |e|
         %li= link_to e.nombre, e
       %li= link_to '...todas las expansiones', expansiones_path
   %li
     %a#artistas.plegable.nav-header{href: '#artistas'} Artistas más prolíficos
     %ul
-      - artistas(:top5).each do |a|
+      - artistas.top5.each do |a|
         %li= link_to a.nombre, a
       %li= link_to '...todos los artistas', artistas_path
+  %li
+    %a#cartas.plegable.nav-header{href: '#cartas'} Algunas cartas subidas
+    %ul
+      - cartas.limit(5).each do |c|
+        %li= link_to c.nombre, c
+      %li= link_to '...todas las cartas', cartas_path

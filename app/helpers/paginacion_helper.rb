@@ -8,13 +8,13 @@ module PaginacionHelper
       mostrar_cantidad: true,
       mostrar_tipo: false,
       kaminari: {
-        remote: true
+        remote: false
       },
       mostrar: {
         cantidad: {
           clases: 'mostrar-cantidad',
-          cantidades: %w{ 10 20 30 },
-          remote: true
+          cantidades: %w{ 12 20 50 Todo },
+          remote: false
         },
         tipo: {
           tipo: :arte,
@@ -34,8 +34,8 @@ module PaginacionHelper
   def mostrar_cantidad_tag(opciones = {})
     opciones.reverse_merge!(
       clases: 'mostrar-cantidad',
-      cantidades: %w{ 10 20 30 },
-      remote: true
+      cantidades: %w{ 12 20 50 Todo },
+      remote: false
     )
     content_tag(:ul, class: opciones[:clases]) do
       opciones[:cantidades].collect do |cantidad|
@@ -45,7 +45,8 @@ module PaginacionHelper
           end
         else
           content_tag(:li) do
-            link_to(cantidad, url_for(mostrar: { cantidad: cantidad }),
+            link_to(cantidad,
+              request.query_parameters.merge(mostrar: { cantidad: cantidad }),
               remote: opciones[:remote])
           end
         end
@@ -60,6 +61,7 @@ module PaginacionHelper
       clases: 'mostrar-tipo pull-right'
     )
     select_tag opciones[:id],
-      options_for_select(Imagen.estilos, tipo_actual), class: opciones[:clases]
+      options_for_select(ImagenDecorator.estilos_para_select, tipo_actual),
+      class: opciones[:clases]
   end
 end

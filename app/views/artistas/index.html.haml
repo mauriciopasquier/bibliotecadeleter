@@ -3,8 +3,10 @@
 
   #artistas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span8= sort_link @busqueda, :nombre, 'Nombre'
-      .cantidad.span4= sort_link @busqueda, :cantidad, 'Cantidad de ilustraciones'
+      .nombre.span8= sort_link @busqueda, :nombre, 'Nombre',
+        opciones_de_ordenar
+      .cantidad.span4= sort_link @busqueda, :cantidad,
+        'Cantidad de ilustraciones', opciones_de_ordenar
 
     - @artistas.each do |artista|
       .row-fluid{class: cycle('even', 'odd')}
