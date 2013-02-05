@@ -119,6 +119,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcached (1.5.0)
     method_source (0.8.1)
     mime-types (1.19)
     minitest (4.5.0)
@@ -178,6 +179,8 @@ GEM
       railties (= 3.2.9)
     rails-i18n (0.7.2)
       i18n (~> 0.5)
+    rails3_libmemcached_store (0.5.1)
+      memcached
     railties (3.2.9)
       actionpack (= 3.2.9)
       activesupport (= 3.2.9)
@@ -274,6 +277,7 @@ DEPENDENCIES
   pry-rails
   rails (= 3.2.9)
   rails-i18n
+  rails3_libmemcached_store
   ransack
   responders
   sass-rails (~> 3.2.3)
