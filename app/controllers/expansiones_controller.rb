@@ -6,6 +6,8 @@ class ExpansionesController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :mostrar, only: [:index, :show]
+
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
     @expansiones = @busqueda.result.decorate
@@ -52,4 +54,21 @@ class ExpansionesController < ApplicationController
     @expansion = @expansion.decorate
     respond_with(@expansion)
   end
+
+  private
+
+    def mostrar
+      if params[:mostrar].present?
+        if params[:mostrar][:cantidad] =~ /todo/i
+          params[:mostrar][:cantidad] = case params[:action]
+            when 'show'
+              @expansion.versiones.count.to_s
+            when 'index'
+              @expansiones.count.to_s
+            else
+              # Nada
+          end
+        end
+      end
+    end
 end

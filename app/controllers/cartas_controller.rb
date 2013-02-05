@@ -1,12 +1,14 @@
 # encoding: utf-8
 class CartasController < ApplicationController
   has_scope :pagina, default: 1
+  has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
   load_and_authorize_resource
 
   before_filter :check_espia
   before_filter :decorar, only: [:show, :edit]
+  before_filter :mostrar, only: :index
 
   def index
     @busqueda = apply_scopes(@cartas.unscoped)
@@ -73,5 +75,18 @@ class CartasController < ApplicationController
         q.merge! "#{params[:incluir].join('_or_')}_cont" => query
       end
       q
+    end
+
+    def mostrar
+      if params[:mostrar].present?
+        if params[:mostrar][:cantidad] =~ /todo/i
+          params[:mostrar][:cantidad] = case params[:action]
+            when 'index'
+              @cartas.count.to_s
+            else
+              # Nada
+          end
+        end
+      end
     end
 end

@@ -13,7 +13,7 @@ module PaginacionHelper
       mostrar: {
         cantidad: {
           clases: 'mostrar-cantidad',
-          cantidades: %w{ 10 20 30 },
+          cantidades: %w{ 12 20 50 Todo },
           remote: false
         },
         tipo: {
@@ -34,7 +34,7 @@ module PaginacionHelper
   def mostrar_cantidad_tag(opciones = {})
     opciones.reverse_merge!(
       clases: 'mostrar-cantidad',
-      cantidades: %w{ 10 20 30 },
+      cantidades: %w{ 12 20 50 Todo },
       remote: false
     )
     content_tag(:ul, class: opciones[:clases]) do
@@ -60,6 +60,7 @@ module PaginacionHelper
       clases: 'mostrar-tipo pull-right'
     )
     select_tag opciones[:id],
-      options_for_select(Imagen.estilos, tipo_actual), class: opciones[:clases]
+      options_for_select(ImagenDecorator.estilos_para_select, tipo_actual),
+      class: opciones[:clases]
   end
 end
