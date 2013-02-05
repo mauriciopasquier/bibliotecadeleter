@@ -3,11 +3,12 @@
 
   #expansiones.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span4= sort_link @busqueda, :nombre
-      .lanzamiento.span2= sort_link @busqueda, :lanzamiento
-      .presentacion.span2= sort_link @busqueda, :presentacion, 'Presentación'
-      .saga.span3= sort_link @busqueda, :saga
-      .total.span1= sort_link @busqueda, :total, 'Cartas'
+      .nombre.span4= sort_link @busqueda, :nombre, opciones_de_ordenar
+      .lanzamiento.span2= sort_link @busqueda, :lanzamiento, opciones_de_ordenar
+      .presentacion.span2= sort_link @busqueda, :presentacion, 'Presentación',
+        opciones_de_ordenar
+      .saga.span3= sort_link @busqueda, :saga, opciones_de_ordenar
+      .total.span1= sort_link @busqueda, :total, 'Cartas', opciones_de_ordenar
 
     - @expansiones.each do |expansion|
       .row-fluid{class: cycle('even', 'odd')}

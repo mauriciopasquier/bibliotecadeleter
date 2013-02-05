@@ -45,7 +45,8 @@ module PaginacionHelper
           end
         else
           content_tag(:li) do
-            link_to(cantidad, url_for(mostrar: { cantidad: cantidad }),
+            link_to(cantidad,
+              request.query_parameters.merge(mostrar: { cantidad: cantidad }),
               remote: opciones[:remote])
           end
         end

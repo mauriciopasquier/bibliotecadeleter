@@ -77,6 +77,7 @@ class ArtistasController < ApplicationController
             else
               # Nada
           end
+          params[:pagina] = '1'
         end
       end
     end
