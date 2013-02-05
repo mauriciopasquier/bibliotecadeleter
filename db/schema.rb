@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129041416) do
+ActiveRecord::Schema.define(:version => 20130205024542) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -107,13 +107,13 @@ ActiveRecord::Schema.define(:version => 20130129041416) do
     t.text     "ambientacion", :default => ""
     t.integer  "numero"
     t.string   "rareza",       :default => ""
-    t.integer  "coste"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.integer  "carta_id"
     t.boolean  "canonica",     :default => false
     t.integer  "expansion_id"
     t.string   "slug",                            :null => false
+    t.string   "coste"
   end
 
   add_index "versiones", ["carta_id"], :name => "index_versiones_on_carta_id"
