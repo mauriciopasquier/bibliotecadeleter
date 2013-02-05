@@ -12,14 +12,7 @@ class CartasController < ApplicationController
     @busqueda = apply_scopes(@cartas.unscoped)
     @cartas = @busqueda.result.decorate
     @titulo = 'Todas las cartas'
-    respond_with(@cartas) do |format|
-      # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render :index,  layout: false
-        end
-      end
-    end
+    respond_with(@cartas)
   end
 
   def show
@@ -81,5 +74,4 @@ class CartasController < ApplicationController
       end
       q
     end
-
 end

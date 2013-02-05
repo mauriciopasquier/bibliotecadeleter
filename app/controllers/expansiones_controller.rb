@@ -11,14 +11,7 @@ class ExpansionesController < ApplicationController
     @expansiones = @busqueda.result.decorate
     @titulo = 'Todas las Expansiones'
 
-    respond_with(@expansiones) do |format|
-      # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render :index,  layout: false
-        end
-      end
-    end
+    respond_with(@expansiones)
   end
 
   def show
@@ -28,17 +21,7 @@ class ExpansionesController < ApplicationController
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 
-    respond_with(@expansion) do |format|
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render  partial: 'layouts/galeria',
-                  locals: {
-                    imagenes: @imagenes,
-                    paginar: true
-                  }
-        end
-      end
-    end
+    respond_with(@expansion)
   end
 
   def new

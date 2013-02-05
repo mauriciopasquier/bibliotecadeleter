@@ -13,14 +13,7 @@ class ArtistasController < ApplicationController
 
     @titulo = 'Todos los Artistas'
 
-    respond_with(@artistas) do |format|
-      # TODO Esta es la mejor forma de usar ajax + kaminari? Tal vez un responder
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render :index,  layout: false
-        end
-      end
-    end
+    respond_with(@artistas)
   end
 
   def show
@@ -30,17 +23,7 @@ class ArtistasController < ApplicationController
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :arte
 
-    respond_with(@artista) do |format|
-      format.html do
-        if request.xhr?   # solicitud ajax para la paginación
-          render  partial: 'layouts/galeria',
-                  locals: {
-                    imagenes: @imagenes,
-                    paginar: true
-                  }
-        end
-      end
-    end
+    respond_with(@artista)
   end
 
   def new

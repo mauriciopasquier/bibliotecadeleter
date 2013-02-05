@@ -8,13 +8,13 @@ module PaginacionHelper
       mostrar_cantidad: true,
       mostrar_tipo: false,
       kaminari: {
-        remote: true
+        remote: false
       },
       mostrar: {
         cantidad: {
           clases: 'mostrar-cantidad',
           cantidades: %w{ 10 20 30 },
-          remote: true
+          remote: false
         },
         tipo: {
           tipo: :arte,
@@ -35,7 +35,7 @@ module PaginacionHelper
     opciones.reverse_merge!(
       clases: 'mostrar-cantidad',
       cantidades: %w{ 10 20 30 },
-      remote: true
+      remote: false
     )
     content_tag(:ul, class: opciones[:clases]) do
       opciones[:cantidades].collect do |cantidad|
