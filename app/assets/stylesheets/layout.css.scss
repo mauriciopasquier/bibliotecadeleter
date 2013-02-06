@@ -3,19 +3,12 @@
 @import 'variables';
 
 body {
-  padding-top: $navbarHeight * 1.5;
-  padding-bottom: $navbarHeight * 1.5;
-
   blockquote {
     p {
       margin-bottom: 1em;
       font-style: italic;
     }
   }
-}
-
-#contenido {
-  padding-bottom: $navbarHeight * 1.5;
 }
 
 .menu {

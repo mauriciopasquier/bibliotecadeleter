@@ -7,7 +7,7 @@
     = javascript_include_tag  "application"
     = csrf_meta_tags
   %body
-    #contenido
+    #contenedor
       #cabecera.navbar.navbar-inverse.navbar-fixed-top
         .navbar-inner
           .container-fluid
@@ -20,7 +20,7 @@
             %ul.nav
               %li#buscar= link_to 'Buscar', buscar_cartas_path
       #cargando.modal.hide.fade
-      .container-fluid
+      #contenido.container-fluid
         .row-fluid
           .span3= render 'layouts/barra-lateral'
           .span9
