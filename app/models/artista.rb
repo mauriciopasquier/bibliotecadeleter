@@ -11,6 +11,8 @@ class Artista < ActiveRecord::Base
 
   validates_presence_of :nombre
 
+  # TODO scope ilustraciones_sin_colaboracion
+
   # scope que devuelve el número de cartas dibujadas por cada artista
   def self.con_cantidad
     joins(:ilustraciones)
