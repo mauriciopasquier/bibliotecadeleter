@@ -1,4 +1,5 @@
 // Alteraciones directas a los defaults de bootstrap
+@import 'variables';
 @import 'twitter/bootstrap';
 
 .dl-horizontal {
@@ -16,6 +17,8 @@ body {
 #contenido {
   margin-bottom: 50px;
 }
+
+blockquote { border-color: darken($gris-claro, 25%); }
 
 // Lo cargamos al final para que no se rompa
 @import 'twitter/bootstrap/responsive';

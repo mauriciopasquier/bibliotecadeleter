@@ -1,11 +1,9 @@
-@import 'twitter/bootstrap/variables';
 @import 'twitter/bootstrap/mixins';
 @import 'variables';
 
 body {
   blockquote {
     p {
-      margin-bottom: 1em;
       font-style: italic;
     }
   }
