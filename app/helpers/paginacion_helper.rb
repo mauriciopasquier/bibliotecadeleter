@@ -18,7 +18,7 @@ module PaginacionHelper
         },
         tipo: {
           tipo: :arte,
-          clases: 'mostrar-tipo pull-right'
+          clases: 'mostrar-tipo pull-left'
         }
       }
     )
@@ -58,10 +58,13 @@ module PaginacionHelper
     opciones.reverse_merge!(
       id: nil,
       tipo: :arte,
-      clases: 'mostrar-tipo pull-right'
+      clases: 'mostrar-tipo pull-left'
     )
-    select_tag opciones[:id],
-      options_for_select(ImagenDecorator.estilos_para_select, tipo_actual),
-      class: opciones[:clases]
+    content_tag(:ul, class: opciones[:clases]) do
+      content_tag(:li) do
+        select_tag opciones[:id],
+          options_for_select(ImagenDecorator.estilos_para_select, tipo_actual)
+      end
+    end
   end
 end
