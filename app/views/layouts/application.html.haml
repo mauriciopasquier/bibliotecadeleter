@@ -12,17 +12,30 @@
         .navbar-inner
           .container-fluid
             = link_to 'Biblioteca del Éter', :root, class: 'brand'
-            %ul#cuenta.nav.pull-right
-              %li= link_to 'Página oficial', 'http://playinferno.com'
-              %li= link_to 'Foro', 'http://foro.playinferno.com'
-              %li= link_to 'Legales', legales_path
-              - # TODO render 'devise/menu/registration_items'
-              - # TODO render 'devise/menu/login_items'
+            %a.btn.btn-navbar{data: { toggle: "collapse", target: ".nav-collapse" }}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
             %ul.nav
-              %li#buscar= link_to 'Buscar', buscar_cartas_path
-              %li= link_to 'Cartas', cartas_path
-              %li= link_to 'Artistas', artistas_path
-              %li= link_to 'Expansiones', expansiones_path
+              %li#buscar
+                = search_form_for barra_de_busqueda, url: buscar_cartas_path,
+                    html: { method: :post, class: 'form-search navbar-search' } do |s|
+                  .input-append
+                    = s.text_field busqueda, class: 'search-query', size: nil
+                    = s.submit 'Buscar', name: 'navbar', class: 'btn'
+                = link_to content_tag(:i, nil, class: "icon-search icon-white"),
+                    buscar_cartas_path, class: 'imagen'
+            .nav-collapse.collapse
+              %ul.nav
+                %li= link_to 'Cartas', cartas_path
+                %li= link_to 'Artistas', artistas_path
+                %li= link_to 'Expansiones', expansiones_path
+              %ul.nav.pull-right
+                %li= link_to 'Página oficial', 'http://playinferno.com'
+                %li= link_to 'Foro', 'http://foro.playinferno.com'
+                %li= link_to 'Legales', legales_path
+                - # TODO render 'devise/menu/registration_items'
+                - # TODO render 'devise/menu/login_items'
       #cargando .
       #contenido.container-fluid
         .row-fluid

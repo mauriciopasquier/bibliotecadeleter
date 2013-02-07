@@ -15,6 +15,7 @@
 //= require URI
 //= require turbolinks
 //= require twitter/bootstrap/alert
+//= require twitter/bootstrap/collapse
 //= require bgpos
 //
 //= Archivos de la aplicación a incluir
