@@ -14,7 +14,8 @@
             = link_to 'Biblioteca del Éter', :root, class: 'brand'
             %ul#cuenta.nav.pull-right
               %li= link_to 'Página oficial', 'http://playinferno.com'
-              %li= link_to 'Foros', 'http://foros.playinferno.com'
+              %li= link_to 'Foro', 'http://foro.playinferno.com'
+              %li= link_to 'Legales', legales_path
               - # TODO render 'devise/menu/registration_items'
               - # TODO render 'devise/menu/login_items'
             %ul.nav
@@ -28,9 +29,3 @@
           .span12
             %h1= @titulo
             = yield
-      %footer.navbar.navbar-inverse.navbar-fixed-bottom
-        .navbar-inner
-          .container-fluid
-            %small.muted.nav-text.pull-right
-              = link_to 'Inferno', 'http://playinferno.com'
-              es &copy; de OMG! entretenimiento.

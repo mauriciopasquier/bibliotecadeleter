@@ -13,4 +13,8 @@ class InicioController < ApplicationController
   def bienvenida
     @titulo = "Todo el conocimiento del Inferno"
   end
+
+  def legales
+    @titulo = "Algunas cuestiones legales imprescindibles"
+  end
 end
