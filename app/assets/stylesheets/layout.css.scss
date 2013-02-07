@@ -38,10 +38,12 @@ h1 {
 #cargando {
   @include border-radius(50px);
   background: transparent $fondo 0 100% fixed;
+  border: solid 1px $gris-claro;
+  position: fixed;
   height: 100px;
   width: 100px;
-  right: 0;
+  right: 10px;
   top: 50px;
   left: auto;
-  margin-right: 10px;
+  display: none;
 }
