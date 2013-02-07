@@ -19,11 +19,13 @@
               - # TODO render 'devise/menu/login_items'
             %ul.nav
               %li#buscar= link_to 'Buscar', buscar_cartas_path
+              %li= link_to 'Cartas', cartas_path
+              %li= link_to 'Artistas', artistas_path
+              %li= link_to 'Expansiones', expansiones_path
       #cargando.modal.hide.fade
       #contenido.container-fluid
         .row-fluid
-          .span3= render 'layouts/barra-lateral'
-          .span9
+          .span12
             %h1= @titulo
             = yield
       %footer.navbar.navbar-inverse.navbar-fixed-bottom

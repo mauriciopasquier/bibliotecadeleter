@@ -7,11 +7,11 @@ $(document)
   .on 'page:fetch', ->
     # Uso un custom css hook de jquery, está en vendor (bgpos)
     $('#cargando').animate({'backgroundPositionY': 0}, { duration: 3000 })
-    $('#cargando').modal(show: true, backdrop: false)
+    $('#cargando').show()
 
 $(document)
   .on 'page:change', ->
-    $('#cargando').modal(show: false, backdrop: false)
+    $('#cargando').hide()
 
 jQuery ->
 
