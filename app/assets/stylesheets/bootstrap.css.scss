@@ -16,6 +16,10 @@ body {
 
 blockquote { border-color: darken($gris-claro, 25%); }
 
+.minifuego {
+  background: transparent $minifuego 0 0 fixed;
+}
+
 // Lo cargamos al final para que no se rompa
 @import 'twitter/bootstrap/responsive';
 
