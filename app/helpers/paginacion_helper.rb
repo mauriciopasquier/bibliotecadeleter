@@ -26,7 +26,7 @@ module PaginacionHelper
     content_tag(:div, id: opciones[:id], class: opciones[:clases]) do
       partes = ''
       partes << paginate(recursos, opciones[:kaminari]) if opciones[:paginar]
-      partes << mostrar_cantidad_tag(recursos.size, opciones[:mostrar][:cantidad]) if opciones[:mostrar_cantidad]
+      partes << mostrar_cantidad_tag(recursos.all.size, opciones[:mostrar][:cantidad]) if opciones[:mostrar_cantidad]
       partes << mostrar_como_tag(opciones[:mostrar][:tipo]) if opciones[:mostrar_tipo]
       partes.html_safe
     end
