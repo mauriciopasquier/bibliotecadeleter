@@ -5,17 +5,10 @@
     #encabezado.row-fluid
       .nombre.span8= sort_link @busqueda, :nombre, 'Nombre',
         opciones_de_ordenar
-      .cantidad.span4= sort_link @busqueda, :cantidad,
-        'Cantidad de ilustraciones', opciones_de_ordenar
+      .cantidad.span4.hidden-phone= sort_link @busqueda, :cantidad,
+        'Ilustraciones', opciones_de_ordenar
 
-    - @artistas.each do |artista|
-      .row-fluid{class: cycle('even', 'odd')}
-        .nombre.span8
-          - if can? :read, artista
-            = link_to_mostrar artista, artista.nombre
-          - else
-            = artista.nombre
-        .cantidad.span4= artista.cantidad
+    = render @artistas
 
   = paginacion_tag @artistas, id: 'paginacion-inferior'
 
