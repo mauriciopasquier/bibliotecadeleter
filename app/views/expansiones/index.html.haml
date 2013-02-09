@@ -4,23 +4,13 @@
   #expansiones.tabla-fluida
     #encabezado.row-fluid
       .nombre.span4= sort_link @busqueda, :nombre, opciones_de_ordenar
-      .lanzamiento.span2= sort_link @busqueda, :lanzamiento, opciones_de_ordenar
-      .presentacion.span2= sort_link @busqueda, :presentacion, 'Presentación',
+      .lanzamiento.span2.hidden-phone= sort_link @busqueda, :lanzamiento, opciones_de_ordenar
+      .presentacion.span2.visible-desktop= sort_link @busqueda, :presentacion, 'Presentación',
         opciones_de_ordenar
-      .saga.span3= sort_link @busqueda, :saga, opciones_de_ordenar
-      .total.span1= sort_link @busqueda, :total, 'Cartas', opciones_de_ordenar
+      .saga.span3.hidden-phone= sort_link @busqueda, :saga, opciones_de_ordenar
+      .total.span1.hidden-phone= sort_link @busqueda, :total, 'Cartas', opciones_de_ordenar
 
-    - @expansiones.each do |expansion|
-      .row-fluid{class: cycle('even', 'odd')}
-        .nombre.span4
-          - if can? :read, expansion
-            = link_to_mostrar expansion, expansion.nombre
-          - else
-            = expansion.nombre
-        .lanzamiento.span2= l(expansion.lanzamiento) if expansion.lanzamiento?
-        .presentacion.span2= l(expansion.presentacion) if expansion.presentacion
-        .saga.span3= expansion.saga
-        .total.span1= expansion.total
+    = render @expansiones
 
   = paginacion_tag @expansiones, id: 'paginacion-inferior'
 
