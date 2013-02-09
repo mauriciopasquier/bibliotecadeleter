@@ -1,8 +1,11 @@
-- # TODO endless pagination
+-# TODO endless pagination
 #lista
   - if defined?(paginar) ? paginar : false
     = paginacion_tag imagenes, mostrar_tipo: true
 
+  -# TODO Mostrar el texto de la carta, en vez de sólo la imagen. Permite
+  -# cambiar el background a estilo mini en .phones, seleccionar el texto de la
+  -# carta, etc
   #galeria.galeria
     %ul.thumbs
       - imagenes.each do |v|
