@@ -22,14 +22,6 @@ button.close {
   display: none;
 }
 
-h1 {
-  @include border-radius(5px);
-  padding-left: 5px;
-  &:hover {
-    background: transparent $fondo 0 0 fixed;
-  }
-}
-
 .plegado {
   color: $gris-claro;
   text-decoration: line-through;
