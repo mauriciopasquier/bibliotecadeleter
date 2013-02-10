@@ -15,7 +15,7 @@
     .span12
       %h2.plegable Galería
       = render  partial: 'layouts/galeria',
-                locals: { imagenes: @imagenes,
+                locals: { imagenes: @versiones,
                           paginar: true }
 
 = link_to 'Otros artistas', artistas_path, class: 'btn'

@@ -8,6 +8,7 @@ class Version < ActiveRecord::Base
                   :expansion_id
 
   belongs_to :carta, inverse_of: :versiones
+  delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion
   has_many :imagenes
   has_many :artistas, through: :imagenes

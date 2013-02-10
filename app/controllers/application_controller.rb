@@ -66,7 +66,7 @@ class ApplicationController < ActionController::Base
     end
 
     def tipo_actual(tipo = nil)
-      @tipo ||= (tipo || params[:tipo])
+      (@tipo ||= (tipo || params[:tipo])).try :to_sym
     end
 
     def no_existe

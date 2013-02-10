@@ -7,11 +7,15 @@
   -# cambiar el background a estilo mini en .phones, seleccionar el texto de la
   -# carta, etc
   #galeria.galeria
-    %ul.thumbs
-      - imagenes.each do |v|
-        %li
-          = v.link tipo_actual,
-            class: tipo_actual
+    - case tipo_actual
+    - when :texto
+      .tabla-fluida= render partial: 'versiones/version', collection: imagenes
+    - else
+      %ul.thumbs
+        - imagenes.each do |v|
+          %li
+            = v.link tipo_actual,
+              class: tipo_actual
 
   - if defined?(paginar) ? paginar : false
     = paginacion_tag imagenes, id: 'paginacion-inferior', mostrar_tipo: true
