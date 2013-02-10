@@ -3,9 +3,18 @@ $color-base: #0088cc;
 $gris-claro: #ccc;
 $gris-oscuro: #333;
 
+$caos:    #dd9f65;
+$locura:  #749ee3;
+$muerte:  #77658b;
+$poder:   #98bf66;
+$neutral: #a4989f;
+
 // Dimensiones
 $altura-linea:  18px;
 
 // Assets
 $fondo: url(image_path('fondo.jpg'));
+$minifuego: url(image_path('favicon.png'));
 $iconos-blancos: url("/e/twitter/bootstrap/glyphicons-halflings-white.png");
+
+$heroUnitBackground: #e2e2e2;

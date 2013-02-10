@@ -62,6 +62,10 @@ end
 
 # Adaptadas de https://gist.github.com/157958
 namespace :db do
+  desc "Actualiza las imágenes de las cartas"
+  task :imagenes do
+    puts run_locally "rsync -av tmp/imagenes/ #{user}@hackcoop.com.ar:#{shared_path}/#{imagenes_seed}"
+  end
   desc "Create production database"
   task :create do
     run "cd #{current_path}; #{rake} db:create"

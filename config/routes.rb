@@ -41,4 +41,7 @@ BibliotecaDelEter::Application.routes.draw do
   with_options path_names: masculinos do |r|
     r.resources :artistas
   end
+
+  get 'legales' => 'inicio#legales'
+
 end

@@ -6,6 +6,26 @@
 
   .row-fluid {
     * { padding: 2px; }
+
+    &.odd { background-color: $gris-claro; }
+
+    &.caos {
+      background-color: $caos;
+      &.odd { background-color: darken($caos, 10%); } }
+    &.locura {
+      background-color: $locura;
+      &.odd { background-color: darken($locura, 10%); } }
+    &.muerte {
+      background-color: $muerte;
+      color: $gris-claro;
+      a { color: $gris-claro; }
+      &.odd { background-color: darken($muerte, 10%); } }
+    &.poder {
+      background-color: $poder;
+      &.odd { background-color: darken($poder, 10%); } }
+    &.neutral {
+      background-color: $neutral;
+      &.odd { background-color: darken($neutral, 10%); } }
   }
 
   // Hover
@@ -29,7 +49,6 @@
     background-color: $gris-claro;
   }
 
-  .odd { background-color: $gris-claro; }
-
   .acciones { padding-right: 10px; }
+
 }

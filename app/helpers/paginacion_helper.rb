@@ -18,39 +18,44 @@ module PaginacionHelper
         },
         tipo: {
           tipo: :arte,
-          clases: 'mostrar-tipo pull-right'
+          clases: 'mostrar-tipo pull-left'
         }
       }
     )
+
     content_tag(:div, id: opciones[:id], class: opciones[:clases]) do
       partes = ''
       partes << paginate(recursos, opciones[:kaminari]) if opciones[:paginar]
-      partes << mostrar_cantidad_tag(opciones[:mostrar][:cantidad]) if opciones[:mostrar_cantidad]
+      partes << mostrar_cantidad_tag(recursos.all.size, opciones[:mostrar][:cantidad]) if opciones[:mostrar_cantidad]
       partes << mostrar_como_tag(opciones[:mostrar][:tipo]) if opciones[:mostrar_tipo]
       partes.html_safe
     end
   end
 
-  def mostrar_cantidad_tag(opciones = {})
+  def mostrar_cantidad_tag(total, opciones = {})
     opciones.reverse_merge!(
       clases: 'mostrar-cantidad',
       cantidades: %w{ 12 20 50 Todo },
       remote: false
     )
-    content_tag(:ul, class: opciones[:clases]) do
-      opciones[:cantidades].collect do |cantidad|
-        if activo? cantidad
-          content_tag(:li, class: 'current disabled') do
-            content_tag(:span, cantidad)
+    if total > opciones[:cantidades].first.to_i
+      content_tag(:ul, class: opciones[:clases]) do
+        opciones[:cantidades].collect do |cantidad|
+          if activo? cantidad
+            content_tag(:li, class: 'current disabled') do
+              content_tag(:span, cantidad)
+            end
+          else
+            content_tag(:li) do
+              link_to(cantidad,
+                request.query_parameters.deep_merge(mostrar: { cantidad: cantidad }),
+                remote: opciones[:remote])
+            end
           end
-        else
-          content_tag(:li) do
-            link_to(cantidad,
-              request.query_parameters.merge(mostrar: { cantidad: cantidad }),
-              remote: opciones[:remote])
-          end
-        end
-      end.join.html_safe
+        end.join.html_safe
+      end
+    else
+      ''
     end
   end
 
@@ -58,10 +63,13 @@ module PaginacionHelper
     opciones.reverse_merge!(
       id: nil,
       tipo: :arte,
-      clases: 'mostrar-tipo pull-right'
+      clases: 'mostrar-tipo pull-left'
     )
-    select_tag opciones[:id],
-      options_for_select(ImagenDecorator.estilos_para_select, tipo_actual),
-      class: opciones[:clases]
+    content_tag(:ul, class: opciones[:clases]) do
+      content_tag(:li) do
+        select_tag opciones[:id],
+          options_for_select(ImagenDecorator.estilos_para_select, tipo_actual)
+      end
+    end
   end
 end

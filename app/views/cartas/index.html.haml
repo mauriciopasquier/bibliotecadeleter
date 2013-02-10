@@ -3,10 +3,13 @@
 
   #cartas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span4= sort_link @busqueda, :nombre, opciones_de_ordenar
-      .nombre.span1= sort_link @busqueda, :canonica_coste, opciones_de_ordenar
-      .nombre.span3 Tipo
-      .nombre.span4 Expansiones
+      -# TODO sort_link debería agregar el orden ya pedido (ordenar por senda y coste)
+      .nombre.span3= sort_link @busqueda, :nombre, opciones_de_ordenar
+      .coste.span1.hidden-phone= sort_link @busqueda, :canonica_coste_convertido, 'Coste', opciones_de_ordenar
+      .senda.span1.visible-desktop= sort_link @busqueda, :canonica_senda, 'Senda', opciones_de_ordenar
+      .senda.span1.visible-desktop= sort_link @busqueda, :canonica_rareza, 'Rareza', opciones_de_ordenar
+      .tipo.span3.hidden-phone Tipo
+      .expansion.span3.hidden-phone Expansiones
 
     = render @cartas
 

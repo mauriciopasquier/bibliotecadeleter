@@ -30,7 +30,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?
+  helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?,
+                :barra_de_busqueda
 
   protected
 
@@ -44,7 +45,11 @@ class ApplicationController < ActionController::Base
     end
 
     def busqueda
-      [versiones_tipos, 'versiones_texto', 'nombre'].join('_or_') + '_cont'
+      [ versiones_tipos,
+        'versiones_texto',
+        'versiones_ambientacion',
+        'nombre'
+      ].join('_or_') + '_cont'
     end
 
     def versiones_tipos
@@ -61,7 +66,7 @@ class ApplicationController < ActionController::Base
     end
 
     def tipo_actual(tipo = nil)
-      @tipo ||= (tipo || params[:tipo])
+      (@tipo ||= (tipo || params[:tipo])).try :to_sym
     end
 
     def no_existe
@@ -75,4 +80,9 @@ class ApplicationController < ActionController::Base
         no_existe
       end
     end
+
+    def barra_de_busqueda
+      Carta.ransack
+    end
+
 end

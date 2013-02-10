@@ -1,9 +1,11 @@
-.row-fluid{class: cycle('even', 'odd')}
-  .nombre.span4
+.row-fluid{class: "#{cycle('even', 'odd')} #{carta.canonica.senda.downcase}"}
+  .nombre.span3
     - if can? :read, carta
       = link_to_mostrar carta, carta.nombre
     - else
       = carta.nombre
-  .coste.span1= carta.canonica.coste
-  .tipo.span3= carta.canonica.linea_de_tipos
-  .expansiones.span4= carta.lista_de_expansiones
+  .coste.span1.hidden-phone= carta.canonica.coste
+  .senda.span1.visible-desktop= carta.canonica.senda
+  .senda.span1.visible-desktop= carta.canonica.rareza
+  .tipo.span3.hidden-phone= carta.canonica.linea_de_tipos
+  .expansiones.span3.hidden-phone= carta.lista_de_expansiones

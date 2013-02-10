@@ -1,0 +1,10 @@
+.row-fluid{class: cycle('even', 'odd')}
+  .nombre.span4
+    - if can? :read, expansion
+      = link_to_mostrar expansion, expansion.nombre
+    - else
+      = expansion.nombre
+  .lanzamiento.span2.hidden-phone= l(expansion.lanzamiento) if expansion.lanzamiento?
+  .presentacion.span2.visible-desktop= l(expansion.presentacion) if expansion.presentacion
+  .saga.span3.hidden-phone= expansion.saga
+  .total.span1.hidden-phone= expansion.total

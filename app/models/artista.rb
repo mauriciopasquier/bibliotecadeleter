@@ -5,11 +5,14 @@ class Artista < ActiveRecord::Base
   attr_accessible :nombre
   has_and_belongs_to_many :ilustraciones, class_name: 'Imagen'
   has_many :cartas, through: :ilustraciones
+  has_many :versiones, through: :ilustraciones
   has_many :links, as: :linkeable, dependent: :destroy
 
   friendly_id :nombre, use: :slugged
 
   validates_presence_of :nombre
+
+  # TODO scope ilustraciones_sin_colaboracion
 
   # scope que devuelve el número de cartas dibujadas por cada artista
   def self.con_cantidad
