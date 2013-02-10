@@ -29,7 +29,6 @@ module SemillasHelper
       subtipo:          csv[5],
       senda:            csv[6],
       coste:            csv[7],
-      coste_convertido: Version.coste_convertido(csv[7]),
       fue:              csv[8],
       res:              csv[9],
       texto:            csv[11],
