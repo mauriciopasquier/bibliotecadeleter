@@ -6,6 +6,8 @@ class ExpansionesController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :decorar_expansion, only: [:show, :edit]
+
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
     @expansiones = PaginadorDecorator.decorate @busqueda.result
@@ -15,7 +17,6 @@ class ExpansionesController < ApplicationController
   end
 
   def show
-    @expansion = @expansion.decorate
     @versiones = PaginadorDecorator.decorate apply_scopes(@expansion.versiones)
     @titulo = @expansion.nombre
 
@@ -25,32 +26,33 @@ class ExpansionesController < ApplicationController
   end
 
   def new
-    @expansion = @expansion.decorate
     @titulo = "Nueva expansión"
     respond_with(@expansion)
   end
 
   def edit
-    @expansion = @expansion.decorate
     @titulo = @expansion.nombre
   end
 
   def create
     @expansion.save
-    @expansion = @expansion.decorate
     respond_with(@expansion)
   end
 
   def update
     @expansion.update_attributes(params[:expansion])
-    @expansion = @expansion.decorate
     respond_with(@expansion)
   end
 
   def destroy
     @expansion.destroy
-    @expansion = @expansion.decorate
     respond_with(@expansion)
   end
+
+  private
+
+    def decorar_expansion
+      @expansion = @expansion.decorate
+    end
 
 end

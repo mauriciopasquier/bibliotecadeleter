@@ -7,7 +7,7 @@ class CartasController < ApplicationController
   load_and_authorize_resource
 
   before_filter :check_espia
-  before_filter :decorar, only: [:show, :edit]
+  before_filter :decorar_carta, only: [:show, :edit]
   before_filter :check_barra_de_busqueda, only: :buscar
 
   def index
@@ -65,7 +65,7 @@ class CartasController < ApplicationController
 
   private
 
-    def decorar
+    def decorar_carta
       @carta = @carta.decorate
     end
 

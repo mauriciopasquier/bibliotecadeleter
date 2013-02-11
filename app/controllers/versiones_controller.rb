@@ -5,7 +5,7 @@ class VersionesController < ApplicationController
   load_and_authorize_resource through: :carta
 
   before_filter :check_espia
-  before_filter :decorar, only: [:index, :show, :edit]
+  before_filter :decorar_carta_y_version, only: [:index, :show, :edit]
 
   def index
     @titulo = "#{@carta.nombre}"
@@ -44,7 +44,7 @@ class VersionesController < ApplicationController
 
   private
 
-    def decorar
+    def decorar_carta_y_version
       @carta = @carta.decorate
       if @versiones
         @versiones = @versiones.decorate

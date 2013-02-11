@@ -5,6 +5,7 @@ class ArtistasController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :decorar_artista, only: [:show, :edit]
   # En vez de has_scope porque no puedo usar un atributo virtual con Ransack
   before_filter :ordenar, only: :index
 
@@ -17,7 +18,6 @@ class ArtistasController < ApplicationController
   end
 
   def show
-    @artista = @artista.decorate
     @ilustraciones = PaginadorDecorator.decorate apply_scopes(@artista.ilustraciones)
     @titulo = @artista.nombre
 
@@ -27,35 +27,34 @@ class ArtistasController < ApplicationController
   end
 
   def new
-    @artista = @artista.decorate
     @titulo = "Nueva artista"
     respond_with(@artista)
   end
 
   def edit
-    @artista = @artista.decorate
     @titulo = @artista.nombre
   end
 
   def create
     @artista.save
-    @artista = @artista.decorate
     respond_with(@artista)
   end
 
   def update
     @artista.update_attributes(params[:artista])
-    @artista = @artista.decorate
     respond_with(@artista)
   end
 
   def destroy
     @artista.destroy
-    @artista = @artista.decorate
     respond_with(@artista)
   end
 
   private
+
+    def decorar_artista
+      @artista = @artista.decorate
+    end
 
     def ordenar
       # TODO hacer esto más lindo
