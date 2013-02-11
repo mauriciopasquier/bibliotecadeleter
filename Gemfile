@@ -19,6 +19,7 @@ gem 'draper'
 gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
+gem 'sitemap'
 
 # Controller
 gem 'responders'
