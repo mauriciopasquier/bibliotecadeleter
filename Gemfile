@@ -15,7 +15,7 @@ gem 'squeel'
 # View
 gem 'dynamic_form'
 gem 'haml-rails'
-gem 'draper', '0.18.0'
+gem 'draper'
 gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
