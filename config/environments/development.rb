@@ -16,6 +16,11 @@ BibliotecaDelEter::Application.configure do
   # Habilito el cache para pruebas
   config.action_controller.perform_caching = true
 
+  # Para cachear los fragmentos de cache_digests en desarrollo y sin embargo
+  # recomputarlos en cada request (si no, hay que reiniciar la aplicación
+  # después de cada cambio)
+  CacheDigests::TemplateDigestor.cache = ActiveSupport::Cache::NullStore.new
+
   config.action_mailer do |mailer|
     # Don't care if the mailer can't send
     mailer.raise_delivery_errors = false
