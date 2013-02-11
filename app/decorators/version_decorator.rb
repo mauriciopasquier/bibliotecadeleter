@@ -1,7 +1,6 @@
 # encoding: utf-8
 class VersionDecorator < ApplicationDecorator
-  decorates :version
-  decorates_association :imagenes
+  decorates_association :imagenes, with: PaginadorDecorator
   decorates_association :expansion
 
   # genera una imagen/link a la versión.
