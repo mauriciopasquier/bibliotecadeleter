@@ -1,6 +1,8 @@
 # encoding: utf-8
 class ImagenDecorator < ApplicationDecorator
   decorates :imagen
+  decorates_association :version
+  decorates_association :expansion
 
   def self.estilos_para_select
     Imagen.estilos.inject({ 'Texto' => :texto }) do |h, e|
@@ -18,5 +20,9 @@ class ImagenDecorator < ApplicationDecorator
   # `opciones` se le pasa a `link_to` directamente
   def link(estilo = :original, opciones = {})
     h.link_to tag(estilo), [source.carta, source.version], opciones
+  end
+
+  def linea_de_tipos
+    version.linea_de_tipos
   end
 end

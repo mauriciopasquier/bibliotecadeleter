@@ -19,7 +19,7 @@ class ArtistasController < ApplicationController
 
   def show
     @artista = @artista.decorate
-    @versiones = apply_scopes(@artista.versiones).decorate
+    @ilustraciones = apply_scopes(@artista.ilustraciones).decorate
     @titulo = @artista.nombre
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :arte
