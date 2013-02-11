@@ -1,5 +1,7 @@
 # encoding: utf-8
 class ImagenDecorator < ApplicationDecorator
+  decorates_association :version
+  decorates_association :expansion
   decorates_association :artistas, with: PaginadorDecorator
 
   def self.estilos_para_select
