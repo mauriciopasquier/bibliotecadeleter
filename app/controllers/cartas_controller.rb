@@ -8,7 +8,6 @@ class CartasController < ApplicationController
 
   before_filter :check_espia
   before_filter :decorar, only: [:show, :edit]
-  before_filter :mostrar, only: :index
   before_filter :check_barra_de_busqueda, only: :buscar
 
   def index
@@ -76,20 +75,6 @@ class CartasController < ApplicationController
         q.merge! "#{params[:incluir].join('_or_')}_cont" => query
       end
       q
-    end
-
-    def mostrar
-      if params[:mostrar].present?
-        if params[:mostrar][:cantidad] =~ /todo/i
-          params[:mostrar][:cantidad] = case params[:action]
-            when 'index'
-              @cartas.count.to_s
-            else
-              # Nada
-          end
-          params[:pagina] = '1'
-        end
-      end
     end
 
     def check_barra_de_busqueda

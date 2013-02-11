@@ -7,7 +7,6 @@ class ArtistasController < ApplicationController
 
   # En vez de has_scope porque no puedo usar un atributo virtual con Ransack
   before_filter :ordenar, only: :index
-  before_filter :mostrar, only: [:index, :show]
 
   def index
     @artistas = apply_scopes(@artistas).con_ilustraciones.con_cantidad
@@ -66,19 +65,4 @@ class ArtistasController < ApplicationController
       @busqueda = Artista.search(params[:q])
     end
 
-    def mostrar
-      if params[:mostrar].present?
-        if params[:mostrar][:cantidad] =~ /todo/i
-          params[:mostrar][:cantidad] = case params[:action]
-            when 'show'
-              @artista.ilustraciones.count.to_s
-            when 'index'
-              @artistas.count.to_s
-            else
-              # Nada
-          end
-          params[:pagina] = '1'
-        end
-      end
-    end
 end

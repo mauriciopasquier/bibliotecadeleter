@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
 
     # Para determinar el elemento activo de la paginación
     def activo?(elemento)
-      elemento == params[:mostrar]
+      elemento == params[:mostrar].try(:[], :cantidad)
     end
 
     def tipo_actual(tipo = nil)

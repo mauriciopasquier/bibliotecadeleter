@@ -13,7 +13,7 @@ module PaginacionHelper
       mostrar: {
         cantidad: {
           clases: 'mostrar-cantidad',
-          cantidades: %w{ 12 20 50 Todo },
+          cantidades: %w{ 12 20 50 },
           remote: false
         },
         tipo: {
@@ -26,7 +26,8 @@ module PaginacionHelper
     content_tag(:div, id: opciones[:id], class: opciones[:clases]) do
       partes = ''
       partes << paginate(recursos, opciones[:kaminari]) if opciones[:paginar]
-      partes << mostrar_cantidad_tag(recursos.all.size, opciones[:mostrar][:cantidad]) if opciones[:mostrar_cantidad]
+      # total_count es de Kaminari
+      partes << mostrar_cantidad_tag(recursos.total_count, opciones[:mostrar][:cantidad]) if opciones[:mostrar_cantidad]
       partes << mostrar_como_tag(opciones[:mostrar][:tipo]) if opciones[:mostrar_tipo]
       partes.html_safe
     end
@@ -35,20 +36,25 @@ module PaginacionHelper
   def mostrar_cantidad_tag(total, opciones = {})
     opciones.reverse_merge!(
       clases: 'mostrar-cantidad',
-      cantidades: %w{ 12 20 50 Todo },
+      cantidades: %w{ 12 25 50 },
       remote: false
     )
+    # Si vale la pena generar el helper
     if total > opciones[:cantidades].first.to_i
+      # Determinamos sólo las cantidades relevantes
+      cantidades = opciones[:cantidades].select { |c| c.to_i < total } << total.to_s
       content_tag(:ul, class: opciones[:clases]) do
-        opciones[:cantidades].collect do |cantidad|
+        cantidades.collect do |cantidad|
+          nombre = cantidad.to_i == total ? 'Todo' : cantidad
           if activo? cantidad
             content_tag(:li, class: 'current disabled') do
-              content_tag(:span, cantidad)
+              content_tag(:span, nombre)
             end
           else
             content_tag(:li) do
-              link_to(cantidad,
-                request.query_parameters.deep_merge(mostrar: { cantidad: cantidad }),
+              # Para no mostrar un número gigante
+              link_to(nombre,
+                request.query_parameters.deep_merge(parametros(cantidad.to_i, total)),
                 remote: opciones[:remote])
             end
           end
@@ -72,4 +78,18 @@ module PaginacionHelper
       end
     end
   end
+
+  private
+
+    # Deja params[:pagina] en la última página donde hay elementos si se pasa
+    # de la cantidad.
+    def parametros(cantidad, total)
+      pagina = params[:pagina].to_i
+      hash = HashWithIndifferentAccess.new mostrar: { cantidad: cantidad }
+      # Si el link se pasa del total por menos de una página
+      if cantidad * (pagina - 1) >= total
+        hash.merge!( pagina: cantidad == total ? nil : total/cantidad + 1 )
+      end
+      hash
+    end
 end
