@@ -1,6 +1,5 @@
 # encoding: utf-8
 class CartaDecorator < ApplicationDecorator
-  decorates :carta
   decorates_association :versiones
   decorates_association :expansiones
   decorates_association :canonica

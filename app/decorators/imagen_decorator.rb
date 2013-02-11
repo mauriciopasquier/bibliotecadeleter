@@ -1,6 +1,5 @@
 # encoding: utf-8
 class ImagenDecorator < ApplicationDecorator
-  decorates :imagen
 
   def self.estilos_para_select
     Imagen.estilos.inject({ 'Texto' => :texto }) do |h, e|

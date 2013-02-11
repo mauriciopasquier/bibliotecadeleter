@@ -1,6 +1,5 @@
 # encoding: utf-8
 class ExpansionDecorator < ApplicationDecorator
-  decorates :expansion
   decorates_association :versiones
   decorates_association :imagenes
 
