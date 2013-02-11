@@ -4,22 +4,17 @@
 .galeria {
   .thumbs {
     margin: 0;
+    text-align: center;
 
     li {
       max-width: 100%; // Arregla las imágenes más grandes que el display
       list-style: none;
       display: inline-block;
       margin: 5px;
+
+      &.arte { margin: 1em; }
     }
 
-    .thumb {
-      height: 169px;
-      width: 169px;
-    }
-    .original {
-      height: 512px;
-      width: 353px;
-    }
     .no-disponible {
       @include border-radius(10px);
       background: transparent $fondo 0 0 fixed;
