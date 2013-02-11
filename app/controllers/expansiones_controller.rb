@@ -6,19 +6,18 @@ class ExpansionesController < ApplicationController
 
   load_and_authorize_resource
 
-  before_filter :mostrar, only: [:index, :show]
+  before_filter :decorar_expansion, only: [:show, :edit]
 
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
-    @expansiones = @busqueda.result.decorate
+    @expansiones = PaginadorDecorator.decorate @busqueda.result
     @titulo = 'Todas las Expansiones'
 
     respond_with(@expansiones)
   end
 
   def show
-    @expansion = @expansion.decorate
-    @versiones = apply_scopes(@expansion.versiones).decorate
+    @versiones = PaginadorDecorator.decorate apply_scopes(@expansion.versiones)
     @titulo = @expansion.nombre
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
@@ -27,49 +26,33 @@ class ExpansionesController < ApplicationController
   end
 
   def new
-    @expansion = @expansion.decorate
     @titulo = "Nueva expansión"
     respond_with(@expansion)
   end
 
   def edit
-    @expansion = @expansion.decorate
     @titulo = @expansion.nombre
   end
 
   def create
     @expansion.save
-    @expansion = @expansion.decorate
     respond_with(@expansion)
   end
 
   def update
     @expansion.update_attributes(params[:expansion])
-    @expansion = @expansion.decorate
     respond_with(@expansion)
   end
 
   def destroy
     @expansion.destroy
-    @expansion = @expansion.decorate
     respond_with(@expansion)
   end
 
   private
 
-    def mostrar
-      if params[:mostrar].present?
-        if params[:mostrar][:cantidad] =~ /todo/i
-          params[:mostrar][:cantidad] = case params[:action]
-            when 'show'
-              @expansion.versiones.count.to_s
-            when 'index'
-              @expansiones.count.to_s
-            else
-              # Nada
-          end
-          params[:pagina] = '1'
-        end
-      end
+    def decorar_expansion
+      @expansion = @expansion.decorate
     end
+
 end

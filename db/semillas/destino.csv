@@ -1,4 +1,5 @@
 Nombre,N°,Rareza,Tipo,Supertipo,Subtipo,Senda,Coste,FUE,RES,Arte,Habilidades,Texto de ambientación
+"Ubanna, cronista demente",5,E,,Demonio,,Neutral,,,,Magdalena Radziej/Magdalena Radziej,"Thanatos. Al principio de tu restauración, si es tu turno 10 o más, voltea Ubanna.","""Una puerta abierta puede cruzarse en dos direcciones."""
 "Azuela del sirviente",6,C,Arma,,Vampiro,Caos,2,2,0,Emmanuel Bou,"Sangre débil (juega esta carta sólo si hay Thanatos).","Forjada con huesos y sangre de vampiros caídos."
 "Bestia salvaje",9,I,Aliado,,Kirch Vampiro,Caos,1,2,1,"N. R. Morales","Furia (puede atacar inmediatamente). Siempre que Bestia salvaje ataque, ponle un contador de daño al final del combate.","""Si antes eran temidos, una vez convertidos se transformaron en pesadillas. Afortunadamente, olvidan que no deben salir de día."" - Acólito de Abel"
 "Recluta incendiario",24,C,Aliado,,Humano,Caos,2,1,1,"NRG","Girar, destruir un recurso que controles: Pon en juego una ficha de aliado humano 2 FUE, 2 RES.","Las opciones nungnarh no son muy alentadoras: Morir quemado en tu hogar, o quemado en combate."

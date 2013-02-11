@@ -8,10 +8,10 @@ class Version < ActiveRecord::Base
   attr_readonly   :coste_convertido
 
 
-  belongs_to :carta, inverse_of: :versiones
+  belongs_to :carta, inverse_of: :versiones, touch: true
   delegate :nombre, to: :carta, allow_nil: true
-  belongs_to :expansion
-  has_many :imagenes
+  belongs_to :expansion, touch: true
+  has_many :imagenes, order: 'created_at ASC'
   has_many :artistas, through: :imagenes
 
   friendly_id :expansion_y_numero, use: :slugged

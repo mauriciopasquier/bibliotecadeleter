@@ -1,7 +1,6 @@
 # encoding: utf-8
 class VersionDecorator < ApplicationDecorator
-  decorates :version
-  decorates_association :imagenes
+  decorates_association :imagenes, with: PaginadorDecorator
   decorates_association :expansion
 
   # genera una imagen/link a la versión.
@@ -15,9 +14,10 @@ class VersionDecorator < ApplicationDecorator
     if imagenes.any?
       imagenes.first.tag(estilo)
     else
-      h.image_tag("imagen-no-disponible-#{estilo}.png",
-                  alt: I18n.t('imagen.no_disponible'),
-                  class: 'no-disponible')
+      h.content_tag(:div, class: 'no-disponible') do
+        h.image_tag("imagen-no-disponible-#{estilo}.png",
+                    alt: I18n.t('imagen.no_disponible'))
+      end
     end
   end
 

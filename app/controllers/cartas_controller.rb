@@ -7,13 +7,12 @@ class CartasController < ApplicationController
   load_and_authorize_resource
 
   before_filter :check_espia
-  before_filter :decorar, only: [:show, :edit]
-  before_filter :mostrar, only: :index
+  before_filter :decorar_carta, only: [:show, :edit]
   before_filter :check_barra_de_busqueda, only: :buscar
 
   def index
     @busqueda = apply_scopes(@cartas.unscoped)
-    @cartas = @busqueda.result.decorate
+    @cartas = PaginadorDecorator.decorate @busqueda.result
     @titulo = 'Todas las cartas'
     respond_with(@cartas)
   end
@@ -51,7 +50,7 @@ class CartasController < ApplicationController
     @busqueda = Carta.search(params[:q])
     @titulo = 'Búsqueda de cartas'
 
-    tipo_actual params[:mostrar].try(:[], :tipo) || :original
+    tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 
     @cartas = if params[:q].present?
       @cartas
@@ -66,7 +65,7 @@ class CartasController < ApplicationController
 
   private
 
-    def decorar
+    def decorar_carta
       @carta = @carta.decorate
     end
 
@@ -76,20 +75,6 @@ class CartasController < ApplicationController
         q.merge! "#{params[:incluir].join('_or_')}_cont" => query
       end
       q
-    end
-
-    def mostrar
-      if params[:mostrar].present?
-        if params[:mostrar][:cantidad] =~ /todo/i
-          params[:mostrar][:cantidad] = case params[:action]
-            when 'index'
-              @cartas.count.to_s
-            else
-              # Nada
-          end
-          params[:pagina] = '1'
-        end
-      end
     end
 
     def check_barra_de_busqueda

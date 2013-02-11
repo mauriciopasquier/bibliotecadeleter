@@ -3,32 +3,54 @@
 
 .galeria {
   .thumbs {
+    // Para centrar la galería
     margin: 0;
+    text-align: center;
 
-    li {
-      max-width: 100%; // Arregla las imágenes más grandes que el display
+   li {
+      // Arregla las imágenes más grandes que el display
+      max-width: 100%;
+
       list-style: none;
       display: inline-block;
       margin: 5px;
+
+      .no-disponible {
+        // El borde negroide de la carta
+        background-color: $borde-de-carta;
+        // TODO Si aumento 2px las imágenes no disponibles puedo sacar esto
+        border: 1px solid $borde-de-carta;
+        img {
+          @include border-radius(5px);
+          background: transparent $fondo 0 0 fixed;
+        }
+      }
+
+      &.arte {
+        // Más margen para los cuadrados
+        margin: 1em;
+        .no-disponible {
+          // Los cuadrados no tienen redondez ni borde
+          border: none;
+          img { @include border-radius(0px); }
+        }
+      }
+
+      &.original {
+        // Para el borde de la carta
+        .no-disponible { padding: 15px; }
+      }
+      &.mini {
+        // Para el borde en miniatura
+        .no-disponible { padding: 9px; }
+      }
     }
 
-    .thumb {
-      height: 169px;
-      width: 169px;
-    }
-    .original {
-      height: 512px;
-      width: 353px;
-    }
-    .no-disponible {
-      @include border-radius(10px);
-      background: transparent $fondo 0 0 fixed;
-      border: 1px #eee solid;
-    }
   }
 }
 
 .pagination {
+  // Evita que las imágenes y el selector de tipo de paginación se superpongan
   @include clearfix;
 }
 

@@ -1,5 +1,6 @@
 # encoding: utf-8
-class ApplicationDecorator < Draper::Base
+class ApplicationDecorator < Draper::Decorator
+  delegate_all
 
   def hash_a_dl(*hash)
     clase = hash.size == 1 ? {} : hash.extract_options!

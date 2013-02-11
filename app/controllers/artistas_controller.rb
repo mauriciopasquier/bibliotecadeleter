@@ -5,9 +5,9 @@ class ArtistasController < ApplicationController
 
   load_and_authorize_resource
 
+  before_filter :decorar_artista, only: [:show, :edit]
   # En vez de has_scope porque no puedo usar un atributo virtual con Ransack
   before_filter :ordenar, only: :index
-  before_filter :mostrar, only: [:index, :show]
 
   def index
     @artistas = apply_scopes(@artistas).con_ilustraciones.con_cantidad
@@ -18,8 +18,7 @@ class ArtistasController < ApplicationController
   end
 
   def show
-    @artista = @artista.decorate
-    @versiones = apply_scopes(@artista.versiones).decorate
+    @ilustraciones = PaginadorDecorator.decorate apply_scopes(@artista.ilustraciones)
     @titulo = @artista.nombre
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :arte
@@ -28,35 +27,34 @@ class ArtistasController < ApplicationController
   end
 
   def new
-    @artista = @artista.decorate
     @titulo = "Nueva artista"
     respond_with(@artista)
   end
 
   def edit
-    @artista = @artista.decorate
     @titulo = @artista.nombre
   end
 
   def create
     @artista.save
-    @artista = @artista.decorate
     respond_with(@artista)
   end
 
   def update
     @artista.update_attributes(params[:artista])
-    @artista = @artista.decorate
     respond_with(@artista)
   end
 
   def destroy
     @artista.destroy
-    @artista = @artista.decorate
     respond_with(@artista)
   end
 
   private
+
+    def decorar_artista
+      @artista = @artista.decorate
+    end
 
     def ordenar
       # TODO hacer esto más lindo
@@ -66,19 +64,4 @@ class ArtistasController < ApplicationController
       @busqueda = Artista.search(params[:q])
     end
 
-    def mostrar
-      if params[:mostrar].present?
-        if params[:mostrar][:cantidad] =~ /todo/i
-          params[:mostrar][:cantidad] = case params[:action]
-            when 'show'
-              @artista.ilustraciones.count.to_s
-            when 'index'
-              @artistas.count.to_s
-            else
-              # Nada
-          end
-          params[:pagina] = '1'
-        end
-      end
-    end
 end

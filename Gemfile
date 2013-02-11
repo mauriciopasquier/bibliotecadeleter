@@ -15,10 +15,11 @@ gem 'squeel'
 # View
 gem 'dynamic_form'
 gem 'haml-rails'
-gem 'draper', '0.18.0'
+gem 'draper'
 gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
+gem 'sitemap'
 
 # Controller
 gem 'responders'
@@ -26,6 +27,8 @@ gem 'has_scope'
 
 # Server
 gem 'thin'
+gem 'cache_digests'
+gem 'rails3_libmemcached_store'
 
 # Autenticación/autorización
 gem 'devise'

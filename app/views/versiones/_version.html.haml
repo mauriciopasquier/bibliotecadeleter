@@ -1,11 +1,12 @@
-.row-fluid{class: "#{cycle('even', 'odd')} #{version.senda.downcase}"}
-  .nombre.span3
-    - if can? :read, version.carta
-      = link_to_mostrar version.carta, version.nombre
-    - else
-      = version.nombre
-  .coste.span1.hidden-phone= version.coste
-  .senda.span1.visible-desktop= version.senda
-  .senda.span1.visible-desktop= version.rareza
-  .tipo.span3.hidden-phone= version.linea_de_tipos
-  .expansiones.span3.hidden-phone= version.expansion
+- cache version do
+  .row-fluid{class: "#{cycle('even', 'odd')} #{version.senda.downcase}"}
+    .nombre.span3
+      - if can? :read, version.carta
+        = link_to_mostrar version.carta, version.nombre
+      - else
+        = version.nombre
+    .coste.span1.hidden-phone= version.coste
+    .senda.span1.visible-desktop= version.senda
+    .senda.span1.visible-desktop= version.rareza
+    .tipo.span3.hidden-phone= version.linea_de_tipos
+    .expansiones.span3.hidden-phone= version.expansion

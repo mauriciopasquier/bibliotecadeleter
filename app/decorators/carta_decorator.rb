@@ -1,8 +1,9 @@
 # encoding: utf-8
 class CartaDecorator < ApplicationDecorator
-  decorates :carta
-  decorates_association :versiones
-  decorates_association :expansiones
+  with_options with: PaginadorDecorator do |d|
+    d.decorates_association :versiones
+    d.decorates_association :expansiones
+  end
   decorates_association :canonica
 
   # genera una imagen/link a la versión canónica.

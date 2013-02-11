@@ -1,29 +1,35 @@
 .row-fluid
   .span12
     = search_form_for @busqueda,  url: buscar_cartas_path,
-                                      html: { method: :post, class: 'form-search'} do |f|
+                                  html: { method: :post, class: 'form-search'} do |f|
 
       .row-fluid
-        .span2
-          = label_tag 'En las sendas'
-        .span10
-          - sendas.each do |senda|
+        .span2= label_tag 'En las sendas'
+        - sendas.each do |senda|
+          .span1
             = busqueda_check_tag senda, "q[versiones_senda_eq_any][]"
 
       .row-fluid
-        .span2
-          = label_tag 'Filtradas por'
-        .span10
+        .span2= label_tag 'Filtradas por'
+        .span1
           = busqueda_check_tag 'Nombre',        'incluir[]', nombre: 'nombre'
+        .span1
           = busqueda_check_tag 'Tipos',         'incluir[]', nombre: versiones_tipos
+        .span1
           = busqueda_check_tag 'Texto',         'incluir[]', nombre: 'versiones_texto'
+        .span2
           = busqueda_check_tag 'Ambientación',  'incluir[]', nombre: 'versiones_ambientacion'
 
       .row-fluid
-        .span2
-          = f.label busqueda, 'Que contienen'
-        .span10
-          = f.text_field busqueda, class: 'input-xlarge search-query'
+        .span2= f.label busqueda, 'Que contienen'
+        .span5= f.text_field busqueda
+
+      .row-fluid
+        .span2= label_tag 'Y mostrarlas estilo'
+        .span4
+          = select_tag 'mostrar[tipo]',
+              options_for_select(ImagenDecorator.estilos_para_select, tipo_actual)
+        .span1
           = f.submit class: 'btn'
 
 .row-fluid
@@ -31,8 +37,7 @@
     %h2.plegable Resultados
     - if params[:q].present?
       .row-fluid
-        .span12= label_tag t '.encontradas', count: @cartas.size
+        .span12= label_tag t '.encontradas', count: @cartas.count
     .row-fluid
       .span12= render partial: 'layouts/galeria',
-                      locals: { imagenes: @cartas.sort_by { |c| c.prioridad },
-                                estilo: :original }
+                      locals: { imagenes: @cartas.sort_by { |c| c.prioridad } }
