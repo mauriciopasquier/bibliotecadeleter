@@ -2,7 +2,7 @@
 class Imagen < ActiveRecord::Base
   attr_accessible :archivo
 
-  belongs_to :version
+  belongs_to :version, touch: true
   has_one :carta, through: :version
   has_and_belongs_to_many :artistas
 
