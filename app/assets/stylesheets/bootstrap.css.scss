@@ -30,6 +30,12 @@ blockquote { border-color: darken($gris-claro, 25%); }
   }
 }
 
+@media (max-width: 600px) {
+  #carta_search {
+    .btn { margin-top: 5px; }
+  }
+}
+
 @media (max-width: 599px) {
   #buscar {
     form { display: none; }
