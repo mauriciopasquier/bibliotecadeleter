@@ -1,5 +1,7 @@
 # encoding: utf-8
 class ArtistaDecorator < ApplicationDecorator
-  decorates_association :versiones
-  decorates_association :ilustraciones
+  with_options with: PaginadorDecorator do |d|
+    d.decorates_association :versiones
+    d.decorates_association :ilustraciones
+  end
 end

@@ -1,7 +1,9 @@
 # encoding: utf-8
 class ExpansionDecorator < ApplicationDecorator
-  decorates_association :versiones
-  decorates_association :imagenes
+  with_options with: PaginadorDecorator do |d|
+    d.decorates_association :versiones
+    d.decorates_association :imagenes
+  end
 
   def notas
     hash_a_dl source.notas, dl: 'notas dl-horizontal'

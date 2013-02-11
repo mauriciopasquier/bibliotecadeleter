@@ -13,7 +13,7 @@ class CartasController < ApplicationController
 
   def index
     @busqueda = apply_scopes(@cartas.unscoped)
-    @cartas = @busqueda.result.decorate
+    @cartas = PaginadorDecorator.decorate @busqueda.result
     @titulo = 'Todas las cartas'
     respond_with(@cartas)
   end
