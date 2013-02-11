@@ -9,7 +9,16 @@
   #galeria.galeria
     - case tipo_actual
     - when :texto
-      .tabla-fluida= render partial: 'versiones/version', collection: imagenes
+      #cartas.tabla-fluida
+        #encabezado.row-fluid
+          .nombre.span3 Nombre
+          .coste.span1.hidden-phone Coste
+          .senda.span1.visible-desktop Senda
+          .senda.span1.visible-desktop Rareza
+          .tipo.span3.hidden-phone Tipo
+          .expansion.span3.hidden-phone Expansiones
+
+        = render partial: 'versiones/version', collection: imagenes
     - else
       %ul.thumbs
         - imagenes.each do |v|
