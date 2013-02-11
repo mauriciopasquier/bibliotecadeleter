@@ -1,6 +1,6 @@
 .row-fluid
   .span12
-    %h2.plegable Información sobre el artista
+    %h2.plegable Datos
     %dl.dl-horizontal
       - if @artista.ilustraciones.size > 0
         %dt Ilustraciones
@@ -13,9 +13,9 @@
 - if @artista.ilustraciones.size > 0
   .row-fluid
     .span12
-      %h2.plegable Galería de ilustraciones
+      %h2.plegable Galería
       = render  partial: 'layouts/galeria',
-                locals: { imagenes: @imagenes,
+                locals: { imagenes: @versiones,
                           paginar: true }
 
 = link_to 'Otros artistas', artistas_path, class: 'btn'

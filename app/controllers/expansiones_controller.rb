@@ -18,7 +18,7 @@ class ExpansionesController < ApplicationController
 
   def show
     @expansion = @expansion.decorate
-    @imagenes = apply_scopes(@expansion.versiones).decorate
+    @versiones = apply_scopes(@expansion.versiones).decorate
     @titulo = @expansion.nombre
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini

@@ -3,11 +3,13 @@ class Version < ActiveRecord::Base
   include FriendlyId
 
   attr_accessible :ambientacion, :coste, :fue, :numero, :rareza, :res, :senda,
-                  :subtipo, :supertipo, :texto, :tipo, :canonica,
-                  :coste_convertido, :imagenes_attributes, :carta, :expansion,
-                  :expansion_id
+                  :subtipo, :supertipo, :texto, :tipo, :canonica, :carta,
+                  :imagenes_attributes, :expansion, :expansion_id
+  attr_readonly   :coste_convertido
+
 
   belongs_to :carta, inverse_of: :versiones
+  delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion
   has_many :imagenes
   has_many :artistas, through: :imagenes
@@ -16,12 +18,14 @@ class Version < ActiveRecord::Base
 
   accepts_nested_attributes_for :imagenes
 
-  before_save :ver_si_es_canonica
+  before_save :ver_si_es_canonica, :convertir_coste
 
   validates_presence_of :carta
 
+  scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
+
   def self.coste_convertido(coste = nil)
-    coste.nil? ? 0 : coste.gsub(/\D/, '').to_i
+    coste.present? ? coste.to_s.gsub(/\D/, '').to_i : nil
   end
 
   def numero_justificado
@@ -57,6 +61,10 @@ class Version < ActiveRecord::Base
         self.canonica = true
       end
       true # Para que siga guardandola
+    end
+
+    def convertir_coste
+      self.coste_convertido = Version.coste_convertido(self.coste)
     end
 
 end

@@ -1,0 +1,10 @@
+@import 'variables';
+
+.menu {
+  li {
+    border-bottom: 1px solid transparent;
+    list-style-type: none;
+
+    &:hover { border-color: $gris-claro; }
+  }
+}

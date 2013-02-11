@@ -1,11 +1,36 @@
 // Alteraciones directas a los defaults de bootstrap
+@import 'variables';
 @import 'twitter/bootstrap';
-@import 'twitter/bootstrap/responsive';
 
 .dl-horizontal {
   dd {
     dl {
       dt { clear: right; }
     }
+  }
+}
+
+body {
+  padding-top: 50px;
+}
+
+blockquote { border-color: darken($gris-claro, 25%); }
+
+.minifuego {
+  background: transparent $minifuego 0 0 fixed;
+}
+
+// Lo cargamos al final para que no se rompa
+@import 'twitter/bootstrap/responsive';
+
+@media (min-width: 600px) {
+  #buscar {
+    .imagen { display: none; }
+  }
+}
+
+@media (max-width: 599px) {
+  #buscar {
+    form { display: none; }
   }
 }

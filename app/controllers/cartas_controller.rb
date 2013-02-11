@@ -9,6 +9,7 @@ class CartasController < ApplicationController
   before_filter :check_espia
   before_filter :decorar, only: [:show, :edit]
   before_filter :mostrar, only: :index
+  before_filter :check_barra_de_busqueda, only: :buscar
 
   def index
     @busqueda = apply_scopes(@cartas.unscoped)
@@ -88,6 +89,12 @@ class CartasController < ApplicationController
           end
           params[:pagina] = '1'
         end
+      end
+    end
+
+    def check_barra_de_busqueda
+      if params[:navbar].present? and params[:q][busqueda].empty?
+        params[:q] = nil
       end
     end
 end

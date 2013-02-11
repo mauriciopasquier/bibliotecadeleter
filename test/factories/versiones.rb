@@ -11,7 +11,7 @@ FactoryGirl.define do
     ambientacion  'Una frase épica.'
     numero        { rand(130) }
     rareza        'E'
-    coste         { rand(13) }
+    coste         { rand(13).to_s }
     canonica      false
 
     expansion

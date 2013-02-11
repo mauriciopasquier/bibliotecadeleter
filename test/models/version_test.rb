@@ -17,4 +17,9 @@ describe Version do
     versiones.collect(&:canonica).count {|c| c}.must_equal 1
     versiones.collect(&:canonica).count {|c| !c}.must_equal 2
   end
+
+  it "el coste convertido debe derivarse del coste" do
+    version = create(:version_con_carta)
+    version.coste_convertido.must_equal Version.coste_convertido(version.coste)
+  end
 end

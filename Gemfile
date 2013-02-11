@@ -19,9 +19,6 @@ gem 'draper', '0.18.0'
 gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
-gem 'historyjs-rails'
-gem 'uri-js-rails'
-gem 'turbolinks'
 
 # Controller
 gem 'responders'
@@ -48,6 +45,8 @@ group :assets do
   gem 'bootstrap-sass-rails'
   gem 'therubyracer', '= 0.10.1' # la 0.11 no me compila
   gem 'uglifier', '>= 1.0.3'
+  gem 'uri-js-rails'
+  gem 'turbolinks'
 end
 
 group :test, :development do
