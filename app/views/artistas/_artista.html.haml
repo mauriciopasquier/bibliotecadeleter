@@ -1,7 +1,8 @@
-.row-fluid{class: cycle('even', 'odd')}
-  .nombre.span8
-    - if can? :read, artista
-      = link_to_mostrar artista, artista.nombre
-    - else
-      = artista.nombre
-  .cantidad.span4.hidden-phone= artista.cantidad
+- cache artista do
+  .row-fluid{class: cycle('even', 'odd')}
+    .nombre.span8
+      - if can? :read, artista
+        = link_to_mostrar artista, artista.nombre
+      - else
+        = artista.nombre
+    .cantidad.span4.hidden-phone= artista.cantidad

@@ -1,5 +1,5 @@
 class Link < ActiveRecord::Base
   attr_accessible :url, :nombre
 
-  belongs_to :linkeable
+  belongs_to :linkeable, touch: true
 end

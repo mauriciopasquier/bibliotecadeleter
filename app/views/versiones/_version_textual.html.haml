@@ -1,0 +1,24 @@
+- cache version_textual do
+  .row-fluid
+    .span1=  version_textual.coste
+    .span9.nombre= version_textual.nombre
+    .span2
+  .row-fluid
+    .span1
+    .span9.tipos= version_textual.linea_de_tipos
+    .span2.senda=  version_textual.senda
+  .row-fluid.caja-de-texto
+    .span12= version_textual.texto
+  .row-fluid
+    .span12.ambientacion
+      %p= version_textual.ambientacion
+  .row-fluid
+    .span1= version_textual.fue
+    .span1.offset10= version_textual.res
+  .row-fluid
+    .span8= version_textual.numeracion
+    .span4.rareza= version_textual.rareza
+  .row-fluid
+    .span12.arte
+      arte:
+      = version_textual.arte

@@ -18,7 +18,7 @@ class ArtistasController < ApplicationController
 
   def show
     @artista = @artista.decorate
-    @ilustraciones = apply_scopes(@artista.ilustraciones).decorate
+    @ilustraciones = PaginadorDecorator.decorate apply_scopes(@artista.ilustraciones)
     @titulo = @artista.nombre
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :arte
