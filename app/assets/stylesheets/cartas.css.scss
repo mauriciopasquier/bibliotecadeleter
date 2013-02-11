@@ -1,3 +1,5 @@
+@import 'variables';
+
 #carta {
   .nombre       { text-align: center; }
   .tipos        { text-align: center; }
@@ -14,7 +16,7 @@
     padding: 1em 0;
   }
   p.terrenal {
-    border-top: 1px solid #eee;
+    border-top: 1px solid $gris-claro;
     padding-top: 10px;
   }
 }
