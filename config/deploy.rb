@@ -73,7 +73,7 @@ namespace :db do
 
   desc "Populates the production database"
   task :seed do
-    expansiones = ENV['expansiones'].present? ? "expansiones=#{ENV['expansiones']}" : nil
+    expansiones = ENV['expansiones'].nil? ? nil : "expansiones=#{ENV['expansiones']}"
     run "cd #{current_path}; #{rake} db:seed dir=#{shared_path}/#{imagenes_seed} #{expansiones}"
   end
 
@@ -85,6 +85,14 @@ namespace :db do
   desc "Resets the production database"
   task :reset do
     run "cd #{current_path}; #{rake} db:reset dir=#{shared_path}/#{imagenes_seed}"
+  end
+end
+
+# Generador de sitemaps
+namespace :sitemap do
+  desc "Regenera el sitemap.xml"
+  task :generate do
+    run "cd #{current_path}; #{rake} sitemap:generate;"
   end
 end
 
