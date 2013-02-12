@@ -9,4 +9,5 @@ Nombre,N°,Rareza,Tipo,Supertipo,Subtipo,Senda,Coste,FUE,RES,Arte,Habilidades,Te
 "Inductor de dolor",67,R,Aliado objeto,,Marioneta,Muerte,4,4,3,Sandro Rybak,"Abismal. Los otros aliados con contadores de daño no pueden atacar.",
 "Defensor de la enramada",86,E,Aliado,,Elemental,Poder,3,0,0,Sandro Rybak,"Agresor. ESTO obtiene +1 RES por cada recurso que controles. Siempre que un recurso entre en juego, remueve un contador de daño sobre ESTO.",
 "Revelación de Ubanna",114,R,Ritual,,,Neutral,10,,,Lizzo,"Bendición de Ubanna. Tienes un turno adicional después de éste.",
+"Talento vampírico",118,C,Ritual,Instantáneo,,Neutral,2,,,Alberto Aprea,"El vampiro objetivo tiene la habilidad de agresor, evasivo, furia o halo hasta el final del turno (elige uno).","""¿Quieres conocer un nuevo truco?"""
 "Ficha Poder Reptil 9/9",122,C,Aliado,,Reptil,Poder,,9,9,"N. R. Morales",,
