@@ -1,7 +1,7 @@
 # encoding: utf-8
 module ArtistasHelper
   include PaginacionHelper
-  
+
   def titulo
     case params[:action]
       when 'index'
