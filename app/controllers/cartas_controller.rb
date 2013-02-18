@@ -13,22 +13,19 @@ class CartasController < ApplicationController
   def index
     @busqueda = apply_scopes(@cartas.unscoped)
     @cartas = PaginadorDecorator.decorate @busqueda.result
-    @titulo = 'Todas las cartas'
     respond_with(@cartas)
   end
 
   def show
-    @titulo = @carta.nombre
     respond_with(@carta)
   end
 
   def new
-    @titulo = "Nueva carta"
     respond_with(@carta)
   end
 
   def edit
-    @titulo = @carta.nombre
+    respond_with(@carta)
   end
 
   def create
@@ -48,7 +45,6 @@ class CartasController < ApplicationController
 
   def buscar
     @busqueda = Carta.search(params[:q])
-    @titulo = 'Búsqueda de cartas'
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 

@@ -1,5 +1,7 @@
 # encoding: utf-8
 module CartasHelper
+  include PaginacionHelper
+
   # Nombre se usa en los ids y el texto, parametro es la llave del hash
   # +params+
   def busqueda_check_tag(nombre, parametro, opciones = {})
@@ -8,6 +10,23 @@ module CartasHelper
                     checkeado?((opciones[:nombre] || nombre)),
                     id: nombre.tableize) +
       nombre
+    end
+  end
+
+  def titulo
+    case params[:action]
+      when 'index'
+        'Todas las cartas'
+      when 'show'
+        @carta.nombre
+      when 'new'
+        'Nueva carta'
+      when 'edit'
+        @carta.nombre
+      when 'buscar'
+        'Búsqueda de cartas'
+      else
+        nil
     end
   end
 

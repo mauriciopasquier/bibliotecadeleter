@@ -12,27 +12,22 @@ class ArtistasController < ApplicationController
   def index
     @artistas = apply_scopes(@artistas).con_ilustraciones.con_cantidad
 
-    @titulo = 'Todos los Artistas'
-
     respond_with(@artistas)
   end
 
   def show
     @ilustraciones = PaginadorDecorator.decorate apply_scopes(@artista.ilustraciones)
-    @titulo = @artista.nombre
-
     tipo_actual params[:mostrar].try(:[], :tipo) || :arte
 
     respond_with(@artista)
   end
 
   def new
-    @titulo = "Nueva artista"
     respond_with(@artista)
   end
 
   def edit
-    @titulo = @artista.nombre
+    respond_with(@artista)
   end
 
   def create

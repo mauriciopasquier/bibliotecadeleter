@@ -5,25 +5,22 @@ class VersionesController < ApplicationController
   load_and_authorize_resource through: :carta
 
   before_filter :check_espia
-  before_filter :decorar_carta_y_version, only: [:index, :show, :edit]
+  before_filter :decorar_carta_y_version, only: [:index, :show, :new, :edit]
 
   def index
-    @titulo = "#{@carta.nombre}"
     respond_with(@carta, @versiones)
   end
 
   def show
-    @titulo = "#{@carta.nombre} de #{@version.expansion.nombre}"
     respond_with(@carta, @version)
   end
 
   def new
-    @titulo = "Nueva carta"
     respond_with(@carta, @version)
   end
 
   def edit
-    @titulo = "#{@carta.nombre} de #{@version.expansion.nombre}"
+    respond_with(@carta, @version)
   end
 
   def create

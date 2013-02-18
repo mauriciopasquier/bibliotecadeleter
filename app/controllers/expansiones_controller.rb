@@ -11,27 +11,23 @@ class ExpansionesController < ApplicationController
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
     @expansiones = PaginadorDecorator.decorate @busqueda.result
-    @titulo = 'Todas las Expansiones'
 
     respond_with(@expansiones)
   end
 
   def show
     @versiones = PaginadorDecorator.decorate apply_scopes(@expansion.versiones)
-    @titulo = @expansion.nombre
-
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 
     respond_with(@expansion)
   end
 
   def new
-    @titulo = "Nueva expansión"
     respond_with(@expansion)
   end
 
   def edit
-    @titulo = @expansion.nombre
+    respond_with(@expansion)
   end
 
   def create
@@ -54,5 +50,4 @@ class ExpansionesController < ApplicationController
     def decorar_expansion
       @expansion = @expansion.decorate
     end
-
 end

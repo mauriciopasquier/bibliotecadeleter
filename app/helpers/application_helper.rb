@@ -14,8 +14,16 @@ module ApplicationHelper
     request.query_parameters
   end
 
+  # Título de la página para el +<head>+ por defecto, extra se determina en el
+  # helper de cada controlador, dependiendo de la acción
+  def titulo_de_la_aplicacion(extra = nil)
+    extra ||= titulo
+    "#{extra.nil? ? nil : "#{extra} | "}Biblioteca Del Eter"
+  end
+
+  # Por defecto, no se usa nada.
   def titulo
-    "Biblioteca Del Eter#{@titulo ? " | #{@titulo}" : nil}"
+    nil
   end
 
   def expansiones
