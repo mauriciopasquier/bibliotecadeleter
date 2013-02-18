@@ -1,13 +1,18 @@
 Nombre,N°,Rareza,Tipo,Supertipo,Subtipo,Senda,Coste,FUE,RES,Arte,Habilidades,Texto de ambientación
+"Rasap, maestro de armas",1,I,,Demonio,,Caos,,0,,Damián Graff/Damián Graff,"Cuando controles 3 o más aliados equipados, voltea Rasap./Rasap obtiene +1 FUE por cada aliado equipado que controles.","""Sígueme, y seremos invencibles."""
 "Ubanna, cronista demente",5,E,,Demonio,,Neutral,,,,Magdalena Radziej/Magdalena Radziej,"Thanatos. Al principio de tu restauración, si es tu turno 10 o más, voltea Ubanna.","""Una puerta abierta puede cruzarse en dos direcciones."""
 "Azuela del sirviente",6,C,Arma,,Vampiro,Caos,2,2,0,Emmanuel Bou,"Sangre débil (juega esta carta sólo si hay Thanatos).","Forjada con huesos y sangre de vampiros caídos."
 "Bestia salvaje",9,I,Aliado,,Kirch Vampiro,Caos,1,2,1,"N. R. Morales","Furia (puede atacar inmediatamente). Siempre que Bestia salvaje ataque, ponle un contador de daño al final del combate.","""Si antes eran temidos, una vez convertidos se transformaron en pesadillas. Afortunadamente, olvidan que no deben salir de día."" - Acólito de Abel"
 "Recluta incendiario",24,C,Aliado,,Humano,Caos,2,1,1,"NRG","Girar, destruir un recurso que controles: Pon en juego una ficha de aliado humano 2 FUE, 2 RES.","Las opciones nungnarh no son muy alentadoras: Morir quemado en tu hogar, o quemado en combate."
+"Clonicidio",32,R,Ritual,Instantáneo,,Locura,4,,,Fernando Granea,"Los aliados obtienen el supertipo único hasta el final del turno.","""Vi a mis hermanos caer, uno a uno, como títeres sin alma. Pedí a madre otra oportunidad, una explicación y consuelo. No me concedió ninguna."
 "Descarga masiva",35,E,Ritual,,,Locura,6,,,Magdalena Radziej,"Cada demonio toma 5 cartas. Vínculo [Descarta X cartas] - Toma X cartas.","Baggrund finalmente lo comprendió. Su mayor arma, era también su maldición."
 "Mareo repentino",43,C,Ritual,,,Locura,4,,,Ignacio Segesso,"El demonio objetivo descarta una carta. Recobrar [Descarta tres cartas de tu mano.","Las mentes pequeñas sufren mayor dolor."
 "Ghoul devoraalmas",66,R,Aliado,,Ghoul,Muerte,3,2,3,Aerozopher,"Golpe de gracia - Remueve todos los contadores de daño sobre este aliado. Este aliado se convierte en una copia del aliado destruido y gana esta habilidad.","""Cuando llegues a la abadía, recuerda mis palabras: No confíes en nadie."" - Caminante de la abadía"
 "Inductor de dolor",67,R,Aliado objeto,,Marioneta,Muerte,4,4,3,Sandro Rybak,"Abismal. Los otros aliados con contadores de daño no pueden atacar.",
+"Llamado de Zulfur",69,R,Ritual,,,Muerte,2,,,"N.R.Morales","Pon el aliado objetivo de tu inferno en juego, si ha sido puesto ahí desde el juego este turno.","""No puedes evitar su llamado."" - Eusthario"
 "Defensor de la enramada",86,E,Aliado,,Elemental,Poder,3,0,0,Sandro Rybak,"Agresor. ESTO obtiene +1 RES por cada recurso que controles. Siempre que un recurso entre en juego, remueve un contador de daño sobre ESTO.",
+"Vampiro del bosque",96,C,Aliado,,Vampiro,Poder,4,5,5,Guillermo Villarreal,"Thanatos. Sangre débil (juega esta carta sólo si hay Thanatos).",
+"Caín, maestro de sangre",101,R,Aliado,Único,Vampiro,Neutral,7,7,7,Gastón Zubeldia,"Puedes destruir 5 vampiros que controles en vez de pagar el coste de Caín.","Y el padre de los vampiros finalmente se presentó, y los hombres temblaron ante su figura."
 "Revelación de Ubanna",114,R,Ritual,,,Neutral,10,,,Lizzo,"Bendición de Ubanna. Tienes un turno adicional después de éste.",
 "Talento vampírico",118,C,Ritual,Instantáneo,,Neutral,2,,,Alberto Aprea,"El vampiro objetivo tiene la habilidad de agresor, evasivo, furia o halo hasta el final del turno (elige uno).","""¿Quieres conocer un nuevo truco?"""
 "Ficha Poder Reptil 9/9",122,C,Aliado,,Reptil,Poder,,9,9,"N. R. Morales",,
