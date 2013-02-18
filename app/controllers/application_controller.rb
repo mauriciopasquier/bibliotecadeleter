@@ -23,7 +23,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::RoutingError do |e|
     @mensaje = e.message
-    @titulo = '¿Error?'
     respond_to do |format|
       format.html { render 'errores/404', status: 404 }
       format.json { render json: @mensaje, status: 404 }
