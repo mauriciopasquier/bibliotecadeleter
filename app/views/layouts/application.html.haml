@@ -1,7 +1,7 @@
 !!! 5
 %html{'xml:lang' => 'es_AR', 'xmlns' => 'http://www.w3.org/1999/xhtml'}
   %head
-    %title= titulo
+    %title= titulo_de_la_aplicacion
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     = stylesheet_link_tag     "application", media: 'all'
     = javascript_include_tag  "application"
@@ -16,5 +16,5 @@
       #contenido.container-fluid
         .row-fluid
           .span12
-            %h1= @titulo
+            %h1= titulo_de_la_accion
             = yield
