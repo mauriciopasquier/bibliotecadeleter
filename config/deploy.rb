@@ -5,6 +5,10 @@ set :application, "BibliotecaDelEter"
 server            "hackcoop.com.ar", :app, :web, :db, primary: true
 set :user,        "eter"
 set :deploy_to,   "/opt/eter/app"
+
+# Si no se la mandás con cap -S branch='rama' deploy, usa 'master'
+set :branch, fetch(:branch, "master")
+
 set :use_sudo,    false
 set :ssh_options, { forward_agent: true}
 
@@ -73,7 +77,7 @@ namespace :db do
 
   desc "Populates the production database"
   task :seed do
-    expansiones = ENV['expansiones'].nil? ? nil : "expansiones=#{ENV['expansiones']}"
+    expansiones = ENV['expansiones'].present? ? "expansiones=#{ENV['expansiones']}" : nil
     run "cd #{current_path}; #{rake} db:seed dir=#{shared_path}/#{imagenes_seed} #{expansiones}"
   end
 
@@ -85,14 +89,6 @@ namespace :db do
   desc "Resets the production database"
   task :reset do
     run "cd #{current_path}; #{rake} db:reset dir=#{shared_path}/#{imagenes_seed}"
-  end
-end
-
-# Generador de sitemaps
-namespace :sitemap do
-  desc "Regenera el sitemap.xml"
-  task :generate do
-    run "cd #{current_path}; #{rake} sitemap:generate;"
   end
 end
 
