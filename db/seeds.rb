@@ -34,6 +34,9 @@ expansiones.each do |expansion|
     dir = ENV['dir']
   end
 
+  expansion.versiones.map(&:destroy)
+  expansion.reload
+
   imagenes_expansion = Dir.glob("#{File.join(dir, expansion.slug)}/*.jpg").sort
   puts "Cargando imágenes de #{File.join(dir, expansion.slug)}"
 
