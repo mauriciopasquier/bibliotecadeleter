@@ -12,7 +12,7 @@ Nombre,N°,Rareza,Tipo,Supertipo,Subtipo,Senda,Coste,FUE,RES,Arte,Habilidades,Te
 "Llamado de Zulfur",69,R,Ritual,,,Muerte,2,,,"N.R.Morales","Pon el aliado objetivo de tu inferno en juego, si ha sido puesto ahí desde el juego este turno.","""No puedes evitar su llamado."" - Eusthario"
 "Defensor de la enramada",86,E,Aliado,,Elemental,Poder,3,0,0,Sandro Rybak,"Agresor. ESTO obtiene +1 RES por cada recurso que controles. Siempre que un recurso entre en juego, remueve un contador de daño sobre ESTO.",
 "Vampiro del bosque",96,C,Aliado,,Vampiro,Poder,4,5,5,Guillermo Villarreal,"Thanatos. Sangre débil (juega esta carta sólo si hay Thanatos).",
-"Agrietar",96,C,Ritual,,,Neutral,1,,,LEG Giordano,"Exilia la carta objetivo de un inferno. Recobrar [Exilia una carta de tu inferno].","""Nadie recordará jamás tu existencia."""
+"Agrietar",98,C,Ritual,,,Neutral,1,,,LEG Giordano,"Exilia la carta objetivo de un inferno. Recobrar [Exilia una carta de tu inferno].","""Nadie recordará jamás tu existencia."""
 "Caín, maestro de sangre",101,R,Aliado,Único,Vampiro,Neutral,7,7,7,Gastón Zubeldia,"Puedes destruir 5 vampiros que controles en vez de pagar el coste de Caín.","Y el padre de los vampiros finalmente se presentó, y los hombres temblaron ante su figura."
 "Revelación de Ubanna",114,R,Ritual,,,Neutral,10,,,Lizzo,"Bendición de Ubanna. Tienes un turno adicional después de éste.",
 "Talento vampírico",118,C,Ritual,Instantáneo,,Neutral,2,,,Alberto Aprea,"El vampiro objetivo tiene la habilidad de agresor, evasivo, furia o halo hasta el final del turno (elige uno).","""¿Quieres conocer un nuevo truco?"""
