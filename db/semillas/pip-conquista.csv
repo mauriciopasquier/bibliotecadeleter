@@ -1,9 +1,0 @@
-"Nombre","N°","Rareza","Tipo","Supertipo","Subtipo","Senda","Coste","FUE","RES","Arte","Habilidades","Texto de ambientación"
-"Ascenso de Narghot",1,"P","Ritual",,,"Caos",9,,,"Sandro Rybak","Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Destruye todos los recursos enemigos. Agrega 1 energía por cada recurso destruido de esta manera.",
-"Ascenso de Fáradt",2,"P","Ritual",,,"Locura",8,,,"Aerozopher","Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Gira todos los aliados y recursos enemigos. No se enderezan en su siguiente restauración.",
-"Ascenso de Unwaj",3,"P","Ritual",,,"Muerte",12,,,"Sandro Rybak","Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Destruye todos los aliados. Pon en juego hasta 5 aliados objetivo de cualquier inferno bajo tu control.",
-"Ascenso de Lápatt",4,"P","Ritual",,,"Poder",13,,,"Aerozopher","Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Busca en tu mazo hasta 3 aliados y ponlos en juego. Luego mezcla tu mazo.",
-"Papiro de Ubanna",5,"P","Objeto","Único",,"Neutral",1,,,"Aerozopher - Sandro Rybak","Cuando Papiro de Ubanna entre en juego nombra una carta. La carta nombrada no puede ser jugada.",
-"Retorno demencial",6,"P","Ritual",,,"Neutral",2,,,"Aerozopher","Pon la carta objetivo de tu inferno en tu mano. Si hay Thanatos, puedes poner el vampiro objetivo de tu inferno en tu mano.",
-"Sínodo vampírico",7,"P","Ritual",,,"Neutral",6,,,"Magdalena Radziej","Mezcla todos los vampiros de tu inferno en tu mazo. Exilia Sínodo vampírico.",
-"Vaina de luminium templado",8,"P","Arma",,,"Neutral",4,"1","0","Sandro Rybak","Thanatos. El aliado equipado es indestructible (no puede ser destruido por efectos ni para pagar costes, no puede recibir daño ni se pueden colocar contadores de daño sobre él).",

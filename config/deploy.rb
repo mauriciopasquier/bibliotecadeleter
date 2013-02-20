@@ -29,11 +29,6 @@ set :rake, "RAILS_ENV=production bundle exec rake"
 # Crea el link simbólico para las imágenes de las cartas
 namespace :deploy do
   namespace :assets do
-    desc "Crea el link simbólico para las imágenes de las cartas"
-    task :linkear_estaticos do
-      run "ln -s #{shared_path}/cartas #{release_path}/public/e/cartas"
-    end
-
     desc "Construye los estilos nuevos de paperclip"
     task :refresh_styles, roles: :app do
       run "cd #{release_path}; #{rake} paperclip:refresh:missing_styles"
@@ -48,10 +43,6 @@ namespace :configurar do
     run "ln -s #{shared_path}/config/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
     run "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -s #{shared_path}/config/production.rb #{release_path}/config/environments/production.rb"
-  end
-  desc "Crea los directorios necesarios"
-  task :directorios do
-    run "mkdir -p #{shared_path}/cartas"
   end
 end
 
@@ -68,7 +59,7 @@ end
 namespace :db do
   desc "Actualiza las imágenes de las cartas"
   task :imagenes do
-    puts run_locally "rsync -av tmp/imagenes/ #{user}@hackcoop.com.ar:#{shared_path}/#{imagenes_seed}"
+    puts run_locally "rsync -av public/e/cartas #{user}@hackcoop.com.ar:#{shared_path}/assets"
   end
   desc "Create production database"
   task :create do
