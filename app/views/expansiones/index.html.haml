@@ -13,7 +13,5 @@
 
     = render @expansiones
 
-  = paginacion_tag @expansiones, id: 'paginacion-inferior'
-
   - if can? :create, Expansion
     = link_to 'Crear nueva expansión', new_expansion_path
