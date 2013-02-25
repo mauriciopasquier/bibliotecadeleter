@@ -9,7 +9,7 @@ cartas:
   - slug
   records: 
   - - '1'
-    - Akayra, belleza ígnea
+    - Akayra, belleza ígnea demencial
     - '2013-02-19 17:49:24.58997'
     - '2013-02-19 17:49:26.41946'
     - akayra-belleza-ignea
@@ -2598,3 +2598,33 @@ cartas:
     - '2013-02-25 19:51:45.212119'
     - '2013-02-25 19:55:33.723557'
     - el-primer-nacido
+  - - '519'
+    - Rasap, maestro de armas
+    - '2013-02-25 21:02:07.964933'
+    - '2013-02-25 21:23:15.345072'
+    - rasap-maestro-de-armas
+  - - '520'
+    - Clonicidio
+    - '2013-02-25 21:24:18.20127'
+    - '2013-02-25 21:29:14.05125'
+    - clonicidio
+  - - '521'
+    - Llamado de Zulfur
+    - '2013-02-25 21:29:54.060369'
+    - '2013-02-25 21:32:17.784246'
+    - llamado-de-zulfur
+  - - '522'
+    - Vampiro del bosque
+    - '2013-02-25 21:33:00.925575'
+    - '2013-02-25 21:36:26.425371'
+    - vampiro-del-bosque
+  - - '523'
+    - Agrietar
+    - '2013-02-25 21:36:51.041728'
+    - '2013-02-25 21:38:59.626321'
+    - agrietar
+  - - '524'
+    - Caín, maestro de sangre
+    - '2013-02-25 21:39:48.563454'
+    - '2013-02-25 21:42:53.708216'
+    - cain-maestro-de-sangre
