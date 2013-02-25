@@ -10355,3 +10355,183 @@ versiones:
     - 110-destino
     - '2'
     - '2'
+  - - '526'
+    - Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Destruye todos los recursos
+      enemigos. Agrega 1 energía por cada recurso destruido de esta manera.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '1'
+    - P
+    - '2013-02-25 19:49:17.106015'
+    - '2013-02-25 19:49:17.783694'
+    - '510'
+    - true
+    - '7'
+    - 001-pip-conquista
+    - '9'
+    - '9'
+  - - '527'
+    - Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Gira todos los aliados
+      y recursos enemigos. No se enderezan en su siguiente restauración.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '2'
+    - P
+    - '2013-02-25 19:49:18.063634'
+    - '2013-02-25 19:49:18.786027'
+    - '511'
+    - true
+    - '7'
+    - 002-pip-conquista
+    - '8'
+    - '8'
+  - - '528'
+    - Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Destruye todos los aliados.
+      Pon en juego hasta 5 aliados objetivo de cualquier inferno bajo tu control.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '3'
+    - P
+    - '2013-02-25 19:49:18.866033'
+    - '2013-02-25 19:49:19.475204'
+    - '512'
+    - true
+    - '7'
+    - 003-pip-conquista
+    - '12'
+    - '12'
+  - - '529'
+    - Bendición de Ubanna (cuesta {2} menos si hay Thanatos). Busca en tu mazo hasta
+      3 aliados y ponlos en juego. Luego mezcla tu mazo.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - 
+    - '4'
+    - P
+    - '2013-02-25 19:49:19.552473'
+    - '2013-02-25 19:49:20.150048'
+    - '513'
+    - true
+    - '7'
+    - 004-pip-conquista
+    - '13'
+    - '13'
+  - - '530'
+    - Cuando Papiro de Ubanna entre en juego nombra una carta. La carta nombrada no
+      puede ser jugada.
+    - Objeto
+    - Único
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '5'
+    - P
+    - '2013-02-25 19:49:20.227788'
+    - '2013-02-25 19:49:20.841105'
+    - '514'
+    - true
+    - '7'
+    - 005-pip-conquista
+    - '1'
+    - '1'
+  - - '531'
+    - Pon la carta objetivo de tu inferno en tu mano. Si hay Thanatos, puedes poner
+      el vampiro objetivo de tu inferno en tu mano.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '6'
+    - P
+    - '2013-02-25 19:49:20.945925'
+    - '2013-02-25 19:49:21.573638'
+    - '515'
+    - true
+    - '7'
+    - 006-pip-conquista
+    - '2'
+    - '2'
+  - - '532'
+    - Mezcla todos los vampiros de tu inferno en tu mazo. Exilia Sínodo vampírico.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '7'
+    - P
+    - '2013-02-25 19:49:21.660533'
+    - '2013-02-25 19:49:22.318832'
+    - '516'
+    - true
+    - '7'
+    - 007-pip-conquista
+    - '6'
+    - '6'
+  - - '533'
+    - Thanatos. El aliado equipado es indestructible (no puede ser destruido por efectos
+      ni para pagar costes, no puede recibir daño ni se pueden colocar contadores
+      de daño sobre él).
+    - Arma
+    - 
+    - 
+    - '1'
+    - '0'
+    - Neutral
+    - 
+    - '8'
+    - P
+    - '2013-02-25 19:49:22.518775'
+    - '2013-02-25 19:49:22.999548'
+    - '517'
+    - true
+    - '7'
+    - 008-pip-conquista
+    - '4'
+    - '4'
+  - - '534'
+    - Desactiva los entornos.
+    - Aliado
+    - Único
+    - Avatar Humano
+    - '2'
+    - '2'
+    - Neutral
+    - ! '"Dicen los cronistas que su pureza sobrepasa los límites de la tierra y el
+      Inferno." - Aryel'
+    - '107'
+    - R
+    - '2013-02-25 19:54:16.571544'
+    - '2013-02-25 19:55:33.710702'
+    - '518'
+    - true
+    - '8'
+    - 107-destino
+    - '2'
+    - '2'
