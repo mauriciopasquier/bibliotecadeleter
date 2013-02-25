@@ -10535,3 +10535,122 @@ versiones:
     - 107-destino
     - '2'
     - '2'
+  - - '535'
+    - Cuando controles 3 o más aliados equipados, voltea Rasap. / Rasap obtiene +1
+      FUE por cada aliado equipado que controles.
+    - ''
+    - Demonio
+    - ''
+    - '0'
+    - 
+    - Caos
+    - ! '"Sígueme, y seremos invencibles."'
+    - '1'
+    - I
+    - '2013-02-25 21:05:22.116344'
+    - '2013-02-25 21:23:15.332016'
+    - '519'
+    - true
+    - '8'
+    - 001-destino
+    - 
+    - 
+  - - '536'
+    - Los aliados obtienen el supertipo único hasta el final del turno.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Locura
+    - ! '"Vi a mis hermanos caer, uno a uno, como títeres sin alma. Pedí a madre otra
+      oportunidad, una explicación y consuelo. No me concedió ninguna."'
+    - '32'
+    - R
+    - '2013-02-25 21:27:33.936839'
+    - '2013-02-25 21:29:14.038626'
+    - '520'
+    - true
+    - '8'
+    - 032-destino
+    - '4'
+    - '4'
+  - - '537'
+    - Pon el aliado objetivo de tu inferno en juego, si ha sido puesto ahí desde el
+      juego este turno.
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Muerte
+    - ! '"No puedes evitar su llamado." - Eusthario'
+    - '69'
+    - R
+    - '2013-02-25 21:31:35.050607'
+    - '2013-02-25 21:32:17.77163'
+    - '521'
+    - true
+    - '8'
+    - 069-destino
+    - '2'
+    - '2'
+  - - '538'
+    - Thanatos. Sangre débil (juega esta carta sólo si hay Thanatos).
+    - Aliado
+    - ''
+    - Vampiro
+    - '5'
+    - '5'
+    - Poder
+    - ''
+    - '96'
+    - C
+    - '2013-02-25 21:35:26.51969'
+    - '2013-02-25 21:36:26.412431'
+    - '522'
+    - true
+    - '8'
+    - 096-destino
+    - '4'
+    - '4'
+  - - '539'
+    - Exilia la carta objetivo de un inferno. Recobrar [Exilia una carta de tu inferno].
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - ! '"Nadie recordará jamás tu existencia."'
+    - '98'
+    - C
+    - '2013-02-25 21:38:24.108113'
+    - '2013-02-25 21:38:59.491923'
+    - '523'
+    - true
+    - '8'
+    - 098-destino
+    - '1'
+    - '1'
+  - - '540'
+    - ! 'Puedes destruir 5 vampiros que controles en vez de pagar el coste de Caín.
+      Thanatos. Girar: Destruye el aliado objetivo.'
+    - Aliado
+    - Único
+    - Vampiro
+    - '7'
+    - '7'
+    - Neutral
+    - Y el padre de los vampiros finalmente se presentó, y los hombres temblaron ante
+      su figura.
+    - '101'
+    - R
+    - '2013-02-25 21:42:19.214144'
+    - '2013-02-25 21:42:53.695633'
+    - '524'
+    - true
+    - '8'
+    - 101-destino
+    - '7'
+    - '7'
