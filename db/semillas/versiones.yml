@@ -10254,3 +10254,104 @@ versiones:
     - 122-destino
     - 
     - 
+  - - '521'
+    - Golpe de gracia - Destruye el recurso objetivo
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '3'
+    - '1'
+    - Caos
+    - ! '"Nungnarh en la biblioteca." - Dicho popular'
+    - '28'
+    - I
+    - '2013-02-25 07:49:26.503703'
+    - '2013-02-25 07:55:26.978795'
+    - '505'
+    - true
+    - '8'
+    - 028-destino
+    - '3'
+    - '3'
+  - - '522'
+    - Thanatos. En cuanto Circuito de limitación entre en juego, elige un demonio.
+      Su máximo de mano se reduce en 1.
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Locura
+    - ''
+    - '31'
+    - I
+    - '2013-02-25 08:03:10.062993'
+    - '2013-02-25 08:04:53.300227'
+    - '506'
+    - true
+    - '8'
+    - 031-destino
+    - '2'
+    - '2'
+  - - '523'
+    - Destruye el aliado objetivo. Su controlador pone en juego una ficha de aliado
+      Humano 2 FUE, 2 RES.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Muerte
+    - La pena por blasfemia es tan grande, que los hijos siguen pagando los actos
+      de las víctimas muertas.
+    - '53'
+    - C
+    - '2013-02-25 08:08:59.603534'
+    - '2013-02-25 08:10:58.678963'
+    - '507'
+    - true
+    - '8'
+    - 053-destino
+    - '2'
+    - '2'
+  - - '524'
+    - Siempre que un aliado entre en juego, Barahai cauteloso obtiene +1 FUE hasta
+      el final del turno.
+    - Aliado
+    - ''
+    - Barahai
+    - '5'
+    - '5'
+    - Poder
+    - Esperando el momento oportuno, para despedazar a su presa.
+    - '82'
+    - C
+    - '2013-02-25 08:14:41.661843'
+    - '2013-02-25 08:15:41.995863'
+    - '508'
+    - true
+    - '8'
+    - 082-destino
+    - '6'
+    - '6'
+  - - '525'
+    - Thanatos. Cuando Heraldo de Ubanna entre en juego, cancela la habilidad objetivo
+      en la cadena.
+    - Aliado
+    - Instantáneo
+    - Avatar
+    - '1'
+    - '1'
+    - Neutral
+    - ! '"Si no puedes vencer a mis guerreros. ¿Por qué tu presencia debería importarme?"
+      - Ubanna'
+    - '110'
+    - I
+    - '2013-02-25 08:18:47.075017'
+    - '2013-02-25 08:19:38.369673'
+    - '509'
+    - true
+    - '8'
+    - 110-destino
+    - '2'
+    - '2'
