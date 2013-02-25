@@ -68,18 +68,17 @@ namespace :db do
 
   desc "Populates the production database"
   task :seed do
-    expansiones = ENV['expansiones'].present? ? "expansiones=#{ENV['expansiones']}" : nil
-    run "cd #{current_path}; #{rake} db:seed dir=#{shared_path}/#{imagenes_seed} #{expansiones}"
+    run "cd #{current_path}; #{rake} db:seed"
   end
 
   desc "Sets up the production database"
   task :setup do
-    run "cd #{current_path}; #{rake} db:setup dir=#{shared_path}/#{imagenes_seed}"
+    run "cd #{current_path}; #{rake} db:setup"
   end
 
   desc "Resets the production database"
   task :reset do
-    run "cd #{current_path}; #{rake} db:reset dir=#{shared_path}/#{imagenes_seed}"
+    run "cd #{current_path}; #{rake} db:reset"
   end
 end
 
@@ -93,4 +92,3 @@ namespace :deploy do
 end
 
 before "deploy:finalize_update", "configurar:archivos"
-before "deploy:finalize_update", "configurar:directorios"
