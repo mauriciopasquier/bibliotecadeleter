@@ -39,6 +39,9 @@ module CartasHelper
         if params[:q][:versiones_senda_eq_any].present? and sendas.include? nombre
           return params[:q][:versiones_senda_eq_any].include? nombre
         end
+        if params[:q][:versiones_rareza_eq_any].present? and rarezas.include? nombre
+          return params[:q][:versiones_rareza_eq_any].include? nombre
+        end
         if params[:incluir].present?
           return params[:incluir].include? nombre.to_s
         end

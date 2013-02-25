@@ -67,14 +67,7 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def rareza
-    case source.rareza
-      when 'C' then 'Común'
-      when 'I' then 'Infrecuente'
-      when 'R' then 'Rara'
-      when 'E' then 'Épica'
-      when 'P' then 'Promocional'
-      else  '???'
-    end
+    h.rareza_completa source.rareza
   end
 
   def texto

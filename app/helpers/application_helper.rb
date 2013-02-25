@@ -56,6 +56,17 @@ module ApplicationHelper
     end
   end
 
+  def rareza_completa(inicial)
+    case inicial
+      when 'C' then 'Común'
+      when 'I' then 'Infrecuente'
+      when 'R' then 'Rara'
+      when 'E' then 'Épica'
+      when 'P' then 'Promocional'
+      else  '???'
+    end
+  end
+
   private
 
     def alerta(tipo)

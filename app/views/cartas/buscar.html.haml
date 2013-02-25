@@ -22,6 +22,12 @@
           = busqueda_check_tag 'Ambientación',  'incluir[]', nombre: 'versiones_ambientacion'
 
       .row-fluid
+        .span2= label_tag 'Y rarezas'
+        - rarezas.each do |r|
+          .span1
+            = busqueda_check_tag rareza_completa(r), "q[versiones_rareza_eq_any][]", nombre: r
+
+      .row-fluid
         .span2= f.label busqueda, 'Que contienen'
         .span5= f.text_field busqueda
 
