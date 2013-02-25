@@ -4,7 +4,7 @@ class Version < ActiveRecord::Base
 
   attr_accessible :ambientacion, :coste, :fue, :numero, :rareza, :res, :senda,
                   :subtipo, :supertipo, :texto, :tipo, :canonica, :carta,
-                  :imagenes_attributes, :expansion, :expansion_id
+                  :imagenes_attributes, :expansion, :expansion_id, :imagen
   attr_readonly   :coste_convertido
 
 
