@@ -1,3 +1,4 @@
+%h1= titulo
 #lista
   = paginacion_tag @artistas
 
@@ -9,8 +10,6 @@
         'Ilustraciones', opciones_de_ordenar
 
     = render @artistas
-
-  = paginacion_tag @artistas, id: 'paginacion-inferior'
 
   - if can? :create, Artista
     = link_to 'Cargar Artista', new_artista_path

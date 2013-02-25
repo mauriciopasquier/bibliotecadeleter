@@ -24,6 +24,9 @@ module BibliotecaDelEter
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib/extensiones/)
 
+    # Sólo incluyo el helper del controlador
+    config.action_controller.include_all_helpers = false
+
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -63,7 +66,7 @@ module BibliotecaDelEter
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0.6'
+    config.assets.version = '1.0.7'
 
     # Traduzco el path
     config.assets.prefix = "/e"

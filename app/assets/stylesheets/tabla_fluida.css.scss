@@ -7,25 +7,25 @@
   .row-fluid {
     * { padding: 2px; }
 
-    &.odd { background-color: $gris-claro; }
+    &:nth-child(even) {
+      background-color: white;
+      &.caos    { background-color: $caos; }
+      &.locura  { background-color: $locura; }
+      &.muerte  { background-color: $muerte;
+                  color: $gris-claro;
+                  a { color: $gris-claro; } }
+      &.poder   { background-color: $poder; }
+      &.neutral { background-color: $neutral; }
+    }
 
-    &.caos {
-      background-color: $caos;
-      &.odd { background-color: darken($caos, 10%); } }
-    &.locura {
-      background-color: $locura;
-      &.odd { background-color: darken($locura, 10%); } }
-    &.muerte {
-      background-color: $muerte;
-      color: $gris-claro;
-      a { color: $gris-claro; }
-      &.odd { background-color: darken($muerte, 10%); } }
-    &.poder {
-      background-color: $poder;
-      &.odd { background-color: darken($poder, 10%); } }
-    &.neutral {
-      background-color: $neutral;
-      &.odd { background-color: darken($neutral, 10%); } }
+    &:nth-child(odd)  {
+      background-color: $gris-claro;
+      &.caos    { background-color: darken($caos, 10%); }
+      &.locura  { background-color: darken($locura, 10%); }
+      &.muerte  { background-color: darken($muerte, 10%); }
+      &.poder   { background-color: darken($poder, 10%); }
+      &.neutral { background-color: darken($neutral, 10%); }
+    }
   }
 
   // Hover

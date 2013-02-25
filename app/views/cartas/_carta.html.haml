@@ -1,5 +1,5 @@
 - cache carta do
-  .row-fluid{class: "#{cycle('even', 'odd')} #{carta.canonica.senda.downcase}"}
+  .row-fluid{class: carta.canonica.senda.downcase}
     .nombre.span3
       - if can? :read, carta
         = link_to_mostrar carta, carta.nombre

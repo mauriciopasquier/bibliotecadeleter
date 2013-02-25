@@ -6,4 +6,15 @@ module InicioHelper
       q: {  busqueda => 'demonio',
             'versiones_senda_eq_any' => sendas } )
   end
+
+  def titulo
+    case params[:action]
+      when 'panel', 'bienvenida'
+        'Todo el conocimiento del Inferno'
+      when 'legales'
+        'La letra chica de los contratos demoníacos'
+      else
+        nil
+    end
+  end
 end

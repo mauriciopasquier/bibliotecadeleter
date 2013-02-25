@@ -28,8 +28,6 @@ class Imagen < ActiveRecord::Base
       processors: [ :cartas ]
     }
 
-  validates_attachment_presence :archivo
-
   def self.estilos
     [ :original, :mini, :arte ]
   end

@@ -1,5 +1,5 @@
 - cache version do
-  .row-fluid{class: "#{cycle('even', 'odd')} #{version.senda.downcase}"}
+  .row-fluid{class: version.senda.downcase}
     .nombre.span3
       - if can? :read, version.carta
         = link_to_mostrar version.carta, version.nombre

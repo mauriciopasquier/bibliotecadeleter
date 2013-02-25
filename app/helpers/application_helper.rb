@@ -14,8 +14,16 @@ module ApplicationHelper
     request.query_parameters
   end
 
+  # Título de la página para el +<head>+ por defecto, extra se determina en el
+  # helper de cada controlador, dependiendo de la acción
+  def titulo_de_la_aplicacion(extra = nil)
+    extra ||= titulo
+    "#{extra.nil? ? nil : "#{extra} | "}Biblioteca Del Eter"
+  end
+
+  # Por defecto, no se usa nada.
   def titulo
-    "Biblioteca Del Eter#{@titulo ? " | #{@titulo}" : nil}"
+    nil
   end
 
   def expansiones
@@ -45,6 +53,17 @@ module ApplicationHelper
   def link_to_eliminar(recurso)
     link_to recurso, method: :delete, data: { confirm: t(:confirmar) } do
       content_tag(:i, nil, class: 'icon-remove-circle') + 'Eliminar'
+    end
+  end
+
+  def rareza_completa(inicial)
+    case inicial
+      when 'C' then 'Común'
+      when 'I' then 'Infrecuente'
+      when 'R' then 'Rara'
+      when 'E' then 'Épica'
+      when 'P' then 'Promocional'
+      else  '???'
     end
   end
 

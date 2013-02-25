@@ -23,7 +23,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::RoutingError do |e|
     @mensaje = e.message
-    @titulo = '¿Error?'
     respond_to do |format|
       format.html { render 'errores/404', status: 404 }
       format.json { render json: @mensaje, status: 404 }
@@ -31,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?,
-                :barra_de_busqueda
+                :barra_de_busqueda, :rarezas
 
   protected
 
@@ -58,6 +57,10 @@ class ApplicationController < ActionController::Base
 
     def sendas
       %w{ Caos Locura Muerte Poder Neutral }
+    end
+
+    def rarezas
+      %w{ C I R E P }
     end
 
     # Para determinar el elemento activo de la paginación

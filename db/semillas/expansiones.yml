@@ -1,102 +1,223 @@
-# Las ediciones hasta la fecha
-'Despertar':
-  total:        184
-  lanzamiento:  2011-02-07
-  presentacion: 2011-02-05
-  notas:
-    diseño_y_desarrollo:
+
+---
+expansiones:
+  columns:
+  - id
+  - nombre
+  - lanzamiento
+  - presentacion
+  - notas
+  - saga
+  - total
+  - created_at
+  - updated_at
+  - slug
+  records: 
+  - - '1'
+    - Despertar
+    - '2011-02-07'
+    - '2011-02-05'
+    - ! '--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+
+      diseño_y_desarrollo:
+
       - Guillermo Fernández
+
       - Nicolás Fernández
+
       - Daniel Fernández
+
       - Germán Moltó
+
       - Gonzalo Prado
-    diseño_gráfico:
+
+      diseño_gráfico:
+
       - Verónica Vallejos
-'Promocionales Despertar':
-  total:        4
-  lanzamiento:  2011-02-07
-  presentacion: 2011-02-05
-  notas:
-    diseño_y_desarrollo:
+
+'
+    - 
+    - '184'
+    - '2013-02-19 17:49:23.87118'
+    - '2013-02-25 17:14:47.099448'
+    - despertar
+  - - '2'
+    - Promocionales Despertar
+    - '2011-02-07'
+    - '2011-02-05'
+    - ! '--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+
+      diseño_y_desarrollo:
+
       - Guillermo Fernández
+
       - Nicolás Fernández
+
       - Daniel Fernández
+
       - Germán Moltó
+
       - Gonzalo Prado
-    diseño_gráfico:
+
+      diseño_gráfico:
+
       - Verónica Vallejos
-'Insania':
-  saga:         Crónicas de Ubanna
-  total:        184
-  lanzamiento:  2011-08-02
-  presentacion: 2011-07-29
-  notas:
-    diseño_y_desarrollo:
+
+'
+    - 
+    - '4'
+    - '2013-02-19 17:49:23.902218'
+    - '2013-02-19 17:51:41.998027'
+    - promocionales-despertar
+  - - '3'
+    - Insania
+    - '2011-08-02'
+    - '2011-07-29'
+    - ! '--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+
+      diseño_y_desarrollo:
+
       - Guillermo Fernández
+
       - Nicolás Fernández
+
       - Daniel Fernández
+
       - Juan Torrecilla
-    dirección_de_arte:
+
+      dirección_de_arte:
+
       - Germán Nóbile
-    diseño_gráfico:
+
+      diseño_gráfico:
+
       - Verónica Vallejos
-'Promocionales Insania':
-  saga:         Crónicas de Ubanna
-  total:        6
-  lanzamiento:  2011-08-02
-  presentacion: 2011-07-29
-  notas:
-    diseño_y_desarrollo:
+
+'
+    - Crónicas de Ubanna
+    - '184'
+    - '2013-02-19 17:49:23.920551'
+    - '2013-02-25 17:28:56.183314'
+    - insania
+  - - '4'
+    - Promocionales Insania
+    - '2011-08-02'
+    - '2011-07-29'
+    - ! '--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+
+      diseño_y_desarrollo:
+
       - Guillermo Fernández
+
       - Nicolás Fernández
+
       - Daniel Fernández
+
       - Juan Torrecilla
-    dirección_de_arte:
+
+      dirección_de_arte:
+
       - Germán Nóbile
-    diseño_gráfico:
+
+      diseño_gráfico:
+
       - Verónica Vallejos
-'Conquista':
-  saga:         Crónicas de Ubanna
-  total:        124
-  lanzamiento:  2012-05-07
-  presentacion: 2012-05-05
-  notas:
-    diseño_y_desarrollo:
+
+'
+    - Crónicas de Ubanna
+    - '6'
+    - '2013-02-19 17:49:23.938586'
+    - '2013-02-19 18:01:33.389673'
+    - promocionales-insania
+  - - '5'
+    - Conquista
+    - '2012-05-07'
+    - '2012-05-05'
+    - ! '--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+
+      diseño_y_desarrollo:
+
       - Daniel Fernández
+
       - Guillermo Fernández
+
       - Nicolás Fernández
+
       - Juan Torrecilla
-    dirección_de_arte:
+
+      dirección_de_arte:
+
       - Germán Nóbile
-    diseño_gráfico:
+
+      diseño_gráfico:
+
       - Verónica Vallejos
-'Promocionales Conquista':
-  saga:         Crónicas de Ubanna
-  total:        6
-  lanzamiento:  2012-05-07
-  presentacion: 2012-05-05
-  notas:
-    diseño_y_desarrollo:
+
+'
+    - Crónicas de Ubanna
+    - '124'
+    - '2013-02-19 17:49:23.95676'
+    - '2013-02-25 17:24:19.683'
+    - conquista
+  - - '6'
+    - Promocionales Conquista
+    - '2012-05-07'
+    - '2012-05-05'
+    - ! '--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+
+      diseño_y_desarrollo:
+
       - Daniel Fernández
+
       - Guillermo Fernández
+
       - Nicolás Fernández
+
       - Juan Torrecilla
-    dirección_de_arte:
+
+      dirección_de_arte:
+
       - Germán Nóbile
-    diseño_gráfico:
+
+      diseño_gráfico:
+
       - Verónica Vallejos
-'PIP Conquista':
-  saga:         Crónicas de Ubanna
-  total:        8
-  lanzamiento:  2012-10-01
-'Destino':
-  saga:         Crónicas de Ubanna
-  total:        124
-  lanzamiento:  2013-03-18
-  presentacion: 2013-03-16
-  notas:
-    diseño_y_desarrollo:
+
+'
+    - Crónicas de Ubanna
+    - '6'
+    - '2013-02-19 17:49:23.97459'
+    - '2013-02-25 17:18:50.970161'
+    - promocionales-conquista
+  - - '7'
+    - PIP Conquista
+    - '2012-10-01'
+    - 
+    - ! "--- \n...\n"
+    - Crónicas de Ubanna
+    - '8'
+    - '2013-02-19 17:49:23.993343'
+    - '2013-02-25 19:49:23.018874'
+    - pip-conquista
+  - - '8'
+    - Destino
+    - '2013-03-18'
+    - '2013-03-16'
+    - ! '--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+
+      diseño_y_desarrollo:
+
       - Nahuel Nasillo
+
       - Nicolás Fernández
-    diseño_gráfico:
+
+      diseño_gráfico:
+
       - Verónica Vallejos
+
+'
+    - Crónicas de Ubanna
+    - '124'
+    - '2013-02-19 17:49:24.010427'
+    - '2013-02-25 19:55:33.730883'
+    - destino
