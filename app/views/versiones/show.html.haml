@@ -5,14 +5,12 @@
       .span12
         %h2 Texto de esta versión
         = render  partial: 'versiones/version_textual', object: @version
-      - if @version.links.any?
-        .span12
-          %h2 Links
-          %ul.links
-            - @version.links.each do |link|
-              %li
-                .icon-arrow-right
-                = render link
+
+      .span12
+        %h3 Páginas relacionadas
+        - if @version.links.any?
+          %ul.links.nav.nav-pills
+            = render @version.links
 
   .span7
     %h2 Imágenes

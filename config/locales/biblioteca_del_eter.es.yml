@@ -17,3 +17,8 @@ es:
       encontradas:
         one:  "1 carta encontrada."
         other:  "%{count} cartas encontradas."
+  artistas:
+    show:
+      ilustraciones:
+        one:    '1 ilustración'
+        other:  '%{count} ilustraciones'

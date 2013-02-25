@@ -6,12 +6,10 @@
         %h2 Texto oficial
         = render  partial: 'versiones/version_textual', object: @carta.canonica
       .span12
-        %h2 Versiones
-        %ul.versiones
+        %h3 Versiones
+        %ul.versiones.nav.nav-pills
           - @carta.versiones.each do |v|
-            %li
-              .icon-arrow-right
-              = link_to "de #{v.expansion}", [@carta, v]
+            %li= link_to "#{v.expansion}", [@carta, v]
 
   .span7
     %h2 Imágenes

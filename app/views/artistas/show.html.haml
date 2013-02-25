@@ -1,15 +1,11 @@
 %h1= titulo
 .row-fluid
-  .span12
-    %h2.plegable Datos
-    %dl.dl-horizontal
-      - if @artista.ilustraciones.size > 0
-        %dt Ilustraciones
-        %dd= @artista.ilustraciones.size
-      - if @artista.links.any?
-        %dt Links
-        - @artista.links.each do |l|
-          %dd= link_to l.nombre, l.url
+  #artista.span12
+    %p Ha colaborado con #{t '.ilustraciones', count: @artista.ilustraciones.size} de Inferno.
+    - if @artista.links.any?
+      %ul.links.nav.nav-pills
+        .pull-left Páginas relacionadas:
+        = render @artista.links
 
 - if @artista.ilustraciones.size > 0
   .row-fluid
