@@ -13,6 +13,7 @@ class Version < ActiveRecord::Base
   belongs_to :expansion, touch: true
   has_many :imagenes, order: 'created_at ASC'
   has_many :artistas, through: :imagenes
+  has_many :links, as: :linkeable, dependent: :destroy
 
   friendly_id :expansion_y_numero, use: :slugged
 

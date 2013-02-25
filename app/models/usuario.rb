@@ -9,5 +9,5 @@ class Usuario < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :nick
 
-  has_many :links, as: :linkeable
+  has_many :links, as: :linkeable, dependent: :destroy
 end

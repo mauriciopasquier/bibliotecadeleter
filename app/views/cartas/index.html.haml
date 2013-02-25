@@ -15,7 +15,5 @@
 
     = render @cartas
 
-  = paginacion_tag @cartas, id: 'paginacion-inferior'
-
   - if can? :create, Carta
     = link_to 'Cargar Carta', new_carta_path

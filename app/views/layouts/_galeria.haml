@@ -24,6 +24,3 @@
         - imagenes.each do |v|
           %li{class: tipo_actual}
             = v.link tipo_actual
-
-  - if defined?(paginar) ? paginar : false
-    = paginacion_tag imagenes, id: 'paginacion-inferior', mostrar_tipo: true
