@@ -1,8 +1,18 @@
 %h1= titulo
 .row-fluid
   #carta.span5
-    %h2 Texto de esta versión
-    = render  partial: 'versiones/version_textual', object: @version
+    .row-fluid
+      .span12
+        %h2 Texto de esta versión
+        = render  partial: 'versiones/version_textual', object: @version
+      - if @version.links.any?
+        .span12
+          %h2 Links
+          %ul.links
+            - @version.links.each do |link|
+              %li
+                .icon-arrow-right
+                = render link
 
   .span7
     %h2 Imágenes
@@ -10,5 +20,4 @@
               locals: { imagenes: @version.imagenes,
                         estilo: :original }
 
-= link_to 'Ir a la carta', @carta, class: 'btn'
-= link_to 'Ir a la expansión', @version.expansion, class: 'btn'
+= link_to 'Volver a la carta', @carta, class: 'btn'
