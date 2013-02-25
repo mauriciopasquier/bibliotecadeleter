@@ -1,6 +1,5 @@
 # encoding: utf-8
-
-# para falsear uploads en rack entre otras cosas
+# Para falsear uploads en rack entre otras cosas
 include ActionDispatch::TestProcess
 
 FactoryGirl.define do
