@@ -10654,3 +10654,24 @@ versiones:
     - 101-destino
     - '7'
     - '7'
+  - - '541'
+    - Cuando un demonio tome 7 o más cartas este turno, voltea Mímire. / No tienes
+      tamaño máximo de mano. Mímire tiene +1 FUE mientras tengas 7 o más cartas en
+      tu mano.
+    - ''
+    - Demonio
+    - ''
+    - '2'
+    - 
+    - Locura
+    - ! '"Conocimiento ilimitado, poder infinito."'
+    - '2'
+    - I
+    - '2013-02-28 03:59:50.357266'
+    - '2013-02-28 04:01:47.317292'
+    - '525'
+    - true
+    - '8'
+    - 002-destino
+    - 
+    - 

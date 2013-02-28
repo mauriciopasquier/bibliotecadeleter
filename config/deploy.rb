@@ -26,7 +26,6 @@ set :assets_prefix, "e"
 set :imagenes_seed, "semillas"
 set :rake, "RAILS_ENV=production bundle exec rake"
 
-# Crea el link simbólico para las imágenes de las cartas
 namespace :deploy do
   namespace :assets do
     desc "Construye los estilos nuevos de paperclip"
