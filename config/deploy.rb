@@ -24,15 +24,6 @@ set :imagenes_seed, "semillas"
 set :rake, "RAILS_ENV=production bundle exec rake"
 
 namespace :deploy do
-  namespace :setup do
-    desc "Crea los directorios necesarios"
-    task :directorios do
-      # Para mantenerlas fuera del control de assets de capistrano, que puede
-      # borrar los viejos, y fuera de public en el repositorio
-      run "mkdir -p #{shared_path}/cartas"
-    end
-  end
-
   namespace :assets do
     desc "Construye los estilos nuevos de paperclip"
     task :refresh_styles, roles: :app do
@@ -47,6 +38,13 @@ namespace :deploy do
 end
 
 namespace :configurar do
+  desc "Crea los directorios necesarios"
+  task :directorios do
+    # Para mantenerlas fuera del control de assets de capistrano, que puede
+    # borrar los viejos, y fuera de public en el repositorio
+    run "mkdir -p #{shared_path}/cartas"
+  end
+
   desc "Crea los links simbólicos de los archivos de configuración"
   task :archivos do
     run "ln -s #{shared_path}/config/devise.rb #{release_path}/config/initializers/devise.rb"
@@ -101,6 +99,6 @@ namespace :deploy do
   end
 end
 
-after   "deploy:setup",             "deploy:setup:directorios"
+after   "deploy:setup",             "configurar:directorios"
 after   "deploy:assets:precompile", "deploy:assets:linkear_estaticos"
 before  "deploy:finalize_update",   "configurar:archivos"
