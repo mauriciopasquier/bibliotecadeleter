@@ -66,7 +66,7 @@ module BibliotecaDelEter
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0.8'
+    config.assets.version = '1.0.9'
 
     # Traduzco el path
     config.assets.prefix = "/e"
