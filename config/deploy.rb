@@ -6,9 +6,6 @@ server            "hackcoop.com.ar", :app, :web, :db, primary: true
 set :user,        "eter"
 set :deploy_to,   "/opt/eter/app"
 
-# Si no se la mandás con cap -S branch='rama' deploy, usa 'master'
-set :branch, fetch(:branch, "master")
-
 set :use_sudo,    false
 set :ssh_options, { forward_agent: true}
 
@@ -27,10 +24,24 @@ set :imagenes_seed, "semillas"
 set :rake, "RAILS_ENV=production bundle exec rake"
 
 namespace :deploy do
+  namespace :setup do
+    desc "Crea los directorios necesarios"
+    task :directorios do
+      # Para mantenerlas fuera del control de assets de capistrano, que puede
+      # borrar los viejos, y fuera de public en el repositorio
+      run "mkdir -p #{shared_path}/cartas"
+    end
+  end
+
   namespace :assets do
     desc "Construye los estilos nuevos de paperclip"
     task :refresh_styles, roles: :app do
       run "cd #{release_path}; #{rake} paperclip:refresh:missing_styles"
+    end
+
+    desc "Crea el link simbólico para las imágenes de las cartas"
+    task :linkear_estaticos do
+      run "ln -s #{shared_path}/cartas #{release_path}/public/e/cartas"
     end
   end
 end
@@ -90,4 +101,6 @@ namespace :deploy do
   end
 end
 
-before "deploy:finalize_update", "configurar:archivos"
+after   "deploy:setup",             "deploy:setup:directorios"
+after   "deploy:assets:precompile", "deploy:assets:linkear_estaticos"
+before  "deploy:finalize_update",   "configurar:archivos"
