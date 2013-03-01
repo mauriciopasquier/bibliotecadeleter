@@ -32,7 +32,7 @@ namespace :deploy do
 
     desc "Crea el link simbólico para las imágenes de las cartas"
     task :linkear_estaticos do
-      run "ln -s #{shared_path}/cartas #{release_path}/public/e/cartas"
+      run "ln -s #{shared_path}/cartas #{release_path}/public/cartas"
     end
   end
 end
@@ -67,7 +67,8 @@ end
 namespace :db do
   desc "Actualiza las imágenes de las cartas"
   task :imagenes do
-    puts run_locally "rsync -av public/e/cartas #{user}@hackcoop.com.ar:#{shared_path}/assets"
+    # FIXME No hardcodear el server
+    puts run_locally "rsync -av public/cartas #{user}@hackcoop.com.ar:#{shared_path}/cartas"
   end
   desc "Create production database"
   task :create do

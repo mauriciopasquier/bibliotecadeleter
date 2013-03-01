@@ -23,7 +23,3 @@ Paperclip.interpolates :cara do |adjunto, estilo|
     end
   end
 end
-
-Paperclip.interpolates :assets do |adjunto, estilo|
-  Rails.configuration.assets[:prefix]
-end

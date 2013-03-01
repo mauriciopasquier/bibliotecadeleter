@@ -22,7 +22,7 @@ config/initializers/secret_token.rb
 config/initializers/devise.rb
 
 # Ignoro las imágenes de paperclip hasta nuevo aviso
-public/e/cartas
+public/cartas
 
 # Nunca commitear los usuarios
 db/semillas/usuarios.yml
