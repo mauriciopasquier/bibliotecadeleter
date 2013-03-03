@@ -16,6 +16,9 @@ describe Artista do
     artista_sin.ilustraciones.size.must_equal 0
 
     Artista.con_ilustraciones.size.must_equal 2
+
+    # Destruyo el adjunto
+    imagen.destroy
   end
 
 end
