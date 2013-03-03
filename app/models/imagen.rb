@@ -17,8 +17,8 @@ class Imagen < ActiveRecord::Base
   # TODO revisar el asunto de las imágenes default y las no disponibles, para
   # evitar perder información (dibujante de la versión) cuando es conocida
   has_attached_file :archivo,
-    { url:  ":assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
-      path: ":rails_root/public/:assets/cartas/:style/:expansion/:numero-:carta:cara.:extension",
+    { url:  "/cartas/:style/:expansion/:numero-:carta:cara.:extension",
+      path: ":rails_root/public/cartas/:style/:expansion/:numero-:carta:cara.:extension",
       styles: {
         arte: "190x190",
         mini: "50%" },

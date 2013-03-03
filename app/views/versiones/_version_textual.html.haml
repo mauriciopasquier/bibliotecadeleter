@@ -18,7 +18,8 @@
   .row-fluid
     .span8= version_textual.numeracion
     .span4.rareza= version_textual.rareza
-  .row-fluid
-    .span12.arte
-      arte:
-      = version_textual.arte
+    .row-fluid
+      .span12.arte
+        - if version_textual.imagenes.any?
+          arte:
+          = version_textual.arte

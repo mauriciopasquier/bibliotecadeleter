@@ -14,6 +14,7 @@ class Carta < ActiveRecord::Base
   has_many :expansiones, through: :versiones
 
   default_scope order(:nombre).includes(:canonica)
+  scope :ultimas, reorder('created_at DESC')
 
   accepts_nested_attributes_for :versiones, allow_destroy: true
 

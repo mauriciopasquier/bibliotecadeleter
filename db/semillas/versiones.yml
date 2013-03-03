@@ -10675,3 +10675,107 @@ versiones:
     - 002-destino
     - 
     - 
+  - - '542'
+    - Furia. Siempre que Azzam ataque, los humanos que controlas obtienen +1 FUE hasta
+      el final del turno. Vínculo [Destruye 3 recursos que controles] - Pon en juego
+      tres fichas de aliado humano 2 FUE, 2 RES.
+    - Aliado
+    - Único
+    - Humano
+    - '5'
+    - '5'
+    - Caos
+    - ''
+    - '7'
+    - E
+    - '2013-03-03 20:19:23.37232'
+    - '2013-03-03 20:23:43.009546'
+    - '526'
+    - true
+    - '8'
+    - 007-destino
+    - '6'
+    - '6'
+  - - '543'
+    - ! 'Puedes elegir no enderezar Corto en tu restauración. Girar: Toma el control
+      del aliado objetivo mientras Corto permanezca girado.'
+    - Aliado
+    - Único
+    - Cyborg Rebelde
+    - '2'
+    - '3'
+    - Locura
+    - ! '"El silencio... es insoportable, necesito la red."'
+    - '34'
+    - E
+    - '2013-03-03 20:28:35.333137'
+    - '2013-03-03 20:29:06.724602'
+    - '527'
+    - true
+    - '8'
+    - 034-destino
+    - '4'
+    - '4'
+  - - '544'
+    - ! 'Abismal. La FUE y RES de Edeinsuge es igual al número de cartas en tu inferno.
+      Edeinsuge entra en juego girado, y no se endereza en tu restauración. Destruir
+      dos humanos que controles: Endereza Edeinsuge.'
+    - Aliado
+    - Único
+    - Abominación
+    - '0'
+    - '0'
+    - Muerte
+    - 
+    - '60'
+    - E
+    - '2013-03-03 20:35:34.092927'
+    - '2013-03-03 20:36:44.061986'
+    - '528'
+    - true
+    - '8'
+    - 060-destino
+    - '5'
+    - '5'
+  - - '545'
+    - ! '1: Prevén el siguiente punto de daño que fuera a hacerse a Dacal hasta el
+      final del turno. Vínculo [Exilia 3 objetos que controles] - Pon en juego una
+      ficha de aliado {poder} Reptil 9 FUE, 9 RES.'
+    - Aliado
+    - Único
+    - Humano
+    - '3'
+    - '4'
+    - Poder
+    - ¡Acércate y conoce el verdadero poder!
+    - '85'
+    - E
+    - '2013-03-03 20:41:29.75427'
+    - '2013-03-03 20:42:22.954954'
+    - '529'
+    - true
+    - '8'
+    - 085-destino
+    - '3'
+    - '3'
+  - - '546'
+    - ! 'Exilia un aliado de tu inferno, girar: Pon en juego una ficha de aliado,
+      que es una copia del aliado objetivo que controles.'
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - El ejército nacido de la roca, estaba listo para combatir la batalla que una
+      vez representó.
+    - '109'
+    - E
+    - '2013-03-03 20:48:56.0952'
+    - '2013-03-03 20:49:23.051974'
+    - '530'
+    - true
+    - '8'
+    - 109-destino
+    - '2'
+    - '2'
