@@ -6,9 +6,9 @@
         %h2 Texto de esta versión
         = render  partial: 'versiones/version_textual', object: @version
 
-      .span12
-        %h3 Páginas relacionadas
-        - if @version.links.any?
+      - if @version.links.any?
+        .span12
+          %h3 Páginas relacionadas
           %ul.links.nav.nav-pills
             = render @version.links
 
