@@ -31,8 +31,8 @@
       %li= link_to '...todos los artistas', artistas_path
 
   .span4
-    %h3 Algunas cartas
+    %h3 Últimas cartas subidas
     %ul.menu.nav.nav-list.nav-stacked
-      - cartas.limit(5).each do |c|
+      - cartas.ultimas.limit(5).each do |c|
         %li= link_to c.nombre, c
       %li= link_to '...todas las cartas', cartas_path
