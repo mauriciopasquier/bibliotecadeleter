@@ -2471,7 +2471,7 @@ cartas:
   - - '493'
     - Ubanna, cronista demente
     - '2013-02-19 18:06:27.742073'
-    - '2013-02-25 17:32:43.939963'
+    - '2013-03-10 05:41:15.300123'
     - ubanna-cronista-demente
   - - '494'
     - Azuela del sirviente
@@ -2658,3 +2658,13 @@ cartas:
     - '2013-03-03 20:43:28.678235'
     - '2013-03-03 20:49:23.064329'
     - estatua-viviente
+  - - '531'
+    - Zulfur, caudillo de los muertos
+    - '2013-03-10 05:32:37.960379'
+    - '2013-03-10 05:37:07.521411'
+    - zulfur-caudillo-de-los-muertos
+  - - '532'
+    - Centro de Insania, la ciudad cambiante
+    - '2013-03-10 05:47:32.120395'
+    - '2013-03-10 05:51:45.500842'
+    - centro-de-insania-la-ciudad-cambiante

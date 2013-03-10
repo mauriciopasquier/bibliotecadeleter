@@ -10018,18 +10018,21 @@ versiones:
     - '2'
     - '2'
   - - '509'
-    - Thanatos. Al principio de tu restauración, si es tu turno 10 o más, voltea Ubanna.
+    - ! 'Thanatos. Al principio de tu restauración, si es tu turno 10 o más, voltea
+      Ubanna. / Thanatos. Abismal. 3: Tu demonio hace 1 punto de daño al aliado objetivo;
+      el demonio objetivo toma una carta; exilia la carta objetivo de un inferno;
+      o pon la primer carta de tu inferno en el fondo de tu mazo (elige uno).'
     - 
     - Demonio
     - 
-    - 
+    - '3'
     - 
     - Neutral
     - ! '"Una puerta abierta puede cruzarse en dos direcciones."'
     - '5'
     - E
     - '2013-02-19 18:06:28.084031'
-    - '2013-02-25 17:32:43.9278'
+    - '2013-03-10 05:41:15.286979'
     - '493'
     - true
     - '8'
@@ -10779,3 +10782,45 @@ versiones:
     - 109-destino
     - '2'
     - '2'
+  - - '547'
+    - ! 'Cuando tengas 9 o más aliados en tu inferno, voltea Zulfur. / X, girar: Pon
+      en juego de tu inferno el aliado objetivo de coste X.'
+    - ''
+    - Demonio
+    - ''
+    - '1'
+    - 
+    - Muerte
+    - ! '"Levántate hijo mío. Nuestra hora está próxima."'
+    - '3'
+    - I
+    - '2013-03-10 05:33:17.947214'
+    - '2013-03-10 05:37:07.509592'
+    - '531'
+    - true
+    - '8'
+    - 003-destino
+    - 
+    - 
+  - - '548'
+    - Sangre débil (juega esta carta sólo si hay Thanatos). Siempre que un demonio
+      juegue un vampiro, ese demonio puede tomar una carta.
+    - Escenario
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - Moverse de un lugar a otro en Insania era difícil. Las brújulas e instrumentos
+      de los cyborgs cambiaban de orientación una y otra vez, y cada vez que lo hacían,
+      debían cambiar el curso.
+    - '103'
+    - I
+    - '2013-03-10 05:50:43.956509'
+    - '2013-03-10 05:51:45.488541'
+    - '532'
+    - true
+    - '8'
+    - 103-destino
+    - '0'
+    - '0'
