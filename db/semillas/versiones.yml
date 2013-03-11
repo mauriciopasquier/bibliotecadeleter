@@ -10824,3 +10824,103 @@ versiones:
     - 103-destino
     - '0'
     - '0'
+  - - '549'
+    - Busca en tu mazo un humano, muéstralo y ponlo en tu mano. Luego mezcla tu mazo.
+      Si hay Thanatos, puedes buscar un vampiro en su lugar.
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - Una tregua dudosa, en tiempos violentos.
+    - '104'
+    - I
+    - '2013-03-11 02:22:47.185497'
+    - '2013-03-11 02:23:41.129052'
+    - '533'
+    - true
+    - '8'
+    - 104-destino
+    - '3'
+    - '3'
+  - - '550'
+    - ! 'Girar, poner un contador de daño sobre Arbusto tallocristal: Agrega 1 energía.'
+    - Aliado
+    - ''
+    - Planta
+    - '0'
+    - '2'
+    - Poder
+    - Ningún arbusto tallocristal puede disfrutar de una vida centenaria.
+    - '79'
+    - C
+    - '2013-03-11 02:26:28.811388'
+    - '2013-03-11 03:41:03.727341'
+    - '534'
+    - true
+    - '8'
+    - 079-destino
+    - '1'
+    - '1'
+  - - '551'
+    - Siempre que tu demonio sea objetivo de un ritual puedes destruir un humano que
+      controles. Si lo haces, cancela ese ritual.
+    - Aliado
+    - ''
+    - Humano
+    - '2'
+    - '3'
+    - Muerte
+    - ! '"Mis niñas están dispuestas al mayor de los sacrificios. Nuestra misión no
+      será interrumpida."'
+    - '72'
+    - R
+    - '2013-03-11 03:45:11.016199'
+    - '2013-03-11 03:49:06.83733'
+    - '535'
+    - true
+    - '8'
+    - 072-destino
+    - '3'
+    - '3'
+  - - '552'
+    - ! 'Los bots que controlas obtienen +1 RES y tienen la habilidad de protector
+      mientras controles 5 o más bots. Girar: Pon en juego una ficha de aliado objeto
+      {locura} Bot 0 FUE, 1 RES.'
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Locura
+    - ''
+    - '44'
+    - R
+    - '2013-03-11 04:03:58.426409'
+    - '2013-03-11 04:04:33.739645'
+    - '536'
+    - true
+    - '8'
+    - 044-destino
+    - '2'
+    - '2'
+  - - '553'
+    - ! '1: El aliado objetivo ataca a Instigadores del camino este turno si puede.'
+    - Aliado
+    - ''
+    - Humano
+    - '3'
+    - '4'
+    - Caos
+    - ! '"¿Andas perdido muchacho? Déjanos ayudarte."'
+    - '21'
+    - I
+    - '2013-03-11 04:09:17.913112'
+    - '2013-03-11 04:09:45.579477'
+    - '537'
+    - true
+    - '8'
+    - 021-destino
+    - '4'
+    - '4'
