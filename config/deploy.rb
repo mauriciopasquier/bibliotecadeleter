@@ -68,7 +68,7 @@ namespace :db do
   desc "Actualiza las imágenes de las cartas"
   task :imagenes do
     # FIXME No hardcodear el server
-    puts run_locally "rsync -av public/cartas #{user}@hackcoop.com.ar:#{shared_path}/cartas"
+    puts run_locally "rsync -av public/cartas/ #{user}@hackcoop.com.ar:#{shared_path}/cartas"
   end
   desc "Create production database"
   task :create do

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.12'
 
 # Database
 gem 'pg'
@@ -9,7 +9,7 @@ gem 'yaml_db', github: 'mauriciopasquier/yaml_db', branch: 'order-join-tables'
 
 # Model
 gem 'attribute_normalizer'
-gem 'inflections'
+gem 'inflections', require: false
 gem 'paperclip'
 gem 'squeel'
 

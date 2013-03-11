@@ -2471,7 +2471,7 @@ cartas:
   - - '493'
     - Ubanna, cronista demente
     - '2013-02-19 18:06:27.742073'
-    - '2013-02-25 17:32:43.939963'
+    - '2013-03-10 05:41:15.300123'
     - ubanna-cronista-demente
   - - '494'
     - Azuela del sirviente
@@ -2658,3 +2658,38 @@ cartas:
     - '2013-03-03 20:43:28.678235'
     - '2013-03-03 20:49:23.064329'
     - estatua-viviente
+  - - '531'
+    - Zulfur, caudillo de los muertos
+    - '2013-03-10 05:32:37.960379'
+    - '2013-03-10 05:37:07.521411'
+    - zulfur-caudillo-de-los-muertos
+  - - '532'
+    - Centro de Insania, la ciudad cambiante
+    - '2013-03-10 05:47:32.120395'
+    - '2013-03-10 05:51:45.500842'
+    - centro-de-insania-la-ciudad-cambiante
+  - - '533'
+    - Cita al ocaso
+    - '2013-03-11 02:11:07.453885'
+    - '2013-03-11 02:23:41.142322'
+    - cita-al-ocaso
+  - - '534'
+    - Arbusto tallocristal
+    - '2013-03-11 02:24:08.717104'
+    - '2013-03-11 03:41:03.739729'
+    - arbusto-tallocristal
+  - - '535'
+    - Sorginak Maisu
+    - '2013-03-11 03:43:13.80074'
+    - '2013-03-11 03:49:06.850187'
+    - sorginak-maisu
+  - - '536'
+    - Red de defensa bot
+    - '2013-03-11 03:50:12.764298'
+    - '2013-03-11 04:04:33.751904'
+    - red-de-defensa-bot
+  - - '537'
+    - Instigadores del camino
+    - '2013-03-11 04:04:55.129918'
+    - '2013-03-11 04:09:45.591533'
+    - instigadores-del-camino
