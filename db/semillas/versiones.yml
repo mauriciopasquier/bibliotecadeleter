@@ -10924,3 +10924,23 @@ versiones:
     - 021-destino
     - '4'
     - '4'
+  - - '554'
+    - Bendición de Ubanna (cuesta 2 menos si hay Thanatos). Destruye el aliado, objeto
+      o arma objetivo.
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - ! '"Respira por última vez, es hora de morir." - Ubanna'
+    - '99'
+    - R
+    - '2013-03-12 05:00:29.742752'
+    - '2013-03-12 05:01:59.649467'
+    - '538'
+    - true
+    - '8'
+    - 099-destino
+    - '5'
+    - '5'
