@@ -10944,3 +10944,24 @@ versiones:
     - 099-destino
     - '5'
     - '5'
+  - - '555'
+    - Cuando haya 15 o más recursos en juego, voltea Dämonin. / Siempre que un recurso
+      entre en juego, Dämonin obtiene +1 FUE hasta el final del turno.
+    - ''
+    - Demonio
+    - ''
+    - '1'
+    - 
+    - Poder
+    - ! '"Yo soy la vida y la muerte, madre y dueña de todo lo que ves. Elige bien
+      tus palabras."'
+    - '4'
+    - I
+    - '2013-03-14 15:24:11.742714'
+    - '2013-03-14 15:26:58.047182'
+    - '539'
+    - true
+    - '8'
+    - 004-destino
+    - 
+    - 
