@@ -12,11 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.autocomplete
 //= require URI
 //= require turbolinks
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/collapse
 //= require bgpos
+//= require autocomplete-rails
 //
 //= Archivos de la aplicación a incluir
 //

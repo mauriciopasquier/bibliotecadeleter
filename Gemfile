@@ -21,6 +21,9 @@ gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
 gem 'sitemap'
+gem 'rails3-jquery-autocomplete',
+  github: 'mauriciopasquier/rails3-jquery-autocomplete',
+  branch: 'scopes-with-parameters'
 
 # Controller
 gem 'responders'
@@ -49,6 +52,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'uri-js-rails'
   gem 'turbolinks'
+  gem 'jquery-ui-rails'
 end
 
 group :test, :development do
