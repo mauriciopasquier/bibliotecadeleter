@@ -36,6 +36,14 @@ BibliotecaDelEter::Application.routes.draw do
 
     end
     r.resources :expansiones
+
+    r.resources :versiones, only: [] do
+      collection do
+        get 'completar_tipo'
+        get 'completar_supertipo'
+        get 'completar_subtipo'
+      end
+    end
   end
 
   with_options path_names: masculinos do |r|
