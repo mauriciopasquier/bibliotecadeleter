@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/collapse
+//= require bootstrap-filestyle
 //= require bgpos
 //= require autocomplete-rails
 //
@@ -24,3 +25,4 @@
 //
 //= require layout
 //= require paginacion
+//= require cartas
