@@ -35,7 +35,12 @@ BibliotecaDelEter::Application.routes.draw do
       end
 
     end
-    r.resources :expansiones
+
+    r.resources :expansiones do
+      collection do
+        get 'autocompletar_nombre'  => 'expansiones#autocomplete_expansion_nombre'
+      end
+    end
 
     r.resources :versiones, only: [] do
       collection do
