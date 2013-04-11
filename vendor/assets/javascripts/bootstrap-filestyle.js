@@ -33,7 +33,7 @@
             .addClass("input-append")
             .find("input[type=file]")
             .after(
-              (options.textField ? '<input type="text" class="'+options.classText+'" disabled size="40" /> ' : '')+
+              (options.textField ? '<input type="text" class="'+options.classText+'" disabled /> ' : '')+
                 '<button type="button" class="btn '+options.classButton+'" >'+
                 (options.icon ? '<i class="'+options.classIcon+'"></i> ' : '')+
                 options.buttonText+
