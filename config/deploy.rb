@@ -19,7 +19,7 @@ after "deploy:restart", "deploy:cleanup"
 # Evita que capistrano haga un clone completo del repositorio cada deploy
 set :deploy_via, :remote_cache
 
-set :assets_prefix, "e"
+set :assets_prefix, "recursos"
 set :imagenes_seed, "semillas"
 set :rake, "RAILS_ENV=production bundle exec rake"
 

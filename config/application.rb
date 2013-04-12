@@ -69,7 +69,7 @@ module BibliotecaDelEter
     config.assets.version = '1.0.15'
 
     # Traduzco el path
-    config.assets.prefix = "/e"
+    config.assets.prefix = "/recursos"
 
     config.generators do |g|
       g.test_framework :mini_test, spec: true, fixture: false
