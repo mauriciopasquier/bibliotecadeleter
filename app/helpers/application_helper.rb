@@ -23,7 +23,17 @@ module ApplicationHelper
 
   # Por defecto, no se usa nada.
   def titulo
-    nil
+    case c = params[:controller]
+      when 'devise/registrations', 'devise/sessions', 'devise/passwords'
+        case a = params[:action]
+          when 'edit', 'new'
+            t "#{c.gsub('/','.')}.#{a}.titulo"
+          else
+            nil
+        end
+      else
+        nil
+    end
   end
 
   def expansiones
