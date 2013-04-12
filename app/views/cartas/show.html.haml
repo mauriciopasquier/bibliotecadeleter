@@ -19,3 +19,5 @@
 
 - if can? :edit, @carta
   = link_to 'Editar', edit_carta_path(@carta), class: 'btn'
+- if can? :create, Carta
+  = link_to 'Nueva carta', new_carta_path, class: 'btn'

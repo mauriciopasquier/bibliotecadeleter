@@ -6,7 +6,7 @@
     .row-fluid
       .span6
         = f.label :nombre
-        = f.text_field :nombre, class: 'span12'
+        = f.text_field :nombre, class: 'span12', autofocus: true, required: true
       .span3
         = fc.label :coste
         = fc.text_field :coste, class: 'span12'
