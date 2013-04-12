@@ -30,7 +30,7 @@ versiones:
     - '1'
     - 
     - Caos
-    - ! '"Mírame a los ojos. Observa tu mundo consumirse en llamas."'
+    - '"Mírame a los ojos. Observa tu mundo consumirse en llamas."'
     - '1'
     - C
     - '2013-02-19 17:49:24.925785'
@@ -42,14 +42,14 @@ versiones:
     - 
     - 
   - - '2'
-    - ! 'Destruir cuatro recursos enderezados que controles: Voltea Narghot.'
+    - 'Destruir cuatro recursos enderezados que controles: Voltea Narghot.'
     - 
     - Demonio
     - 
     - '2'
     - 
     - Caos
-    - ! '"Destruir, necesito destruir… ¡Busquen más dominios para devastar!"'
+    - '"Destruir, necesito destruir… ¡Busquen más dominios para devastar!"'
     - '2'
     - C
     - '2013-02-19 17:49:26.643279'
@@ -68,7 +68,7 @@ versiones:
     - '3'
     - 
     - Caos
-    - ! '"La horaz ha zhegado, miz pequeñoz. ¡Ezte ez nueztro momentoz!"'
+    - '"La horaz ha zhegado, miz pequeñoz. ¡Ezte ez nueztro momentoz!"'
     - '3'
     - C
     - '2013-02-19 17:49:27.968363'
@@ -87,7 +87,7 @@ versiones:
     - '3'
     - 
     - Locura
-    - ! '"Cuando no tienes opciones, no tienes futuro."'
+    - '"Cuando no tienes opciones, no tienes futuro."'
     - '4'
     - C
     - '2013-02-19 17:49:29.291461'
@@ -99,14 +99,14 @@ versiones:
     - 
     - 
   - - '5'
-    - ! 'Girar cuatro aliados enderezados que controles: Voltea Fáradt.'
+    - 'Girar cuatro aliados enderezados que controles: Voltea Fáradt.'
     - 
     - Demonio
     - 
     - '1'
     - 
     - Locura
-    - ! '"La energía proviene de cualquier lado. Algunas criaturas mediocres por ejemplo."'
+    - '"La energía proviene de cualquier lado. Algunas criaturas mediocres por ejemplo."'
     - '5'
     - C
     - '2013-02-19 17:49:30.631737'
@@ -125,7 +125,7 @@ versiones:
     - '2'
     - 
     - Locura
-    - ! '"Conozco el día que perecerás. Adivinaste."'
+    - '"Conozco el día que perecerás. Adivinaste."'
     - '6'
     - C
     - '2013-02-19 17:49:32.090551'
@@ -137,14 +137,14 @@ versiones:
     - 
     - 
   - - '7'
-    - ! 'Exiliar las primeras diez cartas de tu Inferno: Voltea At Fjerne.'
+    - 'Exiliar las primeras diez cartas de tu Inferno: Voltea At Fjerne.'
     - 
     - Demonio
     - 
     - '1'
     - 
     - Muerte
-    - ! '"Destruiré mi hogar, para encontrar uno nuevo."'
+    - '"Destruiré mi hogar, para encontrar uno nuevo."'
     - '7'
     - C
     - '2013-02-19 17:49:33.473825'
@@ -156,7 +156,7 @@ versiones:
     - 
     - 
   - - '8'
-    - ! 'Pon tres aliados de tu inferno en juego, bajo el control del enemigo objetivo:
+    - 'Pon tres aliados de tu inferno en juego, bajo el control del enemigo objetivo:
       Voltea Naamah.'
     - 
     - Demonio
@@ -164,7 +164,7 @@ versiones:
     - '2'
     - 
     - Muerte
-    - ! '"Para lograr la grandeza, se necesitan hacer algunos sacrificios."'
+    - '"Para lograr la grandeza, se necesitan hacer algunos sacrificios."'
     - '8'
     - C
     - '2013-02-19 17:49:34.786681'
@@ -183,7 +183,7 @@ versiones:
     - '3'
     - 
     - Muerte
-    - ! '"Bienvenidos al Inferno."'
+    - '"Bienvenidos al Inferno."'
     - '9'
     - C
     - '2013-02-19 17:49:36.124377'
@@ -202,7 +202,7 @@ versiones:
     - '1'
     - 
     - Poder
-    - ! '"¿Ves el horizonte moverse? Ya es tarde, mis bestias van por ti."'
+    - '"¿Ves el horizonte moverse? Ya es tarde, mis bestias van por ti."'
     - '10'
     - C
     - '2013-02-19 17:49:37.416743'
@@ -221,7 +221,7 @@ versiones:
     - '3'
     - 
     - Poder
-    - ! '"La fuerza de mis enemigos alimenta mi poder."'
+    - '"La fuerza de mis enemigos alimenta mi poder."'
     - '11'
     - C
     - '2013-02-19 17:49:38.875249'
@@ -233,14 +233,14 @@ versiones:
     - 
     - 
   - - '12'
-    - ! '8: Voltea Zustatek.'
+    - '8: Voltea Zustatek.'
     - 
     - Demonio
     - 
     - '2'
     - 
     - Poder
-    - ! '"Mi esencia late en los corazones de cada árbol terrenal."'
+    - '"Mi esencia late en los corazones de cada árbol terrenal."'
     - '12'
     - C
     - '2013-02-19 17:49:40.189727'
@@ -259,7 +259,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"No hay mejor manera de empezar el día." -Akayra'
+    - '"No hay mejor manera de empezar el día." -Akayra'
     - '13'
     - I
     - '2013-02-19 17:49:41.501934'
@@ -292,7 +292,7 @@ versiones:
     - '4'
     - '4'
   - - '15'
-    - ! 'Vínculo 0: Pon el arma objetivo de coste 3 o menos de tu Inferno en tu mano.'
+    - 'Vínculo 0: Pon el arma objetivo de coste 3 o menos de tu Inferno en tu mano.'
     - Aliado
     - 
     - Humano
@@ -311,7 +311,7 @@ versiones:
     - '2'
     - '2'
   - - '16'
-    - ! 'Vínculo 0: Pon una ficha de aliado caos Kirch 1 FUE, 1 RES en juego.'
+    - 'Vínculo 0: Pon una ficha de aliado caos Kirch 1 FUE, 1 RES en juego.'
     - Aliado
     - 
     - Humano
@@ -338,7 +338,7 @@ versiones:
     - '1'
     - '1'
     - Caos
-    - ! '"Hermozo hijo mioz, en tu zacrifizio ezta la victoriaz." -Syv'
+    - '"Hermozo hijo mioz, en tu zacrifizio ezta la victoriaz." -Syv'
     - '17'
     - C
     - '2013-02-19 17:49:44.342194'
@@ -357,7 +357,7 @@ versiones:
     - '2'
     - '3'
     - Caos
-    - ! '"¡Avancen bestias malditas! ¡Avancen a su muerte!"'
+    - '"¡Avancen bestias malditas! ¡Avancen a su muerte!"'
     - '18'
     - I
     - '2013-02-19 17:49:45.0296'
@@ -369,8 +369,8 @@ versiones:
     - '4'
     - '4'
   - - '19'
-    - ! 'Girar, destruir un aliado no-ficha que controles: Pon una ficha de aliado
-      caos Kirch 1 FUE, 1 RES en juego.'
+    - 'Girar, destruir un aliado no-ficha que controles: Pon una ficha de aliado caos
+      Kirch 1 FUE, 1 RES en juego.'
     - Aliado
     - 
     - Humano
@@ -410,17 +410,17 @@ versiones:
     - '7'
   - - '21'
     - El demonio objetivo destruye una carta que controla. Recobrar 3.
-    - ! 'Ritual '
+    - Ritual
     - 
     - 
     - 
     - 
     - Caos
-    - ! '"¿Tu vida o la de tu pueblo? Más tarde volveré por la otra." -Narghot'
+    - '"¿Tu vida o la de tu pueblo? Más tarde volveré por la otra." -Narghot'
     - '21'
     - C
     - '2013-02-19 17:49:47.056427'
-    - '2013-02-19 17:49:47.645285'
+    - '2013-04-12 07:53:22.479936'
     - '21'
     - true
     - '1'
@@ -436,7 +436,7 @@ versiones:
     - '3'
     - '3'
     - Caos
-    - ! '"Kirchs y explosivos. ¿Existe una mejor combinación?"'
+    - '"Kirchs y explosivos. ¿Existe una mejor combinación?"'
     - '22'
     - R
     - '2013-02-19 17:49:47.846378'
@@ -475,7 +475,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Miz preziozoz hijoz… Azerquenze a mi." -Syv'
+    - '"Miz preziozoz hijoz… Azerquenze a mi." -Syv'
     - '24'
     - I
     - '2013-02-19 17:49:49.194015'
@@ -514,7 +514,7 @@ versiones:
     - '6'
     - '6'
     - Caos
-    - ! '"Ten cuidado, o las arenas del Gran desierto te tragarán." Refrán Nungnarh'
+    - '"Ten cuidado, o las arenas del Gran desierto te tragarán." Refrán Nungnarh'
     - '26'
     - E
     - '2013-02-19 17:49:50.559861'
@@ -553,8 +553,8 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Solo los que entienden la melodía del fuego, pueden disfrutar realmente
-      del espectáculo." -Akayra.'
+    - '"Solo los que entienden la melodía del fuego, pueden disfrutar realmente del
+      espectáculo." -Akayra.'
     - '28'
     - C
     - '2013-02-19 17:49:51.999755'
@@ -566,8 +566,8 @@ versiones:
     - '1'
     - '1'
   - - '29'
-    - ! 'Destruir Instrumentos quirúrgicos: Pon el Kirch objetivo de tu Inferno en
-      tu mano.'
+    - 'Destruir Instrumentos quirúrgicos: Pon el Kirch objetivo de tu Inferno en tu
+      mano.'
     - Objeto
     - 
     - 
@@ -586,7 +586,7 @@ versiones:
     - '1'
     - '1'
   - - '30'
-    - ! 'Destruir Kirch corazón de llama: Kirch corazón de llama hace 3 daño al aliado
+    - 'Destruir Kirch corazón de llama: Kirch corazón de llama hace 3 daño al aliado
       objetivo.'
     - Aliado
     - 
@@ -606,14 +606,14 @@ versiones:
     - '4'
     - '4'
   - - '31'
-    - ! 'X, destruir Kirch entrenado: Destruye el arma objetivo de coste X.'
+    - 'X, destruir Kirch entrenado: Destruye el arma objetivo de coste X.'
     - Aliado
     - 
     - Kirch
     - '1'
     - '2'
     - Caos
-    - ! '"Nunca vuelven a recibir otra orden." Broma Nungnarh'
+    - '"Nunca vuelven a recibir otra orden." Broma Nungnarh'
     - '31'
     - C
     - '2013-02-19 17:49:54.128119'
@@ -625,14 +625,14 @@ versiones:
     - '2'
     - '2'
   - - '32'
-    - ! 'Girar: Kirch escupefuego hace 1 daño al aliado objetivo.'
+    - 'Girar: Kirch escupefuego hace 1 daño al aliado objetivo.'
     - Aliado
     - 
     - Kirch
     - '1'
     - '1'
     - Caos
-    - ! '"Tostado. Justo como me gusta." -Akayra'
+    - '"Tostado. Justo como me gusta." -Akayra'
     - '32'
     - C
     - '2013-02-19 17:49:54.785339'
@@ -644,8 +644,8 @@ versiones:
     - '1'
     - '1'
   - - '33'
-    - ! 'Furia. 2, destruir Kirch rabioso: El aliado objetivo obtiene furia hasta
-      el final del turno.'
+    - 'Furia. 2, destruir Kirch rabioso: El aliado objetivo obtiene furia hasta el
+      final del turno.'
     - Aliado
     - 
     - Kirch
@@ -690,7 +690,7 @@ versiones:
     - '4'
     - '4'
     - Caos
-    - ! '"Hoy es mi día."'
+    - '"Hoy es mi día."'
     - '35'
     - R
     - '2013-02-19 17:49:56.851176'
@@ -709,7 +709,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"¿Dónde te esconderás, cuando extermine toda tierra conocida?" -Narghot'
+    - '"¿Dónde te esconderás, cuando extermine toda tierra conocida?" -Narghot'
     - '36'
     - I
     - '2013-02-19 17:49:57.654461'
@@ -728,7 +728,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Alguna vez fue un hermoso poblado." -Narghot'
+    - '"Alguna vez fue un hermoso poblado." -Narghot'
     - '37'
     - C
     - '2013-02-19 17:49:58.333949'
@@ -768,7 +768,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"No dejes para mañana lo que puedes hacer ayer." -Viden'
+    - '"No dejes para mañana lo que puedes hacer ayer." -Viden'
     - '39'
     - C
     - '2013-02-19 17:49:59.730586'
@@ -788,7 +788,7 @@ versiones:
     - '1'
     - '2'
     - Locura
-    - ! '"Tienen una divertida manera de controlar su tiempo." -Ingeniero de la Esfera
+    - '"Tienen una divertida manera de controlar su tiempo." -Ingeniero de la Esfera
       de cristal'
     - '40'
     - C
@@ -808,7 +808,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"¡Me cansé de estas tonterías, extermínenlos!" -Baggrund.'
+    - '"¡Me cansé de estas tonterías, extermínenlos!" -Baggrund.'
     - '41'
     - E
     - '2013-02-19 17:50:01.083402'
@@ -828,7 +828,7 @@ versiones:
     - '3'
     - '5'
     - Locura
-    - ! '"No existe un problema que no tenga solución."'
+    - '"No existe un problema que no tenga solución."'
     - '42'
     - R
     - '2013-02-19 17:50:01.781647'
@@ -840,15 +840,14 @@ versiones:
     - '5'
     - '5'
   - - '43'
-    - ! 'Vínculo 0: Pon el ritual objetivo de coste 3 o menos de tu Inferno en tu
-      mano.'
+    - 'Vínculo 0: Pon el ritual objetivo de coste 3 o menos de tu Inferno en tu mano.'
     - Aliado
     - 
     - Humano
     - '1'
     - '3'
     - Locura
-    - ! '"Hay recuerdos que nunca deberían recordarse."'
+    - '"Hay recuerdos que nunca deberían recordarse."'
     - '43'
     - C
     - '2013-02-19 17:50:02.583643'
@@ -867,7 +866,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Muchas gracias. ¡Justo lo que necesitaba!" -Ubanna'
+    - '"Muchas gracias. ¡Justo lo que necesitaba!" -Ubanna'
     - '44'
     - R
     - '2013-02-19 17:50:03.292708'
@@ -879,7 +878,7 @@ versiones:
     - '5'
     - '5'
   - - '45'
-    - ! 'Vínculo 0: Cada enemigo descarta una carta.'
+    - 'Vínculo 0: Cada enemigo descarta una carta.'
     - Aliado
     - 
     - Humano
@@ -906,7 +905,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"¿Cuánta información puede tu débil cerebro manejar?" -Baggrund.'
+    - '"¿Cuánta información puede tu débil cerebro manejar?" -Baggrund.'
     - '46'
     - I
     - '2013-02-19 17:50:04.650914'
@@ -918,8 +917,8 @@ versiones:
     - '3'
     - '3'
   - - '47'
-    - ! 'Halo. 2, destruir Cyborg astuto: El aliado objetivo obtiene halo hasta el
-      final del turno.'
+    - 'Halo. 2, destruir Cyborg astuto: El aliado objetivo obtiene halo hasta el final
+      del turno.'
     - Aliado
     - 
     - Cyborg
@@ -945,7 +944,7 @@ versiones:
     - '3'
     - '2'
     - Locura
-    - ! '"¿Nunca te preguntaste por qué los líderes están siempre bien informados?"
+    - '"¿Nunca te preguntaste por qué los líderes están siempre bien informados?"
       -Guardia de la Esfera de cristal'
     - '48'
     - I
@@ -958,15 +957,15 @@ versiones:
     - '4'
     - '4'
   - - '49'
-    - ! 'X, destruir Cyborg reemplazable: Cancela el aliado objetivo de coste X.'
+    - 'X, destruir Cyborg reemplazable: Cancela el aliado objetivo de coste X.'
     - Aliado
     - 
     - Cyborg
     - '1'
     - '2'
     - Locura
-    - ! '"Buen diseño, rápido y efectivo. Lástima su corta vida útil." -Ingeniero
-      de la Esfera de cristal.'
+    - '"Buen diseño, rápido y efectivo. Lástima su corta vida útil." -Ingeniero de
+      la Esfera de cristal.'
     - '49'
     - C
     - '2013-02-19 17:50:06.660244'
@@ -1024,7 +1023,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Si algo te molesta, envía un soldado cyborg." Broma entre guardianes'
+    - '"Si algo te molesta, envía un soldado cyborg." Broma entre guardianes'
     - '52'
     - I
     - '2013-02-19 17:50:08.812716'
@@ -1036,7 +1035,7 @@ versiones:
     - '2'
     - '2'
   - - '53'
-    - ! 'Todos tus aliados obtienen halo hasta el final del turno. Vínculo 0: El aliado
+    - 'Todos tus aliados obtienen halo hasta el final del turno. Vínculo 0: El aliado
       objetivo obtiene halo hasta el final del turno.'
     - Ritual
     - Instantáneo
@@ -1085,7 +1084,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Es muy fácil, solo apagas su corazón." -Fáradt'
+    - '"Es muy fácil, solo apagas su corazón." -Fáradt'
     - '55'
     - I
     - '2013-02-19 17:50:10.824922'
@@ -1104,7 +1103,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"La mente de estos diminutos seres nunca deja de maravillarme." -Viden'
+    - '"La mente de estos diminutos seres nunca deja de maravillarme." -Viden'
     - '56'
     - C
     - '2013-02-19 17:50:11.527094'
@@ -1135,7 +1134,7 @@ versiones:
     - '3'
     - '3'
   - - '58'
-    - ! 'Destruir Robot autoensamblante: Pon el Cyborg objetivo de tu Inferno en tu
+    - 'Destruir Robot autoensamblante: Pon el Cyborg objetivo de tu Inferno en tu
       mano.'
     - Objeto
     - 
@@ -1143,7 +1142,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Todo se transforma." -Viden'
+    - '"Todo se transforma." -Viden'
     - '58'
     - I
     - '2013-02-19 17:50:12.97102'
@@ -1162,7 +1161,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"No te escucho. ¿Me hablabas a mí?" -Baggrund'
+    - '"No te escucho. ¿Me hablabas a mí?" -Baggrund'
     - '59'
     - C
     - '2013-02-19 17:50:13.650289'
@@ -1182,7 +1181,7 @@ versiones:
     - '2'
     - '4'
     - Locura
-    - ! '"¿Por qué obedecer a los demonios? Yo puedo darte lo que necesitas."'
+    - '"¿Por qué obedecer a los demonios? Yo puedo darte lo que necesitas."'
     - '60'
     - R
     - '2013-02-19 17:50:14.340981'
@@ -1194,7 +1193,7 @@ versiones:
     - '7'
     - '7'
   - - '61'
-    - ! 'Girar: Gira el aliado objetivo.'
+    - 'Girar: Gira el aliado objetivo.'
     - Aliado
     - 
     - Cyborg
@@ -1240,7 +1239,7 @@ versiones:
     - '2'
     - '2'
     - Locura
-    - ! '"Aunque saben que estoy mintiendo, no pueden evitar creerme."'
+    - '"Aunque saben que estoy mintiendo, no pueden evitar creerme."'
     - '63'
     - C
     - '2013-02-19 17:50:16.479091'
@@ -1252,7 +1251,7 @@ versiones:
     - '3'
     - '3'
   - - '64'
-    - ! 'Girar: Mira la primer carta de tu mazo. Puedes ponerla en la parte superior
+    - 'Girar: Mira la primer carta de tu mazo. Puedes ponerla en la parte superior
       o en el fondo de tu mazo.'
     - Aliado
     - 
@@ -1299,7 +1298,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Fuiste de gran ayuda pequeño, ahora descansa." -Unwaj'
+    - '"Fuiste de gran ayuda pequeño, ahora descansa." -Unwaj'
     - '66'
     - I
     - '2013-02-19 17:50:18.641085'
@@ -1311,14 +1310,14 @@ versiones:
     - '2'
     - '2'
   - - '67'
-    - ! 'Destruir Altar de expiación: Pon el Diablo objetivo de tu Inferno en tu mano.'
+    - 'Destruir Altar de expiación: Pon el Diablo objetivo de tu Inferno en tu mano.'
     - Objeto
     - 
     - 
     - 
     - 
     - Muerte
-    - ! '"Que esté enterrado no significa que esté muerto." -Unwaj'
+    - '"Que esté enterrado no significa que esté muerto." -Unwaj'
     - '67'
     - I
     - '2013-02-19 17:50:19.295765'
@@ -1330,14 +1329,14 @@ versiones:
     - '1'
     - '1'
   - - '68'
-    - ! 'Girar: Destruye el aliado objetivo girado.'
+    - 'Girar: Destruye el aliado objetivo girado.'
     - Aliado
     - 
     - Humano
     - '2'
     - '2'
     - Muerte
-    - ! '"¡No te muevas! Ya nos ha visto…" -Transeúntes entrometidos'
+    - '"¡No te muevas! Ya nos ha visto…" -Transeúntes entrometidos'
     - '68'
     - I
     - '2013-02-19 17:50:19.975424'
@@ -1349,7 +1348,7 @@ versiones:
     - '3'
     - '3'
   - - '69'
-    - ! 'Vínculo 0: Pon la carta objetivo de coste 2 o menos de tu Inferno en tu mano.'
+    - 'Vínculo 0: Pon la carta objetivo de coste 2 o menos de tu Inferno en tu mano.'
     - Aliado
     - 
     - Humano
@@ -1368,7 +1367,7 @@ versiones:
     - '2'
     - '2'
   - - '70'
-    - ! 'Vínculo 0: Cada enemigo pone un aliado que controle en la mano de su demonio.'
+    - 'Vínculo 0: Cada enemigo pone un aliado que controle en la mano de su demonio.'
     - Aliado
     - 
     - Humano
@@ -1446,14 +1445,14 @@ versiones:
     - '5'
     - '5'
   - - '74'
-    - ! 'X, destruir Diablo de siete manos: Destruye el aliado objetivo de coste X.'
+    - 'X, destruir Diablo de siete manos: Destruye el aliado objetivo de coste X.'
     - Aliado
     - 
     - Diablo
     - '1'
     - '2'
     - Muerte
-    - ! '"Hermosa creación, pero muy frágil. Deberé esforzarme más." -Monje iniciado'
+    - '"Hermosa creación, pero muy frágil. Deberé esforzarme más." -Monje iniciado'
     - '74'
     - C
     - '2013-02-19 17:50:24.115325'
@@ -1491,7 +1490,7 @@ versiones:
     - '2'
     - '3'
     - Muerte
-    - ! '"Disfruto ver como mis creaciones causan dolor." -At Fjerne'
+    - '"Disfruto ver como mis creaciones causan dolor." -At Fjerne'
     - '76'
     - C
     - '2013-02-19 17:50:25.476595'
@@ -1510,7 +1509,7 @@ versiones:
     - '5'
     - '5'
     - Muerte
-    - ! '"Algunas veces me decepcionas." -Naamah'
+    - '"Algunas veces me decepcionas." -Naamah'
     - '77'
     - I
     - '2013-02-19 17:50:26.1773'
@@ -1529,7 +1528,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Te veo algo cansado…" -Naamah'
+    - '"Te veo algo cansado…" -Naamah'
     - '78'
     - C
     - '2013-02-19 17:50:26.870614'
@@ -1549,7 +1548,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Es mejor quedarse en casa." Dicho de Gothika'
+    - '"Es mejor quedarse en casa." Dicho de Gothika'
     - '79'
     - E
     - '2013-02-19 17:50:27.79781'
@@ -1580,7 +1579,7 @@ versiones:
     - '2'
     - '2'
   - - '81'
-    - ! 'Evasivo. 2, destruir Gárgola diablo: El aliado objetivo obtiene evasivo hasta
+    - 'Evasivo. 2, destruir Gárgola diablo: El aliado objetivo obtiene evasivo hasta
       el final del turno.'
     - Aliado
     - 
@@ -1588,7 +1587,7 @@ versiones:
     - '2'
     - '1'
     - Muerte
-    - ! '"Vigilantes nocturnos, protejan nuestro majestuoso legado." -Unwaj'
+    - '"Vigilantes nocturnos, protejan nuestro majestuoso legado." -Unwaj'
     - '81'
     - C
     - '2013-02-19 17:50:29.138689'
@@ -1608,7 +1607,7 @@ versiones:
     - '4'
     - '4'
     - Muerte
-    - ! '"Ya nos servirás luego..."'
+    - '"Ya nos servirás luego..."'
     - '82'
     - R
     - '2013-02-19 17:50:29.803141'
@@ -1640,7 +1639,7 @@ versiones:
     - '4'
     - '4'
   - - '84'
-    - ! 'Tu demonio hace 2 daño al demonio objetivo por cada aliado que ese demonio
+    - 'Tu demonio hace 2 daño al demonio objetivo por cada aliado que ese demonio
       controle. Vínculo 0: Tu demonio hace 2 daño a cada demonio.'
     - Ritual
     - 
@@ -1667,7 +1666,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Los muertos huelen horrible. Es preferible otra estatua en la plaza de piedra."
+    - '"Los muertos huelen horrible. Es preferible otra estatua en la plaza de piedra."
       -Monje superior'
     - '85'
     - C
@@ -1687,7 +1686,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"No eres bienvenido aquí." -Naamah'
+    - '"No eres bienvenido aquí." -Naamah'
     - '86'
     - C
     - '2013-02-19 17:50:32.588821'
@@ -1745,7 +1744,7 @@ versiones:
     - '3'
     - '5'
     - Muerte
-    - ! '"Qué lindos, me encanta cómo se arrodillan…"'
+    - '"Qué lindos, me encanta cómo se arrodillan…"'
     - '89'
     - R
     - '2013-02-19 17:50:34.758749'
@@ -1764,7 +1763,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Esta es tu segunda oportunidad… Tu oportunidad de obedecerme." -Unwaj'
+    - '"Esta es tu segunda oportunidad… Tu oportunidad de obedecerme." -Unwaj'
     - '90'
     - I
     - '2013-02-19 17:50:35.438102'
@@ -1783,7 +1782,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Cada ser posee una definición propia de justicia." -Seguidor de Arasunu'
+    - '"Cada ser posee una definición propia de justicia." -Seguidor de Arasunu'
     - '91'
     - R
     - '2013-02-19 17:50:36.108019'
@@ -1815,14 +1814,14 @@ versiones:
     - '8'
     - '8'
   - - '93'
-    - ! 'X, destruir Barahai curioso: Destruye el objeto objetivo de coste X.'
+    - 'X, destruir Barahai curioso: Destruye el objeto objetivo de coste X.'
     - Aliado
     - 
     - Barahai
     - '1'
     - '2'
     - Poder
-    - ! '"¿Me pregunto qué…?"'
+    - '"¿Me pregunto qué…?"'
     - '93'
     - C
     - '2013-02-19 17:50:37.601973'
@@ -1873,8 +1872,8 @@ versiones:
     - '1'
     - '1'
   - - '96'
-    - ! 'Agresor. 2, destruir Barahai valiente: El aliado objetivo obtiene agresor
-      hasta el final del turno.'
+    - 'Agresor. 2, destruir Barahai valiente: El aliado objetivo obtiene agresor hasta
+      el final del turno.'
     - Aliado
     - 
     - Barahai
@@ -1893,8 +1892,7 @@ versiones:
     - '2'
     - '2'
   - - '97'
-    - ! 'Vínculo 0: Pon el aliado objetivo de coste 3 o menos de tu Inferno en tu
-      mano.'
+    - 'Vínculo 0: Pon el aliado objetivo de coste 3 o menos de tu Inferno en tu mano.'
     - Aliado
     - 
     - Humano
@@ -1913,14 +1911,14 @@ versiones:
     - '2'
     - '2'
   - - '98'
-    - ! 'Vínculo 0: Mezcla hasta tres cartas objetivo de tu Inferno en tu mazo.'
+    - 'Vínculo 0: Mezcla hasta tres cartas objetivo de tu Inferno en tu mazo.'
     - Aliado
     - 
     - Humano
     - '2'
     - '3'
     - Poder
-    - ! '"Todavía hay tiempo de sanar nuestros errores."'
+    - '"Todavía hay tiempo de sanar nuestros errores."'
     - '98'
     - I
     - '2013-02-19 17:50:41.129133'
@@ -1960,7 +1958,7 @@ versiones:
     - '1'
     - '2'
     - Poder
-    - ! '"Mi fuerza es ahora de mis hermanos."'
+    - '"Mi fuerza es ahora de mis hermanos."'
     - '100'
     - C
     - '2013-02-19 17:50:42.516154'
@@ -1979,7 +1977,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Eres la clave. ¡Enorgulléceme!" -Lapátt'
+    - '"Eres la clave. ¡Enorgulléceme!" -Lapátt'
     - '101'
     - C
     - '2013-02-19 17:50:43.30826'
@@ -1991,8 +1989,8 @@ versiones:
     - '1'
     - '1'
   - - '102'
-    - ! 'Destruir Corteza del renacimiento: Pon el Barahai objetivo de tu Inferno
-      en tu mano.'
+    - 'Destruir Corteza del renacimiento: Pon el Barahai objetivo de tu Inferno en
+      tu mano.'
     - Objeto
     - 
     - 
@@ -2059,7 +2057,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Si no conoces el camino, no te aventures en el Bosque de los primeros hijos."
+    - '"Si no conoces el camino, no te aventures en el Bosque de los primeros hijos."
       Dicho barahai'
     - '105'
     - C
@@ -2079,7 +2077,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"¡Siente mi poder en tus garras!" -Arasunu'
+    - '"¡Siente mi poder en tus garras!" -Arasunu'
     - '106'
     - C
     - '2013-02-19 17:50:46.721984'
@@ -2118,8 +2116,8 @@ versiones:
     - '3'
     - '2'
     - Poder
-    - ! '"Nara, no temas. Nuestra hora ha llegado. Los niños cantarán por siempre
-      la canción, donde los Hermanos de la tierra protegieron su tribu."'
+    - '"Nara, no temas. Nuestra hora ha llegado. Los niños cantarán por siempre la
+      canción, donde los Hermanos de la tierra protegieron su tribu."'
     - '108'
     - C
     - '2013-02-19 17:50:48.066704'
@@ -2169,7 +2167,7 @@ versiones:
     - '9'
     - '9'
   - - '111'
-    - ! '3, girar: Pon una ficha de aliado poder Barahai 3 FUE, 3 RES en juego.'
+    - '3, girar: Pon una ficha de aliado poder Barahai 3 FUE, 3 RES en juego.'
     - Objeto
     - 
     - 
@@ -2195,7 +2193,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"¿Escuchas el sonido de su despertar?" -Zustatek'
+    - '"¿Escuchas el sonido de su despertar?" -Zustatek'
     - '112'
     - C
     - '2013-02-19 17:50:50.935677'
@@ -2227,14 +2225,14 @@ versiones:
     - '1'
     - '1'
   - - '114'
-    - ! 'Girar: El aliado objetivo obtiene +3 FUE hasta el final del turno.'
+    - 'Girar: El aliado objetivo obtiene +3 FUE hasta el final del turno.'
     - Aliado
     - Único
     - Súcubo
     - '3'
     - '3'
     - Poder
-    - ! '"Dicen que su voz llena de coraje hasta los árboles dormidos." -Hermano chamán'
+    - '"Dicen que su voz llena de coraje hasta los árboles dormidos." -Hermano chamán'
     - '114'
     - R
     - '2013-02-19 17:50:52.299725'
@@ -2253,7 +2251,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"No permitiré que lastimes mis adoradas bestias." -Arasunu'
+    - '"No permitiré que lastimes mis adoradas bestias." -Arasunu'
     - '115'
     - I
     - '2013-02-19 17:50:52.975794'
@@ -2345,17 +2343,17 @@ versiones:
     - '5'
   - - '120'
     - Exilia hasta tres cartas objetivo de un Inferno.
-    - ! 'Ritual '
+    - Ritual
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"Esta civilización nunca existió." -At Fjerne'
+    - '"Esta civilización nunca existió." -At Fjerne'
     - '120'
     - C
     - '2013-02-19 17:50:56.492071'
-    - '2013-02-19 17:50:57.084632'
+    - '2013-04-12 07:53:22.805082'
     - '120'
     - true
     - '1'
@@ -2363,7 +2361,7 @@ versiones:
     - '1'
     - '1'
   - - '121'
-    - ! 'Girar: Tu demonio hace 1 daño al demonio objetivo.'
+    - 'Girar: Tu demonio hace 1 daño al demonio objetivo.'
     - Objeto
     - 
     - 
@@ -2420,14 +2418,14 @@ versiones:
     - '0'
     - '0'
   - - '124'
-    - ! 'Destruir Botiquín médico: Remueve todo el daño del aliado objetivo.'
+    - 'Destruir Botiquín médico: Remueve todo el daño del aliado objetivo.'
     - Objeto
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"Toma el mío, lo necesitarás mas que yo." -Últimas palabras del guía'
+    - '"Toma el mío, lo necesitarás mas que yo." -Últimas palabras del guía'
     - '124'
     - C
     - '2013-02-19 17:50:59.290373'
@@ -2447,7 +2445,7 @@ versiones:
     - '4'
     - '4'
     - Neutral
-    - ! '"¿Ya llegamos?"'
+    - '"¿Ya llegamos?"'
     - '125'
     - R
     - '2013-02-19 17:50:59.965264'
@@ -2479,7 +2477,7 @@ versiones:
     - '2'
     - '2'
   - - '127'
-    - ! 'Vínculo 0: No se pueden jugar habilidades activadas hasta el final del turno.'
+    - 'Vínculo 0: No se pueden jugar habilidades activadas hasta el final del turno.'
     - Aliado
     - 
     - Humano
@@ -2505,7 +2503,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Adoro el olor de carne quemada." -Akayra'
+    - '"Adoro el olor de carne quemada." -Akayra'
     - '128'
     - C
     - '2013-02-19 17:51:01.996079'
@@ -2517,7 +2515,7 @@ versiones:
     - '2'
     - '2'
   - - '129'
-    - ! 'Protector.2, destruir Centinela de la frontera: El aliado objetivo obtiene
+    - 'Protector.2, destruir Centinela de la frontera: El aliado objetivo obtiene
       Protector hasta el final del turno.'
     - Aliado
     - 
@@ -2525,7 +2523,7 @@ versiones:
     - '1'
     - '3'
     - Neutral
-    - ! '"Defender a cualquier costo."'
+    - '"Defender a cualquier costo."'
     - '129'
     - C
     - '2013-02-19 17:51:02.674034'
@@ -2544,7 +2542,7 @@ versiones:
     - '3'
     - '7'
     - Neutral
-    - ! '"¿Es posible ver un Cienojos antes de que él te vea?" Antiguo refrán'
+    - '"¿Es posible ver un Cienojos antes de que él te vea?" Antiguo refrán'
     - '130'
     - I
     - '2013-02-19 17:51:03.332604'
@@ -2556,7 +2554,7 @@ versiones:
     - '6'
     - '6'
   - - '131'
-    - ! 'Cofre del olvido no se endereza en tu Restauración. Girar: Exilia la primer
+    - 'Cofre del olvido no se endereza en tu Restauración. Girar: Exilia la primer
       carta de un Inferno. Exiliar una carta de tu Inferno: Endereza Cofre del olvido.'
     - Objeto
     - 
@@ -2657,18 +2655,18 @@ versiones:
   - - '136'
     - Mezcla las primeras siete cartas de tu Inferno en tu mazo. Luego exilia Desgarrar
       la realidad.
-    - ! 'Ritual '
+    - Ritual
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"Mi conexión con tu mundo es más grande de lo que puedas siquiera conocer."
+    - '"Mi conexión con tu mundo es más grande de lo que puedas siquiera conocer."
       -Viden'
     - '136'
     - I
     - '2013-02-19 17:51:07.487268'
-    - '2013-02-19 17:51:08.101697'
+    - '2013-04-12 07:53:22.864489'
     - '136'
     - true
     - '1'
@@ -2822,7 +2820,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Cambio mi riqueza por nuevo conocimiento."'
+    - '"Cambio mi riqueza por nuevo conocimiento."'
     - '144'
     - I
     - '2013-02-19 17:51:13.009179'
@@ -2929,14 +2927,14 @@ versiones:
     - '2'
     - '2'
   - - '150'
-    - ! 'Generador de luminium entra en juego girado. Girar: Agrega 1 energía.'
+    - 'Generador de luminium entra en juego girado. Girar: Agrega 1 energía.'
     - Objeto
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"Antiguo pero creativo diseño." -Bibliotecario de éter'
+    - '"Antiguo pero creativo diseño." -Bibliotecario de éter'
     - '150'
     - I
     - '2013-02-19 17:51:17.16017'
@@ -2955,7 +2953,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! 'En Gothika hay una sola regla que debes conocer a la perfección: ¡OBEDECE!'
+    - 'En Gothika hay una sola regla que debes conocer a la perfección: ¡OBEDECE!'
     - '151'
     - R
     - '2013-02-19 17:51:17.834985'
@@ -3005,14 +3003,14 @@ versiones:
     - '1'
     - '1'
   - - '154'
-    - ! 'X, destruir Homúnculo de laboratorio: Remueve X daño del aliado objetivo.'
+    - 'X, destruir Homúnculo de laboratorio: Remueve X daño del aliado objetivo.'
     - Aliado
     - 
     - Homúnculo
     - '1'
     - '2'
     - Neutral
-    - ! '"Oh señor mío, ¿nueva tarea tendrá usted?"'
+    - '"Oh señor mío, ¿nueva tarea tendrá usted?"'
     - '154'
     - C
     - '2013-02-19 17:51:19.881639'
@@ -3044,7 +3042,7 @@ versiones:
     - '0'
     - '0'
   - - '156'
-    - ! 'Girar: Remueve 2 daño del aliado objetivo.'
+    - 'Girar: Remueve 2 daño del aliado objetivo.'
     - Aliado
     - 
     - Humano
@@ -3063,7 +3061,7 @@ versiones:
     - '3'
     - '3'
   - - '157'
-    - ! '3, girar: Endereza el aliado objetivo'
+    - '3, girar: Endereza el aliado objetivo'
     - Objeto
     - 
     - 
@@ -3082,14 +3080,14 @@ versiones:
     - '3'
     - '3'
   - - '158'
-    - ! 'Destruir Lagarto escamacristal: Agrega 1 energía.'
+    - 'Destruir Lagarto escamacristal: Agrega 1 energía.'
     - Aliado
     - 
     - Reptil
     - '1'
     - '1'
     - Neutral
-    - ! '"Su carne es extremadamente sabrosa, aunque no es por eso que los buscan."'
+    - '"Su carne es extremadamente sabrosa, aunque no es por eso que los buscan."'
     - '158'
     - C
     - '2013-02-19 17:51:22.719789'
@@ -3109,7 +3107,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Cuando mueres en esta tierra, tu alma sufre más dolor que tu cuerpo." Leyenda
+    - '"Cuando mueres en esta tierra, tu alma sufre más dolor que tu cuerpo." Leyenda
       antigua'
     - '159'
     - I
@@ -3167,7 +3165,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Esta es MI TIERRA, y estas son TUS REGLAS." -Comandante nungnarh'
+    - '"Esta es MI TIERRA, y estas son TUS REGLAS." -Comandante nungnarh'
     - '162'
     - I
     - '2013-02-19 17:51:25.393632'
@@ -3283,7 +3281,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Ya no necesitarás esto." -Zustatek'
+    - '"Ya no necesitarás esto." -Zustatek'
     - '168'
     - C
     - '2013-02-19 17:51:29.607967'
@@ -3295,7 +3293,7 @@ versiones:
     - '2'
     - '2'
   - - '169'
-    - ! 'Busca en tu mazo hasta 3 rituales con recobrar y ponlos en tu Inferno. Luego
+    - 'Busca en tu mazo hasta 3 rituales con recobrar y ponlos en tu Inferno. Luego
       mezcla tu mazo. Vínculo 0: Busca en tu mazo un ritual con recobrar y ponlo en
       tu Inferno. Luego mezcla tu mazo.'
     - Ritual
@@ -3459,7 +3457,7 @@ versiones:
     - '2'
     - '2'
     - Neutral
-    - ! '"Mi oportunidad esta cerca, no puedes vigilarme eternamente…"'
+    - '"Mi oportunidad esta cerca, no puedes vigilarme eternamente…"'
     - '177'
     - I
     - '2013-02-19 17:51:35.951875'
@@ -3471,7 +3469,7 @@ versiones:
     - '3'
     - '3'
   - - '178'
-    - ! 'El escenario pierde todas sus habilidades. Vínculo 0: Destruye el escenario
+    - 'El escenario pierde todas sus habilidades. Vínculo 0: Destruye el escenario
       objetivo.'
     - Aliado
     - 
@@ -3517,7 +3515,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Despídete de todos los mundos." -Unwaj'
+    - '"Despídete de todos los mundos." -Unwaj'
     - '180'
     - I
     - '2013-02-19 17:51:38.104725'
@@ -3690,7 +3688,7 @@ versiones:
     - '0'
     - 
     - Caos
-    - ! '"¿Crees que un simple rasguño puede detenerme? ¡Yo soy la hija del fuego!"'
+    - '"¿Crees que un simple rasguño puede detenerme? ¡Yo soy la hija del fuego!"'
     - '1'
     - I
     - '2013-02-19 17:59:06.751275'
@@ -3702,7 +3700,7 @@ versiones:
     - 
     - 
   - - '190'
-    - ! '{0}: Voltea Rasap. Juega esta habilidad solo si controlas 3 o + armas / No
+    - '{0}: Voltea Rasap. Juega esta habilidad solo si controlas 3 o + armas / No
       puedes jugar aliados. Te cuesta 1 menos equipar las armas'
     - 
     - Demonio
@@ -3710,7 +3708,7 @@ versiones:
     - '0'
     - 
     - Caos
-    - ! '"La gloria volverá a ser mía. Esta vez para siempre."'
+    - '"La gloria volverá a ser mía. Esta vez para siempre."'
     - '2'
     - I
     - '2013-02-19 17:59:08.755172'
@@ -3722,14 +3720,14 @@ versiones:
     - 
     - 
   - - '191'
-    - ! 'Cuando haya 7 o mas aliados en juego voltea Syv '
+    - 'Cuando haya 7 o mas aliados en juego voltea Syv '
     - 
     - Demonio
     - 
     - '1'
     - 
     - Caos
-    - ! '"Laz arenahz hemoz de ezpandir. ¡El Mundo zherá nuestro!"'
+    - '"Laz arenahz hemoz de ezpandir. ¡El Mundo zherá nuestro!"'
     - '3'
     - I
     - '2013-02-19 17:59:10.198955'
@@ -3741,7 +3739,7 @@ versiones:
     - 
     - 
   - - '192'
-    - ! 'Descarta tu mano: Voltea Baggrund / Descarta una carta de tu mano: Baggrund
+    - 'Descarta tu mano: Voltea Baggrund / Descarta una carta de tu mano: Baggrund
       obtiene +1 FUE hasta el final del turno'
     - 
     - Demonio
@@ -3749,7 +3747,7 @@ versiones:
     - '0'
     - 
     - Locura
-    - ! '"No necesito opciones, yo moldeo mi futuro"'
+    - '"No necesito opciones, yo moldeo mi futuro"'
     - '4'
     - I
     - '2013-02-19 17:59:11.57649'
@@ -3768,7 +3766,7 @@ versiones:
     - '1'
     - 
     - Locura
-    - ! '"Cada pensamiento, cada idea, me acerca mas a la perfección."'
+    - '"Cada pensamiento, cada idea, me acerca mas a la perfección."'
     - '5'
     - I
     - '2013-02-19 17:59:13.107097'
@@ -3787,7 +3785,7 @@ versiones:
     - '99'
     - 
     - Locura
-    - ! '"¿Que clase de engaño es este? ¡Ahora sentirás la ira de un verdadero demonio!"'
+    - '"¿Que clase de engaño es este? ¡Ahora sentirás la ira de un verdadero demonio!"'
     - '6'
     - I
     - '2013-02-19 17:59:14.51724'
@@ -3799,7 +3797,7 @@ versiones:
     - 
     - 
   - - '195'
-    - ! 'Exilia las primeras 3 cartas de tu infierno, Voltea At Fjerne / Exilia las
+    - 'Exilia las primeras 3 cartas de tu infierno, Voltea At Fjerne / Exilia las
       primeras 3 cartas de tu infierno: At Fjerne obtiene +1 FUE hasta el final del
       turno'
     - 
@@ -3808,7 +3806,7 @@ versiones:
     - '0'
     - 
     - Muerte
-    - ! '"Ahora que la tierra es mi hogar, la decorare a mi gusto"'
+    - '"Ahora que la tierra es mi hogar, la decorare a mi gusto"'
     - '7'
     - I
     - '2013-02-19 17:59:15.83103'
@@ -3829,7 +3827,7 @@ versiones:
     - '1'
     - 
     - Muerte
-    - ! '"Tus niños podrán jugar con los desechos que encuentren en el submundo"'
+    - '"Tus niños podrán jugar con los desechos que encuentren en el submundo"'
     - '8'
     - I
     - '2013-02-19 17:59:17.232696'
@@ -3850,7 +3848,7 @@ versiones:
     - '0'
     - 
     - Muerte
-    - ! '"No soy el creador, solo manipulo la realidad."'
+    - '"No soy el creador, solo manipulo la realidad."'
     - '9'
     - I
     - '2013-02-19 17:59:18.718853'
@@ -3870,7 +3868,7 @@ versiones:
     - '1'
     - 
     - Poder
-    - ! '"En el número habita la fuerza"'
+    - '"En el número habita la fuerza"'
     - '10'
     - I
     - '2013-02-19 17:59:20.074507'
@@ -3889,7 +3887,7 @@ versiones:
     - '3'
     - 
     - Poder
-    - ! '"Corran malditos infieles. Pronto seré libre y adoro la cacería."'
+    - '"Corran malditos infieles. Pronto seré libre y adoro la cacería."'
     - '11'
     - I
     - '2013-02-19 17:59:21.498302'
@@ -3901,14 +3899,14 @@ versiones:
     - 
     - 
   - - '200'
-    - ! '4: Voltea a Zustatek / 4: Zustatek obtiene +1 FUE hasta el final del turno'
+    - '4: Voltea a Zustatek / 4: Zustatek obtiene +1 FUE hasta el final del turno'
     - 
     - Demonio
     - 
     - '0'
     - 
     - Poder
-    - ! '"Este es mi dominio y no eres bienvenido"'
+    - '"Este es mi dominio y no eres bienvenido"'
     - '12'
     - I
     - '2013-02-19 17:59:22.846461'
@@ -3920,14 +3918,14 @@ versiones:
     - 
     - 
   - - '201'
-    - ! 'Vínculo 1: Destruye el arma objetivo'
+    - 'Vínculo 1: Destruye el arma objetivo'
     - Aliado
     - 
     - Humano
     - '2'
     - '2'
     - Caos
-    - ! '"Fuego sagrado, guía mi hoja hacia nuestros enemigos."'
+    - '"Fuego sagrado, guía mi hoja hacia nuestros enemigos."'
     - '13'
     - C
     - '2013-02-19 17:59:24.457603'
@@ -3947,7 +3945,7 @@ versiones:
     - '2'
     - '2'
     - Caos
-    - ! '"Maltratos rabia y sangre. El trabajo soñado al que aspira todo niño de la
+    - '"Maltratos rabia y sangre. El trabajo soñado al que aspira todo niño de la
       arena."'
     - '14'
     - C
@@ -3987,8 +3985,8 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Las reliquias tenían el poder suficiente para abrir la puerta y vincular
-      nuestro mundo con el pandemónium"'
+    - '"Las reliquias tenían el poder suficiente para abrir la puerta y vincular nuestro
+      mundo con el pandemónium"'
     - '16'
     - R
     - '2013-02-19 17:59:26.598943'
@@ -4000,14 +3998,14 @@ versiones:
     - '2'
     - '2'
   - - '205'
-    - ! 'Vínculo 0: Tu demonio hace 1 punto de daño al demonio objetivo'
+    - 'Vínculo 0: Tu demonio hace 1 punto de daño al demonio objetivo'
     - Aliado
     - 
     - Humano
     - '2'
     - '3'
     - Caos
-    - ! '"Su voz me susurra sobre tiempos antiguos, donde el fuego era vida, y ella
+    - '"Su voz me susurra sobre tiempos antiguos, donde el fuego era vida, y ella
       su dueña."'
     - '17'
     - I
@@ -4027,7 +4025,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Nota mental: no conjurar rituales desconocidos en la biblioteca" -Bibliotecario
+    - '"Nota mental: no conjurar rituales desconocidos en la biblioteca" -Bibliotecario
       de los silos'
     - '18'
     - C
@@ -4061,7 +4059,7 @@ versiones:
     - '4'
     - '4'
   - - '208'
-    - ! 'Destruir Cráneos de Hierro fundido: Tu demonio hace 1 punto de daño al aliado
+    - 'Destruir Cráneos de Hierro fundido: Tu demonio hace 1 punto de daño al aliado
       o demonio objetivo '
     - Arma
     - 
@@ -4069,7 +4067,7 @@ versiones:
     - '1'
     - '1'
     - Caos
-    - ! '"Los portadores de los cráneos suelen perder sus huellas dactilares a temprana
+    - '"Los portadores de los cráneos suelen perder sus huellas dactilares a temprana
       edad"'
     - '20'
     - I
@@ -4109,7 +4107,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Las historias de quienes han muerto aquí, hieren a quienes las oyen"'
+    - '"Las historias de quienes han muerto aquí, hieren a quienes las oyen"'
     - '22'
     - E
     - '2013-02-19 17:59:31.0393'
@@ -4128,7 +4126,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Fuego: causa y solución de cada problema Nungnarh'
+    - '"Fuego: causa y solución de cada problema Nungnarh'
     - '23'
     - I
     - '2013-02-19 17:59:31.730053'
@@ -4147,7 +4145,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! ' '
+    - ' '
     - '24'
     - I
     - '2013-02-19 17:59:32.430836'
@@ -4166,8 +4164,8 @@ versiones:
     - '2'
     - '2'
     - Caos
-    - ! '"Enviar a los niños en batalla, puede sonar cruel... Sobre todo para los
-      enemigos difuntos."'
+    - '"Enviar a los niños en batalla, puede sonar cruel... Sobre todo para los enemigos
+      difuntos."'
     - '25'
     - C
     - '2013-02-19 17:59:33.163292'
@@ -4179,7 +4177,7 @@ versiones:
     - '2'
     - '2'
   - - '214'
-    - ! 'Destruir Inyección sangrearena: Pon en juego una ficha de aliado (caos) Kirch
+    - 'Destruir Inyección sangrearena: Pon en juego una ficha de aliado (caos) Kirch
       FUE 1 RES 1 con la habilidad de Furia.'
     - Objeto
     - 
@@ -4187,7 +4185,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Sangre derramada en batalla, materia prima para la cirugía avanzada"'
+    - '"Sangre derramada en batalla, materia prima para la cirugía avanzada"'
     - '26'
     - C
     - '2013-02-19 17:59:33.876012'
@@ -4206,7 +4204,7 @@ versiones:
     - '2'
     - '2'
     - Caos
-    - ! '"La versatilidad del luminium liquido, lo transforma sin duda en el mineral
+    - '"La versatilidad del luminium liquido, lo transforma sin duda en el mineral
       mas codiciado."'
     - '27'
     - C
@@ -4227,7 +4225,7 @@ versiones:
     - '2'
     - '2'
     - Caos
-    - ! '"Los débiles sucumbieron ante el pulso de destrucción... Nunca los llamaran
+    - '"Los débiles sucumbieron ante el pulso de destrucción... Nunca los llamaran
       de ese modo"'
     - '28'
     - C
@@ -4248,7 +4246,7 @@ versiones:
     - '2'
     - '1'
     - Caos
-    - ! '"Cuando el espíritu se niega al inferno."'
+    - '"Cuando el espíritu se niega al inferno."'
     - '29'
     - I
     - '2013-02-19 17:59:36.068425'
@@ -4260,9 +4258,9 @@ versiones:
     - '2'
     - '2'
   - - '218'
-    - ! 'Kirch Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Furia
-      mientras haya Thanatos. Kirch Poseído es un Vampiro además de sus otros tipos
-      mientras haya Thanatos. '
+    - 'Kirch Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Furia mientras
+      haya Thanatos. Kirch Poseído es un Vampiro además de sus otros tipos mientras
+      haya Thanatos. '
     - Aliado
     - 
     - Kirch
@@ -4288,7 +4286,7 @@ versiones:
     - '1'
     - '1'
     - Caos
-    - ! ' '
+    - ' '
     - '31'
     - C
     - '2013-02-19 17:59:37.521019'
@@ -4307,7 +4305,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Los cielos se enrojecieron, llovio durante tres jornadas, una lluvia negra
+    - '"Los cielos se enrojecieron, llovio durante tres jornadas, una lluvia negra
       y espesa. Corrompio la tierra, el agua se evaporo, arboles, semillas, arbustos,
       hierbas, todo se convirtio en lo que conocemos, en desierto, en arena." -Fragmento
       del Imperio de la arena roja'
@@ -4330,7 +4328,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"La gran llama verde ha decidido tu destino"'
+    - '"La gran llama verde ha decidido tu destino"'
     - '33'
     - I
     - '2013-02-19 17:59:39.041049'
@@ -4349,7 +4347,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Sangre de cirugías fallidas. El maestro Tod es un gran proveedor."'
+    - '"Sangre de cirugías fallidas. El maestro Tod es un gran proveedor."'
     - '34'
     - C
     - '2013-02-19 17:59:39.746134'
@@ -4361,7 +4359,7 @@ versiones:
     - '4'
     - '4'
   - - '223'
-    - ! '0: Destruye un recurso que controles'
+    - '0: Destruye un recurso que controles'
     - Objeto
     - 
     - 
@@ -4388,7 +4386,7 @@ versiones:
     - '2'
     - 
     - Caos
-    - ! '"Bautizada cariñosamente como la destruyehogares"'
+    - '"Bautizada cariñosamente como la destruyehogares"'
     - '36'
     - I
     - '2013-02-19 17:59:41.141123'
@@ -4400,15 +4398,15 @@ versiones:
     - '3'
     - '3'
   - - '225'
-    - ! 'Destruir Mascara Opresora: el daño de combate no puede ser prevenido este
-      turno. Si hay Thanatos, en vez de eso, el daño no puede ser prevenido este turno.'
+    - 'Destruir Mascara Opresora: el daño de combate no puede ser prevenido este turno.
+      Si hay Thanatos, en vez de eso, el daño no puede ser prevenido este turno.'
     - Objeto
     - 
     - 
     - 
     - 
     - Caos
-    - ! '"La ajustaste bien, ¿no es así?" -Guardacarceles difunto'
+    - '"La ajustaste bien, ¿no es así?" -Guardacarceles difunto'
     - '37'
     - C
     - '2013-02-19 17:59:41.836275'
@@ -4427,7 +4425,7 @@ versiones:
     - '4'
     - '2'
     - Caos
-    - ! '"Bienvenido extranjero, ¿Que extremidad nos dejas como pago por tu estadía?"'
+    - '"Bienvenido extranjero, ¿Que extremidad nos dejas como pago por tu estadía?"'
     - '38'
     - C
     - '2013-02-19 17:59:42.571919'
@@ -4467,7 +4465,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Gloria, sangre y dolor: entretenimiento popular."'
+    - '"Gloria, sangre y dolor: entretenimiento popular."'
     - '40'
     - R
     - '2013-02-19 17:59:44.140844'
@@ -4499,14 +4497,14 @@ versiones:
     - '6'
     - '6'
   - - '230'
-    - ! 'Destruir pozo de lava: Pon un arma de tu Inferno en tu mano'
+    - 'Destruir pozo de lava: Pon un arma de tu Inferno en tu mano'
     - Objeto
     - 
     - 
     - 
     - 
     - Caos
-    - ! '"Aquel que se atreva merece la recompensa"'
+    - '"Aquel que se atreva merece la recompensa"'
     - '42'
     - I
     - '2013-02-19 17:59:45.865698'
@@ -4526,7 +4524,7 @@ versiones:
     - '2'
     - '3'
     - Caos
-    - ! '"Tanger provee a sus fieles siervos con armamento tan poderoso como los seres
+    - '"Tanger provee a sus fieles siervos con armamento tan poderoso como los seres
       que lo forjan"'
     - '43'
     - R
@@ -4547,8 +4545,8 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Serás señor de la arena, cuando el día se cubra con el manto de la noche
-      y el rojo poder del arma de cristal se despliegue en combate" -Akayra'
+    - '"Serás señor de la arena, cuando el día se cubra con el manto de la noche y
+      el rojo poder del arma de cristal se despliegue en combate" -Akayra'
     - '44'
     - R
     - '2013-02-19 17:59:47.27692'
@@ -4567,7 +4565,7 @@ versiones:
     - 
     - 
     - Caos
-    - ! '"Mire el espectáculo a través de una cortina de fuego que me envolvía. Todo
+    - '"Mire el espectáculo a través de una cortina de fuego que me envolvía. Todo
       ardía, todo se quemaba, sin dejar cenizas, la arena me bañaba" _Fragmento del
       imperio de la arena roja'
     - '45'
@@ -4581,7 +4579,7 @@ versiones:
     - X1
     - '1'
   - - '234'
-    - ! 'Pon 2 contadores de daño sobre Volker: Pon en juego una ficha (caos) Kirch
+    - 'Pon 2 contadores de daño sobre Volker: Pon en juego una ficha (caos) Kirch
       1 FUE 1 RES con la habilidad de Furia. Siempre que un kirch sea destruido, remueve
       un contador de daño sobre Volker'
     - Aliado
@@ -4590,7 +4588,7 @@ versiones:
     - '2'
     - '5'
     - Caos
-    - ! ' '
+    - ' '
     - '46'
     - E
     - '2013-02-19 17:59:48.692276'
@@ -4609,7 +4607,7 @@ versiones:
     - '3'
     - '3'
     - Locura
-    - ! '"La ciudad debe crecer, el bosque deberá buscar otro lugar"'
+    - '"La ciudad debe crecer, el bosque deberá buscar otro lugar"'
     - '47'
     - C
     - '2013-02-19 17:59:49.570126'
@@ -4629,8 +4627,8 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Los implantes del tórax parecieron responder a alguna orden transmitida
-      y abrieron un compartimiento circular en el abdomen." -Fragmento de Efe, pionero
+    - '"Los implantes del tórax parecieron responder a alguna orden transmitida y
+      abrieron un compartimiento circular en el abdomen." -Fragmento de Efe, pionero
       de la rebelión'
     - '48'
     - R
@@ -4643,7 +4641,7 @@ versiones:
     - '1'
     - '1'
   - - '237'
-    - ! 'Cuando Bomba de oscuridad entre en juego toma una carta. Destruir bomba de
+    - 'Cuando Bomba de oscuridad entre en juego toma una carta. Destruir bomba de
       oscuridad: El aliado objetivo pierde todas sus habilidades hasta el final del
       turno'
     - Objeto
@@ -4652,7 +4650,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"El artilugio los tomo por sorpresa, y no tuvieron tiempo de repelerlo" -Fragmentos
+    - '"El artilugio los tomo por sorpresa, y no tuvieron tiempo de repelerlo" -Fragmentos
       de Efe, pionero de la rebelión'
     - '49'
     - C
@@ -4665,14 +4663,14 @@ versiones:
     - '2'
     - '2'
   - - '238'
-    - ! 'Vínculo 1: El demonio objetivo descarta una carta al azar'
+    - 'Vínculo 1: El demonio objetivo descarta una carta al azar'
     - Aliado
     - 
     - Humano
     - '2'
     - '3'
     - Locura
-    - ! '"¿Me harías una lectura? Se que es un privilegio de los veneradores, ¡pero
+    - '"¿Me harías una lectura? Se que es un privilegio de los veneradores, ¡pero
       puedo pagarte una cifra voluminosa!" -Aspen, caminante solitario'
     - '50'
     - I
@@ -4711,7 +4709,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Filtrando información, el cerebro humano es muy imperfecto" -Mimere'
+    - '"Filtrando información, el cerebro humano es muy imperfecto" -Mimere'
     - '52'
     - C
     - '2013-02-19 17:59:53.073404'
@@ -4730,7 +4728,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Es un ritual sencillo, no lo he probado aun. Pero sospecho que con la ayuda
+    - '"Es un ritual sencillo, no lo he probado aun. Pero sospecho que con la ayuda
       de su magnificencia podrai abrir un portal tan grande como para hacer pasar
       por el a todo Jemo" -Efe, pionero de la rebelion'
     - '53'
@@ -4764,16 +4762,16 @@ versiones:
     - '2'
     - '2'
   - - '243'
-    - ! 'Cyborg Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Halo
-      mientras haya Thanatos. Cyborg Poseído es un Vampiro además de sus otros tipos
-      mientras haya Thanatos. '
+    - 'Cyborg Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Halo mientras
+      haya Thanatos. Cyborg Poseído es un Vampiro además de sus otros tipos mientras
+      haya Thanatos. '
     - Aliado
     - 
     - Cyborg
     - '1'
     - '1'
     - Locura
-    - ! '"Cuando la demencia se apodera de la locura, los resultados no son alentadores"'
+    - '"Cuando la demencia se apodera de la locura, los resultados no son alentadores"'
     - '55'
     - I
     - '2013-02-19 17:59:55.302546'
@@ -4792,7 +4790,7 @@ versiones:
     - '1'
     - '1'
     - Locura
-    - ! '"La segunda barrera de protección  de Jemo"'
+    - '"La segunda barrera de protección  de Jemo"'
     - '56'
     - C
     - '2013-02-19 17:59:56.002744'
@@ -4804,15 +4802,15 @@ versiones:
     - '1'
     - '1'
   - - '245'
-    - ! 'Los demonios juegan mostrando la carta superior de su mazo. Girar Delos:
-      El demonio objetivo mezcla su mazo'
+    - 'Los demonios juegan mostrando la carta superior de su mazo. Girar Delos: El
+      demonio objetivo mezcla su mazo'
     - Objeto
     - Único
     - 
     - 
     - 
     - Locura
-    - ! '"Las aguas del rio pueden traer valiosos objetos si se aprende a manipular
+    - '"Las aguas del rio pueden traer valiosos objetos si se aprende a manipular
       sus corrientes." Mimire'
     - '57'
     - R
@@ -4832,7 +4830,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"¿Crees que en algún lugar de la tierra estarías a salvo de la red de Viden?"
+    - '"¿Crees que en algún lugar de la tierra estarías a salvo de la red de Viden?"
       Fragmento de Efe, pionero de la rebelión'
     - '58'
     - R
@@ -4852,7 +4850,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"La materia es energía, al igual que el conocimiento." Mimere'
+    - '"La materia es energía, al igual que el conocimiento." Mimere'
     - '59'
     - I
     - '2013-02-19 17:59:58.092559'
@@ -4872,8 +4870,8 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"El domo de defensa estaba encendido, cubriendo la ciudad con una capa de
-      energia que hacia imposible la entrada." Fragmento de Efe, pionero de la rebelion'
+    - '"El domo de defensa estaba encendido, cubriendo la ciudad con una capa de energia
+      que hacia imposible la entrada." Fragmento de Efe, pionero de la rebelion'
     - '60'
     - E
     - '2013-02-19 17:59:58.899922'
@@ -4885,15 +4883,15 @@ versiones:
     - '3'
     - '3'
   - - '249'
-    - ! 'Destruir droide explorador: Pon un ritual de tu Inferno en tu mano'
+    - 'Destruir droide explorador: Pon un ritual de tu Inferno en tu mano'
     - Objeto
     - 
     - 
     - 
     - 
     - Locura
-    - ! '"Los droides viajan incansablemente hasta encontrar la sabiduría perdida
-      en el inferno."'
+    - '"Los droides viajan incansablemente hasta encontrar la sabiduría perdida en
+      el inferno."'
     - '61'
     - I
     - '2013-02-19 17:59:59.595501'
@@ -4905,7 +4903,7 @@ versiones:
     - '2'
     - '2'
   - - '250'
-    - ! '2: Pon en juego una ficha de objeto (Locura) Bot con la habilidad "Destruir
+    - '2: Pon en juego una ficha de objeto (Locura) Bot con la habilidad "Destruir
       Bot: Remueve 1 contador de daño sobre el cyborg objetivo". Girar: Todos tus
       bot son aliados 1 FUE, 1 RES hasta el final del turno.'
     - Aliado
@@ -4953,7 +4951,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Por mas fácil que parecía, la demencia imposibilito la tarea"'
+    - '"Por mas fácil que parecía, la demencia imposibilito la tarea"'
     - '64'
     - C
     - '2013-02-19 18:00:01.662284'
@@ -4969,11 +4967,11 @@ versiones:
       ese demonio, donde X es 3 menos la cantidad de cartas en su mano.
     - Escenario
     - 
-    - ! ' '
+    - ' '
     - 
     - 
     - Locura
-    - ! '"La ignorancia es penada por ley"'
+    - '"La ignorancia es penada por ley"'
     - '65'
     - R
     - '2013-02-19 18:00:02.366336'
@@ -4985,15 +4983,15 @@ versiones:
     - '0'
     - '0'
   - - '254'
-    - ! 'En cuanto Luminium Liquido entre en juego, puedes elegir un objeto en el
-      juego. Si lo haces, Luminium liquido entre en juego como una copia de ese objeto. '
+    - 'En cuanto Luminium Liquido entre en juego, puedes elegir un objeto en el juego.
+      Si lo haces, Luminium liquido entre en juego como una copia de ese objeto. '
     - Objeto
     - 
     - 
     - 
     - 
     - Locura
-    - ! '"La grandeza de cada idea, esta limitada por la grandeza de su dueño" -Mimire'
+    - '"La grandeza de cada idea, esta limitada por la grandeza de su dueño" -Mimire'
     - '66'
     - R
     - '2013-02-19 18:00:03.110966'
@@ -5024,7 +5022,7 @@ versiones:
     - '5'
     - '5'
   - - '256'
-    - ! 'Siempre que un ritual tenga como único objetivo al aliado equipado, puedes
+    - 'Siempre que un ritual tenga como único objetivo al aliado equipado, puedes
       cambiar el objetivo de ese ritual '
     - Aliado
     - Único
@@ -5032,8 +5030,8 @@ versiones:
     - '2'
     - '2'
     - Locura
-    - ! '"Luego de esa asombrosa maniobra esquiva, no le resulto difícil apuntar a
-      su enemigo y abrir fuego" -Fragmento de Efe, pionero de la rebelión'
+    - '"Luego de esa asombrosa maniobra esquiva, no le resulto difícil apuntar a su
+      enemigo y abrir fuego" -Fragmento de Efe, pionero de la rebelión'
     - '68'
     - R
     - '2013-02-19 18:00:04.683795'
@@ -5045,14 +5043,14 @@ versiones:
     - '4'
     - '4'
   - - '257'
-    - ! 'Destruir Ojo de la emboscada: Gira el aliado objetivo'
+    - 'Destruir Ojo de la emboscada: Gira el aliado objetivo'
     - Objeto
     - 
     - 
     - 
     - 
     - Locura
-    - ! '"Dispositivos de control, para mas mentes negligentes"'
+    - '"Dispositivos de control, para mas mentes negligentes"'
     - '69'
     - C
     - '2013-02-19 18:00:05.418516'
@@ -5068,11 +5066,11 @@ versiones:
       ese aliado. Gana la habilidad de furia hasta el final del turno.
     - Ritual
     - 
-    - ! ' '
+    - ' '
     - 
     - 
     - Locura
-    - ! ' "Escúchame atentamente, solo lo diré una vez." –Ubanna'
+    - ' "Escúchame atentamente, solo lo diré una vez." –Ubanna'
     - '70'
     - I
     - '2013-02-19 18:00:06.17894'
@@ -5084,8 +5082,8 @@ versiones:
     - '3'
     - '3'
   - - '259'
-    - ! 'Siempre que un demonio tome una carta, puedes poner en juego una ficha de
-      aliado Vampiro 1 FUE 1 RES. '
+    - 'Siempre que un demonio tome una carta, puedes poner en juego una ficha de aliado
+      Vampiro 1 FUE 1 RES. '
     - Aliado
     - Único
     - Súcubo
@@ -5104,15 +5102,15 @@ versiones:
     - '6'
     - '6'
   - - '260'
-    - ! 'Mira y ordena las primeras 3 cartas del demonio objetivo. Vínculo 1: Mira
-      y ordena las primeras 3 cartas de tu mazo.'
+    - 'Mira y ordena las primeras 3 cartas del demonio objetivo. Vínculo 1: Mira y
+      ordena las primeras 3 cartas de tu mazo.'
     - Ritual
     - Instantáneo
     - 
     - 
     - 
     - Locura
-    - ! '"Si, he visto tu futuro. No, no vivirás tanto."'
+    - '"Si, he visto tu futuro. No, no vivirás tanto."'
     - '72'
     - C
     - '2013-02-19 18:00:07.65837'
@@ -5124,14 +5122,14 @@ versiones:
     - '1'
     - '1'
   - - '261'
-    - ! '1, Girar: Gira el aliado objetivo'
+    - '1, Girar: Gira el aliado objetivo'
     - Objeto
     - 
     - 
     - 
     - 
     - Locura
-    - ! '"De su luz surgen tus mayores miedos'
+    - '"De su luz surgen tus mayores miedos'
     - '73'
     - I
     - '2013-02-19 18:00:08.368574'
@@ -5148,12 +5146,12 @@ versiones:
       mezcla su mazo. Exilia Robar cordura.
     - Ritual
     - 
-    - ! ' '
+    - ' '
     - 
     - 
     - Locura
-    - ! '"Si la inmortalidad reside en el mundo de las ideas, tu vida es mía, pues
-      así también lo es tu mente." -Baggrund'
+    - '"Si la inmortalidad reside en el mundo de las ideas, tu vida es mía, pues así
+      también lo es tu mente." -Baggrund'
     - '74'
     - E
     - '2013-02-19 18:00:09.198005'
@@ -5173,8 +5171,7 @@ versiones:
     - '3'
     - '3'
     - Locura
-    - ! '"Extrañare la risa, llanto y enojo de estos humanos, bueno, tal vez no."
-      -Baggrund'
+    - '"Extrañare la risa, llanto y enojo de estos humanos, bueno, tal vez no." -Baggrund'
     - '75'
     - I
     - '2013-02-19 18:00:09.897599'
@@ -5193,7 +5190,7 @@ versiones:
     - '2'
     - '2'
     - Locura
-    - ! '"No hay secreto escondido para ellos"'
+    - '"No hay secreto escondido para ellos"'
     - '76'
     - C
     - '2013-02-19 18:00:10.591041'
@@ -5212,7 +5209,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"No va a dolerte..." -Baggrund'
+    - '"No va a dolerte..." -Baggrund'
     - '77'
     - I
     - '2013-02-19 18:00:11.279597'
@@ -5224,14 +5221,14 @@ versiones:
     - '2'
     - '2'
   - - '266'
-    - ! 'Siempre que Tratante de conocimiento ataque, toma 3 cartas. '
+    - 'Siempre que Tratante de conocimiento ataque, toma 3 cartas. '
     - Aliado
     - 
     - Cyborg
     - 
     - 
     - Locura
-    - ! '"Verda, era el unico cyborg que lejos de imitar las usanzas del lugar, habia
+    - '"Verda, era el unico cyborg que lejos de imitar las usanzas del lugar, habia
       introducido su propio gusto a la poblacion." Fragmento de Efe, pionero de la
       rebelion'
     - '78'
@@ -5249,11 +5246,11 @@ versiones:
       ese demonio se descarta de esa carta.
     - Ritual
     - 
-    - ! ' '
+    - ' '
     - 
     - 
     - Locura
-    - ! '"No te preocupes, Terminare pronto." -Baggrund'
+    - '"No te preocupes, Terminare pronto." -Baggrund'
     - '79'
     - C
     - '2013-02-19 18:00:12.696661'
@@ -5273,7 +5270,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"No me cuentes nada, ya lo se TODO" -Viden'
+    - '"No me cuentes nada, ya lo se TODO" -Viden'
     - '80'
     - C
     - '2013-02-19 18:00:13.507438'
@@ -5285,15 +5282,15 @@ versiones:
     - '1'
     - '1'
   - - '269'
-    - ! 'Girar, Destruir un aliado que controles: Tu demonio obtiene +1 FUE hasta
-      el final del turno.'
+    - 'Girar, Destruir un aliado que controles: Tu demonio obtiene +1 FUE hasta el
+      final del turno.'
     - Objeto
     - 
     - 
     - 
     - 
     - Muerte
-    - ! '"Su altar no fue eregido para simples adoraciones, sino para los mas violentos
+    - '"Su altar no fue eregido para simples adoraciones, sino para los mas violentos
       sacrificios"'
     - '81'
     - E
@@ -5313,7 +5310,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"El vigilante sintió su brazo endurecerse rápidamente como el granito"'
+    - '"El vigilante sintió su brazo endurecerse rápidamente como el granito"'
     - '82'
     - C
     - '2013-02-19 18:00:14.877397'
@@ -5332,7 +5329,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Todos los caminos conducen al olvido." -Caminante de la Abadia'
+    - '"Todos los caminos conducen al olvido." -Caminante de la Abadia'
     - '83'
     - R
     - '2013-02-19 18:00:15.575919'
@@ -5351,7 +5348,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Adiós, adiós para siempre."'
+    - '"Adiós, adiós para siempre."'
     - '84'
     - C
     - '2013-02-19 18:00:16.268046'
@@ -5363,14 +5360,14 @@ versiones:
     - '1'
     - '1'
   - - '273'
-    - ! 'Destruir Calavera grabada: Pon un objeto de tu Inferno en tu mano'
+    - 'Destruir Calavera grabada: Pon un objeto de tu Inferno en tu mano'
     - Objeto
     - 
     - 
     - 
     - 
     - Muerte
-    - ! '"Tiempos pasados fueron grabados en lugares difíciles de encontrar."'
+    - '"Tiempos pasados fueron grabados en lugares difíciles de encontrar."'
     - '85'
     - I
     - '2013-02-19 18:00:16.971661'
@@ -5382,14 +5379,14 @@ versiones:
     - '2'
     - '2'
   - - '274'
-    - ! 'Vínculo 1: Exilia hasta 3 cartas objetivo de un Inferno'
+    - 'Vínculo 1: Exilia hasta 3 cartas objetivo de un Inferno'
     - Aliado
     - 
     - Humano
     - '2'
     - '3'
     - Muerte
-    - ! '"¿Mi concejo? Aléjate de la abadía lo antes que puedas."'
+    - '"¿Mi concejo? Aléjate de la abadía lo antes que puedas."'
     - '86'
     - I
     - '2013-02-19 18:00:17.659189'
@@ -5428,8 +5425,8 @@ versiones:
     - '3'
     - '2'
     - Muerte
-    - ! '"El cántico comenzó a replicar cada vez más fuerte, y de repente, el ser
-      concibió" -Fragmento de amanecer para un nuevo destierro."'
+    - '"El cántico comenzó a replicar cada vez más fuerte, y de repente, el ser concibió"
+      -Fragmento de amanecer para un nuevo destierro."'
     - '88'
     - C
     - '2013-02-19 18:00:19.207093'
@@ -5441,15 +5438,15 @@ versiones:
     - '3'
     - '3'
   - - '277'
-    - ! 'Destruir Cruz Repelente: Mueve un contador de daño de un aliado objetivo
-      a otro aliado objetivo'
+    - 'Destruir Cruz Repelente: Mueve un contador de daño de un aliado objetivo a
+      otro aliado objetivo'
     - Objeto
     - 
     - 
     - 
     - 
     - Muerte
-    - ! '"La mejor manera de soportar el dolor, es que otro lo soporte" -Mike'
+    - '"La mejor manera de soportar el dolor, es que otro lo soporte" -Mike'
     - '89'
     - C
     - '2013-02-19 18:00:19.899639'
@@ -5461,15 +5458,15 @@ versiones:
     - '1'
     - '1'
   - - '278'
-    - ! '1, Girar: el aliado objetivo no puede atacar este turno. Demona le hace 1
-      punto de daño a ese aliado.'
+    - '1, Girar: el aliado objetivo no puede atacar este turno. Demona le hace 1 punto
+      de daño a ese aliado.'
     - Objeto
     - Único
     - 
     - 
     - 
     - Muerte
-    - ! '"Rogaras por una muerte rápida, pero ya perdiste tu oportunidad." Unwaj'
+    - '"Rogaras por una muerte rápida, pero ya perdiste tu oportunidad." Unwaj'
     - '90'
     - R
     - '2013-02-19 18:00:20.610454'
@@ -5481,14 +5478,14 @@ versiones:
     - '3'
     - '3'
   - - '279'
-    - ! 'Si diablo acorazado fuera a recibir daño, prevén 1 punto de ese daño. '
+    - 'Si diablo acorazado fuera a recibir daño, prevén 1 punto de ese daño. '
     - Aliado
     - 
     - Diablo
     - '5'
     - '3'
     - Muerte
-    - ! '"Sus escamas se fundieron con las cenizas del primer incendio"'
+    - '"Sus escamas se fundieron con las cenizas del primer incendio"'
     - '91'
     - I
     - '2013-02-19 18:00:21.285361'
@@ -5500,15 +5497,15 @@ versiones:
     - '6'
     - '6'
   - - '280'
-    - ! 'Intercambia la FUE y la RES del Diablo Camaleón mientras haya Thanatos. '
+    - 'Intercambia la FUE y la RES del Diablo Camaleón mientras haya Thanatos. '
     - Aliado
     - 
     - Diablo
     - '1'
     - '3'
     - Muerte
-    - ! '"Representa la luz y la sombra, la belleza y la monstruosidad, la cordura
-      y la demencia"'
+    - '"Representa la luz y la sombra, la belleza y la monstruosidad, la cordura y
+      la demencia"'
     - '92'
     - C
     - '2013-02-19 18:00:22.012203'
@@ -5520,14 +5517,14 @@ versiones:
     - '2'
     - '2'
   - - '281'
-    - ! 'Diablo Ofuscado tiene la habilidad de Evasivo mientras haya Thanatos. '
+    - 'Diablo Ofuscado tiene la habilidad de Evasivo mientras haya Thanatos. '
     - Aliado
     - 
     - Diablo
     - '3'
     - '3'
     - Muerte
-    - ! '"La bruma insanica les otorgo un poderoso don, que recibieron agradecidamente"'
+    - '"La bruma insanica les otorgo un poderoso don, que recibieron agradecidamente"'
     - '93'
     - C
     - '2013-02-19 18:00:22.709211'
@@ -5539,7 +5536,7 @@ versiones:
     - '3'
     - '3'
   - - '282'
-    - ! 'Demonio Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Evasivo
+    - 'Demonio Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Evasivo
       mientras haya Thanatos. Demonio Poseído es un Vampiro además de sus otros tipos
       mientras haya Thanatos. '
     - Aliado
@@ -5548,7 +5545,7 @@ versiones:
     - '1'
     - '1'
     - Muerte
-    - ! '"Los Diablos son vulnerables a los cambios de entorno"'
+    - '"Los Diablos son vulnerables a los cambios de entorno"'
     - '94'
     - I
     - '2013-02-19 18:00:23.521805'
@@ -5567,7 +5564,7 @@ versiones:
     - '2'
     - '2'
     - Muerte
-    - ! '"Escondidos en las deformaciones rocosas de la antigua abadía, acumulan cráneos
+    - '"Escondidos en las deformaciones rocosas de la antigua abadía, acumulan cráneos
       de los visitantes entrometidos"'
     - '95'
     - C
@@ -5588,8 +5585,8 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Eusthario pronuncio las palabras, y el alma de la hermosa joven abandono
-      el lugar."'
+    - '"Eusthario pronuncio las palabras, y el alma de la hermosa joven abandono el
+      lugar."'
     - '96'
     - I
     - '2013-02-19 18:00:24.906475'
@@ -5609,8 +5606,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Los monjes experimentaron el elixir con los diablos. Obtuvieron grandes
-      resultados"'
+    - '"Los monjes experimentaron el elixir con los diablos. Obtuvieron grandes resultados"'
     - '97'
     - I
     - '2013-02-19 18:00:25.60748'
@@ -5629,7 +5625,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Hacia la ventana maldito monstruo. Un bronceado nunca mató a nadie."'
+    - '"Hacia la ventana maldito monstruo. Un bronceado nunca mató a nadie."'
     - '98'
     - I
     - '2013-02-19 18:00:26.324114'
@@ -5668,7 +5664,7 @@ versiones:
     - '2'
     - '2'
     - Muerte
-    - ! '"La sed de sangre no habitaba en el guerrero, sino en la hoja misma que blandía"'
+    - '"La sed de sangre no habitaba en el guerrero, sino en la hoja misma que blandía"'
     - '100'
     - R
     - '2013-02-19 18:00:27.784245'
@@ -5687,8 +5683,8 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Un ejercito de horrendas y deformes criaturas arraso con la escasa vida
-      restante de la ciudad"'
+    - '"Un ejercito de horrendas y deformes criaturas arraso con la escasa vida restante
+      de la ciudad"'
     - '101'
     - R
     - '2013-02-19 18:00:28.659583'
@@ -5721,15 +5717,15 @@ versiones:
     - '5'
     - '5'
   - - '291'
-    - ! 'Exilia las primeras 5 cartas de tu inferno: Endereza Nigromante Diablo y
-      obtiene +1 FUE hasta el final del turno. Juega esta habilidad solo si hay Thanatos"'
+    - 'Exilia las primeras 5 cartas de tu inferno: Endereza Nigromante Diablo y obtiene
+      +1 FUE hasta el final del turno. Juega esta habilidad solo si hay Thanatos"'
     - Aliado
     - 
     - Diablo
     - '2'
     - '3'
     - Muerte
-    - ! '"En nuestro nombre sal y muéstrate, principio de malicia y abismo de tinieblas"
+    - '"En nuestro nombre sal y muéstrate, principio de malicia y abismo de tinieblas"
       -Nebiros'
     - '103'
     - R
@@ -5742,15 +5738,15 @@ versiones:
     - '4'
     - '4'
   - - '292'
-    - ! 'Siempre que un aliado que no sea ficha sea puesto en el inferno desde el
-      juego, puedes poner en juego una ficha de aliado Vampiro 1 FUE 1 RES. '
+    - 'Siempre que un aliado que no sea ficha sea puesto en el inferno desde el juego,
+      puedes poner en juego una ficha de aliado Vampiro 1 FUE 1 RES. '
     - Aliado
     - Único
     - Súcubo
     - '4'
     - '3'
     - Muerte
-    - ! '"Soy la dueña de la vida y la muerte. De las cenizas levantare mi ejercito"'
+    - '"Soy la dueña de la vida y la muerte. De las cenizas levantare mi ejercito"'
     - '104'
     - R
     - '2013-02-19 18:00:31.001345'
@@ -5770,7 +5766,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"En sus tablillas se encuentra el futuro exacto de nuestras erradas acciones."'
+    - '"En sus tablillas se encuentra el futuro exacto de nuestras erradas acciones."'
     - '105'
     - R
     - '2013-02-19 18:00:31.738267'
@@ -5782,14 +5778,14 @@ versiones:
     - '1'
     - '1'
   - - '294'
-    - ! '2, Destruir Púa Exterminadora: Destruye el aliado girado objetivo'
+    - '2, Destruir Púa Exterminadora: Destruye el aliado girado objetivo'
     - Objeto
     - 
     - 
     - 
     - 
     - Muerte
-    - ! '"Envidia y Rencor: veneno concentrado en una gota mortal"'
+    - '"Envidia y Rencor: veneno concentrado en una gota mortal"'
     - '106'
     - C
     - '2013-02-19 18:00:32.434026'
@@ -5808,9 +5804,9 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Logro controlar un cubo de espesa niebla, con la cual camuflo sus idas y
-      venidas entre los diablos, gargolas y sorginak." Fragmetno de amanecer para
-      un nuevo destierro'
+    - '"Logro controlar un cubo de espesa niebla, con la cual camuflo sus idas y venidas
+      entre los diablos, gargolas y sorginak." Fragmetno de amanecer para un nuevo
+      destierro'
     - '107'
     - E
     - '2013-02-19 18:00:33.127149'
@@ -5841,14 +5837,14 @@ versiones:
     - '4'
     - '4'
   - - '297'
-    - ! 'Vínculo 1: Pon el aliado objetivo en la mano de su demonio'
+    - 'Vínculo 1: Pon el aliado objetivo en la mano de su demonio'
     - Aliado
     - 
     - Humano
     - '2'
     - '1'
     - Muerte
-    - ! '"Los débiles al sacrificio, los fuertes al mesón del operaciones"'
+    - '"Los débiles al sacrificio, los fuertes al mesón del operaciones"'
     - '109'
     - C
     - '2013-02-19 18:00:34.749906'
@@ -5868,8 +5864,8 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"El Urushdau consistía en traspasar la salud y la fortaleza de un joven a
-      un cuerpo avejentado para recuperar la salud" -Fragmento amanecer para un nuevo
+    - '"El Urushdau consistía en traspasar la salud y la fortaleza de un joven a un
+      cuerpo avejentado para recuperar la salud" -Fragmento amanecer para un nuevo
       destierro'
     - '110'
     - C
@@ -5890,7 +5886,7 @@ versiones:
     - '2'
     - '3'
     - Muerte
-    - ! '"Preciosos y letales. Adoro esos insectos" -Naamah'
+    - '"Preciosos y letales. Adoro esos insectos" -Naamah'
     - '111'
     - C
     - '2013-02-19 18:00:36.42822'
@@ -5910,7 +5906,7 @@ versiones:
     - '4'
     - '3'
     - Muerte
-    - ! '"¡Mírame perro de los balcones, aprenderás lo que es la obediencia!" -Raissa,
+    - '"¡Mírame perro de los balcones, aprenderás lo que es la obediencia!" -Raissa,
       Sumo sacerdote'
     - '112'
     - R
@@ -5942,7 +5938,7 @@ versiones:
     - '4'
     - '4'
   - - '302'
-    - ! 'Evasivo. Cuando Vurdalak entre en juego, pon 3 contadores de daño distribuidos
+    - 'Evasivo. Cuando Vurdalak entre en juego, pon 3 contadores de daño distribuidos
       sobre cualquier cantidad de aliados enemigos. 0: Mueve un contador de daño de
       un aliado enemigo objetivo a otro aliado objetivo del mismo controlador.'
     - Aliado
@@ -5951,7 +5947,7 @@ versiones:
     - '2'
     - '3'
     - Muerte
-    - ! ' '
+    - ' '
     - '114'
     - E
     - '2013-02-19 18:00:38.557359'
@@ -5982,7 +5978,7 @@ versiones:
     - '8'
     - '8'
   - - '304'
-    - ! 'Baku no puede ser objetivo de rituales. Girar un aliado enderezado que controles:
+    - 'Baku no puede ser objetivo de rituales. Girar un aliado enderezado que controles:
       gira el aliado objetivo.'
     - Aliado
     - Único
@@ -6009,7 +6005,7 @@ versiones:
     - '1'
     - '2'
     - Poder
-    - ! '"Mis compañeros cuentan conmigo, debo mantenerme despierto"'
+    - '"Mis compañeros cuentan conmigo, debo mantenerme despierto"'
     - '117'
     - C
     - '2013-02-19 18:00:40.813546'
@@ -6029,7 +6025,7 @@ versiones:
     - '4'
     - '3'
     - Poder
-    - ! '"Anursaur, hijo de la casa del árbol sagrado, ya sanare tu martirio." -Arasunu'
+    - '"Anursaur, hijo de la casa del árbol sagrado, ya sanare tu martirio." -Arasunu'
     - '118'
     - C
     - '2013-02-19 18:00:41.525121'
@@ -6041,7 +6037,7 @@ versiones:
     - '5'
     - '5'
   - - '307'
-    - ! 'Barahai Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Agresor
+    - 'Barahai Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Agresor
       mientras haya Thanatos. Barahai Poseído es un Vampiro además de sus otros tipos
       mientras haya Thanatos. '
     - Aliado
@@ -6050,8 +6046,8 @@ versiones:
     - '1'
     - '1'
     - Poder
-    - ! '"Los Barahai fueron los últimos en caer. El dominio de insania era ahora
-      total" -Ubanna'
+    - '"Los Barahai fueron los últimos en caer. El dominio de insania era ahora total"
+      -Ubanna'
     - '119'
     - I
     - '2013-02-19 18:00:42.223737'
@@ -6070,7 +6066,7 @@ versiones:
     - '5'
     - '5'
     - Poder
-    - ! '"¿Eso es todo lo que tienes? ¡No me hagas reír!" '
+    - '"¿Eso es todo lo que tienes? ¡No me hagas reír!" '
     - '120'
     - I
     - '2013-02-19 18:00:42.9311'
@@ -6089,7 +6085,7 @@ versiones:
     - '3'
     - '1'
     - Poder
-    - ! '"El pulso de muerte y destrucción invade la tierra. El mundo cambiara para
+    - '"El pulso de muerte y destrucción invade la tierra. El mundo cambiara para
       siempre"'
     - '121'
     - C
@@ -6109,7 +6105,7 @@ versiones:
     - '4'
     - '4'
     - Poder
-    - ! '"Siempre se destaco entre sus hermanos. Esta vez de la forma incorrecta"'
+    - '"Siempre se destaco entre sus hermanos. Esta vez de la forma incorrecta"'
     - '122'
     - I
     - '2013-02-19 18:00:44.427804'
@@ -6121,15 +6117,15 @@ versiones:
     - '6'
     - '6'
   - - '311'
-    - ! '2, Girar: Busca en tu mazo un escenario y ponlo en tu mano, luego mezcla
-      tu mazo'
+    - '2, Girar: Busca en tu mazo un escenario y ponlo en tu mano, luego mezcla tu
+      mazo'
     - Objeto
     - 
     - 
     - 
     - 
     - Poder
-    - ! '"Hacia el este, por el paso de la cuidad funeraria hacia la costa" -Estari'
+    - '"Hacia el este, por el paso de la cuidad funeraria hacia la costa" -Estari'
     - '123'
     - R
     - '2013-02-19 18:00:45.115982'
@@ -6141,14 +6137,14 @@ versiones:
     - '1'
     - '1'
   - - '312'
-    - ! 'Vínculo 0: Endereza el recurso objetivo'
+    - 'Vínculo 0: Endereza el recurso objetivo'
     - Aliado
     - 
     - Humano
     - '2'
     - '3'
     - Poder
-    - ! '"En la ciudad sagrada, nuestra unión con la naturaleza obtiene su esplendor"'
+    - '"En la ciudad sagrada, nuestra unión con la naturaleza obtiene su esplendor"'
     - '124'
     - I
     - '2013-02-19 18:00:45.803815'
@@ -6167,7 +6163,7 @@ versiones:
     - '2'
     - '2'
     - Poder
-    - ! ' '
+    - ' '
     - '125'
     - C
     - '2013-02-19 18:00:46.502587'
@@ -6179,7 +6175,7 @@ versiones:
     - '2'
     - '2'
   - - '314'
-    - ! 'Gira un aliado enderezado que controles: Comandante de Trion obtiene +1 FUE
+    - 'Gira un aliado enderezado que controles: Comandante de Trion obtiene +1 FUE
       hasta el final del turno'
     - Aliado
     - 
@@ -6207,7 +6203,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Maestro... Te ofrecemos las reliquias extraviadas"'
+    - '"Maestro... Te ofrecemos las reliquias extraviadas"'
     - '127'
     - R
     - '2013-02-19 18:00:47.944317'
@@ -6227,7 +6223,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Los Barahai se preparan para la guerra con un grito de dolor y gloria"'
+    - '"Los Barahai se preparan para la guerra con un grito de dolor y gloria"'
     - '128'
     - C
     - '2013-02-19 18:00:48.635848'
@@ -6246,7 +6242,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Unos ojos nos observaron mientras pasábamos. Sin embargo, éramos las únicas
+    - '"Unos ojos nos observaron mientras pasábamos. Sin embargo, éramos las únicas
       criaturas en kilómetros." -Caminante de Trion'
     - '129'
     - C
@@ -6259,14 +6255,14 @@ versiones:
     - '1'
     - '1'
   - - '318'
-    - ! '1, Girar: Pon un contador de daño sobre el aliado de menor resistencia'
+    - '1, Girar: Pon un contador de daño sobre el aliado de menor resistencia'
     - Objeto
     - 
     - 
     - 
     - 
     - Poder
-    - ! '"No importa el portador, el resultado será siempre el mismo"'
+    - '"No importa el portador, el resultado será siempre el mismo"'
     - '130'
     - I
     - '2013-02-19 18:00:50.123329'
@@ -6297,15 +6293,14 @@ versiones:
     - '6'
     - '6'
   - - '320'
-    - ! 'Destruir Espejo de colombus: Destruye el objeto objetivo'
+    - 'Destruir Espejo de colombus: Destruye el objeto objetivo'
     - Objeto
     - 
     - 
     - 
     - 
     - Poder
-    - ! '"El eco de la calavera romperse en mil pedazos puede sentirse... pero no
-      escucharse"'
+    - '"El eco de la calavera romperse en mil pedazos puede sentirse... pero no escucharse"'
     - '132'
     - C
     - '2013-02-19 18:00:51.486956'
@@ -6325,7 +6320,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Avanzad sin piedad" -Dakal, regente de Trion'
+    - '"Avanzad sin piedad" -Dakal, regente de Trion'
     - '133'
     - E
     - '2013-02-19 18:00:52.19221'
@@ -6345,8 +6340,8 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Leoto se rindió por primera y única vez. Su cuerpo olvido el dolor y la
-      esencia escucho el llamado hacia el infierno." -Fragmento de la caída de Trion.'
+    - '"Leoto se rindió por primera y única vez. Su cuerpo olvido el dolor y la esencia
+      escucho el llamado hacia el infierno." -Fragmento de la caída de Trion.'
     - '134'
     - E
     - '2013-02-19 18:00:52.892081'
@@ -6358,14 +6353,14 @@ versiones:
     - '2'
     - '2'
   - - '323'
-    - ! 'Vínculo 1: Exilia el objeto objetivo'
+    - 'Vínculo 1: Exilia el objeto objetivo'
     - Aliado
     - 
     - Humano
     - '4'
     - '2'
     - Poder
-    - ! '"Como una estatua esculpida en el bosque, el guerrero espera su momento de
+    - '"Como una estatua esculpida en el bosque, el guerrero espera su momento de
       gloria"'
     - '135'
     - C
@@ -6405,7 +6400,7 @@ versiones:
     - '1'
     - '1'
     - Poder
-    - ! '"Mi destino me une a mi madre, el infierno nunca vera mi rostro"'
+    - '"Mi destino me une a mi madre, el infierno nunca vera mi rostro"'
     - '137'
     - C
     - '2013-02-19 18:00:55.092284'
@@ -6417,7 +6412,7 @@ versiones:
     - '2'
     - '2'
   - - '326'
-    - ! 'Destruir Poción preventiva: Prevén todo el daño que se le fuera a hacer al
+    - 'Destruir Poción preventiva: Prevén todo el daño que se le fuera a hacer al
       aliado objetivo este turno.'
     - Objeto
     - 
@@ -6425,7 +6420,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Portarla otorga seguridad, beberla inmortalidad."'
+    - '"Portarla otorga seguridad, beberla inmortalidad."'
     - '138'
     - C
     - '2013-02-19 18:00:55.793763'
@@ -6437,7 +6432,7 @@ versiones:
     - '2'
     - '2'
   - - '327'
-    - ! 'Siempre que un aliado que no sea ficha entre en juego, puedes poner en juego
+    - 'Siempre que un aliado que no sea ficha entre en juego, puedes poner en juego
       una ficha de aliado Vampiro 1 FUE 1 RES. '
     - Aliado
     - Único
@@ -6445,7 +6440,7 @@ versiones:
     - '5'
     - '5'
     - Poder
-    - ! '"Madre me protege, no puedes ganar contra todos nosotros"'
+    - '"Madre me protege, no puedes ganar contra todos nosotros"'
     - '139'
     - R
     - '2013-02-19 18:00:56.489917'
@@ -6457,14 +6452,14 @@ versiones:
     - '6'
     - '6'
   - - '328'
-    - ! 'Destruir Raices Profundas: Pon un aliado de tu inferno en tu mano'
+    - 'Destruir Raices Profundas: Pon un aliado de tu inferno en tu mano'
     - Objeto
     - 
     - 
     - 
     - 
     - Poder
-    - ! '"Madre conoce bien el inferno. Madre sabe donde buscar" -Dämonin'
+    - '"Madre conoce bien el inferno. Madre sabe donde buscar" -Dämonin'
     - '140'
     - I
     - '2013-02-19 18:00:57.191239'
@@ -6483,7 +6478,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Madre finalmente volvio a su hogar, mis lagrimas sanaran cada arbol marchito."
+    - '"Madre finalmente volvio a su hogar, mis lagrimas sanaran cada arbol marchito."
       -Dämonin'
     - '141'
     - R
@@ -6504,7 +6499,7 @@ versiones:
     - '2'
     - '2'
     - Poder
-    - ! '"El estanque de roció otorga milagrosos poderes a quienes reciben con agrado
+    - '"El estanque de roció otorga milagrosos poderes a quienes reciben con agrado
       su bendición"'
     - '142'
     - C
@@ -6524,9 +6519,8 @@ versiones:
     - '9'
     - '9'
     - Poder
-    - ! '"De repente un temblor azoto el suelo, la tierra rugió y se desgarro, el
-      magnifico reptil dominaba el cielo como una tormenta" -Fragmento de la caída
-      de Trion'
+    - '"De repente un temblor azoto el suelo, la tierra rugió y se desgarro, el magnifico
+      reptil dominaba el cielo como una tormenta" -Fragmento de la caída de Trion'
     - '143'
     - R
     - '2013-02-19 18:00:59.393829'
@@ -6567,8 +6561,8 @@ versiones:
     - '3'
     - '3'
     - Poder
-    - ! '"Takina desmonto el arma de su estuche y la ofreció. Zahane la sujeto con
-      reverente delicadeza." -Fragmento de la caída de Trion'
+    - '"Takina desmonto el arma de su estuche y la ofreció. Zahane la sujeto con reverente
+      delicadeza." -Fragmento de la caída de Trion'
     - '145'
     - R
     - '2013-02-19 18:01:00.854312'
@@ -6587,7 +6581,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"¿Puedes sentir la fusión con la tierra? Tu fuerza ahora es mía" -Dämonin'
+    - '"¿Puedes sentir la fusión con la tierra? Tu fuerza ahora es mía" -Dämonin'
     - '146'
     - I
     - '2013-02-19 18:01:01.580447'
@@ -6606,8 +6600,8 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Traición es su idioma, corrupción su moneda. Cuida bien tus pertenencias
-      y mantén tu boca cerrada." -Caminante de Trion'
+    - '"Traición es su idioma, corrupción su moneda. Cuida bien tus pertenencias y
+      mantén tu boca cerrada." -Caminante de Trion'
     - '147'
     - R
     - '2013-02-19 18:01:02.319332'
@@ -6647,7 +6641,7 @@ versiones:
     - '2'
     - '3'
     - Neutral
-    - ! '"En este mundo hay tanto por conocer, tanto por olvidar"'
+    - '"En este mundo hay tanto por conocer, tanto por olvidar"'
     - '149'
     - E
     - '2013-02-19 18:01:03.771057'
@@ -6659,14 +6653,14 @@ versiones:
     - '3'
     - '3'
   - - '338'
-    - ! 'Pon en juego dos fichas de aliado Vampiro 1 FUE 1 RES. '
+    - 'Pon en juego dos fichas de aliado Vampiro 1 FUE 1 RES. '
     - Ritual
     - Instantáneo
     - 
     - 
     - 
     - Neutral
-    - ! '"No te resistas querido, pronto volverás a nacer"'
+    - '"No te resistas querido, pronto volverás a nacer"'
     - '150'
     - C
     - '2013-02-19 18:01:04.488413'
@@ -6678,15 +6672,15 @@ versiones:
     - '3'
     - '3'
   - - '339'
-    - ! 'Thanatos. Vínculo 0: Hay Thanatos hasta el final del turno.'
+    - 'Thanatos. Vínculo 0: Hay Thanatos hasta el final del turno.'
     - Aliado
     - 
     - Vampiro
     - '2'
     - '3'
     - Neutral
-    - ! '"La peste demencial se siente con su presencia, e infortunadas veces sin
-      ella también"'
+    - '"La peste demencial se siente con su presencia, e infortunadas veces sin ella
+      también"'
     - '151'
     - C
     - '2013-02-19 18:01:05.306404'
@@ -6706,7 +6700,7 @@ versiones:
     - '0'
     - '0'
     - Neutral
-    - ! '"Su sombra crecía imponente. La diosa de la luz temió por su vida y corrió
+    - '"Su sombra crecía imponente. La diosa de la luz temió por su vida y corrió
       hacia el abismo" -Leyenda Infantil'
     - '152'
     - R
@@ -6726,7 +6720,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Temen a las cavernas, porque saben que nunca regresaran" -Ubanna'
+    - '"Temen a las cavernas, porque saben que nunca regresaran" -Ubanna'
     - '153'
     - I
     - '2013-02-19 18:01:06.717174'
@@ -6745,8 +6739,8 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"La mayor posesion de un humano es su capacidad creativa. Tomamos la idea
-      y desechamos el recipiente." -Baggrund'
+    - '"La mayor posesion de un humano es su capacidad creativa. Tomamos la idea y
+      desechamos el recipiente." -Baggrund'
     - '154'
     - R
     - '2013-02-19 18:01:07.411742'
@@ -6758,14 +6752,14 @@ versiones:
     - '2'
     - '2'
   - - '343'
-    - ! 'Girar: Hay Thanatos hasta el final del turno.'
+    - 'Girar: Hay Thanatos hasta el final del turno.'
     - Objeto
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"La esencia de Insania late en el colmillo"'
+    - '"La esencia de Insania late en el colmillo"'
     - '155'
     - C
     - '2013-02-19 18:01:08.107815'
@@ -6777,14 +6771,14 @@ versiones:
     - '0'
     - '0'
   - - '344'
-    - ! 'Thanatos. Girar: El jugador objetivo agrega 1 energía.'
+    - 'Thanatos. Girar: El jugador objetivo agrega 1 energía.'
     - Objeto
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"Alguna vez fueron llamados como "el corazón de Insania"".'
+    - '"Alguna vez fueron llamados como "el corazón de Insania"".'
     - '156'
     - I
     - '2013-02-19 18:01:08.813482'
@@ -6803,7 +6797,7 @@ versiones:
     - '1'
     - '1'
     - Neutral
-    - ! '"Todo un legado vampírico en un solo recipiente"'
+    - '"Todo un legado vampírico en un solo recipiente"'
     - '157'
     - C
     - '2013-02-19 18:01:09.508555'
@@ -6815,14 +6809,14 @@ versiones:
     - '3'
     - '3'
   - - '346'
-    - ! 'Thanatos. Destruir Forajido Vampiro: destruye el objeto objetivo'
+    - 'Thanatos. Destruir Forajido Vampiro: destruye el objeto objetivo'
     - Aliado
     - 
     - Vampiro
     - '1'
     - '1'
     - Neutral
-    - ! '"Lo atrapamos comandante, pero no portaba la reliquia" -Guardia de Trion'
+    - '"Lo atrapamos comandante, pero no portaba la reliquia" -Guardia de Trion'
     - '158'
     - I
     - '2013-02-19 18:01:10.311338'
@@ -6834,16 +6828,15 @@ versiones:
     - '2'
     - '2'
   - - '347'
-    - ! 'Thanatos. 1, Girar: El aliado objetivo que no sea vampiro obtiene -1 FUE
-      hasta el final del turno.'
+    - 'Thanatos. 1, Girar: El aliado objetivo que no sea vampiro obtiene -1 FUE hasta
+      el final del turno.'
     - Objeto
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"Nuestra intención no es matarte, solo nos gusta verte sufrir." -Vampiro
-      verdugo.'
+    - '"Nuestra intención no es matarte, solo nos gusta verte sufrir." -Vampiro verdugo.'
     - '159'
     - C
     - '2013-02-19 18:01:11.0214'
@@ -6882,7 +6875,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"El olor a sangre es insoportable. Aléjate antes de que empiece a gustarte".
+    - '"El olor a sangre es insoportable. Aléjate antes de que empiece a gustarte".
       -Caminante  solitario'
     - '161'
     - I
@@ -6902,7 +6895,7 @@ versiones:
     - '2'
     - '2'
     - Neutral
-    - ! '"Los artefactos de dragón no son dignos de cualquier portador"'
+    - '"Los artefactos de dragón no son dignos de cualquier portador"'
     - '162'
     - I
     - '2013-02-19 18:01:13.089419'
@@ -6914,7 +6907,7 @@ versiones:
     - '3'
     - '3'
   - - '351'
-    - ! 'Thanatos. Destruir Manto de las Mil almas: Los aliados no pueden ser atacados
+    - 'Thanatos. Destruir Manto de las Mil almas: Los aliados no pueden ser atacados
       este turno.'
     - Objeto
     - 
@@ -6922,8 +6915,8 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"El manto cubre nuestros movimientos, mientras esta civilización cae bajo
-      nuestros pies" -Vampiro libre'
+    - '"El manto cubre nuestros movimientos, mientras esta civilización cae bajo nuestros
+      pies" -Vampiro libre'
     - '163'
     - C
     - '2013-02-19 18:01:13.810509'
@@ -6942,7 +6935,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Este es ahora nuestro territorio."'
+    - '"Este es ahora nuestro territorio."'
     - '164'
     - C
     - '2013-02-19 18:01:14.5229'
@@ -6954,14 +6947,14 @@ versiones:
     - '1'
     - '1'
   - - '353'
-    - ! 'Thanatos. '
+    - 'Thanatos. '
     - Aliado
     - 
     - Vampiro
     - '3'
     - '5'
     - Neutral
-    - ! '"Los modales de Insania pueden variar levemente a las buenas costumbres"'
+    - '"Los modales de Insania pueden variar levemente a las buenas costumbres"'
     - '165'
     - C
     - '2013-02-19 18:01:15.336245'
@@ -6980,7 +6973,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Cuando los vampiros retornaron, la tumba de los antiguos volvió a latir"'
+    - '"Cuando los vampiros retornaron, la tumba de los antiguos volvió a latir"'
     - '166'
     - E
     - '2013-02-19 18:01:16.012835'
@@ -7000,7 +6993,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Hermoso discurso, que nadie escuchara jamás." -Ubanna'
+    - '"Hermoso discurso, que nadie escuchara jamás." -Ubanna'
     - '167'
     - R
     - '2013-02-19 18:01:16.689649'
@@ -7012,7 +7005,7 @@ versiones:
     - '2'
     - '2'
   - - '356'
-    - ! 'Thanatos. Girar: Toma una carta. Luego pon una carta de tu mano en la parte
+    - 'Thanatos. Girar: Toma una carta. Luego pon una carta de tu mano en la parte
       inferior de tu mazo.'
     - Objeto
     - Único
@@ -7020,8 +7013,8 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"La energía que regula la vida y la muerte, el caos y el orden, la matriz
-      y alimento de todo." Fragmento de La caida de Trion'
+    - '"La energía que regula la vida y la muerte, el caos y el orden, la matriz y
+      alimento de todo." Fragmento de La caida de Trion'
     - '168'
     - R
     - '2013-02-19 18:01:17.375749'
@@ -7060,7 +7053,7 @@ versiones:
     - '3'
     - '3'
     - Neutral
-    - ! '"Tu adelántate, que nosotros te cuidamos" -Mike'
+    - '"Tu adelántate, que nosotros te cuidamos" -Mike'
     - '170'
     - I
     - '2013-02-19 18:01:18.846097'
@@ -7072,14 +7065,14 @@ versiones:
     - '4'
     - '4'
   - - '359'
-    - ! 'Thanatos. 3, destruir Sol Ennegrecido: Exilia el escenario objetivo. '
+    - 'Thanatos. 3, destruir Sol Ennegrecido: Exilia el escenario objetivo. '
     - Objeto
     - 
     - 
     - 
     - 
     - Neutral
-    - ! '"Las ruinas de la cuidad todavía conservan las verdes cenizas"'
+    - '"Las ruinas de la cuidad todavía conservan las verdes cenizas"'
     - '171'
     - I
     - '2013-02-19 18:01:19.556409'
@@ -7129,14 +7122,14 @@ versiones:
     - '6'
     - '6'
   - - '362'
-    - ! 'Thanatos. Vínculo 1: Toma una carta, luego descarta 1 carta de tu mano.'
+    - 'Thanatos. Vínculo 1: Toma una carta, luego descarta 1 carta de tu mano.'
     - Aliado
     - 
     - Vampiro
     - '3'
     - '2'
     - Neutral
-    - ! '"Siempre obtengo lo que quiero"'
+    - '"Siempre obtengo lo que quiero"'
     - '174'
     - I
     - '2013-02-19 18:01:21.760111'
@@ -7148,14 +7141,14 @@ versiones:
     - '3'
     - '3'
   - - '363'
-    - ! 'Thanatos. Vínculo 0: Pon en juego una ficha de aliado Vampiro 1 FUE 1 RES. '
+    - 'Thanatos. Vínculo 0: Pon en juego una ficha de aliado Vampiro 1 FUE 1 RES. '
     - Aliado
     - 
     - Vampiro
     - '1'
     - '3'
     - Neutral
-    - ! '"De mi sangre nacerá una nueva estirpe"'
+    - '"De mi sangre nacerá una nueva estirpe"'
     - '175'
     - I
     - '2013-02-19 18:01:22.457302'
@@ -7167,7 +7160,7 @@ versiones:
     - '3'
     - '3'
   - - '364'
-    - ! 'Thanatos. Girar: Mezcla una carta de tu mano en tu mazo.'
+    - 'Thanatos. Girar: Mezcla una carta de tu mano en tu mazo.'
     - Aliado
     - 
     - Vampiro
@@ -7194,7 +7187,7 @@ versiones:
     - '2'
     - '4'
     - Neutral
-    - ! '"Tranquilos hermanos, yo sanare vuestras heridas"'
+    - '"Tranquilos hermanos, yo sanare vuestras heridas"'
     - '177'
     - I
     - '2013-02-19 18:01:23.843809'
@@ -7206,14 +7199,14 @@ versiones:
     - '4'
     - '4'
   - - '366'
-    - ! 'Thanatos. '
+    - 'Thanatos. '
     - Aliado
     - Instantáneo
     - Vampiro
     - '2'
     - '1'
     - Neutral
-    - ! '"Los pequeños vampiros fueron los primeros. Hábiles y escurridizos, difíciles
+    - '"Los pequeños vampiros fueron los primeros. Hábiles y escurridizos, difíciles
       de alcanzar."'
     - '178'
     - C
@@ -7226,14 +7219,14 @@ versiones:
     - '2'
     - '2'
   - - '367'
-    - ! 'Thanatos. '
+    - 'Thanatos. '
     - Aliado
     - 
     - Vampiro
     - '1'
     - '1'
     - Neutral
-    - ! '"La ciudadela es una gran laberinto de trampas, cada callejón es una oportunidad."'
+    - '"La ciudadela es una gran laberinto de trampas, cada callejón es una oportunidad."'
     - '179'
     - C
     - '2013-02-19 18:01:25.383287'
@@ -7252,7 +7245,7 @@ versiones:
     - '3'
     - '2'
     - Neutral
-    - ! '"Aguarda pacientemente, el momento indicado para su cacería"'
+    - '"Aguarda pacientemente, el momento indicado para su cacería"'
     - '180'
     - C
     - '2013-02-19 18:01:26.072474'
@@ -7271,8 +7264,8 @@ versiones:
     - '1'
     - '1'
     - Caos
-    - ! '"Puedo hacerlo mas grande, fuerte y... ¿mas veloz? También puedo hacerlo
-      mas veloz" -Tod, maestro de cirugía Kirch'
+    - '"Puedo hacerlo mas grande, fuerte y... ¿mas veloz? También puedo hacerlo mas
+      veloz" -Tod, maestro de cirugía Kirch'
     - '181'
     - C
     - '2013-02-19 18:01:26.78672'
@@ -7284,14 +7277,14 @@ versiones:
     - 
     - 
   - - '370'
-    - ! 'Destruir Bot: Remueve un contador de daño sobre el Cyborg objetivo'
+    - 'Destruir Bot: Remueve un contador de daño sobre el Cyborg objetivo'
     - Objeto
     - 
     - Bot
     - 
     - 
     - Locura
-    - ! '"Pueden parecerte útiles herramientas, pero para mi son héroes." -Efe, pionero
+    - '"Pueden parecerte útiles herramientas, pero para mi son héroes." -Efe, pionero
       de la rebelión'
     - '182'
     - C
@@ -7342,7 +7335,7 @@ versiones:
     - 
     - 
   - - '373'
-    - ! 'Pon 2 contadores de daño sobre Volker: Pon en juego una ficha (caos) Kirch
+    - 'Pon 2 contadores de daño sobre Volker: Pon en juego una ficha (caos) Kirch
       1 FUE 1 RES con la habilidad de Furia. Siempre que un kirch sea destruido, remueve
       un contador de daño sobre Volker'
     - Aliado
@@ -7363,7 +7356,7 @@ versiones:
     - '6'
     - '6'
   - - '374'
-    - ! '2: Pon en juego una ficha de objeto (Locura) Bot con la habilidad "Destruir
+    - '2: Pon en juego una ficha de objeto (Locura) Bot con la habilidad "Destruir
       Bot: Remueve 1 contador de daño sobre el cyborg objetivo". Girar: Todos tus
       bot son aliados 1 FUE, 1 RES hasta el final del turno.'
     - Aliado
@@ -7384,7 +7377,7 @@ versiones:
     - '5'
     - '5'
   - - '375'
-    - ! 'Evasivo. Cuando Vurdalak entre en juego, pon 3 contadores de daño distribuidos
+    - 'Evasivo. Cuando Vurdalak entre en juego, pon 3 contadores de daño distribuidos
       sobre cualquier cantidad de aliados enemigos. 0: Mueve un contador de daño de
       un aliado enemigo objetivo a otro aliado objetivo del mismo controlador.'
     - Aliado
@@ -7405,7 +7398,7 @@ versiones:
     - '4'
     - '4'
   - - '376'
-    - ! 'Baki no puede ser objetivo de rituales. Girar un aliado enderezado que controles:
+    - 'Baki no puede ser objetivo de rituales. Girar un aliado enderezado que controles:
       gira el aliado objetivo.'
     - Aliado
     - Único
@@ -7475,7 +7468,7 @@ versiones:
     - '1'
     - 
     - Caos
-    - ! '"¿Traidores? No es mi culpa que no puedan ver más allá de sus propias narices"'
+    - '"¿Traidores? No es mi culpa que no puedan ver más allá de sus propias narices"'
     - '1'
     - I
     - '2013-02-19 18:03:47.292608'
@@ -7487,8 +7480,8 @@ versiones:
     - 
     - 
   - - '380'
-    - ! '{0}: Voltéa Fáradt (Juega esta habilidad solo si has enderezado cuatro o
-      más aliados este turno)./Girar: Gira el aliado o demonio objetivo. Fáradt obtiene
+    - '{0}: Voltéa Fáradt (Juega esta habilidad solo si has enderezado cuatro o más
+      aliados este turno)./Girar: Gira el aliado o demonio objetivo. Fáradt obtiene
       +1 FUE mientras haya Thanatos.'
     - 
     - Demonio
@@ -7496,7 +7489,7 @@ versiones:
     - '1'
     - 
     - Locura
-    - ! '"La demencia es el futuro de este mundo. Aquellos que se nieguen a su abrazo,
+    - '"La demencia es el futuro de este mundo. Aquellos que se nieguen a su abrazo,
       morirán en mis manos."'
     - '2'
     - I
@@ -7518,7 +7511,7 @@ versiones:
     - '1'
     - 
     - Muerte
-    - ! '"Un tributo de carne y sangre, digno de un demonio superior."'
+    - '"Un tributo de carne y sangre, digno de un demonio superior."'
     - '3'
     - I
     - '2013-02-19 18:03:50.523522'
@@ -7539,7 +7532,7 @@ versiones:
     - '2'
     - 
     - Poder
-    - ! '"Puedo perderlo todo, menos mi honor."'
+    - '"Puedo perderlo todo, menos mi honor."'
     - '4'
     - I
     - '2013-02-19 18:03:51.965407'
@@ -7590,7 +7583,7 @@ versiones:
     - '0'
     - '0'
   - - '385'
-    - ! 'Destruir Armería del silo: Anexa el arma objetivo a un aliado objetivo que
+    - 'Destruir Armería del silo: Anexa el arma objetivo a un aliado objetivo que
       controles.'
     - Objeto
     - 
@@ -7636,7 +7629,7 @@ versiones:
     - '2'
     - '2'
     - Caos
-    - ! '"Aquel que juega con fuego..."'
+    - '"Aquel que juega con fuego..."'
     - '9'
     - C
     - '2013-02-19 18:03:56.297143'
@@ -7688,7 +7681,7 @@ versiones:
     - '7'
     - '7'
   - - '390'
-    - ! 'Destruir Extirpadora de demencia: No hay Thanatos hasta el final del turno.'
+    - 'Destruir Extirpadora de demencia: No hay Thanatos hasta el final del turno.'
     - Arma
     - 
     - 
@@ -7745,7 +7738,7 @@ versiones:
     - '2'
     - '2'
   - - '393'
-    - ! 'Destruir Granada de clavos: Tu demonio hace 1 punto de daño al aliado o demonio
+    - 'Destruir Granada de clavos: Tu demonio hace 1 punto de daño al aliado o demonio
       objetivo.'
     - Objeto
     - 
@@ -7810,7 +7803,7 @@ versiones:
     - '1'
     - '2'
     - Caos
-    - ! '"Claro que es fácil seguir su rastro. Pero dime caminante, ¿Porqué quisieras
+    - '"Claro que es fácil seguir su rastro. Pero dime caminante, ¿Porqué quisieras
       embancarte a tu muerte?." -Nómada del gran desierto'
     - '18'
     - I
@@ -7922,14 +7915,14 @@ versiones:
     - '2'
     - '2'
   - - '402'
-    - ! 'Destruir un vampiro que controles: Agrega 1 energía.'
+    - 'Destruir un vampiro que controles: Agrega 1 energía.'
     - Objeto
     - 
     - 
     - 
     - 
     - Caos
-    - ! '"Ninguna criatura es inútil. Todo tiene un propósito." -Maestro de cirugía
+    - '"Ninguna criatura es inútil. Todo tiene un propósito." -Maestro de cirugía
       Tod'
     - '24'
     - R
@@ -7970,8 +7963,8 @@ versiones:
     - '3'
     - '3'
     - Caos
-    - ! '"El elixir del combate correrá por mis venas y el imperio de la arena se
-      extenderá por el mundo." -Diario de Viaje de Volker'
+    - '"El elixir del combate correrá por mis venas y el imperio de la arena se extenderá
+      por el mundo." -Diario de Viaje de Volker'
     - '26'
     - R
     - '2013-02-19 18:04:08.441227'
@@ -8021,14 +8014,14 @@ versiones:
     - '4'
     - '4'
   - - '407'
-    - ! '{2}: El vampiro objetivo tiene la habilidad de furia hasta el final del turno.'
+    - '{2}: El vampiro objetivo tiene la habilidad de furia hasta el final del turno.'
     - Aliado
     - 
     - Vampiro
     - '1'
     - '2'
     - Caos
-    - ! '"No hay criatura más hermosa que un adolescente vampiro: violento, espontáneo
+    - '"No hay criatura más hermosa que un adolescente vampiro: violento, espontáneo
       y creativo." -Ubanna'
     - '29'
     - I
@@ -8061,7 +8054,7 @@ versiones:
     - '2'
     - '2'
   - - '409'
-    - ! 'Hay Thanatos hasta el final del turno.{2}: Pon Aura demencial de tu inferno
+    - 'Hay Thanatos hasta el final del turno.{2}: Pon Aura demencial de tu inferno
       en tu mano.'
     - Ritual
     - Instantáneo
@@ -8069,7 +8062,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Mi presencia es absoluta. No hay lugar en este mundo que no me pertenezca."
+    - '"Mi presencia es absoluta. No hay lugar en este mundo que no me pertenezca."
       -Ubanna'
     - '31'
     - I
@@ -8082,7 +8075,7 @@ versiones:
     - '0'
     - '0'
   - - '410'
-    - ! '{1}, girar: Mira la carta superior de tu mazo, si hay Thanatos, puedes ponerla
+    - '{1}, girar: Mira la carta superior de tu mazo, si hay Thanatos, puedes ponerla
       en la parte inferior de tu mazo.'
     - Aliado
     - 
@@ -8102,7 +8095,7 @@ versiones:
     - '4'
     - '4'
   - - '411'
-    - ! 'Girar, descartar una carta: El demonio objetivo descarta una carta.'
+    - 'Girar, descartar una carta: El demonio objetivo descarta una carta.'
     - Objeto
     - 
     - 
@@ -8129,7 +8122,7 @@ versiones:
     - '2'
     - '1'
     - Locura
-    - ! '"Los vampiros aprenden rápidamente a moverse en nuestro mundo. Ya nada nos
+    - '"Los vampiros aprenden rápidamente a moverse en nuestro mundo. Ya nada nos
       pertenece." - Caminante solitario'
     - '34'
     - C
@@ -8169,7 +8162,7 @@ versiones:
     - '3'
     - '4'
     - Locura
-    - ! '"Siempre es bueno rodearse de asesores, alguien debe procurar pensar dónde
+    - '"Siempre es bueno rodearse de asesores, alguien debe procurar pensar dónde
       asestar el golpe letal." - Ubanna'
     - '36'
     - I
@@ -8259,7 +8252,7 @@ versiones:
     - '3'
     - '3'
   - - '419'
-    - ! 'Destruir Grilletes de plata: Gana el control del vampiro objetivo.'
+    - 'Destruir Grilletes de plata: Gana el control del vampiro objetivo.'
     - Objeto
     - 
     - 
@@ -8285,7 +8278,7 @@ versiones:
     - '2'
     - '2'
     - Locura
-    - ! '"¡Cyborgs! ¡Nuestra ciudad cae hacia la perdición! ¡Pero no dejaremos este
+    - '"¡Cyborgs! ¡Nuestra ciudad cae hacia la perdición! ¡Pero no dejaremos este
       mundo sin dar batalla! ¡Este es el momento donde debemos dar todo por salvar
       nuestra ciudad! ¡TODO!! - Viden'
     - '42'
@@ -8306,7 +8299,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"¿Querías decir algo? Ya me parecía." - Ubanna'
+    - '"¿Querías decir algo? Ya me parecía." - Ubanna'
     - '43'
     - I
     - '2013-02-19 18:04:20.884679'
@@ -8325,7 +8318,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"El cerebro humano tiene capacidad limitada." -Mímire '
+    - '"El cerebro humano tiene capacidad limitada." -Mímire '
     - '44'
     - C
     - '2013-02-19 18:04:21.584298'
@@ -8384,7 +8377,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"No, tu reloj funciona correctamente. Es el propio tiempo el que no funciona
+    - '"No, tu reloj funciona correctamente. Es el propio tiempo el que no funciona
       en este lugar. Ya no estás en la Tierra. Has cruzado el portal" - Urmenob'
     - '47'
     - E
@@ -8404,7 +8397,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Drenaremos hasta la última gota de esta pestilencia... ¿Y si el recipiente
+    - '"Drenaremos hasta la última gota de esta pestilencia... ¿Y si el recipiente
       muere? Buena pregunta, pero ya estaba muerto de cualquier manera." -Ingeniero
       médico'
     - '48'
@@ -8426,8 +8419,8 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"El demonio, perdiendo la razón, inundaba la red neural con pensamientos
-      inconexos e incomprensibles." Fragmento de Efe, pionero de la rebelión'
+    - '"El demonio, perdiendo la razón, inundaba la red neural con pensamientos inconexos
+      e incomprensibles." Fragmento de Efe, pionero de la rebelión'
     - '49'
     - C
     - '2013-02-19 18:04:25.203403'
@@ -8515,7 +8508,7 @@ versiones:
     - '3'
     - '3'
   - - '432'
-    - ! '{2}: El vampiro objetivo tiene la habilidad de halo hasta el final del turno.'
+    - '{2}: El vampiro objetivo tiene la habilidad de halo hasta el final del turno.'
     - Aliado
     - 
     - Vampiro
@@ -8560,7 +8553,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Quieto y obediente. ¿No te ves más lindo así? -Ubanna'
+    - '"Quieto y obediente. ¿No te ves más lindo así? -Ubanna'
     - '56'
     - C
     - '2013-02-19 18:04:30.233154'
@@ -8600,7 +8593,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"La sangre vampírica resultó ser un magnífico veneno. Aunque deja una bruma
+    - '"La sangre vampírica resultó ser un magnífico veneno. Aunque deja una bruma
       apestosa." - Sacerdote técnico'
     - '58'
     - I
@@ -8788,7 +8781,7 @@ versiones:
     - '2'
     - '2'
   - - '446'
-    - ! 'Destruir Faro de tormento: No hay Thanatos hasta el final del turno.'
+    - 'Destruir Faro de tormento: No hay Thanatos hasta el final del turno.'
     - Objeto
     - 
     - 
@@ -8814,7 +8807,7 @@ versiones:
     - '2'
     - '3'
     - Muerte
-    - ! '"Los monjes no tuvieron tiempo de reaccionar. El antíguo rito se vio interrumpido.
+    - '"Los monjes no tuvieron tiempo de reaccionar. El antíguo rito se vio interrumpido.
       El silencio es ahora dueño de la antígua capilla." - Caminante de la abadía'
     - '69'
     - C
@@ -8827,8 +8820,8 @@ versiones:
     - '3'
     - '3'
   - - '448'
-    - ! 'Exilia las dos primeras cartas de tu inferno: Gruwek obtiene +1 FUE hasta
-      el final del turno. Exilia la primera carta de tu mazo: Pon Gruwek en tu mano.'
+    - 'Exilia las dos primeras cartas de tu inferno: Gruwek obtiene +1 FUE hasta el
+      final del turno. Exilia la primera carta de tu mazo: Pon Gruwek en tu mano.'
     - Aliado
     - 
     - Abominación
@@ -8874,7 +8867,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"No parece la mejor de las ideas hermano. Dicen que el pantano está atestado
+    - '"No parece la mejor de las ideas hermano. Dicen que el pantano está atestado
       de criaturas horribles." -Niño de la abadía'
     - '72'
     - R
@@ -8895,7 +8888,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"Carne podrida, rabia y nada que perder. Ejército ideal." -Unwaj'
+    - '"Carne podrida, rabia y nada que perder. Ejército ideal." -Unwaj'
     - '73'
     - I
     - '2013-02-19 18:04:42.250856'
@@ -8915,7 +8908,7 @@ versiones:
     - '4'
     - '4'
     - Muerte
-    - ! '"Aguarden un momento… esta neblina verde nos ayudará a ofuscarnos."'
+    - '"Aguarden un momento… esta neblina verde nos ayudará a ofuscarnos."'
     - '74'
     - C
     - '2013-02-19 18:04:42.937533'
@@ -8947,15 +8940,14 @@ versiones:
     - '5'
     - '5'
   - - '454'
-    - ! 'Girar: El vampiro objetivo obtiene -1 FUE y -1 RES hasta el final del turno.'
+    - 'Girar: El vampiro objetivo obtiene -1 FUE y -1 RES hasta el final del turno.'
     - Objeto
     - 
     - 
     - 
     - 
     - Muerte
-    - ! '"Mi señor, hemos encontrado un método para hacerlos hablar." -Soldado de
-      Gothika'
+    - '"Mi señor, hemos encontrado un método para hacerlos hablar." -Soldado de Gothika'
     - '76'
     - I
     - '2013-02-19 18:04:44.323842'
@@ -8974,7 +8966,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"¿Puedes dejar de gritar? ¡No puedo seguir torturando con tanto ruido!" -Mike'
+    - '"¿Puedes dejar de gritar? ¡No puedo seguir torturando con tanto ruido!" -Mike'
     - '77'
     - C
     - '2013-02-19 18:04:44.998495'
@@ -9005,8 +8997,7 @@ versiones:
     - '3'
     - '3'
   - - '457'
-    - ! '{2}: El vampiro objetivo tiene la habilidad de evasivo hasta el final del
-      turno.'
+    - '{2}: El vampiro objetivo tiene la habilidad de evasivo hasta el final del turno.'
     - Aliado
     - 
     - Vampiro
@@ -9149,7 +9140,7 @@ versiones:
     - '4'
     - '4'
     - Poder
-    - ! '"¿Creías que iba a ser una batalla sencilla?"'
+    - '"¿Creías que iba a ser una batalla sencilla?"'
     - '86'
     - C
     - '2013-02-19 18:04:51.406952'
@@ -9169,7 +9160,7 @@ versiones:
     - '1'
     - '1'
     - Poder
-    - ! '"Proteger a mis hermanos, para redimir mis errores."'
+    - '"Proteger a mis hermanos, para redimir mis errores."'
     - '87'
     - R
     - '2013-02-19 18:04:52.228626'
@@ -9200,7 +9191,7 @@ versiones:
     - '4'
     - '4'
   - - '467'
-    - ! '{5}, girar: Pon en juego un aliado de tu mano.'
+    - '{5}, girar: Pon en juego un aliado de tu mano.'
     - Objeto
     - 
     - 
@@ -9226,8 +9217,8 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Nunca seremos la presa de ningún cazador. Demostremos a estos parásitos
-      de lo que los puros somos capaces." - Barahai alfa'
+    - '"Nunca seremos la presa de ningún cazador. Demostremos a estos parásitos de
+      lo que los puros somos capaces." - Barahai alfa'
     - '90'
     - C
     - '2013-02-19 18:04:54.326156'
@@ -9246,7 +9237,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"No están brillando; es en realidad su piel en llamas. Un espectáculo maravilloso."
+    - '"No están brillando; es en realidad su piel en llamas. Un espectáculo maravilloso."
       -Caminante crepuscular'
     - '91'
     - C
@@ -9266,7 +9257,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Sígueme pequeño. Esto es sólo una muestra de mi gran poder." - Lapátt'
+    - '"Sígueme pequeño. Esto es sólo una muestra de mi gran poder." - Lapátt'
     - '92'
     - C
     - '2013-02-19 18:04:55.726331'
@@ -9285,7 +9276,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"No puedo evitarlo. Produzco ese efecto en los débiles." -Ubanna'
+    - '"No puedo evitarlo. Produzco ese efecto en los débiles." -Ubanna'
     - '93'
     - C
     - '2013-02-19 18:04:56.404836'
@@ -9355,15 +9346,15 @@ versiones:
     - '5'
     - '5'
   - - '475'
-    - ! 'Destruir Hermana atormentada: No hay Thanatos hasta el final del turno.'
+    - 'Destruir Hermana atormentada: No hay Thanatos hasta el final del turno.'
     - Aliado
     - 
     - Humano
     - '1'
     - '1'
     - Poder
-    - ! '"Siempre supe que mi destino era diferente al de mis hermanos. Es hora de
-      mostrar mi valor."'
+    - '"Siempre supe que mi destino era diferente al de mis hermanos. Es hora de mostrar
+      mi valor."'
     - '97'
     - C
     - '2013-02-19 18:04:59.35098'
@@ -9442,7 +9433,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Madre cuida de los pequeños indefensos, y fortalece a los fuertes y valientes."
+    - '"Madre cuida de los pequeños indefensos, y fortalece a los fuertes y valientes."
       -Dämonin'
     - '101'
     - C
@@ -9455,15 +9446,14 @@ versiones:
     - '2'
     - '2'
   - - '480'
-    - ! '{2}: El vampiro objetivo tiene la habilidad de agresor hasta el final del
-      turno.'
+    - '{2}: El vampiro objetivo tiene la habilidad de agresor hasta el final del turno.'
     - Aliado
     - 
     - Vampiro
     - '0'
     - '4'
     - Poder
-    - ! '"Imposible evitarlos. ¡Están por todos lados!" -Guardia de Trion'
+    - '"Imposible evitarlos. ¡Están por todos lados!" -Guardia de Trion'
     - '102'
     - I
     - '2013-02-19 18:05:02.978355'
@@ -9475,7 +9465,7 @@ versiones:
     - '2'
     - '2'
   - - '481'
-    - ! 'Destruir Vara de esencia letal: Destruye el aliado con al menos un contador
+    - 'Destruir Vara de esencia letal: Destruye el aliado con al menos un contador
       de daño sobre él.'
     - Objeto
     - 
@@ -9483,7 +9473,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Madre guiará tu camino hacia el inferno. Ahora descansa."'
+    - '"Madre guiará tu camino hacia el inferno. Ahora descansa."'
     - '103'
     - C
     - '2013-02-19 18:05:03.596093'
@@ -9502,7 +9492,7 @@ versiones:
     - 
     - 
     - Poder
-    - ! '"Madre reclama lo que por origen nos pertenece." -Dämonin'
+    - '"Madre reclama lo que por origen nos pertenece." -Dämonin'
     - '104'
     - I
     - '2013-02-19 18:05:04.288844'
@@ -9636,7 +9626,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"No, amigo mío; de la frontera no hay retorno." -Errante sabio'
+    - '"No, amigo mío; de la frontera no hay retorno." -Errante sabio'
     - '111'
     - R
     - '2013-02-19 18:05:09.291502'
@@ -9694,7 +9684,7 @@ versiones:
     - '0'
     - '1'
     - Neutral
-    - ! '"La humanidad es la enfermedad de este mundo y nosotros somos la cura. Mientras
+    - '"La humanidad es la enfermedad de este mundo y nosotros somos la cura. Mientras
       más doloroso el proceso, ¡mucho mejor!" -Mike'
     - '114'
     - I
@@ -9707,8 +9697,8 @@ versiones:
     - '2'
     - '2'
   - - '493'
-    - ! 'Thanatos. {2}, girar: Pon en juego una ficha de aliado Vampiro FUE 1, RES
-      1 con la habilidad de furia.'
+    - 'Thanatos. {2}, girar: Pon en juego una ficha de aliado Vampiro FUE 1, RES 1
+      con la habilidad de furia.'
     - Objeto
     - 
     - 
@@ -9735,7 +9725,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"No te preocupes. No puede lastimarnos." -Ubanna'
+    - '"No te preocupes. No puede lastimarnos." -Ubanna'
     - '116'
     - I
     - '2013-02-19 18:05:12.8173'
@@ -9767,7 +9757,7 @@ versiones:
     - '2'
     - '2'
   - - '496'
-    - ! 'Girar, exiliar un aliado de tu inferno: Busca en tu mazo un aliado y ponlo
+    - 'Girar, exiliar un aliado de tu inferno: Busca en tu mazo un aliado y ponlo
       en tu inferno. Luego mezcla tu mazo.'
     - Aliado
     - 
@@ -9787,7 +9777,7 @@ versiones:
     - '1'
     - '1'
   - - '497'
-    - ! 'Thanatos. Destruir Vampiro tirador: Destruye el arma objetivo.'
+    - 'Thanatos. Destruir Vampiro tirador: Destruye el arma objetivo.'
     - Aliado
     - 
     - Vampiro
@@ -9979,8 +9969,8 @@ versiones:
     - '3'
     - '3'
   - - '507'
-    - ! 'Exilia las dos primeras cartas de tu inferno: Gruwek obtiene +1 FUE hasta
-      el final del turno. Exilia la primera carta de tu mazo: Pon Gruwek en tu mano.'
+    - 'Exilia las dos primeras cartas de tu inferno: Gruwek obtiene +1 FUE hasta el
+      final del turno. Exilia la primera carta de tu mazo: Pon Gruwek en tu mano.'
     - Aliado
     - 
     - Abominación
@@ -10018,7 +10008,7 @@ versiones:
     - '2'
     - '2'
   - - '509'
-    - ! 'Thanatos. Al principio de tu restauración, si es tu turno 10 o más, voltea
+    - 'Thanatos. Al principio de tu restauración, si es tu turno 10 o más, voltea
       Ubanna. / Thanatos. Abismal. 3: Tu demonio hace 1 punto de daño al aliado objetivo;
       el demonio objetivo toma una carta; exilia la carta objetivo de un inferno;
       o pon la primer carta de tu inferno en el fondo de tu mazo (elige uno).'
@@ -10028,7 +10018,7 @@ versiones:
     - '3'
     - 
     - Neutral
-    - ! '"Una puerta abierta puede cruzarse en dos direcciones."'
+    - '"Una puerta abierta puede cruzarse en dos direcciones."'
     - '5'
     - E
     - '2013-02-19 18:06:28.084031'
@@ -10067,7 +10057,7 @@ versiones:
     - '2'
     - '1'
     - Caos
-    - ! '"Si antes eran temidos, una vez convertidos se transformaron en pesadillas.
+    - '"Si antes eran temidos, una vez convertidos se transformaron en pesadillas.
       Afortunadamente, olvidan que no deben salir de día." - Acólito de Abel'
     - '9'
     - I
@@ -10080,7 +10070,7 @@ versiones:
     - '1'
     - '1'
   - - '512'
-    - ! 'Girar, destruir un recurso que controles: Pon en juego una ficha de aliado
+    - 'Girar, destruir un recurso que controles: Pon en juego una ficha de aliado
       humano 2 FUE, 2 RES.'
     - Aliado
     - 
@@ -10088,8 +10078,8 @@ versiones:
     - '1'
     - '1'
     - Caos
-    - ! 'Las opciones nungnarh no son muy alentadoras: Morir quemado en tu hogar,
-      o quemado en combate.'
+    - 'Las opciones nungnarh no son muy alentadoras: Morir quemado en tu hogar, o
+      quemado en combate.'
     - '24'
     - C
     - '2013-02-19 18:06:30.541475'
@@ -10148,8 +10138,8 @@ versiones:
     - '2'
     - '3'
     - Muerte
-    - ! '"Cuando llegues a la abadía, recuerda mis palabras: No confíes en nadie."
-      - Caminante de la abadía'
+    - '"Cuando llegues a la abadía, recuerda mis palabras: No confíes en nadie." -
+      Caminante de la abadía'
     - '66'
     - R
     - '2013-02-19 18:06:32.619436'
@@ -10227,7 +10217,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"¿Quieres conocer un nuevo truco?"'
+    - '"¿Quieres conocer un nuevo truco?"'
     - '118'
     - C
     - '2013-02-19 18:06:35.617837'
@@ -10265,7 +10255,7 @@ versiones:
     - '3'
     - '1'
     - Caos
-    - ! '"Nungnarh en la biblioteca." - Dicho popular'
+    - '"Nungnarh en la biblioteca." - Dicho popular'
     - '28'
     - I
     - '2013-02-25 07:49:26.503703'
@@ -10346,7 +10336,7 @@ versiones:
     - '1'
     - '1'
     - Neutral
-    - ! '"Si no puedes vencer a mis guerreros. ¿Por qué tu presencia debería importarme?"
+    - '"Si no puedes vencer a mis guerreros. ¿Por qué tu presencia debería importarme?"
       - Ubanna'
     - '110'
     - I
@@ -10526,7 +10516,7 @@ versiones:
     - '2'
     - '2'
     - Neutral
-    - ! '"Dicen los cronistas que su pureza sobrepasa los límites de la tierra y el
+    - '"Dicen los cronistas que su pureza sobrepasa los límites de la tierra y el
       Inferno." - Aryel'
     - '107'
     - R
@@ -10547,7 +10537,7 @@ versiones:
     - '0'
     - 
     - Caos
-    - ! '"Sígueme, y seremos invencibles."'
+    - '"Sígueme, y seremos invencibles."'
     - '1'
     - I
     - '2013-02-25 21:05:22.116344'
@@ -10566,7 +10556,7 @@ versiones:
     - 
     - 
     - Locura
-    - ! '"Vi a mis hermanos caer, uno a uno, como títeres sin alma. Pedí a madre otra
+    - '"Vi a mis hermanos caer, uno a uno, como títeres sin alma. Pedí a madre otra
       oportunidad, una explicación y consuelo. No me concedió ninguna."'
     - '32'
     - R
@@ -10587,7 +10577,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ! '"No puedes evitar su llamado." - Eusthario'
+    - '"No puedes evitar su llamado." - Eusthario'
     - '69'
     - R
     - '2013-02-25 21:31:35.050607'
@@ -10625,7 +10615,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Nadie recordará jamás tu existencia."'
+    - '"Nadie recordará jamás tu existencia."'
     - '98'
     - C
     - '2013-02-25 21:38:24.108113'
@@ -10637,7 +10627,7 @@ versiones:
     - '1'
     - '1'
   - - '540'
-    - ! 'Puedes destruir 5 vampiros que controles en vez de pagar el coste de Caín.
+    - 'Puedes destruir 5 vampiros que controles en vez de pagar el coste de Caín.
       Thanatos. Girar: Destruye el aliado objetivo.'
     - Aliado
     - Único
@@ -10667,7 +10657,7 @@ versiones:
     - '2'
     - 
     - Locura
-    - ! '"Conocimiento ilimitado, poder infinito."'
+    - '"Conocimiento ilimitado, poder infinito."'
     - '2'
     - I
     - '2013-02-28 03:59:50.357266'
@@ -10700,7 +10690,7 @@ versiones:
     - '6'
     - '6'
   - - '543'
-    - ! 'Puedes elegir no enderezar Corto en tu restauración. Girar: Toma el control
+    - 'Puedes elegir no enderezar Corto en tu restauración. Girar: Toma el control
       del aliado objetivo mientras Corto permanezca girado.'
     - Aliado
     - Único
@@ -10708,7 +10698,7 @@ versiones:
     - '2'
     - '3'
     - Locura
-    - ! '"El silencio... es insoportable, necesito la red."'
+    - '"El silencio... es insoportable, necesito la red."'
     - '34'
     - E
     - '2013-03-03 20:28:35.333137'
@@ -10720,7 +10710,7 @@ versiones:
     - '4'
     - '4'
   - - '544'
-    - ! 'Abismal. La FUE y RES de Edeinsuge es igual al número de cartas en tu inferno.
+    - 'Abismal. La FUE y RES de Edeinsuge es igual al número de cartas en tu inferno.
       Edeinsuge entra en juego girado, y no se endereza en tu restauración. Destruir
       dos humanos que controles: Endereza Edeinsuge.'
     - Aliado
@@ -10741,9 +10731,9 @@ versiones:
     - '5'
     - '5'
   - - '545'
-    - ! '1: Prevén el siguiente punto de daño que fuera a hacerse a Dacal hasta el
-      final del turno. Vínculo [Exilia 3 objetos que controles] - Pon en juego una
-      ficha de aliado {poder} Reptil 9 FUE, 9 RES.'
+    - '1: Prevén el siguiente punto de daño que fuera a hacerse a Dacal hasta el final
+      del turno. Vínculo [Exilia 3 objetos que controles] - Pon en juego una ficha
+      de aliado {poder} Reptil 9 FUE, 9 RES.'
     - Aliado
     - Único
     - Humano
@@ -10762,8 +10752,8 @@ versiones:
     - '3'
     - '3'
   - - '546'
-    - ! 'Exilia un aliado de tu inferno, girar: Pon en juego una ficha de aliado,
-      que es una copia del aliado objetivo que controles.'
+    - 'Exilia un aliado de tu inferno, girar: Pon en juego una ficha de aliado, que
+      es una copia del aliado objetivo que controles.'
     - Objeto
     - ''
     - ''
@@ -10783,7 +10773,7 @@ versiones:
     - '2'
     - '2'
   - - '547'
-    - ! 'Cuando tengas 9 o más aliados en tu inferno, voltea Zulfur. / X, girar: Pon
+    - 'Cuando tengas 9 o más aliados en tu inferno, voltea Zulfur. / X, girar: Pon
       en juego de tu inferno el aliado objetivo de coste X.'
     - ''
     - Demonio
@@ -10791,7 +10781,7 @@ versiones:
     - '1'
     - 
     - Muerte
-    - ! '"Levántate hijo mío. Nuestra hora está próxima."'
+    - '"Levántate hijo mío. Nuestra hora está próxima."'
     - '3'
     - I
     - '2013-03-10 05:33:17.947214'
@@ -10845,7 +10835,7 @@ versiones:
     - '3'
     - '3'
   - - '550'
-    - ! 'Girar, poner un contador de daño sobre Arbusto tallocristal: Agrega 1 energía.'
+    - 'Girar, poner un contador de daño sobre Arbusto tallocristal: Agrega 1 energía.'
     - Aliado
     - ''
     - Planta
@@ -10872,7 +10862,7 @@ versiones:
     - '2'
     - '3'
     - Muerte
-    - ! '"Mis niñas están dispuestas al mayor de los sacrificios. Nuestra misión no
+    - '"Mis niñas están dispuestas al mayor de los sacrificios. Nuestra misión no
       será interrumpida."'
     - '72'
     - R
@@ -10885,9 +10875,9 @@ versiones:
     - '3'
     - '3'
   - - '552'
-    - ! 'Los bots que controlas obtienen +1 RES y tienen la habilidad de protector
-      mientras controles 5 o más bots. Girar: Pon en juego una ficha de aliado objeto
-      {locura} Bot 0 FUE, 1 RES.'
+    - 'Los bots que controlas obtienen +1 RES y tienen la habilidad de protector mientras
+      controles 5 o más bots. Girar: Pon en juego una ficha de aliado objeto {locura}
+      Bot 0 FUE, 1 RES.'
     - Objeto
     - ''
     - ''
@@ -10906,14 +10896,14 @@ versiones:
     - '2'
     - '2'
   - - '553'
-    - ! '1: El aliado objetivo ataca a Instigadores del camino este turno si puede.'
+    - '1: El aliado objetivo ataca a Instigadores del camino este turno si puede.'
     - Aliado
     - ''
     - Humano
     - '3'
     - '4'
     - Caos
-    - ! '"¿Andas perdido muchacho? Déjanos ayudarte."'
+    - '"¿Andas perdido muchacho? Déjanos ayudarte."'
     - '21'
     - I
     - '2013-03-11 04:09:17.913112'
@@ -10933,7 +10923,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ! '"Respira por última vez, es hora de morir." - Ubanna'
+    - '"Respira por última vez, es hora de morir." - Ubanna'
     - '99'
     - R
     - '2013-03-12 05:00:29.742752'
@@ -10953,8 +10943,8 @@ versiones:
     - '1'
     - 
     - Poder
-    - ! '"Yo soy la vida y la muerte, madre y dueña de todo lo que ves. Elige bien
-      tus palabras."'
+    - '"Yo soy la vida y la muerte, madre y dueña de todo lo que ves. Elige bien tus
+      palabras."'
     - '4'
     - I
     - '2013-03-14 15:24:11.742714'
@@ -10965,3 +10955,300 @@ versiones:
     - 004-destino
     - 
     - 
+  - - '556'
+    - "El aliado equipado obtiene Abismal (las cartas que fueran a ir a un inferno
+      por el daño de esta carta, se exilian).\r\nVínculo [Descarta un arma de tu mano]
+      - Pon en juego una ficha de aliado Humano 2 FUE, 2 RES."
+    - Arma
+    - ''
+    - ''
+    - '0'
+    - '0'
+    - Caos
+    - ''
+    - '8'
+    - C
+    - '2013-04-12 04:27:43.474296'
+    - '2013-04-12 04:27:43.494704'
+    - '540'
+    - true
+    - '8'
+    - 008-destino
+    - '2'
+    - '2'
+  - - '557'
+    - "Thanatos.\r\nAgresor (tu enemigo debe proponer un aliado con agresor como defensor)."
+    - Aliado
+    - ''
+    - Vampiro
+    - '2'
+    - '3'
+    - Caos
+    - '"Siete, ocho, nueve... Puedo estar así toda la noche."'
+    - '10'
+    - C
+    - '2013-04-12 04:33:28.170175'
+    - '2013-04-12 04:33:28.183242'
+    - '541'
+    - true
+    - '8'
+    - 010-destino
+    - '3'
+    - '3'
+  - - '558'
+    - 'Destruir Canalla provocador: El humano objetivo tiene la habilidad de furia
+      hasta el final del turno.'
+    - Aliado
+    - ''
+    - Humano
+    - '3'
+    - '3'
+    - Caos
+    - '"Ahora verán de lo que somos capaces."'
+    - '11'
+    - C
+    - '2013-04-12 04:36:21.440602'
+    - '2013-04-12 04:36:21.454187'
+    - '542'
+    - true
+    - '8'
+    - 011-destino
+    - '4'
+    - '4'
+  - - '559'
+    - Cazadora de vampiros obtiene +1 FUE y +1 RES por cada vampiro enemigo en juego.
+    - Aliado
+    - ''
+    - Humano
+    - '2'
+    - '2'
+    - Caos
+    - '"El sol y mis puñales, mis mejores aliados."'
+    - '13'
+    - R
+    - '2013-04-12 04:38:05.247114'
+    - '2013-04-12 04:38:05.260179'
+    - '543'
+    - true
+    - '8'
+    - 013-destino
+    - '2'
+    - '2'
+  - - '560'
+    - Pon el arma objetivo en la mano de su demonio.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Caos
+    - '"Ya no te ves tan rudo, ¿verdad?" - Azzam'
+    - '14'
+    - I
+    - '2013-04-12 04:46:24.220177'
+    - '2013-04-12 04:46:24.236306'
+    - '544'
+    - true
+    - '8'
+    - 014-destino
+    - '1'
+    - '1'
+  - - '561'
+    - "Escudo de filos sólo puede equipar a humanos.\r\n2: Anexa Escudo de filos al
+      humano objetivo que controles."
+    - Arma
+    - Único
+    - ''
+    - '2'
+    - '2'
+    - Caos
+    - Un regalo del demonio para Azzam, para tomar las eternas arenas.
+    - '15'
+    - E
+    - '2013-04-12 04:48:48.388936'
+    - '2013-04-12 04:48:48.403896'
+    - '545'
+    - true
+    - '8'
+    - 015-destino
+    - '3'
+    - '3'
+  - - '562'
+    - "Destruye el arma objetivo.\r\nRecobrar [Destruye un arma que controles]."
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Caos
+    - '"Y así los hombres felinos conocieron el miedo por primera vez." - Leyenda
+      urbana nungnarh'
+    - '16'
+    - C
+    - '2013-04-12 07:57:30.379949'
+    - '2013-04-12 07:57:30.464256'
+    - '546'
+    - true
+    - '8'
+    - 016-destino
+    - '2'
+    - '2'
+  - - '563'
+    - "Abismal (las cartas que fueran a ir al inferno por el daño de esta carta, se
+      exilian).\r\nEl aliado equipado tiene: \"Girar: Fusil desértico hace 2 puntos
+      de daño al aliado o demonio objetivo y 1 punto de daño a tu demonio\"."
+    - Arma
+    - ''
+    - ''
+    - '0'
+    - '0'
+    - Caos
+    - ''
+    - '18'
+    - R
+    - '2013-04-12 08:00:48.723184'
+    - '2013-04-12 08:00:48.73759'
+    - '547'
+    - true
+    - '8'
+    - 018-destino
+    - '4'
+    - '4'
+  - - '564'
+    - "Desactiva los entornos.\r\nTu demonio hace 1 punto de daño al demonio objetivo."
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Caos
+    - '"El fuego vive antes y después de la muerte." - Akayra'
+    - '19'
+    - C
+    - '2013-04-12 08:02:45.179366'
+    - '2013-04-12 08:02:45.200047'
+    - '548'
+    - true
+    - '8'
+    - 019-destino
+    - '2'
+    - '2'
+  - - '565'
+    - El daño de combate que haga el aliado equipado no puede ser prevenido.
+    - Arma
+    - ''
+    - ''
+    - '1'
+    - '1'
+    - Caos
+    - '"Nada podrá detenernos." - Rasap'
+    - '20'
+    - I
+    - '2013-04-12 08:04:05.489738'
+    - '2013-04-12 08:04:05.504434'
+    - '549'
+    - true
+    - '8'
+    - 020-destino
+    - '2'
+    - '2'
+  - - '566'
+    - Furia (puede atacar inmediatamente).
+    - Aliado
+    - ''
+    - Kirch
+    - '3'
+    - '2'
+    - Caos
+    - ''
+    - '22'
+    - C
+    - '2013-04-12 08:05:23.233247'
+    - '2013-04-12 08:05:23.247289'
+    - '550'
+    - true
+    - '8'
+    - 022-destino
+    - '4'
+    - '4'
+  - - '567'
+    - Cuando Partesana nómade entre en juego, pon en juego una ficha de aliado Humano
+      2 FUE, 2 RES. Luego, anéxale Partesana nómade.
+    - Arma
+    - ''
+    - ''
+    - '1'
+    - '0'
+    - Caos
+    - '"La partesana ha permanecido en mi familia por generaciones. Cada muerte honra
+      a mis antepasados."'
+    - '23'
+    - C
+    - '2013-04-12 08:07:25.90785'
+    - '2013-04-12 08:07:25.922875'
+    - '551'
+    - true
+    - '8'
+    - 023-destino
+    - '3'
+    - '3'
+  - - '568'
+    - Sirviente impetuoso obtiene +1 FUE y tiene la habilidad furia mientras controles
+      uno o más vampiros.
+    - Aliado
+    - ''
+    - Ghoul
+    - '1'
+    - '2'
+    - Caos
+    - '"Alimenta su rabia, y libera su atadura." - Amo vampiro'
+    - '25'
+    - C
+    - '2013-04-12 08:09:20.435078'
+    - '2013-04-12 08:09:20.450488'
+    - '552'
+    - true
+    - '8'
+    - 025-destino
+    - '1'
+    - '1'
+  - - '569'
+    - "Bendición de Ubanna (cuesta 2 menos si hay Thanatos).\r\nDestruye el escenario
+      o recurso objetivo."
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Caos
+    - '"Deja que el infierno reclame lo que le pertenece." - Narghot'
+    - '26'
+    - C
+    - '2013-04-12 08:14:16.851087'
+    - '2013-04-12 08:14:16.870293'
+    - '553'
+    - true
+    - '8'
+    - 026-destino
+    - '6'
+    - '6'
+  - - '570'
+    - Puedes equipar tus armas como si fueran instantáneas.
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Caos
+    - Aunque Rasap desconocía el lenguaje, pudo comprender a la perfección el pacto
+      que Ubanna le otorgaba.
+    - '27'
+    - R
+    - '2013-04-12 08:27:01.671812'
+    - '2013-04-12 08:27:01.69297'
+    - '554'
+    - true
+    - '8'
+    - 027-destino
+    - '3'
+    - '3'
