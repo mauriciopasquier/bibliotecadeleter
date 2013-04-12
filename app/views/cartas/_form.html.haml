@@ -1,7 +1,7 @@
-= form_for @carta, html: { class: 'form span6' } do |f|
+= form_for @carta, html: { class: 'form carta', multipart: true } do |f|
   = f.error_messages
 
-  = f.fields_for :versiones, @carta.versiones.build do |fc|
+  = f.fields_for :versiones, nueva_version do |fc|
 
     .row-fluid
       .span6
@@ -39,10 +39,38 @@
         = fc.text_area :ambientacion, rows: 5, class: 'span12'
 
     .row-fluid
+      .span2
+        = fc.label :rareza
+        = fc.select :rareza, rarezas_completas.zip(rarezas), { }, class: 'span12'
       .span4
         = fc.label 'Expansión'
-        = fc.hidden_field :expansion_id
+        = fc.hidden_field :expansion_id, id: 'expansion_id'
         = fc.autocomplete_field :expansion,
-          autocompletar_nombre_expansiones_path, id_element: 'asad'
+          autocompletar_nombre_expansiones_path, id_element: '#expansion_id',
+          class: 'span12', name: 'expansion'
+      .span2
+        = fc.label 'Número'
+        = fc.text_field :numero, class: 'span12'
+      .span2
+        = fc.label 'Fuerza'
+        = fc.text_field :fue, class: 'span12'
+      .span2
+        = fc.label 'Resistencia'
+        = fc.text_field :res, class: 'span12'
+
+    - nueva_version.imagenes.each do |imagen|
+      = fc.fields_for :imagenes, imagen do |fi|
+
+        .row-fluid
+          .span7
+            = fi.label :arte
+            = fi.autocomplete_field :arte,
+              autocompletar_nombre_artistas_path, data: { delimiter: ', ' },
+              class: 'span12',
+              placeholder: placeholder_del_arte
+          .span5
+            = fi.label :archivo
+            .control-group.row-fluid
+              = fi.file_field :archivo, class: 'span12'
 
     = f.submit 'Guardar', class: 'btn'

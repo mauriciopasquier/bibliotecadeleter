@@ -11,17 +11,17 @@ class Version < ActiveRecord::Base
   belongs_to :carta, inverse_of: :versiones, touch: true
   delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion, touch: true
-  has_many :imagenes, order: 'created_at ASC'
+  has_many :imagenes, order: 'created_at ASC', inverse_of: :version
   has_many :artistas, through: :imagenes
   has_many :links, as: :linkeable, dependent: :destroy
 
   friendly_id :expansion_y_numero, use: :slugged
 
-  accepts_nested_attributes_for :imagenes
+  accepts_nested_attributes_for :imagenes, reject_if: :all_blank
 
   before_save :ver_si_es_canonica, :convertir_coste
 
-  validates_presence_of :carta
+  validates_presence_of :carta, inverse_of: :versiones
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
 

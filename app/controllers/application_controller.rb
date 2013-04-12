@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?,
-                :barra_de_busqueda, :rarezas
+                :barra_de_busqueda, :rarezas, :rarezas_completas
 
   protected
 
@@ -61,6 +61,10 @@ class ApplicationController < ActionController::Base
 
     def rarezas
       %w{ C I R E P }
+    end
+
+    def rarezas_completas
+      %w{ Común Infrecuente Rara Épica Promocional }
     end
 
     # Para determinar el elemento activo de la paginación

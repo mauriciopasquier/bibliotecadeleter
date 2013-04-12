@@ -47,12 +47,17 @@ BibliotecaDelEter::Application.routes.draw do
         get 'completar_tipo'
         get 'completar_supertipo'
         get 'completar_subtipo'
+        get 'completar_rareza'
       end
     end
   end
 
   with_options path_names: masculinos do |r|
-    r.resources :artistas
+    r.resources :artistas do
+      collection do
+        get 'autocompletar_nombre'  => 'artistas#autocomplete_artista_nombre'
+      end
+    end
   end
 
   get 'legales' => 'inicio#legales'

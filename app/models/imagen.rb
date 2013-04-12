@@ -1,13 +1,13 @@
 # encoding: utf-8
 class Imagen < ActiveRecord::Base
-  attr_accessible :archivo
+  attr_accessible :archivo, :arte
 
   belongs_to :version, touch: true
   has_one :carta, through: :version
   has_one :expansion, through: :version
   has_and_belongs_to_many :artistas
 
-  validates_presence_of :version
+  validates_presence_of :version, inverse_of: :imagenes
 
   delegate  :senda, :nombre, :coste, :rareza, :ambientacion, :fue, :res,
             :numero, :tipo, :subtipo, :supertipo, :canonica, :coste_convertido,
@@ -30,5 +30,17 @@ class Imagen < ActiveRecord::Base
 
   def self.estilos
     [ :original, :mini, :arte ]
+  end
+
+  # Atributo virtual para el FormBuilder
+  def arte=(nombres)
+    nombres.split(',').map(&:strip).each do |artista|
+      self.artistas << Artista.find_or_create_by_nombre(artista) unless artista.blank?
+    end
+  end
+
+  # Tal vez debería ir en un decorador
+  def arte
+    self.artistas.pluck(:nombre).join(', ')
   end
 end

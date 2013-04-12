@@ -30,6 +30,22 @@ module CartasHelper
     end
   end
 
+  # Para el FormBuilder
+  def nueva_version
+    if @version
+      @version
+    else
+      @version = @carta.versiones.build
+      2.times { @version.imagenes.build }
+      @version
+    end
+  end
+
+  def placeholder_del_arte
+    [ cycle("Lado infernal.", "Lado terrenal."),
+      "Si hay varios artistas, separalos con ','."].join(' ')
+  end
+
   private
 
     # Revisa el hash params para determinar si el checkbox fue usado en la
