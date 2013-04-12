@@ -21,6 +21,7 @@ class Version < ActiveRecord::Base
 
   before_save :ver_si_es_canonica, :convertir_coste
 
+  validate :numero_es_unico_en_la_expansion
   validates_presence_of :carta, inverse_of: :versiones
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
@@ -68,4 +69,12 @@ class Version < ActiveRecord::Base
       self.coste_convertido = Version.coste_convertido(self.coste)
     end
 
+    # Comprueba que no hay otras versiones en la expansión con el mismo número.
+    def numero_es_unico_en_la_expansion
+      if self.expansion.versiones.where(numero: self.numero).reject do |v|
+          v.id == self.id
+        end.any?
+        errors.add :numero, :no_es_unico_en_la_expansion
+      end
+    end
 end

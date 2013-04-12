@@ -1,4 +1,11 @@
 es:
+  activerecord:
+    errors:
+      models:
+        version:
+          attributes:
+            numero:
+              no_es_unico_en_la_expansion: "debe ser único dentro de la expansión"
   devise:
     registrations:
       new:
