@@ -11252,3 +11252,500 @@ versiones:
     - 027-destino
     - '3'
     - '3'
+  - - '571'
+    - "Bendición de Ubanna (cuesta 2 menos si hay Thanatos).\r\nToma dos cartas, luego
+      mezcla dos cartas de tu mano en tu mazo."
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Locura
+    - '"Si desconoces lo que buscas, tu batalla ya ha terminado." - Mímire'
+    - '30'
+    - C
+    - '2013-04-15 20:11:35.150058'
+    - '2013-04-15 20:11:35.212804'
+    - '555'
+    - true
+    - '8'
+    - 030-destino
+    - '3'
+    - '3'
+  - - '572'
+    - Copia el ritual objetivo en la cadena. Puedes elegir nuevos objetivos para esa
+      copia.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Locura
+    - '"Sublime sortilegio, permíteme mejorarlo."'
+    - '33'
+    - R
+    - '2013-04-15 20:13:04.088329'
+    - '2013-04-15 20:13:04.103303'
+    - '556'
+    - true
+    - '8'
+    - 033-destino
+    - '3'
+    - '3'
+  - - '573'
+    - "Cancela la carta no vampiro objetivo.\r\nRecobrar [Exilia dos vampiros de tu
+      mano]."
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Locura
+    - '"Puedo controlar la sangre de los impuros, y devolverlos a su querido Inferno."
+      - Caín'
+    - '36'
+    - I
+    - '2013-04-15 20:15:00.498245'
+    - '2013-04-15 20:15:00.51463'
+    - '557'
+    - true
+    - '8'
+    - 036-destino
+    - '4'
+    - '4'
+  - - '574'
+    - Cambia los objetivos de la habilidad objetivo.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Locura
+    - '"¿Por qué no pruebas de nuevo?"'
+    - '37'
+    - I
+    - '2013-04-15 20:16:18.201861'
+    - '2013-04-15 20:16:18.217122'
+    - '558'
+    - true
+    - '8'
+    - 037-destino
+    - '2'
+    - '2'
+  - - '575'
+    - '1, girar: Toma una carta.'
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '1'
+    - '1'
+    - Locura
+    - Los eruditos son los mayores traficantes de información entre los rebeldes.
+    - '38'
+    - I
+    - '2013-04-15 20:17:54.201961'
+    - '2013-04-15 20:17:54.216885'
+    - '559'
+    - true
+    - '8'
+    - 038-destino
+    - '1'
+    - '1'
+  - - '576'
+    - "El demonio objetivo gira un aliado enderezado que controle.\r\nVínculo [Gira
+      2 aliados enderezados que controles] - El demonio objetivo gira un aliado enderezado
+      que controle."
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Locura
+    - ''
+    - '39'
+    - C
+    - '2013-04-15 20:19:27.721357'
+    - '2013-04-15 20:19:27.735499'
+    - '560'
+    - true
+    - '8'
+    - 039-destino
+    - '1'
+    - '1'
+  - - '577'
+    - ''
+    - Arma
+    - Instantáneo
+    - ''
+    - '0'
+    - '2'
+    - Locura
+    - ''
+    - '40'
+    - C
+    - '2013-04-15 20:20:21.834961'
+    - '2013-04-15 20:20:21.850756'
+    - '561'
+    - true
+    - '8'
+    - 040-destino
+    - '2'
+    - '2'
+  - - '578'
+    - "Sangre débil (juega esta carta sólo si hay Thanatos).\r\nMira las primeras
+      cinco cartas del mazo del demonio objetivo. Luego devuélvelas en cualquier orden."
+    - Ritual
+    - Instantáneo
+    - Vampiro
+    - 
+    - 
+    - Locura
+    - '"Así es. Ya nos estamos entendiendo."'
+    - '41'
+    - C
+    - '2013-04-15 20:24:29.107527'
+    - '2013-04-15 20:24:29.123091'
+    - '562'
+    - true
+    - '8'
+    - 041-destino
+    - '1'
+    - '1'
+  - - '579'
+    - Golpe de gracia - Mira la mano del demonio objetivo.
+    - Aliado
+    - ''
+    - Humano
+    - '3'
+    - '2'
+    - Locura
+    - '"Mi trabajo aquí ya ha concluido."'
+    - '42'
+    - C
+    - '2013-04-15 20:28:06.396619'
+    - '2013-04-15 20:28:06.411419'
+    - '563'
+    - true
+    - '8'
+    - 042-destino
+    - '3'
+    - '3'
+  - - '580'
+    - Desactiva los entornos. Toma una carta.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Locura
+    - '"Conozco tu verdadero rostro, y no te tengo miedo." - Baggrund'
+    - '45'
+    - C
+    - '2013-04-15 20:29:20.683307'
+    - '2013-04-15 20:29:20.703109'
+    - '564'
+    - true
+    - '8'
+    - 045-destino
+    - '2'
+    - '2'
+  - - '581'
+    - Sirviente refulgente obtiene +1 FUE y tiene la habilidad de halo mientras controles
+      uno o más vampiros.
+    - Aliado
+    - ''
+    - Ghoul
+    - '1'
+    - '2'
+    - Locura
+    - '"Alimenta su pensamiento, mantén su interés." - Amo vampiro'
+    - '46'
+    - C
+    - '2013-04-15 20:31:15.692045'
+    - '2013-04-15 20:31:15.70659'
+    - '565'
+    - true
+    - '8'
+    - 046-destino
+    - '1'
+    - '1'
+  - - '582'
+    - Evasivo (no puede ser atacado).
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '2'
+    - '2'
+    - Locura
+    - Muy pocos soportan las grandes alturas, incluso menos se atreven a pelear allí.
+    - '47'
+    - C
+    - '2013-04-15 20:32:35.347261'
+    - '2013-04-15 20:32:35.361746'
+    - '566'
+    - true
+    - '8'
+    - 047-destino
+    - '2'
+    - '2'
+  - - '583'
+    - Halo (no puede ser objetivo de cartas o habilidades enemigas).
+    - Aliado
+    - ''
+    - Cyborg
+    - '4'
+    - '1'
+    - Locura
+    - ''
+    - '49'
+    - I
+    - '2013-04-15 20:34:51.447944'
+    - '2013-04-15 20:34:51.463747'
+    - '567'
+    - true
+    - '8'
+    - 049-destino
+    - '4'
+    - '4'
+  - - '584'
+    - "Thanatos.\r\nCuando Vampiro oportuno entre en juego, gira el aliado objetivo."
+    - Aliado
+    - Instantáneo
+    - Vampiro
+    - '2'
+    - '4'
+    - Locura
+    - Siempre a la espera de su momento de gloria.
+    - '50'
+    - C
+    - '2013-04-15 21:26:46.904027'
+    - '2013-04-15 21:26:46.927017'
+    - '568'
+    - true
+    - '8'
+    - 050-destino
+    - '4'
+    - '4'
+  - - '585'
+    - Los otros rebeldes que controlas obtienen +1 FUE, y tienen la habilidad de protector
+      y halo mientras controles 3 o más rebeldes.
+    - Aliado
+    - Único
+    - Cyborg Rebelde
+    - '5'
+    - '5'
+    - Locura
+    - '"Cero-uno-cero-cero-uno-cero-uno-uno-uno."'
+    - '51'
+    - R
+    - '2013-04-15 21:39:01.659159'
+    - '2013-04-15 21:39:01.674083'
+    - '569'
+    - true
+    - '8'
+    - 051-destino
+    - '5'
+    - '5'
+  - - '586'
+    - "Desactiva los entornos.\r\nExilia la última carta del inferno del demonio objetivo."
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Muerte
+    - '"Los malditos de sangre verde no pertenecen a la tierra ni el Inferno. Conozco
+      el lugar perfecto para ellos." - At Fjerne'
+    - '54'
+    - C
+    - '2013-04-15 21:41:17.472955'
+    - '2013-04-15 21:41:17.515228'
+    - '570'
+    - true
+    - '8'
+    - 054-destino
+    - '2'
+    - '2'
+  - - '587'
+    - Siempre que asesino del monasterio haga daño de combate a un aliado, destruye
+      ese aliado al final del combate.
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '2'
+    - '1'
+    - Muerte
+    - '"Un pequeño corte ha sido suficiente. El veneno ya está en tu sangre."'
+    - '55'
+    - C
+    - '2013-04-15 21:45:20.275369'
+    - '2013-04-15 21:45:20.291356'
+    - '571'
+    - true
+    - '8'
+    - 055-destino
+    - '2'
+    - '2'
+  - - '588'
+    - "Destruye Bomba de espinas: Pon un contador de daño sobre el aliado objetivo.\r\nVínculo
+      [Destruye un aliado que controles] - Destruye el aliado objetivo."
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Muerte
+    - ''
+    - '56'
+    - C
+    - '2013-04-15 21:46:55.670361'
+    - '2013-04-15 21:46:55.684806'
+    - '572'
+    - true
+    - '8'
+    - 056-destino
+    - '1'
+    - '1'
+  - - '589'
+    - 'Girar, remueve un contador de daño sobre un aliado que controles: Pon un contador
+      de daño sobre el aliado objetivo.'
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Muerte
+    - ''
+    - '57'
+    - I
+    - '2013-04-15 21:48:25.579334'
+    - '2013-04-15 21:48:25.594544'
+    - '573'
+    - true
+    - '8'
+    - 057-destino
+    - '3'
+    - '3'
+  - - '590'
+    - "El aliado objetivo obtiene -1 FUE y -1 RES hasta el final del turno.\r\nRecobrar
+      [Pon un contador de daño sobre el aliado objetivo que controles]."
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Muerte
+    - Sus piernas se paralizaron, sus brazos no le respondieron, y finalmente, su
+      corazón dejó de latir.
+    - '58'
+    - C
+    - '2013-04-15 21:50:23.705525'
+    - '2013-04-15 21:50:23.728687'
+    - '574'
+    - true
+    - '8'
+    - 058-destino
+    - '2'
+    - '2'
+  - - '591'
+    - "3, exilia Esencia corrosiva: Exilia la carta objetivo de un inferno. Busca
+      en el mazo, inferno y mano de su demonio todas las copias de la misma y exílialas.
+      Luego mezcla su mazo.\r\nVínculo [Pon las primeras 4 cartas de tu mazo en tu
+      inferno] - Exilia el inferno objetivo."
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Muerte
+    - ''
+    - '61'
+    - E
+    - '2013-04-15 22:05:08.541146'
+    - '2013-04-15 22:05:08.555769'
+    - '575'
+    - true
+    - '8'
+    - 061-destino
+    - '3'
+    - '3'
+  - - '592'
+    - El aliado equipado no puede atacar.
+    - Arma
+    - ''
+    - ''
+    - '0'
+    - '0'
+    - Muerte
+    - La maldición de una raza extinta, en la antigua reliquia de batalla.
+    - '62'
+    - C
+    - '2013-04-15 22:07:13.131401'
+    - '2013-04-15 22:07:13.148362'
+    - '576'
+    - true
+    - '8'
+    - 062-destino
+    - '3'
+    - '3'
+  - - '593'
+    - Al principio de cada restauración, si Fantasma resurgente está en tu inferno,
+      puedes pagar 2. Si lo haces, ponlo en juego girado desde tu inferno.
+    - Aliado
+    - ''
+    - Ghoul
+    - '2'
+    - '1'
+    - Muerte
+    - El recuerdo de cada una de sus muertes tortura su alma en pena.
+    - '63'
+    - I
+    - '2013-04-15 22:22:09.343252'
+    - '2013-04-15 22:22:09.361615'
+    - '577'
+    - true
+    - '8'
+    - 063-destino
+    - '2'
+    - '2'
+  - - '594'
+    - "Sangre débil (juega esta carta sólo si hay Thanatos).\r\nDestruir Farol atrapasombras:
+      Pon el aliado objetivo en la mano de su demonio."
+    - Objeto
+    - ''
+    - Vampiro
+    - 
+    - 
+    - Muerte
+    - ''
+    - '64'
+    - C
+    - '2013-04-15 22:29:10.406667'
+    - '2013-04-15 22:29:10.421699'
+    - '578'
+    - true
+    - '8'
+    - 064-destino
+    - '1'
+    - '1'
+  - - '595'
+    - Abismal (las cartas que fueran a ir a un inferno por el daño de esta carta,
+      se exilian).
+    - Aliado
+    - ''
+    - Diablo
+    - '3'
+    - '2'
+    - Muerte
+    - Las gárgolas que custodian el recinto de la abadía, son conocidas por devorar
+      los huesos de sus víctimas.
+    - '65'
+    - I
+    - '2013-04-15 22:31:49.147096'
+    - '2013-04-15 22:31:49.161654'
+    - '579'
+    - true
+    - '8'
+    - 065-destino
+    - '3'
+    - '3'
