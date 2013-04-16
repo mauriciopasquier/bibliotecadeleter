@@ -10150,25 +10150,6 @@ versiones:
     - 066-destino
     - '3'
     - '3'
-  - - '516'
-    - Abismal. Los otros aliados con contadores de daño no pueden atacar.
-    - Aliado objeto
-    - 
-    - Marioneta
-    - '4'
-    - '3'
-    - Muerte
-    - 
-    - '67'
-    - R
-    - '2013-02-19 18:06:33.394241'
-    - '2013-02-19 18:06:33.998888'
-    - '500'
-    - true
-    - '8'
-    - 067-destino
-    - '4'
-    - '4'
   - - '517'
     - Agresor. ESTO obtiene +1 RES por cada recurso que controles. Siempre que un
       recurso entre en juego, remueve un contador de daño sobre ESTO.
@@ -11749,3 +11730,121 @@ versiones:
     - 065-destino
     - '3'
     - '3'
+  - - '596'
+    - Cuando Guerrero saqueareliquias entre en juego, toma el control del objeto objetivo
+      (este efecto no finaliza al final del turno).
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '3'
+    - '2'
+    - Muerte
+    - '"Lo tomaré prestado por unos días. Espero que no te moleste."'
+    - '67'
+    - I
+    - '2013-04-16 10:59:01.815593'
+    - '2013-04-16 10:59:01.895748'
+    - '580'
+    - true
+    - '8'
+    - 067-destino
+    - '4'
+    - '4'
+  - - '597'
+    - "Abismal (las cartas que fueran a ir a un inferno por el daño de esta carta,
+      se exilian).\r\nLos demás aliados con contadores de daño no pueden atacar."
+    - Aliado Objeto
+    - ''
+    - Marioneta
+    - '4'
+    - '3'
+    - Muerte
+    - Irónicamente, es incapaz de sentir cualquier dolor.
+    - '68'
+    - R
+    - '2013-04-16 11:00:50.344508'
+    - '2013-04-16 11:00:50.376654'
+    - '581'
+    - true
+    - '8'
+    - 068-destino
+    - '4'
+    - '4'
+  - - '598'
+    - Siempre que el aliado equipado haga daño de combate a un demonio en lado terrenal,
+      voltéalo.
+    - Arma
+    - ''
+    - ''
+    - '1'
+    - '0'
+    - Muerte
+    - Se dice que el lucero fue templado con las lágrimas de Aryel.
+    - '70'
+    - I
+    - '2013-04-16 11:02:25.123005'
+    - '2013-04-16 11:02:25.137122'
+    - '582'
+    - true
+    - '8'
+    - 070-destino
+    - '2'
+    - '2'
+  - - '599'
+    - Sirviente esquivo obtiene +1 FUE y la habilidad de evasivo mientras controles
+      uno o más vampiros.
+    - Aliado
+    - ''
+    - Ghoul
+    - '1'
+    - '2'
+    - Muerte
+    - '"Alimenta su miedo, y conserva su obediencia." - Amo vampiro'
+    - '71'
+    - C
+    - '2013-04-16 11:03:46.779169'
+    - '2013-04-16 11:03:46.824012'
+    - '583'
+    - true
+    - '8'
+    - 071-destino
+    - '1'
+    - '1'
+  - - '600'
+    - "Thanatos.\r\nEvasivo (no puede ser atacado)."
+    - Aliado
+    - ''
+    - Vampiro
+    - '1'
+    - '3'
+    - Muerte
+    - La noche oculta sus rostros, el viento silencia sus pasos.
+    - '73'
+    - C
+    - '2013-04-16 11:05:06.785135'
+    - '2013-04-16 11:05:06.855615'
+    - '584'
+    - true
+    - '8'
+    - 073-destino
+    - '2'
+    - '2'
+  - - '601'
+    - "Thanatos.\r\nBendición de Ubanna (cuesta 2 menos jugarlo si hay Thanatos)."
+    - Aliado
+    - ''
+    - Vampiro
+    - '6'
+    - '6'
+    - Muerte
+    - '"Hasta aquí llegaste."'
+    - '74'
+    - C
+    - '2013-04-16 11:06:24.463496'
+    - '2013-04-16 11:06:24.478135'
+    - '585'
+    - true
+    - '8'
+    - 074-destino
+    - '7'
+    - '7'

@@ -2503,11 +2503,6 @@ cartas:
     - '2013-02-19 18:06:32.59725'
     - '2013-02-19 18:06:33.322128'
     - ghoul-devoraalmas
-  - - '500'
-    - Inductor de dolor
-    - '2013-02-19 18:06:33.372656'
-    - '2013-02-19 18:06:34.009845'
-    - inductor-de-dolor
   - - '501'
     - Defensor de la enramada
     - '2013-02-19 18:06:34.051147'
@@ -2903,3 +2898,33 @@ cartas:
     - '2013-04-15 22:31:49.128683'
     - '2013-04-15 22:31:49.192842'
     - gargola-de-la-abadia
+  - - '580'
+    - Guerrero saqueareliquias
+    - '2013-04-16 10:59:01.794179'
+    - '2013-04-16 10:59:01.961367'
+    - guerrero-saqueareliquias
+  - - '581'
+    - Inductor de dolor
+    - '2013-04-16 11:00:50.282353'
+    - '2013-04-16 11:00:50.415705'
+    - inductor-de-dolor
+  - - '582'
+    - Lucero del rechazo
+    - '2013-04-16 11:02:25.10502'
+    - '2013-04-16 11:02:25.168468'
+    - lucero-del-rechazo
+  - - '583'
+    - Sirviente esquivo
+    - '2013-04-16 11:03:46.761115'
+    - '2013-04-16 11:03:46.857863'
+    - sirviente-esquivo
+  - - '584'
+    - Vampiro silencioso
+    - '2013-04-16 11:05:06.767353'
+    - '2013-04-16 11:05:06.890299'
+    - vampiro-silencioso
+  - - '585'
+    - Vampiros del pórtico
+    - '2013-04-16 11:06:24.444996'
+    - '2013-04-16 11:06:24.511115'
+    - vampiros-del-portico
