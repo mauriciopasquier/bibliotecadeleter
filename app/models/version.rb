@@ -11,7 +11,8 @@ class Version < ActiveRecord::Base
   belongs_to :carta, inverse_of: :versiones, touch: true
   delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion, touch: true
-  has_many :imagenes, order: 'created_at ASC', inverse_of: :version
+  has_many :imagenes, order: 'created_at ASC',
+            inverse_of: :version, dependent: :destroy
   has_many :artistas, through: :imagenes
   has_many :links, as: :linkeable, dependent: :destroy
 

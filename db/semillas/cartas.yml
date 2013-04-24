@@ -2508,11 +2508,6 @@ cartas:
     - '2013-02-19 18:06:34.051147'
     - '2013-02-19 18:06:34.716932'
     - defensor-de-la-enramada
-  - - '502'
-    - Revelación de Ubanna
-    - '2013-02-19 18:06:34.758323'
-    - '2013-02-19 18:06:35.435659'
-    - revelacion-de-ubanna
   - - '503'
     - Talento vampírico
     - '2013-02-19 18:06:35.595925'
@@ -2928,3 +2923,113 @@ cartas:
     - '2013-04-16 11:06:24.444996'
     - '2013-04-16 11:06:24.511115'
     - vampiros-del-portico
+  - - '586'
+    - Acólito de Abel
+    - '2013-04-24 03:16:43.700403'
+    - '2013-04-24 03:16:43.898593'
+    - acolito-de-abel
+  - - '587'
+    - Alabarda de Ira
+    - '2013-04-24 03:18:27.441537'
+    - '2013-04-24 03:18:27.513747'
+    - alabarda-de-ira
+  - - '588'
+    - Animista de Tresia
+    - '2013-04-24 03:20:49.047617'
+    - '2013-04-24 03:20:49.111855'
+    - animista-de-tresia
+  - - '589'
+    - Anur Saur
+    - '2013-04-24 03:23:40.847068'
+    - '2013-04-24 03:23:40.912257'
+    - anur-saur
+  - - '590'
+    - Arco de Estari
+    - '2013-04-24 03:25:58.181148'
+    - '2013-04-24 03:25:58.244767'
+    - arco-de-estari
+  - - '591'
+    - Aura del buen presagio
+    - '2013-04-24 03:27:39.694187'
+    - '2013-04-24 03:27:39.757487'
+    - aura-del-buen-presagio
+  - - '592'
+    - Barahai de la ensenada
+    - '2013-04-24 03:28:38.037396'
+    - '2013-04-24 03:28:38.259477'
+    - barahai-de-la-ensenada
+  - - '593'
+    - Fortalecer
+    - '2013-04-24 03:30:13.363302'
+    - '2013-04-24 03:30:13.4276'
+    - fortalecer
+  - - '594'
+    - Ímpetu natural
+    - '2013-04-24 03:32:32.16416'
+    - '2013-04-24 03:32:32.22958'
+    - impetu-natural
+  - - '595'
+    - Meditación colectiva
+    - '2013-04-24 03:33:58.627028'
+    - '2013-04-24 03:33:58.693973'
+    - meditacion-colectiva
+  - - '596'
+    - Primeros auxilios
+    - '2013-04-24 03:35:41.815141'
+    - '2013-04-24 03:35:41.879507'
+    - primeros-auxilios
+  - - '597'
+    - Rastreador mercenario
+    - '2013-04-24 03:37:31.48628'
+    - '2013-04-24 03:37:31.557687'
+    - rastreador-mercenario
+  - - '598'
+    - Siervo de Dämonin
+    - '2013-04-24 03:39:21.91396'
+    - '2013-04-24 03:39:21.989678'
+    - siervo-de-damonin
+  - - '599'
+    - Sirviente provocador
+    - '2013-04-24 03:40:58.202459'
+    - '2013-04-24 03:40:58.269579'
+    - sirviente-provocador
+  - - '600'
+    - Trincheras del bosque antiguo
+    - '2013-04-24 03:43:21.393668'
+    - '2013-04-24 03:43:21.462612'
+    - trincheras-del-bosque-antiguo
+  - - '601'
+    - Venerador vampiro
+    - '2013-04-24 03:45:00.622329'
+    - '2013-04-24 03:45:00.691114'
+    - venerador-vampiro
+  - - '602'
+    - Campeón del monasterio
+    - '2013-04-24 03:46:32.549131'
+    - '2013-04-24 03:46:32.611209'
+    - campeon-del-monasterio
+  - - '603'
+    - Combatiente tenaz
+    - '2013-04-24 03:48:21.366164'
+    - '2013-04-24 03:48:21.584797'
+    - combatiente-tenaz
+  - - '604'
+    - Consejero sabio
+    - '2013-04-24 03:49:57.896979'
+    - '2013-04-24 03:49:57.963165'
+    - consejero-sabio
+  - - '605'
+    - Escudo de sangre
+    - '2013-04-24 03:51:14.988479'
+    - '2013-04-24 03:51:15.054043'
+    - escudo-de-sangre
+  - - '606'
+    - Isgar, tempo oculto
+    - '2013-04-24 03:52:19.878414'
+    - '2013-04-24 03:52:19.9422'
+    - isgar-tempo-oculto
+  - - '607'
+    - Revelación de Ubanna
+    - '2013-04-24 04:05:43.077687'
+    - '2013-04-24 04:05:43.153849'
+    - revelacion-de-ubanna

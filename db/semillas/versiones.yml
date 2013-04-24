@@ -10170,25 +10170,6 @@ versiones:
     - 086-destino
     - '3'
     - '3'
-  - - '518'
-    - Bendición de Ubanna. Tienes un turno adicional después de éste.
-    - Ritual
-    - 
-    - 
-    - 
-    - 
-    - Neutral
-    - 
-    - '114'
-    - R
-    - '2013-02-19 18:06:34.78041'
-    - '2013-02-19 18:06:35.424649'
-    - '502'
-    - true
-    - '8'
-    - 114-destino
-    - '10'
-    - '10'
   - - '519'
     - El vampiro objetivo tiene la habilidad de agresor, evasivo, furia o halo hasta
       el final del turno (elige uno).
@@ -11848,3 +11829,441 @@ versiones:
     - 074-destino
     - '7'
     - '7'
+  - - '602'
+    - Prevén todo el daño que Acólito de Abel fuera a recibir de vampiros.
+    - Aliado
+    - ''
+    - Humano
+    - '2'
+    - '2'
+    - Poder
+    - ''
+    - '75'
+    - I
+    - '2013-04-24 03:16:43.753127'
+    - '2013-04-24 03:16:43.816712'
+    - '586'
+    - true
+    - '8'
+    - 075-destino
+    - '2'
+    - '2'
+  - - '603'
+    - "Bendición de Ubanna (cuesta 2 menos si hay Thanatos).\r\nEl aliado equipado
+      tiene la habilidad de furia (puede atacar inmediatamente)."
+    - Arma
+    - ''
+    - ''
+    - '2'
+    - '0'
+    - Poder
+    - Transfiere al portador la cólera de los antiguos.
+    - '76'
+    - C
+    - '2013-04-24 03:18:27.459311'
+    - '2013-04-24 03:18:27.474865'
+    - '587'
+    - true
+    - '8'
+    - 076-destino
+    - '4'
+    - '4'
+  - - '604'
+    - Cuando Animista de Tresia entre en juego, elige un objeto objetivo. Ese objeto
+      es un aliado con FUE y RES igual a su coste mientras Animista de Tresia esté
+      en juego (sigue siendo un objeto).
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '1'
+    - '2'
+    - Poder
+    - '"Tu vida ahora nos pertenece."'
+    - '77'
+    - I
+    - '2013-04-24 03:20:49.065237'
+    - '2013-04-24 03:20:49.079557'
+    - '588'
+    - true
+    - '8'
+    - 077-destino
+    - '3'
+    - '3'
+  - - '605'
+    - "Furia (puede atacar inmediatamente).\r\nAnur Saur no puede atacar a demonios
+      que controlen uno o más aliados."
+    - Aliado
+    - Único
+    - Barahai
+    - '9'
+    - '9'
+    - Poder
+    - '"De repente un rugido se levantó entre el bullicio. Se llamaba Anur Saur, uno
+      de los cuatro hijos de la Casa del Árbol Sagrado." Fragmento de la Caída de
+      Trion'
+    - '78'
+    - R
+    - '2013-04-24 03:23:40.863989'
+    - '2013-04-24 03:23:40.880582'
+    - '589'
+    - true
+    - '8'
+    - 078-destino
+    - '9'
+    - '9'
+  - - '606'
+    - 'El aliado equipado tiene: "2, girar: Arco de Estari hace 1 punto de daño al
+      aliado objetivo. Si ese aliado tiene al menos un contador de daño sobre él,
+      destrúyelo en su lugar".'
+    - Arma
+    - ''
+    - ''
+    - '0'
+    - '0'
+    - Poder
+    - '"Estoy aquí para guiar la reliquia a Trion." - Estari'
+    - '80'
+    - R
+    - '2013-04-24 03:25:58.198408'
+    - '2013-04-24 03:25:58.213427'
+    - '590'
+    - true
+    - '8'
+    - 080-destino
+    - '4'
+    - '4'
+  - - '607'
+    - Prevén los siguientes 3 puntos de daño que se le fueran a hacer al aliado o
+      demonio objetivo hasta el final del turno.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Poder
+    - ''
+    - '81'
+    - C
+    - '2013-04-24 03:27:39.711847'
+    - '2013-04-24 03:27:39.726269'
+    - '591'
+    - true
+    - '8'
+    - 081-destino
+    - '1'
+    - '1'
+  - - '608'
+    - ''
+    - Aliado
+    - ''
+    - Barahai
+    - '3'
+    - '1'
+    - Poder
+    - ''
+    - '83'
+    - C
+    - '2013-04-24 03:28:38.054608'
+    - '2013-04-24 03:28:38.07052'
+    - '592'
+    - true
+    - '8'
+    - 083-destino
+    - '2'
+    - '2'
+  - - '609'
+    - "El aliado objetivo obtiene +2 FUE hasta el final del turno.\r\nRecobrar [Gira
+      un aliado enderezado que controles]."
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Poder
+    - ''
+    - '87'
+    - C
+    - '2013-04-24 03:30:13.381364'
+    - '2013-04-24 03:30:13.396111'
+    - '593'
+    - true
+    - '8'
+    - 087-destino
+    - '2'
+    - '2'
+  - - '610'
+    - El aliado objetivo gana +X FUE hasta el final del turno.
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Poder
+    - '"Los débiles serán fuertes, y los fuertes se convertirán en reyes." - Arasunu'
+    - '89'
+    - I
+    - '2013-04-24 03:32:32.182196'
+    - '2013-04-24 03:32:32.197374'
+    - '594'
+    - true
+    - '8'
+    - 089-destino
+    - X
+    - '0'
+  - - '611'
+    - Agrega 1 energía por cada humano que controles.
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Poder
+    - '"Llegó el momento de enfrentar al enemigo, la suerte de Trion está en nuestras
+      manos." - Tákina'
+    - '90'
+    - R
+    - '2013-04-24 03:33:58.645122'
+    - '2013-04-24 03:33:58.660361'
+    - '595'
+    - true
+    - '8'
+    - 090-destino
+    - '2'
+    - '2'
+  - - '612'
+    - "Desactiva los entornos.\r\nPuedes remover un contador de daño sobre un aliado
+      que controles."
+    - Ritual
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Poder
+    - '"No perteneces al bosque. Madre te devorará." - Dämonin'
+    - '91'
+    - C
+    - '2013-04-24 03:35:41.832881'
+    - '2013-04-24 03:35:41.847655'
+    - '596'
+    - true
+    - '8'
+    - 091-destino
+    - '2'
+    - '2'
+  - - '613'
+    - Cuando Rastreador mercenario entre en juego, prevén el daño que se le fuera
+      a hacer al humano objetivo hasta el final del turno.
+    - Aliado
+    - Instantáneo
+    - Humano Rebelde
+    - '3'
+    - '3'
+    - Poder
+    - '"Sano y salvo, o no regreses." - Dacal, regente de Trion'
+    - '92'
+    - C
+    - '2013-04-24 03:37:31.503617'
+    - '2013-04-24 03:37:31.525421'
+    - '597'
+    - true
+    - '8'
+    - 092-destino
+    - '4'
+    - '4'
+  - - '614'
+    - "Golpe de gracia - Pon una carta de tu inferno en juego, boca abajo y girada
+      como recurso.\r\nVínculo [Remueve un contador de daño sobre un aliado que controles]
+      - Pon una carta de tu inferno en juego, boca abajo y girada como recurso."
+    - Aliado
+    - ''
+    - Elemental
+    - '4'
+    - '4'
+    - Poder
+    - ''
+    - '93'
+    - I
+    - '2013-04-24 03:39:21.936609'
+    - '2013-04-24 03:39:21.951399'
+    - '598'
+    - true
+    - '8'
+    - 093-destino
+    - '5'
+    - '5'
+  - - '615'
+    - Sirviente provocador obtiene +1 FUE y tiene la habilidad de agresor mientras
+      controles uno o más vampiros.
+    - Aliado
+    - ''
+    - Ghoul
+    - '1'
+    - '2'
+    - Poder
+    - '"Alimenta su vigor, pero nunca su astucia." - Amo vampiro'
+    - '94'
+    - C
+    - '2013-04-24 03:40:58.21977'
+    - '2013-04-24 03:40:58.236061'
+    - '599'
+    - true
+    - '8'
+    - 094-destino
+    - '1'
+    - '1'
+  - - '616'
+    - '1, girar: Pon el aliado objetivo que controles en tu mano. Agrega X energías,
+      donde X es el coste del aliado.'
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Poder
+    - ''
+    - '95'
+    - R
+    - '2013-04-24 03:43:21.411848'
+    - '2013-04-24 03:43:21.429897'
+    - '600'
+    - true
+    - '8'
+    - 095-destino
+    - '3'
+    - '3'
+  - - '617'
+    - "Thanatos.\r\nGolpe de gracia - Destruye el objeto objetivo."
+    - Aliado
+    - ''
+    - Vampiro
+    - '2'
+    - '1'
+    - Poder
+    - Una vez eliminada la custodia, pudo tranquilamente saquear el cofre.
+    - '97'
+    - C
+    - '2013-04-24 03:45:00.640564'
+    - '2013-04-24 03:45:00.657954'
+    - '601'
+    - true
+    - '8'
+    - 097-destino
+    - '2'
+    - '2'
+  - - '618'
+    - '1, girar un humano enderezado que controles: Endereza Campeón del monasterio.'
+    - Aliado
+    - ''
+    - Humano
+    - '2'
+    - '1'
+    - Neutral
+    - Una leyenda en vida, que concede paz al Monasterio.
+    - '102'
+    - I
+    - '2013-04-24 03:46:32.565931'
+    - '2013-04-24 03:46:32.580289'
+    - '602'
+    - true
+    - '8'
+    - 102-destino
+    - '2'
+    - '2'
+  - - '619'
+    - Cuando combatiente tenaz entre en juego, puedes poner la carta objetivo de tu
+      inferno en tu mano.
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '2'
+    - '2'
+    - Neutral
+    - Busca destellos de vida, allí donde la muerte abunda.
+    - '105'
+    - I
+    - '2013-04-24 03:48:21.384051'
+    - '2013-04-24 03:48:21.39903'
+    - '603'
+    - true
+    - '8'
+    - 105-destino
+    - '3'
+    - '3'
+  - - '620'
+    - Cuando Consejero sabio entre en juego, cada demonio toma una carta.
+    - Aliado
+    - ''
+    - Humano
+    - '1'
+    - '1'
+    - Neutral
+    - '"El conocimiento es universal, pero la sabiduría es selectiva."'
+    - '106'
+    - C
+    - '2013-04-24 03:49:57.916312'
+    - '2013-04-24 03:49:57.931138'
+    - '604'
+    - true
+    - '8'
+    - 106-destino
+    - '1'
+    - '1'
+  - - '621'
+    - Thanatos.
+    - Arma
+    - ''
+    - Vampiro
+    - '0'
+    - '3'
+    - Neutral
+    - Los lamentos pueden ser escuchados por el portador.
+    - '108'
+    - C
+    - '2013-04-24 03:51:15.00666'
+    - '2013-04-24 03:51:15.021376'
+    - '605'
+    - true
+    - '8'
+    - 108-destino
+    - '2'
+    - '2'
+  - - '622'
+    - ''
+    - Escenario
+    - Instantáneo
+    - ''
+    - 
+    - 
+    - Neutral
+    - ''
+    - '112'
+    - I
+    - '2013-04-24 03:52:19.895711'
+    - '2013-04-24 03:52:19.909809'
+    - '606'
+    - true
+    - '8'
+    - 112-destino
+    - '0'
+    - '0'
+  - - '623'
+    - "Bendición de Ubanna (cuesta 2 menos si hay Thanatos).\r\nTienes un turno adicional
+      después de este."
+    - Ritual
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - Ubanna finalmente se manifestó en forma demoníaca. Su poder sobrepasó cualquier
+      límite conocido.
+    - '115'
+    - R
+    - '2013-04-24 04:05:43.099324'
+    - '2013-04-24 04:05:43.119593'
+    - '607'
+    - true
+    - '8'
+    - 115-destino
+    - '10'
+    - '10'
