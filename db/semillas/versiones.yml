@@ -12267,3 +12267,120 @@ versiones:
     - 115-destino
     - '10'
     - '10'
+  - - '624'
+    - "Thanatos.\r\nDestruir Rocacristal: Agrega 1 energía."
+    - Objeto
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - '"En las grutas bajo el monasterio de Aryel, se forman las rocacristales. Los
+      monjes todavía no lo saben, y es importante que nunca lo descubran." - Azzam,
+      jefe del desierto'
+    - '116'
+    - C
+    - '2013-04-24 04:21:37.13612'
+    - '2013-04-24 04:21:37.156317'
+    - '608'
+    - true
+    - '8'
+    - 116-destino
+    - '1'
+    - '1'
+  - - '625'
+    - Sirviente benefactor obtiene +1 FUE y tiene la habilidad de protector mientras
+      controles uno o más vampiros.
+    - Aliado
+    - ''
+    - Ghoul
+    - '1'
+    - '2'
+    - Neutral
+    - '"Alimenta su valor, y doblega su voluntad." - Amo vampiro'
+    - '117'
+    - C
+    - '2013-04-24 04:23:33.05296'
+    - '2013-04-24 04:23:33.067859'
+    - '609'
+    - true
+    - '8'
+    - 117-destino
+    - '1'
+    - '1'
+  - - '626'
+    - "Thanatos.\r\nGolpe de gracia - Agrega 1 energía."
+    - Aliado
+    - ''
+    - Vampiro
+    - '1'
+    - '2'
+    - Neutral
+    - ''
+    - '120'
+    - C
+    - '2013-04-24 04:24:40.234979'
+    - '2013-04-24 04:24:40.248709'
+    - '610'
+    - true
+    - '8'
+    - 120-destino
+    - '2'
+    - '2'
+  - - '627'
+    - ''
+    - Aliado Objeto
+    - ''
+    - Bot
+    - '0'
+    - '1'
+    - Locura
+    - ''
+    - '121'
+    - C
+    - '2013-04-24 04:27:25.588192'
+    - '2013-04-24 04:27:25.603275'
+    - '611'
+    - true
+    - '8'
+    - 121-destino
+    - ''
+    - 
+  - - '628'
+    - ''
+    - Aliado
+    - ''
+    - Humano
+    - '2'
+    - '2'
+    - Neutral
+    - ''
+    - '123'
+    - C
+    - '2013-04-24 04:29:10.689739'
+    - '2013-04-24 04:29:10.711667'
+    - '612'
+    - true
+    - '8'
+    - 123-destino
+    - ''
+    - 
+  - - '629'
+    - Este aliado entra en juego como una copia del aliado objetivo que controles.
+    - Aliado
+    - ''
+    - ''
+    - '0'
+    - '0'
+    - Neutral
+    - ''
+    - '124'
+    - C
+    - '2013-04-24 04:30:49.671062'
+    - '2013-04-24 04:30:49.686014'
+    - '613'
+    - true
+    - '8'
+    - 124-destino
+    - ''
+    - 
