@@ -20,22 +20,11 @@ class VersionesController < ApplicationController
   end
 
   def new
-    respond_with(@carta, @version)
+    respond_with(@carta)
   end
 
   def edit
-    respond_with(@carta, @version)
-  end
-
-  def create
-    @version.carta = @carta
-    @version.save
-    respond_with(@carta, @version)
-  end
-
-  def update
-    @version.update_attributes(params[:version])
-    respond_with(@carta, @version)
+    respond_with(@carta)
   end
 
   def destroy
