@@ -19,6 +19,8 @@ class Carta < ActiveRecord::Base
 
   accepts_nested_attributes_for :versiones, allow_destroy: true
 
+  validates_uniqueness_of :nombre
+
   def to_s
     nombre
   end

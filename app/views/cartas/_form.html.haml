@@ -1,12 +1,11 @@
 = form_for @carta, html: { class: 'form carta', multipart: true } do |f|
   = f.error_messages
-
   = f.fields_for :versiones, nueva_version do |fc|
 
     .row-fluid
       .span6
         = f.label :nombre
-        = f.text_field :nombre, class: 'span12', autofocus: true, required: true
+        = f.text_field :nombre, class: 'span12', disabled: disabled?, required: true
       .span3
         = fc.label :coste
         = fc.text_field :coste, class: 'span12'
@@ -73,4 +72,4 @@
             .control-group.row-fluid
               = fi.file_field :archivo, class: 'span12'
 
-    = f.submit 'Guardar', class: 'btn'
+  = f.submit 'Guardar', class: 'btn'

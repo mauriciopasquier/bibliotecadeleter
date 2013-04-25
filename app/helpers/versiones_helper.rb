@@ -27,4 +27,9 @@ module VersionesHelper
       @nueva_version
     end
   end
+
+  # Deshabilita nombre el form de versiones
+  def disabled?
+    true
+  end
 end

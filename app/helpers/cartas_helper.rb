@@ -41,6 +41,11 @@ module CartasHelper
     end
   end
 
+  # Habilita nombre el form de cartas
+  def disabled?
+    false
+  end
+
   private
 
     # Revisa el hash params para determinar si el checkbox fue usado en la
