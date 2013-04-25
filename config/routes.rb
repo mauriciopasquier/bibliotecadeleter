@@ -28,18 +28,36 @@ BibliotecaDelEter::Application.routes.draw do
 
   with_options path_names: femeninos do |r|
     r.resources :cartas do
-      r.resources :versiones
+      r.resources :versiones, except: [ :create, :update ]
 
       collection do
         match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
       end
 
     end
-    r.resources :expansiones
+
+    r.resources :expansiones do
+      collection do
+        get 'autocompletar_nombre'  => 'expansiones#autocomplete_expansion_nombre'
+      end
+    end
+
+    r.resources :versiones, only: [] do
+      collection do
+        get 'completar_tipo'
+        get 'completar_supertipo'
+        get 'completar_subtipo'
+        get 'completar_rareza'
+      end
+    end
   end
 
   with_options path_names: masculinos do |r|
-    r.resources :artistas
+    r.resources :artistas do
+      collection do
+        get 'autocompletar_nombre'  => 'artistas#autocomplete_artista_nombre'
+      end
+    end
   end
 
   get 'legales' => 'inicio#legales'

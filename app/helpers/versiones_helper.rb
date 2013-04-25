@@ -14,4 +14,22 @@ module VersionesHelper
         nil
     end
   end
+
+  # Para el FormBuilder
+  def nueva_version
+    if @nueva_version
+      @nueva_version
+    else
+      @nueva_version = @carta.canonica.amoeba_dup
+      @carta.canonica.imagenes.each do |i|
+        @nueva_version.imagenes.build arte: i.arte
+      end
+      @nueva_version
+    end
+  end
+
+  # Deshabilita nombre el form de versiones
+  def disabled?
+    true
+  end
 end

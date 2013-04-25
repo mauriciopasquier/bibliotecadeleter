@@ -1,13 +1,75 @@
-= form_for @carta do |f|
-  - if @carta.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@carta.errors.count, "error")} prohibited this carta from being saved:"
-      %ul
-        - @carta.errors.full_messages.each do |msg|
-          %li= msg
+= form_for @carta, html: { class: 'form carta', multipart: true } do |f|
+  = f.error_messages
+  = f.fields_for :versiones, nueva_version do |fc|
 
-  .field
-    = f.label :nombre
-    = f.text_field :nombre
-  .actions
-    = f.submit 'Save'
+    .row-fluid
+      .span6
+        = f.label :nombre
+        = f.text_field :nombre, class: 'span12', disabled: disabled?, required: true
+      .span3
+        = fc.label :coste
+        = fc.text_field :coste, class: 'span12'
+      .span3
+        = fc.label :senda
+        = fc.select :senda, sendas, { }, class: 'span12'
+
+    .row-fluid
+      .span4
+        = fc.label 'Tipos'
+        = fc.autocomplete_field :tipo, completar_tipo_versiones_path,
+          class: 'span12', placeholder: 'Aliado, Objeto, etc'
+      .span4
+        = fc.label 'Supertipos'
+        = fc.autocomplete_field :supertipo, completar_supertipo_versiones_path,
+           class: 'span12', placeholder: 'Demonio, Instantáneo, etc'
+      .span4
+        = fc.label 'Subtipos'
+        = fc.autocomplete_field :subtipo, completar_subtipo_versiones_path,
+           class: 'span12', placeholder: 'Reptil, Bot, etc'
+
+    .row-fluid
+      .span12
+        = fc.label :texto
+        = fc.text_area :texto, rows: 5, class: 'span12'
+
+    .row-fluid
+      .span12
+        = fc.label 'Ambientación'
+        = fc.text_area :ambientacion, rows: 5, class: 'span12'
+
+    .row-fluid
+      .span2
+        = fc.label :rareza
+        = fc.select :rareza, rarezas_completas.zip(rarezas), { }, class: 'span12'
+      .span4
+        = fc.label 'Expansión'
+        = fc.hidden_field :expansion_id, id: 'expansion_id'
+        = fc.autocomplete_field :expansion,
+          autocompletar_nombre_expansiones_path, id_element: '#expansion_id',
+          class: 'span12', name: 'expansion'
+      .span2
+        = fc.label 'Número'
+        = fc.text_field :numero, class: 'span12'
+      .span2
+        = fc.label 'Fuerza'
+        = fc.text_field :fue, class: 'span12'
+      .span2
+        = fc.label 'Resistencia'
+        = fc.text_field :res, class: 'span12'
+
+    - nueva_version.imagenes.each do |imagen|
+      = fc.fields_for :imagenes, imagen do |fi|
+
+        .row-fluid
+          .span7
+            = fi.label :arte
+            = fi.autocomplete_field :arte,
+              autocompletar_nombre_artistas_path, data: { delimiter: ', ' },
+              class: 'span12',
+              placeholder: placeholder_del_arte
+          .span5
+            = fi.label :archivo
+            .control-group.row-fluid
+              = fi.file_field :archivo, class: 'span12'
+
+  = f.submit 'Guardar', class: 'btn'

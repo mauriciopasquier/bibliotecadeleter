@@ -19,3 +19,5 @@
                         estilo: :original }
 
 = link_to 'Volver a la carta', @carta, class: 'btn'
+- if can? :edit, @version
+  = link_to 'Editar', edit_carta_version_path(@carta, @version), class: 'btn'

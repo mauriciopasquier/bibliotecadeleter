@@ -23,7 +23,17 @@ module ApplicationHelper
 
   # Por defecto, no se usa nada.
   def titulo
-    nil
+    case c = params[:controller]
+      when 'devise/registrations', 'devise/sessions', 'devise/passwords'
+        case a = params[:action]
+          when 'edit', 'new'
+            t "#{c.gsub('/','.')}.#{a}.titulo"
+          else
+            nil
+        end
+      else
+        nil
+    end
   end
 
   def expansiones
@@ -65,6 +75,11 @@ module ApplicationHelper
       when 'P' then 'Promocional'
       else  '???'
     end
+  end
+
+  def placeholder_del_arte
+    [ cycle("Lado infernal.", "Lado terrenal."),
+      "Si hay varios artistas, separalos con ','."].join(' ')
   end
 
   private

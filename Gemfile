@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 # Database
 gem 'pg'
@@ -12,6 +12,7 @@ gem 'attribute_normalizer'
 gem 'inflections', require: false
 gem 'paperclip'
 gem 'squeel'
+gem 'amoeba'
 
 # View
 gem 'dynamic_form'
@@ -21,6 +22,9 @@ gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
 gem 'sitemap'
+gem 'rails3-jquery-autocomplete',
+  github: 'mauriciopasquier/rails3-jquery-autocomplete',
+  branch: 'scopes-with-parameters'
 
 # Controller
 gem 'responders'
@@ -49,6 +53,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'uri-js-rails'
   gem 'turbolinks'
+  gem 'jquery-ui-rails'
 end
 
 group :test, :development do
