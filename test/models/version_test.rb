@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/minitest_helper"
+require "./test/test_helper"
 
 describe Version do
   it "must be valid" do

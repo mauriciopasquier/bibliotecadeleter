@@ -1,8 +1,8 @@
 # encoding: utf-8
-require "./test/minitest_helper"
+require "./test/test_helper"
 
 <% module_namespacing do -%>
-class <%= controller_class_name %>ControllerTest < MiniTest::Rails::ActionController::TestCase
+class <%= controller_class_name %>ControllerTest < ActionController::TestCase
 
   before do
     @<%= singular_table_name %> = <%= table_name %>(:one)

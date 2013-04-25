@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/minitest_helper"
+require "./test/test_helper"
 
 # To be handled correctly this spec must end with "Acceptance Test"
 describe "<%= class_name %> Acceptance Test" do
