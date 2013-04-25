@@ -70,4 +70,5 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'minitest-rails-capybara'
+  gem 'turn'
 end

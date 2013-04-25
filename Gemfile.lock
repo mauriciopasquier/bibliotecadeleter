@@ -45,6 +45,7 @@ GEM
       multi_json (~> 1.0)
     amoeba (2.0.0)
       activerecord (>= 3.0)
+    ansi (1.4.3)
     arel (3.0.2)
     atomic (1.1.8)
     attribute_normalizer (1.1.0)
@@ -259,6 +260,8 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (1.1.1)
       coffee-rails
+    turn (0.9.6)
+      ansi
     tzinfo (0.3.37)
     uglifier (2.0.1)
       execjs (>= 0.3.0)
@@ -313,6 +316,7 @@ DEPENDENCIES
   therubyracer
   thin
   turbolinks
+  turn
   uglifier (>= 1.0.3)
   uri-js-rails
   yaml_db!
