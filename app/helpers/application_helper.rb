@@ -77,6 +77,11 @@ module ApplicationHelper
     end
   end
 
+  def placeholder_del_arte
+    [ cycle("Lado infernal.", "Lado terrenal."),
+      "Si hay varios artistas, separalos con ','."].join(' ')
+  end
+
   private
 
     def alerta(tipo)

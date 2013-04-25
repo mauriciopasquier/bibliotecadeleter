@@ -12,6 +12,7 @@ gem 'attribute_normalizer'
 gem 'inflections', require: false
 gem 'paperclip'
 gem 'squeel'
+gem 'amoeba'
 
 # View
 gem 'dynamic_form'

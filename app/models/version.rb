@@ -52,6 +52,12 @@ class Version < ActiveRecord::Base
     Version.prioridad_de_senda(self.senda)
   end
 
+  # Permite copiar una versión sin expansión ni imágenes, para las reediciones
+  amoeba do
+    exclude_field :imagenes
+    nullify [ :expansion_id, :slug, :numero ]
+  end
+
   private
 
     # Usá `slug` para llamar a esto

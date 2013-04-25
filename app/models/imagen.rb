@@ -41,6 +41,6 @@ class Imagen < ActiveRecord::Base
 
   # Tal vez debería ir en un decorador
   def arte
-    self.artistas.pluck(:nombre).join(', ')
+    self.artistas.collect(&:nombre).join(', ')
   end
 end

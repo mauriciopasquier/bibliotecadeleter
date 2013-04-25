@@ -41,11 +41,6 @@ module CartasHelper
     end
   end
 
-  def placeholder_del_arte
-    [ cycle("Lado infernal.", "Lado terrenal."),
-      "Si hay varios artistas, separalos con ','."].join(' ')
-  end
-
   private
 
     # Revisa el hash params para determinar si el checkbox fue usado en la
