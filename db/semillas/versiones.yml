@@ -12384,3 +12384,255 @@ versiones:
     - 124-destino
     - ''
     - 
+  - - '630'
+    - Agresor.
+    - Aliado
+    - ''
+    - Kirch
+    - '1'
+    - '1'
+    - Caos
+    - '"Hermozo hijo mioz, en tu zacrifizio ezta la victoriaz." -Syv'
+    - '12'
+    - C
+    - '2013-04-25 07:48:45.883301'
+    - '2013-04-25 07:48:45.911945'
+    - '17'
+    - false
+    - '8'
+    - 012-destino
+    - '1'
+    - '1'
+  - - '631'
+    - Cuando Forjadores del horno cenizo entre en juego, busca en tu mazo un arma,
+      muéstrala, y ponla en tu mano. Luego mezcla tu mazo.
+    - Aliado
+    - ''
+    - Humano
+    - '5'
+    - '3'
+    - Caos
+    - El calor del honro cenizo, sólo se compara con el mismísimo Inferno.
+    - '17'
+    - R
+    - '2013-04-25 07:50:38.070302'
+    - '2013-04-25 07:50:38.087719'
+    - '23'
+    - false
+    - '8'
+    - 017-destino
+    - '5'
+    - '5'
+  - - '632'
+    - Adivinador cyborg entre en juego, mira las primeras tres cartas de tu mazo.
+      Luego regrésalas en cualquier orden.
+    - Aliado
+    - Instantáneo
+    - Cyborg
+    - '1'
+    - '2'
+    - Locura
+    - '"Tienen una divertida manera de controlar su tiempo." -Ingeniero de la Esfera
+      de cristal'
+    - '29'
+    - C
+    - '2013-04-25 07:52:43.684544'
+    - '2013-04-25 07:52:43.70136'
+    - '40'
+    - false
+    - '8'
+    - 029-destino
+    - '2'
+    - '2'
+  - - '633'
+    - Cuando Tejedora de mentiras entre en juego, cada enemigo descarta una carta.
+    - Aliado
+    - ''
+    - Humano
+    - '2'
+    - '2'
+    - Locura
+    - '"Aunque saben que miento, les resulta inevitable creerme."'
+    - '48'
+    - C
+    - '2013-04-25 07:54:34.29324'
+    - '2013-04-25 07:54:34.308975'
+    - '63'
+    - false
+    - '8'
+    - 048-destino
+    - '3'
+    - '3'
+  - - '634'
+    - Evasivo (no puede ser atacado).
+    - Aliado
+    - ''
+    - Humano
+    - '1'
+    - '1'
+    - Muerte
+    - Algunos dicen que viajan a través de nuestras sombras.
+    - '52'
+    - C
+    - '2013-04-25 07:55:41.962253'
+    - '2013-04-25 07:55:41.980028'
+    - '65'
+    - false
+    - '8'
+    - 052-destino
+    - '1'
+    - '1'
+  - - '635'
+    - Cuando Diablo oportuno entre en juego, exilia la carta objetivo de un Inferno.
+    - Aliado
+    - Instantáneo
+    - Diablo
+    - '2'
+    - '3'
+    - Muerte
+    - '"Disfruto ver como mis creaciones causan dolor y sufrimiento." -At Fjerne'
+    - '59'
+    - C
+    - '2013-04-25 07:57:40.796203'
+    - '2013-04-25 07:57:40.823498'
+    - '76'
+    - false
+    - '8'
+    - 059-destino
+    - '3'
+    - '3'
+  - - '636'
+    - Furia (puede atacar inmediatamente).
+    - Aliado
+    - ''
+    - Barahai
+    - '1'
+    - '1'
+    - Poder
+    - Primero en defender sus dominios.
+    - '84'
+    - C
+    - '2013-04-25 07:58:51.335832'
+    - '2013-04-25 07:58:51.350192'
+    - '95'
+    - false
+    - '8'
+    - 084-destino
+    - '1'
+    - '1'
+  - - '637'
+    - Agresor (tu enemigo debe proponer un aliado con agresor como defensor).
+    - Aliado
+    - ''
+    - Humano
+    - '3'
+    - '2'
+    - Poder
+    - '"Nara, no temas. Nuestra hora ha llegado. Los niños cantarán por siempre la
+      canción, en que los Hermanos de la tierra protegieron su tribu."'
+    - '88'
+    - C
+    - '2013-04-25 08:01:48.740614'
+    - '2013-04-25 08:01:48.758424'
+    - '108'
+    - false
+    - '8'
+    - 088-destino
+    - '3'
+    - '3'
+  - - '638'
+    - Siempre que un aliado ataque, obtiene +1 FUE hasta el final del turno.
+    - Escenario
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - La magia del bosque se siente en cada hoja, en cada insecto, en cada brisa.
+    - '100'
+    - R
+    - '2013-04-25 08:04:18.171713'
+    - '2013-04-25 08:04:18.186018'
+    - '123'
+    - false
+    - '8'
+    - 100-destino
+    - '0'
+    - '0'
+  - - '639'
+    - Hija del valor no puede atacar a aliados.
+    - Aliado
+    - ''
+    - Humano
+    - '2'
+    - '1'
+    - Neutral
+    - '"Pelear por una causa noble, no siempre es suficiente."'
+    - '111'
+    - I
+    - '2013-04-25 08:05:20.27554'
+    - '2013-04-25 08:05:20.291125'
+    - '153'
+    - false
+    - '8'
+    - 111-destino
+    - '1'
+    - '1'
+  - - '640'
+    - ''
+    - Aliado
+    - ''
+    - Lobo
+    - '3'
+    - '3'
+    - Neutral
+    - ''
+    - '113'
+    - C
+    - '2013-04-25 08:06:10.274884'
+    - '2013-04-25 08:06:10.29'
+    - '161'
+    - false
+    - '8'
+    - 113-destino
+    - '3'
+    - '3'
+  - - '641'
+    - Siempre que un aliado ataque, Pantano de los chamanes le hace 1 punto de daño
+      al final del combate.
+    - Escenario
+    - ''
+    - ''
+    - 
+    - 
+    - Neutral
+    - Cada nuevo cadáver, expande sus viscosas aguas.
+    - '114'
+    - I
+    - '2013-04-25 08:07:58.04063'
+    - '2013-04-25 08:07:58.077793'
+    - '165'
+    - false
+    - '8'
+    - 114-destino
+    - '0'
+    - '0'
+  - - '642'
+    - El escenario pierde sus habilidades. Vínculo 0 - Destruye el escenario objetivo.
+    - Aliado
+    - ''
+    - Vampiro
+    - '3'
+    - '3'
+    - Neutral
+    - Marchita la tierra tan rápido como se expanden en ella.
+    - '119'
+    - R
+    - '2013-04-25 08:09:07.220386'
+    - '2013-04-25 08:09:07.237752'
+    - '178'
+    - false
+    - '8'
+    - 119-destino
+    - '4'
+    - '4'
