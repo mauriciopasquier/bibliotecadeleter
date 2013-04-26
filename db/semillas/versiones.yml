@@ -531,14 +531,14 @@ versiones:
     - Arma
     - Instantáneo
     - 
-    - '2'
-    - '0'
+    - '+2'
+    - '+0'
     - Caos
     - La ingeniería Nungnarh es increíblemente creativa.
     - '27'
     - I
     - '2013-02-19 17:49:51.246589'
-    - '2013-02-19 17:49:51.917145'
+    - '2013-04-26 20:10:34.849427'
     - '27'
     - true
     - '1'
@@ -1119,14 +1119,14 @@ versiones:
     - Arma
     - Instantáneo
     - 
-    - '2'
-    - '0'
+    - '+2'
+    - '+0'
     - Locura
     - No hace falta que sepas como usarlo, él te mostrará.
     - '57'
     - I
     - '2013-02-19 17:50:12.199555'
-    - '2013-02-19 17:50:12.779332'
+    - '2013-04-26 20:10:34.908288'
     - '57'
     - true
     - '1'
@@ -1388,17 +1388,17 @@ versiones:
   - - '71'
     - Cuando el aliado equipado destruya un aliado, puedes exiliar la carta objetivo
       de un Inferno.
-    - Aliado
+    - Arma
     - Instantáneo
-    - 
-    - '2'
-    - '0'
+    - ''
+    - '+2'
+    - '+0'
     - Muerte
     - Ayuda a las criaturas en su camino al olvido eterno.
     - '71'
     - I
     - '2013-02-19 17:50:21.970849'
-    - '2013-02-19 17:50:22.579872'
+    - '2013-04-26 21:01:15.780527'
     - '71'
     - true
     - '1'
@@ -2131,16 +2131,16 @@ versiones:
   - - '109'
     - La FUE y RES de Primogénito del bosque es igual al número de recursos que controlas.
     - Aliado
-    - 
+    - ''
     - Elemental
-    - '0'
-    - '0'
+    - X
+    - X
     - Poder
     - Por su savia recorre la historia de la tierra que una vez existió.
     - '109'
     - R
     - '2013-02-19 17:50:48.87859'
-    - '2013-02-19 17:50:49.490095'
+    - '2013-04-26 21:28:04.897301'
     - '109'
     - true
     - '1'
@@ -2462,14 +2462,14 @@ versiones:
     - Arma
     - 
     - 
-    - '0'
-    - '3'
+    - '+0'
+    - '+3'
     - Neutral
     - 
     - '126'
     - I
     - '2013-02-19 17:51:00.639035'
-    - '2013-02-19 17:51:01.24474'
+    - '2013-04-26 20:10:34.955165'
     - '126'
     - true
     - '1'
@@ -2618,14 +2618,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Neutral
     - 
     - '134'
     - I
     - '2013-02-19 17:51:06.120991'
-    - '2013-02-19 17:51:06.734528'
+    - '2013-04-26 20:10:35.002043'
     - '134'
     - true
     - '1'
@@ -2776,15 +2776,15 @@ versiones:
     - Arma
     - Instantáneo
     - 
-    - '2'
-    - '0'
+    - '+2'
+    - '+0'
     - Neutral
     - La sola idea de regresar al Inferno, es suficiente para ofrecer tu eterna lealtad
       al portador.
     - '142'
     - E
     - '2013-02-19 17:51:11.68121'
-    - '2013-02-19 17:51:12.286921'
+    - '2013-04-26 20:10:35.046017'
     - '142'
     - true
     - '1'
@@ -2912,14 +2912,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Neutral
     - 
     - '149'
     - I
     - '2013-02-19 17:51:16.476406'
-    - '2013-02-19 17:51:17.078411'
+    - '2013-04-26 20:10:35.087293'
     - '149'
     - true
     - '1'
@@ -2969,14 +2969,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Neutral
     - 
     - '152'
     - I
     - '2013-02-19 17:51:18.495376'
-    - '2013-02-19 17:51:19.082'
+    - '2013-04-26 20:10:35.128067'
     - '152'
     - true
     - '1'
@@ -3124,14 +3124,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Neutral
     - 
     - '160'
     - I
     - '2013-02-19 17:51:24.040066'
-    - '2013-02-19 17:51:24.637949'
+    - '2013-04-26 20:10:35.175812'
     - '160'
     - true
     - '1'
@@ -3181,14 +3181,14 @@ versiones:
     - Arma
     - 
     - 
-    - '0'
-    - '0'
+    - '+0'
+    - '+0'
     - Neutral
     - 
     - '163'
     - R
     - '2013-02-19 17:51:26.174441'
-    - '2013-02-19 17:51:26.757256'
+    - '2013-04-26 20:10:35.217184'
     - '163'
     - true
     - '1'
@@ -3337,14 +3337,14 @@ versiones:
     - Arma
     - 
     - 
-    - '3'
-    - '3'
+    - '+3'
+    - '+3'
     - Neutral
     - 
     - '171'
     - R
     - '2013-02-19 17:51:31.792157'
-    - '2013-02-19 17:51:32.450739'
+    - '2013-04-26 20:10:35.258973'
     - '171'
     - true
     - '1'
@@ -4043,15 +4043,15 @@ versiones:
     - Arma
     - Único
     - 
-    - '2'
-    - '2'
+    - '+2'
+    - '+2'
     - Caos
     - “El arma silva como una tormenta de arena en la noche." -Fragmento del Imperio
       de la arena roja.
     - '19'
     - R
     - '2013-02-19 17:59:28.7025'
-    - '2013-02-19 17:59:29.383608'
+    - '2013-04-26 20:10:35.306344'
     - '203'
     - true
     - '3'
@@ -4064,15 +4064,15 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '1'
+    - '+1'
+    - '+1'
     - Caos
     - '"Los portadores de los cráneos suelen perder sus huellas dactilares a temprana
       edad"'
     - '20'
     - I
     - '2013-02-19 17:59:29.577099'
-    - '2013-02-19 17:59:30.222411'
+    - '2013-04-26 20:10:35.355296'
     - '204'
     - true
     - '3'
@@ -4080,18 +4080,18 @@ versiones:
     - '2'
     - '2'
   - - '209'
-    - 
+    - ''
     - Arma
-    - 
-    - 
-    - '3'
-    - 
+    - ''
+    - ''
+    - '+3'
+    - '+0'
     - Caos
-    - 
+    - ''
     - '21'
     - C
     - '2013-02-19 17:59:30.299033'
-    - '2013-02-19 17:59:30.964416'
+    - '2013-04-26 20:52:21.226842'
     - '205'
     - true
     - '3'
@@ -4381,16 +4381,16 @@ versiones:
     - Siempre que el aliado equipado haga daño de combate a un demonio, puedes destruir
       el escenario objetivo
     - Arma
-    - 
-    - 
-    - '2'
-    - 
+    - ''
+    - ''
+    - '+2'
+    - '+0'
     - Caos
-    - '"Bautizada cariñosamente como la destruyehogares"'
+    - Bautizada cariñosamente como la destruyehogares.
     - '36'
     - I
     - '2013-02-19 17:59:41.141123'
-    - '2013-02-19 17:59:41.760748'
+    - '2013-04-26 21:02:37.632297'
     - '220'
     - true
     - '3'
@@ -4924,18 +4924,18 @@ versiones:
     - '5'
     - '5'
   - - '251'
-    - 
+    - ''
     - Arma
-    - 
-    - 
-    - '3'
-    - 
+    - ''
+    - ''
+    - '-3'
+    - '-0'
     - Locura
-    - 
+    - ''
     - '63'
     - C
     - '2013-02-19 18:00:00.974412'
-    - '2013-02-19 18:00:01.587311'
+    - '2013-04-26 20:10:59.040835'
     - '247'
     - true
     - '3'
@@ -5022,20 +5022,20 @@ versiones:
     - '5'
     - '5'
   - - '256'
-    - 'Siempre que un ritual tenga como único objetivo al aliado equipado, puedes
-      cambiar el objetivo de ese ritual '
-    - Aliado
+    - Siempre que un ritual tenga como único objetivo al aliado equipado, puedes cambiar
+      el objetivo de ese ritual.
+    - Arma
     - Único
-    - 
-    - '2'
-    - '2'
+    - ''
+    - '+2'
+    - '+2'
     - Locura
     - '"Luego de esa asombrosa maniobra esquiva, no le resulto difícil apuntar a su
       enemigo y abrir fuego" -Fragmento de Efe, pionero de la rebelión'
     - '68'
     - R
     - '2013-02-19 18:00:04.683795'
-    - '2013-02-19 18:00:05.342816'
+    - '2013-04-26 20:54:41.544029'
     - '252'
     - true
     - '3'
@@ -5637,18 +5637,18 @@ versiones:
     - '2'
     - '2'
   - - '287'
-    - 
+    - ''
     - Arma
-    - 
-    - 
+    - ''
+    - ''
     - '-1'
-    - '2'
+    - '+2'
     - Muerte
-    - 
+    - ''
     - '99'
     - C
     - '2013-02-19 18:00:27.042198'
-    - '2013-02-19 18:00:27.700439'
+    - '2013-04-26 20:11:24.289387'
     - '283'
     - true
     - '3'
@@ -5658,17 +5658,17 @@ versiones:
   - - '288'
     - Siempre que un aliado sea destruido, si el aliado equipado fue la fuente del
       efecto o del ultimo punto de daño recibido, endereza el aliado equipado.
-    - Aliado
+    - Arma
     - Único
-    - 
-    - '2'
-    - '2'
+    - ''
+    - '+2'
+    - '+2'
     - Muerte
-    - '"La sed de sangre no habitaba en el guerrero, sino en la hoja misma que blandía"'
+    - La sed de sangre no habitaba en el guerrero, sino en la hoja misma que blandía.
     - '100'
     - R
     - '2013-02-19 18:00:27.784245'
-    - '2013-02-19 18:00:28.458875'
+    - '2013-04-26 21:03:37.612612'
     - '284'
     - true
     - '3'
@@ -6377,14 +6377,14 @@ versiones:
     - Arma
     - 
     - 
-    - '2'
-    - '1'
+    - '+2'
+    - '+1'
     - Poder
     - 
     - '136'
     - C
     - '2013-02-19 18:00:54.406403'
-    - '2013-02-19 18:00:55.018964'
+    - '2013-04-26 20:10:35.567881'
     - '320'
     - true
     - '3'
@@ -6695,17 +6695,17 @@ versiones:
     - Thanatos. Campeón Vampiro tiene FUE y RES igual a la cantidad de vampiros en
       juego.
     - Aliado
-    - 
+    - ''
     - Vampiro
-    - '0'
-    - '0'
+    - X
+    - X
     - Neutral
     - '"Su sombra crecía imponente. La diosa de la luz temió por su vida y corrió
       hacia el abismo" -Leyenda Infantil'
     - '152'
     - R
     - '2013-02-19 18:01:06.008182'
-    - '2013-02-19 18:01:06.641905'
+    - '2013-04-26 21:24:00.948397'
     - '336'
     - true
     - '3'
@@ -6794,14 +6794,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '1'
+    - '+1'
+    - '+1'
     - Neutral
     - '"Todo un legado vampírico en un solo recipiente"'
     - '157'
     - C
     - '2013-02-19 18:01:09.508555'
-    - '2013-02-19 18:01:10.116612'
+    - '2013-04-26 20:10:35.611899'
     - '341'
     - true
     - '3'
@@ -6892,14 +6892,14 @@ versiones:
     - Arma
     - 
     - 
-    - '2'
-    - '2'
+    - '+2'
+    - '+2'
     - Neutral
     - '"Los artefactos de dragón no son dignos de cualquier portador"'
     - '162'
     - I
     - '2013-02-19 18:01:13.089419'
-    - '2013-02-19 18:01:13.710447'
+    - '2013-04-26 20:10:35.655471'
     - '346'
     - true
     - '3'
@@ -7685,14 +7685,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Caos
     - La solución nungnarh a un problema siempre será violenta.
     - '12'
     - C
     - '2013-02-19 18:03:58.411637'
-    - '2013-02-19 18:03:59.02024'
+    - '2013-04-26 20:10:35.699371'
     - '380'
     - true
     - '5'
@@ -7704,14 +7704,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '1'
+    - '+1'
+    - '+1'
     - Caos
     - 
     - '13'
     - C
     - '2013-02-19 18:03:59.216337'
-    - '2013-02-19 18:03:59.835673'
+    - '2013-04-26 20:10:35.741407'
     - '381'
     - true
     - '5'
@@ -7839,14 +7839,14 @@ versiones:
     - Arma
     - 
     - 
-    - '0'
-    - '1'
+    - '+0'
+    - '+1'
     - Caos
     - Curioso artefacto capaz de materializar la esencia de Insania.
     - '20'
     - I
     - '2013-02-19 18:04:04.104054'
-    - '2013-02-19 18:04:04.749444'
+    - '2013-04-26 20:10:35.957183'
     - '388'
     - true
     - '5'
@@ -7859,14 +7859,14 @@ versiones:
     - Arma
     - 
     - 
-    - '2'
-    - '2'
+    - '+2'
+    - '+2'
     - Caos
     - Fuerza a cualquier precio.
     - '21'
     - R
     - '2013-02-19 18:04:04.948675'
-    - '2013-02-19 18:04:05.566838'
+    - '2013-04-26 20:10:36.008688'
     - '389'
     - true
     - '5'
@@ -7879,15 +7879,15 @@ versiones:
     - Arma
     - 
     - 
-    - '5'
-    - '5'
+    - '+5'
+    - '+5'
     - Caos
     - Mientras Rasap entonaba el himno de batalla, la sacerdotisa intentó nuevamente
       levantar la espada. Ligera como el viento, la Quiebrahuesos fue sometida.
     - '22'
     - E
     - '2013-02-19 18:04:05.644151'
-    - '2013-02-19 18:04:06.269805'
+    - '2013-04-26 20:10:36.056748'
     - '390'
     - true
     - '5'
@@ -8354,14 +8354,14 @@ versiones:
     - Arma
     - 
     - 
-    - '0'
-    - '2'
+    - '+0'
+    - '+2'
     - Locura
     - 
     - '46'
     - R
     - '2013-02-19 18:04:22.940628'
-    - '2013-02-19 18:04:23.541136'
+    - '2013-04-26 20:10:36.107926'
     - '414'
     - true
     - '5'
@@ -8766,14 +8766,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '1'
+    - '+1'
+    - '+1'
     - Muerte
     - La estaca busca alimento, sin importar su origen.
     - '67'
     - R
     - '2013-02-19 18:04:37.992595'
-    - '2013-02-19 18:04:38.610345'
+    - '2013-04-26 20:10:36.205654'
     - '435'
     - true
     - '5'
@@ -9019,16 +9019,16 @@ versiones:
     - Siempre que el aliado equipado haga daño de combate, pon en juego esa misma
       cantidad de fichas de aliado {poder} Planta Fue 0, Res 1.
     - Arma
-    - 
-    - 
-    - '1'
-    - 
+    - ''
+    - ''
+    - '+1'
+    - '+0'
     - Poder
     - La enramada crece con cada gota derramada.
     - '80'
     - R
     - '2013-02-19 18:04:47.171066'
-    - '2013-02-19 18:04:47.788493'
+    - '2013-04-26 21:11:07.956612'
     - '448'
     - true
     - '5'
@@ -9390,14 +9390,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Poder
     - 
     - '99'
     - I
     - '2013-02-19 18:05:00.733675'
-    - '2013-02-19 18:05:01.343688'
+    - '2013-04-26 20:10:36.303545'
     - '467'
     - true
     - '5'
@@ -9528,14 +9528,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '1'
+    - '+1'
+    - '+1'
     - Neutral
     - 
     - '106'
     - I
     - '2013-02-19 18:05:05.676638'
-    - '2013-02-19 18:05:06.287022'
+    - '2013-04-26 20:10:36.351841'
     - '474'
     - true
     - '5'
@@ -9547,14 +9547,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Neutral
     - 
     - '107'
     - C
     - '2013-02-19 18:05:06.36309'
-    - '2013-02-19 18:05:06.96142'
+    - '2013-04-26 20:10:36.396753'
     - '475'
     - true
     - '5'
@@ -9916,14 +9916,14 @@ versiones:
     - Arma
     - 
     - 
-    - '5'
-    - '5'
+    - '+5'
+    - '+5'
     - Caos
     - 
     - '22'
     - P
     - '2013-02-19 18:05:20.20471'
-    - '2013-02-19 18:05:20.86952'
+    - '2013-04-26 20:10:36.446596'
     - '390'
     - false
     - '6'
@@ -10034,14 +10034,14 @@ versiones:
     - Arma
     - 
     - Vampiro
-    - '2'
-    - '0'
+    - '+2'
+    - '+0'
     - Caos
     - Forjada con huesos y sangre de vampiros caídos.
     - '6'
     - C
     - '2013-02-19 18:06:29.119004'
-    - '2013-02-19 18:06:29.787624'
+    - '2013-04-26 20:10:36.491275'
     - '494'
     - true
     - '8'
@@ -10151,19 +10151,20 @@ versiones:
     - '3'
     - '3'
   - - '517'
-    - Agresor. ESTO obtiene +1 RES por cada recurso que controles. Siempre que un
-      recurso entre en juego, remueve un contador de daño sobre ESTO.
+    - Agresor. La RES de Defensor de la enramada es igual al número de recursos que
+      controles. Siempre que un recurso entre en juego, remueve un contador de daño
+      sobre Defensor de la enramada.
     - Aliado
-    - 
+    - ''
     - Elemental
     - '0'
-    - '0'
+    - X
     - Poder
-    - 
+    - ''
     - '86'
     - E
     - '2013-02-19 18:06:34.072653'
-    - '2013-02-19 18:06:34.706095'
+    - '2013-04-26 21:19:07.652535'
     - '501'
     - true
     - '8'
@@ -10456,14 +10457,14 @@ versiones:
     - Arma
     - 
     - 
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Neutral
     - 
     - '8'
     - P
     - '2013-02-25 19:49:22.518775'
-    - '2013-02-25 19:49:22.999548'
+    - '2013-04-26 20:10:36.536654'
     - '517'
     - true
     - '7'
@@ -10678,14 +10679,14 @@ versiones:
     - Aliado
     - Único
     - Abominación
-    - '0'
-    - '0'
+    - X
+    - X
     - Muerte
-    - 
+    - ''
     - '60'
     - E
     - '2013-03-03 20:35:34.092927'
-    - '2013-03-03 20:36:44.061986'
+    - '2013-04-26 21:12:54.562123'
     - '528'
     - true
     - '8'
@@ -10924,14 +10925,14 @@ versiones:
     - Arma
     - ''
     - ''
-    - '0'
-    - '0'
+    - '+0'
+    - '+0'
     - Caos
     - ''
     - '8'
     - C
     - '2013-04-12 04:27:43.474296'
-    - '2013-04-12 04:27:43.494704'
+    - '2013-04-26 20:10:36.589463'
     - '540'
     - true
     - '8'
@@ -11021,14 +11022,14 @@ versiones:
     - Arma
     - Único
     - ''
-    - '2'
-    - '2'
+    - '+2'
+    - '+2'
     - Caos
     - Un regalo del demonio para Azzam, para tomar las eternas arenas.
     - '15'
     - E
     - '2013-04-12 04:48:48.388936'
-    - '2013-04-12 04:48:48.403896'
+    - '2013-04-26 20:10:36.63875'
     - '545'
     - true
     - '8'
@@ -11062,14 +11063,14 @@ versiones:
     - Arma
     - ''
     - ''
-    - '0'
-    - '0'
+    - '+0'
+    - '+0'
     - Caos
     - ''
     - '18'
     - R
     - '2013-04-12 08:00:48.723184'
-    - '2013-04-12 08:00:48.73759'
+    - '2013-04-26 20:10:36.6781'
     - '547'
     - true
     - '8'
@@ -11100,14 +11101,14 @@ versiones:
     - Arma
     - ''
     - ''
-    - '1'
-    - '1'
+    - '+1'
+    - '+1'
     - Caos
     - '"Nada podrá detenernos." - Rasap'
     - '20'
     - I
     - '2013-04-12 08:04:05.489738'
-    - '2013-04-12 08:04:05.504434'
+    - '2013-04-26 20:10:36.719328'
     - '549'
     - true
     - '8'
@@ -11139,15 +11140,15 @@ versiones:
     - Arma
     - ''
     - ''
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Caos
     - '"La partesana ha permanecido en mi familia por generaciones. Cada muerte honra
       a mis antepasados."'
     - '23'
     - C
     - '2013-04-12 08:07:25.90785'
-    - '2013-04-12 08:07:25.922875'
+    - '2013-04-26 20:10:36.844544'
     - '551'
     - true
     - '8'
@@ -11339,14 +11340,14 @@ versiones:
     - Arma
     - Instantáneo
     - ''
-    - '0'
-    - '2'
+    - '+0'
+    - '+2'
     - Locura
     - ''
     - '40'
     - C
     - '2013-04-15 20:20:21.834961'
-    - '2013-04-15 20:20:21.850756'
+    - '2013-04-26 20:10:36.890891'
     - '561'
     - true
     - '8'
@@ -11636,14 +11637,14 @@ versiones:
     - Arma
     - ''
     - ''
-    - '0'
-    - '0'
+    - '+0'
+    - '+0'
     - Muerte
     - La maldición de una raza extinta, en la antigua reliquia de batalla.
     - '62'
     - C
     - '2013-04-15 22:07:13.131401'
-    - '2013-04-15 22:07:13.148362'
+    - '2013-04-26 20:10:36.937256'
     - '576'
     - true
     - '8'
@@ -11757,14 +11758,14 @@ versiones:
     - Arma
     - ''
     - ''
-    - '1'
-    - '0'
+    - '+1'
+    - '+0'
     - Muerte
     - Se dice que el lucero fue templado con las lágrimas de Aryel.
     - '70'
     - I
     - '2013-04-16 11:02:25.123005'
-    - '2013-04-16 11:02:25.137122'
+    - '2013-04-26 20:10:36.986055'
     - '582'
     - true
     - '8'
@@ -11854,14 +11855,14 @@ versiones:
     - Arma
     - ''
     - ''
-    - '2'
-    - '0'
+    - '+2'
+    - '+0'
     - Poder
     - Transfiere al portador la cólera de los antiguos.
     - '76'
     - C
     - '2013-04-24 03:18:27.459311'
-    - '2013-04-24 03:18:27.474865'
+    - '2013-04-26 20:10:37.027781'
     - '587'
     - true
     - '8'
@@ -11918,14 +11919,14 @@ versiones:
     - Arma
     - ''
     - ''
-    - '0'
-    - '0'
+    - '+0'
+    - '+0'
     - Poder
     - '"Estoy aquí para guiar la reliquia a Trion." - Estari'
     - '80'
     - R
     - '2013-04-24 03:25:58.198408'
-    - '2013-04-24 03:25:58.213427'
+    - '2013-04-26 20:10:37.071648'
     - '590'
     - true
     - '8'
@@ -12213,14 +12214,14 @@ versiones:
     - Arma
     - ''
     - Vampiro
-    - '0'
-    - '3'
+    - '+0'
+    - '+3'
     - Neutral
     - Los lamentos pueden ser escuchados por el portador.
     - '108'
     - C
     - '2013-04-24 03:51:15.00666'
-    - '2013-04-24 03:51:15.021376'
+    - '2013-04-26 20:10:36.156232'
     - '605'
     - true
     - '8'
@@ -12370,14 +12371,14 @@ versiones:
     - Aliado
     - ''
     - ''
-    - '0'
-    - '0'
+    - X
+    - X
     - Neutral
     - ''
     - '124'
     - C
     - '2013-04-24 04:30:49.671062'
-    - '2013-04-24 04:30:49.686014'
+    - '2013-04-26 21:25:04.43324'
     - '613'
     - true
     - '8'
