@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/minitest_helper"
+require "./test/test_helper"
 
 <% module_namespacing do -%>
 describe <%= class_name %>Controller do
