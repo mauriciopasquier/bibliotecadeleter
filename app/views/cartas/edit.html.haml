@@ -1,6 +1,6 @@
 %h1= titulo
 
-= render 'form'
+= render partial: 'form', locals: { version: @carta.canonica }
 
 = link_to 'Mostrar', @carta, class: 'btn'
 = link_to 'Cartas', cartas_path, class: 'btn'

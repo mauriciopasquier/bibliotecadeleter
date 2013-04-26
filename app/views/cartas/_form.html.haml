@@ -1,6 +1,9 @@
 = form_for @carta, html: { class: 'form carta', multipart: true } do |f|
   = f.error_messages
-  = f.fields_for :versiones, nueva_version do |fc|
+
+  = f.fields_for :versiones, version do |fc|
+
+    = fc.hidden_field :id
 
     .row-fluid
       .span6
@@ -57,7 +60,7 @@
         = fc.label 'Resistencia'
         = fc.text_field :res, class: 'span12'
 
-    - nueva_version.imagenes.each do |imagen|
+    - version.imagenes.each do |imagen|
       = fc.fields_for :imagenes, imagen do |fi|
 
         .row-fluid
