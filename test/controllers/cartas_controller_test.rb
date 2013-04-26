@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/minitest_helper"
+require "./test/test_helper"
 
 describe CartasController do
 
@@ -52,12 +52,30 @@ describe CartasController do
 
   it "debe actualizar una carta si tiene permisos" do
     loguearse
-    carta = create(:carta)
-    atributos = attributes_for(:carta)
-    put :update, id: carta, carta: atributos
+    version = create(:version_con_carta)
+    carta = version.carta
+    atributos_carta = attributes_for(:carta)
+    atributos_version = attributes_for(:version, id: version.id)
+    put :update, id: carta,
+      carta: atributos_carta.merge(versiones_attributes: {0 => atributos_version })
     assert_redirected_to carta_path(assigns(:carta))
+
     carta.reload
-    assert_equal atributos[:nombre], carta.nombre, "No actualiza el nombre"
+    assert_equal atributos_carta[:nombre], carta.nombre, "No actualiza el nombre"
+
+    version.reload
+    assert_equal atributos_version[:texto], version.texto, "No actualiza el texto"
+    assert_equal atributos_version[:tipo], version.tipo, "No actualiza el tipo"
+    assert_equal atributos_version[:supertipo], version.supertipo, "No actualiza el supertipo"
+    assert_equal atributos_version[:subtipo], version.subtipo, "No actualiza el subtipo"
+    assert_equal atributos_version[:fue], version.fue, "No actualiza la fue"
+    assert_equal atributos_version[:res], version.res, "No actualiza la res"
+    assert_equal atributos_version[:senda], version.senda, "No actualiza la senda"
+    assert_equal atributos_version[:ambientacion], version.ambientacion, "No actualiza la ambientacion"
+    assert_equal atributos_version[:numero], version.numero, "No actualiza el numero"
+    assert_equal atributos_version[:rareza], version.rareza, "No actualiza la rareza"
+    assert_equal atributos_version[:coste], version.coste, "No actualiza el coste"
+    assert_equal atributos_version[:canonica], version.canonica, "No actualiza si es canonica"
   end
 
   it "no debe actualizar una carta anónimamente" do
