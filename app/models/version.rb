@@ -11,17 +11,19 @@ class Version < ActiveRecord::Base
   belongs_to :carta, inverse_of: :versiones, touch: true
   delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion, touch: true
-  has_many :imagenes, order: 'created_at ASC'
+  has_many :imagenes, order: 'created_at ASC',
+            inverse_of: :version, dependent: :destroy
   has_many :artistas, through: :imagenes
   has_many :links, as: :linkeable, dependent: :destroy
 
   friendly_id :expansion_y_numero, use: :slugged
 
-  accepts_nested_attributes_for :imagenes
+  accepts_nested_attributes_for :imagenes, reject_if: :all_blank
 
   before_save :ver_si_es_canonica, :convertir_coste
 
-  validates_presence_of :carta
+  validates_uniqueness_of :numero, scope: :expansion_id, message: :no_es_unico_en_la_expansion
+  validates_presence_of :carta, inverse_of: :versiones
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
 
@@ -50,6 +52,12 @@ class Version < ActiveRecord::Base
     Version.prioridad_de_senda(self.senda)
   end
 
+  # Permite copiar una versión sin expansión ni imágenes, para las reediciones
+  amoeba do
+    exclude_field :imagenes
+    nullify [ :expansion_id, :slug, :numero ]
+  end
+
   private
 
     # Usá `slug` para llamar a esto
@@ -67,5 +75,4 @@ class Version < ActiveRecord::Base
     def convertir_coste
       self.coste_convertido = Version.coste_convertido(self.coste)
     end
-
 end

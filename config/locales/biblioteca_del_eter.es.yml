@@ -1,14 +1,38 @@
 es:
+  activerecord:
+    errors:
+      models:
+        version:
+          attributes:
+            numero:
+              no_es_unico_en_la_expansion: "debe ser único dentro de la expansión"
   devise:
     registrations:
       new:
-        nick:             "No necesitamos tu nombre real :)"
-        email:            "viden@bibliotecadeleter.com.ar"
+        nick:
+          placeholder:    "No necesitamos tu nombre real :)"
+          help:           "Pero si lo ponés, podemos hacer cosas locas con el
+                          ranking."
+        email:
+          placeholder:    "viden@bibliotecadeleter.com.ar"
+        password:
+          help:            "Una sugerencia..."
+        submit:           "Todo en orden"
+        titulo:           "Un carnet de biblioteca"
       edit:
         nick:             "No necesitamos tu nombre real :)"
         email:            "viden@bibliotecadeleter.com.ar"
         password:         "Dejala así si no vas a cambiarla"
         current_password: "Tu clave actual para confirmar los cambios"
+        titulo:           "Editando tu cuenta"
+    sessions:
+      new:
+        titulo:           "Entrando a la Biblioteca"
+    passwords:
+      new:
+        titulo:           "Generar un nuevo password"
+      edit:
+        titulo:           "Cambiar el password"
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
     no_disponible:  "Imagen no disponible."

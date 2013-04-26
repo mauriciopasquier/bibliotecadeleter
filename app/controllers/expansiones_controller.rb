@@ -1,10 +1,15 @@
 # encoding: utf-8
 class ExpansionesController < ApplicationController
+  autocomplete :expansion, :nombre, full: true
+
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
-  load_and_authorize_resource
+  ANONS = [ :autocomplete_expansion_nombre ]
+
+  load_and_authorize_resource except: ANONS
+  skip_authorization_check only: ANONS
 
   before_filter :decorar_expansion, only: [:show, :edit]
 

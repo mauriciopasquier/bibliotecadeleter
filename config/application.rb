@@ -66,10 +66,10 @@ module BibliotecaDelEter
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0.15'
+    config.assets.version = '1.1.0'
 
     # Traduzco el path
-    config.assets.prefix = "/e"
+    config.assets.prefix = "/recursos"
 
     config.generators do |g|
       g.test_framework :mini_test, spec: true, fixture: false

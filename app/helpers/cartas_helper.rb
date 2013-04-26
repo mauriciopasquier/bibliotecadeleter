@@ -30,6 +30,22 @@ module CartasHelper
     end
   end
 
+  # Para el FormBuilder
+  def nueva_version
+    if @version
+      @version
+    else
+      @version = @carta.versiones.build
+      2.times { @version.imagenes.build }
+      @version
+    end
+  end
+
+  # Habilita nombre el form de cartas
+  def disabled?
+    false
+  end
+
   private
 
     # Revisa el hash params para determinar si el checkbox fue usado en la

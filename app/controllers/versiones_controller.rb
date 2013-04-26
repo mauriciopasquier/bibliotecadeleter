@@ -1,8 +1,12 @@
 # encoding: utf-8
 class VersionesController < ApplicationController
+  autocompletar_columnas :tipo, :supertipo, :subtipo
 
-  load_and_authorize_resource :carta
-  load_and_authorize_resource through: :carta
+  ANONS = [ :completar_tipo, :completar_supertipo, :completar_subtipo ]
+
+  load_and_authorize_resource :carta, except: ANONS
+  load_and_authorize_resource through: :carta, except: ANONS
+  skip_authorization_check only: ANONS
 
   before_filter :check_espia
   before_filter :decorar_carta_y_version, only: [:index, :show, :new, :edit]
@@ -16,22 +20,11 @@ class VersionesController < ApplicationController
   end
 
   def new
-    respond_with(@carta, @version)
+    respond_with(@carta)
   end
 
   def edit
-    respond_with(@carta, @version)
-  end
-
-  def create
-    @version.carta = @carta
-    @version.save
-    respond_with(@carta, @version)
-  end
-
-  def update
-    @version.update_attributes(params[:version])
-    respond_with(@carta, @version)
+    respond_with(@carta)
   end
 
   def destroy

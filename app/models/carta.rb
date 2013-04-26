@@ -9,7 +9,8 @@ class Carta < ActiveRecord::Base
 
   friendly_id :nombre, use: :slugged
 
-  has_many :versiones, order: 'created_at DESC', dependent: :destroy
+  has_many :versiones, order: 'created_at DESC',
+            dependent: :destroy, inverse_of: :carta
   has_many :imagenes, through: :versiones, order: 'created_at ASC'
   has_many :expansiones, through: :versiones
 
@@ -17,6 +18,8 @@ class Carta < ActiveRecord::Base
   scope :ultimas, reorder('created_at DESC')
 
   accepts_nested_attributes_for :versiones, allow_destroy: true
+
+  validates_uniqueness_of :nombre
 
   def to_s
     nombre

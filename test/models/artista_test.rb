@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/minitest_helper"
+require "./test/test_helper"
 
 describe Artista do
   it "must be valid" do
@@ -20,5 +20,4 @@ describe Artista do
     # Destruyo el adjunto
     imagen.destroy
   end
-
 end
