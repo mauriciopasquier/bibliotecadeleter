@@ -23,9 +23,9 @@
 
       .row-fluid
         .span2= label_tag 'Y rarezas'
-        - rarezas.each do |r|
+        - rarezas.each do |rareza|
           .span1
-            = busqueda_check_tag rareza_completa(r), "q[versiones_rareza_eq_any][]", nombre: r
+            = busqueda_check_tag rareza, "q[versiones_rareza_eq_any][]"
 
       .row-fluid
         .span2= f.label busqueda, 'Que contienen'

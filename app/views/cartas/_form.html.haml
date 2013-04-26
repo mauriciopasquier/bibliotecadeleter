@@ -43,7 +43,7 @@
     .row-fluid
       .span2
         = fc.label :rareza
-        = fc.select :rareza, rarezas_completas.zip(rarezas), { }, class: 'span12'
+        = fc.select :rareza, rarezas, { }, class: 'span12'
       .span4
         = fc.label 'Expansión'
         = fc.hidden_field :expansion_id, id: 'expansion_id'
