@@ -24,7 +24,7 @@ class VersionesController < ApplicationController
   end
 
   def edit
-    respond_with(@carta)
+    respond_with(@carta, @version)
   end
 
   def destroy
