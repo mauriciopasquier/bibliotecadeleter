@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?,
-                :barra_de_busqueda, :rarezas, :rarezas_completas
+                :barra_de_busqueda, :rarezas
 
   protected
 
@@ -60,10 +60,6 @@ class ApplicationController < ActionController::Base
     end
 
     def rarezas
-      %w{ C I R E P }
-    end
-
-    def rarezas_completas
       %w{ Común Infrecuente Rara Épica Promocional }
     end
 

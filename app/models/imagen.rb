@@ -34,8 +34,12 @@ class Imagen < ActiveRecord::Base
 
   # Atributo virtual para el FormBuilder
   def arte=(nombres)
-    nombres.split(',').map(&:strip).each do |artista|
-      self.artistas << Artista.find_or_create_by_nombre(artista) unless artista.blank?
+    if nombres.present?
+      # Evita duplicación de artistas
+      self.artistas.clear
+      nombres.split(',').map(&:strip).each do |artista|
+        self.artistas << Artista.find_or_create_by_nombre(artista) unless artista.blank?
+      end
     end
   end
 

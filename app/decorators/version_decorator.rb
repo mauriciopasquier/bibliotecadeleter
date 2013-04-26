@@ -66,10 +66,6 @@ class VersionDecorator < ApplicationDecorator
     end.join.html_safe
   end
 
-  def rareza
-    h.rareza_completa source.rareza
-  end
-
   def texto
     source.texto.split('/').collect do |cara|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do

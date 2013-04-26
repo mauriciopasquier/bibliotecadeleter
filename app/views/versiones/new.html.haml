@@ -1,5 +1,5 @@
 %h1= titulo
 
-= render 'cartas/form'
+= render partial: 'cartas/form', locals: { version: nueva_version }
 
 = link_to 'Otras versiones', carta_versiones_path(@carta), class: 'btn'

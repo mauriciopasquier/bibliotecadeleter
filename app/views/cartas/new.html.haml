@@ -1,5 +1,5 @@
 %h1= titulo
 
-= render 'form'
+= render partial: 'form', locals: { version: nueva_version }
 
 = link_to 'Cartas', cartas_path, class: 'btn'
