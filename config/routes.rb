@@ -50,6 +50,8 @@ BibliotecaDelEter::Application.routes.draw do
         get 'completar_rareza'
       end
     end
+
+    resources :listas
   end
 
   with_options path_names: masculinos do |r|
