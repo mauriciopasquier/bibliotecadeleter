@@ -14,5 +14,11 @@ class Usuario < ActiveRecord::Base
   has_one :coleccion, class_name: 'Lista', conditions: { coleccion: true },
                       dependent: :destroy
 
-  after_create :create_coleccion, nombre: "Colección"
+  after_create :crear_coleccion
+
+  private
+
+    def crear_coleccion
+      self.create_coleccion nombre: "Colección"
+    end
 end
