@@ -1,6 +1,6 @@
 -# TODO endless pagination
 #lista
-  - if defined?(paginar) ? paginar : false
+  - if (defined?(paginar) ? paginar : false) and imagenes.any?
     = paginacion_tag imagenes, mostrar_tipo: true
 
   -# TODO Mostrar el texto de la carta, en vez de sólo la imagen. Permite
