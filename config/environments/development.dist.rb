@@ -29,6 +29,26 @@ BibliotecaDelEter::Application.configure do
     mailer.default_url_options = { :host => 'localhost:3000' }
   end
 
+  # Ejemplo de mailer con riseup
+  ActionMailer::Base.smtp_settings = {
+    address: 'mail.riseup.net',
+
+    # usar TLS
+    enable_starttls_auto: true,
+
+    # puerto para TLS
+    port:                 587,
+
+    # dominio desde el que enviamos
+    domain:               'un-dominio-que-apunte-aca.com.ar',
+
+    user_name:            'usuario',
+    password:             'password',
+
+    # envía en texto plano pero envuelto en TLS
+    authentication:       :plain
+  }
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
