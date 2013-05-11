@@ -3,7 +3,7 @@ require "./test/test_helper"
 
 describe Usuario do
   it "must be valid" do
-    build_stubbed(:usuario).valid?.must_equal true
+    build(:usuario).valid?.must_equal true
   end
 
   it "debe crear la Colección" do

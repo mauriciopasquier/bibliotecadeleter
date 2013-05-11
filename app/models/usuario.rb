@@ -1,5 +1,6 @@
 # encoding: utf-8
 class Usuario < ActiveRecord::Base
+  include FriendlyId
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -13,6 +14,8 @@ class Usuario < ActiveRecord::Base
   has_many :listas, dependent: :destroy
   has_one :coleccion, class_name: 'Lista', conditions: { coleccion: true },
                       dependent: :destroy
+
+  friendly_id :nick, use: :slugged
 
   after_create :crear_coleccion
 
