@@ -1,39 +1,46 @@
 %h1= titulo
 .row-fluid
-  = form_for  resource, as: resource_name, url: registration_path(resource_name),
-              html: { class: 'form-horizontal span12' } do |f|
+  #usuarios
+    = form_for  resource, as: resource_name, url: registration_path(resource_name),
+                html: { class: 'form-horizontal span12' } do |f|
 
-    = devise_error_messages!
+      = devise_error_messages!
 
-    .control-group
-      = f.label :nick, class: 'control-label'
-      .controls
-        = f.text_field :nick, required: true, autofocus: true, class: 'span4',
-          placeholder: t('.nick.placeholder')
-        %span.help-inline= t('.nick.help')
+      .control-group
+        = f.label :nick, class: 'control-label'
+        .controls
+          = f.text_field :nick, required: true, autofocus: true, class: 'span4',
+            placeholder: t('.nick.placeholder')
 
-    .control-group
-      = f.label :email, class: 'control-label'
-      .controls
-        = f.email_field :email, required: true, class: 'span4',
-          placeholder: t('.email.placeholder')
-   
-    .control-group
-      = f.label :password, class: 'control-label'
-      .controls
-        = f.password_field :password, required: true, class: 'span4'
-        %span.help-inline
-          = link_to t('.password.help'), 'https://xkcd.com/936'
+      .control-group
+        = f.label :codigo, class: 'control-label'
+        .controls
+          = f.text_field :codigo, class: 'span4',
+            placeholder: t('.codigo.placeholder')
+          %span.help-inline= t('.codigo.help')
 
-    .control-group
-      = f.label 'Repetí el password', class: 'control-label'
-      .controls
-        = f.password_field :password_confirmation, required: true,
-          class: 'span4'
+      .control-group
+        = f.label :email, class: 'control-label'
+        .controls
+          = f.email_field :email, required: true, class: 'span4',
+            placeholder: t('.email.placeholder')
 
-    .control-group
-      .controls
-        = f.submit t('.submit'), class: 'btn'
+      .control-group
+        = f.label :password, class: 'control-label'
+        .controls
+          = f.password_field :password, required: true, class: 'span4'
+          %span.help-inline
+            = link_to t('.password.help'), 'https://xkcd.com/936'
+
+      .control-group
+        = f.label 'Repetí el password', class: 'control-label'
+        .controls
+          = f.password_field :password_confirmation, required: true,
+            class: 'span4'
+
+      .control-group
+        .controls
+          = f.submit t('.submit'), class: 'btn'
 
 .row-fluid
   .span12= render partial: "devise/shared/links"

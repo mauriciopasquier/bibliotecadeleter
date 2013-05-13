@@ -1,0 +1,29 @@
+%h1= titulo
+.row-fluid
+  #usuarios
+    = form_for  resource, as: resource_name, url: session_path(resource_name),
+                html: { class: 'form-horizontal span12' } do |f|
+
+      .control-group
+        = f.label :email, class: 'control-label'
+        .controls
+          = f.email_field :email, required: true, class: 'span4'
+
+      .control-group
+        = f.label :password, class: 'control-label'
+        .controls
+          = f.password_field :password, required: true, class: 'span4'
+
+      - if devise_mapping.rememberable?
+        .control-group
+          .controls
+            = f.label :remember_me, class: 'checkbox' do
+              = f.check_box :remember_me
+              Me voy a quedar un rato largo
+
+      .control-group
+        .controls
+          = f.submit t('.submit'), class: 'btn'
+
+.row-fluid
+  .span12= render partial: "devise/shared/links"

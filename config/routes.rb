@@ -9,18 +9,19 @@ BibliotecaDelEter::Application.routes.draw do
   end
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
-  devise_for :usuarios, path_names: {
-    sign_in: 'entrar',
-    sign_out: 'salir',
-    password: 'clave',
-    confirmation: 'verificacion',
-    unlock: 'desbloquear',
-    registration: 'cuenta',
-    sign_up: 'crear',
-    new: 'nueva',
-    cancel: 'cancelar',
-    edit: 'editar'
-  }
+  devise_for :usuarios, path: 'cuenta',
+    path_names: {
+      sign_in: 'entrar',
+      sign_out: 'salir',
+      password: 'clave',
+      confirmation: 'verificacion',
+      unlock: 'desbloquear',
+      registration: 'carnet',
+      sign_up: 'nuevo',
+      new: 'nueva',
+      cancel: 'cancelar',
+      edit: 'editar'
+    }
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
   masculinos  = { new: "nuevo", edit: "editar" }

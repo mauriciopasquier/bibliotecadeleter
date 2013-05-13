@@ -11,12 +11,13 @@ es:
       new:
         nick:
           placeholder:    "No necesitamos tu nombre real :)"
-          help:           "Pero si lo ponés, podemos hacer cosas locas con el
-                          ranking."
+        codigo:
+          placeholder:    "El que usás para los torneos"
+          help:           "Nunca va a ser público, no te preocupes"
         email:
           placeholder:    "viden@bibliotecadeleter.com.ar"
         password:
-          help:            "Una sugerencia..."
+          help:           "Una sugerencia..."
         submit:           "Todo en orden"
         titulo:           "Un carnet de biblioteca"
       edit:
@@ -28,6 +29,7 @@ es:
     sessions:
       new:
         titulo:           "Entrando a la Biblioteca"
+        submit:           "Mostrar carnet"
     passwords:
       new:
         titulo:           "Generar un nuevo password"

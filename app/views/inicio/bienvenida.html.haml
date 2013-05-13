@@ -2,10 +2,8 @@
 .hero-unit
   %blockquote
     %p
-      Bienvenido,
-      = "#{@usuario.try(:nick) || 'mortal'},"
-      a la Biblioteca del Éter. En sus infinitos archivos, encontrarás la suma
-      del saber que los
+      Bienvenido mortal a la Biblioteca del Éter. En sus infinitos archivos,
+      encontrarás la suma del saber que los
       = link_to 'demonios', buscar_demonios, method: :post
       trajeron con ellos cuando irrumpieron gloriosamente en este mundo.
     %p
