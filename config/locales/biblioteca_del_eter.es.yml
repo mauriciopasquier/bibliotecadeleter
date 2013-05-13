@@ -21,7 +21,7 @@ es:
       new:
         password:
           help:           "Una sugerencia..."
-        submit:           "Todo en orden"
+        submit:           "¡Listo! Dame mi carnet"
         titulo:           "Un carnet de biblioteca"
       edit:
         password:
@@ -30,7 +30,7 @@ es:
         current_password:
           help:           "Para confirmar los cambios!"
         titulo:           "Editá tus datos"
-        submit:           "Todo en orden"
+        submit:           "¡Listo! Cambiá mis datos"
     sessions:
       new:
         titulo:           "Entrando a la Biblioteca"
@@ -40,6 +40,14 @@ es:
         titulo:           "Generar un nuevo password"
       edit:
         titulo:           "Cambiar el password"
+    shared:
+      links:
+        sign_in:            "Entrar"
+        sign_up:            "Sacar el carnet"
+        forgotten_password: "¿Te olvidaste el password?"
+        confirmation:       "Volver a mandar el mail de confirmación"
+        unlock:             "Volver a mandar el mail de desbloqueo"
+        sign_in_with:       "Entrar con %{provider}"
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
     no_disponible:  "Imagen no disponible."
