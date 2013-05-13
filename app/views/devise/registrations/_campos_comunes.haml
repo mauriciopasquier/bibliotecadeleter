@@ -1,0 +1,21 @@
+= devise_error_messages!
+
+.control-group
+  = f.label :nick, class: 'control-label'
+  .controls
+    = f.text_field :nick, required: true, autofocus: true, class: 'span4',
+      placeholder: t('.nick.placeholder')
+
+.control-group
+  = f.label :codigo, class: 'control-label'
+  .controls
+    = f.text_field :codigo, class: 'span4',
+      placeholder: t('.codigo.placeholder')
+    %span.help-inline= t('.codigo.help')
+
+.control-group
+  = f.label :email, class: 'control-label'
+  .controls
+    = f.email_field :email, required: true, class: 'span4'
+
+
