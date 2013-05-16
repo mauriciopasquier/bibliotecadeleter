@@ -1,0 +1,13 @@
+<%= @resource.nick %>, tu cuenta fue bloqueada por irreverente!
+
+O tal vez te olvidaste tu password, demasiados intentos fallidos tratando de
+adivinar...
+
+Sea como sea, seremos benevolentes esta vez, si ¡suplicas perdón, mortal!
+Eso se hace visitando este link:
+<%= unlock_url(@resource, unlock_token: @resource.unlock_token) %>
+
+--
+
+(Si querés mantener tu dignidad, la cuenta se desbloquea automáticamente en
+una hora)
