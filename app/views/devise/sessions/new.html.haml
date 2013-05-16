@@ -21,9 +21,5 @@
               = f.check_box :remember_me
               Me voy a quedar un rato largo
 
-      .control-group
-        .controls
-          = f.submit t('.submit'), class: 'btn'
-
-.row-fluid
-  .span12= render partial: "devise/shared/links"
+      = render partial: 'devise/shared/cerrar_form',
+          locals: { f: f, boton: t('.submit') }

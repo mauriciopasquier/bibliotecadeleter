@@ -22,12 +22,10 @@ BibliotecaDelEter::Application.configure do
   # después de cada cambio)
   CacheDigests::TemplateDigestor.cache = ActiveSupport::Cache::NullStore.new
 
-  config.action_mailer do |mailer|
-    # Don't care if the mailer can't send
-    mailer.raise_delivery_errors = false
-    # Devise necesita esto
-    mailer.default_url_options = { :host => 'localhost:3000' }
-  end
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+  # Devise necesita esto
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Ejemplo de mailer con riseup
   ActionMailer::Base.smtp_settings = {

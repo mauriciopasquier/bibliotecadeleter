@@ -19,9 +19,5 @@
           = f.password_field :password_confirmation, required: true,
             class: 'span4'
 
-      .control-group
-        .controls
-          = f.submit t('.submit'), class: 'btn btn-success'
-
-      .control-group
-        .controls= render partial: "devise/shared/links"
+      = render partial: 'devise/shared/cerrar_form',
+          locals: { f: f, boton: t('.submit') }

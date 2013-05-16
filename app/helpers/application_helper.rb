@@ -24,7 +24,7 @@ module ApplicationHelper
   # Por defecto, no se usa nada.
   def titulo
     case c = params[:controller]
-      when 'devise/registrations', 'devise/sessions', 'devise/passwords'
+      when /^devise\//
         case a = params[:action]
           when 'edit', 'new'
             t "#{c.gsub('/','.')}.#{a}.titulo"

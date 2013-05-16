@@ -10,44 +10,7 @@ es:
           attributes:
             numero:
               no_es_unico_en_la_expansion: "debe ser único dentro de la expansión"
-  devise:
-    registrations:
-      campos_comunes:
-        nick:
-          placeholder:    "No necesitamos tu nombre real :)"
-        codigo:
-          placeholder:    "El que usás para los torneos"
-          help:           "Nunca va a ser público, no te preocupes"
-      new:
-        password:
-          help:           "Una sugerencia..."
-        submit:           "¡Listo! Dame mi carnet"
-        titulo:           "Un carnet de biblioteca"
-      edit:
-        password:
-          placeholder:    "Dejalo vacío si no vas a cambiarlo"
-          help:           "Una sugerencia..."
-        current_password:
-          help:           "Para confirmar los cambios!"
-        titulo:           "Editá tus datos"
-        submit:           "¡Listo! Cambiá mis datos"
-    sessions:
-      new:
-        titulo:           "Entrando a la Biblioteca"
-        submit:           "Mostrar carnet"
-    passwords:
-      new:
-        titulo:           "Generar un nuevo password"
-      edit:
-        titulo:           "Cambiar el password"
-    shared:
-      links:
-        sign_in:            "Entrar"
-        sign_up:            "Sacar el carnet"
-        forgotten_password: "¿Te olvidaste el password?"
-        confirmation:       "Volver a mandar el mail de confirmación"
-        unlock:             "Volver a mandar el mail de desbloqueo"
-        sign_in_with:       "Entrar con %{provider}"
+
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
     no_disponible:  "Imagen no disponible."
