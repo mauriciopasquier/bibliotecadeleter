@@ -5,7 +5,7 @@ require "./test/test_helper"
 feature "Sesiones Feature Test" do
   scenario "Bienvenida sin login" do
     visit root_path
-    page.must_have_content "Bienvenido, mortal"
+    page.must_have_content "Bienvenido mortal"
   end
 
   scenario "Bienvenida estando logueado" do

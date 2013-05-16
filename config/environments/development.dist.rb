@@ -1,3 +1,5 @@
+# Para ver los mails sin enviarlos en http://localhost:3000/mail
+require 'mail_preview'
 BibliotecaDelEter::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 

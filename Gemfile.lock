@@ -143,6 +143,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_view (1.0.3)
+      tilt
     memcached (1.5.0)
     method_source (0.8.1)
     mime-types (1.23)
@@ -299,6 +301,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   kaminari
+  mail_view
   minitest-rails
   minitest-rails-capybara
   paperclip

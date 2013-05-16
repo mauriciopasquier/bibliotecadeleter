@@ -39,7 +39,7 @@ class Capybara::Rails::TestCase
     within '#usuarios form' do
       fill_in Usuario.human_attribute_name('email'),    with: usuario.email
       fill_in Usuario.human_attribute_name('password'), with: usuario.password
-      click_button 'Entrar'
+      click_button I18n.t('devise.sessions.new.submit')
     end
     return usuario
   end

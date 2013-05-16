@@ -65,4 +65,8 @@ BibliotecaDelEter::Application.routes.draw do
 
   get 'legales' => 'inicio#legales'
 
+  if Rails.env.development?
+    mount MailPreview => 'mail'
+  end
+
 end

@@ -57,18 +57,19 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'factory_girl_rails'
   gem 'minitest-rails'
   gem 'pry-rails'
   gem 'hirb'
 end
 
 group :development do
+  gem 'mail_view'
   gem 'bullet'
   gem 'capistrano'
 end
 
 group :test do
-  gem 'factory_girl_rails'
   gem 'minitest-rails-capybara'
   gem 'turn'
 end
