@@ -23,6 +23,9 @@ BibliotecaDelEter::Application.routes.draw do
       edit: 'editar'
     }
 
+  # Estáticas al principio por prioridad sobre los recursos sin scope
+  get 'legales' => 'inicio#legales'
+
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
   masculinos  = { new: "nuevo", edit: "editar" }
   femeninos   = { new: "nueva", edit: "editar" }
@@ -51,8 +54,6 @@ BibliotecaDelEter::Application.routes.draw do
         get 'completar_rareza'
       end
     end
-
-    resources :listas
   end
 
   with_options path_names: masculinos do |r|
@@ -61,12 +62,13 @@ BibliotecaDelEter::Application.routes.draw do
         get 'autocompletar_nombre'  => 'artistas#autocomplete_artista_nombre'
       end
     end
-  end
 
-  get 'legales' => 'inicio#legales'
+    r.resources :usuarios, path: '', only: :show do
+      resources :listas, path_names: femeninos
+    end
+  end
 
   if Rails.env.development?
     mount MailPreview => 'mail'
   end
-
 end

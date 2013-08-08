@@ -1,0 +1,10 @@
+%h1= titulo
+
+.row-fluid
+  .span12
+    %h2.plegable Lista de cartas
+    = render  partial: 'layouts/galeria',
+              locals: { imagenes: @lista.cartas,
+                        paginar: true }
+
+= link_to 'Otras listas', usuario_listas_path(@usuario), class: 'btn'

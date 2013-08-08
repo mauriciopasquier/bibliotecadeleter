@@ -1,2 +1,5 @@
 %h1= titulo
-%p Find me in app/views/inicio/panel.html.haml
+
+#listas.row-fluid
+  .span12
+    = link_to 'Colección', usuario_lista_path(@usuario, @usuario.coleccion)
