@@ -7,7 +7,6 @@ class Version < ActiveRecord::Base
                   :imagenes_attributes, :expansion, :expansion_id, :imagen
   attr_readonly   :coste_convertido
 
-
   belongs_to :carta, inverse_of: :versiones, touch: true
   delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion, touch: true
@@ -35,7 +34,7 @@ class Version < ActiveRecord::Base
     numero.to_s.rjust(3, '0')
   end
 
-  # Permite ordenar los resultados con +sort_by+
+  # Para ordenar los resultados con +sort_by+
   def self.prioridad_de_senda(senda)
     case senda.downcase.to_sym
       when :caos    then 1
@@ -52,7 +51,8 @@ class Version < ActiveRecord::Base
     Version.prioridad_de_senda(self.senda)
   end
 
-  # Permite copiar una versión sin expansión ni imágenes, para las reediciones
+  # Para copiar una versión sin expansión ni imágenes, por ejemplo para las
+  # reediciones
   amoeba do
     exclude_field :imagenes
     nullify [ :expansion_id, :slug, :numero ]
