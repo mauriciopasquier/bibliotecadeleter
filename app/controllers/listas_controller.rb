@@ -4,10 +4,8 @@ class ListasController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
-  load_and_authorize_resource :usuario
-  load_and_authorize_resource through: :usuario
-
-  before_filter :decorar_lista, only: [:show, :edit]
+  load_and_authorize_resource :usuario, except: [:coleccion]
+  load_and_authorize_resource through: :usuario, except: [:coleccion]
 
   def index
     @busqueda = apply_scopes(@listas.unscoped)
@@ -17,40 +15,38 @@ class ListasController < ApplicationController
   end
 
   def show
-    respond_with(@lista = @lista.decorate)
+    @lista = @lista.decorate
+    respond_with(@usuario, @lista)
   end
 
   def new
-    respond_with(@lista)
+    respond_with(current_usuario, @lista)
   end
 
   def edit
-    respond_with(@lista)
+    @lista = @lista.decorate
+    respond_with(current_usuario, @lista)
   end
 
   def create
     @lista.save
-    respond_with(@lista)
+    respond_with(current_usuario, @lista)
   end
 
   def update
     @lista.update_attributes(params[:lista])
-    respond_with(@lista)
+    respond_with(current_usuario, @lista)
   end
 
   def destroy
     @lista.destroy
-    respond_with(@lista)
+    respond_with(current_usuario, @lista)
   end
 
   def coleccion
-    @lista = current_usuario.coleccion
-    respond_with @lista = @lista.decorate
+    @usuario = current_usuario
+    @lista = @usuario.coleccion
+    authorize! :read, @lista
+    respond_with(@usuario, @lista)
   end
-
-  private
-
-    def decorar_lista
-      @lista = @lista.decorate
-    end
 end

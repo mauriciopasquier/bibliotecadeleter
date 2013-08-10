@@ -12,8 +12,18 @@ module ListasHelper
         'Nueva lista de cartas'
       when 'edit'
         @lista.nombre
+      when 'coleccion'
+        'Tu colección'
       else
         nil
+    end
+  end
+
+  def otras_listas
+    if @usuario == current_usuario
+      "Tus otras listas"
+    else
+      "Más listas de #{@usuario.nick}"
     end
   end
 end

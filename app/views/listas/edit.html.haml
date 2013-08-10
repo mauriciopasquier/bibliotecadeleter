@@ -1,7 +1,6 @@
-%h1 Editing lista
+%h1= titulo
 
 = render 'form'
 
-= link_to 'Show', @lista
-\|
-= link_to 'Back', listas_path
+= link_to 'Mostrar', [current_usuario, @lista], class: 'btn'
+= link_to 'Tus otras listas', usuario_listas_path(current_usuario), class: 'btn'

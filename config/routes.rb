@@ -25,6 +25,7 @@ BibliotecaDelEter::Application.routes.draw do
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales' => 'inicio#legales'
+  get 'coleccion' => 'listas#coleccion'
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
   masculinos  = { new: "nuevo", edit: "editar" }

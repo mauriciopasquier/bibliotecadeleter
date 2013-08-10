@@ -17,7 +17,6 @@ class Ability
   private
 
     def registrado
-      can :manage, @usuario
       can :manage, :all
     end
 

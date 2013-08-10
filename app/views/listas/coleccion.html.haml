@@ -8,10 +8,9 @@
                           paginar: true }
     - else
       %p
-        Esta lista está vacía.
-        - if @usuario == current_usuario
-          ¿Por qué no le
-          #{link_to 'agregás', edit_usuario_lista_path(@usuario, @lista)}
-          algunas cartas?
+        Tu colección está vacía.
+        ¿Por qué no le
+        #{link_to 'agregás', edit_usuario_lista_path(@usuario, @lista)}
+        algunas cartas?
 
 = link_to otras_listas, usuario_listas_path(@usuario), class: 'btn'
