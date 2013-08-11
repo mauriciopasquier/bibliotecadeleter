@@ -7,7 +7,7 @@ class VersionDecorator < ApplicationDecorator
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
   def link(estilo = :original, opciones = {})
-    h.link_to tag(estilo), [source.carta, source], opciones
+    h.link_to tag(estilo), [object.carta, object], opciones
   end
 
   def tag(estilo = :original)
@@ -26,15 +26,15 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def tipo
-    source.tipo || ''
+    object.tipo || ''
   end
 
   def supertipo
-    if source.supertipo?
-      if source.tipo =~ /Arma/i and source.supertipo =~ /nstantáneo/
-        " #{source.supertipo.gsub('nstantáneo', 'nstantánea')}"
+    if object.supertipo?
+      if object.tipo =~ /Arma/i and object.supertipo =~ /nstantáneo/
+        " #{object.supertipo.gsub('nstantáneo', 'nstantánea')}"
       else
-        " #{source.supertipo}"
+        " #{object.supertipo}"
       end
     else
       ''
@@ -42,8 +42,8 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def subtipo
-    if source.subtipo?
-      " - #{source.subtipo}"
+    if object.subtipo?
+      " - #{object.subtipo}"
     else
       ''
     end
@@ -51,7 +51,7 @@ class VersionDecorator < ApplicationDecorator
 
   def numeracion
     if expansion.present?
-      h.link_to(expansion.base.nombre, expansion.base) + " #{source.numero}/#{expansion.base.total}"
+      h.link_to(expansion.base.nombre, expansion.base) + " #{object.numero}/#{expansion.base.total}"
     end
   end
 
@@ -67,10 +67,10 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def texto
-    source.texto.split('/').collect do |cara|
+    object.texto.split('/').collect do |cara|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
         cara
       end
-    end.join.html_safe unless source.texto.nil?
+    end.join.html_safe unless object.texto.nil?
   end
 end
