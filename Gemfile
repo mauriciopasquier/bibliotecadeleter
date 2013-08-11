@@ -44,6 +44,9 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'i18n_country_select'
 
+# Development
+gem 'minitest-rails'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -58,7 +61,6 @@ end
 
 group :test, :development do
   gem 'factory_girl_rails'
-  gem 'minitest-rails'
   gem 'pry-rails'
   gem 'hirb'
 end
