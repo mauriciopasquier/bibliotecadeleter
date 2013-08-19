@@ -14,7 +14,7 @@ class Usuario < ActiveRecord::Base
   has_many :links, as: :linkeable, dependent: :destroy
   has_many :listas, dependent: :destroy
   has_one :coleccion, dependent: :destroy
-  has_one :total, dependent: :destroy
+  has_one :reserva, dependent: :destroy
 
   friendly_id :nick, use: :slugged
 
@@ -23,8 +23,8 @@ class Usuario < ActiveRecord::Base
   private
 
     def crear_listas
-      self.create_coleccion nombre: "Tu colección"
-      self.create_total nombre: "Todas tus cartas"
+      self.create_coleccion nombre: "Colección (todas tus cartas)"
+      self.create_reserva nombre: "Tu reserva"
       self
     end
 end

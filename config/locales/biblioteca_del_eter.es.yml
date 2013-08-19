@@ -1,5 +1,7 @@
 es:
   activerecord:
+    models:
+      coleccion: 'Colección'
     attributes:
       usuario:
         password_confirmation: 'Repetí el password'

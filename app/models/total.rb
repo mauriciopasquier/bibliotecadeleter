@@ -1,2 +1,0 @@
-class Total < Lista
-end

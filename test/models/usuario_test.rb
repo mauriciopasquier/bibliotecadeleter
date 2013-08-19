@@ -10,13 +10,11 @@ describe Usuario do
     coleccion = create(:usuario).coleccion
     coleccion.wont_be_nil
     coleccion.coleccion?.must_equal true
-    coleccion.nombre.must_equal "Tu colección"
   end
 
-  it "debe crear el Total" do
-    total = create(:usuario).total
-    total.wont_be_nil
-    total.total?.must_equal true
-    total.nombre.must_equal "Todas tus cartas"
+  it "debe crear la Reserva" do
+    reserva = create(:usuario).reserva
+    reserva.wont_be_nil
+    reserva.reserva?.must_equal true
   end
 end

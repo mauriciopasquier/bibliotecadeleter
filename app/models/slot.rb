@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Slot < ActiveRecord::Base
   attr_accessible :version, :inventario, :cantidad
 

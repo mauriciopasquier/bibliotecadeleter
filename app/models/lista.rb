@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Lista < ActiveRecord::Base
   attr_accessible :nombre
 
@@ -9,7 +10,7 @@ class Lista < ActiveRecord::Base
 
   scope :publicas, where(publica: true)
 
-  %w{Coleccion Total Mazo Lista}.each do |tipo|
+  %w{Coleccion Reserva Mazo Lista}.each do |tipo|
     define_method "#{tipo.downcase}?" do
       self.type == tipo
     end
