@@ -25,6 +25,7 @@ gem 'sitemap'
 gem 'rails3-jquery-autocomplete',
   github: 'mauriciopasquier/rails3-jquery-autocomplete',
   branch: 'scopes-with-parameters'
+gem 'awesome_nested_fields'
 
 # Controller
 gem 'responders'

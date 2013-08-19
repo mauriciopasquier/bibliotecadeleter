@@ -49,6 +49,8 @@ GEM
     arel (3.0.2)
     atomic (1.1.8)
     attribute_normalizer (1.1.0)
+    awesome_nested_fields (0.6.4)
+      rails (>= 3.0.0)
     bcrypt-ruby (3.0.1)
     bootstrap-sass-rails (2.3.1.1)
       railties (>= 3.1.0)
@@ -281,6 +283,7 @@ PLATFORMS
 DEPENDENCIES
   amoeba
   attribute_normalizer
+  awesome_nested_fields
   bootstrap-sass-rails
   bullet
   cache_digests
