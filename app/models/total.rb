@@ -1,0 +1,2 @@
+class Total < Lista
+end

@@ -1,0 +1,2 @@
+class Mazo < Lista
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130810054348) do
+ActiveRecord::Schema.define(:version => 20130819145326) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -77,22 +77,21 @@ ActiveRecord::Schema.define(:version => 20130810054348) do
   add_index "links", ["linkeable_id", "linkeable_type"], :name => "index_links_on_linkeable_id_and_linkeable_type"
 
   create_table "listas", :force => true do |t|
-    t.string   "nombre",                        :null => false
-    t.boolean  "coleccion",  :default => false
+    t.string   "nombre",                       :null => false
     t.integer  "usuario_id"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.boolean  "publica",    :default => true
+    t.string   "type"
   end
 
   create_table "slots", :force => true do |t|
     t.integer  "cantidad"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.integer  "inventariable_id"
-    t.string   "inventariable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "inventario_id"
     t.string   "inventario_type"
+    t.integer  "version_id"
   end
 
   create_table "usuarios", :force => true do |t|

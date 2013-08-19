@@ -13,16 +13,18 @@ class Usuario < ActiveRecord::Base
 
   has_many :links, as: :linkeable, dependent: :destroy
   has_many :listas, dependent: :destroy
-  has_one :coleccion, class_name: 'Lista', conditions: { coleccion: true },
-                      dependent: :destroy
+  has_one :coleccion, dependent: :destroy
+  has_one :total, dependent: :destroy
 
   friendly_id :nick, use: :slugged
 
-  after_create :crear_coleccion
+  after_create :crear_listas
 
   private
 
-    def crear_coleccion
-      self.create_coleccion nombre: "Colección"
+    def crear_listas
+      self.create_coleccion nombre: "Tu colección"
+      self.create_total nombre: "Todas tus cartas"
+      self
     end
 end

@@ -6,4 +6,12 @@ class Lista < ActiveRecord::Base
   has_many :versiones, through: :slots
 
   validates_uniqueness_of :nombre, scope: :usuario_id
+
+  scope :publicas, where(publica: true)
+
+  %w{Coleccion Total Mazo Lista}.each do |tipo|
+    define_method "#{tipo.downcase}?" do
+      self.type == tipo
+    end
+  end
 end
