@@ -14,7 +14,7 @@ class Version < ActiveRecord::Base
             inverse_of: :version, dependent: :destroy
   has_many :artistas, through: :imagenes
   has_many :links, as: :linkeable, dependent: :destroy
-  has_many :slots, as: :inventariable
+  has_many :slots
 
   friendly_id :expansion_y_numero, use: :slugged
 

@@ -13,8 +13,6 @@ class Carta < ActiveRecord::Base
             dependent: :destroy, inverse_of: :carta
   has_many :imagenes, through: :versiones, order: 'created_at ASC'
   has_many :expansiones, through: :versiones
-  has_many :slots, as: :inventariable
-  has_many :listas, through: :slots
 
   default_scope order(:nombre).includes(:canonica)
   scope :ultimas, reorder('created_at DESC')
