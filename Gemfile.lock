@@ -271,7 +271,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     uniform_notifier (1.2.0)
-    uri-js-rails (1.7.4)
+    uri-js-rails (1.10.2)
     warden (1.2.1)
       rack (>= 1.0)
     xpath (2.0.0)
