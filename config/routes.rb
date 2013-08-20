@@ -25,13 +25,16 @@ BibliotecaDelEter::Application.routes.draw do
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales' => 'inicio#legales'
-  get 'coleccion' => 'listas#coleccion'
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
   masculinos  = { new: "nuevo", edit: "editar" }
   femeninos   = { new: "nueva", edit: "editar" }
 
   with_options path_names: femeninos do |r|
+
+    r.resource :coleccion,  except: [ :create, :destroy, :new ]
+    r.resource :reserva,    except: [ :create, :destroy, :new ]
+
     r.resources :cartas do
       r.resources :versiones, except: [ :create, :update ]
 
@@ -64,6 +67,7 @@ BibliotecaDelEter::Application.routes.draw do
       end
     end
 
+    # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
       resources :listas, path_names: femeninos
     end

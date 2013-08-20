@@ -26,3 +26,4 @@
 //= require layout
 //= require paginacion
 //= require cartas
+//= require listas

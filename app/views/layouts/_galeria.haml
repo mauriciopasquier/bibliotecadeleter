@@ -24,3 +24,5 @@
         - imagenes.each do |v|
           %li{class: tipo_actual}
             = v.link tipo_actual
+            -# TODO tratar de pasar siempre versiones o agregar al decorador
+            = v.reserva_y_coleccion if v.respond_to? :reserva_y_coleccion

@@ -73,4 +73,73 @@ class VersionDecorator < ApplicationDecorator
       end
     end.join.html_safe unless object.texto.nil?
   end
+
+  def reserva_y_coleccion
+    h.content_tag(:div, class: 'controles') do
+      [ control_reserva,
+        control_coleccion
+      ].join.html_safe
+    end
+  end
+
+  def control_reserva(lista = h.reserva_actual)
+    c = cantidad_en(lista)
+
+    h.content_tag(:div, class: 'control-reserva') do
+      [ "Tu reserva: ",
+
+        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
+
+        h.link_to(ruta(:reserva, c + 1), method: :put, remote: true,
+        class: 'update-listas agregar') do
+          h.content_tag(:i, nil, class: 'icon-plus')
+        end,
+
+        '/',
+
+        h.link_to(ruta(:reserva, [0, c - 1].max), method: :put, remote: true,
+        class: 'update-listas remover') do
+          h.content_tag(:i, nil, class: 'icon-minus')
+        end
+
+      ].join.html_safe
+    end
+  end
+
+  def control_coleccion(lista = h.coleccion_actual)
+    c = cantidad_en(lista)
+
+    h.content_tag(:div, class: 'control-coleccion') do
+      [ "Total: ",
+
+        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
+
+        h.link_to(ruta(:coleccion, c + 1), method: :put, remote: true,
+        class: 'update-listas agregar') do
+          h.content_tag(:i, nil, class: 'icon-plus')
+        end,
+
+        '/',
+
+        h.link_to(ruta(:coleccion, [0, c - 1].max), method: :put, remote: true,
+        class: 'update-listas remover') do
+          h.content_tag(:i, nil, class: 'icon-minus')
+        end
+
+      ].join.html_safe
+    end
+  end
+
+  private
+
+    def cantidad_en(lista)
+      object.slot_en(lista).try(:cantidad) || 0
+    end
+
+    def ruta(lista, cantidad)
+      h.send("#{lista}_path",
+        version_id: object,
+        cantidad: cantidad
+      )
+    end
 end

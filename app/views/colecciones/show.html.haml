@@ -2,15 +2,15 @@
 
 .row-fluid
   .span12
-    - if @lista.cartas.any?
+    - if @versiones.any?
       = render  partial: 'layouts/galeria',
-                locals: { imagenes: @lista.cartas,
+                locals: { imagenes: @versiones,
                           paginar: true }
     - else
       %p
         Tu colección está vacía.
         ¿Por qué no le
-        #{link_to 'agregás', edit_usuario_lista_path(@usuario, @lista)}
+        #{link_to 'agregás', edit_coleccion_path}
         algunas cartas?
 
-= link_to otras_listas, usuario_listas_path(@usuario), class: 'btn'
+= link_to 'Tus otras listas', usuario_listas_path(current_usuario), class: 'btn'

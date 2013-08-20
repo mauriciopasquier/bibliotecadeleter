@@ -27,6 +27,11 @@ class Version < ActiveRecord::Base
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
 
+  # Devuelve el slot en el que esta versión está en la `lista`
+  def slot_en(lista)
+    lista.slots.where(version_id: id).first
+  end
+
   def self.coste_convertido(coste = nil)
     coste.present? ? coste.to_s.gsub(/\D/, '').to_i : nil
   end

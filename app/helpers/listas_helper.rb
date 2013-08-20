@@ -12,8 +12,6 @@ module ListasHelper
         'Nueva lista de cartas'
       when 'edit'
         @lista.nombre
-      when 'coleccion'
-        'Tu colección'
       else
         nil
     end
