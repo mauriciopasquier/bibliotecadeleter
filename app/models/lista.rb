@@ -15,4 +15,8 @@ class Lista < ActiveRecord::Base
       self.type == tipo
     end
   end
+
+  def cantidad
+    self.slots.sum(:cantidad)
+  end
 end

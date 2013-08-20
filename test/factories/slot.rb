@@ -2,6 +2,6 @@
 FactoryGirl.define do
   factory :slot do
     cantidad  { rand(100) }
-    version_con_carta
+    association :version, factory: :version_con_carta
   end
 end
