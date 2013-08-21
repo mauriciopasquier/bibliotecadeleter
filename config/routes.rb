@@ -32,7 +32,10 @@ BibliotecaDelEter::Application.routes.draw do
 
   with_options path_names: femeninos do |r|
 
-    r.resource :coleccion,  except: [ :create, :destroy, :new ]
+    r.resource :coleccion,  except: [ :create, :destroy, :new ] do
+      get :faltantes
+      get :sobrantes
+    end
     r.resource :reserva,    except: [ :create, :destroy, :new ]
 
     r.resources :cartas do

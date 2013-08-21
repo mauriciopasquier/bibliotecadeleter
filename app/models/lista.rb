@@ -16,6 +16,8 @@ class Lista < ActiveRecord::Base
     end
   end
 
+  scope :normales, where(type: 'Lista')
+
   # Devuelve todos los slots tanto en esta lista como en `otra`
   def comparar_con(otra)
     Slot.where(inventario_id: [self, otra]).menos(otra)

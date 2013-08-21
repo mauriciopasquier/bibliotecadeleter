@@ -6,6 +6,10 @@ module ColeccionesHelper
     case params[:action]
       when 'show'
         'Tu colección'
+      when 'sobrantes'
+        'Esta basura te sobra'
+      when 'faltantes'
+        '¡Hay que conseguir todo esto!'
       when 'edit'
         'Editando la colección'
       else
