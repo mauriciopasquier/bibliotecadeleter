@@ -16,6 +16,12 @@ class Lista < ActiveRecord::Base
     end
   end
 
+  # Devuelve todos los slots tanto en esta lista como en `otra`
+  def comparar_con(otra)
+    Slot.where(inventario_id: [self, otra]).menos(otra)
+  end
+
+  # Cantidad de cartas en la lista
   def cantidad
     self.slots.sum(:cantidad)
   end

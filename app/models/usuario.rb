@@ -20,11 +20,16 @@ class Usuario < ActiveRecord::Base
 
   after_create :crear_listas
 
+  # Cartas que le faltan (cantidades negativas) o sobran a este usuario
+  def lista_de_cambio
+    self.coleccion.comparar_con self.reserva
+  end
+
   private
 
     def crear_listas
-      self.create_coleccion nombre: "Colección (todas tus cartas)"
-      self.create_reserva nombre: "Tu reserva"
+      self.create_coleccion nombre: "Todas tus cartas"
+      self.create_reserva nombre: "Playsets o buscadas"
       self
     end
 end
