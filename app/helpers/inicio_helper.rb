@@ -9,10 +9,12 @@ module InicioHelper
 
   def titulo
     case params[:action]
-      when 'panel', 'bienvenida'
+      when 'bienvenida'
         'Todo el conocimiento del Inferno'
       when 'legales'
         'La letra chica de los contratos demoníacos'
+      when 'panel'
+        "#{current_usuario.nick}"
       else
         nil
     end

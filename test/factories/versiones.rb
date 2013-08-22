@@ -5,12 +5,12 @@ FactoryGirl.define do
     tipo          'Aliado'
     supertipo     'Instantáneo'
     subtipo       'Humano'
-    fue           { rand(10) }
-    res           { rand(10) }
+    fue           { rand(10).to_s }
+    res           { rand(10).to_s }
     senda         'Locura'
     ambientacion  'Una frase épica.'
     numero        { rand(130) }
-    rareza        'E'
+    rareza        'Épica'
     coste         { rand(13).to_s }
     canonica      false
 

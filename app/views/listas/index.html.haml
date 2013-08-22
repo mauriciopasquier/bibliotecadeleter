@@ -1,0 +1,15 @@
+%h1= titulo
+#lista
+  = paginacion_tag @listas
+
+  #listas.tabla-fluida
+    #encabezado.row-fluid
+      .nombre.span10= sort_link @busqueda, :nombre, 'Nombre',
+        opciones_de_ordenar
+      .cantidad.span2 Cantidad
+
+    = render partial: 'lista', collection: @listas
+
+- if usuario_signed_in?
+  = link_to 'Crear una lista', new_usuario_lista_path(current_usuario),
+    class: 'btn btn-success'

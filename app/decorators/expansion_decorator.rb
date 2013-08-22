@@ -6,10 +6,10 @@ class ExpansionDecorator < ApplicationDecorator
   end
 
   def notas
-    hash_a_dl source.notas, dl: 'notas dl-horizontal'
+    hash_a_dl object.notas, dl: 'notas dl-horizontal'
   end
 
   def to_s
-    source.nombre
+    object.nombre
   end
 end

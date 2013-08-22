@@ -1,0 +1,52 @@
+es:
+  devise:
+    registrations:
+      campos_comunes:
+        nick:
+          placeholder:    "No necesitamos tu nombre real :)"
+        codigo:
+          placeholder:    "El que usás para los torneos"
+          help:           "Nunca va a ser público, no te preocupes"
+      new:
+        password:
+          help:           "Una sugerencia..."
+        submit:           "¡Listo! Dame mi carnet"
+        titulo:           "Un carnet de biblioteca"
+      edit:
+        password:
+          placeholder:    "Dejalo vacío si no vas a cambiarlo"
+          help:           "Una sugerencia..."
+        current_password:
+          help:           "Para confirmar los cambios!"
+        titulo:           "Editá tus datos"
+        submit:           "¡Listo! Cambiá mis datos"
+    sessions:
+      new:
+        titulo:           "Entrando a la Biblioteca"
+        submit:           "Mirá el carnet"
+    passwords:
+      new:
+        titulo:           "Generar un nuevo password"
+        submit:           "¡Mandame instrucciones!"
+      edit:
+        password:
+          placeholder:    "Que sea memorable pero no fácil!"
+          help:           "Una sugerencia..."
+        titulo:           "Cambiar el password"
+        submit:           "¡Cambialo!"
+    confirmations:
+      new:
+        titulo:           "¿Se te escapó algún mail?"
+        submit:           "¡Mandame la confirmación!"
+    unlocks:
+      new:
+        titulo:           "¿Estás bloqueado?"
+        submit:           "¡Mandame instrucciones!"
+    shared:
+      links:
+        sign_in:            "Entrar"
+        sign_up:            "Sacar el carnet"
+        forgotten_password: "¿Te olvidaste el password?"
+        confirmation:       "Volver a mandar el mail de confirmación"
+        unlock:             "Volver a mandar el mail de desbloqueo"
+        sign_in_with:       "Entrar con %{provider}"

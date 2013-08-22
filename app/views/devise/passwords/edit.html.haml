@@ -1,0 +1,25 @@
+%h1= titulo
+.row-fluid
+  #usuarios
+    = form_for  resource, as: resource_name, url: password_path(resource_name),
+                html: { method: :put, class: 'form-horizontal span12' } do |f|
+
+      = devise_error_messages!
+      = f.hidden_field :reset_password_token
+
+      .control-group
+        = f.label :password, class: 'control-label'
+        .controls
+          = f.password_field :password, required: true, class: 'span4',
+            placeholder: t('.password.placeholder')
+          %span.help-inline
+            = link_to t('.password.help'), 'https://xkcd.com/936'
+
+      .control-group
+        = f.label :password_confirmation, class: 'control-label'
+        .controls
+          = f.password_field :password_confirmation, required: true,
+            class: 'span4'
+
+      = render partial: 'devise/shared/cerrar_form',
+          locals: { f: f, boton: t('.submit') }

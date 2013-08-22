@@ -7,7 +7,6 @@ class Version < ActiveRecord::Base
                   :imagenes_attributes, :expansion, :expansion_id, :imagen
   attr_readonly   :coste_convertido
 
-
   belongs_to :carta, inverse_of: :versiones, touch: true
   delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion, touch: true
@@ -15,6 +14,7 @@ class Version < ActiveRecord::Base
             inverse_of: :version, dependent: :destroy
   has_many :artistas, through: :imagenes
   has_many :links, as: :linkeable, dependent: :destroy
+  has_many :slots
 
   friendly_id :expansion_y_numero, use: :slugged
 
@@ -27,6 +27,11 @@ class Version < ActiveRecord::Base
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
 
+  # Devuelve el slot en el que esta versión está en la `lista`
+  def slot_en(lista)
+    lista.slots.where(version_id: id).first
+  end
+
   def self.coste_convertido(coste = nil)
     coste.present? ? coste.to_s.gsub(/\D/, '').to_i : nil
   end
@@ -35,7 +40,7 @@ class Version < ActiveRecord::Base
     numero.to_s.rjust(3, '0')
   end
 
-  # Permite ordenar los resultados con +sort_by+
+  # Para ordenar los resultados con +sort_by+
   def self.prioridad_de_senda(senda)
     case senda.downcase.to_sym
       when :caos    then 1
@@ -52,10 +57,19 @@ class Version < ActiveRecord::Base
     Version.prioridad_de_senda(self.senda)
   end
 
-  # Permite copiar una versión sin expansión ni imágenes, para las reediciones
+  # Para copiar una versión sin expansión ni imágenes, por ejemplo para las
+  # reediciones
   amoeba do
     exclude_field :imagenes
     nullify [ :expansion_id, :slug, :numero ]
+  end
+
+  def self.todas_las_versiones
+    joins(:carta, :expansion).select('cartas.nombre as nombre, versiones.*')
+  end
+
+  def nombre_y_expansion
+    self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion.nombre})")
   end
 
   private
