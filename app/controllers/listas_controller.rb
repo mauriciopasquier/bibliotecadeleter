@@ -10,7 +10,7 @@ class ListasController < ApplicationController
   before_filter :determinar_galeria, only: [:show]
 
   def index
-    @busqueda = apply_scopes(@listas.unscoped)
+    @busqueda = apply_scopes(@listas.unscoped.normales)
     @listas = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@listas)

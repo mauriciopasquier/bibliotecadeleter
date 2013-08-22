@@ -11,4 +11,5 @@
     = render partial: 'lista', collection: @listas
 
 - if usuario_signed_in?
-  = link_to 'Crear una lista', new_usuario_lista_path(current_usuario)
+  = link_to 'Crear una lista', new_usuario_lista_path(current_usuario),
+    class: 'btn btn-success'
