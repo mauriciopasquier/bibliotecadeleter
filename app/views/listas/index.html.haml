@@ -4,10 +4,11 @@
 
   #listas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span12= sort_link @busqueda, :nombre, 'Nombre',
+      .nombre.span10= sort_link @busqueda, :nombre, 'Nombre',
         opciones_de_ordenar
+      .cantidad.span2 Cantidad
 
-    = render @listas
+    = render partial: 'lista', collection: @listas
 
 - if usuario_signed_in?
   = link_to 'Crear una lista', new_usuario_lista_path(current_usuario)

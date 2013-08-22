@@ -64,6 +64,14 @@ class Version < ActiveRecord::Base
     nullify [ :expansion_id, :slug, :numero ]
   end
 
+  def self.todas_las_versiones
+    joins(:carta, :expansion).select('cartas.nombre as nombre, versiones.*')
+  end
+
+  def nombre_y_expansion
+    self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion.nombre})")
+  end
+
   private
 
     # Usá `slug` para llamar a esto

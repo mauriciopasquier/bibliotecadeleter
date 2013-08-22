@@ -7,11 +7,11 @@ module ListasHelper
       when 'index'
         'Tus listas'
       when 'show'
-        @lista.nombre
+        lista.nombre
       when 'new'
         'Nueva lista de cartas'
       when 'edit'
-        @lista.nombre
+        lista.nombre
       else
         nil
     end
@@ -23,5 +23,15 @@ module ListasHelper
     else
       "Más listas de #{@usuario.nick}"
     end
+  end
+
+  def nuevo_slot
+    Slot.new inventario: @lista, version: Version.new
+  end
+
+  # Para acceder al modelo decorado. Si es necesario no decorarlo, está la
+  # variable de instancia
+  def lista
+    @decorator ||= @lista.decorate
   end
 end

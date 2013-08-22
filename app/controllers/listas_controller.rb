@@ -7,6 +7,8 @@ class ListasController < ApplicationController
   load_and_authorize_resource :usuario, except: [:coleccion]
   load_and_authorize_resource through: :usuario, except: [:coleccion]
 
+  before_filter :determinar_galeria, only: [:show]
+
   def index
     @busqueda = apply_scopes(@listas.unscoped)
     @listas = PaginadorDecorator.decorate @busqueda.result
@@ -15,7 +17,7 @@ class ListasController < ApplicationController
   end
 
   def show
-    @lista = @lista.decorate
+    @versiones = PaginadorDecorator.decorate apply_scopes(@lista.versiones)
     respond_with(@usuario, @lista)
   end
 
@@ -24,7 +26,6 @@ class ListasController < ApplicationController
   end
 
   def edit
-    @lista = @lista.decorate
     respond_with(current_usuario, @lista)
   end
 
@@ -49,4 +50,10 @@ class ListasController < ApplicationController
     authorize! :read, @lista
     respond_with(@usuario, @lista)
   end
+
+  private
+
+    def determinar_galeria
+      tipo_actual params[:mostrar].try(:[], :tipo) || :original
+    end
 end

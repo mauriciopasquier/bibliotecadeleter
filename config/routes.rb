@@ -43,6 +43,7 @@ BibliotecaDelEter::Application.routes.draw do
 
       collection do
         match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
+        get 'autocompletar_nombre'  => 'cartas#autocomplete_carta_nombre'
       end
 
     end

@@ -1,12 +1,15 @@
 # encoding: utf-8
 class Lista < ActiveRecord::Base
-  attr_accessible :nombre
+  attr_accessible :nombre, :slots_attributes
 
   belongs_to :usuario
   has_many :slots, as: :inventario
   has_many :versiones, through: :slots
+  has_many :cartas, through: :versiones
 
   validates_uniqueness_of :nombre, scope: :usuario_id
+
+  accepts_nested_attributes_for :slots, allow_destroy: true
 
   scope :publicas, where(publica: true)
 

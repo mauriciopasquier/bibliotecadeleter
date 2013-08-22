@@ -21,9 +21,14 @@ class Carta < ActiveRecord::Base
 
   validates_uniqueness_of :nombre
 
-  def to_s
-    nombre
+  delegate :prioridad, to: :canonica
+
+  def self.con_todo
+    joins(versiones: :expansion).select(
+      'cartas.*, expansiones.nombre as expansion, versiones.id as version_id')
   end
 
-  delegate :prioridad, to: :canonica
+  def nombre_y_expansion
+    self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion})")
+  end
 end

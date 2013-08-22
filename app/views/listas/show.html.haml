@@ -2,9 +2,9 @@
 
 .row-fluid
   .span12
-    - if @lista.cartas.any?
+    - if @versiones.any?
       = render  partial: 'layouts/galeria',
-                locals: { imagenes: @lista.cartas,
+                locals: { imagenes: @versiones,
                           paginar: true }
     - else
       %p

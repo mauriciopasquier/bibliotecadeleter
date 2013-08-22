@@ -1,10 +1,15 @@
 # encoding: utf-8
 class CartasController < ApplicationController
+  autocomplete :carta, :nombre  # definido acá
+
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
-  load_and_authorize_resource
+  ANONS = [ :autocomplete_carta_nombre ]
+
+  load_and_authorize_resource except: ANONS
+  skip_authorization_check only: ANONS
 
   before_filter :check_espia
   before_filter :decorar_carta, only: [:show, :edit]
@@ -57,6 +62,28 @@ class CartasController < ApplicationController
     else
       Carta.none
     end.decorate
+  end
+
+  # Redefinido para no pelear con rails3-jquery-autocomplete por el join
+  def autocomplete_carta_nombre
+    resultado = if (t = params[:term]).present?
+      # TODO filtrar por expansión
+      Carta.con_todo.where(
+        Carta.arel_table[:nombre].matches("%#{params[:term]}%")
+      )
+    else
+      modelo.none
+    end.inject({}) do |hash, elem|
+      # Hash de id: value
+      hash[elem.nombre_y_expansion] = {
+        label: elem.nombre_y_expansion,
+        value: elem.nombre_y_expansion,
+        version_id: elem.version_id
+      }
+      hash
+    end
+
+    render json: resultado
   end
 
   private

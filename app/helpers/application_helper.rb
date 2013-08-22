@@ -89,8 +89,8 @@ module ApplicationHelper
       end
     end
 
-  # Prepara un nuevo modelo usando el decorador
-  def preparar(modelo)
-    modelo.decorator_class.preparar
-  end
+    # Prepara un nuevo modelo usando el decorador
+    def preparar(modelo)
+      modelo.decorator_class.preparar
+    end
 end
