@@ -32,7 +32,7 @@ class ColeccionesController < ApplicationController
       apply_scopes(
         Version.where(
           id: current_usuario.faltantes.map(&:version_id)
-        )
+        ).order('expansion_id desc').includes(:imagenes)
       )
     )
   end
@@ -42,7 +42,7 @@ class ColeccionesController < ApplicationController
       apply_scopes(
         Version.where(
           id: current_usuario.sobrantes.map(&:version_id)
-        )
+        ).order('expansion_id desc').includes(:imagenes)
       )
     )
   end
