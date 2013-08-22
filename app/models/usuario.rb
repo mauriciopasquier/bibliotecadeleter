@@ -33,15 +33,6 @@ class Usuario < ActiveRecord::Base
     self.lista_de_cambio.find_all { |c| c.cantidad > 0 }
   end
 
-  # Sí...
-  def cantidad_faltante
-    self.faltantes.map(&:cantidad).reduce(:+).abs
-  end
-
-  def cantidad_sobrante
-    self.sobrantes.map(&:cantidad).reduce(:+)
-  end
-
   private
 
     def crear_listas
