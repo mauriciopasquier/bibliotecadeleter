@@ -17,7 +17,7 @@
   .span4
     %h3 Expansiones grandes
     %ul.menu.nav.nav-list.nav-stacked
-      - expansiones.grandes.each do |e|
+      - expansiones.order(:lanzamiento).grandes.each do |e|
         %li= link_to e.nombre, e
       %li= link_to '...todas las expansiones', expansiones_path
 

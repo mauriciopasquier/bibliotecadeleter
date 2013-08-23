@@ -14,6 +14,6 @@ class CartaDecorator < ApplicationDecorator
   end
 
   def lista_de_expansiones
-    expansiones.collect {|e| h.link_to e.nombre, e}.join(', ').html_safe
+    expansiones.order(:lanzamiento).collect {|e| h.link_to e.nombre, e}.join(', ').html_safe
   end
 end
