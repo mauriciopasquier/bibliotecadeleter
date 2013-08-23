@@ -14,4 +14,5 @@
     = render @expansiones
 
   - if can? :create, Expansion
-    = link_to 'Crear nueva expansión', new_expansion_path
+    = link_to 'Cargar expansión', new_expansion_path,
+      class: 'btn btn-success'

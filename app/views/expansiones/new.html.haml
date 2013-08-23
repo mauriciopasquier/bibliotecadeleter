@@ -1,5 +1,6 @@
 %h1= titulo
+
 = render 'form'
 
 - if can? :read, Expansion
-  = link_to 'Todas', expansiones_path
+  = link_to 'Otras expansiones', expansiones_path, class: 'btn'
