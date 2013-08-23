@@ -1,24 +1,32 @@
-= form_for @expansion do |f|
-
+= form_for expansion, html: { class: 'form expansion' } do |f|
   = f.error_messages
 
-  .field
-    = f.label :nombre
-    = f.text_field :nombre
-  .field
-    = f.label :lanzamiento
-    = f.date_select :lanzamiento
-  .field
-    = f.label :presentacion
-    = f.date_select :presentacion
-  .field
-    = f.label :notas
-    = f.text_area :notas
-  .field
-    = f.label :saga
-    = f.text_field :saga
-  .field
-    = f.label :total
-    = f.number_field :total
-  .actions
-    = f.submit 'Save'
+  .row-fluid
+    .span6
+      = f.label :nombre
+      = f.text_field :nombre, class: 'span12', required: true, autofocus: true
+    .span3
+      = f.label :total, 'Cantidad de cartas'
+      = f.number_field :total, class: 'span12'
+    .span3
+      = f.label :saga
+      = f.text_field :saga, class: 'span12'
+
+  .row-fluid
+    .span6
+      -# TODO Logo?
+    .span3
+      = f.label :lanzamiento
+      = f.text_field :lanzamiento, class: 'fecha span12'
+    .span3
+      = f.label :presentacion
+      = f.text_field :presentacion, class: 'fecha span12'
+
+  .row-fluid
+    .span12
+      = f.label :notas
+      = f.text_area :notas, class: 'span12'
+
+  .row-fluid
+    .span12
+      = f.submit 'Guardar', class: 'btn btn-success'

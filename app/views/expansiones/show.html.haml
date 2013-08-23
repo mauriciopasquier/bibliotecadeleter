@@ -10,20 +10,20 @@
   .span12
     %h2.plegable Datos sobre la expansión
     %dl.dl-horizontal
-      - if @expansion.lanzamiento?
+      - if expansion.lanzamiento?
         %dt Lanzamiento
-        %dd= l @expansion.lanzamiento
-      - if @expansion.presentacion?
+        %dd= l expansion.lanzamiento
+      - if expansion.presentacion?
         %dt Presentación
-        %dd= l @expansion.presentacion
-      - if @expansion.saga?
+        %dd= l expansion.presentacion
+      - if expansion.saga?
         %dt Saga
-        %dd= @expansion.saga
-      - if @expansion.total?
+        %dd= expansion.saga
+      - if expansion.total?
         %dt Total
-        %dd= @expansion.total
-      - if @expansion.notas?
+        %dd= expansion.total
+      - if expansion.notas?
         %dt Notas
-        %dd= @expansion.notas
+        %dd= expansion.notas
 
 = link_to 'Otras expansiones', expansiones_path, class: 'btn'
