@@ -4087,7 +4087,7 @@ versiones:
     - '+3'
     - '+0'
     - Caos
-    - ''
+    - 
     - '21'
     - Común
     - '2013-02-19 17:59:30.299033'
@@ -4931,7 +4931,7 @@ versiones:
     - '-3'
     - '-0'
     - Locura
-    - ''
+    - 
     - '63'
     - Común
     - '2013-02-19 18:00:00.974412'
@@ -5644,7 +5644,7 @@ versiones:
     - '-1'
     - '+2'
     - Muerte
-    - ''
+    - 
     - '99'
     - Común
     - '2013-02-19 18:00:27.042198'
@@ -10160,7 +10160,7 @@ versiones:
     - '0'
     - X
     - Poder
-    - ''
+    - 
     - '86'
     - Épica
     - '2013-02-19 18:06:34.072653'
@@ -10238,7 +10238,7 @@ versiones:
     - 
     - 
     - Locura
-    - ''
+    - 
     - '31'
     - Infrecuente
     - '2013-02-25 08:03:10.062993'
@@ -10559,7 +10559,7 @@ versiones:
     - '5'
     - '5'
     - Poder
-    - ''
+    - 
     - '96'
     - Común
     - '2013-02-25 21:35:26.51969'
@@ -10641,7 +10641,7 @@ versiones:
     - '5'
     - '5'
     - Caos
-    - ''
+    - 
     - '7'
     - Épica
     - '2013-03-03 20:19:23.37232'
@@ -10682,7 +10682,7 @@ versiones:
     - X
     - X
     - Muerte
-    - ''
+    - 
     - '60'
     - Épica
     - '2013-03-03 20:35:34.092927'
@@ -10847,7 +10847,7 @@ versiones:
     - 
     - 
     - Locura
-    - ''
+    - 
     - '44'
     - Rara
     - '2013-03-11 04:03:58.426409'
@@ -10928,7 +10928,7 @@ versiones:
     - '+0'
     - '+0'
     - Caos
-    - ''
+    - 
     - '8'
     - Común
     - '2013-04-12 04:27:43.474296'
@@ -11066,7 +11066,7 @@ versiones:
     - '+0'
     - '+0'
     - Caos
-    - ''
+    - 
     - '18'
     - Rara
     - '2013-04-12 08:00:48.723184'
@@ -11123,7 +11123,7 @@ versiones:
     - '3'
     - '2'
     - Caos
-    - ''
+    - 
     - '22'
     - Común
     - '2013-04-12 08:05:23.233247'
@@ -11324,7 +11324,7 @@ versiones:
     - 
     - 
     - Locura
-    - ''
+    - 
     - '39'
     - Común
     - '2013-04-15 20:19:27.721357'
@@ -11343,7 +11343,7 @@ versiones:
     - '+0'
     - '+2'
     - Locura
-    - ''
+    - 
     - '40'
     - Común
     - '2013-04-15 20:20:21.834961'
@@ -11459,7 +11459,7 @@ versiones:
     - '4'
     - '1'
     - Locura
-    - ''
+    - 
     - '49'
     - Infrecuente
     - '2013-04-15 20:34:51.447944'
@@ -11558,7 +11558,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ''
+    - 
     - '56'
     - Común
     - '2013-04-15 21:46:55.670361'
@@ -11578,7 +11578,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ''
+    - 
     - '57'
     - Infrecuente
     - '2013-04-15 21:48:25.579334'
@@ -11621,7 +11621,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ''
+    - 
     - '61'
     - Épica
     - '2013-04-15 22:05:08.541146'
@@ -11680,7 +11680,7 @@ versiones:
     - 
     - 
     - Muerte
-    - ''
+    - 
     - '64'
     - Común
     - '2013-04-15 22:29:10.406667'
@@ -11838,7 +11838,7 @@ versiones:
     - '2'
     - '2'
     - Poder
-    - ''
+    - 
     - '75'
     - Infrecuente
     - '2013-04-24 03:16:43.753127'
@@ -11942,7 +11942,7 @@ versiones:
     - 
     - 
     - Poder
-    - ''
+    - 
     - '81'
     - Común
     - '2013-04-24 03:27:39.711847'
@@ -11961,7 +11961,7 @@ versiones:
     - '3'
     - '1'
     - Poder
-    - ''
+    - 
     - '83'
     - Común
     - '2013-04-24 03:28:38.054608'
@@ -11981,7 +11981,7 @@ versiones:
     - 
     - 
     - Poder
-    - ''
+    - 
     - '87'
     - Común
     - '2013-04-24 03:30:13.381364'
@@ -12081,7 +12081,7 @@ versiones:
     - '4'
     - '4'
     - Poder
-    - ''
+    - 
     - '93'
     - Infrecuente
     - '2013-04-24 03:39:21.936609'
@@ -12121,7 +12121,7 @@ versiones:
     - 
     - 
     - Poder
-    - ''
+    - 
     - '95'
     - Rara
     - '2013-04-24 03:43:21.411848'
@@ -12236,7 +12236,7 @@ versiones:
     - 
     - 
     - Neutral
-    - ''
+    - 
     - '112'
     - Infrecuente
     - '2013-04-24 03:52:19.895711'
@@ -12317,7 +12317,7 @@ versiones:
     - '1'
     - '2'
     - Neutral
-    - ''
+    - 
     - '120'
     - Común
     - '2013-04-24 04:24:40.234979'
@@ -12336,7 +12336,7 @@ versiones:
     - '0'
     - '1'
     - Locura
-    - ''
+    - 
     - '121'
     - Común
     - '2013-04-24 04:27:25.588192'
@@ -12355,7 +12355,7 @@ versiones:
     - '2'
     - '2'
     - Neutral
-    - ''
+    - 
     - '123'
     - Común
     - '2013-04-24 04:29:10.689739'
@@ -12374,7 +12374,7 @@ versiones:
     - X
     - X
     - Neutral
-    - ''
+    - 
     - '124'
     - Común
     - '2013-04-24 04:30:49.671062'
@@ -12587,7 +12587,7 @@ versiones:
     - '3'
     - '3'
     - Neutral
-    - ''
+    - 
     - '113'
     - Común
     - '2013-04-25 08:06:10.274884'
@@ -12637,3 +12637,487 @@ versiones:
     - 119-destino
     - '4'
     - '4'
+  - - '664'
+    - Busca en tu mazo una carta con vínculo y muéstrala. Luego mezcla tu mazo y pon
+      esa carta en la parte superior. Recobrar 1.
+    - Ritual
+    - Instantáneo
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '1'
+    - Promocional
+    - '2013-08-23 05:44:42.180664'
+    - '2013-08-23 05:44:42.203673'
+    - '117'
+    - false
+    - '12'
+    - 001-esenciales
+    - '1'
+    - '1'
+  - - '665'
+    - 'Girar: Tu demonio hace 1 daño al demonio objetivo.'
+    - Objeto
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '2'
+    - Promocional
+    - '2013-08-23 05:45:11.328288'
+    - '2013-08-23 05:45:11.342685'
+    - '121'
+    - false
+    - '12'
+    - 002-esenciales
+    - '2'
+    - '2'
+  - - '666'
+    - Protector.
+    - Aliado
+    - Instantáneo
+    - Bestia
+    - '2'
+    - '2'
+    - Neutral
+    - ''
+    - '3'
+    - Promocional
+    - '2013-08-23 05:45:31.968928'
+    - '2013-08-23 05:45:31.983615'
+    - '122'
+    - false
+    - '12'
+    - 003-esenciales
+    - '3'
+    - '3'
+  - - '667'
+    - Tu demonio hace 3 puntos de daño al aliado objetivo.
+    - Ritual
+    - Instantáneo
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '4'
+    - Promocional
+    - '2013-08-23 05:46:41.0418'
+    - '2013-08-23 05:46:41.058688'
+    - '128'
+    - false
+    - '12'
+    - 004-esenciales
+    - '2'
+    - '2'
+  - - '668'
+    - 'Cofre del olvido no se endereza en tu restauración. Girar: Exilia la primer
+      carta de un inferno. Exiliar una carta de tu inferno: Endereza Cofre del olvido.'
+    - Objeto
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '5'
+    - Promocional
+    - '2013-08-23 05:47:48.659382'
+    - '2013-08-23 05:47:48.676302'
+    - '131'
+    - false
+    - '12'
+    - 005-esenciales
+    - '2'
+    - '2'
+  - - '669'
+    - Mezcla las primeras siete cartas de tu Inferno en tu mazo. Luego exilia Desgarrar
+      la realidad.
+    - Ritual
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '6'
+    - Promocional
+    - '2013-08-23 05:52:04.992997'
+    - '2013-08-23 05:52:05.008778'
+    - '136'
+    - false
+    - '12'
+    - 006-esenciales
+    - '4'
+    - '4'
+  - - '670'
+    - Pon la carta objetivo en la mano de su demonio.
+    - Ritual
+    - Instantáneo
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '7'
+    - Promocional
+    - '2013-08-23 05:52:28.41773'
+    - '2013-08-23 05:52:28.435843'
+    - '138'
+    - false
+    - '12'
+    - 007-esenciales
+    - '2'
+    - '2'
+  - - '671'
+    - Cuando Dragón infernal entre en juego, exilia tu Inferno.
+    - Aliado
+    - ''
+    - Elemental
+    - '12'
+    - '9'
+    - Neutral
+    - ''
+    - '8'
+    - Promocional
+    - '2013-08-23 05:53:38.400661'
+    - '2013-08-23 05:53:38.427254'
+    - '139'
+    - false
+    - '12'
+    - 008-esenciales
+    - '9'
+    - '9'
+  - - '672'
+    - El aliado equipado obtiene halo.
+    - Arma
+    - ''
+    - ''
+    - '+1'
+    - '+0'
+    - Neutral
+    - ''
+    - '9'
+    - Promocional
+    - '2013-08-23 05:54:04.842074'
+    - '2013-08-23 05:54:04.861492'
+    - '149'
+    - false
+    - '12'
+    - 009-esenciales
+    - '2'
+    - '2'
+  - - '673'
+    - 'Generador de luminium entra en juego girado. Girar: Agrega 1 energía.'
+    - Objeto
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '10'
+    - Promocional
+    - '2013-08-23 05:54:39.684554'
+    - '2013-08-23 05:54:39.700658'
+    - '150'
+    - false
+    - '12'
+    - 010-esenciales
+    - '2'
+    - '2'
+  - - '674'
+    - 'Destruir Lagarto escamacristal: Agrega 1 energía.'
+    - Aliado
+    - ''
+    - Reptil
+    - '1'
+    - '1'
+    - Neutral
+    - ''
+    - '11'
+    - Promocional
+    - '2013-08-23 06:02:14.958476'
+    - '2013-08-23 06:02:14.975986'
+    - '158'
+    - false
+    - '12'
+    - 011-esenciales
+    - '1'
+    - '1'
+  - - '675'
+    - Cuando un aliado deje el juego, su controlador exilia las primeras dos cartas
+      de su mazo.
+    - Escenario
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '12'
+    - Promocional
+    - '2013-08-23 06:02:40.796421'
+    - '2013-08-23 06:02:40.815881'
+    - '159'
+    - false
+    - '12'
+    - 012-esenciales
+    - '0'
+    - '0'
+  - - '676'
+    - Si la primer carta de un inferno es ritual, tiene la habilidad Recobrar X, donde
+      X es su coste.
+    - Escenario
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '13'
+    - Promocional
+    - '2013-08-23 06:03:29.861934'
+    - '2013-08-23 06:03:29.878254'
+    - '164'
+    - false
+    - '12'
+    - 013-esenciales
+    - '0'
+    - '0'
+  - - '677'
+    - Pon la carta objetivo de tu inferno en tu mano. Recobrar 3.
+    - Ritual
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '14'
+    - Promocional
+    - '2013-08-23 06:04:34.225678'
+    - '2013-08-23 06:04:34.24082'
+    - '173'
+    - false
+    - '12'
+    - 014-esenciales
+    - '3'
+    - '3'
+  - - '678'
+    - Pon en juego dos fichas de aliado Vampiro 1 FUE, 1 RES.
+    - Ritual
+    - Instantáneo
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '15'
+    - Promocional
+    - '2013-08-23 06:15:39.501472'
+    - '2013-08-23 06:15:39.52161'
+    - '334'
+    - false
+    - '12'
+    - 015-esenciales
+    - '3'
+    - '3'
+  - - '679'
+    - 'Thanatos. Destruir Forajido Vampiro: destruye el objeto objetivo.'
+    - Aliado
+    - ''
+    - Vampiro
+    - '1'
+    - '1'
+    - Neutral
+    - ''
+    - '16'
+    - Promocional
+    - '2013-08-23 06:16:15.402173'
+    - '2013-08-23 06:16:15.417811'
+    - '342'
+    - false
+    - '12'
+    - 016-esenciales
+    - '2'
+    - '2'
+  - - '680'
+    - Hay Thanatos hasta el final del turno. Toma una carta. Recobrar 1.
+    - Ritual
+    - Instantáneo
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '17'
+    - Promocional
+    - '2013-08-23 06:17:15.159615'
+    - '2013-08-23 06:17:15.17363'
+    - '348'
+    - false
+    - '12'
+    - 017-esenciales
+    - '1'
+    - '1'
+  - - '681'
+    - 'Thanatos. '
+    - Aliado
+    - ''
+    - Vampiro
+    - '3'
+    - '5'
+    - Neutral
+    - ''
+    - '18'
+    - Promocional
+    - '2013-08-23 06:17:54.793914'
+    - '2013-08-23 06:17:54.808643'
+    - '349'
+    - false
+    - '12'
+    - 018-esenciales
+    - '4'
+    - '4'
+  - - '682'
+    - Thanatos. Los vampiros obtienen +1 FUE y +1 RES.
+    - Escenario
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '19'
+    - Promocional
+    - '2013-08-23 06:18:28.423235'
+    - '2013-08-23 06:18:28.439664'
+    - '350'
+    - false
+    - '12'
+    - 019-esenciales
+    - '0'
+    - '0'
+  - - '683'
+    - 'Thanatos. Girar: Toma una carta. Luego pon una carta de tu mano en la parte
+      inferior de tu mazo.'
+    - Objeto
+    - Único
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '20'
+    - Promocional
+    - '2013-08-23 06:19:27.37114'
+    - '2013-08-23 06:19:27.389682'
+    - '352'
+    - false
+    - '12'
+    - 020-esenciales
+    - '2'
+    - '2'
+  - - '684'
+    - Endereza el demonio objetivo. Hay Thanatos hasta el final del turno.
+    - Ritual
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '21'
+    - Promocional
+    - '2013-08-23 06:19:53.0491'
+    - '2013-08-23 06:19:53.064614'
+    - '353'
+    - false
+    - '12'
+    - 021-esenciales
+    - '2'
+    - '2'
+  - - '685'
+    - No pueden jugarse escenarios.
+    - Escenario
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '22'
+    - Promocional
+    - '2013-08-23 06:21:16.370146'
+    - '2013-08-23 06:21:16.394435'
+    - '479'
+    - false
+    - '12'
+    - 022-esenciales
+    - '0'
+    - '0'
+  - - '686'
+    - Pon el objeto o arma objetivo en juego, en la parte inferior del mazo de su
+      demonio.
+    - Ritual
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '23'
+    - Promocional
+    - '2013-08-23 06:22:18.84701'
+    - '2013-08-23 06:22:18.863045'
+    - '480'
+    - false
+    - '12'
+    - 023-esenciales
+    - '2'
+    - '2'
+  - - '687'
+    - Toma una carta. Si hay Thanatos, previene todo el daño que el demonio enemigo
+      objetivo fuese a hacer o recibir este turno.
+    - Ritual
+    - Instantáneo
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '24'
+    - Promocional
+    - '2013-08-23 06:22:46.975889'
+    - '2013-08-23 06:22:46.993855'
+    - '484'
+    - false
+    - '12'
+    - 024-esenciales
+    - '2'
+    - '2'
+  - - '688'
+    - 'Girar, exiliar un aliado de tu inferno: Busca en tu mazo un aliado y ponlo
+      en tu inferno. Luego mezcla tu mazo.'
+    - Aliado
+    - ''
+    - Vampiro
+    - '1'
+    - '1'
+    - Neutral
+    - ''
+    - '25'
+    - Promocional
+    - '2013-08-23 06:24:48.073046'
+    - '2013-08-23 06:24:48.088854'
+    - '486'
+    - false
+    - '12'
+    - 025-esenciales
+    - '1'
+    - '1'

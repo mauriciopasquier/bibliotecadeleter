@@ -28,3 +28,5 @@ public/cartas
 
 # Nunca commitear los usuarios
 db/semillas/usuarios.yml
+db/semillas/slots.yml
+db/semillas/listas.yml
