@@ -22,9 +22,7 @@ gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
 gem 'sitemap'
-gem 'rails3-jquery-autocomplete',
-  github: 'mauriciopasquier/rails3-jquery-autocomplete',
-  branch: 'scopes-with-parameters'
+gem 'rails3-jquery-autocomplete'
 gem 'awesome_nested_fields'
 
 # Controller

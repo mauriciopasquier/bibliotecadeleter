@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/mauriciopasquier/rails3-jquery-autocomplete.git
-  revision: 8ce28c5bf9fe0a78d0f88ffd978f7709722d8fd2
-  branch: scopes-with-parameters
-  specs:
-    rails3-jquery-autocomplete (1.0.11)
-      rails (~> 3.0)
-
-GIT
   remote: git://github.com/mauriciopasquier/yaml_db.git
   revision: 02570517a4160a13daf6908417fd658462cdf49e
   branch: order-join-tables
@@ -210,6 +202,8 @@ GEM
       railties (= 3.2.14)
     rails-i18n (0.7.4)
       i18n (~> 0.5)
+    rails3-jquery-autocomplete (1.0.11)
+      rails (~> 3.0)
     rails3_libmemcached_store (0.5.1)
       memcached
     railties (3.2.14)
@@ -313,7 +307,7 @@ DEPENDENCIES
   pry-rails
   rails (= 3.2.14)
   rails-i18n
-  rails3-jquery-autocomplete!
+  rails3-jquery-autocomplete
   rails3_libmemcached_store
   ransack
   responders
