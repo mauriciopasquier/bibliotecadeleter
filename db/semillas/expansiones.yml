@@ -181,3 +181,36 @@ expansiones:
     - '2013-08-23 16:26:08.298393'
     - '2013-08-23 16:56:17.562087'
     - pip-destino
+  - - '14'
+    - Promocionales Destino
+    - '2013-03-18'
+    - '2013-03-16'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - Crónicas de Ubanna
+    - '2'
+    - '2013-08-23 17:10:03.666477'
+    - '2013-08-23 17:12:20.414477'
+    - promocionales-destino
+  - - '15'
+    - Hadouken
+    - '2013-08-17'
+    - 
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - 
+    - '1'
+    - '2013-08-23 17:15:55.105792'
+    - '2013-08-23 17:17:41.31679'
+    - hadouken
+  - - '16'
+    - Origen
+    - 
+    - 
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - 
+    - '152'
+    - '2013-08-23 17:31:03.682928'
+    - '2013-08-23 18:06:05.303601'
+    - origen

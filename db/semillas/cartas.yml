@@ -2646,7 +2646,7 @@ cartas:
   - - '530'
     - Estatua viviente
     - '2013-03-03 20:43:28.678235'
-    - '2013-04-26 21:41:21.997883'
+    - '2013-08-23 17:12:20.411977'
     - estatua-viviente
   - - '531'
     - Zulfur, caudillo de los muertos
@@ -3011,7 +3011,7 @@ cartas:
   - - '603'
     - Combatiente tenaz
     - '2013-04-24 03:48:21.366164'
-    - '2013-04-26 21:41:25.533762'
+    - '2013-08-23 17:11:10.795598'
     - combatiente-tenaz
   - - '604'
     - Consejero sabio
@@ -3103,3 +3103,38 @@ cartas:
     - '2013-08-23 16:56:17.505455'
     - '2013-08-23 16:56:17.559703'
     - veredicto-de-ubanna
+  - - '622'
+    - Hadouken, sede nacional 2013
+    - '2013-08-23 17:17:41.221499'
+    - '2013-08-23 17:17:41.314076'
+    - hadouken-sede-nacional-2013
+  - - '623'
+    - Cuchilla transmutadora
+    - '2013-08-23 17:41:04.927253'
+    - '2013-08-23 17:41:05.024741'
+    - cuchilla-transmutadora
+  - - '624'
+    - Lluvia de meteoritos
+    - '2013-08-23 17:50:10.371669'
+    - '2013-08-23 17:50:10.461444'
+    - lluvia-de-meteoritos
+  - - '625'
+    - Asimilador de la red neural
+    - '2013-08-23 17:55:08.597924'
+    - '2013-08-23 17:55:08.698439'
+    - asimilador-de-la-red-neural
+  - - '626'
+    - Inmolado de la abadía
+    - '2013-08-23 17:56:47.229667'
+    - '2013-08-23 17:56:47.288313'
+    - inmolado-de-la-abadia
+  - - '627'
+    - Manipulador de almas
+    - '2013-08-23 18:03:54.136985'
+    - '2013-08-23 18:03:54.193367'
+    - manipulador-de-almas
+  - - '628'
+    - Bendición rúnica
+    - '2013-08-23 18:06:05.240945'
+    - '2013-08-23 18:06:05.300867'
+    - bendicion-runica

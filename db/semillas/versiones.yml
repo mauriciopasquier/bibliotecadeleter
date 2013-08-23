@@ -13287,3 +13287,187 @@ versiones:
     - 008-pip-destino
     - 2X
     - '2'
+  - - '697'
+    - Cuando combatiente tenaz entre en juego, puedes poner la carta objetivo de tu
+      inferno en tu mano.
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '2'
+    - '2'
+    - Neutral
+    - ''
+    - '105'
+    - Promocional
+    - '2013-08-23 17:11:10.744696'
+    - '2013-08-23 17:11:10.763326'
+    - '603'
+    - false
+    - '14'
+    - 105-promocionales-destino
+    - '3'
+    - '3'
+  - - '698'
+    - 'Exilia un aliado de tu inferno, girar: Pon en juego una ficha de aliado, que
+      es una copia del aliado objetivo que controles.'
+    - Objeto
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '109'
+    - Promocional
+    - '2013-08-23 17:12:20.358626'
+    - '2013-08-23 17:12:20.380266'
+    - '530'
+    - false
+    - '14'
+    - 109-promocionales-destino
+    - '2'
+    - '2'
+  - - '699'
+    - "Juega esta carta sólo si estás en Hadouken (Duarte Quiróz 272, Córdoba).\r\nLos
+      aliados pueden jugarse sin pagar su coste."
+    - Escenario
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '1'
+    - Promocional
+    - '2013-08-23 17:17:41.248986'
+    - '2013-08-23 17:17:41.270829'
+    - '622'
+    - true
+    - '15'
+    - 001-hadouken
+    - '0'
+    - '0'
+  - - '700'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Pon en juego
+      X fichas de aliado {Caos} Kirch 1 FUE, 1 RES, donde X es igual a la RES del
+      aliado destruido.
+    - Arma
+    - ''
+    - ''
+    - '+1'
+    - '+0'
+    - Caos
+    - ''
+    - '13'
+    - Rara
+    - '2013-08-23 17:41:04.951996'
+    - '2013-08-23 17:41:04.965892'
+    - '623'
+    - true
+    - '16'
+    - 013-origen
+    - '3'
+    - '3'
+  - - '701'
+    - "Tu demonio hace 2 puntos de daño al aliado o demonio objetivo.\r\nRéplica {2}
+      (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando su
+      Réplica)."
+    - Ritual
+    - Instantáneo
+    - ''
+    - ''
+    - ''
+    - Caos
+    - '"No descansaré hasta extinguir cada raza en este maldito mundo." - Narghot'
+    - '30'
+    - Rara
+    - '2013-08-23 17:50:10.397946'
+    - '2013-08-23 17:50:10.420119'
+    - '624'
+    - true
+    - '16'
+    - 030-origen
+    - '2'
+    - '2'
+  - - '702'
+    - "Cuando Asimilador de la red neural entre en juego, toma el control del aliado
+      enemigo objetivo.\r\nEse aliado es un cyborg además de sus otros tipos (estos
+      efectos no terminan al final del turno)."
+    - Aliado
+    - ''
+    - Cyborg
+    - '2'
+    - '2'
+    - Locura
+    - '"No existe bestia alguna, que sea incapaz de dominar."'
+    - '35'
+    - Rara
+    - '2013-08-23 17:55:08.617927'
+    - '2013-08-23 17:55:08.635812'
+    - '625'
+    - true
+    - '16'
+    - 035-origen
+    - '5'
+    - '5'
+  - - '703'
+    - '{1}, destruir Inmolado de la abadía: Exilia el inferno del demonio objetivo.'
+    - Aliado
+    - ''
+    - Diablo
+    - '3'
+    - '2'
+    - Muerte
+    - Incluso el inferno se niega a abrazarlo.
+    - '59'
+    - Rara
+    - '2013-08-23 17:56:47.245449'
+    - '2013-08-23 17:56:47.260324'
+    - '626'
+    - true
+    - '16'
+    - 059-origen
+    - '4'
+    - '4'
+  - - '704'
+    - Estocada (cuando haga daño de combate a un demonio) - El demonio objetivo pone
+      un aliado que controla en la mano de su demonio.
+    - Aliado
+    - ''
+    - Humano Rebelde
+    - '3'
+    - '2'
+    - Muerte
+    - '"Jugar con carne y hueso es muy sencillo. Conducir la esencia es mi ambición."'
+    - '85'
+    - Infrecuente
+    - '2013-08-23 18:03:54.152116'
+    - '2013-08-23 18:03:54.165876'
+    - '627'
+    - true
+    - '16'
+    - 085-origen
+    - '3'
+    - '3'
+  - - '705'
+    - "El aliado objetivo obtiene +2 FUE hasta el final del turno.\r\nRéplica {2}
+      (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando su
+      Réplica)."
+    - Ritual
+    - ''
+    - ''
+    - ''
+    - ''
+    - Poder
+    - '"La bestia creció, y pudo distinguirse desde las siete esquinas del bosque
+      antiguo." - Cuento popular'
+    - '99'
+    - Común
+    - '2013-08-23 18:06:05.257269'
+    - '2013-08-23 18:06:05.272005'
+    - '628'
+    - true
+    - '16'
+    - 099-origen
+    - '1'
+    - '1'
