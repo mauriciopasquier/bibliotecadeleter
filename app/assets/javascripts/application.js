@@ -21,6 +21,8 @@
 //= require bootstrap-filestyle
 //= require bgpos
 //= require autocomplete-rails
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es
 //
 //= Archivos de la aplicación a incluir
 //
