@@ -26,4 +26,6 @@
         %dt Notas
         %dd= expansion.notas
 
+- if can? :edit, expansion
+  = link_to 'Editar', edit_expansion_path(expansion), class: 'btn'
 = link_to 'Otras expansiones', expansiones_path, class: 'btn'

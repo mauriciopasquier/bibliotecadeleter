@@ -51,6 +51,7 @@ BibliotecaDelEter::Application.routes.draw do
     r.resources :expansiones do
       collection do
         get 'autocompletar_nombre'  => 'expansiones#autocomplete_expansion_nombre'
+        get 'completar_saga'
       end
     end
 

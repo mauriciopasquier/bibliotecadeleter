@@ -79,6 +79,7 @@ class Version < ActiveRecord::Base
       "#{numero_justificado}-#{expansion.try(:slug) || 'huerfanas'}"
     end
 
+    # La primer versión de cada carta es la canónica
     def ver_si_es_canonica
       unless carta.versiones.where(canonica: true).any?
         self.canonica = true

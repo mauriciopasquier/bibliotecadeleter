@@ -3,12 +3,13 @@ require "yaml"
 
 class ExpansionesController < ApplicationController
   autocomplete :expansion, :nombre, full: true
+  autocompletar_columnas :saga
 
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
-  ANONS = [ :autocomplete_expansion_nombre ]
+  ANONS = [ :autocomplete_expansion_nombre, :completar_saga ]
 
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
