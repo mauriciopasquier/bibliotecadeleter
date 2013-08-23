@@ -1,4 +1,8 @@
 - if usuario_signed_in?
-  %li= link_to('Carnet', edit_usuario_registration_path)
+  %li
+    = link_to panel_path do
+      - content_tag(:i, nil, class: 'icon-user icon-white')
 - else
-  %li= link_to('Carnet', new_usuario_registration_path)
+  %li
+    = link_to new_usuario_registration_path do
+      - content_tag(:i, nil, class: 'icon-book icon-white')

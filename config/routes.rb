@@ -1,12 +1,6 @@
 BibliotecaDelEter::Application.routes.draw do
 
-  authenticated do
-    root to: "inicio#panel"
-  end
-
-  unauthenticated do
-    root to: 'inicio#bienvenida'
-  end
+  root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
   devise_for :usuarios, path: 'cuenta',
@@ -25,6 +19,7 @@ BibliotecaDelEter::Application.routes.draw do
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales' => 'inicio#legales'
+  get 'panel' => 'inicio#panel'
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
   masculinos  = { new: "nuevo", edit: "editar" }

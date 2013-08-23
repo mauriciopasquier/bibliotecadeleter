@@ -12,7 +12,7 @@ es:
           help:           "Una sugerencia..."
         submit:           "¡Listo! Dame mi carnet"
         titulo:           "Un carnet de biblioteca"
-      edit:
+      edit: &registrations
         password:
           placeholder:    "Dejalo vacío si no vas a cambiarlo"
           help:           "Una sugerencia..."
@@ -50,3 +50,4 @@ es:
         confirmation:       "Volver a mandar el mail de confirmación"
         unlock:             "Volver a mandar el mail de desbloqueo"
         sign_in_with:       "Entrar con %{provider}"
+      edit_registrations: *registrations

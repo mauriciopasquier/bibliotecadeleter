@@ -18,6 +18,7 @@
 //= require turbolinks
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/collapse
+//= require twitter/bootstrap/tab
 //= require bootstrap-filestyle
 //= require bgpos
 //= require autocomplete-rails
