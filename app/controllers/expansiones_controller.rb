@@ -11,8 +11,6 @@ class ExpansionesController < ApplicationController
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
 
-  before_filter :decorar_expansion, only: [:show, :edit]
-
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
     @expansiones = PaginadorDecorator.decorate @busqueda.result
@@ -49,10 +47,4 @@ class ExpansionesController < ApplicationController
     @expansion.destroy
     respond_with(@expansion)
   end
-
-  private
-
-    def decorar_expansion
-      @expansion = @expansion.decorate
-    end
 end
