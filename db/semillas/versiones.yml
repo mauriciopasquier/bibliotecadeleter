@@ -13121,3 +13121,169 @@ versiones:
     - 025-esenciales
     - '1'
     - '1'
+  - - '689'
+    - "{1}: El aliado objetivo que controles obtiene +1 FUE y -1 RES hasta el final
+      del turno.\r\n{1}: El aliado objetivo que controles tiene la habilidad de furia
+      hasta el final del turno, si su RES es 1."
+    - Aliado
+    - Único
+    - Humano
+    - '2'
+    - '3'
+    - Caos
+    - ''
+    - '1'
+    - Promocional
+    - '2013-08-23 16:29:41.64502'
+    - '2013-08-23 16:29:41.705347'
+    - '614'
+    - true
+    - '13'
+    - 001-pip-destino
+    - '3'
+    - '3'
+  - - '690'
+    - "Siempre que Urmenob u otro cyborg no ficha entre en juego bajo tu control,
+      pon en juego una ficha de aliado objeto Bot {Locura} 0 FUE, 1 RES.\r\nDestruir
+      un bot que controles: Remueve todos los contadores de daño sobre el cyborg objetivo."
+    - Aliado
+    - Único
+    - Cyborg Rebelde
+    - '0'
+    - '5'
+    - Locura
+    - ''
+    - '2'
+    - Promocional
+    - '2013-08-23 16:34:36.297436'
+    - '2013-08-23 16:34:36.32532'
+    - '615'
+    - true
+    - '13'
+    - 002-pip-destino
+    - '4'
+    - '4'
+  - - '691'
+    - "Siempre que Eusthario ataque, puedes descartar un aliado.\r\nSiempre que Eusthario
+      haga daño de combate a un demonio, pon el aliado descartado de esta manera en
+      juego desde tu inferno."
+    - Aliado
+    - Único
+    - Humano
+    - '2'
+    - '3'
+    - Muerte
+    - ''
+    - '3'
+    - Promocional
+    - '2013-08-23 16:37:59.859343'
+    - '2013-08-23 16:37:59.872827'
+    - '616'
+    - true
+    - '13'
+    - 003-pip-destino
+    - '5'
+    - '5'
+  - - '692'
+    - "Tákina tiene la habilidad de protector mientras esté equipada.\r\nSiempre que
+      Tákina defienda, puedes poner un humano de FUE 2 o menos de tu mano en juego."
+    - Aliado
+    - Único
+    - Humano
+    - '3'
+    - '3'
+    - Poder
+    - ''
+    - '4'
+    - Promocional
+    - '2013-08-23 16:40:08.355794'
+    - '2013-08-23 16:40:08.368599'
+    - '617'
+    - true
+    - '13'
+    - 004-pip-destino
+    - '4'
+    - '4'
+  - - '693'
+    - "Los aliados que compartan al menos un tipo con el aliado equipado obtienen
+      +1 FUE y +1 RES.\r\nSi tu demonio es {Locura}, Amplificador neural tiene el
+      supertipo instantáneo en cualquier zona en que se encuentre."
+    - Arma
+    - Único
+    - Bot
+    - '+1'
+    - '+1'
+    - Neutral
+    - ''
+    - '5'
+    - Promocional
+    - '2013-08-23 16:44:01.361008'
+    - '2013-08-23 16:44:01.374801'
+    - '618'
+    - true
+    - '13'
+    - 005-pip-destino
+    - '3'
+    - '3'
+  - - '694'
+    - "No pueden jugarse rituales.\r\nCuando un demonio juegue una carta que no sea
+      aliado, destruye Amuleto de tregua.\r\nSi tu demonio es {Poder}, si Amuleto
+      de tregua fuera a ser puesto en un inferno desde el juego, en vez de eso mézclalo
+      en el mazo de su demonio."
+    - Objeto
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '6'
+    - Promocional
+    - '2013-08-23 16:51:28.933887'
+    - '2013-08-23 16:51:28.946961'
+    - '619'
+    - true
+    - '13'
+    - 006-pip-destino
+    - '2'
+    - '2'
+  - - '695'
+    - Los aliados tienen la habilidad de Abismal.
+    - Escenario
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - Si tu demonio es {Muerte}, puedes jugar Cementerio de la abadía desde tu inferno
+      como si estuviera en tu mano.
+    - '7'
+    - Promocional
+    - '2013-08-23 16:53:53.212863'
+    - '2013-08-23 16:53:53.233808'
+    - '620'
+    - true
+    - '13'
+    - 007-pip-destino
+    - '0'
+    - '0'
+  - - '696'
+    - "Destruye todas las cartas no recurso de coste X.\r\nSi tu demonio es {Caos},
+      puede hacer X puntos de daño al aliado objetivo."
+    - Ritual
+    - ''
+    - ''
+    - ''
+    - ''
+    - Neutral
+    - ''
+    - '8'
+    - Promocional
+    - '2013-08-23 16:56:17.52038'
+    - '2013-08-23 16:56:17.532926'
+    - '621'
+    - true
+    - '13'
+    - 008-pip-destino
+    - 2X
+    - '2'

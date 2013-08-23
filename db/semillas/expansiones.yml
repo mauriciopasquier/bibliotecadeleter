@@ -170,3 +170,14 @@ expansiones:
     - '2013-08-23 04:46:28.36553'
     - '2013-08-23 06:24:48.127318'
     - esenciales
+  - - '13'
+    - PIP Destino
+    - '2013-06-17'
+    - 
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - Crónicas de Ubanna
+    - '8'
+    - '2013-08-23 16:26:08.298393'
+    - '2013-08-23 16:56:17.562087'
+    - pip-destino
