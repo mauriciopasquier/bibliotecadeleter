@@ -1,4 +1,6 @@
 # encoding: utf-8
+require "yaml"
+
 class ExpansionesController < ApplicationController
   autocomplete :expansion, :nombre, full: true
 
@@ -10,6 +12,8 @@ class ExpansionesController < ApplicationController
 
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
+
+  before_filter :parsear_notas, only: [:create, :update]
 
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
@@ -47,4 +51,11 @@ class ExpansionesController < ApplicationController
     @expansion.destroy
     respond_with(@expansion)
   end
+
+  private
+
+    # TODO averiguar la inseguridad de Psych
+    def parsear_notas
+      @expansion.notas = YAML.load(@expansion.notas).with_indifferent_access
+    end
 end
