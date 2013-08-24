@@ -2,7 +2,6 @@
 
 = render 'form'
 
-
 = link_to 'Mostrar', [current_usuario, @lista], class: 'btn'
 - if can? :delete, @lista
   = link_to 'Eliminar', [@usuario, @lista], method: :delete,
