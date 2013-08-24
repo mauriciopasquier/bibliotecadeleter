@@ -61,7 +61,13 @@ class CartasController < ApplicationController
         .search(preparar_consulta(params[:q])).result(distinct: true)
     else
       Carta.none
-    end.decorate
+    end
+
+    if @cartas.count == 1
+      redirect_to @cartas.first
+    else
+      @cartas = @cartas.decorate
+    end
   end
 
   # Redefinido para no pelear con rails3-jquery-autocomplete por el join
