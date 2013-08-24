@@ -1,0 +1,23 @@
+%h1= titulo
+
+.row-fluid
+  .span12
+    - if @versiones.any?
+      = render  partial: 'layouts/galeria',
+                locals: { imagenes: @versiones,
+                          paginar: true }
+    - else
+      %p
+        Esta lista está vacía.
+        - if @usuario == current_usuario
+          ¿Por qué no le
+          #{link_to 'agregás', edit_usuario_lista_path(@usuario, @lista)}
+          algunas cartas?
+
+- if can? :edit, @lista
+  = link_to 'Editar', edit_usuario_lista_path(@usuario, @lista), class: 'btn'
+- if can? :delete, @lista
+  = link_to 'Eliminar', [@usuario, @lista], method: :delete,
+    data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
+
+= link_to otras_listas, usuario_listas_path(@usuario), class: 'btn'

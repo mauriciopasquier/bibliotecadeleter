@@ -8,7 +8,8 @@
     .row-fluid
       .span6
         = f.label :nombre
-        = f.text_field :nombre, class: 'span12', disabled: disabled?, required: true
+        = f.text_field :nombre, class: 'span12', disabled: disabled?, required: true,
+          autofocus: true
       .span3
         = fc.label :coste
         = fc.text_field :coste, class: 'span12'
@@ -75,4 +76,4 @@
             .control-group.row-fluid
               = fi.file_field :archivo, class: 'span12'
 
-  = f.submit 'Guardar', class: 'btn'
+  = f.submit 'Guardar', class: 'btn btn-success'

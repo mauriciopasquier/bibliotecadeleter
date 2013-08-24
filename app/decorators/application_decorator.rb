@@ -25,4 +25,14 @@ class ApplicationDecorator < Draper::Decorator
         r
     end
   end
+
+  # Interfaz común para preparar nuevos objetos con las asociaciones necesarias
+  def self.preparar
+    self.new(object_class.new).preparar
+  end
+
+  # Los decoradores deberían implementar este método y devolver `self`
+  def preparar
+    raise NoMethodError
+  end
 end

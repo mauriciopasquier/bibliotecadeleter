@@ -1,0 +1,9 @@
+%h1= titulo
+
+= render 'form'
+
+= link_to 'Mostrar', [current_usuario, @lista], class: 'btn'
+- if can? :delete, @lista
+  = link_to 'Eliminar', [@usuario, @lista], method: :delete,
+    data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
+= link_to 'Tus otras listas', usuario_listas_path(current_usuario), class: 'btn'

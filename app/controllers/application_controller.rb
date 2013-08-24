@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?,
-                :barra_de_busqueda, :rarezas
+                :barra_de_busqueda, :rarezas, :coleccion_actual, :reserva_actual
 
   protected
 
@@ -88,4 +88,11 @@ class ApplicationController < ActionController::Base
       Carta.ransack
     end
 
+    def coleccion_actual
+      current_usuario.coleccion
+    end
+
+    def reserva_actual
+      current_usuario.reserva
+    end
 end

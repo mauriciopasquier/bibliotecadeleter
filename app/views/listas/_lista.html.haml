@@ -1,0 +1,8 @@
+- cache lista do
+  .row-fluid
+    .nombre.span10
+      - if can? :read, lista
+        = link_to_mostrar [@usuario, lista], lista.nombre
+      - else
+        = lista.nombre
+    .cantidad.span2= lista.cantidad

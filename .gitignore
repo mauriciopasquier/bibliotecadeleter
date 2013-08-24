@@ -14,9 +14,11 @@
 /log/*.log
 /tmp
 /app/assets/stylesheets/scaffolds.css.scss
+TODO
 
 # Ignoro todo lo que depende del deploy
 config/environments/production.rb
+config/environments/development.rb
 config/database.yml
 config/initializers/secret_token.rb
 config/initializers/devise.rb
@@ -26,3 +28,5 @@ public/cartas
 
 # Nunca commitear los usuarios
 db/semillas/usuarios.yml
+db/semillas/slots.yml
+db/semillas/listas.yml

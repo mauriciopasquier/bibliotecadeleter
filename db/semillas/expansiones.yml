@@ -30,7 +30,7 @@ expansiones:
     - 
     - '184'
     - '2013-02-19 17:49:23.87118'
-    - '2013-04-26 21:41:03.429815'
+    - '2013-08-20 04:05:55.158467'
     - despertar
   - - '2'
     - Promocionales Despertar
@@ -69,7 +69,7 @@ expansiones:
     - Crónicas de Ubanna
     - '184'
     - '2013-02-19 17:49:23.920551'
-    - '2013-04-26 21:41:13.252508'
+    - '2013-08-23 05:22:04.723832'
     - insania
   - - '4'
     - Promocionales Insania
@@ -155,5 +155,62 @@ expansiones:
     - Crónicas de Ubanna
     - '124'
     - '2013-02-19 17:49:24.010427'
-    - '2013-04-26 21:41:26.798515'
+    - '2013-08-23 05:22:05.979162'
     - destino
+  - - '12'
+    - Esenciales
+    - '2013-07-01'
+    - '2013-07-01'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      concepto: 25 cartas neutrales en arte extendido. Una selección de las cartas más populares
+        y usadas en torneos.
+    - 
+    - '25'
+    - '2013-08-23 04:46:28.36553'
+    - '2013-08-23 06:24:48.127318'
+    - esenciales
+  - - '13'
+    - PIP Destino
+    - '2013-06-17'
+    - 
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - Crónicas de Ubanna
+    - '8'
+    - '2013-08-23 16:26:08.298393'
+    - '2013-08-23 16:56:17.562087'
+    - pip-destino
+  - - '14'
+    - Promocionales Destino
+    - '2013-03-18'
+    - '2013-03-16'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - Crónicas de Ubanna
+    - '2'
+    - '2013-08-23 17:10:03.666477'
+    - '2013-08-23 17:12:20.414477'
+    - promocionales-destino
+  - - '15'
+    - Hadouken
+    - '2013-08-17'
+    - 
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - 
+    - '1'
+    - '2013-08-23 17:15:55.105792'
+    - '2013-08-23 17:17:41.31679'
+    - hadouken
+  - - '16'
+    - Origen
+    - 
+    - 
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - 
+    - '152'
+    - '2013-08-23 17:31:03.682928'
+    - '2013-08-23 18:06:05.303601'
+    - origen

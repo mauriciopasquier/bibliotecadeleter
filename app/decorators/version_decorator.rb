@@ -7,7 +7,7 @@ class VersionDecorator < ApplicationDecorator
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
   def link(estilo = :original, opciones = {})
-    h.link_to tag(estilo), [source.carta, source], opciones
+    h.link_to tag(estilo), [object.carta, object], opciones
   end
 
   def tag(estilo = :original)
@@ -26,15 +26,15 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def tipo
-    source.tipo || ''
+    object.tipo || ''
   end
 
   def supertipo
-    if source.supertipo?
-      if source.tipo =~ /Arma/i and source.supertipo =~ /nstantáneo/
-        " #{source.supertipo.gsub('nstantáneo', 'nstantánea')}"
+    if object.supertipo?
+      if object.tipo =~ /Arma/i and object.supertipo =~ /nstantáneo/
+        " #{object.supertipo.gsub('nstantáneo', 'nstantánea')}"
       else
-        " #{source.supertipo}"
+        " #{object.supertipo}"
       end
     else
       ''
@@ -42,8 +42,8 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def subtipo
-    if source.subtipo?
-      " - #{source.subtipo}"
+    if object.subtipo?
+      " - #{object.subtipo}"
     else
       ''
     end
@@ -51,7 +51,7 @@ class VersionDecorator < ApplicationDecorator
 
   def numeracion
     if expansion.present?
-      h.link_to(expansion.base.nombre, expansion.base) + " #{source.numero}/#{expansion.base.total}"
+      h.link_to(expansion.base.nombre, expansion.base) + " #{object.numero}/#{expansion.base.total}"
     end
   end
 
@@ -67,10 +67,79 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def texto
-    source.texto.split('/').collect do |cara|
+    object.texto.split('/').collect do |cara|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
         cara
       end
-    end.join.html_safe unless source.texto.nil?
+    end.join.html_safe unless object.texto.nil?
   end
+
+  def reserva_y_coleccion
+    h.content_tag(:div, class: 'controles') do
+      [ control_reserva,
+        control_coleccion
+      ].join.html_safe
+    end
+  end
+
+  def control_reserva(lista = h.reserva_actual)
+    c = cantidad_en(lista)
+
+    h.content_tag(:div, class: 'control-reserva') do
+      [ "Tu reserva: ",
+
+        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
+
+        h.link_to(ruta(:reserva, c + 1), method: :put, remote: true,
+        class: 'update-listas agregar') do
+          h.content_tag(:i, nil, class: 'icon-plus')
+        end,
+
+        '/',
+
+        h.link_to(ruta(:reserva, [0, c - 1].max), method: :put, remote: true,
+        class: 'update-listas remover') do
+          h.content_tag(:i, nil, class: 'icon-minus')
+        end
+
+      ].join.html_safe
+    end
+  end
+
+  def control_coleccion(lista = h.coleccion_actual)
+    c = cantidad_en(lista)
+
+    h.content_tag(:div, class: 'control-coleccion') do
+      [ "Total: ",
+
+        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
+
+        h.link_to(ruta(:coleccion, c + 1), method: :put, remote: true,
+        class: 'update-listas agregar') do
+          h.content_tag(:i, nil, class: 'icon-plus')
+        end,
+
+        '/',
+
+        h.link_to(ruta(:coleccion, [0, c - 1].max), method: :put, remote: true,
+        class: 'update-listas remover') do
+          h.content_tag(:i, nil, class: 'icon-minus')
+        end
+
+      ].join.html_safe
+    end
+  end
+
+  private
+
+    def cantidad_en(lista)
+      object.slot_en(lista).try(:cantidad) || 0
+    end
+
+    def ruta(lista, cantidad)
+      h.send("#{lista}_path",
+        version_id: object,
+        cantidad: cantidad
+      )
+    end
 end

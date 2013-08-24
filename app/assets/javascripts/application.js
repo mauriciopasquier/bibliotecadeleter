@@ -13,16 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.autocomplete
+//= require jquery.nested-fields
 //= require URI
 //= require turbolinks
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/collapse
+//= require twitter/bootstrap/tab
 //= require bootstrap-filestyle
 //= require bgpos
 //= require autocomplete-rails
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es
 //
 //= Archivos de la aplicación a incluir
 //
 //= require layout
 //= require paginacion
 //= require cartas
+//= require listas

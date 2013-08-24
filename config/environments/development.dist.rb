@@ -1,3 +1,5 @@
+# Para ver los mails sin enviarlos en http://localhost:3000/mail
+require 'mail_preview'
 BibliotecaDelEter::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -22,12 +24,30 @@ BibliotecaDelEter::Application.configure do
   # después de cada cambio)
   CacheDigests::TemplateDigestor.cache = ActiveSupport::Cache::NullStore.new
 
-  config.action_mailer do |mailer|
-    # Don't care if the mailer can't send
-    mailer.raise_delivery_errors = false
-    # Devise necesita esto
-    mailer.default_url_options = { :host => 'localhost:3000' }
-  end
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+  # Devise necesita esto
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Ejemplo de mailer con riseup
+  ActionMailer::Base.smtp_settings = {
+    address: 'mail.riseup.net',
+
+    # usar TLS
+    enable_starttls_auto: true,
+
+    # puerto para TLS
+    port:                 587,
+
+    # dominio desde el que enviamos
+    domain:               'un-dominio-que-apunte-aca.com.ar',
+
+    user_name:            'usuario',
+    password:             'password',
+
+    # envía en texto plano pero envuelto en TLS
+    authentication:       :plain
+  }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

@@ -2,7 +2,6 @@
 require "./test/test_helper"
 
 describe CartasController do
-
   it "debe acceder al index anónimamente" do
     get :index
     assert_response :success
@@ -16,14 +15,14 @@ describe CartasController do
 
   it "debe acceder a new si tiene permisos" do
     loguearse
-    get :new
+    autorizar { get :new }
     assert_response :success
   end
 
   it "debe crear una carta si tiene permisos" do
     loguearse
     assert_difference('Carta.count') do
-      post :create, carta: attributes_for(:carta)
+      autorizar { post :create, carta: attributes_for(:carta) }
     end
 
     assert_redirected_to carta_path(assigns(:carta))
@@ -41,7 +40,7 @@ describe CartasController do
 
   it "debe acceder a edit si tiene permisos" do
     loguearse
-    get :edit, id: create(:carta)
+    autorizar { get :edit, id: create(:carta) }
     assert_response :success
   end
 
@@ -56,8 +55,10 @@ describe CartasController do
     carta = version.carta
     atributos_carta = attributes_for(:carta)
     atributos_version = attributes_for(:version, id: version.id)
-    put :update, id: carta,
-      carta: atributos_carta.merge(versiones_attributes: {0 => atributos_version })
+    autorizar do
+      put :update, id: carta,
+        carta: atributos_carta.merge(versiones_attributes: {0 => atributos_version })
+    end
     assert_redirected_to carta_path(assigns(:carta))
 
     carta.reload

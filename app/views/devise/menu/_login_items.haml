@@ -1,4 +1,8 @@
 - if usuario_signed_in?
-  %li= link_to('Salir', destroy_usuario_session_path, method: :delete, class: 'logout')
+  %li
+    = link_to destroy_usuario_session_path, method: :delete, class: 'logout' do
+      - content_tag(:i, nil, class: 'icon-arrow-down icon-white')
 - else
-  %li= link_to('Entrar', new_usuario_session_path)
+  %li
+    = link_to new_usuario_session_path do
+      - content_tag(:i, nil, class: 'icon-arrow-up icon-white')

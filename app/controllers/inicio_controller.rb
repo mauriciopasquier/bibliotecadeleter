@@ -5,7 +5,7 @@ class InicioController < ApplicationController
   skip_authorization_check
 
   def panel
-    @usuario = current_usuario
+    @usuario = current_usuario.decorate
     respond_with(@usuario)
   end
 end

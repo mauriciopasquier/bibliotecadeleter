@@ -2,14 +2,13 @@
 .hero-unit
   %blockquote
     %p
-      Bienvenido,
-      = "#{@usuario.try(:nick) || 'mortal'},"
-      a la Biblioteca del Éter. En sus infinitos archivos, encontrarás la suma
-      del saber que los
+      Bienvenido mortal a la Biblioteca del Éter. En sus infinitos archivos,
+      encontrarás la suma del saber que los
       = link_to 'demonios', buscar_demonios, method: :post
       trajeron con ellos cuando irrumpieron gloriosamente en este mundo.
-    %p
-      Ten cuidado, pues hay
+      Adelante,
+      = link_to 'busca', buscar_cartas_path
+      en sus tomos, pero ten cuidado, pues hay
       = link_to 'quienes', carta_path('bibliotecarios-estimulados')
       pierden la cordura explorando sus tomos exquisitamente
       = link_to 'decorados...', artistas_path
@@ -19,7 +18,7 @@
   .span4
     %h3 Expansiones grandes
     %ul.menu.nav.nav-list.nav-stacked
-      - expansiones.grandes.each do |e|
+      - expansiones.order(:lanzamiento).grandes.each do |e|
         %li= link_to e.nombre, e
       %li= link_to '...todas las expansiones', expansiones_path
 

@@ -16,8 +16,6 @@ class Expansion < ActiveRecord::Base
 
   scope :grandes, where('total >= ?', 100)
 
-  default_scope order(:lanzamiento)
-
   # Determina de qué expansión son las promocionales
   def base
     if slug =~ /promocionales/

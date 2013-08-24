@@ -1,29 +1,31 @@
 %h1= titulo
-.row-fluid
-  .span12
-    %h2.plegable Datos sobre la expansión
-    %dl.dl-horizontal
-      - if @expansion.lanzamiento?
-        %dt Lanzamiento
-        %dd= l @expansion.lanzamiento
-      - if @expansion.presentacion?
-        %dt Presentación
-        %dd= l @expansion.presentacion
-      - if @expansion.saga?
-        %dt Saga
-        %dd= @expansion.saga
-      - if @expansion.total?
-        %dt Total
-        %dd= @expansion.total
-      - if @expansion.notas?
-        %dt Notas
-        %dd= @expansion.notas
 
 .row-fluid
   .span12
-    %h2.plegable Lista de cartas
     = render  partial: 'layouts/galeria',
               locals: { imagenes: @versiones,
                         paginar: true }
 
+.row-fluid
+  .span12
+    %h2.plegable Datos sobre la expansión
+    %dl.dl-horizontal
+      - if expansion.lanzamiento?
+        %dt Lanzamiento
+        %dd= l expansion.lanzamiento
+      - if expansion.presentacion?
+        %dt Presentación
+        %dd= l expansion.presentacion
+      - if expansion.saga?
+        %dt Saga
+        %dd= expansion.saga
+      - if expansion.total?
+        %dt Total
+        %dd= expansion.total
+      - if expansion.notas?
+        %dt Notas
+        %dd= expansion.notas
+
+- if can? :edit, expansion
+  = link_to 'Editar', edit_expansion_path(expansion), class: 'btn'
 = link_to 'Otras expansiones', expansiones_path, class: 'btn'

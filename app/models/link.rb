@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Link < ActiveRecord::Base
   attr_accessible :url, :nombre
 

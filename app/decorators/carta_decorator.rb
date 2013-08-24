@@ -10,10 +10,10 @@ class CartaDecorator < ApplicationDecorator
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
   def link(estilo = :original, opciones = {})
-    h.link_to canonica.tag(estilo), source, opciones
+    h.link_to canonica.tag(estilo), object, opciones
   end
 
   def lista_de_expansiones
-    expansiones.collect {|e| h.link_to e.nombre, e}.join(', ').html_safe
+    expansiones.order(:lanzamiento).collect {|e| h.link_to e.nombre, e}.join(', ').html_safe
   end
 end
