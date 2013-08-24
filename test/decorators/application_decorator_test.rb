@@ -51,6 +51,11 @@ describe ApplicationDecorator do
   end
 
   describe '#nil_cycle' do
-    it 'test something'
+    let(:d) { ApplicationDecorator.new(Modelo.new) }
+    it 'mantiene nil en el ciclo' do
+      d.nil_cycle(nil, 'string', name: :test).must_be_nil
+      d.nil_cycle(nil, 'string', name: :test).must_equal 'string'
+      d.nil_cycle(nil, 'string', name: :test).must_be_nil
+    end
   end
 end
