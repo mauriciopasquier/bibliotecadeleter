@@ -23,7 +23,7 @@ describe ExpansionesController do
   it "debe crear una expansión si tiene permisos" do
     loguearse
     assert_difference('Expansion.count') do
-      post :create, expansion: attributes_for(:expansion)
+      post :create, expansion: attributes_for(:expansion, notas: "yaml: string")
     end
 
     assert_redirected_to expansion_path(assigns(:expansion))
@@ -53,7 +53,7 @@ describe ExpansionesController do
   it "debe actualizar una expansión si tiene permisos" do
     loguearse
     expansion = create(:expansion)
-    atributos = attributes_for(:expansion)
+    atributos = attributes_for(:expansion, notas: 'at: at')
     put :update, id: expansion, expansion: atributos
     assert_redirected_to expansion_path(assigns(:expansion))
     expansion.reload
@@ -64,7 +64,7 @@ describe ExpansionesController do
     assert_equal atributos[:presentacion], expansion.presentacion,
       "No actualiza la fecha de presentacion"
     assert_equal atributos[:saga], expansion.saga, "No actualiza la saga"
-    assert_equal atributos[:notas], expansion.notas, "No actualiza las notas"
+    assert_equal ({'at' => 'at'}), expansion.notas, "No actualiza las notas"
   end
 
   it "no debe actualizar una expansión anónimamente" do

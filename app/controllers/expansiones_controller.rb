@@ -57,6 +57,6 @@ class ExpansionesController < ApplicationController
 
     # TODO averiguar la inseguridad de Psych
     def parsear_notas
-      @expansion.notas = YAML.load(@expansion.notas).with_indifferent_access
+      @expansion.notas = YAML.load(params[:expansion].delete(:notas)).with_indifferent_access
     end
 end
