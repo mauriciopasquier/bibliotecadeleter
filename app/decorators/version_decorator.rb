@@ -76,56 +76,55 @@ class VersionDecorator < ApplicationDecorator
 
   def reserva_y_coleccion
     h.content_tag(:div, class: 'controles') do
-      [ control_reserva,
-        control_coleccion
+      [ control(h.reserva_actual, 'Quiero'),
+        control(h.coleccion_actual, 'Tengo')
       ].join.html_safe
     end
   end
 
-  def control_reserva(lista = h.reserva_actual)
+  def control(lista, texto)
     c = cantidad_en(lista)
+    tipo = lista.class.name.downcase
 
-    h.content_tag(:div, class: 'control-reserva') do
-      [ "Tu reserva: ",
+    h.content_tag(:div, class: "control-#{tipo}") do
+      [ h.content_tag(:span, texto, class: 'control-texto'),
 
-        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
+        h.link_to(ruta(tipo, c + 1), method: :put, remote: true,
+          class: 'update-listas agregar') do
+            h.content_tag(:i, nil, class: 'icon-plus')
+          end,
 
-        h.link_to(ruta(:reserva, c + 1), method: :put, remote: true,
-        class: 'update-listas agregar') do
-          h.content_tag(:i, nil, class: 'icon-plus')
-        end,
+        h.content_tag(:span, c, class: 'cantidad'),
 
-        '/',
-
-        h.link_to(ruta(:reserva, [0, c - 1].max), method: :put, remote: true,
-        class: 'update-listas remover') do
-          h.content_tag(:i, nil, class: 'icon-minus')
-        end
-
+        h.link_to(ruta(tipo, [0, c - 1].max), method: :put, remote: true,
+          class: 'update-listas remover') do
+            h.content_tag(:i, nil, class: 'icon-minus')
+          end
       ].join.html_safe
     end
+
   end
 
   def control_coleccion(lista = h.coleccion_actual)
     c = cantidad_en(lista)
 
     h.content_tag(:div, class: 'control-coleccion') do
-      [ "Total: ",
+      [ h.content_tag(:span, "Tengo", class: 'pull-left'),
 
-        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
+        h.content_tag(:span, class: 'pull-right') do
+          [ h.link_to(ruta(:coleccion, c + 1), method: :put, remote: true,
+            class: 'update-listas agregar') do
+              h.content_tag(:i, nil, class: 'icon-plus')
+            end,
 
-        h.link_to(ruta(:coleccion, c + 1), method: :put, remote: true,
-        class: 'update-listas agregar') do
-          h.content_tag(:i, nil, class: 'icon-plus')
-        end,
+            h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
 
-        '/',
-
-        h.link_to(ruta(:coleccion, [0, c - 1].max), method: :put, remote: true,
-        class: 'update-listas remover') do
-          h.content_tag(:i, nil, class: 'icon-minus')
+            h.link_to(ruta(:coleccion, [0, c - 1].max), method: :put, remote: true,
+            class: 'update-listas remover') do
+              h.content_tag(:i, nil, class: 'icon-minus')
+            end
+          ].join.html_safe
         end
-
       ].join.html_safe
     end
   end
