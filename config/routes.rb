@@ -41,6 +41,7 @@ BibliotecaDelEter::Application.routes.draw do
         get 'autocompletar_nombre'  => 'cartas#autocomplete_carta_nombre'
       end
 
+      get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
     end
 
     r.resources :expansiones do

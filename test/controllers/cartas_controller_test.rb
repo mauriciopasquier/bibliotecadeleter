@@ -38,6 +38,13 @@ describe CartasController do
     assert_response :success
   end
 
+  it "debe mostrar una version anónimamente" do
+    version = create(:version_con_carta)
+    get :show, id: version.carta, expansion: version.expansion
+    assert_response :success
+    assigns(:version).must_equal version
+  end
+
   it "debe acceder a edit si tiene permisos" do
     loguearse
     autorizar { get :edit, id: create(:carta) }

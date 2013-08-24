@@ -20,12 +20,6 @@ describe VersionesController do
     assert_response :success
   end
 
-  it "debe mostrar una version anónimamente" do
-    version = create(:version_con_carta)
-    get :show, carta_id: version.carta, id: version
-    assert_response :success
-  end
-
   it "debe acceder a edit si tiene permisos" do
     loguearse
     version = create(:version_con_carta)

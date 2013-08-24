@@ -11,8 +11,8 @@ class CartasController < ApplicationController
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
 
+  before_filter :cargar_version, only: [:show]
   before_filter :check_espia
-  before_filter :decorar_carta, only: [:show, :edit]
   before_filter :check_barra_de_busqueda, only: :buscar
 
   def index
@@ -88,10 +88,6 @@ class CartasController < ApplicationController
 
   private
 
-    def decorar_carta
-      @carta = @carta.decorate
-    end
-
     def preparar_consulta(q)
       if params[:incluir]
         query = q.delete busqueda
@@ -103,6 +99,16 @@ class CartasController < ApplicationController
     def check_barra_de_busqueda
       if params[:navbar].present? and params[:q][busqueda].empty?
         params[:q] = nil
+      end
+    end
+
+    def cargar_version
+      @version = if params[:expansion].present?
+        @carta.versiones.where(expansion_id:
+          Expansion.find(params[:expansion])
+        ).first
+      else
+        @carta.canonica
       end
     end
 end

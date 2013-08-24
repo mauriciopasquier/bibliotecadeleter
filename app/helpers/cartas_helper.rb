@@ -46,6 +46,14 @@ module CartasHelper
     false
   end
 
+  def carta
+    @decorador_carta ||= @carta.decorate
+  end
+
+  def version
+    @decorador_version ||= @version.decorate
+  end
+
   private
 
     # Revisa el hash params para determinar si el checkbox fue usado en la

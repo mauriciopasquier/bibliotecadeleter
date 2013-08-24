@@ -18,8 +18,10 @@ class ImagenDecorator < ApplicationDecorator
   # genera una imagen/link a la versión.
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
+  # TODO DRY con decorador/version
   def link(estilo = :original, opciones = {})
-    h.link_to tag(estilo), [object.carta, object.version], opciones
+    h.link_to tag(estilo),
+      h.en_expansion_carta_path(object.carta, object.expansion), opciones
   end
 
   def linea_de_tipos

@@ -7,7 +7,8 @@ class VersionDecorator < ApplicationDecorator
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
   def link(estilo = :original, opciones = {})
-    h.link_to tag(estilo), [object.carta, object], opciones
+    h.link_to tag(estilo),
+      h.en_expansion_carta_path(object.carta, object.expansion), opciones
   end
 
   def tag(estilo = :original)
