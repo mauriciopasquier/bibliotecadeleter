@@ -16,14 +16,16 @@ describe ExpansionesController do
 
   it "debe acceder a new si tiene permisos" do
     loguearse
-    get :new
+    autorizar { get :new }
     assert_response :success
   end
 
   it "debe crear una expansión si tiene permisos" do
     loguearse
     assert_difference('Expansion.count') do
-      post :create, expansion: attributes_for(:expansion, notas: "yaml: string")
+      autorizar do
+        post :create, expansion: attributes_for(:expansion, notas: "yaml: string")
+      end
     end
 
     assert_redirected_to expansion_path(assigns(:expansion))
@@ -41,7 +43,7 @@ describe ExpansionesController do
 
   it "debe acceder a edit si tiene permisos" do
     loguearse
-    get :edit, id: create(:expansion)
+    autorizar { get :edit, id: create(:expansion) }
     assert_response :success
   end
 
@@ -54,7 +56,7 @@ describe ExpansionesController do
     loguearse
     expansion = create(:expansion)
     atributos = attributes_for(:expansion, notas: 'at: at')
-    put :update, id: expansion, expansion: atributos
+    autorizar { put :update, id: expansion, expansion: atributos }
     assert_redirected_to expansion_path(assigns(:expansion))
     expansion.reload
     assert_equal atributos[:nombre], expansion.nombre, "No actualiza el nombre"
@@ -76,5 +78,4 @@ describe ExpansionesController do
     delete :destroy, id: create(:expansion)
     assert_redirected_to :root
   end
-
 end

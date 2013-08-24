@@ -23,6 +23,15 @@ class ActionController::TestCase
     return usuario
   end
 
+  def autorizar
+    @ability = Object.new
+    @ability.extend(CanCan::Ability)
+    @ability.can :manage, :all
+    @controller.stub(:current_ability, @ability) do
+      yield
+    end
+  end
+
   def json
     ActiveSupport::JSON.decode @response.body
   end
