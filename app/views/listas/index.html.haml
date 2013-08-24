@@ -10,6 +10,6 @@
 
     = render partial: 'lista', collection: @listas
 
-- if usuario_signed_in?
+- if can? :create, Lista
   = link_to 'Crear una lista', new_usuario_lista_path(current_usuario),
     class: 'btn btn-success'

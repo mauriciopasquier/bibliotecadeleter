@@ -22,9 +22,7 @@ gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
 gem 'sitemap'
-gem 'rails3-jquery-autocomplete',
-  github: 'mauriciopasquier/rails3-jquery-autocomplete',
-  branch: 'scopes-with-parameters'
+gem 'rails3-jquery-autocomplete'
 gem 'awesome_nested_fields'
 
 # Controller
@@ -52,7 +50,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'jquery-rails'
-  gem 'bootstrap-sass-rails'
+  gem 'bootstrap-sass-rails', '< 3.0.0'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
   gem 'uri-js-rails'

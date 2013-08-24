@@ -36,8 +36,10 @@
 
       -# TODO agregar las 2 columnas que faltan
 
-    .row-fluid
-      .span12= link_to 'Crear lista', new_usuario_lista_path(@usuario), class: 'btn btn-success'
+    - if can? :create, Lista
+      .row-fluid
+        .span12= link_to 'Crear lista', new_usuario_lista_path(@usuario),
+          class: 'btn btn-success'
 
   #carnet.tab-pane
     = render 'devise/shared/edit_registrations'

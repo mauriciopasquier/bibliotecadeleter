@@ -17,7 +17,8 @@ class Ability
   private
 
     def registrado
-      can :manage, :all
+      can :manage, Lista, usuario_id: @usuario.id
+      can :read, :all
     end
 
     def anonimo

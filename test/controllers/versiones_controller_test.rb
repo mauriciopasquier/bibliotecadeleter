@@ -16,7 +16,7 @@ describe VersionesController do
 
   it "debe acceder a new si tiene permisos" do
     loguearse
-    get :new, carta_id: create(:version_con_carta).carta
+    autorizar { get :new, carta_id: create(:version_con_carta).carta }
     assert_response :success
   end
 
@@ -29,7 +29,7 @@ describe VersionesController do
   it "debe acceder a edit si tiene permisos" do
     loguearse
     version = create(:version_con_carta)
-    get :edit, carta_id: version.carta, id: version
+    autorizar { get :edit, carta_id: version.carta, id: version }
     assert_response :success
   end
 

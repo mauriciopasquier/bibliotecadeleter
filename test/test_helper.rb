@@ -18,10 +18,18 @@ class ActionController::TestCase
   include Devise::TestHelpers
 
   def loguearse
-    usuario = create :usuario
     @request.env["devise.mapping"] = Devise.mappings[:usuario]
-    sign_in usuario
+    sign_in usuario = create(:usuario)
     return usuario
+  end
+
+  def autorizar
+    @ability = Object.new
+    @ability.extend(CanCan::Ability)
+    @ability.can :manage, :all
+    @controller.stub(:current_ability, @ability) do
+      yield
+    end
   end
 
   def json
@@ -47,4 +55,16 @@ class Capybara::Rails::TestCase
   def loguearse
     loguearse_como(create(:usuario))
   end
+end
+
+module BibliotecaDelEter::Expectations
+  infect_an_assertion :assert_redirected_to, :must_redirect_to
+  infect_an_assertion :assert_template, :must_render_template
+  infect_an_assertion :assert_response, :must_respond_with
+  infect_an_assertion :assert_difference, :must_change
+  infect_an_assertion :assert_no_difference, :wont_change
+end
+
+class Object
+  include BibliotecaDelEter::Expectations
 end

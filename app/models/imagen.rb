@@ -40,6 +40,7 @@ class Imagen < ActiveRecord::Base
       nombres.split(',').map(&:strip).each do |artista|
         self.artistas << Artista.find_or_create_by_nombre(artista) unless artista.blank?
       end
+      artistas.map(&:touch)
     end
   end
 

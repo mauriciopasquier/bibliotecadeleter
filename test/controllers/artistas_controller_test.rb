@@ -16,14 +16,14 @@ describe ArtistasController do
 
   it "debe acceder a new si tiene permisos" do
     loguearse
-    get :new
+    autorizar { get :new }
     assert_response :success
   end
 
   it "debe crear un artista si tiene permisos" do
     loguearse
     assert_difference('Artista.count') do
-      post :create, artista: attributes_for(:artista)
+      autorizar { post :create, artista: attributes_for(:artista) }
     end
 
     assert_redirected_to artista_path(assigns(:artista))
@@ -41,7 +41,7 @@ describe ArtistasController do
 
   it "debe acceder a edit si tiene permisos" do
     loguearse
-    get :edit, id: create(:artista)
+    autorizar { get :edit, id: create(:artista) }
     assert_response :success
   end
 
@@ -54,7 +54,7 @@ describe ArtistasController do
     loguearse
     artista = create(:artista)
     atributos = attributes_for(:artista)
-    put :update, id: artista, artista: atributos
+    autorizar { put :update, id: artista, artista: atributos }
     assert_redirected_to artista_path(assigns(:artista))
     artista.reload
     assert_equal atributos[:nombre], artista.nombre, "No actualiza el nombre"
@@ -69,5 +69,4 @@ describe ArtistasController do
     delete :destroy, id: create(:artista)
     assert_redirected_to :root
   end
-
 end
