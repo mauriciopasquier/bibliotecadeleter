@@ -16,7 +16,7 @@ end
 
 describe ApplicationDecorator do
 
-  describe 'cuando la subclase no implementa `preparar`' do
+  describe 'la subclase no implementa' do
     subject { LanzadorDecorator.new(Modelo.new) }
 
     describe '.preparar' do
@@ -32,7 +32,7 @@ describe ApplicationDecorator do
     end
   end
 
-  describe 'cuando la subclase implementa `preparar`' do
+  describe 'la subclase implementa' do
     subject { ImplementadorDecorator.new(Modelo.new) }
     let(:nuevo) { ImplementadorDecorator.preparar }
 
