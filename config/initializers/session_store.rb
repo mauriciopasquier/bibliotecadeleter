@@ -2,11 +2,13 @@
 
 require 'action_dispatch/session/libmemcached_store'
 
-# BibliotecaDelEter::Application.config.session_store :cookie_store, key: '_biblioteca_del_eter_session'
+BibliotecaDelEter::Application.configure do
 
-# Use the database for sessions instead of the cookie-based default,
-# which shouldn't be used to store highly confidential information
-# (create the session table with "rails generate session_migration")
-# BibliotecaDelEter::Application.config.session_store :active_record_store
+  # Guardar la sesión en memcached
+  config.session_store = :libmemcached_store, { namespace: '_session', expire_after: 1800 }
 
-BibliotecaDelEter::Application.config.session_store = :libmemcached_store, { namespace: '_session', expire_after: 1800 }
+  # Rack::Protection dice:
+  #   Unexpected error while processing request: you need to set up a session
+  #   middleware *before* Rack::Protection::SessionHijacking
+  config.middleware.use Rack::Protection::SessionHijacking
+end

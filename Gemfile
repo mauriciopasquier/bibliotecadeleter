@@ -33,6 +33,7 @@ gem 'has_scope'
 gem 'thin'
 gem 'cache_digests'
 gem 'rails3_libmemcached_store'
+gem 'rack-protection'
 
 # Autenticación/autorización
 gem 'devise'
