@@ -42,6 +42,8 @@ end
 # Rails provides, so you must use the Capybara::Rails::TestCase for your
 # feature tests.
 class Capybara::Rails::TestCase
+  include ApplicationHelper
+
   def loguearse_como(usuario)
     visit new_usuario_session_path
     within '#usuarios form' do
