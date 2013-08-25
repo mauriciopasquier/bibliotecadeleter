@@ -103,7 +103,7 @@ class CartasController < ApplicationController
     end
 
     def check_barra_de_busqueda
-      if params[:navbar].present? and params[:q][busqueda].empty?
+      if params[:navbar].present? and params[:q][view_context.busqueda].empty?
         params[:q] = nil
       end
     end

@@ -71,6 +71,30 @@ module ApplicationHelper
       "Si hay varios artistas, separalos con ','."].join(' ')
   end
 
+  def busqueda
+    [ versiones_tipos,
+      'versiones_texto',
+      'versiones_ambientacion',
+      'nombre'
+    ].join('_or_') + '_cont'
+  end
+
+  def versiones_tipos
+    ['versiones_tipo', 'versiones_supertipo', 'versiones_subtipo'].join('_or_')
+  end
+
+  def sendas
+    %w{ Caos Locura Muerte Poder Neutral }
+  end
+
+  def rarezas
+    %w{ Común Infrecuente Rara Épica Promocional }
+  end
+
+  def barra_de_busqueda
+    Carta.ransack
+  end
+
   private
 
     def alerta(tipo)
