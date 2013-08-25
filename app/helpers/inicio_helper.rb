@@ -39,4 +39,8 @@ module InicioHelper
   def resource_class
     devise_mapping.to
   end
+
+  def usuario
+    @decorator ||= @usuario.decorate
+  end
 end
