@@ -1,14 +1,25 @@
-%h1= titulo
 .row-fluid
   #carta.span5
+    %h1= titulo
     .row-fluid
       .span12
         = render  partial: 'versiones/version_textual', object: version
       .span12
         %h3 Versiones
         %ul.versiones.nav.nav-pills
+          %li
+            = link_to '.', '#', class: 'falso-pill'
+            .controles
+              .control-reserva
+                .control-texto= 'Quiero'
+              .control-coleccion
+                .control-texto= 'Tengo'
           - carta.versiones.each do |v|
-            %li= link_to "#{v.expansion}", en_expansion_carta_path(@carta, v.expansion)
+            %li
+              = link_to "#{v.expansion}", en_expansion_carta_path(@carta, v.expansion)
+              .controles
+                = v.control(reserva_actual, '')
+                = v.control(coleccion_actual, '')
 
       - if @version.links.any?
         .span12
