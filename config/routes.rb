@@ -3,7 +3,7 @@ BibliotecaDelEter::Application.routes.draw do
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
-  devise_for :usuarios, path: 'cuenta',
+  devise_for :usuarios, path: 'recepcion',
     path_names: {
       sign_in: 'entrar',
       sign_out: 'salir',
