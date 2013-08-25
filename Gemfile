@@ -69,9 +69,12 @@ group :development do
   gem 'mail_view'
   gem 'bullet'
   gem 'capistrano'
+  gem 'quiet_assets'
 end
 
 group :test do
   gem 'minitest-rails-capybara'
   gem 'turn'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
 end
