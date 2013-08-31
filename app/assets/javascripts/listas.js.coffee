@@ -15,6 +15,10 @@ $(document)
     # El controlador devuelve el hash con version_id explícitamente
     $(this).siblings('.version_id').val(data.item.version_id)
 
+$(document)
+  .on 'page:change', ->
+    $('form.lista').nestedFields()
+
 jQuery ->
 
   $('form.lista').nestedFields()

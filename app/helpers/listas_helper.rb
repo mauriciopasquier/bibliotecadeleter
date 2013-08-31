@@ -34,4 +34,17 @@ module ListasHelper
   def lista
     @decorator ||= @lista.decorate
   end
+
+  def lista_vacia
+    content_tag :p do
+      p = 'Esta lista está vacía.'
+
+      if @usuario == current_usuario
+        p << '¿Por qué no le '
+        p << link_to('agregás', edit_usuario_lista_path(@usuario, @lista))
+        p << ' algunas cartas?'
+      end
+      p.html_safe
+    end
+  end
 end

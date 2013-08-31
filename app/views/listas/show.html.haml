@@ -7,12 +7,7 @@
                 locals: { imagenes: @versiones,
                           paginar: true }
     - else
-      %p
-        Esta lista está vacía.
-        - if @usuario == current_usuario
-          ¿Por qué no le
-          #{link_to 'agregás', edit_usuario_lista_path(@usuario, @lista)}
-          algunas cartas?
+      = lista_vacia
 
 - if can? :edit, @lista
   = link_to 'Editar', edit_usuario_lista_path(@usuario, @lista), class: 'btn'
