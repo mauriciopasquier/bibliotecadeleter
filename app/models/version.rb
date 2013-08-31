@@ -26,6 +26,17 @@ class Version < ActiveRecord::Base
   validates_presence_of :carta, inverse_of: :versiones
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
+  scope :demonios, where(supertipo: 'Demonio')
+  # TODO deja afuera a los que tienen supertipo: String ('') (debería ser nil?)
+  scope :normales, where('supertipo <> ?', 'Demonio')
+  scope :caos,    where(senda: 'Caos')
+  scope :locura,  where(senda: 'Locura')
+  scope :muerte,  where(senda: 'Muerte')
+  scope :poder,   where(senda: 'Poder')
+  scope :neutral, where(senda: 'Neutral')
+  def self.senda_y_neutrales(senda)
+    where(senda: [senda, 'Neutral'])
+  end
 
   # Devuelve el slot en el que esta versión está en la `lista`
   def slot_en(lista)
@@ -70,6 +81,10 @@ class Version < ActiveRecord::Base
 
   def nombre_y_expansion
     self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion.nombre})")
+  end
+
+  def demonio?
+    self.supertipo == 'Demonio'
   end
 
   private

@@ -8,6 +8,7 @@ class Lista < ActiveRecord::Base
   has_many :cartas, through: :versiones
 
   validates_uniqueness_of :nombre, scope: :usuario_id
+  validates_presence_of :nombre
 
   accepts_nested_attributes_for :slots, allow_destroy: true
 

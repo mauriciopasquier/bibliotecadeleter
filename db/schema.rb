@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821221122) do
+ActiveRecord::Schema.define(:version => 20130831173253) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20130821221122) do
     t.datetime "updated_at",                      :null => false
     t.boolean  "publica",    :default => true
     t.string   "type",       :default => "Lista"
+    t.text     "data"
   end
 
   create_table "slots", :force => true do |t|
