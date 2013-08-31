@@ -14,6 +14,7 @@ class Lista < ActiveRecord::Base
     reject_if: :all_blank
 
   scope :publicas, where(publica: true)
+  scope :recientes, order('updated_at desc').limit(10)
 
   %w{Coleccion Reserva Mazo Lista}.each do |tipo|
     define_method "#{tipo.downcase}?" do

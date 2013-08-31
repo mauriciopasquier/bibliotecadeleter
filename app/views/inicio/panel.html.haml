@@ -29,13 +29,13 @@
     .row-fluid
       .span4
         %h2 Listas
-        - usuario.listas.normales.each do |lista|
+        - usuario.listas.normales.recientes.each do |lista|
           .row-fluid.span12
             .pull-left= link_to lista.nombre, [usuario, lista]
             .pull-right= lista.cantidad
       .span4
         %h2 Mazos
-        - @usuario.mazos.each do |mazo|
+        - @usuario.mazos.recientes.each do |mazo|
           .row-fluid.span12
             .pull-left= link_to mazo.nombre, [usuario, mazo]
             .pull-right= mazo.cantidad
@@ -46,10 +46,13 @@
         - if can? :create, Lista
           = link_to 'Crear lista', new_usuario_lista_path(usuario),
             class: 'btn btn-success'
+          = link_to 'Ver todas', usuario_listas_path(@usuario), class: 'btn'
+
       .span4
         - if can? :create, Mazo
           = link_to 'Crear mazo', new_usuario_mazo_path(usuario),
             class: 'btn btn-success'
+          = link_to 'Ver todos', usuario_mazos_path(@usuario), class: 'btn'
 
 
 
