@@ -30,15 +30,12 @@ class MazosController < ApplicationController
   end
 
   def create
-    # awesome_nested_fields manda los nested con el nombre de la base
-    @mazo.update_attributes(params[:lista])
     @mazo.save
     respond_with(@usuario, @lista = @mazo)
   end
 
   def update
-    # awesome_nested_fields manda los nested con el nombre de la base
-    @mazo.update_attributes(params[:mazo].merge params[:lista])
+    @mazo.update_attributes(params[:mazo])
     respond_with(@usuario, @lista = @mazo)
   end
 
