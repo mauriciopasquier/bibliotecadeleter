@@ -10,7 +10,8 @@ class Lista < ActiveRecord::Base
   validates_uniqueness_of :nombre, scope: :usuario_id
   validates_presence_of :nombre
 
-  accepts_nested_attributes_for :slots, allow_destroy: true
+  accepts_nested_attributes_for :slots, allow_destroy: true,
+    reject_if: :all_blank
 
   scope :publicas, where(publica: true)
 
