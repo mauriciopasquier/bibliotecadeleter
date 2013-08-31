@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130831173253) do
+ActiveRecord::Schema.define(:version => 20130831201002) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -128,16 +128,16 @@ ActiveRecord::Schema.define(:version => 20130831173253) do
   add_index "usuarios", ["unlock_token"], :name => "index_usuarios_on_unlock_token", :unique => true
 
   create_table "versiones", :force => true do |t|
-    t.text     "texto",            :default => ""
-    t.string   "tipo",             :default => ""
-    t.string   "supertipo",        :default => ""
-    t.string   "subtipo",          :default => ""
+    t.text     "texto"
+    t.string   "tipo"
+    t.string   "supertipo"
+    t.string   "subtipo"
     t.string   "fue"
     t.string   "res"
-    t.string   "senda",            :default => ""
-    t.text     "ambientacion",     :default => ""
+    t.string   "senda"
+    t.text     "ambientacion"
     t.integer  "numero"
-    t.string   "rareza",           :default => ""
+    t.string   "rareza"
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
     t.integer  "carta_id"

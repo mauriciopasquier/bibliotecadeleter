@@ -18,6 +18,9 @@ class Version < ActiveRecord::Base
 
   friendly_id :expansion_y_numero, use: :slugged
 
+  normalize_attributes  :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
+                        :ambientacion, :rareza, :coste
+
   accepts_nested_attributes_for :imagenes, reject_if: :all_blank
 
   before_save :ver_si_es_canonica, :convertir_coste
