@@ -12,6 +12,10 @@ es:
           attributes:
             numero:
               no_es_unico_en_la_expansion: "debe ser único dentro de la expansión"
+        mazo:
+          attributes:
+            demonio:
+              falta_un_demonio: "debe tener un demonio"
 
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:

@@ -26,7 +26,7 @@ module ListasHelper
   end
 
   def nuevo_slot
-    Slot.new inventario: @lista, version: Version.new
+    Slot.new inventario_id: @lista.class.name, inventario: @lista, version: Version.new
   end
 
   # Para acceder al modelo decorado. Si es necesario no decorarlo, está la
@@ -37,12 +37,12 @@ module ListasHelper
 
   def lista_vacia
     content_tag :p do
-      p = 'Esta lista está vacía.'
+      p = 'No hay cartas en la lista.'
 
       if @usuario == current_usuario
         p << '¿Por qué no le '
         p << link_to('agregás', edit_usuario_lista_path(@usuario, @lista))
-        p << ' algunas cartas?'
+        p << ' algunas?'
       end
       p.html_safe
     end

@@ -1,0 +1,8 @@
+- cache mazo do
+  .row-fluid
+    .nombre.span10
+      - if can? :read, mazo
+        = link_to_mostrar [@usuario, mazo], mazo.nombre
+      - else
+        = mazo.nombre
+    .cantidad.span2= mazo.cantidad

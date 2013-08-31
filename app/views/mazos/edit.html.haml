@@ -1,0 +1,9 @@
+%h1= titulo
+
+= render 'form'
+
+= link_to 'Mostrar', [current_usuario, @mazo], class: 'btn'
+- if can? :delete, @mazo
+  = link_to 'Eliminar', [@usuario, @mazo], method: :delete,
+    data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
+= link_to 'Tus otros mazos', usuario_mazos_path(current_usuario), class: 'btn'

@@ -1,10 +1,20 @@
-= form_for [current_usuario, lista], html: { class: 'form lista' } do |f|
+= form_for [current_usuario, mazo], html: { class: 'form lista' } do |f|
   = f.error_messages
 
   .row-fluid
-    .span12
+    .span6
       = f.label :nombre
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
+    .span6
+      = f.label :formato
+      = f.text_field :formato, class: 'span12', required: true
+
+  .row-fluid
+    .span12
+      = f.label :demonio
+      = f.hidden_field :demonio_id, class: 'version_id'
+      = autocomplete_field_tag :demonio, f.object.demonio.try(:nombre_y_expansion),
+        autocompletar_nombre_cartas_path, class: 'span12 autocomplete-versiones'
 
   .row-fluid
     .span12.items
