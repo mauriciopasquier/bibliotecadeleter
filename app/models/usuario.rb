@@ -13,6 +13,7 @@ class Usuario < ActiveRecord::Base
 
   has_many :links, as: :linkeable, dependent: :destroy
   has_many :listas, dependent: :destroy
+  has_many :mazos, dependent: :destroy
   has_one :coleccion, dependent: :destroy
   has_one :reserva, dependent: :destroy
 
