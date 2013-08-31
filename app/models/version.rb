@@ -30,15 +30,14 @@ class Version < ActiveRecord::Base
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
   scope :demonios, where(supertipo: 'Demonio')
-  # TODO deja afuera a los que tienen supertipo: String ('') (debería ser nil?)
-  scope :normales, where('supertipo <> ?', 'Demonio')
   scope :caos,    where(senda: 'Caos')
   scope :locura,  where(senda: 'Locura')
   scope :muerte,  where(senda: 'Muerte')
   scope :poder,   where(senda: 'Poder')
   scope :neutral, where(senda: 'Neutral')
-  def self.senda_y_neutrales(senda)
-    where(senda: [senda, 'Neutral'])
+
+  def self.normales
+    where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
   end
 
   # Devuelve el slot en el que esta versión está en la `lista`
