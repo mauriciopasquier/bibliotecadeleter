@@ -29,17 +29,29 @@
     .row-fluid
       .span4
         %h2 Listas
-        - @usuario.listas.normales.each do |lista|
+        - usuario.listas.normales.each do |lista|
           .row-fluid.span12
             .pull-left= link_to lista.nombre, [usuario, lista]
             .pull-right= lista.cantidad
+      .span4
+        %h2 Mazos
+        - @usuario.mazos.each do |mazo|
+          .row-fluid.span12
+            .pull-left= link_to mazo.nombre, [usuario, mazo]
+            .pull-right= mazo.cantidad
 
-      -# TODO agregar las 2 columnas que faltan
+      -# TODO agregar la columna que falta
+    .row-fluid
+      .span4
+        - if can? :create, Lista
+          = link_to 'Crear lista', new_usuario_lista_path(usuario),
+            class: 'btn btn-success'
+      .span4
+        - if can? :create, Mazo
+          = link_to 'Crear mazo', new_usuario_mazo_path(usuario),
+            class: 'btn btn-success'
 
-    - if can? :create, Lista
-      .row-fluid
-        .span12= link_to 'Crear lista', new_usuario_lista_path(usuario),
-          class: 'btn btn-success'
+
 
   #carnet.tab-pane
     = render 'devise/shared/edit_registrations'
