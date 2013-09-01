@@ -1,0 +1,49 @@
+@import 'variables';
+
+#lista {
+  &.mazo {
+    .titulo-tipo {
+      margin-top: 1em;
+      margin-bottom: 0.2em;
+      font-weight: bold;
+    }
+    .slot {
+      min-height: 0px;
+      padding-left: 1em;
+    }
+  }
+}
+
+// Galería CSS con pseudoelemento :target inspirada en
+// https://hacks.mozilla.org/2012/02/a-simple-image-gallery-using-only-css-and-the-target-selector/
+#mazo {
+  .thumbs {
+    // Para que los contenidos puedan ser posicionados relativos a esto
+    position: relative;
+    overflow: hidden;
+    // Tamaño de galería acorde al máximo de ancho y máximo de alto de
+    // las cartas (verticales y horizontales)
+    width: 517px;
+    height: 517px;
+
+    .original {
+      position: absolute;
+      top: 0;
+      // Corrido fuera de la vista
+      left: -530px;
+      width: 517px;
+      height: 517px;
+
+      -webkit-transition: 1s;
+         -moz-transition: 1s;
+          -ms-transition: 1s;
+           -o-transition: 1s;
+              transition: 1s;
+
+      &:target {
+        // Justo dentro de la vista
+        left: 0;
+      }
+    }
+  }
+}

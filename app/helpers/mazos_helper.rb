@@ -17,5 +17,12 @@ module MazosHelper
     end
   end
 
+  def separador_por_tipo(version)
+    unless @ultimo == version.tipo
+      @ultimo = version.tipo
+      content_tag(:p, version.tipo, class: 'titulo-tipo')
+    end
+  end
+
   alias_method :mazo, :lista
 end
