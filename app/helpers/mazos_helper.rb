@@ -17,10 +17,10 @@ module MazosHelper
     end
   end
 
-  def separador_por_tipo(version)
-    unless @ultimo == version.tipo
-      @ultimo = version.tipo
-      content_tag(:p, version.tipo, class: 'titulo-tipo')
+  def separador_para(tipo)
+    unless @ultimo == tipo
+      @ultimo = tipo
+      content_tag(:p, tipo, class: 'titulo-tipo plegable')
     end
   end
 

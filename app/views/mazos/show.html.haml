@@ -1,25 +1,32 @@
 - cache mazo do
+  %h1= titulo
   .row-fluid
     #lista.mazo.span5
-      %h1= titulo
+
+      = separador_para 'Demonio'
+      .row-fluid
+        .slot.span12 #{link_to mazo.demonio.nombre, "##{mazo.demonio.carta.slug}"}
+
       - @mazo.versiones.contadas.order(:tipo).each do |v|
-        = separador_por_tipo v
+        = separador_para v.tipo.pluralize
         .row-fluid
           .slot.span12 #{v.cantidad} x #{link_to v.nombre, "##{v.carta.slug}"}
 
     #mazo.galeria.span7
       %ul.thumbs
+        %li.original{id: mazo.demonio.carta.slug}
+          = mazo.demonio.carta.decorate.link :original, data: no_turbolink
         - mazo.cartas.each do |c|
           %li.original{id: c.slug}
-            = c.link tipo_actual
-            - if usuario_signed_in?
-              -# TODO tratar de pasar siempre versiones o agregar al decorador
-              = c.reserva_y_coleccion if c.respond_to? :reserva_y_coleccion
+            = c.link :original, data: no_turbolink, class: 'entradas'
 
-  - if can? :edit, @mazo
-    = link_to 'Editar', edit_usuario_mazo_path(@usuario, @mazo), class: 'btn'
-  - if can? :delete, @mazo
-    = link_to 'Eliminar', [@usuario, @mazo], method: :delete,
-      data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
+  .row-fluid.botones
+    .span12
+      - if can? :edit, @mazo
+        = link_to 'Editar', edit_usuario_mazo_path(@usuario, @mazo),
+          class: 'btn btn-warning'
+      - if can? :delete, @mazo
+        = link_to 'Eliminar', [@usuario, @mazo], method: :delete,
+          data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
 
-  = link_to 'Otros mazos', usuario_mazos_path(@usuario), class: 'btn'
+      = link_to 'Otros mazos', usuario_mazos_path(@usuario), class: 'btn'
