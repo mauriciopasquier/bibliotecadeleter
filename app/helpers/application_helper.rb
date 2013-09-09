@@ -95,6 +95,11 @@ module ApplicationHelper
     Carta.ransack
   end
 
+  # data: no_turbolink
+  def no_turbolink
+    { 'no-turbolink' => true }
+  end
+
   private
 
     def alerta(tipo)
