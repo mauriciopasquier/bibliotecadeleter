@@ -45,16 +45,14 @@
       .span4
         - if can? :create, Lista
           = link_to 'Crear lista', new_usuario_lista_path(usuario),
-            class: 'btn btn-success'
+            class: 'btn btn-info'
           = link_to 'Ver todas', usuario_listas_path(@usuario), class: 'btn'
 
       .span4
         - if can? :create, Mazo
           = link_to 'Crear mazo', new_usuario_mazo_path(usuario),
-            class: 'btn btn-success'
+            class: 'btn btn-info'
           = link_to 'Ver todos', usuario_mazos_path(@usuario), class: 'btn'
-
-
 
   #carnet.tab-pane
     = render 'devise/shared/edit_registrations'

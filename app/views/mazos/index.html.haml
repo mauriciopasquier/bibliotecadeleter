@@ -10,6 +10,8 @@
 
     = render partial: 'mazo', collection: @mazos
 
-- if can? :create, Mazo
-  = link_to 'Crear un mazo', new_usuario_mazo_path(current_usuario),
-    class: 'btn btn-success', data: no_turbolink
+  .row-fluid.botones
+    .span12
+      - if can? :create, Mazo
+        = link_to 'Crear un mazo', new_usuario_mazo_path(current_usuario),
+          class: 'btn btn-info', data: no_turbolink

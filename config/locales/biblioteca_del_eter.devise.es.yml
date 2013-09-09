@@ -6,7 +6,7 @@ es:
           placeholder:    "No necesitamos tu nombre real :)"
         codigo:
           placeholder:    "El que usás para los torneos"
-          help:           "Nunca va a ser público, no te preocupes"
+          help:           "Código de país + documento de identidad"
       new:
         password:
           help:           "Una sugerencia..."
