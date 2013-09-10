@@ -66,10 +66,10 @@ class ApplicationController < ActionController::Base
     end
 
     def coleccion_actual
-      current_usuario.coleccion
+      current_usuario.try(:coleccion)
     end
 
     def reserva_actual
-      current_usuario.reserva
+      current_usuario.try(:reserva)
     end
 end

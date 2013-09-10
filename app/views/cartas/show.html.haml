@@ -9,17 +9,19 @@
         %ul.versiones.nav.nav-pills
           %li
             = link_to '.', '#', class: 'falso-pill'
-            .controles
-              .control-reserva
-                .control-texto= 'Quiero'
-              .control-coleccion
-                .control-texto= 'Tengo'
+            - if usuario_signed_in?
+              .controles
+                .control-reserva
+                  .control-texto= 'Quiero'
+                .control-coleccion
+                  .control-texto= 'Tengo'
           - carta.versiones.each do |v|
             %li
               = link_to "#{v.expansion}", en_expansion_carta_path(@carta, v.expansion)
-              .controles
-                = v.control(reserva_actual, '')
-                = v.control(coleccion_actual, '')
+              - if usuario_signed_in?
+                .controles
+                  = v.control(reserva_actual, '')
+                  = v.control(coleccion_actual, '')
 
       - if @version.links.any?
         .span12
