@@ -71,10 +71,10 @@ class CartasController < ApplicationController
   end
 
   # Redefinido para no pelear con rails3-jquery-autocomplete por el join
-  def autocomplete_carta_nombre
+  def autocomplete_carta_nombre(restricciones = nil)
     resultado = if (t = params[:term]).present?
-      # TODO filtrar por expansión
-      Carta.con_todo.where(
+      c = restricciones.present? ? Carta.con_todo.where(restricciones) : Carta.con_todo
+      c.where(
         Carta.arel_table[:nombre].matches("%#{params[:term]}%")
       )
     else
@@ -90,6 +90,10 @@ class CartasController < ApplicationController
     end
 
     render json: resultado
+  end
+
+  def autocomplete_demonio_nombre
+    autocomplete_carta_nombre(versiones: { supertipo: 'Demonio' })
   end
 
   private

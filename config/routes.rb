@@ -39,6 +39,7 @@ BibliotecaDelEter::Application.routes.draw do
       collection do
         match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
         get 'autocompletar_nombre'  => 'cartas#autocomplete_carta_nombre'
+        get 'autocompletar_demonios'  => 'cartas#autocomplete_demonio_nombre'
       end
 
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member

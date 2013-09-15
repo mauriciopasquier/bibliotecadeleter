@@ -11,5 +11,5 @@
     = f.hidden_field :version_id, class: 'version_id'
     = autocomplete_field_tag :nombre_y_expansion,
       f.object.decorate.preparar.nombre_y_expansion,
-      autocompletar_nombre_cartas_path,
+      defined?(path) ? path : autocompletar_nombre_cartas_path,
       class: 'span12 autocomplete-versiones'
