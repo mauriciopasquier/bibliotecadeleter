@@ -16,7 +16,7 @@ class Lista < ActiveRecord::Base
   scope :publicas, where(publica: true)
   scope :recientes, order('updated_at desc').limit(10)
 
-  %w{Coleccion Reserva Mazo Lista}.each do |tipo|
+  %w{Lista Coleccion Reserva Principal Suplente}.each do |tipo|
     define_method "#{tipo.downcase}?" do
       self.type == tipo
     end
@@ -32,5 +32,9 @@ class Lista < ActiveRecord::Base
   # Cantidad de cartas en la lista
   def cantidad
     self.slots.sum(:cantidad)
+  end
+
+  def uuid
+    [ self.usuario_id, self.id, self.type ].join('#')
   end
 end
