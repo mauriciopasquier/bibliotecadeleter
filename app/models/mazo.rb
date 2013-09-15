@@ -6,7 +6,8 @@ class Mazo < ActiveRecord::Base
 
   # 1 o 2 demonios según el formato
   has_many :slots, as: :inventario, dependent: :destroy
-  has_many :demonios, through: :slots, source: :version
+  has_many :demonios, through: :slots, source: :version,
+    conditions: { supertipo: 'Demonio' }
   # 1 principal con cantidad de cartas según el formato
   belongs_to :principal, inverse_of: :mazo, dependent: :destroy, touch: true
   # 1 suplente con cantidad de cartas según el formato

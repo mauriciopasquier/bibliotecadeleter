@@ -40,6 +40,7 @@ class Version < ActiveRecord::Base
     joins(:slots).select('versiones.*, slots.cantidad').group(
       'versiones.id, slots.cantidad')
   end
+  scope :contados, contadas
 
   def self.normales
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
@@ -80,10 +81,6 @@ class Version < ActiveRecord::Base
   amoeba do
     exclude_field :imagenes
     nullify [ :expansion_id, :slug, :numero ]
-  end
-
-  def self.todas_las_versiones
-    joins(:carta, :expansion).select('cartas.nombre as nombre, versiones.*')
   end
 
   def nombre_y_expansion

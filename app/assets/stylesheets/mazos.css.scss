@@ -1,15 +1,13 @@
 @import 'variables';
 
-#lista {
-  &.mazo {
-    .titulo-tipo {
-      margin-top: 1em;
-      margin-bottom: 0.2em;
-      font-weight: bold;
-    }
-    .slot {
-      min-height: 0px;
-      padding-left: 1em;
-    }
+#mazo {
+  .titulo-tipo {
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+  }
+  .slot {
+    min-height: 0px;
+    padding-left: 1em;
   }
 }
