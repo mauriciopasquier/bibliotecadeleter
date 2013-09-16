@@ -2,16 +2,25 @@ es:
   activerecord:
     models:
       coleccion: 'Colección'
+      principal: 'Mazo principal'
+      suplente: 'Mazo suplente'
     attributes:
       usuario:
         password_confirmation: 'Repetí el password'
         current_password: 'Tu password actual'
+      mazo:
+        principal: 'Mazo principal'
+        suplente: 'Mazo suplente'
     errors:
       models:
         version:
           attributes:
             numero:
               no_es_unico_en_la_expansion: "debe ser único dentro de la expansión"
+        mazo:
+          attributes:
+            demonio:
+              falta_un_demonio: "debe tener un demonio"
 
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:

@@ -16,4 +16,6 @@
     = render @cartas
 
   - if can? :create, Carta
-    = link_to 'Nueva Carta', new_carta_path, class: 'btn btn-success'
+    .row-fluid.botones
+      .span12
+        = link_to 'Nueva Carta', new_carta_path, class: 'btn btn-info'

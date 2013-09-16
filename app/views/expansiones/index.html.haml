@@ -13,6 +13,8 @@
 
     = render @expansiones
 
-  - if can? :create, Expansion
-    = link_to 'Cargar expansión', new_expansion_path,
-      class: 'btn btn-success'
+  .row-fluid.botones
+    .span12
+      - if can? :create, Expansion
+        = link_to 'Cargar expansión', new_expansion_path,
+          class: 'btn btn-info'

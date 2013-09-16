@@ -1,0 +1,15 @@
+= f.hidden_field :id
+.row-fluid
+  .span1.controles-anidados
+    = link_to '-', '#', class: 'hidden remove btn btn-danger', data: no_turbolink
+    = label_tag :_destroy do
+      = f.check_box :_destroy
+      remover
+  .span1
+    = f.text_field :cantidad, class: 'span12'
+  .span10
+    = f.hidden_field :version_id, class: 'version_id'
+    = autocomplete_field_tag label_autocompletar,
+      f.object.version.try(:send, label_autocompletar),
+      defined?(path) ? path : autocompletar_nombre_cartas_path,
+      class: 'span12 autocomplete-versiones'

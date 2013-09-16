@@ -39,6 +39,9 @@ BibliotecaDelEter::Application.routes.draw do
       collection do
         match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
         get 'autocompletar_nombre'  => 'cartas#autocomplete_carta_nombre'
+        get 'autocompletar_demonios'
+        get 'autocompletar_sendas'
+        get 'autocompletar_canonicas'
       end
 
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
@@ -71,6 +74,7 @@ BibliotecaDelEter::Application.routes.draw do
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
       resources :listas, path_names: femeninos
+      r.resources :mazos
     end
   end
 

@@ -1,0 +1,7 @@
+%h1= titulo
+
+= render 'form'
+
+.row-fluid.botones
+  .span12
+    = link_to 'Tus mazos', usuario_mazos_path(current_usuario), class: 'btn'

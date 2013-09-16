@@ -54,15 +54,15 @@ module ApplicationHelper
     end
   end
 
-  def link_to_editar(recurso)
+  def link_to_editar(recurso, texto = 'Editar')
     link_to recurso do
-      content_tag(:i, nil, class: 'icon-pencil') + 'Editar'
+      content_tag(:i, nil, class: 'icon-pencil') + texto
     end
   end
 
-  def link_to_eliminar(recurso)
+  def link_to_eliminar(recurso, texto = 'Eliminar')
     link_to recurso, method: :delete, data: { confirm: t(:confirmar) } do
-      content_tag(:i, nil, class: 'icon-remove-circle') + 'Eliminar'
+      content_tag(:i, nil, class: 'icon-remove-circle') + texto
     end
   end
 
@@ -93,6 +93,11 @@ module ApplicationHelper
 
   def barra_de_busqueda
     Carta.ransack
+  end
+
+  # data: no_turbolink
+  def no_turbolink
+    { 'no-turbolink' => true }
   end
 
   private

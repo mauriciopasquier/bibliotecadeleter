@@ -1,6 +1,14 @@
 href = (a, c) ->
   URI(a.href).setQuery('cantidad', c).toString()
 
+prepararNestedFields = ->
+  $('form.lista .nestear').nestedFields({
+    afterInsert: (item) ->
+      $(item).find('.controles-anidados').children().toggleClass('hidden')
+  })
+  # Si hay javascript oculta el checkbox y muestra el link remoto
+  $('.controles-anidados').children().toggleClass('hidden')
+
 # TODO testear que tenga siblings 'span.cantidad'
 $(document)
   .on 'ajax:success', '.update-listas', (evento, data, status, xhr) ->
@@ -15,9 +23,9 @@ $(document)
     # El controlador devuelve el hash con version_id explícitamente
     $(this).siblings('.version_id').val(data.item.version_id)
 
+$(document)
+  .on 'page:change', ->
+    prepararNestedFields()
+
 jQuery ->
-
-  $('form.lista').nestedFields()
-
-  # Si hay javascript oculta el checkbox y muestra el link remoto
-  $('.controles-anidados').children().toggleClass('hidden')
+  prepararNestedFields()

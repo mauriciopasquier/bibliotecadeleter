@@ -10,7 +10,7 @@ class Carta < ActiveRecord::Base
   friendly_id :nombre, use: :slugged
 
   has_many :versiones, order: 'created_at DESC',
-            dependent: :destroy, inverse_of: :carta
+            dependent: :destroy, inverse_of: :carta, include: :expansion
   has_many :imagenes, through: :versiones, order: 'created_at ASC'
   has_many :expansiones, through: :versiones
 
@@ -28,6 +28,11 @@ class Carta < ActiveRecord::Base
       'cartas.*, expansiones.nombre as expansion, versiones.id as version_id')
   end
 
+  def nombre_y_expansiones
+    self.nombre + " (#{self.expansiones.collect(&:nombre).join(', ')})"
+  end
+
+  # Funciona con el scope con_todo
   def nombre_y_expansion
     self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion})")
   end

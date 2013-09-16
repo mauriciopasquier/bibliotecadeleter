@@ -18,6 +18,9 @@ class Version < ActiveRecord::Base
 
   friendly_id :expansion_y_numero, use: :slugged
 
+  normalize_attributes  :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
+                        :ambientacion, :rareza, :coste
+
   accepts_nested_attributes_for :imagenes, reject_if: :all_blank
 
   before_save :ver_si_es_canonica, :convertir_coste
@@ -26,6 +29,24 @@ class Version < ActiveRecord::Base
   validates_presence_of :carta, inverse_of: :versiones
 
   scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
+  scope :demonios, where(supertipo: 'Demonio')
+  scope :caos,    where(senda: 'Caos')
+  scope :locura,  where(senda: 'Locura')
+  scope :muerte,  where(senda: 'Muerte')
+  scope :poder,   where(senda: 'Poder')
+  scope :neutral, where(senda: 'Neutral')
+
+  delegate :nombre_y_expansiones, to: :carta, allow_nil: true
+
+  def self.contadas
+    joins(:slots).select('versiones.*, slots.cantidad').group(
+      'versiones.id, slots.cantidad')
+  end
+  scope :contados, contadas
+
+  def self.normales
+    where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
+  end
 
   # Devuelve el slot en el que esta versión está en la `lista`
   def slot_en(lista)
@@ -64,12 +85,12 @@ class Version < ActiveRecord::Base
     nullify [ :expansion_id, :slug, :numero ]
   end
 
-  def self.todas_las_versiones
-    joins(:carta, :expansion).select('cartas.nombre as nombre, versiones.*')
+  def nombre_y_expansion
+    (self.nombre || '') + (self.expansion.nil? ? '' : " (#{self.expansion.nombre})")
   end
 
-  def nombre_y_expansion
-    self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion.nombre})")
+  def demonio?
+    self.supertipo == 'Demonio'
   end
 
   private
