@@ -10,7 +10,7 @@
           %li
             = link_to '.', '#', class: 'falso-pill'
             - if usuario_signed_in?
-              .controles
+              #falsos.controles
                 .control-reserva
                   .control-texto= 'Quiero'
                 .control-coleccion
@@ -19,7 +19,7 @@
             %li
               = link_to "#{v.expansion}", en_expansion_carta_path(@carta, v.expansion)
               - if usuario_signed_in?
-                .controles
+                .controles{id: v.expansion.slug}
                   = v.control(reserva_actual, '')
                   = v.control(coleccion_actual, '')
 

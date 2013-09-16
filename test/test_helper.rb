@@ -49,6 +49,9 @@ DatabaseCleaner.strategy = :truncation
 class Capybara::Rails::TestCase
   include ApplicationHelper
 
+  # Porque desarrollo en una torta
+  Capybara.default_wait_time = 15
+
   # Stop ActiveRecord from wrapping tests in transactions
   self.use_transactional_fixtures = false
 
@@ -83,4 +86,8 @@ end
 
 class Object
   include BibliotecaDelEter::Expectations
+end
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
