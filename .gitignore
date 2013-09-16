@@ -26,7 +26,8 @@ config/initializers/devise.rb
 # Ignoro las imágenes de paperclip hasta nuevo aviso
 public/cartas
 
-# Nunca commitear los usuarios
+# Nunca commitear nada de los usuarios
 db/semillas/usuarios.yml
 db/semillas/slots.yml
 db/semillas/listas.yml
+db/semillas/mazos.yml

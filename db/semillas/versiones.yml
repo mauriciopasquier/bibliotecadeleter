@@ -13471,3 +13471,125 @@ versiones:
     - 099-origen
     - '1'
     - '1'
+  - - '706'
+    - Estocada (cuando haga daño de combate a un demonio) - Cada demonio toma cartas
+      igual a la cantidad de aliados que controle.
+    - Aliado
+    - 
+    - Humano Rebelde
+    - '2'
+    - '3'
+    - Locura
+    - '"La maestría en la intimidación, es tan eficaz como en la espada."'
+    - '52'
+    - Infrecuente
+    - '2013-09-04 01:37:17.706997'
+    - '2013-09-04 01:37:17.852574'
+    - '629'
+    - true
+    - '16'
+    - 052-origen
+    - '3'
+    - '3'
+  - - '707'
+    - Vínculo {0} (cuando sea puesta en el infierno desde el mazo, puedes pagar su
+      coste de vínculo y exiliarla) - Busca en tu mazo un aliado y muéstralo. Mezcla
+      tu mazo y pon el aliado mostrado en la parte superior.
+    - Aliado
+    - 
+    - Humano Rebelde
+    - '3'
+    - '2'
+    - Neutral
+    - '"Toma un arma que el descanso terminó."'
+    - '144'
+    - Infrecuente
+    - '2013-09-04 01:40:08.956653'
+    - '2013-09-04 01:40:09.00156'
+    - '630'
+    - true
+    - '16'
+    - 144-origen
+    - '3'
+    - '3'
+  - - '708'
+    - 'Destruir Carga de estimulantes: Si controlas 5 o más aliados, tus aliados obtienen
+      furia hasta el final del turno (pueden atacar inmediatamente).'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - Fuego líquido inyectado directamente en la sangre.
+    - '14'
+    - Infrecuente
+    - '2013-09-16 18:52:56.656023'
+    - '2013-09-16 18:52:56.966757'
+    - '631'
+    - true
+    - '16'
+    - 014-origen
+    - '1'
+    - '1'
+  - - '709'
+    - "Mira la primera carta de tu mazo, puedes ponerla en el fondo de tu mazo.\r\nToma
+      una carta.\r\nRéplica {1} (cuando juegues esta carta, puedes jugar las copias
+      de tu inferno pagando su Réplica)."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '40'
+    - Infrecuente
+    - '2013-09-16 18:55:21.850184'
+    - '2013-09-16 18:55:21.865584'
+    - '632'
+    - true
+    - '16'
+    - 040-origen
+    - '1'
+    - '1'
+  - - '710'
+    - "Barahai de la manada obtiene +1 FUE y +1 RES por cada otro Barahai de la manada
+      que controles.\r\nRéplica {2} (cuando juegues esta carta, puedes jugar las copias
+      de tu inferno pagando su coste de Réplica)."
+    - Aliado
+    - 
+    - Barahai
+    - '2'
+    - '2'
+    - Poder
+    - '"Inseparables, invencibles, inmortales."'
+    - '95'
+    - Infrecuente
+    - '2013-09-16 18:57:46.633378'
+    - '2013-09-16 18:57:46.692223'
+    - '633'
+    - true
+    - '16'
+    - 095-origen
+    - '2'
+    - '2'
+  - - '711'
+    - 'Girar: Tu demonio hace 1 punto de daño al demonio objetivo.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - Solo el báculo se escucha entre las ruinas de la antigua citadela.
+    - '120'
+    - Infrecuente
+    - '2013-09-16 18:59:38.154562'
+    - '2013-09-16 18:59:38.183481'
+    - '121'
+    - false
+    - '16'
+    - 120-origen
+    - '2'
+    - '2'
