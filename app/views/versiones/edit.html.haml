@@ -4,5 +4,5 @@
 
 .row-fluid.botones
   .span12
-    = link_to 'Mostrar', [@carta, @version], class: 'btn'
-    = link_to 'Otras versiones', carta_versiones_path(@carta), class: 'btn'
+    = link_to 'Mostrar', en_expansion_carta_path(@carta, @version.expansion), class: 'btn'
+    = link_to 'Cartas', cartas_path, class: 'btn'

@@ -28,7 +28,7 @@ module VersionesHelper
     end
   end
 
-  # Deshabilita nombre el form de versiones
+  # Deshabilitar campos en el form de cartas para versiones
   def disabled?
     true
   end
