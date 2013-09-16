@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Slot < ActiveRecord::Base
-  attr_accessible :version, :inventario, :inventario_id, :cantidad, :version_id
+  attr_accessible :version, :inventario, :inventario_id, :inventario_type,
+    :cantidad, :version_id
 
   belongs_to :version
   belongs_to :inventario, polymorphic: true
@@ -9,6 +10,11 @@ class Slot < ActiveRecord::Base
   # demás
   def self.menos(otra)
     select("version_id, sum(#{negar(otra)}) as cantidad").group(:version_id)
+  end
+
+  # asociaciones polimórficas con STI
+  def inventario_type=(tipo)
+     super(tipo.to_s.classify.constantize.base_class.to_s)
   end
 
   private

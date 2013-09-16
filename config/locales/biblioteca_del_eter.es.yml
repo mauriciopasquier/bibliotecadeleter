@@ -2,10 +2,15 @@ es:
   activerecord:
     models:
       coleccion: 'Colección'
+      principal: 'Mazo principal'
+      suplente: 'Mazo suplente'
     attributes:
       usuario:
         password_confirmation: 'Repetí el password'
         current_password: 'Tu password actual'
+      mazo:
+        principal: 'Mazo principal'
+        suplente: 'Mazo suplente'
     errors:
       models:
         version:

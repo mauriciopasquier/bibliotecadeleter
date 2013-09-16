@@ -36,6 +36,8 @@ class Version < ActiveRecord::Base
   scope :poder,   where(senda: 'Poder')
   scope :neutral, where(senda: 'Neutral')
 
+  delegate :nombre_y_expansiones, to: :carta, allow_nil: true
+
   def self.contadas
     joins(:slots).select('versiones.*, slots.cantidad').group(
       'versiones.id, slots.cantidad')
@@ -84,7 +86,7 @@ class Version < ActiveRecord::Base
   end
 
   def nombre_y_expansion
-    self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion.nombre})")
+    (self.nombre || '') + (self.expansion.nil? ? '' : " (#{self.expansion.nombre})")
   end
 
   def demonio?

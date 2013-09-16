@@ -13,35 +13,35 @@ class MazosController < ApplicationController
     @busqueda = apply_scopes(@mazos.unscoped)
     @mazos = PaginadorDecorator.decorate @busqueda.result
 
-    respond_with(@listas = @mazos)
+    respond_with(@mazos)
   end
 
   def show
     @versiones = PaginadorDecorator.decorate apply_scopes(@mazo.versiones)
-    respond_with(@usuario, @lista = @mazo)
+    respond_with(@usuario, @mazo)
   end
 
   def new
-    respond_with(@usuario, @lista = @mazo)
+    respond_with(@usuario, @mazo)
   end
 
   def edit
-    respond_with(@usuario, @lista = @mazo)
+    respond_with(@usuario, @mazo)
   end
 
   def create
     @mazo.save
-    respond_with(@usuario, @lista = @mazo)
+    respond_with(@usuario, @mazo)
   end
 
   def update
     @mazo.update_attributes(params[:mazo])
-    respond_with(@usuario, @lista = @mazo)
+    respond_with(@usuario, @mazo)
   end
 
   def destroy
     @mazo.destroy
-    respond_with(@usuario, @lista = @mazo)
+    respond_with(@usuario, @mazo)
   end
 
 

@@ -1,6 +1,6 @@
 # encoding: utf-8
 module MazosHelper
-  include ListasHelper
+  include PaginacionHelper
 
   def titulo
     case params[:action]
@@ -24,5 +24,18 @@ module MazosHelper
     end
   end
 
-  alias_method :mazo, :lista
+  def nuevo_slot(inventario)
+    Slot.new( version: Version.new,
+              inventario_id: inventario.id,
+              inventario_type: inventario.class.name,
+              cantidad: 4 )
+  end
+
+  def mazo
+    @decorator ||= @mazo.decorate
+  end
+
+  def label_autocompletar
+    :nombre_y_expansiones
+  end
 end

@@ -1,4 +1,4 @@
-= form_for [current_usuario, mazo], html: { class: 'form lista' } do |f|
+= form_for [current_usuario, mazo.preparar], html: { class: 'form lista' } do |f|
   = f.error_messages
 
   .row-fluid
@@ -9,25 +9,66 @@
       = f.label :formato
       = f.text_field :formato, class: 'span12', required: true
 
+  .nestear
+    .row-fluid
+      .span12.items
+        = f.label :demonios
+        = f.nested_fields_for :slots, new_object: nuevo_slot(@mazo),
+          show_empty: true, render_template: false do |fs|
+          - if fs
+            .item= render partial: 'slots/slot',
+              locals: { f: fs, path: autocompletar_demonios_cartas_path }
+          - else
+            .empty Nada cargado
+
+        = nested_fields_templates
+
+    .row-fluid
+      .span1
+        = link_to '+', '#', class: 'add btn', data: no_turbolink
+
   .row-fluid
     .span12
-      = f.label :demonio
-      = f.hidden_field :demonio_id, class: 'version_id'
-      = autocomplete_field_tag :demonio, f.object.demonio.try(:nombre_y_expansion),
-        autocompletar_nombre_cartas_path, class: 'span12 autocomplete-versiones'
+      = f.label :principal
+      = f.fields_for :principal do |fp|
+        .nestear
+          .row-fluid
+            .span12.items
+              = fp.nested_fields_for :slots, new_object: nuevo_slot(@mazo.principal),
+                  show_empty: true, render_template: false do |fps|
+                - if fps
+                  .item= render partial: 'slots/slot',
+                    locals: { f: fps, path: autocompletar_canonicas_cartas_path }
+                - else
+                  .empty Nada cargado
+
+              = nested_fields_templates
+
+          .row-fluid
+            .span1
+              = link_to '+', '#', class: 'add btn', data: no_turbolink
 
   .row-fluid
-    .span12.items
-      = f.nested_fields_for :slots, new_object: nuevo_slot, show_empty: true, render_template: false do |fs|
-        - if fs
-          .item= render partial: 'slots/slot', locals: { f: fs }
-        - else
-          .empty Nada cargado
+    .span12
+      = f.label :suplente
+      = f.fields_for :suplente do |fs|
+        .nestear
+          .row-fluid
+            .span12.items
+              = fs.nested_fields_for :slots, new_object: nuevo_slot(@mazo.suplente),
+                  show_empty: true, render_template: false do |fss|
+                - if fss
+                  .item= render partial: 'slots/slot',
+                    locals: { f: fss, path: autocompletar_canonicas_cartas_path }
+                - else
+                  .empty Nada cargado
 
-      = nested_fields_templates
+              = nested_fields_templates
 
-  .row-fluid
-    .span1
-      = link_to '+', '#', class: 'add btn', data: no_turbolink
-    .span11
+          .row-fluid
+            .span1
+              = link_to '+', '#', class: 'add btn', data: no_turbolink
+
+  .row-fluid.botones
+    .span12
       = f.submit 'Guardar', class: 'btn btn-success'

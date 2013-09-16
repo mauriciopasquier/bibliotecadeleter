@@ -71,9 +71,12 @@ class CartasController < ApplicationController
   end
 
   # Redefinido para no pelear con rails3-jquery-autocomplete por el join
-  def autocomplete_carta_nombre(restricciones = nil)
+  def autocomplete_carta_nombre(restricciones = nil, metodo = nil)
+    metodo ||= :nombre_y_expansion
+
     resultado = if (t = params[:term]).present?
-      c = restricciones.present? ? Carta.con_todo.where(restricciones) : Carta.con_todo
+      c = Carta.con_todo
+      c = restricciones.present? ? c.where(restricciones) : c
       c.where(
         Carta.arel_table[:nombre].matches("%#{params[:term]}%")
       )
@@ -81,9 +84,9 @@ class CartasController < ApplicationController
       modelo.none
     end.inject({}) do |hash, elem|
       # Hash de id: value
-      hash[elem.nombre_y_expansion] = {
-        label: elem.nombre_y_expansion,
-        value: elem.nombre_y_expansion,
+      hash[elem.send(metodo)] = {
+        label: elem.send(metodo),
+        value: elem.send(metodo),
         version_id: elem.version_id
       }
       hash
@@ -92,8 +95,20 @@ class CartasController < ApplicationController
     render json: resultado
   end
 
-  def autocomplete_demonio_nombre
+  def autocompletar_canonicas
+    autocomplete_carta_nombre(
+      { versiones: { canonica: true } },
+      :nombre_y_expansiones)
+  end
+
+  def autocompletar_demonios
     autocomplete_carta_nombre(versiones: { supertipo: 'Demonio' })
+  end
+
+  def autocompletar_sendas
+    autocomplete_carta_nombre(versiones: {
+      senda: [ params[:senda].capitalize, 'Neutral' ]
+    })
   end
 
   private

@@ -26,7 +26,10 @@ module ListasHelper
   end
 
   def nuevo_slot
-    Slot.new inventario_id: @lista.class.name, inventario: @lista, version: Version.new
+    Slot.new( inventario_id: @lista.id,
+              inventario_type: @lista.class.name,
+              version: Version.new,
+              cantidad: 1)
   end
 
   # Para acceder al modelo decorado. Si es necesario no decorarlo, está la
@@ -46,5 +49,9 @@ module ListasHelper
       end
       p.html_safe
     end
+  end
+
+  def label_autocompletar
+    :nombre_y_expansion
   end
 end

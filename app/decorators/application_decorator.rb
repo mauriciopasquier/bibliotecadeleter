@@ -27,6 +27,7 @@ class ApplicationDecorator < Draper::Decorator
   end
 
   # Interfaz común para preparar nuevos objetos con las asociaciones necesarias
+  # AlgoDecorator.preparar devuelve un nuevo Algo decorado y preparado
   def self.preparar
     self.new(object_class.new).preparar
   end
