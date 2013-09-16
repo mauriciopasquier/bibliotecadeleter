@@ -6,18 +6,22 @@
       = f.label :nombre
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
 
-  .row-fluid
-    .span12.items
-      = f.nested_fields_for :slots, new_object: nuevo_slot, show_empty: true, render_template: false do |fs|
-        - if fs
-          .item= render partial: 'slots/slot', locals: { f: fs }
-        - else
-          .empty Nada cargado
+  .nestear
+    .row-fluid
+      .span12.items
+        = f.nested_fields_for :slots, new_object: nuevo_slot, show_empty: true,
+          render_template: false do |fs|
+          - if fs
+            .item= render partial: 'slots/slot', locals: { f: fs }
+          - else
+            .empty Nada cargado
 
-      = nested_fields_templates
+        = nested_fields_templates
 
-  .row-fluid
-    .span1
-      = link_to '+', '#', class: 'add btn', data: no_turbolink
-    .span11
+    .row-fluid
+      .span1
+        = link_to '+', '#', class: 'add btn', data: no_turbolink
+
+  .row-fluid.botones
+    .span12
       = f.submit 'Guardar', class: 'btn btn-success'

@@ -2,7 +2,7 @@ href = (a, c) ->
   URI(a.href).setQuery('cantidad', c).toString()
 
 prepararNestedFields = ->
-  $('form.lista').nestedFields({
+  $('form.lista .nestear').nestedFields({
     afterInsert: (item) ->
       $(item).find('.controles-anidados').children().toggleClass('hidden')
   })
