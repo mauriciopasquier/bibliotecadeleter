@@ -129,6 +129,11 @@ class VersionDecorator < ApplicationDecorator
     end
   end
 
+  def preparar
+    object.imagenes.any? || object.imagenes.build
+    self
+  end
+
   private
 
     def cantidad_en(lista)
