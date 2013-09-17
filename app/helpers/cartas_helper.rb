@@ -37,7 +37,7 @@ module CartasHelper
     else
       @version = @carta.versiones.build
       2.times { @version.imagenes.build }
-      @version
+      @version = @version.decorate
     end
   end
 
@@ -73,5 +73,4 @@ module CartasHelper
         true
       end
     end
-
 end

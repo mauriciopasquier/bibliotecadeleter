@@ -33,7 +33,7 @@ BibliotecaDelEter::Application.routes.draw do
     end
     r.resource :reserva,    except: [ :create, :destroy, :new ]
 
-    r.resources :cartas do
+    r.resources :cartas, except: [ :edit ] do
       r.resources :versiones, only: [ :new, :edit, :destroy ]
 
       collection do

@@ -12,7 +12,7 @@ class CartasController < ApplicationController
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
 
-  before_filter :cargar_version, only: [:show]
+  before_filter :cargar_version, only: :show
   before_filter :check_espia
   before_filter :check_barra_de_busqueda, only: :buscar
 
@@ -27,10 +27,6 @@ class CartasController < ApplicationController
   end
 
   def new
-    respond_with(@carta)
-  end
-
-  def edit
     respond_with(@carta)
   end
 
