@@ -2,9 +2,6 @@
 class Version < ActiveRecord::Base
   include FriendlyId
 
-  attr_accessible :ambientacion, :coste, :fue, :numero, :rareza, :res, :senda,
-                  :subtipo, :supertipo, :texto, :tipo, :canonica, :carta,
-                  :imagenes_attributes, :expansion, :expansion_id, :imagen
   attr_readonly   :coste_convertido
 
   belongs_to :carta, inverse_of: :versiones, touch: true

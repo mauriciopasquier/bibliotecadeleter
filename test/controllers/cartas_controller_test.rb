@@ -45,17 +45,6 @@ describe CartasController do
     assigns(:version).must_equal version
   end
 
-  it "debe acceder a edit si tiene permisos" do
-    loguearse
-    autorizar { get :edit, id: create(:carta) }
-    assert_response :success
-  end
-
-  it "no debe acceder a edit anónimamente" do
-    get :edit, id: create(:carta)
-    assert_redirected_to :root
-  end
-
   it "debe actualizar una carta si tiene permisos" do
     loguearse
     version = create(:version_con_carta)
@@ -64,7 +53,7 @@ describe CartasController do
     atributos_version = attributes_for(:version, id: version.id)
     autorizar do
       put :update, id: carta,
-        carta: atributos_carta.merge(versiones_attributes: {0 => atributos_version })
+        carta: atributos_carta.merge(versiones_attributes: {'0' => atributos_version })
     end
     assert_redirected_to carta_path(assigns(:carta))
 
@@ -83,7 +72,6 @@ describe CartasController do
     assert_equal atributos_version[:numero], version.numero, "No actualiza el numero"
     assert_equal atributos_version[:rareza], version.rareza, "No actualiza la rareza"
     assert_equal atributos_version[:coste], version.coste, "No actualiza el coste"
-    assert_equal atributos_version[:canonica], version.canonica, "No actualiza si es canonica"
   end
 
   it "no debe actualizar una carta anónimamente" do

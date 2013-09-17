@@ -2,7 +2,6 @@
 class Artista < ActiveRecord::Base
   include FriendlyId
 
-  attr_accessible :nombre
   has_and_belongs_to_many :ilustraciones, class_name: 'Imagen'
   has_many :cartas, through: :ilustraciones
   has_many :versiones, through: :ilustraciones

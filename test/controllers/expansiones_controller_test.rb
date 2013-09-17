@@ -66,6 +66,7 @@ describe ExpansionesController do
     assert_equal atributos[:presentacion], expansion.presentacion,
       "No actualiza la fecha de presentacion"
     assert_equal atributos[:saga], expansion.saga, "No actualiza la saga"
+    # TODO revisar esto
     assert_equal ({'at' => 'at'}), expansion.notas, "No actualiza las notas"
   end
 

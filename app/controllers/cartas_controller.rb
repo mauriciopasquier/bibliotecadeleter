@@ -8,10 +8,12 @@ class CartasController < ApplicationController
 
   ANONS = [ :autocomplete_carta_nombre ]
 
+  # TODO sacar cuando cancan contemple strong_parameters
+  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
 
-  before_filter :cargar_version, only: [:show]
+  before_filter :cargar_version, only: :show
   before_filter :check_espia
   before_filter :check_barra_de_busqueda, only: :buscar
 
@@ -29,17 +31,13 @@ class CartasController < ApplicationController
     respond_with(@carta)
   end
 
-  def edit
-    respond_with(@carta)
-  end
-
   def create
     @carta.save
     respond_with(@carta)
   end
 
   def update
-    @carta.update_attributes(params[:carta])
+    @carta.update_attributes(parametros_permitidos)
     respond_with(@carta)
   end
 
@@ -135,5 +133,22 @@ class CartasController < ApplicationController
       else
         @carta.canonica
       end
+    end
+
+    def cargar_recurso
+      @carta = Carta.new(parametros_permitidos)
+    end
+
+    def parametros_permitidos
+      params.require(:carta).permit(
+        :nombre,
+        versiones_attributes: [
+          :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
+          :ambientacion, :numero, :rareza, :coste, :id, :_destroy,
+          :expansion_id, imagenes_attributes: [
+            :arte, :archivo
+          ]
+        ]
+      )
     end
 end

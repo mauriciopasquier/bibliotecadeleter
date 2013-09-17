@@ -1,7 +1,5 @@
 # encoding: utf-8
 class Lista < ActiveRecord::Base
-  attr_accessible :nombre, :slots_attributes, :publica
-
   belongs_to :usuario
   has_many :slots, as: :inventario, include: :version
   has_many :versiones, through: :slots

@@ -2,8 +2,6 @@
 class Carta < ActiveRecord::Base
   include FriendlyId
 
-  attr_accessible :nombre, :versiones_attributes
-
   has_one :canonica,  class_name: 'Version', conditions: { canonica: true },
                       dependent: :destroy
 
@@ -20,6 +18,7 @@ class Carta < ActiveRecord::Base
   accepts_nested_attributes_for :versiones, allow_destroy: true
 
   validates_uniqueness_of :nombre
+  validates_presence_of :nombre
 
   delegate :prioridad, to: :canonica
 

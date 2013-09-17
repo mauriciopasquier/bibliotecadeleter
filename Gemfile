@@ -28,6 +28,8 @@ gem 'awesome_nested_fields'
 # Controller
 gem 'responders'
 gem 'has_scope'
+# TODO sacar con rails 4
+gem 'strong_parameters'
 
 # Server
 gem 'thin'

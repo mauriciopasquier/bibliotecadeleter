@@ -6,7 +6,7 @@ describe Imagen do
     build_stubbed(:imagen).valid?.must_equal true
   end
 
-  it "toca a los artistas es asociada" do
+  it "toca a los artistas a los que es asociada" do
     artista, imagen = create(:artista), create(:imagen)
 
     imagen.arte = artista.nombre

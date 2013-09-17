@@ -1,7 +1,5 @@
 # encoding: utf-8
 class Imagen < ActiveRecord::Base
-  attr_accessible :archivo, :arte
-
   belongs_to :version, touch: true
   has_one :carta, through: :version
   has_one :expansion, through: :version

@@ -258,6 +258,10 @@ GEM
       activerecord (>= 3.0)
       activesupport (>= 3.0)
       polyamorous (~> 0.6.0)
+    strong_parameters (0.2.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+      railties (~> 3.0)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
@@ -336,6 +340,7 @@ DEPENDENCIES
   selenium-webdriver
   sitemap
   squeel
+  strong_parameters
   therubyracer
   thin
   turbolinks

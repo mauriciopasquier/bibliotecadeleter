@@ -65,7 +65,7 @@ BibliotecaDelEter::Application.routes.draw do
   end
 
   with_options path_names: masculinos do |r|
-    r.resources :artistas do
+    r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ] do
       collection do
         get 'autocompletar_nombre'  => 'artistas#autocomplete_artista_nombre'
       end

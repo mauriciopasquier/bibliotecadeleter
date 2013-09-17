@@ -1,8 +1,5 @@
 # encoding: utf-8
 class Mazo < ActiveRecord::Base
-  attr_accessible :nombre, :slots_attributes, :formato, :principal_attributes,
-    :suplente_attributes
-
   belongs_to :usuario
 
   # 1 o 2 demonios según el formato
