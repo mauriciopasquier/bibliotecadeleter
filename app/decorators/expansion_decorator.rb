@@ -5,8 +5,8 @@ class ExpansionDecorator < ApplicationDecorator
     d.decorates_association :imagenes
   end
 
-  def notas
-    hash_a_dl object.notas, dl: 'notas dl-horizontal'
+  def notas_con_formato
+    Kramdown::Document.new(object.notas).to_html.html_safe
   end
 
   def to_s

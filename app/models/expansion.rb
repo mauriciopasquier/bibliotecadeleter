@@ -1,7 +1,6 @@
 # encoding: utf-8
 class Expansion < ActiveRecord::Base
   include FriendlyId
-  serialize :notas, HashWithIndifferentAccess
 
   has_many :versiones, order: 'slug ASC', dependent: :destroy
   has_many :cartas, through: :versiones

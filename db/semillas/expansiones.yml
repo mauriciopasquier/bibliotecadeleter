@@ -17,200 +17,142 @@ expansiones:
     - Despertar
     - '2011-02-07'
     - '2011-02-05'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      diseño_y_desarrollo:
-      - Guillermo Fernández
-      - Nicolás Fernández
-      - Daniel Fernández
-      - Germán Moltó
-      - Gonzalo Prado
-      diseño_gráfico:
-      - Verónica Vallejos
+    - "Diseño y desarrollo\r\n: Guillermo Fernández\r\n: Nicolás Fernández\r\n: Daniel
+      Fernández\r\n: Germán Moltó\r\n: Gonzalo Prado\r\n\r\nDiseño gráfico\r\n: Verónica
+      Vallejos\r\n"
     - 
     - '184'
     - '2013-02-19 17:49:23.87118'
-    - '2013-08-24 17:42:13.077555'
+    - '2013-09-17 22:28:26.183174'
     - despertar
   - - '2'
     - Promocionales Despertar
     - '2011-02-07'
     - '2011-02-05'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      diseño_y_desarrollo:
-      - Guillermo Fernández
-      - Nicolás Fernández
-      - Daniel Fernández
-      - Germán Moltó
-      - Gonzalo Prado
-      diseño_gráfico:
-      - Verónica Vallejos
+    - "Concepto\r\n: Versiones especiales (e.g. full art) de cartas de Despertar"
     - 
     - '4'
     - '2013-02-19 17:49:23.902218'
-    - '2013-08-24 17:42:00.361565'
+    - '2013-09-17 22:44:25.218106'
     - promocionales-despertar
   - - '3'
     - Insania
     - '2011-08-02'
     - '2011-07-29'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      diseño_y_desarrollo:
-      - Guillermo Fernández
-      - Nicolás Fernández
-      - Daniel Fernández
-      - Juan Torrecilla
-      dirección_de_arte:
-      - Germán Nóbile
-      diseño_gráfico:
-      - Verónica Vallejos
+    - "Diseño y desarrollo\r\n: Guillermo Fernández\r\n: Nicolás Fernández\r\n: Daniel
+      Fernández\r\n: Juan Torrecilla\r\n\r\nDirección de arte\r\n: Germán Nóbile\r\n\r\nDiseño
+      gráfico\r\n: Verónica Vallejos"
     - Crónicas de Ubanna
     - '184'
     - '2013-02-19 17:49:23.920551'
-    - '2013-09-17 05:47:47.955899'
+    - '2013-09-17 22:31:49.908681'
     - insania
   - - '4'
     - Promocionales Insania
     - '2011-08-02'
     - '2011-07-29'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      diseño_y_desarrollo:
-      - Guillermo Fernández
-      - Nicolás Fernández
-      - Daniel Fernández
-      - Juan Torrecilla
-      dirección_de_arte:
-      - Germán Nóbile
-      diseño_gráfico:
-      - Verónica Vallejos
+    - "Concepto\r\n: Versiones especiales (e.g. full art) de cartas de Insania"
     - Crónicas de Ubanna
     - '6'
     - '2013-02-19 17:49:23.938586'
-    - '2013-09-17 05:47:26.207288'
+    - '2013-09-17 22:45:25.202374'
     - promocionales-insania
   - - '5'
     - Conquista
     - '2012-05-07'
     - '2012-05-05'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      diseño_y_desarrollo:
-      - Daniel Fernández
-      - Guillermo Fernández
-      - Nicolás Fernández
-      - Juan Torrecilla
-      dirección_de_arte:
-      - Germán Nóbile
-      diseño_gráfico:
-      - Verónica Vallejos
+    - "Diseño y desarrollo\r\n: Daniel Fernández\r\n: Guillermo Fernández\r\n: Nicolás
+      Fernández\r\n: Juan Torrecilla\r\n\r\nDirección de arte\r\n: Germán Nóbile\r\n\r\nDiseño
+      gráfico\r\n: Verónica Vallejos\r\n"
     - Crónicas de Ubanna
     - '124'
     - '2013-02-19 17:49:23.95676'
-    - '2013-08-24 17:42:13.298877'
+    - '2013-09-17 22:29:21.368615'
     - conquista
   - - '6'
     - Promocionales Conquista
     - '2012-05-07'
     - '2012-05-05'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      diseño_y_desarrollo:
-      - Daniel Fernández
-      - Guillermo Fernández
-      - Nicolás Fernández
-      - Juan Torrecilla
-      dirección_de_arte:
-      - Germán Nóbile
-      diseño_gráfico:
-      - Verónica Vallejos
+    - "Concepto\r\n: Versiones especiales (e.g. full art) de cartas de Conquista"
     - Crónicas de Ubanna
     - '6'
     - '2013-02-19 17:49:23.97459'
-    - '2013-08-24 17:42:12.202312'
+    - '2013-09-17 22:44:01.97304'
     - promocionales-conquista
   - - '7'
     - PIP Conquista
     - '2012-10-01'
     - 
-    - "--- \n...\n"
+    - "Concepto\r\n: Los jugadores pueden intercambiar sobres vacíos, por cartas promocionales
+      únicas de cada edición."
     - Crónicas de Ubanna
     - '8'
     - '2013-02-19 17:49:23.993343'
-    - '2013-08-24 17:42:09.811509'
+    - '2013-09-17 22:38:42.574894'
     - pip-conquista
   - - '8'
     - Destino
     - '2013-03-18'
     - '2013-03-16'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      diseño_y_desarrollo:
-      - Nahuel Nasillo
-      - Nicolás Fernández
-      diseño_gráfico:
-      - Verónica Vallejos
+    - "Diseño y desarrollo\r\n: Nahuel Nasillo\r\n: Nicolás Fernández\r\n\r\nDiseño
+      gráfico\r\n: Verónica Vallejos\r\n"
     - Crónicas de Ubanna
     - '124'
     - '2013-02-19 17:49:24.010427'
-    - '2013-08-24 17:42:14.02974'
+    - '2013-09-17 22:29:54.761476'
     - destino
   - - '12'
     - Esenciales
     - '2013-07-01'
     - '2013-07-01'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-      concepto: 25 cartas neutrales en arte extendido. Una selección de las cartas más populares
-        y usadas en torneos.
+    - "Concepto\r\n: 25 cartas neutrales en arte extendido. Una selección de las cartas
+      más populares y usadas en torneos.\r\n"
     - 
     - '25'
     - '2013-08-23 04:46:28.36553'
-    - '2013-08-24 17:42:14.614649'
+    - '2013-09-17 22:30:31.653343'
     - esenciales
   - - '13'
     - PIP Destino
     - '2013-06-17'
     - 
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - "Concepto\r\n: Los jugadores pueden intercambiar sobres vacíos, por cartas promocionales
+      únicas de cada edición."
     - Crónicas de Ubanna
     - '8'
     - '2013-08-23 16:26:08.298393'
-    - '2013-08-24 17:42:14.806793'
+    - '2013-09-17 22:38:27.292556'
     - pip-destino
   - - '14'
     - Promocionales Destino
     - '2013-03-18'
     - '2013-03-16'
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - "Concepto\r\n: Versiones especiales (e.g. full art, arte alternativo) de cartas
+      de Destino"
     - Crónicas de Ubanna
     - '2'
     - '2013-08-23 17:10:03.666477'
-    - '2013-08-24 17:42:14.85121'
+    - '2013-09-17 22:44:59.387502'
     - promocionales-destino
   - - '15'
     - Hadouken
     - '2013-08-17'
     - 
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - "Concepto\r\n: Promocional entregada a los participantes del Nacional 2013,
+      en Córdoba\r\n"
     - 
     - '1'
     - '2013-08-23 17:15:55.105792'
-    - '2013-08-24 17:42:14.873851'
+    - '2013-09-17 22:31:10.186093'
     - hadouken
   - - '16'
     - Origen
-    - 
-    - 
-    - |
-      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess {}
+    - '2013-10-21'
+    - '2013-10-19'
+    - "Diseño y desarrollo\r\n: Rodrigo Ali\r\n: Nicolás Fernández\r\n: Nahuel Nasillo\r\n:
+      Luis Rajcan\r\n\r\nDiseño gráfico\r\n: Verónica Vallejos"
     - 
     - '152'
     - '2013-08-23 17:31:03.682928'
-    - '2013-09-16 18:59:38.27687'
+    - '2013-09-17 22:41:04.010973'
     - origen

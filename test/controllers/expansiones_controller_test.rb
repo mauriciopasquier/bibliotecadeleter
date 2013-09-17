@@ -55,7 +55,7 @@ describe ExpansionesController do
   it "debe actualizar una expansión si tiene permisos" do
     loguearse
     expansion = create(:expansion)
-    atributos = attributes_for(:expansion, notas: 'at: at')
+    atributos = attributes_for(:expansion)
     autorizar { put :update, id: expansion, expansion: atributos }
     assert_redirected_to expansion_path(assigns(:expansion))
     expansion.reload
@@ -66,8 +66,7 @@ describe ExpansionesController do
     assert_equal atributos[:presentacion], expansion.presentacion,
       "No actualiza la fecha de presentacion"
     assert_equal atributos[:saga], expansion.saga, "No actualiza la saga"
-    # TODO revisar esto
-    assert_equal ({'at' => 'at'}), expansion.notas, "No actualiza las notas"
+    assert_equal atributos[:notas], expansion.notas, "No actualiza las notas"
   end
 
   it "no debe actualizar una expansión anónimamente" do

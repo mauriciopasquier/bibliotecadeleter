@@ -1,6 +1,4 @@
 # encoding: utf-8
-require "yaml"
-
 class ExpansionesController < ApplicationController
   autocomplete :expansion, :nombre, full: true
   autocompletar_columnas :saga
@@ -15,8 +13,6 @@ class ExpansionesController < ApplicationController
   before_filter :cargar_recurso, only: :create
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
-
-  before_filter :parsear_notas, only: [:create, :update]
 
   def index
     @busqueda = apply_scopes(@expansiones.unscoped)
@@ -57,20 +53,13 @@ class ExpansionesController < ApplicationController
 
   private
 
-    # TODO averiguar la inseguridad de Psych
-    def parsear_notas
-      @expansion.notas = YAML.load(
-        params.require(:expansion).require(:notas)
-      ).with_indifferent_access
-    end
-
     def cargar_recurso
       @expansion = Expansion.new(parametros_permitidos)
     end
 
     def parametros_permitidos
       params.require(:expansion).permit(
-        :nombre, :lanzamiento, :presentacion, :saga, :total
+        :nombre, :lanzamiento, :presentacion, :saga, :total, :notas
       )
     end
 end
