@@ -144,7 +144,10 @@ class CartasController < ApplicationController
         :nombre,
         versiones_attributes: [
           :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
-          :ambientacion, :numero, :rareza, :coste, :id, :_destroy
+          :ambientacion, :numero, :rareza, :coste, :id, :_destroy,
+          :expansion_id, imagenes_attributes: [
+            :arte, :archivo
+          ]
         ]
       )
     end
