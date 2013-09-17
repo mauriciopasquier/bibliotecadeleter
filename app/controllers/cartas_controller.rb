@@ -8,6 +8,7 @@ class CartasController < ApplicationController
 
   ANONS = [ :autocomplete_carta_nombre ]
 
+  before_filter :cargar_carta, only: :create
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
 
@@ -39,7 +40,7 @@ class CartasController < ApplicationController
   end
 
   def update
-    @carta.update_attributes(params[:carta])
+    @carta.update_attributes(parametros_permitidos)
     respond_with(@carta)
   end
 
@@ -135,5 +136,20 @@ class CartasController < ApplicationController
       else
         @carta.canonica
       end
+    end
+
+    # FIXME workaround para cancan + strong_parameters
+    def cargar_carta
+      @carta = Carta.new(parametros_permitidos)
+    end
+
+    def parametros_permitidos
+      params.require(:carta).permit(
+        :nombre,
+        versiones_attributes: [
+          :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
+          :ambientacion, :numero, :rareza, :coste, :id, :_destroy
+        ]
+      )
     end
 end
