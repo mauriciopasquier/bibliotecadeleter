@@ -13593,3 +13593,43 @@ versiones:
     - 120-origen
     - '2'
     - '2'
+  - - '712'
+    - Siempre que un aliado entre en juego, su controlador exilia la primera carta
+      de su mazo.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - '"Todo ser vivo, es digno candidato de sacrificio." - Sacerdote del Nuevo Orden'
+    - '66'
+    - Infrecuente
+    - '2013-09-17 22:49:01.007576'
+    - '2013-09-17 22:49:01.032374'
+    - '634'
+    - true
+    - '16'
+    - 066-origen
+    - '0'
+    - '0'
+  - - '713'
+    - "Cuando el Maestro desarmista entre en juego, toma el control del arma objetivo
+      (este efecto no finaliza al final del turno).\r\nLuego, anéxala a Maestro desarmista."
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '2'
+    - Caos
+    - '"Si no sabes usarla, no debes portarla."'
+    - '31'
+    - Rara
+    - '2013-09-17 22:51:18.513975'
+    - '2013-09-17 22:51:18.529792'
+    - '635'
+    - true
+    - '16'
+    - 031-origen
+    - '4'
+    - '4'
