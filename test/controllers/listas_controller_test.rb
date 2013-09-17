@@ -41,7 +41,7 @@ describe ListasController do
       lista.slots.count.must_equal 1
 
       put :update, usuario_id: @usuario, id: lista, lista: { nombre: 'nuevo' }.merge(
-        slots_attributes: {0 => nuevo_slot, 1 => viejo_slot}
+        slots_attributes: {'0' => nuevo_slot, '1' => viejo_slot}
       )
 
       must_redirect_to usuario_lista_path(@usuario, assigns(:lista))

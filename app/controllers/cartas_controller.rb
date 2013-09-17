@@ -8,6 +8,7 @@ class CartasController < ApplicationController
 
   ANONS = [ :autocomplete_carta_nombre ]
 
+  # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_carta, only: :create
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
@@ -134,7 +135,6 @@ class CartasController < ApplicationController
       end
     end
 
-    # FIXME workaround para cancan + strong_parameters
     def cargar_carta
       @carta = Carta.new(parametros_permitidos)
     end

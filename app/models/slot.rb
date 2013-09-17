@@ -1,8 +1,5 @@
 # encoding: utf-8
 class Slot < ActiveRecord::Base
-  attr_accessible :version, :inventario, :inventario_id, :inventario_type,
-    :cantidad, :version_id
-
   belongs_to :version
   belongs_to :inventario, polymorphic: true
 

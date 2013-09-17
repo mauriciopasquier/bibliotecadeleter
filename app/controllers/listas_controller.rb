@@ -4,6 +4,8 @@ class ListasController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
+  # TODO sacar cuando cancan contemple strong_parameters
+  before_filter :cargar_lista, only: :create
   load_and_authorize_resource :usuario, except: [:coleccion]
   load_and_authorize_resource through: :usuario, except: [:coleccion]
 
@@ -35,7 +37,7 @@ class ListasController < ApplicationController
   end
 
   def update
-    @lista.update_attributes(params[:lista])
+    @lista.update_attributes(parametros_permitidos)
     respond_with(current_usuario, @lista)
   end
 
@@ -55,5 +57,18 @@ class ListasController < ApplicationController
 
     def determinar_galeria
       tipo_actual params[:mostrar].try(:[], :tipo) || :original
+    end
+
+    def cargar_lista
+      @lista = Lista.new(parametros_permitidos)
+    end
+
+    def parametros_permitidos
+      params.require(:lista).permit(
+        :nombre,
+        slots_attributes: [
+          :id, :_destroy, :cantidad, :version_id
+        ]
+      )
     end
 end
