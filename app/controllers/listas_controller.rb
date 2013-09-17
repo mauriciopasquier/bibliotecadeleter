@@ -5,7 +5,7 @@ class ListasController < ApplicationController
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
   # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_lista, only: :create
+  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario, except: [:coleccion]
   load_and_authorize_resource through: :usuario, except: [:coleccion]
 
@@ -59,7 +59,7 @@ class ListasController < ApplicationController
       tipo_actual params[:mostrar].try(:[], :tipo) || :original
     end
 
-    def cargar_lista
+    def cargar_recurso
       @lista = Lista.new(parametros_permitidos)
     end
 

@@ -11,6 +11,8 @@ class ExpansionesController < ApplicationController
 
   ANONS = [ :autocomplete_expansion_nombre, :completar_saga ]
 
+  # TODO sacar cuando cancan contemple strong_parameters
+  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource except: ANONS
   skip_authorization_check only: ANONS
 
@@ -44,7 +46,7 @@ class ExpansionesController < ApplicationController
   end
 
   def update
-    @expansion.update_attributes(params[:expansion])
+    @expansion.update_attributes(parametros_permitidos)
     respond_with(@expansion)
   end
 
@@ -57,6 +59,18 @@ class ExpansionesController < ApplicationController
 
     # TODO averiguar la inseguridad de Psych
     def parsear_notas
-      @expansion.notas = YAML.load(params[:expansion].delete(:notas)).with_indifferent_access
+      @expansion.notas = YAML.load(
+        params.require(:expansion).require(:notas)
+      ).with_indifferent_access
+    end
+
+    def cargar_recurso
+      @expansion = Expansion.new(parametros_permitidos)
+    end
+
+    def parametros_permitidos
+      params.require(:expansion).permit(
+        :nombre, :lanzamiento, :presentacion, :saga, :total
+      )
     end
 end

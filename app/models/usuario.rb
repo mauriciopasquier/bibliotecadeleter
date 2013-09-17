@@ -7,10 +7,6 @@ class Usuario < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :nick, :codigo
-
   has_many :links, as: :linkeable, dependent: :destroy
   has_many :listas, dependent: :destroy
   has_many :mazos, dependent: :destroy
