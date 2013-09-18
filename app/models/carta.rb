@@ -8,7 +8,8 @@ class Carta < ActiveRecord::Base
   friendly_id :nombre, use: :slugged
 
   has_many :versiones, order: 'created_at DESC',
-            dependent: :destroy, inverse_of: :carta, include: :expansion
+            dependent: :destroy, inverse_of: :carta,
+            include: [ :expansion, :imagenes ]
   has_many :imagenes, through: :versiones, order: 'created_at ASC'
   has_many :expansiones, through: :versiones
 

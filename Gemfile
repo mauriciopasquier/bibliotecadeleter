@@ -61,6 +61,7 @@ group :assets do
   gem 'turbolinks'
   gem 'jquery-ui-rails'
   gem 'bootstrap-datepicker-rails'
+  gem 'bootstrap-select-rails'
 end
 
 group :test, :development do

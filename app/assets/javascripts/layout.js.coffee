@@ -23,3 +23,5 @@ jQuery ->
     language: 'es',
     format: 'yyyy/mm/dd'
   })
+
+  $('select').selectpicker()

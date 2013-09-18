@@ -2,17 +2,6 @@
 module CartasHelper
   include PaginacionHelper
 
-  # Nombre se usa en los ids y el texto, parametro es la llave del hash
-  # +params+
-  def busqueda_check_tag(nombre, parametro, opciones = {})
-    label_tag nombre.tableize, class: 'checkbox inline' do
-      check_box_tag(parametro, (opciones[:nombre] || nombre),
-                    checkeado?((opciones[:nombre] || nombre)),
-                    id: nombre.tableize) +
-      nombre
-    end
-  end
-
   def titulo
     case params[:action]
       when 'index'
@@ -54,23 +43,25 @@ module CartasHelper
     @decorador_version ||= @version.decorate
   end
 
-  private
+  def campos_de_busqueda
+    { 'Nombre'          =>  'nombre',
+      'Línea de Tipos'  =>  versiones_tipos,
+      'Texto'           =>  'versiones_texto',
+      'Ambientación'    =>  'versiones_ambientacion' }
+  end
 
-    # Revisa el hash params para determinar si el checkbox fue usado en la
-    # búsqueda recién realizada
-    def checkeado?(nombre)
-      if params[:q]
-        if params[:q][:versiones_senda_eq_any].present? and sendas.include? nombre
-          return params[:q][:versiones_senda_eq_any].include? nombre
-        end
-        if params[:q][:versiones_rareza_eq_any].present? and rarezas.include? nombre
-          return params[:q][:versiones_rareza_eq_any].include? nombre
-        end
-        if params[:incluir].present?
-          return params[:incluir].include? nombre.to_s
-        end
-      else
-        true
-      end
+  # Revisa el hash params para determinar qué opciones fueron seleccionadas en
+  # la última búsqueda
+  def seleccionadas(grupo)
+    case grupo
+      when :senda
+        params[:q][:versiones_senda_eq_any] if params[:q].present?
+      when :rareza
+        params[:q][:versiones_rareza_eq_any] if params[:q].present?
+      when :expansion
+        params[:q][:versiones_expansion_id_eq_any] if params[:q].present?
+      when :campo
+        params[:incluir]
     end
+  end
 end
