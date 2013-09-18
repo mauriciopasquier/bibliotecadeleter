@@ -9,8 +9,9 @@ describe Imagen do
   it "toca a los artistas a los que es asociada" do
     artista, imagen = create(:artista), create(:imagen)
 
+    vieja_key = artista.cache_key
     imagen.arte = artista.nombre
 
-    artista.cache_key.wont_equal artista.reload.cache_key
+    vieja_key.wont_equal artista.reload.cache_key
   end
 end
