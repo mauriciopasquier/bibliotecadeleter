@@ -2,7 +2,7 @@
 require "./test/test_helper"
 
 describe Version do
-  it "must be valid" do
+  it "es válida" do
     create(:version_con_carta).valid?.must_equal true
   end
 

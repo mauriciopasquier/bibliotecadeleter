@@ -32,6 +32,10 @@ describe ListasController do
 
       get :edit, usuario_id: @usuario, id: lista
       must_respond_with :success
+    end
+
+    it "actualiza listas" do
+      lista = create(:lista_con_slots, usuario: @usuario)
 
       nuevo_slot = attributes_for(:slot)
       viejo_slot = {

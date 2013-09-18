@@ -23,6 +23,7 @@ class ActionController::TestCase
     return usuario
   end
 
+  # Autorizar cualquier cosa que se haga en el bloque
   def autorizar
     @ability = Object.new
     @ability.extend(CanCan::Ability)

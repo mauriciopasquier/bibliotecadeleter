@@ -2,7 +2,7 @@
 require "./test/test_helper"
 
 describe Link do
-  it "must be valid" do
+  it "es válido" do
     build(:link).valid?.must_equal true
   end
 

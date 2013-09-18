@@ -2,7 +2,7 @@
 require "./test/test_helper"
 
 describe Usuario do
-  it "must be valid" do
+  it "es válido" do
     build(:usuario).valid?.must_equal true
   end
 

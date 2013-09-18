@@ -1,9 +1,13 @@
 # encoding: utf-8
 class Lista < ActiveRecord::Base
+  include FriendlyId
+
   belongs_to :usuario
   has_many :slots, as: :inventario, include: :version
   has_many :versiones, through: :slots
   has_many :cartas, through: :versiones
+
+  friendly_id :nombre, use: :scoped, scope: :usuario
 
   validates_uniqueness_of :nombre, scope: :usuario_id
   validates_presence_of :nombre

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130915202912) do
+ActiveRecord::Schema.define(:version => 20130918070611) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -83,7 +83,10 @@ ActiveRecord::Schema.define(:version => 20130915202912) do
     t.datetime "updated_at",                      :null => false
     t.boolean  "publica",    :default => true
     t.string   "type",       :default => "Lista"
+    t.string   "slug",                            :null => false
   end
+
+  add_index "listas", ["slug"], :name => "index_listas_on_slug"
 
   create_table "mazos", :force => true do |t|
     t.integer  "principal_id"
@@ -93,7 +96,10 @@ ActiveRecord::Schema.define(:version => 20130915202912) do
     t.datetime "updated_at",   :null => false
     t.integer  "usuario_id"
     t.string   "nombre"
+    t.string   "slug",         :null => false
   end
+
+  add_index "mazos", ["slug"], :name => "index_mazos_on_slug"
 
   create_table "slots", :force => true do |t|
     t.integer  "cantidad"

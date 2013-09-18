@@ -1,5 +1,7 @@
 # encoding: utf-8
 class Mazo < ActiveRecord::Base
+  include FriendlyId
+
   belongs_to :usuario
 
   # 1 o 2 demonios según el formato
@@ -18,6 +20,10 @@ class Mazo < ActiveRecord::Base
   has_many :versiones_suplentes, through: :suplente, source: :versiones
   has_many :cartas_suplentes, through: :suplente, source: :cartas
 
+  friendly_id :nombre, use: :scoped, scope: :usuario
+
+  validates_uniqueness_of :nombre, scope: :usuario_id
+  validates_presence_of :nombre
   validates_presence_of :principal
 
   accepts_nested_attributes_for :principal, :suplente,
