@@ -3,17 +3,40 @@ require "./test/test_helper"
 
 describe InicioController do
 
-  # Este test no funciona por usar authenticated routes. Se testea con un test
-  # de integración. Ver https://github.com/plataformatec/devise/issues/1670
-  it "debe acceder a bienvenida anónimamente" do
-    # assert_routing '/', { controller: 'inicio', action: 'bienvenida' }
+  describe 'logueado' do
+    before { loguearse }
+
+    it "muestra legales" do
+      get :legales
+      must_respond_with :success
+    end
+
+    it "muestra la bienvenida" do
+      get :bienvenida
+      must_respond_with :success
+    end
+
+    it "entra a su panel" do
+      get :panel
+      must_respond_with :success
+      assigns(:usuario).wont_be_nil
+    end
   end
 
-  # Este test no funciona por usar authenticated routes. Se testea con un test
-  # de integración. Ver https://github.com/plataformatec/devise/issues/1670
-  it "debe acceder al panel si está logueado" do
-    # loguearse
-    # assert_routing '/', { controller: 'inicio', action: 'panel' }
-  end
+  describe 'anónimamente' do
+    it "muestra legales" do
+      get :legales
+      must_respond_with :success
+    end
 
+    it "muestra la bienvenida" do
+      get :bienvenida
+      must_respond_with :success
+    end
+
+    it "no entra al panel" do
+      get :panel
+      must_redirect_to :root
+    end
+  end
 end
