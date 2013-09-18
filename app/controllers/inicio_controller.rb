@@ -1,7 +1,7 @@
 # encoding: utf-8
 class InicioController < ApplicationController
   before_filter :cargar_usuario
-  skip_authorization_check only: [:bienvenida]
+  skip_authorization_check only: [:bienvenida, :legales]
 
   def panel
     authorize! :manage, @usuario
