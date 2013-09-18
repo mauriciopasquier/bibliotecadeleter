@@ -55,7 +55,7 @@ describe CartasController do
       put :update, id: carta,
         carta: atributos_carta.merge(versiones_attributes: {'0' => atributos_version })
     end
-    assert_redirected_to carta_path(assigns(:carta))
+    assert_redirected_to en_expansion_carta_path(assigns(:carta), version.expansion)
 
     carta.reload
     assert_equal atributos_carta[:nombre], carta.nombre, "No actualiza el nombre"
