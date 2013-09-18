@@ -38,7 +38,7 @@ class CartasController < ApplicationController
 
   def update
     @carta.update_attributes(parametros_permitidos)
-    respond_with(@carta)
+    respond_with(@carta, location: en_expansion_carta_path(@carta, expansion))
   end
 
   def destroy
@@ -127,11 +127,17 @@ class CartasController < ApplicationController
 
     def cargar_version
       @version = if params[:expansion].present?
-        @carta.versiones.where(expansion_id:
-          Expansion.find(params[:expansion])
-        ).first
+        @carta.versiones.where(expansion_id: expansion).first
       else
         @carta.canonica
+      end
+    end
+
+    def expansion
+      @expansion ||= begin
+        Expansion.find(params[:expansion])
+      rescue ActiveRecord::RecordNotFound
+        Expansion.where(nombre: params[:expansion]).first || @carta.canonica.expansion
       end
     end
 
