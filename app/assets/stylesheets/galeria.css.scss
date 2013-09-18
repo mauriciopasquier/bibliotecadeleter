@@ -31,7 +31,30 @@
 
 .mostrar-tipo {
   margin-right: 5px;
-  select {
-    margin-bottom: 0;
+}
+
+// Estilos de bootstrap-select que bootstrap estaba pisando
+.pagination {
+  ul.dropdown-menu {
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    margin: 2px 0 0;
+    min-width: 160px;
+
+    li {
+      a, span {
+        float: none;
+        border-style: none;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .open > ul.dropdown-menu {
+    display: block;
   }
 }
