@@ -10,8 +10,3 @@
         'Ilustraciones', opciones_de_ordenar
 
     = render @artistas
-
-  - if can? :create, Artista
-    .row-fluid.botones
-      .span12
-        = link_to 'Cargar Artista', new_artista_path, class: 'btn btn-info'
