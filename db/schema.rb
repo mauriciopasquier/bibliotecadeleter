@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130919054251) do
+ActiveRecord::Schema.define(:version => 20130919055339) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -181,6 +181,8 @@ ActiveRecord::Schema.define(:version => 20130919054251) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.integer  "codigo"
+    t.integer  "sash_id"
+    t.integer  "level",                  :default => 0
   end
 
   add_index "usuarios", ["confirmation_token"], :name => "index_usuarios_on_confirmation_token", :unique => true
