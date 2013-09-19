@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130919055339) do
+ActiveRecord::Schema.define(:version => 20130919162634) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20130919055339) do
   end
 
   add_index "listas", ["slug"], :name => "index_listas_on_slug"
+  add_index "listas", ["usuario_id"], :name => "index_listas_on_usuario_id"
 
   create_table "mazos", :force => true do |t|
     t.integer  "principal_id"
@@ -111,6 +112,7 @@ ActiveRecord::Schema.define(:version => 20130919055339) do
   end
 
   add_index "mazos", ["slug"], :name => "index_mazos_on_slug"
+  add_index "mazos", ["usuario_id"], :name => "index_mazos_on_usuario_id"
 
   create_table "merit_actions", :force => true do |t|
     t.integer  "user_id"
@@ -158,6 +160,9 @@ ActiveRecord::Schema.define(:version => 20130919055339) do
     t.integer  "version_id"
   end
 
+  add_index "slots", ["inventario_id", "inventario_type"], :name => "index_slots_on_inventario_id_and_inventario_type"
+  add_index "slots", ["version_id"], :name => "index_slots_on_version_id"
+
   create_table "usuarios", :force => true do |t|
     t.string   "nick",                                   :null => false
     t.string   "email",                  :default => "", :null => false
@@ -185,6 +190,7 @@ ActiveRecord::Schema.define(:version => 20130919055339) do
     t.integer  "level",                  :default => 0
   end
 
+  add_index "usuarios", ["codigo"], :name => "index_usuarios_on_codigo", :unique => true
   add_index "usuarios", ["confirmation_token"], :name => "index_usuarios_on_confirmation_token", :unique => true
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
   add_index "usuarios", ["nick"], :name => "index_usuarios_on_nick", :unique => true
