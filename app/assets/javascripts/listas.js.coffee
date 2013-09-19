@@ -9,7 +9,6 @@ prepararNestedFields = ->
   # Si hay javascript oculta el checkbox y muestra el link remoto
   $('.controles-anidados').children().toggleClass('hidden')
 
-# TODO testear que tenga siblings 'span.cantidad'
 $(document)
   .on 'ajax:success', '.update-listas', (evento, data, status, xhr) ->
     $(this).siblings('span.cantidad').html(data.cantidad)
