@@ -41,6 +41,7 @@ gem 'rack-protection'
 # Autenticación/autorización
 gem 'devise'
 gem 'cancan'
+gem 'merit'
 
 # I18n
 gem 'rails-i18n'
