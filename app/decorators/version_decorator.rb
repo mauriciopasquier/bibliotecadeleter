@@ -105,30 +105,6 @@ class VersionDecorator < ApplicationDecorator
 
   end
 
-  def control_coleccion(lista = h.coleccion_actual)
-    c = cantidad_en(lista)
-
-    h.content_tag(:div, class: 'control-coleccion') do
-      [ h.content_tag(:span, "Tengo", class: 'pull-left'),
-
-        h.content_tag(:span, class: 'pull-right') do
-          [ h.link_to(ruta(:coleccion, c + 1), method: :put, remote: true,
-            class: 'update-listas agregar') do
-              h.content_tag(:i, nil, class: 'icon-plus')
-            end,
-
-            h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
-
-            h.link_to(ruta(:coleccion, [0, c - 1].max), method: :put, remote: true,
-            class: 'update-listas remover') do
-              h.content_tag(:i, nil, class: 'icon-minus')
-            end
-          ].join.html_safe
-        end
-      ].join.html_safe
-    end
-  end
-
   def preparar
     object.imagenes.any? || object.imagenes.build
     self
