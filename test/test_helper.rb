@@ -83,6 +83,7 @@ module BibliotecaDelEter::Expectations
   infect_an_assertion :assert_response, :must_respond_with
   infect_an_assertion :assert_difference, :must_change
   infect_an_assertion :assert_no_difference, :wont_change
+  infect_an_assertion :assert_select, :must_select
 end
 
 class Object
@@ -91,4 +92,9 @@ end
 
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
+class Draper::TestCase
+  include ActionView::TestCase::Behavior
+  before { setup_with_controller }
 end
