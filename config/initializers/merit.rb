@@ -18,11 +18,14 @@ Merit.setup do |config|
 end
 
 # Create application badges (uses https://github.com/norman/ambry)
-# Merit::Badge.create!({
-#   id: 1,
-#   name: 'just-registered'
-# }, {
-#   id: 2,
-#   name: 'best-unicorn',
-#   custom_fields: { category: 'fantasy' }
-# })
+
+# Guardar cada medalla en una constante, útil para agregar medallas con
+# `@usuario.add_badge(CONSTANTE.id)`
+# Prioridad es para ordenar las reglas de CanCan
+BIBLIOTECARIO = Merit::Badge.create! id: 1, name: 'bibliotecario',
+  description: 'De los que mantienen este caos andando',
+  custom_fields: { prioridad: 1 }
+
+SOCIO = Merit::Badge.create! id: 2, name: 'socio',
+  description: 'Sacó el carnet',
+  custom_fields: { prioridad: 90 }
