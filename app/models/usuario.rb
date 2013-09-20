@@ -33,6 +33,11 @@ class Usuario < ActiveRecord::Base
     self.lista_de_cambio.find_all { |c| c.cantidad > 0 }
   end
 
+  def medallas=(lista = [])
+    lista.each { |m| self.add_badge m.id }
+  end
+  alias_method :medallas, :badges
+
   private
 
     def crear_listas
