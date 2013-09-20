@@ -30,7 +30,7 @@ module InicioHelper
   def resource_name
     devise_mapping.name
   end
-  alias :scope_name :resource_name
+  alias_method :scope_name, :resource_name
 
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:usuario]
