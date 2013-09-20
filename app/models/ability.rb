@@ -2,6 +2,12 @@
 class Ability
   include CanCan::Ability
 
+  @@canones = [ Carta, Expansion, Version, Artista, Imagen ]
+  @@apocrifos = [ Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente ]
+  @@modelos = @@canones + @@apocrifos
+
+  cattr_reader :canones, :apocrifos, :modelos
+
   def initialize(usuario = nil)
     alias_action :buscar, to: :read
 
@@ -22,7 +28,7 @@ class Ability
     end
 
     def socio
-      can :create, [ Lista, Mazo ]
+      can :create, apocrifos
       can :manage, [ Lista, Mazo ], usuario_id: @usuario.id
     end
 
