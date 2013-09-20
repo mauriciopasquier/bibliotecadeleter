@@ -8,7 +8,7 @@ require "minitest/rails"
 # to the test group in the Gemfile and uncomment the following:
 require "minitest/rails/capybara"
 
-class ActiveSupport::TestCase
+class MiniTest::Unit::TestCase
   # Para llamar a los métodos core de FactoryGirl directamente (build,
   # build_stubbed, create, attributes_for, y los *_list)
   include FactoryGirl::Syntax::Methods
