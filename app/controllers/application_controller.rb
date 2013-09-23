@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
   respond_to :html
 
+  before_filter :agregar_parametros_permitidos, if: :devise_controller?
+
   protect_from_forgery
 
   # Cancan
@@ -32,6 +34,10 @@ class ApplicationController < ActionController::Base
   helper_method :tipo_actual, :activo?, :coleccion_actual, :reserva_actual
 
   protected
+
+    def agregar_parametros_permitidos
+      devise_parameter_sanitizer.for(:sign_up) << [ :nick, :codigo ]
+    end
 
     # Redirije hacia atrás o en caso de no exister, vuelve al inicio
     def volver
