@@ -3,8 +3,7 @@ require "./test/test_helper"
 
 describe ListasController do
 
-  describe 'estando logueado' do
-
+  describe 'logueado' do
     before { @usuario = loguearse }
 
     it "accede su lista de cartas" do
@@ -44,15 +43,15 @@ describe ListasController do
 
       lista.slots.count.must_equal 1
 
-      put :update, usuario_id: @usuario, id: lista, lista: { nombre: 'nuevo' }.merge(
-        slots_attributes: {'0' => nuevo_slot, '1' => viejo_slot}
+      put :update, usuario_id: @usuario, id: lista, lista: { nombre: 'otro' }.merge(
+        slots_attributes: { '0' => nuevo_slot, '1' => viejo_slot }
       )
 
       must_redirect_to usuario_lista_path(@usuario, assigns(:lista))
 
       lista.reload
       lista.slots.count.must_equal 2
-      lista.nombre.must_equal 'nuevo'
+      lista.nombre.must_equal 'otro'
     end
   end
 end
