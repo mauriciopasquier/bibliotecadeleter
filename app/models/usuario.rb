@@ -34,7 +34,7 @@ class Usuario < ActiveRecord::Base
   end
 
   def medallas=(lista = [])
-    lista.each { |m| self.add_badge m.id }
+    Array.wrap(lista).each { |m| self.add_badge m.id }
   end
   alias_method :medallas, :badges
 
