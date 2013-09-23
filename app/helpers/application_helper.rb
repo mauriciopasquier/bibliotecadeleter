@@ -103,13 +103,11 @@ module ApplicationHelper
   private
 
     def alerta(tipo)
-      'alert fade in ' +
+      'alert alert-block fade in ' +
       case tipo
         when :error
           'alert-error'
-        when :notice
-          'alert-info'
-        when :success
+        when :notice, :success
           'alert-success'
         when :alert
           '' # Usamos el estilo de .alert default

@@ -2,9 +2,25 @@ es:
   flash:
     actions:
       create:
-        notice: 'Se creó algo: %{resource_name}.'
+        notice_html:
+          <blockquote>
+            <p>¡Un nuevo libro ha sido adquirido por la biblioteca!<p>
+            <small>%{cita_crear}</small>
+          </blockquote>
       update:
-        notice: 'Se actualizó algo: %{resource_name}.'
+        notice_html:
+          <blockquote>
+            <p>¿Estás desacralizando el libro?<p>
+            <small>%{cita_actualizar}</small>
+          </blockquote>
       destroy:
-        notice: 'Se destruyó algo: %{resource_name}.'
-        alert: 'No se pudo destruir algo: %{resource_name}.'
+        notice_html:
+          <blockquote>
+            <p>¡El libro ha sido destruido!</p>
+            <small>%{cita_destruir}</small>
+          </blockquote>
+        alert_html:
+          <blockquote>
+            <p>El registro %{del} %{resource_name} no pudo ser destruido.</p>
+            <small>¿Por qué no pruebas de nuevo?</small>
+          </blockquote>

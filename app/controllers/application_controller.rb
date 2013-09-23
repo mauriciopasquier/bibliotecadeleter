@@ -78,4 +78,14 @@ class ApplicationController < ActionController::Base
     def reserva_actual
       current_usuario.try(:reserva)
     end
+
+    # Para los mensajes de responders. Tenemos mayoría de modelos femeninos
+    def interpolation_options
+      {
+        del: 'de la',
+        cita_crear: Cita.random_para(:crear),
+        cita_actualizar: Cita.random_para(:actualizar),
+        cita_destruir: Cita.random_para(:destruir)
+      }
+    end
 end
