@@ -30,6 +30,7 @@ class Ability
     def socio
       can :create, apocrifos
       can :manage, [ Lista, Mazo ], usuario_id: @usuario.id
+      can :manage, Usuario, id: @usuario.id
     end
 
     def anonimo

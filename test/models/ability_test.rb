@@ -44,6 +44,11 @@ describe Ability do
         subject.can?(:update, modelo).wont_equal true, "Edita #{modelo}"
       end
     end
+
+    it 'se manejan a sí mismos y a nadie más' do
+      subject.can?(:manage, @usuario).must_equal true
+      subject.can?(:manage, create(:usuario)).wont_equal true
+    end
   end
 
   describe 'para anónimos' do
