@@ -12,7 +12,8 @@ class ImagenDecorator < ApplicationDecorator
   end
 
   def tag(estilo = :original)
-    h.image_tag object.archivo.url(estilo), alt: object.carta.nombre
+    h.image_tag object.archivo.url(estilo),
+      alt: nombre_disponible, class: 'imagen'
   end
 
   # genera una imagen/link a la versión.
@@ -27,4 +28,10 @@ class ImagenDecorator < ApplicationDecorator
   def linea_de_tipos
     version.linea_de_tipos
   end
+
+  private
+
+    def nombre_disponible
+      (object.carta.try(:nombre) || 'Imagen no disponible')
+    end
 end

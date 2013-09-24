@@ -154,6 +154,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kramdown (1.1.0)
+    lazyload-rails (0.2.0)
+      nokogiri (~> 1.5)
     libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -336,6 +338,7 @@ DEPENDENCIES
   jquery-ui-rails
   kaminari
   kramdown
+  lazyload-rails
   mail_view
   merit
   minitest-rails

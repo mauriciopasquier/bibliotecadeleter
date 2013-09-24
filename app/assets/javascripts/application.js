@@ -26,6 +26,7 @@
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es
 //= require bootstrap-select
+//= require jquery.lazyload
 //
 //= Archivos de la aplicación a incluir
 //
