@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
   respond_to :html
 
+  before_filter :agregar_parametros_permitidos, if: :devise_controller?
+
   protect_from_forgery
 
   # Cancan
@@ -32,6 +34,10 @@ class ApplicationController < ActionController::Base
   helper_method :tipo_actual, :activo?, :coleccion_actual, :reserva_actual
 
   protected
+
+    def agregar_parametros_permitidos
+      devise_parameter_sanitizer.for(:sign_up) << [ :nick, :codigo ]
+    end
 
     # Redirije hacia atrás o en caso de no exister, vuelve al inicio
     def volver
@@ -71,5 +77,15 @@ class ApplicationController < ActionController::Base
 
     def reserva_actual
       current_usuario.try(:reserva)
+    end
+
+    # Para los mensajes de responders. Tenemos mayoría de modelos femeninos
+    def interpolation_options
+      {
+        del: 'de la',
+        cita_crear: Cita.random_para(:crear),
+        cita_actualizar: Cita.random_para(:actualizar),
+        cita_destruir: Cita.random_para(:destruir)
+      }
     end
 end

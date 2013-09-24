@@ -3,7 +3,8 @@ BibliotecaDelEter::Application.routes.draw do
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
-  devise_for :usuarios, path: 'recepcion',
+  devise_for :usuarios,
+    path: 'recepcion',
     path_names: {
       sign_in: 'entrar',
       sign_out: 'salir',
@@ -15,6 +16,9 @@ BibliotecaDelEter::Application.routes.draw do
       new: 'nueva',
       cancel: 'cancelar',
       edit: 'editar'
+    },
+    controllers: {
+      registrations: 'registrations'
     }
 
   # Estáticas al principio por prioridad sobre los recursos sin scope

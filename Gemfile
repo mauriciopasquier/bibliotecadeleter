@@ -30,7 +30,7 @@ gem 'kramdown'
 gem 'responders'
 gem 'has_scope'
 # TODO sacar con rails 4
-gem 'strong_parameters'
+gem 'strong_parameters', github: 'mauriciopasquier/strong_parameters', branch: 'permit-filters-array'
 
 # Server
 gem 'thin'
@@ -41,6 +41,7 @@ gem 'rack-protection'
 # Autenticación/autorización
 gem 'devise'
 gem 'cancan'
+gem 'merit'
 
 # I18n
 gem 'rails-i18n'
