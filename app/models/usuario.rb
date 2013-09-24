@@ -18,7 +18,7 @@ class Usuario < ActiveRecord::Base
 
   friendly_id :nick, use: :slugged
 
-  after_create :crear_listas
+  after_create :crear_listas, :asociarse
 
   # Cartas que le faltan (cantidades negativas) o sobran a este usuario
   def lista_de_cambio
@@ -44,5 +44,9 @@ class Usuario < ActiveRecord::Base
       self.create_coleccion nombre: "Todas tus cartas"
       self.create_reserva nombre: "Playsets o buscadas"
       self
+    end
+
+    def asociarse
+      self.add_badge SOCIO.id
     end
 end
