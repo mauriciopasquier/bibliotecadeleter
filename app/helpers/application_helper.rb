@@ -49,19 +49,19 @@ module ApplicationHelper
   end
 
   def link_to_mostrar(recurso, texto = 'Mostrar')
-    link_to recurso do
+    link_to recurso, title: 'Mostrar' do
       content_tag(:i, nil, class: 'icon-zoom-in') + texto
     end
   end
 
   def link_to_editar(recurso, texto = 'Editar')
-    link_to recurso do
+    link_to recurso, title: 'Editar' do
       content_tag(:i, nil, class: 'icon-pencil') + texto
     end
   end
 
   def link_to_eliminar(recurso, texto = 'Eliminar')
-    link_to recurso, method: :delete, data: { confirm: t(:confirmar) } do
+    link_to recurso, method: :delete, data: { confirm: t(:confirmar) }, title: 'Eliminar' do
       content_tag(:i, nil, class: 'icon-remove-circle') + texto
     end
   end
