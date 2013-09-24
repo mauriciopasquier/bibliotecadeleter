@@ -13,13 +13,10 @@ class VersionDecorator < ApplicationDecorator
 
   def tag(estilo = :original)
     if imagenes.any?
-      imagenes.first.tag(estilo)
+      imagenes.first
     else
-      h.content_tag(:div, class: 'no-disponible') do
-        h.image_tag("imagen-no-disponible-#{estilo}.png",
-                    alt: I18n.t('imagen.no_disponible'))
-      end
-    end
+      Imagen.new.decorate
+    end.tag(estilo)
   end
 
   def linea_de_tipos
