@@ -12,8 +12,13 @@ class ImagenDecorator < ApplicationDecorator
   end
 
   def tag(estilo = :original)
-    h.image_tag object.archivo.url(estilo),
-      alt: nombre_disponible, class: 'imagen'
+    [ h.image_tag(object.archivo.url(estilo),
+        alt: nombre_disponible, class: 'imagen'),
+
+      h.content_tag(:noscript, class: 'imagen') do
+        h.x_image_tag(object.archivo.url(estilo),
+          alt: nombre_disponible, class: 'imagen')
+      end ].join.html_safe
   end
 
   # genera una imagen/link a la versión.
