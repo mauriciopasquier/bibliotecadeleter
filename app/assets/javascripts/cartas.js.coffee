@@ -8,6 +8,9 @@ bindear = ->
     classButton: 'span3 filestyle'
   )
 
+  # carga las imágenes de a poco
+  $('img.imagen').lazyload()
+
 $(document)
   .on 'page:change', ->
     bindear()
