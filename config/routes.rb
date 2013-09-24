@@ -3,7 +3,8 @@ BibliotecaDelEter::Application.routes.draw do
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
-  devise_for :usuarios, path: 'cuenta',
+  devise_for :usuarios,
+    path: 'recepcion',
     path_names: {
       sign_in: 'entrar',
       sign_out: 'salir',
@@ -15,6 +16,9 @@ BibliotecaDelEter::Application.routes.draw do
       new: 'nueva',
       cancel: 'cancelar',
       edit: 'editar'
+    },
+    controllers: {
+      registrations: 'registrations'
     }
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
@@ -33,14 +37,18 @@ BibliotecaDelEter::Application.routes.draw do
     end
     r.resource :reserva,    except: [ :create, :destroy, :new ]
 
-    r.resources :cartas do
-      r.resources :versiones, except: [ :create, :update ]
+    r.resources :cartas, except: [ :edit ] do
+      r.resources :versiones, only: [ :new, :edit, :destroy ]
 
       collection do
         match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
         get 'autocompletar_nombre'  => 'cartas#autocomplete_carta_nombre'
+        get 'autocompletar_demonios'
+        get 'autocompletar_sendas'
+        get 'autocompletar_canonicas'
       end
 
+      get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
     end
 
     r.resources :expansiones do
@@ -61,7 +69,7 @@ BibliotecaDelEter::Application.routes.draw do
   end
 
   with_options path_names: masculinos do |r|
-    r.resources :artistas do
+    r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ] do
       collection do
         get 'autocompletar_nombre'  => 'artistas#autocomplete_artista_nombre'
       end
@@ -70,6 +78,7 @@ BibliotecaDelEter::Application.routes.draw do
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
       resources :listas, path_names: femeninos
+      r.resources :mazos
     end
   end
 

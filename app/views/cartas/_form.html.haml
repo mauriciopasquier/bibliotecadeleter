@@ -1,4 +1,4 @@
-= form_for @carta, html: { class: 'form carta', multipart: true } do |f|
+= form_for carta, html: { class: 'form carta', multipart: true } do |f|
   = f.error_messages
 
   = f.fields_for :versiones, version do |fc|

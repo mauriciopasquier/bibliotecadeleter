@@ -2,7 +2,7 @@
 require "./test/test_helper"
 
 describe Carta do
-  it "must be valid" do
+  it "es válida" do
     build(:carta).valid?.must_equal true
   end
 end

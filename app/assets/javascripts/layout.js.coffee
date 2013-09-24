@@ -1,3 +1,17 @@
+# Hay que bindear tanto cuando se carga la página como cuando turbolinks la
+# pide (el page:change)
+bindearTodo = ->
+  # muestra el botón para cerrar la flash si hay js
+  $('.alert button.close').show()
+  $('.alert').alert()
+
+  $('input.fecha').datepicker({
+    language: 'es',
+    format: 'yyyy/mm/dd'
+  })
+
+  $('select').selectpicker()
+
 $(document)
   .on 'click', '.plegable', ->
     $(this).toggleClass('plegado').nextAll().toggle('fast')
@@ -12,14 +26,7 @@ $(document)
 $(document)
   .on 'page:change', ->
     $('#cargando').hide()
+    bindearTodo()
 
 jQuery ->
-
-  # muestra el botón para cerrar la flash si hay js
-  $(".alert button.close").show()
-  $(".alert").alert()
-
-  $('input.fecha').datepicker({
-    language: 'es',
-    format: 'yyyy/mm/dd'
-  })
+  bindearTodo()

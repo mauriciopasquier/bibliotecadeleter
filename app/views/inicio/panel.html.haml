@@ -24,22 +24,35 @@
           = link_to('Faltantes', faltantes_coleccion_path)
           = '/'
           = link_to('Sobrantes', sobrantes_coleccion_path)
-        .pull-right= "#{@usuario.cantidad_faltante}/#{@usuario.cantidad_sobrante}"
+        .pull-right= "#{usuario.cantidad_faltante}/#{usuario.cantidad_sobrante}"
 
     .row-fluid
       .span4
         %h2 Listas
-        - @usuario.listas.normales.each do |lista|
+        - usuario.listas.normales.recientes.each do |lista|
           .row-fluid.span12
-            .pull-left= link_to lista.nombre, [@usuario, lista]
+            .pull-left= link_to lista.nombre, [usuario, lista]
             .pull-right= lista.cantidad
+      .span4
+        %h2 Mazos
+        - @usuario.mazos.recientes.each do |mazo|
+          .row-fluid.span12
+            .pull-left= link_to mazo.nombre, [usuario, mazo]
+            .pull-right= mazo.cantidad
 
-      -# TODO agregar las 2 columnas que faltan
+      -# TODO agregar la columna que falta
+    .row-fluid
+      .span4
+        - if can? :create, Lista
+          = link_to 'Crear lista', new_usuario_lista_path(usuario),
+            class: 'btn btn-info'
+          = link_to 'Ver todas', usuario_listas_path(@usuario), class: 'btn'
 
-    - if can? :create, Lista
-      .row-fluid
-        .span12= link_to 'Crear lista', new_usuario_lista_path(@usuario),
-          class: 'btn btn-success'
+      .span4
+        - if can? :create, Mazo
+          = link_to 'Crear mazo', new_usuario_mazo_path(usuario),
+            class: 'btn btn-info'
+          = link_to 'Ver todos', usuario_mazos_path(@usuario), class: 'btn'
 
   #carnet.tab-pane
     = render 'devise/shared/edit_registrations'

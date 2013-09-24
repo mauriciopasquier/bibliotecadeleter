@@ -2,4 +2,7 @@
 
 = render partial: 'cartas/form', locals: { version: nueva_version }
 
-= link_to 'Otras versiones', carta_versiones_path(@carta), class: 'btn'
+.row-fluid.botones
+  .span12
+    = link_to 'Cartas', cartas_path, class: 'btn'
+    = link_to 'Otras versiones', @carta, class: 'btn'

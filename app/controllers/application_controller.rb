@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
   respond_to :html
 
+  before_filter :agregar_parametros_permitidos, if: :devise_controller?
+
   protect_from_forgery
 
   # Cancan
@@ -29,10 +31,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :busqueda, :sendas, :versiones_tipos, :tipo_actual, :activo?,
-                :barra_de_busqueda, :rarezas, :coleccion_actual, :reserva_actual
+  helper_method :tipo_actual, :activo?, :coleccion_actual, :reserva_actual
 
   protected
+
+    def agregar_parametros_permitidos
+      devise_parameter_sanitizer.for(:sign_up) << [ :nick, :codigo ]
+    end
 
     # Redirije hacia atrás o en caso de no exister, vuelve al inicio
     def volver
@@ -43,31 +48,13 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    def busqueda
-      [ versiones_tipos,
-        'versiones_texto',
-        'versiones_ambientacion',
-        'nombre'
-      ].join('_or_') + '_cont'
-    end
-
-    def versiones_tipos
-      ['versiones_tipo', 'versiones_supertipo', 'versiones_subtipo'].join('_or_')
-    end
-
-    def sendas
-      %w{ Caos Locura Muerte Poder Neutral }
-    end
-
-    def rarezas
-      %w{ Común Infrecuente Rara Épica Promocional }
-    end
-
-    # Para determinar el elemento activo de la paginación
+    # Para determinar el elemento activo de la paginación. En el controlador
+    # porque usa params
     def activo?(elemento)
       elemento == params[:mostrar].try(:[], :cantidad)
     end
 
+    # En el controlador porque usa params
     def tipo_actual(tipo = nil)
       (@tipo ||= (tipo || params[:tipo])).try :to_sym
     end
@@ -84,15 +71,21 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    def barra_de_busqueda
-      Carta.ransack
-    end
-
     def coleccion_actual
-      current_usuario.coleccion
+      current_usuario.try(:coleccion)
     end
 
     def reserva_actual
-      current_usuario.reserva
+      current_usuario.try(:reserva)
+    end
+
+    # Para los mensajes de responders. Tenemos mayoría de modelos femeninos
+    def interpolation_options
+      {
+        del: 'de la',
+        cita_crear: Cita.random_para(:crear),
+        cita_actualizar: Cita.random_para(:actualizar),
+        cita_destruir: Cita.random_para(:destruir)
+      }
     end
 end

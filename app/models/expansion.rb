@@ -1,9 +1,6 @@
 # encoding: utf-8
 class Expansion < ActiveRecord::Base
   include FriendlyId
-  serialize :notas, HashWithIndifferentAccess
-
-  attr_accessible :lanzamiento, :nombre, :notas, :presentacion, :saga, :total
 
   has_many :versiones, order: 'slug ASC', dependent: :destroy
   has_many :cartas, through: :versiones

@@ -1,25 +1,45 @@
-%h1= titulo
 .row-fluid
   #carta.span5
+    %h1= titulo
     .row-fluid
       .span12
-        %h2 Texto oficial
-        = render  partial: 'versiones/version_textual', object: @carta.canonica
+        = render  partial: 'versiones/version_textual', object: version
       .span12
         %h3 Versiones
         %ul.versiones.nav.nav-pills
-          - @carta.versiones.each do |v|
-            %li= link_to "#{v.expansion}", [@carta, v]
+          %li
+            = link_to '.', '#', class: 'falso-pill'
+            - if usuario_signed_in?
+              #falsos.controles
+                .control-reserva
+                  .control-texto= 'Quiero'
+                .control-coleccion
+                  .control-texto= 'Tengo'
+          - carta.versiones.each do |v|
+            %li
+              = link_to "#{v.expansion}", en_expansion_carta_path(@carta, v.expansion)
+              - if usuario_signed_in?
+                .controles{id: v.expansion.slug}
+                  = v.control(reserva_actual, '')
+                  = v.control(coleccion_actual, '')
+
+      - if @version.links.any?
+        .span12
+          %h3 Páginas relacionadas
+          %ul.links.nav.nav-pills
+            = render @version.links
 
   .span7
-    %h2 Imágenes
     = render  partial: 'layouts/galeria',
-              locals: { imagenes: @carta.canonica.imagenes,
+              locals: { imagenes: version.imagenes,
                         estilo: :original }
 
-- if can? :edit, @carta
-  = link_to 'Editar', edit_carta_path(@carta), class: 'btn'
-- if can? :create, Version
-  = link_to 'Nueva version', new_carta_version_path(@carta), class: 'btn'
-- if can? :create, Carta
-  = link_to 'Nueva carta', new_carta_path, class: 'btn'
+.row-fluid.botones
+  .span12
+    - if can? :edit, @version
+      = link_to 'Editar esta versión',
+        edit_carta_version_path(@carta, @version), class: 'btn btn-warning'
+    - if can? :create, Version
+      = link_to 'Nueva versión', new_carta_version_path(@carta), class: 'btn btn-info'
+    - if can? :create, Carta
+      = link_to 'Nueva carta', new_carta_path, class: 'btn btn-info'

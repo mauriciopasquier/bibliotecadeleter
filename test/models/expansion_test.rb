@@ -2,7 +2,7 @@
 require "./test/test_helper"
 
 describe Expansion do
-  it "must be valid" do
+  it "es válida" do
     build(:expansion).valid?.must_equal true
   end
 

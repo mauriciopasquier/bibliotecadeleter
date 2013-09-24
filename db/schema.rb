@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821221122) do
+ActiveRecord::Schema.define(:version => 20130919162634) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(:version => 20130821221122) do
 
   add_index "artistas_imagenes", ["artista_id"], :name => "index_artistas_imagenes_on_artista_id"
   add_index "artistas_imagenes", ["imagen_id"], :name => "index_artistas_imagenes_on_imagen_id"
+
+  create_table "badges_sashes", :force => true do |t|
+    t.integer  "badge_id"
+    t.integer  "sash_id"
+    t.boolean  "notified_user", :default => false
+    t.datetime "created_at"
+  end
+
+  add_index "badges_sashes", ["badge_id", "sash_id"], :name => "index_badges_sashes_on_badge_id_and_sash_id"
+  add_index "badges_sashes", ["badge_id"], :name => "index_badges_sashes_on_badge_id"
+  add_index "badges_sashes", ["sash_id"], :name => "index_badges_sashes_on_sash_id"
 
   create_table "cartas", :force => true do |t|
     t.string   "nombre",     :null => false
@@ -83,6 +94,61 @@ ActiveRecord::Schema.define(:version => 20130821221122) do
     t.datetime "updated_at",                      :null => false
     t.boolean  "publica",    :default => true
     t.string   "type",       :default => "Lista"
+    t.string   "slug",                            :null => false
+  end
+
+  add_index "listas", ["slug"], :name => "index_listas_on_slug"
+  add_index "listas", ["usuario_id"], :name => "index_listas_on_usuario_id"
+
+  create_table "mazos", :force => true do |t|
+    t.integer  "principal_id"
+    t.integer  "suplente_id"
+    t.string   "formato"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "usuario_id"
+    t.string   "nombre"
+    t.string   "slug",         :null => false
+  end
+
+  add_index "mazos", ["slug"], :name => "index_mazos_on_slug"
+  add_index "mazos", ["usuario_id"], :name => "index_mazos_on_usuario_id"
+
+  create_table "merit_actions", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "action_method"
+    t.integer  "action_value"
+    t.boolean  "had_errors",    :default => false
+    t.string   "target_model"
+    t.integer  "target_id"
+    t.boolean  "processed",     :default => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+  end
+
+  create_table "merit_activity_logs", :force => true do |t|
+    t.integer  "action_id"
+    t.string   "related_change_type"
+    t.integer  "related_change_id"
+    t.string   "description"
+    t.datetime "created_at"
+  end
+
+  create_table "merit_score_points", :force => true do |t|
+    t.integer  "score_id"
+    t.integer  "num_points", :default => 0
+    t.string   "log"
+    t.datetime "created_at"
+  end
+
+  create_table "merit_scores", :force => true do |t|
+    t.integer "sash_id"
+    t.string  "category", :default => "default"
+  end
+
+  create_table "sashes", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "slots", :force => true do |t|
@@ -93,6 +159,9 @@ ActiveRecord::Schema.define(:version => 20130821221122) do
     t.string   "inventario_type"
     t.integer  "version_id"
   end
+
+  add_index "slots", ["inventario_id", "inventario_type"], :name => "index_slots_on_inventario_id_and_inventario_type"
+  add_index "slots", ["version_id"], :name => "index_slots_on_version_id"
 
   create_table "usuarios", :force => true do |t|
     t.string   "nick",                                   :null => false
@@ -117,8 +186,11 @@ ActiveRecord::Schema.define(:version => 20130821221122) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.integer  "codigo"
+    t.integer  "sash_id"
+    t.integer  "level",                  :default => 0
   end
 
+  add_index "usuarios", ["codigo"], :name => "index_usuarios_on_codigo", :unique => true
   add_index "usuarios", ["confirmation_token"], :name => "index_usuarios_on_confirmation_token", :unique => true
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
   add_index "usuarios", ["nick"], :name => "index_usuarios_on_nick", :unique => true
@@ -127,16 +199,16 @@ ActiveRecord::Schema.define(:version => 20130821221122) do
   add_index "usuarios", ["unlock_token"], :name => "index_usuarios_on_unlock_token", :unique => true
 
   create_table "versiones", :force => true do |t|
-    t.text     "texto",            :default => ""
-    t.string   "tipo",             :default => ""
-    t.string   "supertipo",        :default => ""
-    t.string   "subtipo",          :default => ""
+    t.text     "texto"
+    t.string   "tipo"
+    t.string   "supertipo"
+    t.string   "subtipo"
     t.string   "fue"
     t.string   "res"
-    t.string   "senda",            :default => ""
-    t.text     "ambientacion",     :default => ""
+    t.string   "senda"
+    t.text     "ambientacion"
     t.integer  "numero"
-    t.string   "rareza",           :default => ""
+    t.string   "rareza"
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
     t.integer  "carta_id"

@@ -1,12 +1,13 @@
 es:
   devise:
     registrations:
+      signed_up:          "Ya tenés tu nuevo carnet de socio"
       campos_comunes:
         nick:
           placeholder:    "No necesitamos tu nombre real :)"
         codigo:
           placeholder:    "El que usás para los torneos"
-          help:           "Nunca va a ser público, no te preocupes"
+          help:           "Código de país + documento de identidad"
       new:
         password:
           help:           "Una sugerencia..."
@@ -24,6 +25,8 @@ es:
       new:
         titulo:           "Entrando a la Biblioteca"
         submit:           "Mirá el carnet"
+      signed_in:          "¡Disfrutá tu estadía en la Biblioteca del Éter!"
+      signed_out:         "Hasta la próxima. Ehm... ¿no te llevás ningún libro?"
     passwords:
       new:
         titulo:           "Generar un nuevo password"

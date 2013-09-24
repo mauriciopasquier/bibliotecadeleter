@@ -19,3 +19,14 @@ ul.versiones {
   }
 
 }
+
+.controles {
+  text-align: right;
+  .control-texto {
+    margin-right: 1em;
+  }
+
+  .cantidad {
+    margin: 0 0.5em;
+  }
+}

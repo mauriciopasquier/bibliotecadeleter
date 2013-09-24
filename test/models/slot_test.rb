@@ -2,11 +2,7 @@
 require "./test/test_helper"
 
 describe Slot do
-  before do
-    @slot = Slot.new
-  end
-
-  it "must be valid" do
-    @slot.valid?.must_equal true
+  it "es válido" do
+    build(:slot).valid?.must_equal true
   end
 end

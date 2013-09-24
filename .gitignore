@@ -26,7 +26,14 @@ config/initializers/devise.rb
 # Ignoro las imágenes de paperclip hasta nuevo aviso
 public/cartas
 
-# Nunca commitear los usuarios
+# Nunca commitear nada de los usuarios
 db/semillas/usuarios.yml
 db/semillas/slots.yml
 db/semillas/listas.yml
+db/semillas/mazos.yml
+db/semillas/badges_sashes.yml
+db/semillas/merit_actions.yml
+db/semillas/merit_activity_logs.yml
+db/semillas/merit_score_points.yml
+db/semillas/merit_scores.yml
+db/semillas/sashes.yml

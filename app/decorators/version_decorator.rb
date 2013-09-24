@@ -7,18 +7,16 @@ class VersionDecorator < ApplicationDecorator
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
   def link(estilo = :original, opciones = {})
-    h.link_to tag(estilo), [object.carta, object], opciones
+    h.link_to tag(estilo),
+      h.en_expansion_carta_path(object.carta, object.expansion), opciones
   end
 
   def tag(estilo = :original)
     if imagenes.any?
-      imagenes.first.tag(estilo)
+      imagenes.first
     else
-      h.content_tag(:div, class: 'no-disponible') do
-        h.image_tag("imagen-no-disponible-#{estilo}.png",
-                    alt: I18n.t('imagen.no_disponible'))
-      end
-    end
+      Imagen.new.decorate
+    end.tag(estilo)
   end
 
   def linea_de_tipos
@@ -56,7 +54,6 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def arte
-    # TODO devolver una sola línea si ambas caras tienen los mismos artistas
     imagenes.collect do |i|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'arte')) do
         i.artistas.collect do |a|
@@ -76,58 +73,38 @@ class VersionDecorator < ApplicationDecorator
 
   def reserva_y_coleccion
     h.content_tag(:div, class: 'controles') do
-      [ control_reserva,
-        control_coleccion
+      [ control(h.reserva_actual, 'Quiero'),
+        control(h.coleccion_actual, 'Tengo')
       ].join.html_safe
     end
   end
 
-  def control_reserva(lista = h.reserva_actual)
+  def control(lista, texto)
     c = cantidad_en(lista)
+    tipo = lista.class.name.downcase
 
-    h.content_tag(:div, class: 'control-reserva') do
-      [ "Tu reserva: ",
+    h.content_tag(:div, class: "control-#{tipo}") do
+      [ h.content_tag(:span, texto, class: 'control-texto'),
 
-        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
+        h.link_to(ruta(tipo, c + 1), method: :put, remote: true,
+          class: 'update-listas agregar') do
+            h.content_tag(:i, nil, class: 'icon-plus')
+          end,
 
-        h.link_to(ruta(:reserva, c + 1), method: :put, remote: true,
-        class: 'update-listas agregar') do
-          h.content_tag(:i, nil, class: 'icon-plus')
-        end,
+        h.content_tag(:span, c, class: 'cantidad'),
 
-        '/',
-
-        h.link_to(ruta(:reserva, [0, c - 1].max), method: :put, remote: true,
-        class: 'update-listas remover') do
-          h.content_tag(:i, nil, class: 'icon-minus')
-        end
-
+        h.link_to(ruta(tipo, [0, c - 1].max), method: :put, remote: true,
+          class: 'update-listas remover') do
+            h.content_tag(:i, nil, class: 'icon-minus')
+          end
       ].join.html_safe
     end
+
   end
 
-  def control_coleccion(lista = h.coleccion_actual)
-    c = cantidad_en(lista)
-
-    h.content_tag(:div, class: 'control-coleccion') do
-      [ "Total: ",
-
-        h.content_tag(:span, cantidad_en(lista), class: 'cantidad'),
-
-        h.link_to(ruta(:coleccion, c + 1), method: :put, remote: true,
-        class: 'update-listas agregar') do
-          h.content_tag(:i, nil, class: 'icon-plus')
-        end,
-
-        '/',
-
-        h.link_to(ruta(:coleccion, [0, c - 1].max), method: :put, remote: true,
-        class: 'update-listas remover') do
-          h.content_tag(:i, nil, class: 'icon-minus')
-        end
-
-      ].join.html_safe
-    end
+  def preparar
+    object.imagenes.any? || object.imagenes.build
+    self
   end
 
   private

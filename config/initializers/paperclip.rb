@@ -23,3 +23,7 @@ Paperclip.interpolates :cara do |adjunto, estilo|
     end
   end
 end
+
+Paperclip.interpolates :assets do |adjunto,  estilo|
+  BibliotecaDelEter::Application.config.assets.prefix
+end

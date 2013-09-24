@@ -1,6 +1,6 @@
-# Hay que largarlo tanto cuando se carga la página como cuando turbolinks la
+# Hay que bindear tanto cuando se carga la página como cuando turbolinks la
 # pide (el page:change)
-bindear = ->
+bindearTodo = ->
   # mejora el estilo default de los file uploaders
   $("form.carta :file").filestyle(
     buttonText: 'Subir',
@@ -10,7 +10,7 @@ bindear = ->
 
 $(document)
   .on 'page:change', ->
-    bindear()
+    bindearTodo()
 
 jQuery ->
-  bindear()
+  bindearTodo()

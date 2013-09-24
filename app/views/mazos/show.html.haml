@@ -1,0 +1,32 @@
+- cache mazo do
+  %h1= titulo
+  %h2= mazo.formato
+  .row-fluid
+    #mazo.span12
+
+      %h3 Mazo principal
+
+      - @mazo.demonios.contados.order(:tipo).each do |v|
+        = render partial: 'parte_del_mazo',
+            locals: { version: v }
+
+      - @mazo.versiones.contadas.order(:tipo).each do |v|
+        = render partial: 'parte_del_mazo',
+            locals: { version: v }
+
+      - if @mazo.suplente.present?
+        %h3 Mazo suplente
+        - @mazo.versiones_suplentes.contadas.order(:tipo).each do |v|
+          = render partial: 'parte_del_mazo',
+              locals: { version: v }
+
+  .row-fluid.botones
+    .span12
+      - if can? :edit, @mazo
+        = link_to 'Editar', edit_usuario_mazo_path(@usuario, @mazo),
+          class: 'btn btn-warning'
+      - if can? :delete, @mazo
+        = link_to 'Eliminar', [@usuario, @mazo], method: :delete,
+          data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
+
+      = link_to 'Otros mazos', usuario_mazos_path(@usuario), class: 'btn'

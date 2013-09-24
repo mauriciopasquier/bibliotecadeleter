@@ -10,6 +10,3 @@
         'Ilustraciones', opciones_de_ordenar
 
     = render @artistas
-
-  - if can? :create, Artista
-    = link_to 'Cargar Artista', new_artista_path

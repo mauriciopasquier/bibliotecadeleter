@@ -15,34 +15,9 @@
       display: inline-block;
       margin: 5px;
 
-      .no-disponible {
-        // El borde negroide de la carta
-        background-color: $borde-de-carta;
-        // TODO Si aumento 2px las imágenes no disponibles puedo sacar esto
-        border: 1px solid $borde-de-carta;
-        img {
-          @include border-radius(5px);
-          background: transparent $fondo 0 0 fixed;
-        }
-      }
-
       &.arte {
         // Más margen para los cuadrados
         margin: 1em;
-        .no-disponible {
-          // Los cuadrados no tienen redondez ni borde
-          border: none;
-          img { @include border-radius(0px); }
-        }
-      }
-
-      &.original {
-        // Para el borde de la carta
-        .no-disponible { padding: 15px; }
-      }
-      &.mini {
-        // Para el borde en miniatura
-        .no-disponible { padding: 9px; }
       }
     }
 
@@ -56,7 +31,30 @@
 
 .mostrar-tipo {
   margin-right: 5px;
-  select {
-    margin-bottom: 0;
+}
+
+// Estilos de bootstrap-select que bootstrap estaba pisando
+.pagination {
+  ul.dropdown-menu {
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    margin: 2px 0 0;
+    min-width: 160px;
+
+    li {
+      a, span {
+        float: none;
+        border-style: none;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .open > ul.dropdown-menu {
+    display: block;
   }
 }

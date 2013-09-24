@@ -12,17 +12,31 @@ class ImagenDecorator < ApplicationDecorator
   end
 
   def tag(estilo = :original)
-    h.image_tag object.archivo.url(estilo), alt: object.carta.nombre
+    [ h.image_tag(object.archivo.url(estilo),
+        alt: nombre_disponible, class: 'imagen'),
+
+      h.content_tag(:noscript, class: 'imagen') do
+        h.x_image_tag(object.archivo.url(estilo),
+          alt: nombre_disponible, class: 'imagen')
+      end ].join.html_safe
   end
 
   # genera una imagen/link a la versión.
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
   # `opciones` se le pasa a `link_to` directamente
+  # TODO DRY con decorador/version
   def link(estilo = :original, opciones = {})
-    h.link_to tag(estilo), [object.carta, object.version], opciones
+    h.link_to tag(estilo),
+      h.en_expansion_carta_path(object.carta, object.expansion), opciones
   end
 
   def linea_de_tipos
     version.linea_de_tipos
   end
+
+  private
+
+    def nombre_disponible
+      (object.carta.try(:nombre) || 'Imagen no disponible')
+    end
 end

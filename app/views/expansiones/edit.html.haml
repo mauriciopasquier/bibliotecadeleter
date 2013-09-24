@@ -2,7 +2,9 @@
 
 = render 'form'
 
-- if can? :read, expansion
-  = link_to 'Ver', expansion, class: 'btn'
-- if can? :read, Expansion
-  = link_to 'Otras expansiones', expansiones_path, class: 'btn'
+.row-fluid.botones
+  .span12
+    - if can? :read, expansion
+      = link_to 'Ver', expansion, class: 'btn'
+    - if can? :read, Expansion
+      = link_to 'Otras expansiones', expansiones_path, class: 'btn'

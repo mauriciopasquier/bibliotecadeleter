@@ -49,20 +49,20 @@ module ApplicationHelper
   end
 
   def link_to_mostrar(recurso, texto = 'Mostrar')
-    link_to recurso do
+    link_to recurso, title: 'Mostrar' do
       content_tag(:i, nil, class: 'icon-zoom-in') + texto
     end
   end
 
-  def link_to_editar(recurso)
-    link_to recurso do
-      content_tag(:i, nil, class: 'icon-pencil') + 'Editar'
+  def link_to_editar(recurso, texto = 'Editar')
+    link_to recurso, title: 'Editar' do
+      content_tag(:i, nil, class: 'icon-pencil') + texto
     end
   end
 
-  def link_to_eliminar(recurso)
-    link_to recurso, method: :delete, data: { confirm: t(:confirmar) } do
-      content_tag(:i, nil, class: 'icon-remove-circle') + 'Eliminar'
+  def link_to_eliminar(recurso, texto = 'Eliminar')
+    link_to recurso, method: :delete, data: { confirm: t(:confirmar) }, title: 'Eliminar' do
+      content_tag(:i, nil, class: 'icon-remove-circle') + texto
     end
   end
 
@@ -71,16 +71,43 @@ module ApplicationHelper
       "Si hay varios artistas, separalos con ','."].join(' ')
   end
 
+  def busqueda
+    [ versiones_tipos,
+      'versiones_texto',
+      'versiones_ambientacion',
+      'nombre'
+    ].join('_or_') + '_cont'
+  end
+
+  def versiones_tipos
+    ['versiones_tipo', 'versiones_supertipo', 'versiones_subtipo'].join('_or_')
+  end
+
+  def sendas
+    %w{ Caos Locura Muerte Poder Neutral }
+  end
+
+  def rarezas
+    %w{ Común Infrecuente Rara Épica Promocional }
+  end
+
+  def barra_de_busqueda
+    Carta.ransack
+  end
+
+  # data: no_turbolink
+  def no_turbolink
+    { 'no-turbolink' => true }
+  end
+
   private
 
     def alerta(tipo)
-      'alert fade in ' +
+      'alert alert-block fade in ' +
       case tipo
         when :error
           'alert-error'
-        when :notice
-          'alert-info'
-        when :success
+        when :notice, :success
           'alert-success'
         when :alert
           '' # Usamos el estilo de .alert default

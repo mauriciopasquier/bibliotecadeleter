@@ -1,6 +1,11 @@
 - cache lista do
   .row-fluid
     .nombre.span10
+      - if can? :update, lista
+        = link_to_editar edit_usuario_lista_path(@usuario, lista), ''
+      - if can? :delete, lista
+        = link_to_eliminar [@usuario, lista], ''
+
       - if can? :read, lista
         = link_to_mostrar [@usuario, lista], lista.nombre
       - else

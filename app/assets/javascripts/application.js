@@ -19,11 +19,14 @@
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/collapse
 //= require twitter/bootstrap/tab
+//= require twitter/bootstrap/dropdown
 //= require bootstrap-filestyle
 //= require bgpos
 //= require autocomplete-rails
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es
+//= require bootstrap-select
+//= require jquery.lazyload
 //
 //= Archivos de la aplicación a incluir
 //

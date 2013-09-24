@@ -1,11 +1,16 @@
 # encoding: utf-8
 class InicioController < ApplicationController
-
-  # Saltea la autorización de CanCan dado que no hay un recurso Inicio
-  skip_authorization_check
+  before_filter :cargar_usuario
+  skip_authorization_check only: [:bienvenida, :legales]
 
   def panel
-    @usuario = current_usuario.decorate
+    authorize! :manage, @usuario
     respond_with(@usuario)
   end
+
+  private
+
+    def cargar_usuario
+      @usuario = current_usuario
+    end
 end

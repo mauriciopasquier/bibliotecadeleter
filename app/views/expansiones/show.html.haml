@@ -24,8 +24,11 @@
         %dd= expansion.total
       - if expansion.notas?
         %dt Notas
-        %dd= expansion.notas
+        %dd= expansion.notas_con_formato
 
-- if can? :edit, expansion
-  = link_to 'Editar', edit_expansion_path(expansion), class: 'btn'
-= link_to 'Otras expansiones', expansiones_path, class: 'btn'
+.row-fluid.botones
+  .span12
+    - if can? :edit, expansion
+      = link_to 'Editar', edit_expansion_path(expansion),
+        class: 'btn btn-warning'
+    = link_to 'Otras expansiones', expansiones_path, class: 'btn'

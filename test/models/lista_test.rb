@@ -2,8 +2,8 @@
 require "./test/test_helper"
 
 describe Lista do
-  it "must be valid" do
-    build_stubbed(:lista).valid?.must_equal true
+  it "es válida" do
+    build(:lista).valid?.must_equal true
   end
 
   it 'debe calcular la cantidad de cartas en todos los slots' do

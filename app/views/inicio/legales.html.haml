@@ -3,7 +3,7 @@
   %p
     = link_to 'Inferno', 'http://playinferno.com'
     es &copy; de OMG! entretenimiento. Este sitio es &copy; de
-    != "#{link_to 'La Inventoría', 'http://lainventoria.com.ar'},"
+    != "#{mail_to 'contacto@lainventoria.com.ar', 'La Inventoría', encode: :hex},"
     y fue hecho principalmente con
     != "#{link_to 'Ruby on Rails', 'http://rubyonrails.org'},"
     = link_to 'Bootstrap', 'http://twitter.github.com/bootstrap'

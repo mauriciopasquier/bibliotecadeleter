@@ -24,11 +24,19 @@ module VersionesHelper
       @carta.canonica.imagenes.each do |i|
         @nueva_version.imagenes.build arte: i.arte
       end
-      @nueva_version
+      @nueva_version = @nueva_version.decorate
     end
   end
 
-  # Deshabilita nombre el form de versiones
+  def carta
+    @decorador_carta ||= @carta.decorate
+  end
+
+  def version
+    @decorador_version ||= @version.decorate
+  end
+
+  # Deshabilitar campos en el form de cartas para versiones
   def disabled?
     true
   end

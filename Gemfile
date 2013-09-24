@@ -24,19 +24,25 @@ gem 'ransack'
 gem 'sitemap'
 gem 'rails3-jquery-autocomplete'
 gem 'awesome_nested_fields'
+gem 'kramdown'
+gem 'lazyload-rails'
 
 # Controller
 gem 'responders'
 gem 'has_scope'
+# TODO sacar con rails 4
+gem 'strong_parameters', github: 'mauriciopasquier/strong_parameters', branch: 'permit-filters-array'
 
 # Server
 gem 'thin'
 gem 'cache_digests'
 gem 'rails3_libmemcached_store'
+gem 'rack-protection'
 
 # Autenticación/autorización
 gem 'devise'
 gem 'cancan'
+gem 'merit'
 
 # I18n
 gem 'rails-i18n'
@@ -57,6 +63,7 @@ group :assets do
   gem 'turbolinks'
   gem 'jquery-ui-rails'
   gem 'bootstrap-datepicker-rails'
+  gem 'bootstrap-select-rails'
 end
 
 group :test, :development do
@@ -69,9 +76,13 @@ group :development do
   gem 'mail_view'
   gem 'bullet'
   gem 'capistrano'
+  gem 'quiet_assets'
 end
 
 group :test do
   gem 'minitest-rails-capybara'
   gem 'turn'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'database_cleaner'
 end

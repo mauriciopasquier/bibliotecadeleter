@@ -2,7 +2,7 @@
 require "./test/test_helper"
 
 describe Artista do
-  it "must be valid" do
+  it "es válido" do
     build(:artista).valid?.must_equal true
   end
 

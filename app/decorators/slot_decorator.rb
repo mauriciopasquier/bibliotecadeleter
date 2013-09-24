@@ -8,13 +8,4 @@ class SlotDecorator < ApplicationDecorator
     object.inventario ||= Lista.new
     self
   end
-
-  # Estos modelos con tan poca información...
-  def nombre_y_expansion
-    if object.version.nombre.nil?
-      ''
-    else
-      version.nombre + " (#{version.expansion})"
-    end
-  end
 end
