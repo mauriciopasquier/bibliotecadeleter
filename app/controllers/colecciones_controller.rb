@@ -35,6 +35,8 @@ class ColeccionesController < ApplicationController
         ).order('expansion_id desc').includes(:imagenes)
       )
     )
+
+    respond_with(@coleccion, template: 'colecciones/show')
   end
 
   def sobrantes
@@ -45,6 +47,8 @@ class ColeccionesController < ApplicationController
         ).order('expansion_id desc').includes(:imagenes)
       )
     )
+
+    respond_with(@coleccion, template: 'colecciones/show')
   end
 
   private
@@ -54,6 +58,6 @@ class ColeccionesController < ApplicationController
     end
 
     def determinar_galeria
-      tipo_actual params[:mostrar].try(:[], :tipo) || :original
+      tipo_actual params[:mostrar].try(:[], :tipo) || :mini
     end
 end

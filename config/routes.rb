@@ -35,7 +35,7 @@ BibliotecaDelEter::Application.routes.draw do
       get :faltantes
       get :sobrantes
     end
-    r.resource :reserva,    except: [ :create, :destroy, :new ]
+    r.resource :reserva,    only: [ :show, :update ]
 
     r.resources :cartas, except: [ :edit ] do
       r.resources :versiones, only: [ :new, :edit, :destroy ]
