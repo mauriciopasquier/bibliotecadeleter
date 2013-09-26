@@ -1,5 +1,5 @@
 # encoding: utf-8
-module ReservaHelper
+module ReservasHelper
   include PaginacionHelper
 
    def titulo
