@@ -13,11 +13,11 @@ class ImagenDecorator < ApplicationDecorator
 
   def tag(estilo = :original)
     [ h.image_tag(object.archivo.url(estilo),
-        alt: nombre_disponible, class: 'imagen'),
+        alt: nombre_disponible, class: 'lazy'),
 
-      h.content_tag(:noscript, class: 'imagen') do
+      h.content_tag(:noscript) do
         h.x_image_tag(object.archivo.url(estilo),
-          alt: nombre_disponible, class: 'imagen')
+          alt: nombre_disponible)
       end ].join.html_safe
   end
 
