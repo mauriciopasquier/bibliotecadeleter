@@ -6,17 +6,15 @@ class ReservasController < ApplicationController
   load_and_authorize_resource through: :current_usuario, singleton: true
   load_and_authorize_resource :version, only: [:update]
 
+  before_filter :determinar_galeria, only: [:show]
+
   respond_to :json, only: [:update]
 
   def show
     @versiones = PaginadorDecorator.decorate apply_scopes(@reserva.versiones)
     tipo_actual params[:mostrar].try(:[], :tipo) || :original
 
-    respond_with(@reserva)
-  end
-
-  def edit
-    respond_with(@reserva)
+    respond_with(@reserva, template: 'colecciones/show')
   end
 
   def update
@@ -30,5 +28,9 @@ class ReservasController < ApplicationController
 
     def cargar_o_crear_slot
       @slot = @version.slot_en(@reserva) || @reserva.slots.build(version: @version)
+    end
+
+    def determinar_galeria
+      tipo_actual params[:mostrar].try(:[], :tipo) || :mini
     end
 end
