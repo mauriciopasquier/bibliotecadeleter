@@ -64,4 +64,7 @@ BibliotecaDelEter::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Para precompilación local de assets
+  config.assets.prefix = "/dev-#{config.assets.prefix[1..-1]}"
 end
