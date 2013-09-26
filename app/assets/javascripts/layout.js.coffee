@@ -12,6 +12,8 @@ bindearTodo = ->
 
   $('select').selectpicker()
 
+  $('img.lazy').lazyload()
+
 $(document)
   .on 'click', '.plegable', ->
     $(this).toggleClass('plegado').nextAll().toggle('fast')
