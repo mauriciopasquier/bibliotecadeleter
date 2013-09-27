@@ -13,7 +13,7 @@
     .row-fluid
       .span12.items
         = f.label :demonios
-        = f.nested_fields_for :slots, new_object: nuevo_slot(@mazo),
+        = f.nested_fields_for :slots, new_object: nuevo_slot(@mazo, 1),
           show_empty: true, render_template: false do |fs|
           - if fs
             .item= render partial: 'slots/slot',
