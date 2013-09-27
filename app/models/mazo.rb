@@ -22,6 +22,8 @@ class Mazo < ActiveRecord::Base
 
   friendly_id :nombre, use: :scoped, scope: :usuario
 
+  before_validation :arreglar_nombres
+
   validates_uniqueness_of :nombre, scope: :usuario_id
   validates_presence_of :nombre
   validates_presence_of :principal
@@ -36,4 +38,13 @@ class Mazo < ActiveRecord::Base
 
   delegate :cantidad, to: :principal, prefix: true, allow_nil: true
   delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
+
+  private
+
+    def arreglar_nombres
+      if nombre?
+        principal.nombre = principal.uuid if principal
+        suplente.nombre = suplente.uuid if suplente
+      end
+    end
 end

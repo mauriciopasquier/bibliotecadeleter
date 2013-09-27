@@ -4,6 +4,8 @@ class MazosController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
+  # TODO sacar cuando cancan contemple strong_parameters
+  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario
   load_and_authorize_resource through: :usuario
 
@@ -30,12 +32,13 @@ class MazosController < ApplicationController
   end
 
   def create
+    @mazo.usuario = current_usuario
     @mazo.save
     respond_with(@usuario, @mazo)
   end
 
   def update
-    @mazo.update_attributes(params[:mazo])
+    @mazo.update_attributes(parametros_permitidos)
     respond_with(@usuario, @mazo)
   end
 
@@ -49,5 +52,28 @@ class MazosController < ApplicationController
 
     def determinar_galeria
       tipo_actual params[:mostrar].try(:[], :tipo) || :original
+    end
+
+    def cargar_recurso
+      @mazo = Mazo.new(parametros_permitidos)
+    end
+
+    def parametros_permitidos
+      params.require(:mazo).permit(
+        :nombre, :formato, :usuario_id,
+        slots_attributes: [
+          :id, :_destroy, :cantidad, :version_id
+        ],
+        principal_attributes: {
+          slots_attributes: [
+            :id, :_destroy, :cantidad, :version_id
+          ]
+        },
+        suplente_attributes: {
+          slots_attributes: [
+            :id, :_destroy, :cantidad, :version_id
+          ]
+        }
+      )
     end
 end

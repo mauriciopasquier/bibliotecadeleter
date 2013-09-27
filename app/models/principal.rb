@@ -1,6 +1,6 @@
 # encoding: utf-8
 class Principal < Lista
-  has_one :mazo, inverse_of: :suplente
+  has_one :mazo, inverse_of: :principal
   has_one :suplente, through: :mazo
 
   # Porque estoy usando el belongs_to como parent?
@@ -9,6 +9,6 @@ class Principal < Lista
   private
 
     def touch_mazo
-      self.mazo.touch
+      self.mazo.try(:touch)
     end
 end

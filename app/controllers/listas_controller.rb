@@ -32,6 +32,7 @@ class ListasController < ApplicationController
   end
 
   def create
+    @lista.usuario = current_usuario
     @lista.save
     respond_with(current_usuario, @lista)
   end

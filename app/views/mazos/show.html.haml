@@ -3,7 +3,7 @@
 .row-fluid
   #mazo.span12
 
-    %h3 Mazo principal
+    %h3 Mazo principal (#{mazo.principal_cantidad})
 
     - @mazo.slots.contados.each do |slot|
       = render partial: 'parte_del_mazo',
@@ -14,7 +14,7 @@
           locals: { slot: slot.decorate }
 
     - if @mazo.suplente.present?
-      %h3 Mazo suplente
+      %h3 Mazo suplente (#{mazo.suplente_cantidad})
       - @mazo.suplente.slots.contados.each do |slot|
         = render partial: 'parte_del_mazo',
             locals: { slot: slot.decorate }
