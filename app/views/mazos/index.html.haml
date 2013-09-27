@@ -4,9 +4,13 @@
 
   #listas.tabla-fluida
     #encabezado.row-fluid
-      .nombre.span10= sort_link @busqueda, :nombre, 'Nombre',
+      .nombre.span4= sort_link @busqueda, :nombre, 'Nombre',
         opciones_de_ordenar
-      .cantidad.span2 Cantidad
+      .formato.span2= sort_link @busqueda, :formato, 'Formato',
+        opciones_de_ordenar
+      .cantidad.span2 Demonios
+      .cantidad.span2 Mazo principal
+      .cantidad.span2 Mazo suplente
 
     = render partial: 'mazo', collection: @mazos
 

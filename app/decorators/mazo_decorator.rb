@@ -12,4 +12,12 @@ class MazoDecorator < ListaDecorator
     object.suplente || object.build_suplente
     self
   end
+
+  def principal_cantidad
+    object.principal_cantidad || 0
+  end
+
+  def suplente_cantidad
+    object.suplente_cantidad || 0
+  end
 end

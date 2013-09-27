@@ -34,7 +34,6 @@ class Mazo < ActiveRecord::Base
   scope :publicos, where(publico: true)
   scope :recientes, order('updated_at desc').limit(10)
 
-  def cantidad
-    self.principal.cantidad + (self.suplente.try(:cantidad) || 0)
-  end
+  delegate :cantidad, to: :principal, prefix: true, allow_nil: true
+  delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
 end
