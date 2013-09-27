@@ -24,10 +24,10 @@ namespace :configs do
 
   desc "Crea los links simbólicos de los archivos de configuración"
   task :links, roles: :app do
-    run "ln -s #{shared_path}/config/devise.rb #{release_path}/config/initializers/devise.rb"
-    run "ln -s #{shared_path}/config/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
-    run "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "ln -s #{shared_path}/config/production.rb #{release_path}/config/environments/production.rb"
+    run "rm #{release_path}/config/initializers/devise.dist.rb; ln -s #{shared_path}/config/devise.rb #{release_path}/config/initializers/devise.rb"
+    run "rm #{release_path}/config/initializers/secret_token.dist.rb; ln -s #{shared_path}/config/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
+    run "rm #{release_path}/config/database.dist.yml; ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "rm #{release_path}/config/environments/production.dist.rb; ln -s #{shared_path}/config/production.rb #{release_path}/config/environments/production.rb"
 
     # Crea el link simbólico para las imágenes de las cartas
     run "ln -s #{shared_path}/cartas #{release_path}/public/cartas"

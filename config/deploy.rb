@@ -34,7 +34,7 @@ set :rails_env, 'production'
 set :assets_prefix, 'recursos'
 set :imagenes_seed, 'semillas'
 set :config_path, 'tmp/config'
-set :rake, 'bundle exec rake'
+set :rake, "RAILS_ENV=#{rails_env} bundle exec rake"
 set :rsync, 'rsync -avzh --rsh=ssh'
 
 after   'deploy:setup',             'configs:directorios'

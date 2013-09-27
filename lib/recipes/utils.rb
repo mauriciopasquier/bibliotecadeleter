@@ -7,7 +7,7 @@ namespace :utils do
   end
 
   desc 'Testear los stages'
-  task :uname do
-    run 'uname -a'
+  task :about do
+    run "uname -a;cd #{current_path}; #{rake} about"
   end
 end
