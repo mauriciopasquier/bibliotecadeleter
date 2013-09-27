@@ -1,8 +1,4 @@
-- cache version do
-  -# Si no tiene tipo es un demonio
-  = separador_para (version.tipo || version.supertipo).pluralize
+- cache slot do
+  = slot.separador
   .row-fluid
-    .slot.span12
-      -# TODO revisar que no se cachee la cantidad
-      = "#{version.cantidad} x "
-      = link_to version.nombre, version.carta
+    .slot.span12= slot.entrada
