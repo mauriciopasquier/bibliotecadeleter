@@ -11,5 +11,7 @@ FactoryGirl.define do
                                 inventario: lista)
       end
     end
+
+    factory :principal, class: Principal, parent: :lista
   end
 end

@@ -3,7 +3,7 @@ class Lista < ActiveRecord::Base
   include FriendlyId
 
   belongs_to :usuario
-  has_many :slots, as: :inventario, include: :version
+  has_many :slots, as: :inventario, include: :version, dependent: :destroy
   has_many :versiones, through: :slots
   has_many :cartas, through: :versiones
 
@@ -34,9 +34,5 @@ class Lista < ActiveRecord::Base
   # Cantidad de cartas en la lista
   def cantidad
     self.slots.sum(:cantidad)
-  end
-
-  def uuid
-    [ self.usuario_id, self.id, self.type ].join('#')
   end
 end

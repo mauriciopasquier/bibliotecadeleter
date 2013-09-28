@@ -9,8 +9,6 @@ class MazosController < ApplicationController
   load_and_authorize_resource :usuario
   load_and_authorize_resource through: :usuario
 
-  before_filter :determinar_galeria, only: [:show]
-
   def index
     @busqueda = apply_scopes(@mazos.unscoped)
     @mazos = PaginadorDecorator.decorate @busqueda.result
@@ -19,7 +17,6 @@ class MazosController < ApplicationController
   end
 
   def show
-    @versiones = PaginadorDecorator.decorate apply_scopes(@mazo.versiones)
     respond_with(@usuario, @mazo)
   end
 
@@ -32,7 +29,7 @@ class MazosController < ApplicationController
   end
 
   def create
-    @mazo.usuario = current_usuario
+    @mazo.usuario = @usuario
     @mazo.save
     respond_with(@usuario, @mazo)
   end
@@ -50,30 +47,28 @@ class MazosController < ApplicationController
 
   private
 
-    def determinar_galeria
-      tipo_actual params[:mostrar].try(:[], :tipo) || :original
-    end
-
     def cargar_recurso
       @mazo = Mazo.new(parametros_permitidos)
     end
 
     def parametros_permitidos
       params.require(:mazo).permit(
-        :nombre, :formato, :usuario_id,
+        :nombre, :formato,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ],
-        principal_attributes: {
+        principal_attributes: [
+          :id, :_destroy,
           slots_attributes: [
             :id, :_destroy, :cantidad, :version_id
           ]
-        },
-        suplente_attributes: {
+        ],
+        suplente_attributes: [
+          :id, :_destroy,
           slots_attributes: [
             :id, :_destroy, :cantidad, :version_id
           ]
-        }
+        ]
       )
     end
 end
