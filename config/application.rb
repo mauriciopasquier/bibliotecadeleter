@@ -1,3 +1,4 @@
+# encoding: utf-8
 require File.expand_path('../boot', __FILE__)
 
 require "active_record/railtie"
@@ -62,10 +63,14 @@ module BibliotecaDelEter
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.2.2'
+    config.assets.version = '1.2.3'
 
     # Traduzco el path
     config.assets.prefix = "/recursos"
+
+    # Para precompilación local de assets
+    # http://guides.rubyonrails.org/asset_pipeline.html#local-precompilation
+    config.assets.initialize_on_precompile = false
 
     config.generators do |g|
       g.test_framework :mini_test, spec: true, fixture: false

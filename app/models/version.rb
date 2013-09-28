@@ -35,12 +35,6 @@ class Version < ActiveRecord::Base
 
   delegate :nombre_y_expansiones, to: :carta, allow_nil: true
 
-  def self.contadas
-    joins(:slots).select('versiones.*, slots.cantidad').group(
-      'versiones.id, slots.cantidad')
-  end
-  scope :contados, contadas
-
   def self.normales
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
   end

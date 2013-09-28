@@ -23,22 +23,25 @@ describe Usuario do
   describe 'medallas' do
     it 'medallas devuelve badges' do
       usuario = create(:usuario)
-      usuario.add_badge SOCIO.id
       usuario.badges.must_equal usuario.medallas
     end
 
     it 'asigna muchas medallas' do
       usuario = create(:usuario)
+      actuales = usuario.medallas.size
+
       usuario.medallas = [SOCIO, BIBLIOTECARIO]
-      usuario.medallas.size.must_equal 2
+      usuario.medallas.size.must_equal actuales + 2
       usuario.medallas.include?(SOCIO).must_equal true
       usuario.medallas.include?(BIBLIOTECARIO).must_equal true
     end
 
     it 'asigna una medalla' do
       usuario = create(:usuario)
+      actuales = usuario.medallas.size
+
       usuario.medallas = SOCIO
-      usuario.medallas.size.must_equal 1
+      usuario.medallas.size.must_equal actuales + 1
       usuario.medallas.include?(SOCIO).must_equal true
     end
   end

@@ -14,6 +14,10 @@ class Slot < ActiveRecord::Base
      super(tipo.to_s.classify.constantize.base_class.to_s)
   end
 
+  def self.contados
+    joins(:version).select('versiones.*, slots.cantidad').order('versiones.tipo')
+  end
+
   private
 
     # TODO Funciona en postgresql. Testear con otras DB

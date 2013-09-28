@@ -4,10 +4,10 @@ class MazosController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
+  # TODO sacar cuando cancan contemple strong_parameters
+  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario
   load_and_authorize_resource through: :usuario
-
-  before_filter :determinar_galeria, only: [:show]
 
   def index
     @busqueda = apply_scopes(@mazos.unscoped)
@@ -17,7 +17,6 @@ class MazosController < ApplicationController
   end
 
   def show
-    @versiones = PaginadorDecorator.decorate apply_scopes(@mazo.versiones)
     respond_with(@usuario, @mazo)
   end
 
@@ -30,12 +29,13 @@ class MazosController < ApplicationController
   end
 
   def create
+    @mazo.usuario = @usuario
     @mazo.save
     respond_with(@usuario, @mazo)
   end
 
   def update
-    @mazo.update_attributes(params[:mazo])
+    @mazo.update_attributes(parametros_permitidos)
     respond_with(@usuario, @mazo)
   end
 
@@ -47,7 +47,28 @@ class MazosController < ApplicationController
 
   private
 
-    def determinar_galeria
-      tipo_actual params[:mostrar].try(:[], :tipo) || :original
+    def cargar_recurso
+      @mazo = Mazo.new(parametros_permitidos)
+    end
+
+    def parametros_permitidos
+      params.require(:mazo).permit(
+        :nombre, :formato,
+        slots_attributes: [
+          :id, :_destroy, :cantidad, :version_id
+        ],
+        principal_attributes: [
+          :id, :_destroy,
+          slots_attributes: [
+            :id, :_destroy, :cantidad, :version_id
+          ]
+        ],
+        suplente_attributes: [
+          :id, :_destroy,
+          slots_attributes: [
+            :id, :_destroy, :cantidad, :version_id
+          ]
+        ]
+      )
     end
 end

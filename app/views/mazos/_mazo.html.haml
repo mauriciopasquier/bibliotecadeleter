@@ -1,6 +1,6 @@
 - cache mazo do
   .row-fluid
-    .nombre.span10
+    .nombre.span4
       - if can? :update, mazo
         = link_to_editar edit_usuario_mazo_path(@usuario, mazo), ''
       - if can? :delete, mazo
@@ -10,4 +10,7 @@
         = link_to_mostrar [@usuario, mazo], mazo.nombre
       - else
         = mazo.nombre
-    .cantidad.span2= mazo.cantidad
+    .formato.span2= mazo.formato
+    .cantidad.span2= mazo.slots.size
+    .cantidad.span2= mazo.principal_cantidad
+    .cantidad.span2= mazo.suplente_cantidad

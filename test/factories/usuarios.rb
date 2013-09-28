@@ -4,7 +4,6 @@ FactoryGirl.define do
     nick { generate :cadena_unica }
     email
     password "algún password inolvidable"
-    password_confirmation { password }
     confirmed_at { DateTime.now }
   end
 end

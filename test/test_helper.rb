@@ -8,6 +8,9 @@ require "minitest/rails"
 # to the test group in the Gemfile and uncomment the following:
 require "minitest/rails/capybara"
 
+DatabaseCleaner.clean_with :truncation
+DatabaseCleaner.strategy = :transaction
+
 class MiniTest::Unit::TestCase
   # Para llamar a los métodos core de FactoryGirl directamente (build,
   # build_stubbed, create, attributes_for, y los *_list)
@@ -16,6 +19,9 @@ end
 
 class ActionController::TestCase
   include Devise::TestHelpers
+
+  before { DatabaseCleaner.start }
+  after { DatabaseCleaner.clean }
 
   def loguearse
     @request.env["devise.mapping"] = Devise.mappings[:usuario]
@@ -39,21 +45,21 @@ class ActionController::TestCase
   end
 end
 
-# Transactional fixtures do not work with Selenium tests, because Capybara
-# uses a separate server thread, which the transactions would be hidden
-# from. We hence use DatabaseCleaner to truncate our test database.
-DatabaseCleaner.strategy = :truncation
-
 # Capybara is intended to be used for automating a browser to test your
 # application’s features. This is different than the integration tests that
 # Rails provides, so you must use the Capybara::Rails::TestCase for your
 # feature tests.
 class Capybara::Rails::TestCase
   include ApplicationHelper
+  include Warden::Test::Helpers # login_as
 
   # Porque desarrollo en una torta
   Capybara.default_wait_time = 15
 
+  # Transactional fixtures do not work with Selenium tests, because Capybara
+  # uses a separate server thread, which the transactions would be hidden
+  # from. We hence use DatabaseCleaner to truncate our test database.
+  DatabaseCleaner.strategy = :truncation
   # Stop ActiveRecord from wrapping tests in transactions
   self.use_transactional_fixtures = false
 
@@ -63,13 +69,9 @@ class Capybara::Rails::TestCase
     Capybara.use_default_driver # Revert Capybara.current_driver to Capybara.default_driver
   end
 
+  # http://www.10hacks.com/rspec-capybara-devise-login-tests/
   def loguearse_como(usuario)
-    visit new_usuario_session_path
-    within '#usuarios form' do
-      fill_in Usuario.human_attribute_name('email'),    with: usuario.email
-      fill_in Usuario.human_attribute_name('password'), with: usuario.password
-      click_button I18n.t('devise.sessions.new.submit')
-    end
+    login_as usuario, scope: :usuario
     return usuario
   end
 

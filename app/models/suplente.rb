@@ -1,14 +1,22 @@
 # encoding: utf-8
 class Suplente < Lista
-  has_one :mazo, inverse_of: :suplente, autosave: true
+  belongs_to :mazo, inverse_of: :suplente, touch: true
   has_one :principal, through: :mazo
+  has_many :demonios, through: :mazo
 
-  # Porque estoy usando el belongs_to como parent?
-  after_save :touch_mazo
+  validates_presence_of :mazo
+
+  before_validation :nombrar
+
+  delegate :usuario_id, to: :mazo, allow_nil: true
+
+  friendly_id :nombrar, use: :slugged
 
   private
 
-    def touch_mazo
-      self.mazo.touch
+    def nombrar
+      self.nombre = [
+        mazo.try(:usuario_id), mazo.try(:nombre), :suplente
+      ].join(' ').parameterize
     end
 end

@@ -9,10 +9,10 @@ class Mazo < ActiveRecord::Base
   has_many :demonios, through: :slots, source: :version,
     conditions: { supertipo: 'Demonio' }
   # 1 principal con cantidad de cartas según el formato
-  belongs_to :principal, inverse_of: :mazo, dependent: :destroy,
+  has_one :principal, inverse_of: :mazo, dependent: :destroy,
     include: :slots
   # 1 suplente con cantidad de cartas según el formato
-  belongs_to :suplente, inverse_of: :mazo, dependent: :destroy,
+  has_one :suplente, inverse_of: :mazo, dependent: :destroy,
     include: :slots
 
   has_many :versiones, through: :principal
@@ -22,9 +22,8 @@ class Mazo < ActiveRecord::Base
 
   friendly_id :nombre, use: :scoped, scope: :usuario
 
+  validates_presence_of :nombre, :principal, :usuario_id
   validates_uniqueness_of :nombre, scope: :usuario_id
-  validates_presence_of :nombre
-  validates_presence_of :principal
 
   accepts_nested_attributes_for :principal, :suplente,
     allow_destroy: true, reject_if: :all_blank, update_only: true
@@ -34,7 +33,6 @@ class Mazo < ActiveRecord::Base
   scope :publicos, where(publico: true)
   scope :recientes, order('updated_at desc').limit(10)
 
-  def cantidad
-    self.principal.cantidad + (self.suplente.try(:cantidad) || 0)
-  end
+  delegate :cantidad, to: :principal, prefix: true, allow_nil: true
+  delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
 end
