@@ -13347,27 +13347,6 @@ versiones:
     - 001-hadouken
     - '0'
     - '0'
-  - - '700'
-    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Pon en juego
-      X fichas de aliado {Caos} Kirch 1 FUE, 1 RES, donde X es igual a la RES del
-      aliado destruido.
-    - Arma
-    - 
-    - 
-    - '+1'
-    - '+0'
-    - Caos
-    - 
-    - '13'
-    - Rara
-    - '2013-08-23 17:41:04.951996'
-    - '2013-08-24 17:42:14.877128'
-    - '623'
-    - true
-    - '16'
-    - 013-origen
-    - '3'
-    - '3'
   - - '701'
     - "Tu demonio hace 2 puntos de daño al aliado o demonio objetivo.\r\nRéplica {2}
       (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando su
@@ -13633,3 +13612,148 @@ versiones:
     - 031-origen
     - '4'
     - '4'
+  - - '714'
+    - "Furia (puede atacar inmediatamente).\r\nSiempre que Cancerberos ataque, si
+      no tienes cartas en tu mano, tu demonio hace 5 puntos de daño al aliado o demonio
+      objetivo."
+    - Aliado
+    - 
+    - Kirch
+    - '3'
+    - '3'
+    - Caos
+    - '"Quemó las cosechas y destruyó nuestros hogares. Cuando sólo esperaba la muerte,
+      Narghot apareció."'
+    - '13'
+    - Épica
+    - '2013-09-28 15:22:44.201263'
+    - '2013-09-28 15:22:44.249066'
+    - '636'
+    - true
+    - '16'
+    - 013-origen
+    - '5'
+    - '5'
+  - - '715'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Pon en juego
+      X fichas de aliado {caos} Kirch 1 FUE, 1 RES, donde X es igual a la RES del
+      aliado destruido.
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Caos
+    - 
+    - '16'
+    - Rara
+    - '2013-09-28 15:35:07.088314'
+    - '2013-09-28 15:35:07.103328'
+    - '637'
+    - true
+    - '16'
+    - 016-origen
+    - '3'
+    - '3'
+  - - '716'
+    - Los aliados que no tengan la habilidad de Protector entran en juego girados.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - '"¿Cómo ganar una batalla, si ni siquiera encuentras a tu enemigo?" - Dicho
+      de Nébora'
+    - '53'
+    - Infrecuente
+    - '2013-09-28 15:38:56.799391'
+    - '2013-09-28 15:38:56.815076'
+    - '638'
+    - true
+    - '16'
+    - 053-origen
+    - '0'
+    - '0'
+  - - '717'
+    - "Pon en juego el aliado objetivo de tu inferno.\r\nRéplica {2} (cuando juegues
+      esta carta, puedes jugar las copias de tu inferno pagando su Réplica)."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - '"Los libero de su prisión infernal." - Suma sacerdotisa'
+    - '71'
+    - Rara
+    - '2013-09-28 15:41:05.61039'
+    - '2013-09-28 15:41:05.626174'
+    - '639'
+    - true
+    - '16'
+    - 071-origen
+    - '5'
+    - '5'
+  - - '718'
+    - "Pon un contador de daño sobre un aliado enemigo.\r\nRéplica {1} (cuando juegues
+      esta carta, puedes jugar las copias de tu inferno pagando su Réplica)."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - Directo al corazón.
+    - '81'
+    - Común
+    - '2013-09-28 15:43:22.263287'
+    - '2013-09-28 15:43:22.280084'
+    - '640'
+    - true
+    - '16'
+    - 081-origen
+    - '2'
+    - '2'
+  - - '719'
+    - "El demonio objetivo pone la primera carta de su mazo en juego boca abajo como
+      recurso.\r\nRéplica {2} (cuando juegues esta carta, puedes jugar las copias
+      de tu inferno pagando su Réplica)."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - Carne, sangre y metal. Alimentos de un bosque insaciable.
+    - '102'
+    - Rara
+    - '2013-09-28 15:45:40.522615'
+    - '2013-09-28 15:45:40.537755'
+    - '641'
+    - true
+    - '16'
+    - 102-origen
+    - '3'
+    - '3'
+  - - '720'
+    - Réplica {1} (cuando juegues esta carta, puedes jugar las copias de tu inferno
+      pagando su Réplica).
+    - Aliado
+    - Ilimitado
+    - Hongo
+    - '0'
+    - '1'
+    - Neutral
+    - La casa, el árbol y el bosque les pertenecen. Prácticamente todo lo que tocan
+      es de su propiedad.
+    - '142'
+    - Común
+    - '2013-09-28 15:48:15.570698'
+    - '2013-09-28 15:48:15.587054'
+    - '642'
+    - true
+    - '16'
+    - 142-origen
+    - '0'
+    - '0'
