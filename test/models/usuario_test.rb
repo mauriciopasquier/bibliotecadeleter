@@ -45,4 +45,11 @@ describe Usuario do
       usuario.medallas.include?(SOCIO).must_equal true
     end
   end
+
+  describe 'código' do
+    it 'entra en la tabla' do
+      usuario = create(:usuario, codigo: '5430228822')
+      usuario.reload.codigo.must.equal '5430228822'
+    end
+  end
 end
