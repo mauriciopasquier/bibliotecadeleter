@@ -10,6 +10,8 @@ class Principal < Lista
 
   delegate :usuario_id, to: :mazo, allow_nil: true
 
+  friendly_id :nombrar, use: :slugged
+
   private
 
     def nombrar
