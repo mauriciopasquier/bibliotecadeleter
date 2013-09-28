@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130928024153) do
+ActiveRecord::Schema.define(:version => 20130928044406) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20130928024153) do
     t.integer  "mazo_id"
   end
 
+  add_index "listas", ["mazo_id"], :name => "index_listas_on_mazo_id"
   add_index "listas", ["slug"], :name => "index_listas_on_slug"
   add_index "listas", ["usuario_id"], :name => "index_listas_on_usuario_id"
 
