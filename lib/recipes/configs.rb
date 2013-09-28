@@ -39,7 +39,7 @@ namespace :configs do
   desc 'Actualiza las imágenes de las cartas'
   task :imagenes do
     find_servers_for_task(current_task).each do |server|
-      puts run_locally "rsync -av public/cartas/ #{user}@#{server.host}:#{shared_path}/cartas"
+      puts run_locally "rsync -av --del public/cartas/ #{user}@#{server.host}:#{shared_path}/cartas"
     end
   end
 end

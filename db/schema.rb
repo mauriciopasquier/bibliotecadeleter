@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130928044406) do
+ActiveRecord::Schema.define(:version => 20130928163533) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -185,12 +185,11 @@ ActiveRecord::Schema.define(:version => 20130928044406) do
     t.integer  "failed_attempts",        :default => 0
     t.string   "unlock_token"
     t.datetime "locked_at"
-    t.integer  "codigo"
     t.integer  "sash_id"
     t.integer  "level",                  :default => 0
+    t.string   "codigo"
   end
 
-  add_index "usuarios", ["codigo"], :name => "index_usuarios_on_codigo", :unique => true
   add_index "usuarios", ["confirmation_token"], :name => "index_usuarios_on_confirmation_token", :unique => true
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
   add_index "usuarios", ["nick"], :name => "index_usuarios_on_nick", :unique => true
