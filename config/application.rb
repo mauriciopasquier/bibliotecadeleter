@@ -22,6 +22,7 @@ module BibliotecaDelEter
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib/extensiones/)
+    config.autoload_paths += %W(#{config.root}/lib/responders/)
 
     # Sólo incluyo el helper del controlador
     config.action_controller.include_all_helpers = false

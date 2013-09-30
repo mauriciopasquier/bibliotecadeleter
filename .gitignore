@@ -23,6 +23,7 @@ config/database.yml
 config/initializers/secret_token.rb
 config/initializers/devise.rb
 public/recursos
+public/system
 
 # Ignoro las imágenes de paperclip hasta nuevo aviso
 public/cartas
