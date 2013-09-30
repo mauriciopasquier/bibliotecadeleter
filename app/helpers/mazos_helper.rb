@@ -20,8 +20,12 @@ module MazosHelper
   def separador_para(tipo)
     unless @ultimo == tipo
       @ultimo = tipo
-      content_tag(:p, tipo, class: 'titulo-tipo plegable')
+      content_tag(:p, tipo, class: 'titulo-tipo')
     end
+  end
+
+  def reiniciar_separador
+    @ultimo = nil
   end
 
   def nuevo_slot(inventario, cantidad = 4)

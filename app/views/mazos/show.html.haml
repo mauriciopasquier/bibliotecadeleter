@@ -14,6 +14,7 @@
           locals: { slot: slot.decorate }
 
     - if @mazo.suplente.present?
+      - reiniciar_separador
       %h3 Mazo suplente (#{mazo.suplente_cantidad})
       - @mazo.suplente.slots.contados.each do |slot|
         = render partial: 'parte_del_mazo',
