@@ -4,9 +4,6 @@ class Usuario < ActiveRecord::Base
 
   has_merit
 
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
@@ -47,6 +44,10 @@ class Usuario < ActiveRecord::Base
     end
 
     def asociarse
+      # Devise genera un nuevo token de confirmación si actualizamos el
+      # usuario. Cuando se agrega esta medalla el usuario todavía no ha tenido
+      # tiempo de confirmar, entonces la salteamos
+      skip_reconfirmation!
       self.add_badge SOCIO.id
     end
 end
