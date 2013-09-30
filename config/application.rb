@@ -72,6 +72,8 @@ module BibliotecaDelEter
     # http://guides.rubyonrails.org/asset_pipeline.html#local-precompilation
     config.assets.initialize_on_precompile = false
 
+    config.assets.paths << Rails.root.join('app', 'assets', 'documents')
+
     config.generators do |g|
       g.test_framework :mini_test, spec: true, fixture: false
       g.stylesheets false
