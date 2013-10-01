@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131001164741) do
+ActiveRecord::Schema.define(:version => 20131001222525) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -189,6 +189,7 @@ ActiveRecord::Schema.define(:version => 20131001164741) do
     t.integer  "sash_id"
     t.integer  "level",                  :default => 0
     t.string   "codigo"
+    t.string   "nombre"
   end
 
   add_index "usuarios", ["confirmation_token"], :name => "index_usuarios_on_confirmation_token", :unique => true

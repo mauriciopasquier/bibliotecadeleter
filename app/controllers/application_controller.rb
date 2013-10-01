@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   protected
 
     def agregar_parametros_permitidos
-      devise_parameter_sanitizer.for(:sign_up) << [ :nick, :codigo ]
+      devise_parameter_sanitizer.for(:sign_up) << [ :nick, :codigo, :nombre ]
     end
 
     # Redirije hacia atrás o en caso de no exister, vuelve al inicio
