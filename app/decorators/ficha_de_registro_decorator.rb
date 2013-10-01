@@ -9,7 +9,7 @@ class FichaDeRegistroDecorator < ApplicationDecorator
   end
 
   def usuario
-    object.usuario.nick || ''
+    object.usuario.nombre || ''
   end
 
   def codigo

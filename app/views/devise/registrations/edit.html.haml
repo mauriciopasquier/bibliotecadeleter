@@ -1,3 +1,4 @@
 %h1= titulo
 
-= render 'devise/shared/edit_registrations'
+= render partial: 'devise/shared/edit_registrations',
+  locals: { requisitos: [ :password ] }

@@ -22,6 +22,10 @@ module InicioHelper
     end
   end
 
+  def usuario
+    @decorator ||= @usuario.decorate
+  end
+
   # Métodos de devise para renderizar la registración desde este controlador
   def resource
     @usuario
@@ -38,9 +42,5 @@ module InicioHelper
 
   def resource_class
     devise_mapping.to
-  end
-
-  def usuario
-    @decorator ||= @usuario.decorate
   end
 end
