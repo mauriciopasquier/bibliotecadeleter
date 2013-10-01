@@ -47,19 +47,22 @@ describe MazosController do
 
       mazo.slots.count.must_equal 1
       mazo.suplente.must_be_nil
+      mazo.publico.must_equal true
 
-      put :update, usuario_id: @usuario, id: mazo, mazo: { nombre: 'otro' }.merge(
-        slots_attributes: { '0' => nuevo_slot, '1' => viejo_slot },
-        suplente_attributes: {
-          slots_attributes: { '0' => attributes_for(:slot) }
-        }
-      )
+      put :update, usuario_id: @usuario, id: mazo, mazo: {
+        publico: false, nombre: 'otro' }.merge(slots_attributes: {
+          '0' => nuevo_slot, '1' => viejo_slot },
+          suplente_attributes: {
+            slots_attributes: { '0' => attributes_for(:slot) }
+          }
+        )
 
       must_redirect_to usuario_mazo_path(@usuario, assigns(:mazo))
 
       mazo.reload.slots.count.must_equal 2
       mazo.nombre.must_equal 'otro'
       mazo.suplente.wont_be_nil
+      mazo.publico.must_equal false
     end
   end
 end
