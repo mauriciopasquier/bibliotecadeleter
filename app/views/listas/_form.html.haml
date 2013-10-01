@@ -2,9 +2,13 @@
   = f.error_messages
 
   .row-fluid
-    .span12
+    .span11
       = f.label :nombre
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
+    .span1
+      = f.label :publica
+      = f.check_box :publica, class: 'bootstrapear'
+      = f.label :publica, '&nbsp;'.html_safe, class: 'span12'
 
   .nestear
     .row-fluid

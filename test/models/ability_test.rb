@@ -39,6 +39,24 @@ describe Ability do
       end
     end
 
+    it 'no leen cosas privadas de otros usuarios' do
+      [ build_stubbed(:mazo, publico: false, usuario: @usuario),
+        build_stubbed(:lista, publica: false, usuario: @usuario)
+      ].each do |coso|
+        subject.can?(:read, coso ).must_equal true,
+          "No lee #{coso.class.name} privado propio"
+      end
+
+      otro = create(:usuario)
+
+      [ build_stubbed(:mazo, publico: false, usuario: otro),
+        build_stubbed(:lista, publica: false, usuario: otro)
+      ].each do |coso|
+        subject.can?(:read, coso ).wont_equal true,
+          "Lee #{coso.class.name} privado ajeno"
+      end
+    end
+
     it 'no editan el canon' do
       subject.canones.each do |modelo|
         subject.can?(:update, modelo).wont_equal true, "Edita #{modelo}"
@@ -57,6 +75,15 @@ describe Ability do
     it 'leen todo' do
       subject.modelos.each do |modelo|
         subject.can?(:read, modelo).must_equal true, "No lee #{modelo}"
+      end
+    end
+
+    it 'no leen cosas privadas' do
+      [ build_stubbed(:mazo, publico: false),
+        build_stubbed(:lista, publica: false)
+      ].each do |coso|
+        subject.can?(:read, coso).wont_equal true,
+          "Lee #{coso.class.name} privado"
       end
     end
   end
