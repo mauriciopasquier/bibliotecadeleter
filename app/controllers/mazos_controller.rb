@@ -55,7 +55,7 @@ class MazosController < ApplicationController
 
     def parametros_permitidos
       params.require(:mazo).permit(
-        :nombre, :formato,
+        :nombre, :formato, :publico,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ],
