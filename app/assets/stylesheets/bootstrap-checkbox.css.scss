@@ -1,0 +1,30 @@
+@import 'twitter/bootstrap/mixins';
+@import 'twitter/bootstrap/variables';
+@import 'variables';
+
+input[type="checkbox"].bootstrapear {
+  display: none;
+
+  & + label {
+    display: inline;
+    position: relative;
+
+    @include border-radius(5px);
+    padding: 4px 6px;
+    margin-left: 0;
+    min-height: 30px;
+    height: 30px;
+    border: 1px solid $gris-claro;
+    color: $gray;
+    &:after {
+      content: "No...";
+    }
+  }
+
+  &:checked + label {
+    &:after {
+      content: "Sí!";
+      font-weight: bold;
+    }
+  }
+}
