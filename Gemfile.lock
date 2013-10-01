@@ -18,6 +18,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    Ascii85 (1.0.2)
     actionmailer (3.2.14)
       actionpack (= 3.2.14)
       mail (~> 2.5.4)
@@ -45,6 +46,7 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    afm (0.2.0)
     ambry (0.3.1)
     amoeba (2.0.0)
       activerecord (>= 3.0)
@@ -129,6 +131,7 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     has_scope (0.5.1)
+    hashery (2.1.1)
     highline (1.6.19)
     hike (1.2.3)
     hirb (0.7.1)
@@ -199,10 +202,19 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.0)
       mime-types
+    pdf-reader (1.3.3)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.0)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
     pg (0.16.0)
     polyamorous (0.6.3)
       activerecord (>= 3.0)
     polyglot (0.3.3)
+    prawn (0.12.0)
+      pdf-reader (>= 0.9.0)
+      ttfunk (~> 1.0.2)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -252,6 +264,7 @@ GEM
     request_store (1.0.5)
     responders (0.9.3)
       railties (~> 3.1)
+    ruby-rc4 (0.1.5)
     rubyzip (0.9.9)
     sass (3.2.10)
     sass-rails (3.2.6)
@@ -290,6 +303,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    ttfunk (1.0.3)
     turbolinks (1.3.0)
       coffee-rails
     turn (0.9.6)
@@ -345,6 +359,7 @@ DEPENDENCIES
   minitest-rails-capybara
   paperclip
   pg
+  prawn
   pry-rails
   quiet_assets
   rack-protection
