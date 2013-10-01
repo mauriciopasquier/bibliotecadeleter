@@ -18,9 +18,9 @@ module FichaResponder
         fo.text_box @mazo.demonio, at: [195, 562], width: 260
 
         f.font_size 10 do
-          f.column_box [35, 520], columns: 2, width: 450, height: 245 do
+          f.column_box [35, 520], columns: 2, spacer: 0, width: 515, height: 245 do
             @mazo.cartas.each do |linea|
-              fo.text linea.cantidad + ' '*15 + linea.carta, leading: 3
+              fo.text linea.completa, leading: 3
             end
           end
         end
@@ -28,8 +28,6 @@ module FichaResponder
         fo.text_box @mazo.principal_cantidad, at: [ 300, 255 ], width: 50
 
         # Mazo suplente
-        @mazo.suplentes.each do |linea|
-        end
         fo.text_box @mazo.suplente_cantidad, at: [ 300, 118 ], width: 50
       end
     end

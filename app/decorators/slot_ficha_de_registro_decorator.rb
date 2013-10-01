@@ -7,4 +7,10 @@ class SlotFichaDeRegistroDecorator < ApplicationDecorator
   def cantidad
     object.cantidad.to_s
   end
+
+  def completa
+    [ cantidad,
+      Prawn::Text::NBSP * 15,
+      carta ].join
+  end
 end
