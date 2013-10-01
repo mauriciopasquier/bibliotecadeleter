@@ -8,4 +8,10 @@ class ListaDecorator < ApplicationDecorator
       slot.preparar
     end
   end
+
+  def visibilidad
+    h.content_tag :span, class: "badge #{publica ? 'badge-info' : ''}" do
+      object.publica ? 'Pública' : 'Privada'
+    end
+  end
 end
