@@ -8,7 +8,7 @@ module FichaResponder
     Prawn::Document.generate archivo, template: ficha_en_blanco do |f|
       f.with_options overflow: :shrink_to_fit, height: 10 do |fo|
         # Metadatos
-        fo.text_box @mazo.nombre, at: [ 0, 734 ], width: 150
+        fo.text_box @mazo.nombre, at: [ 0, 734 ], width: 150, height: 50
 
         # Datos personales
         fo.text_box @mazo.usuario, at: [ 70, 616 ], width: 260
@@ -28,6 +28,14 @@ module FichaResponder
         fo.text_box @mazo.principal_cantidad, at: [ 300, 255 ], width: 50
 
         # Mazo suplente
+        f.font_size 10 do
+          #f.column_box [35, 200], columns: 2, spacer: 0, width: 515, height: 50 do
+          f.column_box [35, 192], columns: 2, spacer: 0, width: 515, height: 60 do
+            @mazo.suplentes.each do |linea|
+              fo.text linea.completa, leading: 3
+            end
+          end
+        end
         fo.text_box @mazo.suplente_cantidad, at: [ 300, 118 ], width: 50
       end
     end
