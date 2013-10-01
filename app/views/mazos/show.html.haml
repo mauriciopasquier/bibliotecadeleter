@@ -29,4 +29,7 @@
       = link_to 'Eliminar', [@usuario, @mazo], method: :delete,
         data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
 
+    = link_to 'Para torneo', usuario_mazo_path(@usuario, @mazo, format: :ficha),
+      class: 'btn btn-info'
+
     = link_to 'Otros mazos', usuario_mazos_path(@usuario), class: 'btn'
