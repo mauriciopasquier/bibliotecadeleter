@@ -1,6 +1,6 @@
 # encoding: utf-8
 class Slot < ActiveRecord::Base
-  belongs_to :version, include: :carta
+  belongs_to :version, include: [ :carta, :expansion ]
   belongs_to :inventario, polymorphic: true
 
   # Restar las cantidades de los slots de `otra` lista de los slots de las
