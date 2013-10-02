@@ -15,8 +15,7 @@ class ExpansionesController < ApplicationController
   skip_authorization_check only: ANONS
 
   def index
-    # FIXME sacar sólo el order (con unscoped también sale accessible_by)
-    @busqueda = apply_scopes(@expansiones.unscoped)
+    @busqueda = apply_scopes @expansiones
     @expansiones = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@expansiones)

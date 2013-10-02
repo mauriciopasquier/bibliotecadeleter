@@ -12,7 +12,7 @@ class MazosController < ApplicationController
   respond_to :ficha, only: :show
 
   def index
-    @busqueda = apply_scopes(@mazos)
+    @busqueda = apply_scopes @mazos
     @mazos = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@mazos)
