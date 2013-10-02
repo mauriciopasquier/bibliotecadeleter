@@ -6,9 +6,10 @@
     #encabezado.row-fluid
       .nombre.span4= sort_link @busqueda, :nombre, 'Nombre',
         opciones_de_ordenar
+      .visibilidad.span2= sort_link @busqueda, :formato, 'Visibilidad',
+        opciones_de_ordenar
       .formato.span2= sort_link @busqueda, :formato, 'Formato',
         opciones_de_ordenar
-      .cantidad.span2 Demonios
       .cantidad.span2 Mazo principal
       .cantidad.span2 Mazo suplente
 

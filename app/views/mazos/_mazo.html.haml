@@ -5,12 +5,8 @@
         = link_to_editar edit_usuario_mazo_path(@usuario, mazo), ''
       - if can? :delete, mazo
         = link_to_eliminar [@usuario, mazo], ''
-
-      - if can? :read, mazo
-        = link_to_mostrar [@usuario, mazo], mazo.nombre
-      - else
-        = mazo.nombre
+      = link_to_mostrar [@usuario, mazo], mazo.nombre
+    .visibilidad.span2= mazo.visibilidad
     .formato.span2= mazo.formato
-    .cantidad.span2= mazo.slots.size
     .cantidad.span2= mazo.principal_cantidad
     .cantidad.span2= mazo.suplente_cantidad

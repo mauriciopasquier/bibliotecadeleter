@@ -21,9 +21,13 @@ class MazoDecorator < ListaDecorator
     object.suplente_cantidad || 0
   end
 
-  def visibilidad
+  def visibilidad_tag
     h.content_tag :span, class: "badge #{publico ? 'badge-info' : ''}" do
-      object.publico ? 'Público' : 'Privado'
+      visibilidad
     end
+  end
+
+  def visibilidad
+    object.publico ? 'Público' : 'Privado'
   end
 end
