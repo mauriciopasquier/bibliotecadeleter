@@ -16,7 +16,7 @@ cartas:
   - - '2'
     - Narghot, el irracional
     - '2013-02-19 17:49:26.621891'
-    - '2013-08-24 17:44:36.407408'
+    - '2013-10-02 02:52:26.388744'
     - narghot-el-irracional
   - - '3'
     - Syv, padre de la desgracia
@@ -36,7 +36,7 @@ cartas:
   - - '6'
     - Viden, el omnisciente
     - '2013-02-19 17:49:32.070155'
-    - '2013-08-24 17:44:36.420193'
+    - '2013-10-02 03:03:19.495744'
     - viden-el-omnisciente
   - - '7'
     - At Fjerne, el desterrado
@@ -46,7 +46,7 @@ cartas:
   - - '8'
     - Naamah, escultor de carne
     - '2013-02-19 17:49:34.765875'
-    - '2013-08-24 17:44:36.426757'
+    - '2013-10-02 03:00:26.105439'
     - naamah-escultor-de-carne
   - - '9'
     - Unwaj, nacida de la muerte
@@ -66,7 +66,7 @@ cartas:
   - - '12'
     - Zustatek, sabio espectante
     - '2013-02-19 17:49:40.169044'
-    - '2013-08-24 17:44:36.440148'
+    - '2013-10-02 03:05:09.451879'
     - zustatek-sabio-espectante
   - - '13'
     - Arder en llamas
@@ -3203,3 +3203,23 @@ cartas:
     - '2013-09-28 15:48:15.551063'
     - '2013-09-28 15:48:15.620105'
     - peste-fungica
+  - - '643'
+    - Pharakos, azote de guerra
+    - '2013-10-02 03:07:19.228628'
+    - '2013-10-02 03:07:19.369396'
+    - pharakos-azote-de-guerra
+  - - '644'
+    - Ubanna, del ritual infinito
+    - '2013-10-02 03:09:11.939843'
+    - '2013-10-02 03:09:12.030192'
+    - ubanna-del-ritual-infinito
+  - - '645'
+    - Ravel, maestro alquimista
+    - '2013-10-02 03:11:04.503815'
+    - '2013-10-02 03:11:04.576428'
+    - ravel-maestro-alquimista
+  - - '646'
+    - Derú, de las raíces antiguas
+    - '2013-10-02 03:13:26.588714'
+    - '2013-10-02 03:13:26.92977'
+    - deru-de-las-raices-antiguas

@@ -13757,3 +13757,158 @@ versiones:
     - 142-origen
     - '0'
     - '0'
+  - - '721'
+    - 'Destruir cuatro recursos enderezados que controles: Voltea Narghot.'
+    - 
+    - Demonio
+    - 
+    - '2'
+    - 
+    - Caos
+    - '"Destruir, necesito destruir… ¡Busquen más dominios para devastar!"'
+    - '1'
+    - Común
+    - '2013-10-02 02:52:26.132595'
+    - '2013-10-02 02:52:26.279691'
+    - '2'
+    - false
+    - '16'
+    - 001-origen
+    - 
+    - 
+  - - '722'
+    - Cuando tu mazo tenga quince o menos cartas, voltea Viden.
+    - 
+    - Demonio
+    - 
+    - '2'
+    - 
+    - Locura
+    - '"Conozco el día que perecerás. Adivinaste."'
+    - '4'
+    - Común
+    - '2013-10-02 02:54:16.874468'
+    - '2013-10-02 03:03:19.481428'
+    - '6'
+    - false
+    - '16'
+    - 004-origen
+    - 
+    - 
+  - - '723'
+    - 'Pon tres aliados de tu inferno en juego, bajo el control del enemigo objetivo:
+      Voltea Naamah.'
+    - 
+    - Demonio
+    - 
+    - '2'
+    - 
+    - Muerte
+    - '"Para lograr la grandeza, se necesitan hacer algunos sacrificios."'
+    - '5'
+    - Común
+    - '2013-10-02 03:00:26.039727'
+    - '2013-10-02 03:00:26.061486'
+    - '8'
+    - false
+    - '16'
+    - 005-origen
+    - 
+    - 
+  - - '724'
+    - '8: Voltea Zustatek.'
+    - 
+    - Demonio
+    - 
+    - '2'
+    - 
+    - Poder
+    - '"Mi esencia late en los corazones de cada árbol terrenal."'
+    - '8'
+    - Común
+    - '2013-10-02 03:05:09.401791'
+    - '2013-10-02 03:05:09.418874'
+    - '12'
+    - false
+    - '16'
+    - 008-origen
+    - 
+    - 
+  - - '725'
+    - Cuando 3 o más cartas de un enemigo sean destruidas este turno por efectos que
+      controles, voltea Pharakos.
+    - 
+    - Demonio
+    - 
+    - 
+    - 
+    - Caos
+    - '"Yo gané la primera batalla. No está en mis planes perder esta."'
+    - '2'
+    - Infrecuente
+    - '2013-10-02 03:07:19.297188'
+    - '2013-10-02 03:07:19.320548'
+    - '643'
+    - true
+    - '16'
+    - 002-origen
+    - 
+    - 
+  - - '726'
+    - Cuando juegues 3 o más rituales este turno, voltea Ubanna.
+    - 
+    - Demonio
+    - 
+    - 
+    - 
+    - Locura
+    - '"¿Tienes miedo? No huyas. Hay tantas, tantas cosas que me gustaría hacerte..."'
+    - '3'
+    - Infrecuente
+    - '2013-10-02 03:09:11.95944'
+    - '2013-10-02 03:09:11.978147'
+    - '644'
+    - true
+    - '16'
+    - 003-origen
+    - 
+    - 
+  - - '727'
+    - Cuando controles 4 o más objetos, voltea Ravel.
+    - 
+    - Demonio
+    - 
+    - 
+    - 
+    - Muerte
+    - '"Una gota de esto, una pizca de aquello... Bien, sólo necesito tu corazón.
+      No será difícil conseguirlo."'
+    - '6'
+    - Infrecuente
+    - '2013-10-02 03:11:04.528597'
+    - '2013-10-02 03:11:04.544805'
+    - '645'
+    - true
+    - '16'
+    - 006-origen
+    - 
+    - 
+  - - '728'
+    - Cuando tengas más cartas en tu inferno que en tu mazo, voltea Derú.
+    - 
+    - Demonio
+    - 
+    - 
+    - 
+    - Poder
+    - '"Conozco las raíces de este mundo, pues he vivido en ellas. Tu no puedes detenerme."'
+    - '7'
+    - Infrecuente
+    - '2013-10-02 03:13:26.64636'
+    - '2013-10-02 03:13:26.669777'
+    - '646'
+    - true
+    - '16'
+    - 007-origen
+    - 
+    - 
