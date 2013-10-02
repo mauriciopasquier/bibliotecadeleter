@@ -30,9 +30,9 @@ module CartasHelper
     end
   end
 
-  # Habilita nombre el form de cartas
-  def disabled?
-    false
+  # Nada bloqueado en el form de cartas
+  def bloqueados
+    [ ]
   end
 
   def carta

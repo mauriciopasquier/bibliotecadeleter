@@ -1,11 +1,11 @@
 # encoding: utf-8
 class Imagen < ActiveRecord::Base
-  belongs_to :version, touch: true
+  belongs_to :version, touch: true, inverse_of: :imagenes
   has_one :carta, through: :version
   has_one :expansion, through: :version
   has_and_belongs_to_many :artistas
 
-  validates_presence_of :version, inverse_of: :imagenes
+  validates_presence_of :version
 
   delegate  :senda, :nombre, :coste, :rareza, :ambientacion, :fue, :res,
             :numero, :tipo, :subtipo, :supertipo, :canonica, :coste_convertido,
