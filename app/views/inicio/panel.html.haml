@@ -55,4 +55,5 @@
           = link_to 'Ver todos', usuario_mazos_path(@usuario), class: 'btn'
 
   #carnet.tab-pane
-    = render 'devise/shared/edit_registrations'
+    = render partial: 'devise/shared/edit_registrations',
+      locals: { requisitos: [] }

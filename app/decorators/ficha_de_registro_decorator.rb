@@ -9,11 +9,11 @@ class FichaDeRegistroDecorator < ApplicationDecorator
   end
 
   def usuario
-    object.usuario.nick || ''
+    context[:usuario].try(:nombre) || ''
   end
 
   def codigo
-    object.usuario.codigo || ''
+    context[:usuario].try(:codigo) || ''
   end
 
   def cartas

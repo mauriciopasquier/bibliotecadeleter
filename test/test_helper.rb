@@ -26,7 +26,6 @@ class ActionController::TestCase
   def loguearse
     @request.env["devise.mapping"] = Devise.mappings[:usuario]
     sign_in usuario = create(:usuario)
-    usuario.add_badge SOCIO.id
     return usuario
   end
 

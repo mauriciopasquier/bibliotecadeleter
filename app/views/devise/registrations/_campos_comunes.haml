@@ -7,6 +7,13 @@
       placeholder: t('.nick.placeholder')
 
 .control-group
+  = f.label :nombre, class: 'control-label'
+  .controls
+    = f.text_field :nombre, class: 'span4',
+      placeholder: t('.nombre.placeholder')
+    %span.help-inline= t('.nombre.help')
+
+.control-group
   = f.label :codigo, class: 'control-label'
   .controls
     = f.text_field :codigo, class: 'span4',

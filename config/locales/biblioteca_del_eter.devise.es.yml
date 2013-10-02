@@ -6,8 +6,11 @@ es:
         nick:
           placeholder:    "No necesitamos tu nombre real :)"
         codigo:
-          placeholder:    "El que usás para los torneos"
-          help:           "Código de país + documento de identidad"
+          placeholder:    "Código de país + documento"
+          help:           "Es opcional, y lo podés agregar después"
+        nombre:
+          placeholder:    "Ahora sí tu nombre real"
+          help:           "Es opcional, y lo podés agregar después"
       new:
         password:
           help:           "Una sugerencia..."
