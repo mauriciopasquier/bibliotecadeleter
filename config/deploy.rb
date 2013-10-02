@@ -5,6 +5,7 @@ load 'lib/recipes/utils'
 load 'lib/recipes/db'
 load 'lib/recipes/passenger'
 load 'lib/recipes/precompilar_localmente'
+load 'lib/recipes/backup'
 
 # Multistage
 set :stages, ['localhost', 'staging', 'production']
