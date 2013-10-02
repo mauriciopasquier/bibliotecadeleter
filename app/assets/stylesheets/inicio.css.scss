@@ -1,10 +1,9 @@
-@import 'variables';
+@import 'twitter/bootstrap/mixins';
 
 .menu {
   li {
-    border-bottom: 1px solid transparent;
-    list-style-type: none;
-
-    &:hover { border-color: $gris-claro; }
+    a {
+      @include border-radius(5px);
+    }
   }
 }
