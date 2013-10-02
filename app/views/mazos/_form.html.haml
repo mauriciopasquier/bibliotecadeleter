@@ -5,9 +5,13 @@
     .span6
       = f.label :nombre
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
-    .span6
+    .span5
       = f.label :formato
       = f.text_field :formato, class: 'span12', required: true
+    .span1
+      = f.label :publico
+      = f.check_box :publico, class: 'bootstrapear'
+      = f.label :publico, '&nbsp;'.html_safe, class: 'span12'
 
   .nestear
     .row-fluid

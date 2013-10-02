@@ -1,6 +1,7 @@
 %h1= titulo
 
-= render partial: 'cartas/form', locals: { version: version.preparar }
+= render partial: 'cartas/form', locals: { version: version.preparar,
+  bloqueados: [ :numero, :nombre ] }
 
 .row-fluid.botones
   .span12

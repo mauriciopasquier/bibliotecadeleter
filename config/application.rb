@@ -22,6 +22,7 @@ module BibliotecaDelEter
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib/extensiones/)
+    config.autoload_paths += %W(#{config.root}/lib/responders/)
 
     # Sólo incluyo el helper del controlador
     config.action_controller.include_all_helpers = false
@@ -63,7 +64,7 @@ module BibliotecaDelEter
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.2.4'
+    config.assets.version = '1.3.0'
 
     # Traduzco el path
     config.assets.prefix = "/recursos"
@@ -71,6 +72,8 @@ module BibliotecaDelEter
     # Para precompilación local de assets
     # http://guides.rubyonrails.org/asset_pipeline.html#local-precompilation
     config.assets.initialize_on_precompile = false
+
+    config.assets.paths << Rails.root.join('app', 'assets', 'documents')
 
     config.generators do |g|
       g.test_framework :mini_test, spec: true, fixture: false

@@ -9,6 +9,8 @@ class MazosController < ApplicationController
   load_and_authorize_resource :usuario
   load_and_authorize_resource through: :usuario
 
+  respond_to :ficha, only: :show
+
   def index
     @busqueda = apply_scopes(@mazos.unscoped)
     @mazos = PaginadorDecorator.decorate @busqueda.result
@@ -53,7 +55,7 @@ class MazosController < ApplicationController
 
     def parametros_permitidos
       params.require(:mazo).permit(
-        :nombre, :formato,
+        :nombre, :formato, :publico,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ],

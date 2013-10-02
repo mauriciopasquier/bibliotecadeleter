@@ -8,8 +8,8 @@
     .row-fluid
       .span6
         = f.label :nombre
-        = f.text_field :nombre, class: 'span12', disabled: disabled?, required: true,
-          autofocus: true
+        = f.text_field :nombre, class: 'span12', required: true, autofocus: true,
+          disabled: bloqueados.include?(:nombre)
       .span3
         = fc.label :coste
         = fc.text_field :coste, class: 'span12'
@@ -53,7 +53,8 @@
           class: 'span12', name: 'expansion'
       .span2
         = fc.label 'Número'
-        = fc.text_field :numero, class: 'span12', disabled: disabled?
+        = fc.text_field :numero, class: 'span12',
+          disabled: bloqueados.include?(:numero)
       .span2
         = fc.label 'Fuerza'
         = fc.text_field :fue, class: 'span12'

@@ -35,9 +35,4 @@ module VersionesHelper
   def version
     @decorador_version ||= @version.decorate
   end
-
-  # Deshabilitar campos en el form de cartas para versiones
-  def disabled?
-    true
-  end
 end

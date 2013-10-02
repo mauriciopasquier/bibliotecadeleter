@@ -26,6 +26,7 @@ gem 'rails3-jquery-autocomplete'
 gem 'awesome_nested_fields'
 gem 'kramdown'
 gem 'lazyload-rails'
+gem 'prawn'
 
 # Controller
 gem 'responders'

@@ -103,7 +103,12 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def preparar
-    object.imagenes.any? || object.imagenes.build
+    case object.supertipo
+      when 'Demonio'
+        object.imagenes.build if object.imagenes.count < 2
+      else
+        object.imagenes.any? || object.imagenes.build
+    end
     self
   end
 

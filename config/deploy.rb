@@ -32,6 +32,7 @@ set :rails_env, 'production'
 
 # Variables de las librerías o configuraciones personales
 set :assets_prefix, 'recursos'
+set :backup_remoto, 'backups-yml'
 set :imagenes_seed, 'semillas'
 set :config_path, 'tmp/config'
 set :rake, "RAILS_ENV=#{rails_env} bundle exec rake"
@@ -41,5 +42,6 @@ after   'deploy:setup',             'configs:directorios'
 after   'deploy:setup',             'configs:archivos'
 after   'deploy:setup',             'configs:imagenes'
 before  'deploy:finalize_update',   'configs:links'
+before  'deploy:finalize_update',   'backup'
 after   'deploy:update_code',       'deploy:assets:precompilar_localmente'
 after   'deploy:restart',           'deploy:cleanup'

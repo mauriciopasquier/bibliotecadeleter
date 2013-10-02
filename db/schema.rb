@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130928163533) do
+ActiveRecord::Schema.define(:version => 20131001222525) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -104,11 +104,12 @@ ActiveRecord::Schema.define(:version => 20130928163533) do
 
   create_table "mazos", :force => true do |t|
     t.string   "formato"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.integer  "usuario_id"
     t.string   "nombre"
-    t.string   "slug",       :null => false
+    t.string   "slug",                         :null => false
+    t.boolean  "publico",    :default => true
   end
 
   add_index "mazos", ["slug"], :name => "index_mazos_on_slug"
@@ -188,6 +189,7 @@ ActiveRecord::Schema.define(:version => 20130928163533) do
     t.integer  "sash_id"
     t.integer  "level",                  :default => 0
     t.string   "codigo"
+    t.string   "nombre"
   end
 
   add_index "usuarios", ["confirmation_token"], :name => "index_usuarios_on_confirmation_token", :unique => true
