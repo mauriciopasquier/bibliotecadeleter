@@ -20,7 +20,6 @@ class Slot < ActiveRecord::Base
 
   private
 
-    # TODO Funciona en postgresql. Testear con otras DB
     # Para la sumatoria
     def self.negar(lista)
       "case
