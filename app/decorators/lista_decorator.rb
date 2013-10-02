@@ -9,9 +9,13 @@ class ListaDecorator < ApplicationDecorator
     end
   end
 
-  def visibilidad
+  def visibilidad_tag
     h.content_tag :span, class: "badge #{publica ? 'badge-info' : ''}" do
-      object.publica ? 'Pública' : 'Privada'
+      visibilidad
     end
+  end
+
+  def visibilidad
+    object.publica ? 'Pública' : 'Privada'
   end
 end
