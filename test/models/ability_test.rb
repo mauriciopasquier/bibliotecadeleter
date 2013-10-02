@@ -10,8 +10,8 @@ describe Ability do
 
     subject { Ability.new @usuario }
 
-    it 'manejan todo' do
-      subject.modelos.each do |modelo|
+    it 'manejan el cánon' do
+      subject.canones.each do |modelo|
         subject.can?(:manage, modelo).must_equal true
       end
     end

@@ -19,6 +19,7 @@ class CartasController < ApplicationController
   before_filter :check_barra_de_busqueda, only: :buscar
 
   def index
+    # FIXME sacar sólo el order (con unscoped también sale accessible_by)
     @busqueda = apply_scopes(@cartas.unscoped)
     @cartas = PaginadorDecorator.decorate @busqueda.result
     respond_with(@cartas)

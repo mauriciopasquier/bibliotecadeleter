@@ -12,7 +12,7 @@ class ListasController < ApplicationController
   before_filter :determinar_galeria, only: [:show]
 
   def index
-    @busqueda = apply_scopes(@listas.unscoped.normales)
+    @busqueda = apply_scopes(@listas.normales)
     @listas = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@listas)
@@ -24,27 +24,27 @@ class ListasController < ApplicationController
   end
 
   def new
-    respond_with(current_usuario, @lista)
+    respond_with(@usuario, @lista)
   end
 
   def edit
-    respond_with(current_usuario, @lista)
+    respond_with(@usuario, @lista)
   end
 
   def create
     @lista.usuario = current_usuario
     @lista.save
-    respond_with(current_usuario, @lista)
+    respond_with(@usuario, @lista)
   end
 
   def update
     @lista.update_attributes(parametros_permitidos)
-    respond_with(current_usuario, @lista)
+    respond_with(@usuario, @lista)
   end
 
   def destroy
     @lista.destroy
-    respond_with(current_usuario, @lista)
+    respond_with(@usuario, @lista)
   end
 
   def coleccion

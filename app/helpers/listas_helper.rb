@@ -5,7 +5,11 @@ module ListasHelper
   def titulo
     case params[:action]
       when 'index'
-        'Tus listas'
+        if @usuario == current_usuario
+          'Tus listas'
+        else
+          "Listas de #{@usuario.nick}"
+        end
       when 'show'
         lista.nombre
       when 'new'
@@ -21,7 +25,7 @@ module ListasHelper
     if @usuario == current_usuario
       "Tus otras listas"
     else
-      "Más listas de #{@usuario.nick}"
+      "Listas de #{@usuario.nick}"
     end
   end
 
