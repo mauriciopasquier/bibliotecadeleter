@@ -6,7 +6,8 @@ class CartasController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
-  ANONS = [ :autocomplete_carta_nombre ]
+  ANONS = [ :autocomplete_carta_nombre, :autocompletar_canonicas,
+            :autocompletar_demonios, :autocompletar_sendas ]
 
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create
