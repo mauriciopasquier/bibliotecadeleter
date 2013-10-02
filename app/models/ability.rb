@@ -24,7 +24,7 @@ class Ability
   private
 
     def bibliotecario
-      can :manage, :all
+      can :manage, canones
     end
 
     def socio
