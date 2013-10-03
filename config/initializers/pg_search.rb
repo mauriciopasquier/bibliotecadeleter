@@ -3,7 +3,8 @@ PgSearch.multisearch_options = {
   using: {
     tsearch: {
       prefix: true,
-      dictionary: 'spanish'
+      dictionary: 'spanish',
+      normalization: 2
     }
   }
 }
