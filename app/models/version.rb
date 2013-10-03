@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Version < ActiveRecord::Base
   include FriendlyId
+  include PgSearch
 
   attr_readonly   :coste_convertido
 
@@ -34,6 +35,10 @@ class Version < ActiveRecord::Base
   scope :neutral, where(senda: 'Neutral')
 
   delegate :nombre_y_expansiones, to: :carta, allow_nil: true
+
+  multisearchable against: [
+    :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda, :ambientacion,
+    :numero, :rareza, :coste ]
 
   def self.normales
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))

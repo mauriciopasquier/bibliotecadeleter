@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Carta < ActiveRecord::Base
   include FriendlyId
+  include PgSearch
 
   has_one :canonica,  class_name: 'Version', conditions: { canonica: true },
                       dependent: :destroy
@@ -22,6 +23,8 @@ class Carta < ActiveRecord::Base
   validates_presence_of :nombre
 
   delegate :prioridad, to: :canonica
+
+  multisearchable against: :nombre
 
   def self.con_todo
     joins(versiones: :expansion).select(
