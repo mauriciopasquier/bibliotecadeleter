@@ -21,7 +21,7 @@
           show_empty: true, render_template: false do |fs|
           - if fs
             .item= render partial: 'slots/slot',
-              locals: { f: fs, path: autocompletar_demonios_cartas_path }
+              locals: { f: fs, path: sugerir_cartas_path(:demonios) }
           - else
             .empty Nada cargado
 
@@ -41,8 +41,9 @@
               = fp.nested_fields_for :slots, new_object: nuevo_slot(@mazo.principal),
                   show_empty: true, render_template: false do |fps|
                 - if fps
+                  -# TODO filtrar los demonios
                   .item= render partial: 'slots/slot',
-                    locals: { f: fps, path: autocompletar_canonicas_cartas_path }
+                    locals: { f: fps, path: sugerir_cartas_path(:canonicas) }
                 - else
                   .empty Nada cargado
 
@@ -62,8 +63,9 @@
               = fs.nested_fields_for :slots, new_object: nuevo_slot(@mazo.suplente),
                   show_empty: true, render_template: false do |fss|
                 - if fss
+                  -# TODO filtrar los demonios
                   .item= render partial: 'slots/slot',
-                    locals: { f: fss, path: autocompletar_canonicas_cartas_path }
+                    locals: { f: fss, path: sugerir_cartas_path(:canonicas) }
                 - else
                   .empty Nada cargado
 

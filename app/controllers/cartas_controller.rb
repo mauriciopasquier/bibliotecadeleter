@@ -1,18 +1,12 @@
 # encoding: utf-8
 class CartasController < ApplicationController
-  autocomplete :carta, :nombre  # definido acá
-
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
-  ANONS = [ :autocomplete_carta_nombre, :autocompletar_canonicas,
-            :autocompletar_demonios, :autocompletar_sendas ]
-
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create
-  load_and_authorize_resource except: ANONS
-  skip_authorization_check only: ANONS
+  load_and_authorize_resource
 
   before_filter :cargar_version, only: :show
   before_filter :check_espia
@@ -68,47 +62,6 @@ class CartasController < ApplicationController
     else
       @cartas = @cartas.decorate
     end
-  end
-
-  # Redefinido para no pelear con rails3-jquery-autocomplete por el join
-  def autocomplete_carta_nombre(restricciones = nil, metodo = nil)
-    metodo ||= :nombre_y_expansion
-
-    resultado = if (t = params[:term]).present?
-      c = Carta.con_todo
-      c = restricciones.present? ? c.where(restricciones) : c
-      c.where(
-        Carta.arel_table[:nombre].matches("%#{params[:term]}%")
-      )
-    else
-      modelo.none
-    end.inject({}) do |hash, elem|
-      # Hash de id: value
-      hash[elem.send(metodo)] = {
-        label: elem.send(metodo),
-        value: elem.send(metodo),
-        version_id: elem.version_id
-      }
-      hash
-    end
-
-    render json: resultado
-  end
-
-  def autocompletar_canonicas
-    autocomplete_carta_nombre(
-      { versiones: { canonica: true } },
-      :nombre_y_expansiones)
-  end
-
-  def autocompletar_demonios
-    autocomplete_carta_nombre(versiones: { supertipo: 'Demonio' })
-  end
-
-  def autocompletar_sendas
-    autocomplete_carta_nombre(versiones: {
-      senda: [ params[:senda].capitalize, 'Neutral' ]
-    })
   end
 
   private

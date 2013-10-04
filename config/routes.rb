@@ -25,6 +25,10 @@ BibliotecaDelEter::Application.routes.draw do
   get 'legales' => 'inicio#legales'
   get 'panel' => 'inicio#panel'
 
+  scope path: 'sugerencias' do
+    get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
+  end
+
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
   masculinos  = { new: "nuevo", edit: "editar" }
   femeninos   = { new: "nueva", edit: "editar" }
@@ -42,10 +46,6 @@ BibliotecaDelEter::Application.routes.draw do
 
       collection do
         match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
-        get 'autocompletar_nombre'  => 'cartas#autocomplete_carta_nombre'
-        get 'autocompletar_demonios'
-        get 'autocompletar_sendas'
-        get 'autocompletar_canonicas'
       end
 
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
