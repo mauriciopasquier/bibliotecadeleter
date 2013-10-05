@@ -1,13 +1,12 @@
 # encoding: utf-8
 class ExpansionesController < ApplicationController
-  autocomplete :expansion, :nombre, full: true
   autocompletar_columnas :saga
 
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
-  ANONS = [ :autocomplete_expansion_nombre, :completar_saga ]
+  ANONS = [ :completar_saga ]
 
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create

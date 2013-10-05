@@ -27,6 +27,7 @@ BibliotecaDelEter::Application.routes.draw do
 
   scope path: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
+    get 'expansiones', to: 'sugerencias#expansiones', as: :sugerir_expansiones
   end
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
@@ -53,7 +54,6 @@ BibliotecaDelEter::Application.routes.draw do
 
     r.resources :expansiones do
       collection do
-        get 'autocompletar_nombre'  => 'expansiones#autocomplete_expansion_nombre'
         get 'completar_saga'
       end
     end

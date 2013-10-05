@@ -105,4 +105,40 @@ describe SugerenciasController do
       end
     end
   end
+  describe 'expansiones' do
+    describe 'rutas' do
+      it 'rutea al default' do
+        assert_routing(
+          { method: :get, path: '/sugerencias/expansiones' },
+          { controller: 'sugerencias', action: 'expansiones' }
+        )
+      end
+
+      it 'rutea con queries' do
+        assert_routing('sugerencias/expansiones',
+          { controller: 'sugerencias', action: 'expansiones', term: 'bag' },
+          { },
+          { term: 'bag' }
+        )
+      end
+    end
+    describe 'json' do
+      it 'sugiere por nombres' do
+        create(:expansion, nombre: 'bogus')
+        expansion = create(:expansion, nombre: 'sanata')
+
+        get :expansiones, term: 'sa'
+
+        must_respond_with :success
+        json.size.must_equal 1
+
+        llave, valores = json.first
+
+        llave.must_equal expansion.id.to_s
+        valores['value'].must_equal expansion.nombre
+        valores['label'].must_equal expansion.nombre
+      end
+
+    end
+  end
 end

@@ -19,7 +19,7 @@ class SugerenciasController < ApplicationController
   end
 
   def expansiones
-    #autocomplete :expansion, :nombre, full: true
+    autocompletar filtro(Expansion, :nombre), :id, :nombre
     #autocompletar_columnas :saga
   end
 

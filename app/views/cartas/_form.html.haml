@@ -49,7 +49,7 @@
         = fc.label 'Expansión'
         = fc.hidden_field :expansion_id, id: 'expansion_id'
         = fc.autocomplete_field :expansion,
-          autocompletar_nombre_expansiones_path, id_element: '#expansion_id',
+          sugerir_expansiones_path, id_element: '#expansion_id',
           class: 'span12', name: 'expansion'
       .span2
         = fc.label 'Número'
