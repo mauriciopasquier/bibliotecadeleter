@@ -66,6 +66,9 @@ BibliotecaDelEter::Application.routes.draw do
         get 'completar_rareza'
       end
     end
+
+    # Buscar documentos (search documents)
+    r.resources :busqueda, controller: 'documentos', only: [:new, :index, :create]
   end
 
   with_options path_names: masculinos do |r|

@@ -38,3 +38,6 @@ es:
       ilustraciones:
         one:    '1 ilustración'
         other:  '%{count} ilustraciones'
+  documentos:
+    new:
+      busqueda: 'Busca listas, mazos, expansiones, cartas, artistas, lo que sea!'
