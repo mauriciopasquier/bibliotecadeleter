@@ -20,6 +20,7 @@ feature 'Colección/Reserva' do
 
   feature 'logueado' do
     background { @usuario = loguearse }
+    after { logout }
 
     scenario "actualiza con ajax", js: true do
       version = create(:version_con_carta)

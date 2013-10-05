@@ -40,6 +40,7 @@ feature "Usuario" do
 
   feature "logueado" do
     background { @usuario = loguearse }
+    after { logout }
 
     scenario "visita la bienvenida" do
       visit root_path
