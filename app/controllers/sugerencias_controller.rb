@@ -24,7 +24,7 @@ class SugerenciasController < ApplicationController
   end
 
   def artistas
-    #autocomplete :artista, :nombre, full: true
+    autocompletar filtro(Artista, :nombre), :id, :nombre
   end
 
   private

@@ -40,7 +40,7 @@ class ActionController::TestCase
   end
 
   def json
-    @json ||= ActiveSupport::JSON.decode @response.body
+    ActiveSupport::JSON.decode @response.body
   end
 end
 

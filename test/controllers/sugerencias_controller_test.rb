@@ -102,9 +102,16 @@ describe SugerenciasController do
 
         must_respond_with :success
         json.size.must_equal 2
+
+        get :cartas, term: 'sa',
+          sendas: ['neutral', 'locura']
+
+        must_respond_with :success
+        json.size.must_equal 3
       end
     end
   end
+
   describe 'expansiones' do
     describe 'rutas' do
       it 'rutea al default' do
@@ -138,7 +145,42 @@ describe SugerenciasController do
         valores['value'].must_equal expansion.nombre
         valores['label'].must_equal expansion.nombre
       end
+    end
+  end
 
+  describe 'artistas' do
+    describe 'rutas' do
+      it 'rutea al default' do
+        assert_routing(
+          { method: :get, path: '/sugerencias/artistas' },
+          { controller: 'sugerencias', action: 'artistas' }
+        )
+      end
+
+      it 'rutea con queries' do
+        assert_routing('sugerencias/artistas',
+          { controller: 'sugerencias', action: 'artistas', term: 'bag' },
+          { },
+          { term: 'bag' }
+        )
+      end
+    end
+    describe 'json' do
+      it 'sugiere por nombres' do
+        create(:artista, nombre: 'bogus')
+        artista = create(:artista, nombre: 'sanata')
+
+        get :artistas, term: 'sa'
+
+        must_respond_with :success
+        json.size.must_equal 1
+
+        llave, valores = json.first
+
+        llave.must_equal artista.id.to_s
+        valores['value'].must_equal artista.nombre
+        valores['label'].must_equal artista.nombre
+      end
     end
   end
 end

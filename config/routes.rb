@@ -28,6 +28,7 @@ BibliotecaDelEter::Application.routes.draw do
   scope path: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
     get 'expansiones', to: 'sugerencias#expansiones', as: :sugerir_expansiones
+    get 'artistas', to: 'sugerencias#artistas', as: :sugerir_artistas
   end
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
@@ -69,11 +70,7 @@ BibliotecaDelEter::Application.routes.draw do
   end
 
   with_options path_names: masculinos do |r|
-    r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ] do
-      collection do
-        get 'autocompletar_nombre'  => 'artistas#autocomplete_artista_nombre'
-      end
-    end
+    r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ]
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
