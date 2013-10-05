@@ -25,10 +25,15 @@ BibliotecaDelEter::Application.routes.draw do
   get 'legales' => 'inicio#legales'
   get 'panel' => 'inicio#panel'
 
-  scope path: 'sugerencias' do
+  scope path: 'sugerencias', controller: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
     get 'expansiones', to: 'sugerencias#expansiones', as: :sugerir_expansiones
     get 'artistas', to: 'sugerencias#artistas', as: :sugerir_artistas
+    get 'valores_expansion_saga'
+    get 'valores_version_tipo'
+    get 'valores_version_subtipo'
+    get 'valores_version_supertipo'
+    get 'valores_version_rareza'
   end
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
@@ -53,20 +58,7 @@ BibliotecaDelEter::Application.routes.draw do
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
     end
 
-    r.resources :expansiones do
-      collection do
-        get 'completar_saga'
-      end
-    end
-
-    r.resources :versiones, only: [] do
-      collection do
-        get 'completar_tipo'
-        get 'completar_supertipo'
-        get 'completar_subtipo'
-        get 'completar_rareza'
-      end
-    end
+    r.resources :expansiones
   end
 
   with_options path_names: masculinos do |r|

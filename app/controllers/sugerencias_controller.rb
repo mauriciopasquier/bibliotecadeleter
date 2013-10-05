@@ -1,4 +1,6 @@
 class SugerenciasController < ApplicationController
+  autocompletar_valores :expansion, :saga
+  autocompletar_valores :version, :tipo, :supertipo, :subtipo
 
   skip_authorization_check
   respond_to :json
@@ -10,17 +12,12 @@ class SugerenciasController < ApplicationController
       when 'demonios'
         autocompletar_demonios
       else
-        autocompletar filtro(Carta.con_todo, :nombre), :version_id, :nombre_y_expansion
+        autocompletar filtro(Carta.con_todo, :nombre, sendas_pedidas), :version_id, :nombre_y_expansion
     end
-  end
-
-  def versiones
-    #autocompletar_columnas :tipo, :supertipo, :subtipo
   end
 
   def expansiones
     autocompletar filtro(Expansion, :nombre), :id, :nombre
-    #autocompletar_columnas :saga
   end
 
   def artistas
@@ -29,37 +26,19 @@ class SugerenciasController < ApplicationController
 
   private
 
-    # Busca y restringe
-    def filtro(modelo, columna, restriccion = { })
-      if term.present?
-        modelo.where(restriccion).where(sendas_pedidas).where(
-          modelo.arel_table[columna].matches("%#{term}%")
-        ).limit(10)
-      else
-        modelo.none
-      end
-    end
-
-    # Arma el json y lo devuelve
-    def autocompletar(resultados, llave, valor)
-      h = resultados.inject({}) do |hash, elem|
-        hash[elem.send(llave)] = {
-          label: elem.send(valor),
-          value: elem.send(valor),
-          version_id: elem.send(llave)
-        }
-        hash
-      end
-      render json: h
-    end
-
     def autocompletar_canonicas
-      resultados = filtro Carta.con_todo, :nombre, { versiones: { canonica: true } }
+      resultados = filtro Carta.con_todo, :nombre, {
+        versiones: { canonica: true }
+      }.deep_merge(sendas_pedidas)
+
       autocompletar resultados, :version_id, :nombre_y_expansiones
     end
 
     def autocompletar_demonios
-      resultados = filtro Carta.con_todo, :nombre, { versiones: { supertipo: 'Demonio' } }
+      resultados = filtro Carta.con_todo, :nombre, {
+        versiones: { supertipo: 'Demonio' }
+      }.deep_merge(sendas_pedidas)
+
       autocompletar resultados, :version_id, :nombre_y_expansion
     end
 
@@ -69,9 +48,5 @@ class SugerenciasController < ApplicationController
       else
         { }
       end
-    end
-
-    def term
-      params[:term]
     end
 end

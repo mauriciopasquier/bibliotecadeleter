@@ -1,12 +1,7 @@
 # encoding: utf-8
 class VersionesController < ApplicationController
-  autocompletar_columnas :tipo, :supertipo, :subtipo
-
-  ANONS = [ :completar_tipo, :completar_supertipo, :completar_subtipo ]
-
-  load_and_authorize_resource :carta, except: ANONS
-  load_and_authorize_resource through: :carta, except: ANONS
-  skip_authorization_check only: ANONS
+  load_and_authorize_resource :carta
+  load_and_authorize_resource through: :carta
 
   before_filter :check_espia
 
