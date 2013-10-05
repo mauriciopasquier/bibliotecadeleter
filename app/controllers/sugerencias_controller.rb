@@ -10,7 +10,7 @@ class SugerenciasController < ApplicationController
       when 'demonios'
         autocompletar_demonios
       else
-        autocomplete_carta_nombre
+        autocompletar filtro(Carta.con_todo, :nombre), :version_id, :nombre_y_expansion
     end
   end
 
@@ -29,39 +29,38 @@ class SugerenciasController < ApplicationController
 
   private
 
-    # Redefinido para no pelear con rails3-jquery-autocomplete por el join
-    def autocomplete_carta_nombre(restricciones = { }, metodo = nil)
-      metodo ||= :nombre_y_expansion
-
-      resultado = if (t = params[:term]).present?
-        c = Carta.con_todo.where(restricciones).where(sendas_pedidas)
-
-        c.where(
-          Carta.arel_table[:nombre].matches("%#{params[:term]}%")
-        )
+    # Busca y restringe
+    def filtro(modelo, columna, restriccion = { })
+      if term.present?
+        modelo.where(restriccion).where(sendas_pedidas).where(
+          modelo.arel_table[columna].matches("%#{term}%")
+        ).limit(10)
       else
-        Carta.none
-      end.inject({}) do |hash, elem|
-        # Hash de id: value
-        hash[elem.version_id] = {
-          label: elem.send(metodo),
-          value: elem.send(metodo),
-          version_id: elem.version_id
+        modelo.none
+      end
+    end
+
+    # Arma el json y lo devuelve
+    def autocompletar(resultados, llave, valor)
+      h = resultados.inject({}) do |hash, elem|
+        hash[elem.send(llave)] = {
+          label: elem.send(valor),
+          value: elem.send(valor),
+          version_id: elem.send(llave)
         }
         hash
       end
-
-      render json: resultado
+      render json: h
     end
 
     def autocompletar_canonicas
-      autocomplete_carta_nombre(
-        { versiones: { canonica: true } },
-        :nombre_y_expansiones)
+      resultados = filtro Carta.con_todo, :nombre, { versiones: { canonica: true } }
+      autocompletar resultados, :version_id, :nombre_y_expansiones
     end
 
     def autocompletar_demonios
-      autocomplete_carta_nombre(versiones: { supertipo: 'Demonio' })
+      resultados = filtro Carta.con_todo, :nombre, { versiones: { supertipo: 'Demonio' } }
+      autocompletar resultados, :version_id, :nombre_y_expansion
     end
 
     def sendas_pedidas
@@ -70,5 +69,9 @@ class SugerenciasController < ApplicationController
       else
         { }
       end
+    end
+
+    def term
+      params[:term]
     end
 end
