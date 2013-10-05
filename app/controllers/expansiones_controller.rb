@@ -1,18 +1,12 @@
 # encoding: utf-8
 class ExpansionesController < ApplicationController
-  autocomplete :expansion, :nombre, full: true
-  autocompletar_columnas :saga
-
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
-  ANONS = [ :autocomplete_expansion_nombre, :completar_saga ]
-
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create
-  load_and_authorize_resource except: ANONS
-  skip_authorization_check only: ANONS
+  load_and_authorize_resource
 
   def index
     @busqueda = apply_scopes @expansiones
