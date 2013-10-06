@@ -35,8 +35,7 @@ class Ability
 
     def anonimo
       can :read, :all
-      cannot :read, Mazo, publico: false
-      cannot :read, Lista, publica: false
+      cannot :read, [ Mazo, Lista ], visible: false
     end
 
     # Ordenadas por prioridad de mayor a menor, para la aplicación de reglas

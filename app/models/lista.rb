@@ -15,7 +15,7 @@ class Lista < ActiveRecord::Base
   accepts_nested_attributes_for :slots, allow_destroy: true,
     reject_if: :all_blank
 
-  scope :publicas, where(publica: true)
+  scope :visibles, where(visible: true)
   scope :recientes, order('updated_at desc').limit(10)
 
   %w{Lista Coleccion Reserva Principal Suplente}.each do |tipo|

@@ -41,8 +41,8 @@ class Usuario < ActiveRecord::Base
   private
 
     def crear_listas
-      self.create_coleccion nombre: "Todas tus cartas", publica: false
-      self.create_reserva nombre: "Playsets o buscadas", publica: false
+      self.create_coleccion nombre: "Todas tus cartas", visible: false
+      self.create_reserva nombre: "Playsets o buscadas", visible: false
       self
     end
 

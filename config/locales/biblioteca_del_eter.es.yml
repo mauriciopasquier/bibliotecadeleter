@@ -11,9 +11,6 @@ es:
       mazo:
         principal: 'Mazo principal'
         suplente: 'Mazo suplente'
-        publico: 'Público'
-      lista:
-        publica: 'Pública'
     errors:
       models:
         version:

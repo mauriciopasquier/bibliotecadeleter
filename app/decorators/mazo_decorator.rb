@@ -22,12 +22,12 @@ class MazoDecorator < ListaDecorator
   end
 
   def visibilidad_tag
-    h.content_tag :span, class: "badge #{publico ? 'badge-info' : ''}" do
+    h.content_tag :span, class: "badge #{visible ? 'badge-info' : ''}" do
       visibilidad
     end
   end
 
   def visibilidad
-    object.publico ? 'Público' : 'Privado'
+    object.visible ? 'Público' : 'Privado'
   end
 end

@@ -30,7 +30,7 @@ class Mazo < ActiveRecord::Base
   accepts_nested_attributes_for :slots,
     allow_destroy: true, reject_if: :all_blank, limit: 2
 
-  scope :publicos, where(publico: true)
+  scope :visibles, where(visible: true)
   scope :recientes, order('updated_at desc').limit(10)
 
   delegate :cantidad, to: :principal, prefix: true, allow_nil: true
