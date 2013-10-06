@@ -3,7 +3,7 @@ module InicioHelper
   include DeviseHelper
 
   def buscar_demonios
-    buscar_cartas_path(
+    cartas_busqueda_index_path(
       incluir: [versiones_tipos],
       q: {  busqueda => 'demonio',
             'versiones_senda_eq_any' => sendas } )

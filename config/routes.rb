@@ -41,7 +41,6 @@ BibliotecaDelEter::Application.routes.draw do
       r.resources :versiones, only: [ :new, :edit, :destroy ]
 
       collection do
-        match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
         get 'autocompletar_nombre'  => 'cartas#autocomplete_carta_nombre'
         get 'autocompletar_demonios'
         get 'autocompletar_sendas'
@@ -68,7 +67,11 @@ BibliotecaDelEter::Application.routes.draw do
     end
 
     # Buscar documentos (search documents)
-    r.resources :busqueda, controller: 'documentos', only: [:new, :index, :create]
+    r.resources :busqueda, controller: 'documentos', only: [:new, :index, :create] do
+      collection do
+        match 'cartas' => 'cartas#buscar', via: [:get, :post], as: :cartas
+      end
+    end
   end
 
   with_options path_names: masculinos do |r|
