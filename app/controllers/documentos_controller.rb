@@ -8,12 +8,13 @@ class DocumentosController < ApplicationController
   end
 
   def create
+    session.delete(:busqueda)
     session.merge! parametros_permitidos
     redirect_to busqueda_index_path
   end
 
   def index
-    @busqueda = session.delete(:busqueda)
+    @busqueda = session[:busqueda]
     @documentos = PgSearch.multisearch(@busqueda).reorder(
       'searchable_type, pg_search_rank').includes(:searchable)
 
