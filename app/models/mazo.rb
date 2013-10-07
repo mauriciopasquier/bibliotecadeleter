@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Mazo < ActiveRecord::Base
   include FriendlyId
+  include PgSearch
 
   belongs_to :usuario
 
@@ -8,6 +9,8 @@ class Mazo < ActiveRecord::Base
   has_many :slots, as: :inventario, dependent: :destroy, include: :version
   has_many :demonios, through: :slots, source: :version,
     conditions: { supertipo: 'Demonio' }
+  has_many :cartas_de_demonio, through: :demonios, source: :carta
+
   # 1 principal con cantidad de cartas según el formato
   has_one :principal, inverse_of: :mazo, dependent: :destroy,
     include: :slots
@@ -35,4 +38,13 @@ class Mazo < ActiveRecord::Base
 
   delegate :cantidad, to: :principal, prefix: true, allow_nil: true
   delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
+
+  multisearchable against: [ :nombre, :usuario_nombre,
+    :nombres_de_las_cartas ], if: :persisted?
+
+  delegate :nombre, to: :usuario, allow_nil: true, prefix: true
+
+  def nombres_de_las_cartas
+    (cartas + cartas_suplentes + cartas_de_demonio).uniq.collect(&:nombre).join(' ')
+  end
 end
