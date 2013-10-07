@@ -81,7 +81,7 @@ cartas:
   - - '15'
     - Buscador de violencia perdida
     - '2013-02-19 17:49:42.85626'
-    - '2013-08-24 17:44:36.450002'
+    - '2013-10-07 18:38:21.681298'
     - buscador-de-violencia-perdida
   - - '16'
     - Caminante cordillera de fuego
@@ -96,7 +96,7 @@ cartas:
   - - '18'
     - Comandante nungnarh
     - '2013-02-19 17:49:45.00815'
-    - '2013-08-24 17:44:36.45996'
+    - '2013-10-07 18:40:17.689147'
     - comandante-nungnarh
   - - '19'
     - Criador de kirchs
@@ -116,7 +116,7 @@ cartas:
   - - '22'
     - Estratega nungnarh
     - '2013-02-19 17:49:47.70322'
-    - '2013-08-24 17:44:36.473258'
+    - '2013-10-07 18:41:45.662193'
     - estratega-nungnarh
   - - '23'
     - Forjadores del horno cenizo
@@ -141,17 +141,17 @@ cartas:
   - - '27'
     - Hacha de largo alcance
     - '2013-02-19 17:49:51.225545'
-    - '2013-08-24 17:44:36.489189'
+    - '2013-10-07 18:43:30.329506'
     - hacha-de-largo-alcance
   - - '28'
     - Ignición
     - '2013-02-19 17:49:51.978358'
-    - '2013-08-24 17:44:36.491642'
+    - '2013-10-07 18:45:33.770834'
     - ignicion
   - - '29'
     - Instrumentos quirúrgicos
     - '2013-02-19 17:49:52.779813'
-    - '2013-08-24 17:44:36.494321'
+    - '2013-10-07 18:47:27.453952'
     - instrumentos-quirurgicos
   - - '30'
     - Kirch corazón de llama
@@ -161,17 +161,17 @@ cartas:
   - - '31'
     - Kirch entrenado
     - '2013-02-19 17:49:54.107136'
-    - '2013-08-24 17:44:36.499759'
+    - '2013-10-07 18:48:39.989915'
     - kirch-entrenado
   - - '32'
     - Kirch escupefuego
     - '2013-02-19 17:49:54.763777'
-    - '2013-08-24 17:44:36.503001'
+    - '2013-10-07 18:50:17.845502'
     - kirch-escupefuego
   - - '33'
     - Kirch rabioso
     - '2013-02-19 17:49:55.461509'
-    - '2013-08-24 17:44:36.50633'
+    - '2013-10-07 18:52:20.060133'
     - kirch-rabioso
   - - '34'
     - Lluvia de lanzas
@@ -636,7 +636,7 @@ cartas:
   - - '126'
     - Cadenas del campeón
     - '2013-02-19 17:51:00.617536'
-    - '2013-08-24 17:44:36.828249'
+    - '2013-10-07 18:54:29.937639'
     - cadenas-del-campeon
   - - '127'
     - Caminante valle moribundo
@@ -646,7 +646,7 @@ cartas:
   - - '128'
     - Carbonizar
     - '2013-02-19 17:51:01.974398'
-    - '2013-08-24 17:44:36.835775'
+    - '2013-10-07 18:55:20.968945'
     - carbonizar
   - - '129'
     - Centinela fronterizo
@@ -836,7 +836,7 @@ cartas:
   - - '166'
     - Patrulla experta
     - '2013-02-19 17:51:28.160732'
-    - '2013-08-24 17:44:36.96694'
+    - '2013-10-07 18:56:53.770528'
     - patrulla-experta
   - - '167'
     - Pócima de juventud temporal
@@ -3223,3 +3223,48 @@ cartas:
     - '2013-10-02 03:13:26.588714'
     - '2013-10-02 03:13:26.92977'
     - deru-de-las-raices-antiguas
+  - - '648'
+    - Banza de la tribu
+    - '2013-10-07 18:18:26.78647'
+    - '2013-10-07 18:18:27.051241'
+    - banza-de-la-tribu
+  - - '649'
+    - Encuentro desértico
+    - '2013-10-07 18:20:56.344694'
+    - '2013-10-07 18:20:56.497491'
+    - encuentro-desertico
+  - - '650'
+    - Kirch del foso
+    - '2013-10-07 18:22:40.817886'
+    - '2013-10-07 18:22:40.884989'
+    - kirch-del-foso
+  - - '651'
+    - Martillo destructor
+    - '2013-10-07 18:24:26.565376'
+    - '2013-10-07 18:24:26.64279'
+    - martillo-destructor
+  - - '652'
+    - Palos con filo
+    - '2013-10-07 18:26:34.901914'
+    - '2013-10-07 18:26:34.970466'
+    - palos-con-filo
+  - - '653'
+    - Ensambladora cyborg
+    - '2013-10-07 18:28:34.030997'
+    - '2013-10-07 18:28:34.098534'
+    - ensambladora-cyborg
+  - - '654'
+    - Berserker diablo
+    - '2013-10-07 18:30:07.434619'
+    - '2013-10-07 18:30:07.536024'
+    - berserker-diablo
+  - - '655'
+    - Portador de esporas
+    - '2013-10-07 18:32:28.143087'
+    - '2013-10-07 18:32:28.210752'
+    - portador-de-esporas
+  - - '656'
+    - Armadura inteligente
+    - '2013-10-07 18:34:00.664112'
+    - '2013-10-07 18:34:00.73394'
+    - armadura-inteligente

@@ -13912,3 +13912,424 @@ versiones:
     - 007-origen
     - 
     - 
+  - - '730'
+    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - Puede
+      anexar Banza de la tribu al aliado objetivo.
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Caos
+    - '"Tu turno, hermano."'
+    - '10'
+    - Común
+    - '2013-10-07 18:18:26.952285'
+    - '2013-10-07 18:18:26.978542'
+    - '648'
+    - true
+    - '16'
+    - 010-origen
+    - '3'
+    - '3'
+  - - '731'
+    - "Pon en juego dos fichas de aliado {caos} Kirch 1 FUE, 1 RES.\r\nRéplica {2}
+      (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando su
+      Réplica)."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - Un kirch nunca caza solo.
+    - '18'
+    - Común
+    - '2013-10-07 18:20:56.373457'
+    - '2013-10-07 18:20:56.436713'
+    - '649'
+    - true
+    - '16'
+    - 018-origen
+    - '2'
+    - '2'
+  - - '732'
+    - "Furia (puede atacar inmediatamente).\r\nSiempre que un recurso que controles
+      sea destruido, si Kirch del foso está en tu inferno, puedes ponerlo en juego."
+    - Aliado
+    - 
+    - Kirch
+    - '2'
+    - '2'
+    - Caos
+    - 
+    - '22'
+    - Infrecuente
+    - '2013-10-07 18:22:40.839466'
+    - '2013-10-07 18:22:40.852836'
+    - '650'
+    - true
+    - '16'
+    - 022-origen
+    - '3'
+    - '3'
+  - - '733'
+    - Siempre que el aliado equipado haga daño de combate, puedes pagar {3} ó destruir
+      Martillo destructor. Si lo haces, destruye el recurso objetivo.
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Caos
+    - '"Hagas lo que hagas, no dejes que toque el suelo." - Maestro de armas'
+    - '31'
+    - Épica
+    - '2013-10-07 18:24:26.587652'
+    - '2013-10-07 18:24:26.603412'
+    - '651'
+    - true
+    - '16'
+    - 031-origen
+    - '3'
+    - '3'
+  - - '734'
+    - Réplica {1} (cuando juegues esta carta, puedes jugar las copias de tu inferno
+      pagando su Réplica).
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Caos
+    - Práctico, efectivo y letal.
+    - '32'
+    - Infrecuente
+    - '2013-10-07 18:26:34.92359'
+    - '2013-10-07 18:26:34.938561'
+    - '652'
+    - true
+    - '16'
+    - 032-origen
+    - '1'
+    - '1'
+  - - '735'
+    - "Halo (no puede ser objetivo de cartas enemigas).\r\nSiempre que un enemigo
+      juegue un ritual, puedes poner en juego una ficha de aliado {Locura} Cyborg
+      1 FUE, 1 RES con la habilidad de protector."
+    - Aliado
+    - 
+    - Cyborg
+    - '1'
+    - '4'
+    - Locura
+    - Es normal escuchar algunos cyborgs pequeños llamarla mamá.
+    - '48'
+    - Épica
+    - '2013-10-07 18:28:34.052157'
+    - '2013-10-07 18:28:34.067139'
+    - '653'
+    - true
+    - '16'
+    - 048-origen
+    - '3'
+    - '3'
+  - - '736'
+    - "Berserker diablo obtiene +1 FUE por cada contador de daño sobre él.\r\nExilia
+      7 cartas de aliado de tu inferno: Pon en juego Berserker diablo de tu inferno."
+    - Aliado
+    - 
+    - Diablo
+    - '7'
+    - '7'
+    - Muerte
+    - '"Y el nacido de los dioses devoró la ciudad de los impuros." - Fragmento Biblia
+      del nuevo orden'
+    - '67'
+    - Épica
+    - '2013-10-07 18:30:07.455843'
+    - '2013-10-07 18:30:07.469877'
+    - '654'
+    - true
+    - '16'
+    - 067-origen
+    - '7'
+    - '7'
+  - - '737'
+    - "Portador de esporas entra en juego con 4 contadores de daño.\r\nRemover 2 contadores
+      de daño sobre Portador de esporas: Los otros aliados no-ficha que controlas
+      obtienen +1 FUE hasta el final del turno."
+    - Aliado
+    - 
+    - Hongo
+    - '0'
+    - '6'
+    - Poder
+    - 
+    - '110'
+    - Épica
+    - '2013-10-07 18:32:28.164513'
+    - '2013-10-07 18:32:28.179133'
+    - '655'
+    - true
+    - '16'
+    - 110-origen
+    - '4'
+    - '4'
+  - - '738'
+    - '{2}: El aliado objetivo tiene la habilidad de agresor, evasivo, furia ó halo
+      hasta el final del turno (elige uno).'
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '+1'
+    - Neutral
+    - 
+    - '117'
+    - Infrecuente
+    - '2013-10-07 18:34:00.685556'
+    - '2013-10-07 18:34:00.701312'
+    - '656'
+    - true
+    - '16'
+    - 117-origen
+    - '2'
+    - '2'
+  - - '739'
+    - Vínculo {0} (cuando sea puesta en el inferno desde el mazo, puedes pagar su
+      coste de vínculo y exiliarla) - Pon el arma objetivo de coste 3 o menos de tu
+      inferno en tu mano.
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '1'
+    - Caos
+    - Poseen una poderosa conexión con el inferno.
+    - '11'
+    - Común
+    - '2013-10-07 18:38:21.59095'
+    - '2013-10-07 18:38:21.606941'
+    - '15'
+    - false
+    - '16'
+    - 011-origen
+    - '2'
+    - '2'
+  - - '740'
+    - "Furia (puede atacar inmediatamente).\r\nSiempre que un Kirch que controles
+      ataque, obtiene +1 FUE hasta el final del turno."
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '3'
+    - Caos
+    - '"¡Avancen bestias malditas! ¡Avancen a su muerte!"'
+    - '14'
+    - Infrecuente
+    - '2013-10-07 18:40:17.63284'
+    - '2013-10-07 18:40:17.650241'
+    - '18'
+    - false
+    - '16'
+    - 014-origen
+    - '4'
+    - '4'
+  - - '741'
+    - Siempre que un Kirch que controles ataque a un aliado, destrúyelo. Estratega
+      nungnarh hace 3 puntos de daño al aliado defensor.
+    - Aliado
+    - 
+    - Humano
+    - '3'
+    - '3'
+    - Caos
+    - '"Kirchs y explosivos. ¿Existe una mejor combinación?"'
+    - '17'
+    - Rara
+    - '2013-10-07 18:41:45.566821'
+    - '2013-10-07 18:41:45.613116'
+    - '22'
+    - false
+    - '16'
+    - 017-origen
+    - '4'
+    - '4'
+  - - '742'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Tu demonio
+      hace 1 punto de daño al demonio objetivo.
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Caos
+    - La ingeniería Nungnarh es increíblemente creativa.
+    - '19'
+    - Infrecuente
+    - '2013-10-07 18:43:30.282504'
+    - '2013-10-07 18:43:30.297297'
+    - '27'
+    - false
+    - '16'
+    - 019-origen
+    - '3'
+    - '3'
+  - - '743'
+    - Tu demonio hace 2 puntos de daño al aliado o demonio objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Caos
+    - '"Solo los que entienden la melodía del fuego, pueden disfrutar realmente del
+      espectáculo." -Akayra.'
+    - '20'
+    - Común
+    - '2013-10-07 18:45:33.713257'
+    - '2013-10-07 18:45:33.730859'
+    - '28'
+    - false
+    - '16'
+    - 020-origen
+    - '1'
+    - '1'
+  - - '744'
+    - 'Destruir Instrumentos quirúrgicos: Pon el Kirch objetivo de tu inferno en tu
+      mano.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - Ocasionalmente son herramientas de cocina y juguetes para niños.
+    - '21'
+    - Común
+    - '2013-10-07 18:47:27.399263'
+    - '2013-10-07 18:47:27.414701'
+    - '29'
+    - false
+    - '16'
+    - 021-origen
+    - '1'
+    - '1'
+  - - '745'
+    - '{X}, destruir Kirch entrenado: Destruye el arma objetivo de coste X.'
+    - Aliado
+    - 
+    - Kirch
+    - '1'
+    - '2'
+    - Caos
+    - '"Nunca volverán a recibir otra orden." Broma Nungnarh'
+    - '23'
+    - Común
+    - '2013-10-07 18:48:39.939037'
+    - '2013-10-07 18:48:39.957491'
+    - '31'
+    - false
+    - '16'
+    - 023-origen
+    - '2'
+    - '2'
+  - - '746'
+    - 'Girar: Kirch escupefuego hace 1 punto de daño al aliado objetivo.'
+    - Aliado
+    - 
+    - Kirch
+    - '1'
+    - '1'
+    - Caos
+    - '"Tostado. Justo como me gusta." - Akayra'
+    - '24'
+    - Infrecuente
+    - '2013-10-07 18:50:17.795206'
+    - '2013-10-07 18:50:17.81446'
+    - '32'
+    - false
+    - '16'
+    - 024-origen
+    - '1'
+    - '1'
+  - - '747'
+    - "Furia (puede atacar inmediatamente).\r\n{2}, destruir Kirch rabioso: El aliado
+      objetivo tiene la habilidad de furia hasta el final del turno."
+    - Aliado
+    - 
+    - Kirch
+    - '2'
+    - '1'
+    - Caos
+    - La rabia acumulada en su espíritu perdura aún después de la muerte.
+    - '25'
+    - Común
+    - '2013-10-07 18:52:19.974229'
+    - '2013-10-07 18:52:19.988703'
+    - '33'
+    - false
+    - '16'
+    - 025-origen
+    - '2'
+    - '2'
+  - - '748'
+    - Protector (puedes girar el aliado equipado y hacer que defienda al atacante,
+      en vez del defensor propuesto).
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '+3'
+    - Neutral
+    - 
+    - '124'
+    - Común
+    - '2013-10-07 18:54:29.684923'
+    - '2013-10-07 18:54:29.88439'
+    - '126'
+    - false
+    - '16'
+    - 124-origen
+    - '2'
+    - '2'
+  - - '749'
+    - Tu demonio hace 3 puntos de daño al aliado objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Adoro el olor de carne quemada." -Akayra'
+    - '125'
+    - Común
+    - '2013-10-07 18:55:20.922822'
+    - '2013-10-07 18:55:20.937321'
+    - '128'
+    - false
+    - '16'
+    - 125-origen
+    - '2'
+    - '2'
+  - - '750'
+    - Patrulla experta obtiene +2 FUE y +2 RES por cada arma que tenga anexada.
+    - Aliado
+    - 
+    - Humano
+    - '4'
+    - '4'
+    - Neutral
+    - Maestros del arte de guerra.
+    - '141'
+    - Infrecuente
+    - '2013-10-07 18:56:53.723252'
+    - '2013-10-07 18:56:53.739834'
+    - '166'
+    - false
+    - '16'
+    - 141-origen
+    - '5'
+    - '5'
