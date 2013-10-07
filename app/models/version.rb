@@ -6,7 +6,6 @@ class Version < ActiveRecord::Base
   attr_readonly   :coste_convertido
 
   belongs_to :carta, inverse_of: :versiones, touch: true
-  delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion, touch: true
   has_many :imagenes, order: 'created_at ASC',
             inverse_of: :version, dependent: :destroy
@@ -34,11 +33,13 @@ class Version < ActiveRecord::Base
   scope :poder,   where(senda: 'Poder')
   scope :neutral, where(senda: 'Neutral')
 
+  delegate :nombre, to: :carta, allow_nil: true
   delegate :nombre_y_expansiones, to: :carta, allow_nil: true
+  delegate :nombre, to: :expansion, allow_nil: true, prefix: true
 
-  multisearchable against: [
-    :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda, :ambientacion,
-    :numero, :rareza, :coste ]
+  multisearchable against: [ :coste, :nombre, :tipo, :supertipo, :subtipo,
+    :senda, :texto, :ambientacion, :fue, :res, :expansion_nombre, :rareza,
+    :arte ], if: :persisted?
 
   def self.normales
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
@@ -87,6 +88,10 @@ class Version < ActiveRecord::Base
 
   def demonio?
     self.supertipo == 'Demonio'
+  end
+
+  def arte
+    self.artistas.collect(&:nombre).join(', ')
   end
 
   private
