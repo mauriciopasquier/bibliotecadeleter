@@ -1,7 +1,7 @@
 %h1= titulo
 .row-fluid
   .span12
-    = search_form_for @busqueda,  url: cartas_busqueda_index_path,
+    = search_form_for @busqueda,  url: cartas_busqueda_path,
                                   html: { method: :post, class: 'form-search'} do |f|
 
       .row-fluid

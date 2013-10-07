@@ -1,13 +1,13 @@
 # encoding: utf-8
-module DocumentosHelper
+module BusquedasHelper
   include PaginacionHelper
 
   def titulo
     case params[:action]
       when 'new'
         'Búsqueda global'
-      when 'index'
-        "Coincidencias para '#{@busqueda}'"
+      when 'show'
+        @texto.present? ? "Coincidencias para '#{@texto}'" : 'Búsqueda global'
       else
         nil
     end

@@ -67,7 +67,7 @@ BibliotecaDelEter::Application.routes.draw do
     end
 
     # Buscar documentos (search documents)
-    r.resources :busqueda, controller: 'documentos', only: [:new, :index, :create] do
+    r.resource :busqueda, only: [:new, :show, :create] do
       collection do
         match 'cartas' => 'cartas#buscar', via: [:get, :post], as: :cartas
       end

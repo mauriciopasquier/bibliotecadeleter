@@ -1,18 +1,18 @@
-class DocumentosController < ApplicationController
+class BusquedasController < ApplicationController
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
 
   skip_authorization_check
 
   def create
-    session.delete(:busqueda)
+    session.delete(:texto)
     session.merge! parametros_permitidos
-    redirect_to busqueda_index_path
+    redirect_to busqueda_path
   end
 
-  def index
-    @busqueda = session[:busqueda]
-    @documentos = PgSearch.multisearch(@busqueda
+  def show
+    @texto = session[:texto]
+    @documentos = PgSearch.multisearch(@texto
       ).reorder(
         'searchable_type, pg_search_rank'
       ).includes(
@@ -22,12 +22,14 @@ class DocumentosController < ApplicationController
       ).select("ts_headline(
           pg_search_documents.content,
           plainto_tsquery(
-            'spanish', ''' ' || unaccent('#{@busqueda}') || ' ''' || ':*'),
+            'spanish', ''' ' || unaccent('#{@texto}') || ' ''' || ':*'),
           'StartSel=\"<strong class=text-info>\", StopSel=\"</strong>\"'
         ) AS extracto"
       )
 
-    flash[:error] = Cita.random_para :no_encontrar if @documentos.empty?
+    unless @texto.nil?
+      flash[:error] = Cita.random_para :no_encontrar if @documentos.empty?
+    end
 
     respond_with @documentos
   end
@@ -35,6 +37,6 @@ class DocumentosController < ApplicationController
   private
 
     def parametros_permitidos
-      params.require(:documento).permit(:busqueda)
+      params.require(:busqueda).permit(:texto)
     end
 end

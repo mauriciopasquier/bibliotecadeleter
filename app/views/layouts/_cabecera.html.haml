@@ -7,13 +7,13 @@
       %span.icon-bar.minifuego
     %ul.nav
       %li#buscar
-        = search_form_for barra_de_busqueda, url: cartas_busqueda_index_path,
+        = search_form_for barra_de_busqueda, url: cartas_busqueda_path,
             html: { method: :post, class: 'form-search navbar-search' } do |s|
           .input-append
             = s.text_field busqueda, class: 'search-query input-small', size: nil
             = s.submit 'Buscar', name: 'navbar', class: 'btn'
         = link_to content_tag(:i, nil, class: "icon-search icon-white"),
-            cartas_busqueda_index_path, class: 'imagen'
+            cartas_busqueda_path, class: 'imagen'
     .nav-collapse.collapse
       %ul.nav
         = render 'devise/menu/registration_items'

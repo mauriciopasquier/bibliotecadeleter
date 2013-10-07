@@ -1,7 +1,6 @@
 # encoding: utf-8
 class Usuario < ActiveRecord::Base
   include FriendlyId
-  include PgSearch
 
   has_merit
 
@@ -35,8 +34,6 @@ class Usuario < ActiveRecord::Base
     Array.wrap(lista).each { |m| self.add_badge m.id }
   end
   alias_method :medallas, :badges
-
-  multisearchable against: [ :nombre, :nick, :codigo ]
 
   private
 
