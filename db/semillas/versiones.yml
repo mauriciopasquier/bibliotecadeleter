@@ -3739,8 +3739,8 @@ versiones:
     - 
     - 
   - - '192'
-    - 'Descarta tu mano: Voltea Baggrund / Descarta una carta de tu mano: Baggrund
-      obtiene +1 FUE hasta el final del turno'
+    - 'Descarta tu mano: Voltea Baggrund. / Descarta una carta de tu mano: Baggrund
+      obtiene +1 FUE hasta el final del turno.'
     - 
     - Demonio
     - 
@@ -3751,7 +3751,7 @@ versiones:
     - '4'
     - Infrecuente
     - '2013-02-19 17:59:11.57649'
-    - '2013-08-24 17:42:00.608073'
+    - '2013-10-07 14:13:24.275956'
     - '188'
     - true
     - '3'
@@ -3778,7 +3778,7 @@ versiones:
     - 
     - 
   - - '194'
-    - Cuando tengas 0 cartas en tu mazo, voltea Viden
+    - Cuando tengas cero cartas en tu mazo, voltea Viden.
     - 
     - Demonio
     - 
@@ -3789,7 +3789,7 @@ versiones:
     - '6'
     - Infrecuente
     - '2013-02-19 17:59:14.51724'
-    - '2013-08-24 17:42:00.657689'
+    - '2013-10-07 14:11:56.769222'
     - '190'
     - true
     - '3'
@@ -3797,9 +3797,9 @@ versiones:
     - 
     - 
   - - '195'
-    - 'Exilia las primeras 3 cartas de tu infierno, Voltea At Fjerne / Exilia las
+    - 'Exilia las primeras 3 cartas de tu infierno, Voltea At Fjerne. / Exilia las
       primeras 3 cartas de tu infierno: At Fjerne obtiene +1 FUE hasta el final del
-      turno'
+      turno.'
     - 
     - Demonio
     - 
@@ -3810,7 +3810,7 @@ versiones:
     - '7'
     - Infrecuente
     - '2013-02-19 17:59:15.83103'
-    - '2013-08-24 17:42:12.612009'
+    - '2013-10-07 14:43:59.742251'
     - '191'
     - true
     - '3'
@@ -3818,9 +3818,9 @@ versiones:
     - 
     - 
   - - '196'
-    - Exilia las primeras 5 cartas de tu mazo boca arriba, voltea Namaah / Tus enemigos
+    - Exilia las primeras 5 cartas de tu mazo boca arriba, voltea Namaah. / Tus enemigos
       pueden jugar las cartas exiliadas con Naamah como si estuvieran en su mano (cuando
-      las cartas dejen la cadena son puestas en tu infierno)
+      las cartas dejen la cadena son puestas en tu infierno).
     - 
     - Demonio
     - 
@@ -3831,7 +3831,7 @@ versiones:
     - '8'
     - Infrecuente
     - '2013-02-19 17:59:17.232696'
-    - '2013-08-24 17:42:00.681097'
+    - '2013-10-07 14:43:29.062384'
     - '192'
     - true
     - '3'
@@ -3841,7 +3841,7 @@ versiones:
   - - '197'
     - Cuando un aliado entra en juego bajo tu control desde un infierno, puedes voltear
       Zulfur. / Cuando Zulfur se volteado, pon el aliado objetivo de un infierno enemigo
-      en juego bajo tu control
+      en juego bajo tu control.
     - 
     - Demonio
     - 
@@ -3852,7 +3852,7 @@ versiones:
     - '9'
     - Infrecuente
     - '2013-02-19 17:59:18.718853'
-    - '2013-08-24 17:42:00.704616'
+    - '2013-10-07 14:44:28.769838'
     - '193'
     - true
     - '3'
@@ -3899,7 +3899,7 @@ versiones:
     - 
     - 
   - - '200'
-    - '4: Voltea a Zustatek / 4: Zustatek obtiene +1 FUE hasta el final del turno'
+    - '4: Voltea a Zustatek. / 4: Zustatek obtiene +1 FUE hasta el final del turno.'
     - 
     - Demonio
     - 
@@ -3910,7 +3910,7 @@ versiones:
     - '12'
     - Infrecuente
     - '2013-02-19 17:59:22.846461'
-    - '2013-08-24 17:42:00.820944'
+    - '2013-10-07 14:49:17.351645'
     - '196'
     - true
     - '3'
@@ -7460,7 +7460,7 @@ versiones:
     - '2'
   - - '379'
     - Cuando un demonio enemigo controle una cantidad de recursos que supere a la
-      tuya por cuatro o más, voltea Narghot./Narghot obtiene +1 FUE y tiene la habilidad
+      tuya por cuatro o más, voltea Narghot. / Narghot obtiene +1 FUE y tiene la habilidad
       de agresor mientras haya Thanatos.
     - 
     - Demonio
@@ -7472,7 +7472,7 @@ versiones:
     - '1'
     - Infrecuente
     - '2013-02-19 18:03:47.292608'
-    - '2013-08-24 17:42:05.311515'
+    - '2013-10-07 14:00:55.16091'
     - '369'
     - true
     - '5'
@@ -7481,7 +7481,7 @@ versiones:
     - 
   - - '380'
     - '{0}: Voltéa Fáradt (Juega esta habilidad solo si has enderezado cuatro o más
-      aliados este turno)./Girar: Gira el aliado o demonio objetivo. Fáradt obtiene
+      aliados este turno). / Girar: Gira el aliado o demonio objetivo. Fáradt obtiene
       +1 FUE mientras haya Thanatos.'
     - 
     - Demonio
@@ -7494,7 +7494,7 @@ versiones:
     - '2'
     - Infrecuente
     - '2013-02-19 18:03:49.060108'
-    - '2013-08-24 17:42:05.335035'
+    - '2013-10-07 14:08:51.660124'
     - '370'
     - true
     - '5'
@@ -7503,7 +7503,7 @@ versiones:
     - 
   - - '381'
     - Al comienzo de cada restauración, si hay 5 o más aliados en juego, puedes voltear
-      Unwaj./Cuando Unwaj sea volteada, si hay Thanatos, destruye todos los aliados
+      Unwaj. / Cuando Unwaj sea volteada, si hay Thanatos, destruye todos los aliados
       en juego.
     - 
     - Demonio
@@ -7515,7 +7515,7 @@ versiones:
     - '3'
     - Infrecuente
     - '2013-02-19 18:03:50.523522'
-    - '2013-08-24 17:42:05.372137'
+    - '2013-10-07 14:48:09.813179'
     - '371'
     - true
     - '5'
@@ -7524,7 +7524,7 @@ versiones:
     - 
   - - '382'
     - Al comienzo de tu restauración, si controlas 3 o más aliados que los demonios
-      enemigos, voltea Lápatt./Lápatt tiene la habilidad de protector mientras haya
+      enemigos, voltea Lápatt. / Lápatt tiene la habilidad de protector mientras haya
       Thanatos.
     - 
     - Demonio
@@ -7536,7 +7536,7 @@ versiones:
     - '4'
     - Infrecuente
     - '2013-02-19 18:03:51.965407'
-    - '2013-08-24 17:42:05.396301'
+    - '2013-10-07 14:48:37.184328'
     - '372'
     - true
     - '5'
