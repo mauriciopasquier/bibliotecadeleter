@@ -3739,8 +3739,8 @@ versiones:
     - 
     - 
   - - '192'
-    - 'Descarta tu mano: Voltea Baggrund / Descarta una carta de tu mano: Baggrund
-      obtiene +1 FUE hasta el final del turno'
+    - 'Descarta tu mano: Voltea Baggrund. / Descarta una carta de tu mano: Baggrund
+      obtiene +1 FUE hasta el final del turno.'
     - 
     - Demonio
     - 
@@ -3751,7 +3751,7 @@ versiones:
     - '4'
     - Infrecuente
     - '2013-02-19 17:59:11.57649'
-    - '2013-08-24 17:42:00.608073'
+    - '2013-10-07 14:13:24.275956'
     - '188'
     - true
     - '3'
@@ -3778,7 +3778,7 @@ versiones:
     - 
     - 
   - - '194'
-    - Cuando tengas 0 cartas en tu mazo, voltea Viden
+    - Cuando tengas cero cartas en tu mazo, voltea Viden.
     - 
     - Demonio
     - 
@@ -3789,7 +3789,7 @@ versiones:
     - '6'
     - Infrecuente
     - '2013-02-19 17:59:14.51724'
-    - '2013-08-24 17:42:00.657689'
+    - '2013-10-07 14:11:56.769222'
     - '190'
     - true
     - '3'
@@ -3797,9 +3797,9 @@ versiones:
     - 
     - 
   - - '195'
-    - 'Exilia las primeras 3 cartas de tu infierno, Voltea At Fjerne / Exilia las
+    - 'Exilia las primeras 3 cartas de tu infierno, Voltea At Fjerne. / Exilia las
       primeras 3 cartas de tu infierno: At Fjerne obtiene +1 FUE hasta el final del
-      turno'
+      turno.'
     - 
     - Demonio
     - 
@@ -3810,7 +3810,7 @@ versiones:
     - '7'
     - Infrecuente
     - '2013-02-19 17:59:15.83103'
-    - '2013-08-24 17:42:12.612009'
+    - '2013-10-07 14:43:59.742251'
     - '191'
     - true
     - '3'
@@ -3818,9 +3818,9 @@ versiones:
     - 
     - 
   - - '196'
-    - Exilia las primeras 5 cartas de tu mazo boca arriba, voltea Namaah / Tus enemigos
+    - Exilia las primeras 5 cartas de tu mazo boca arriba, voltea Namaah. / Tus enemigos
       pueden jugar las cartas exiliadas con Naamah como si estuvieran en su mano (cuando
-      las cartas dejen la cadena son puestas en tu infierno)
+      las cartas dejen la cadena son puestas en tu infierno).
     - 
     - Demonio
     - 
@@ -3831,7 +3831,7 @@ versiones:
     - '8'
     - Infrecuente
     - '2013-02-19 17:59:17.232696'
-    - '2013-08-24 17:42:00.681097'
+    - '2013-10-07 14:43:29.062384'
     - '192'
     - true
     - '3'
@@ -3841,7 +3841,7 @@ versiones:
   - - '197'
     - Cuando un aliado entra en juego bajo tu control desde un infierno, puedes voltear
       Zulfur. / Cuando Zulfur se volteado, pon el aliado objetivo de un infierno enemigo
-      en juego bajo tu control
+      en juego bajo tu control.
     - 
     - Demonio
     - 
@@ -3852,7 +3852,7 @@ versiones:
     - '9'
     - Infrecuente
     - '2013-02-19 17:59:18.718853'
-    - '2013-08-24 17:42:00.704616'
+    - '2013-10-07 14:44:28.769838'
     - '193'
     - true
     - '3'
@@ -3899,7 +3899,7 @@ versiones:
     - 
     - 
   - - '200'
-    - '4: Voltea a Zustatek / 4: Zustatek obtiene +1 FUE hasta el final del turno'
+    - '4: Voltea a Zustatek. / 4: Zustatek obtiene +1 FUE hasta el final del turno.'
     - 
     - Demonio
     - 
@@ -3910,7 +3910,7 @@ versiones:
     - '12'
     - Infrecuente
     - '2013-02-19 17:59:22.846461'
-    - '2013-08-24 17:42:00.820944'
+    - '2013-10-07 14:49:17.351645'
     - '196'
     - true
     - '3'
@@ -7460,7 +7460,7 @@ versiones:
     - '2'
   - - '379'
     - Cuando un demonio enemigo controle una cantidad de recursos que supere a la
-      tuya por cuatro o más, voltea Narghot./Narghot obtiene +1 FUE y tiene la habilidad
+      tuya por cuatro o más, voltea Narghot. / Narghot obtiene +1 FUE y tiene la habilidad
       de agresor mientras haya Thanatos.
     - 
     - Demonio
@@ -7472,7 +7472,7 @@ versiones:
     - '1'
     - Infrecuente
     - '2013-02-19 18:03:47.292608'
-    - '2013-08-24 17:42:05.311515'
+    - '2013-10-07 14:00:55.16091'
     - '369'
     - true
     - '5'
@@ -7481,7 +7481,7 @@ versiones:
     - 
   - - '380'
     - '{0}: Voltéa Fáradt (Juega esta habilidad solo si has enderezado cuatro o más
-      aliados este turno)./Girar: Gira el aliado o demonio objetivo. Fáradt obtiene
+      aliados este turno). / Girar: Gira el aliado o demonio objetivo. Fáradt obtiene
       +1 FUE mientras haya Thanatos.'
     - 
     - Demonio
@@ -7494,7 +7494,7 @@ versiones:
     - '2'
     - Infrecuente
     - '2013-02-19 18:03:49.060108'
-    - '2013-08-24 17:42:05.335035'
+    - '2013-10-07 14:08:51.660124'
     - '370'
     - true
     - '5'
@@ -7503,7 +7503,7 @@ versiones:
     - 
   - - '381'
     - Al comienzo de cada restauración, si hay 5 o más aliados en juego, puedes voltear
-      Unwaj./Cuando Unwaj sea volteada, si hay Thanatos, destruye todos los aliados
+      Unwaj. / Cuando Unwaj sea volteada, si hay Thanatos, destruye todos los aliados
       en juego.
     - 
     - Demonio
@@ -7515,7 +7515,7 @@ versiones:
     - '3'
     - Infrecuente
     - '2013-02-19 18:03:50.523522'
-    - '2013-08-24 17:42:05.372137'
+    - '2013-10-07 14:48:09.813179'
     - '371'
     - true
     - '5'
@@ -7524,7 +7524,7 @@ versiones:
     - 
   - - '382'
     - Al comienzo de tu restauración, si controlas 3 o más aliados que los demonios
-      enemigos, voltea Lápatt./Lápatt tiene la habilidad de protector mientras haya
+      enemigos, voltea Lápatt. / Lápatt tiene la habilidad de protector mientras haya
       Thanatos.
     - 
     - Demonio
@@ -7536,7 +7536,7 @@ versiones:
     - '4'
     - Infrecuente
     - '2013-02-19 18:03:51.965407'
-    - '2013-08-24 17:42:05.396301'
+    - '2013-10-07 14:48:37.184328'
     - '372'
     - true
     - '5'
@@ -13358,14 +13358,14 @@ versiones:
     - 
     - Caos
     - '"No descansaré hasta extinguir cada raza en este maldito mundo." - Narghot'
-    - '30'
+    - '28'
     - Rara
     - '2013-08-23 17:50:10.397946'
-    - '2013-08-24 17:42:14.899621'
+    - '2013-10-07 17:14:44.924601'
     - '624'
     - true
     - '16'
-    - 030-origen
+    - 028-origen
     - '2'
     - '2'
   - - '702'
@@ -13501,14 +13501,14 @@ versiones:
     - 
     - Caos
     - Fuego líquido inyectado directamente en la sangre.
-    - '14'
+    - '13'
     - Infrecuente
     - '2013-09-16 18:52:56.656023'
-    - '2013-09-16 18:52:56.966757'
+    - '2013-10-07 17:12:08.966607'
     - '631'
     - true
     - '16'
-    - 014-origen
+    - 013-origen
     - '1'
     - '1'
   - - '709'
@@ -13602,14 +13602,14 @@ versiones:
     - '2'
     - Caos
     - '"Si no sabes usarla, no debes portarla."'
-    - '31'
+    - '30'
     - Rara
     - '2013-09-17 22:51:18.513975'
-    - '2013-09-17 22:51:18.529792'
+    - '2013-10-07 17:15:33.009921'
     - '635'
     - true
     - '16'
-    - 031-origen
+    - 030-origen
     - '4'
     - '4'
   - - '714'
@@ -13624,14 +13624,14 @@ versiones:
     - Caos
     - '"Quemó las cosechas y destruyó nuestros hogares. Cuando sólo esperaba la muerte,
       Narghot apareció."'
-    - '13'
+    - '12'
     - Épica
     - '2013-09-28 15:22:44.201263'
-    - '2013-09-28 15:22:44.249066'
+    - '2013-10-07 17:10:10.958642'
     - '636'
     - true
     - '16'
-    - 013-origen
+    - 012-origen
     - '5'
     - '5'
   - - '715'
@@ -13645,14 +13645,14 @@ versiones:
     - '+0'
     - Caos
     - 
-    - '16'
+    - '15'
     - Rara
     - '2013-09-28 15:35:07.088314'
-    - '2013-09-28 15:35:07.103328'
+    - '2013-10-07 17:13:59.114235'
     - '637'
     - true
     - '16'
-    - 016-origen
+    - 015-origen
     - '3'
     - '3'
   - - '716'
@@ -13769,7 +13769,7 @@ versiones:
     - '1'
     - Común
     - '2013-10-02 02:52:26.132595'
-    - '2013-10-02 02:52:26.279691'
+    - '2013-10-07 17:18:39.236575'
     - '2'
     - false
     - '16'
@@ -13847,7 +13847,7 @@ versiones:
     - '2'
     - Infrecuente
     - '2013-10-02 03:07:19.297188'
-    - '2013-10-02 03:07:19.320548'
+    - '2013-10-07 17:20:03.551114'
     - '643'
     - true
     - '16'
@@ -13912,3 +13912,424 @@ versiones:
     - 007-origen
     - 
     - 
+  - - '730'
+    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - Puede
+      anexar Banza de la tribu al aliado objetivo.
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Caos
+    - '"Tu turno, hermano."'
+    - '10'
+    - Común
+    - '2013-10-07 18:18:26.952285'
+    - '2013-10-07 18:18:26.978542'
+    - '648'
+    - true
+    - '16'
+    - 010-origen
+    - '3'
+    - '3'
+  - - '731'
+    - "Pon en juego dos fichas de aliado {caos} Kirch 1 FUE, 1 RES.\r\nRéplica {2}
+      (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando su
+      Réplica)."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - Un kirch nunca caza solo.
+    - '18'
+    - Común
+    - '2013-10-07 18:20:56.373457'
+    - '2013-10-07 18:20:56.436713'
+    - '649'
+    - true
+    - '16'
+    - 018-origen
+    - '2'
+    - '2'
+  - - '732'
+    - "Furia (puede atacar inmediatamente).\r\nSiempre que un recurso que controles
+      sea destruido, si Kirch del foso está en tu inferno, puedes ponerlo en juego."
+    - Aliado
+    - 
+    - Kirch
+    - '2'
+    - '2'
+    - Caos
+    - 
+    - '22'
+    - Infrecuente
+    - '2013-10-07 18:22:40.839466'
+    - '2013-10-07 18:22:40.852836'
+    - '650'
+    - true
+    - '16'
+    - 022-origen
+    - '3'
+    - '3'
+  - - '733'
+    - Siempre que el aliado equipado haga daño de combate, puedes pagar {3} ó destruir
+      Martillo destructor. Si lo haces, destruye el recurso objetivo.
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Caos
+    - '"Hagas lo que hagas, no dejes que toque el suelo." - Maestro de armas'
+    - '31'
+    - Épica
+    - '2013-10-07 18:24:26.587652'
+    - '2013-10-07 18:24:26.603412'
+    - '651'
+    - true
+    - '16'
+    - 031-origen
+    - '3'
+    - '3'
+  - - '734'
+    - Réplica {1} (cuando juegues esta carta, puedes jugar las copias de tu inferno
+      pagando su Réplica).
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Caos
+    - Práctico, efectivo y letal.
+    - '32'
+    - Infrecuente
+    - '2013-10-07 18:26:34.92359'
+    - '2013-10-07 18:26:34.938561'
+    - '652'
+    - true
+    - '16'
+    - 032-origen
+    - '1'
+    - '1'
+  - - '735'
+    - "Halo (no puede ser objetivo de cartas enemigas).\r\nSiempre que un enemigo
+      juegue un ritual, puedes poner en juego una ficha de aliado {Locura} Cyborg
+      1 FUE, 1 RES con la habilidad de protector."
+    - Aliado
+    - 
+    - Cyborg
+    - '1'
+    - '4'
+    - Locura
+    - Es normal escuchar algunos cyborgs pequeños llamarla mamá.
+    - '48'
+    - Épica
+    - '2013-10-07 18:28:34.052157'
+    - '2013-10-07 18:28:34.067139'
+    - '653'
+    - true
+    - '16'
+    - 048-origen
+    - '3'
+    - '3'
+  - - '736'
+    - "Berserker diablo obtiene +1 FUE por cada contador de daño sobre él.\r\nExilia
+      7 cartas de aliado de tu inferno: Pon en juego Berserker diablo de tu inferno."
+    - Aliado
+    - 
+    - Diablo
+    - '7'
+    - '7'
+    - Muerte
+    - '"Y el nacido de los dioses devoró la ciudad de los impuros." - Fragmento Biblia
+      del nuevo orden'
+    - '67'
+    - Épica
+    - '2013-10-07 18:30:07.455843'
+    - '2013-10-07 18:30:07.469877'
+    - '654'
+    - true
+    - '16'
+    - 067-origen
+    - '7'
+    - '7'
+  - - '737'
+    - "Portador de esporas entra en juego con 4 contadores de daño.\r\nRemover 2 contadores
+      de daño sobre Portador de esporas: Los otros aliados no-ficha que controlas
+      obtienen +1 FUE hasta el final del turno."
+    - Aliado
+    - 
+    - Hongo
+    - '0'
+    - '6'
+    - Poder
+    - 
+    - '110'
+    - Épica
+    - '2013-10-07 18:32:28.164513'
+    - '2013-10-07 18:32:28.179133'
+    - '655'
+    - true
+    - '16'
+    - 110-origen
+    - '4'
+    - '4'
+  - - '738'
+    - '{2}: El aliado objetivo tiene la habilidad de agresor, evasivo, furia ó halo
+      hasta el final del turno (elige uno).'
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '+1'
+    - Neutral
+    - 
+    - '117'
+    - Infrecuente
+    - '2013-10-07 18:34:00.685556'
+    - '2013-10-07 18:34:00.701312'
+    - '656'
+    - true
+    - '16'
+    - 117-origen
+    - '2'
+    - '2'
+  - - '739'
+    - Vínculo {0} (cuando sea puesta en el inferno desde el mazo, puedes pagar su
+      coste de vínculo y exiliarla) - Pon el arma objetivo de coste 3 o menos de tu
+      inferno en tu mano.
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '1'
+    - Caos
+    - Poseen una poderosa conexión con el inferno.
+    - '11'
+    - Común
+    - '2013-10-07 18:38:21.59095'
+    - '2013-10-07 18:38:21.606941'
+    - '15'
+    - false
+    - '16'
+    - 011-origen
+    - '2'
+    - '2'
+  - - '740'
+    - "Furia (puede atacar inmediatamente).\r\nSiempre que un Kirch que controles
+      ataque, obtiene +1 FUE hasta el final del turno."
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '3'
+    - Caos
+    - '"¡Avancen bestias malditas! ¡Avancen a su muerte!"'
+    - '14'
+    - Infrecuente
+    - '2013-10-07 18:40:17.63284'
+    - '2013-10-07 18:40:17.650241'
+    - '18'
+    - false
+    - '16'
+    - 014-origen
+    - '4'
+    - '4'
+  - - '741'
+    - Siempre que un Kirch que controles ataque a un aliado, destrúyelo. Estratega
+      nungnarh hace 3 puntos de daño al aliado defensor.
+    - Aliado
+    - 
+    - Humano
+    - '3'
+    - '3'
+    - Caos
+    - '"Kirchs y explosivos. ¿Existe una mejor combinación?"'
+    - '17'
+    - Rara
+    - '2013-10-07 18:41:45.566821'
+    - '2013-10-07 18:41:45.613116'
+    - '22'
+    - false
+    - '16'
+    - 017-origen
+    - '4'
+    - '4'
+  - - '742'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Tu demonio
+      hace 1 punto de daño al demonio objetivo.
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Caos
+    - La ingeniería Nungnarh es increíblemente creativa.
+    - '19'
+    - Infrecuente
+    - '2013-10-07 18:43:30.282504'
+    - '2013-10-07 18:43:30.297297'
+    - '27'
+    - false
+    - '16'
+    - 019-origen
+    - '3'
+    - '3'
+  - - '743'
+    - Tu demonio hace 2 puntos de daño al aliado o demonio objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Caos
+    - '"Solo los que entienden la melodía del fuego, pueden disfrutar realmente del
+      espectáculo." -Akayra.'
+    - '20'
+    - Común
+    - '2013-10-07 18:45:33.713257'
+    - '2013-10-07 18:45:33.730859'
+    - '28'
+    - false
+    - '16'
+    - 020-origen
+    - '1'
+    - '1'
+  - - '744'
+    - 'Destruir Instrumentos quirúrgicos: Pon el Kirch objetivo de tu inferno en tu
+      mano.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - Ocasionalmente son herramientas de cocina y juguetes para niños.
+    - '21'
+    - Común
+    - '2013-10-07 18:47:27.399263'
+    - '2013-10-07 18:47:27.414701'
+    - '29'
+    - false
+    - '16'
+    - 021-origen
+    - '1'
+    - '1'
+  - - '745'
+    - '{X}, destruir Kirch entrenado: Destruye el arma objetivo de coste X.'
+    - Aliado
+    - 
+    - Kirch
+    - '1'
+    - '2'
+    - Caos
+    - '"Nunca volverán a recibir otra orden." Broma Nungnarh'
+    - '23'
+    - Común
+    - '2013-10-07 18:48:39.939037'
+    - '2013-10-07 18:48:39.957491'
+    - '31'
+    - false
+    - '16'
+    - 023-origen
+    - '2'
+    - '2'
+  - - '746'
+    - 'Girar: Kirch escupefuego hace 1 punto de daño al aliado objetivo.'
+    - Aliado
+    - 
+    - Kirch
+    - '1'
+    - '1'
+    - Caos
+    - '"Tostado. Justo como me gusta." - Akayra'
+    - '24'
+    - Infrecuente
+    - '2013-10-07 18:50:17.795206'
+    - '2013-10-07 18:50:17.81446'
+    - '32'
+    - false
+    - '16'
+    - 024-origen
+    - '1'
+    - '1'
+  - - '747'
+    - "Furia (puede atacar inmediatamente).\r\n{2}, destruir Kirch rabioso: El aliado
+      objetivo tiene la habilidad de furia hasta el final del turno."
+    - Aliado
+    - 
+    - Kirch
+    - '2'
+    - '1'
+    - Caos
+    - La rabia acumulada en su espíritu perdura aún después de la muerte.
+    - '25'
+    - Común
+    - '2013-10-07 18:52:19.974229'
+    - '2013-10-07 18:52:19.988703'
+    - '33'
+    - false
+    - '16'
+    - 025-origen
+    - '2'
+    - '2'
+  - - '748'
+    - Protector (puedes girar el aliado equipado y hacer que defienda al atacante,
+      en vez del defensor propuesto).
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '+3'
+    - Neutral
+    - 
+    - '124'
+    - Común
+    - '2013-10-07 18:54:29.684923'
+    - '2013-10-07 18:54:29.88439'
+    - '126'
+    - false
+    - '16'
+    - 124-origen
+    - '2'
+    - '2'
+  - - '749'
+    - Tu demonio hace 3 puntos de daño al aliado objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Adoro el olor de carne quemada." -Akayra'
+    - '125'
+    - Común
+    - '2013-10-07 18:55:20.922822'
+    - '2013-10-07 18:55:20.937321'
+    - '128'
+    - false
+    - '16'
+    - 125-origen
+    - '2'
+    - '2'
+  - - '750'
+    - Patrulla experta obtiene +2 FUE y +2 RES por cada arma que tenga anexada.
+    - Aliado
+    - 
+    - Humano
+    - '4'
+    - '4'
+    - Neutral
+    - Maestros del arte de guerra.
+    - '141'
+    - Infrecuente
+    - '2013-10-07 18:56:53.723252'
+    - '2013-10-07 18:56:53.739834'
+    - '166'
+    - false
+    - '16'
+    - 141-origen
+    - '5'
+    - '5'

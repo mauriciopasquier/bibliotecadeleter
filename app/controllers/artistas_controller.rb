@@ -1,14 +1,9 @@
 # encoding: utf-8
 class ArtistasController < ApplicationController
-  autocomplete :artista, :nombre, full: true
-
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
 
-  ANONS = [ :autocomplete_artista_nombre ]
-
-  load_and_authorize_resource except: ANONS
-  skip_authorization_check only: ANONS
+  load_and_authorize_resource
 
   before_filter :decorar_artista, only: [:show, :edit]
   # En vez de has_scope porque no puedo usar un atributo virtual con Ransack

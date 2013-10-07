@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Lista < ActiveRecord::Base
   include FriendlyId
+  include PgSearch
 
   belongs_to :usuario
   has_many :slots, as: :inventario, include: :version, dependent: :destroy
@@ -15,7 +16,7 @@ class Lista < ActiveRecord::Base
   accepts_nested_attributes_for :slots, allow_destroy: true,
     reject_if: :all_blank
 
-  scope :publicas, where(publica: true)
+  scope :visibles, where(visible: true)
   scope :recientes, order('updated_at desc').limit(10)
 
   %w{Lista Coleccion Reserva Principal Suplente}.each do |tipo|
@@ -26,6 +27,11 @@ class Lista < ActiveRecord::Base
 
   scope :normales, where(type: 'Lista')
 
+  delegate :nombre, to: :usuario, allow_nil: true, prefix: true
+
+  multisearchable against: [ :nombre, :usuario_nombre, :nombres_de_las_cartas
+    ], if: :lista?
+
   # Devuelve todos los slots tanto en esta lista como en `otra`
   def comparar_con(otra)
     Slot.where(inventario_id: [self, otra]).menos(otra)
@@ -34,5 +40,9 @@ class Lista < ActiveRecord::Base
   # Cantidad de cartas en la lista
   def cantidad
     self.slots.sum(:cantidad)
+  end
+
+  def nombres_de_las_cartas
+    cartas.collect(&:nombre).join(' ')
   end
 end

@@ -1,0 +1,17 @@
+%h1= titulo
+
+- if @documentos.any?
+
+  #documentos.tabla-fluida
+    #encabezado.row-fluid
+      .nombre.span2 Nombre
+      .tipo.span1 Tipo
+      .contenido.span9 Contenido
+
+    = render partial: 'documento',
+      collection: DocumentoDecorator.decorate_collection(@documentos)
+- else
+  %p Ninguna...
+
+%h2 Probar de nuevo
+= render 'form'

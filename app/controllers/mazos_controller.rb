@@ -12,7 +12,7 @@ class MazosController < ApplicationController
   respond_to :ficha, only: :show
 
   def index
-    @busqueda = apply_scopes(@mazos)
+    @busqueda = apply_scopes @mazos
     @mazos = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@mazos)
@@ -55,7 +55,7 @@ class MazosController < ApplicationController
 
     def parametros_permitidos
       params.require(:mazo).permit(
-        :nombre, :formato, :publico,
+        :nombre, :formato, :visible,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ],

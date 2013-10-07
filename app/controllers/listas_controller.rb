@@ -12,7 +12,7 @@ class ListasController < ApplicationController
   before_filter :determinar_galeria, only: [:show]
 
   def index
-    @busqueda = apply_scopes(@listas.normales)
+    @busqueda = apply_scopes @listas.normales
     @listas = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@listas)
@@ -66,7 +66,7 @@ class ListasController < ApplicationController
 
     def parametros_permitidos
       params.require(:lista).permit(
-        :nombre, :publica,
+        :nombre, :visible,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ]

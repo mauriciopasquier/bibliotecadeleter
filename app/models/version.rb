@@ -1,11 +1,11 @@
 # encoding: utf-8
 class Version < ActiveRecord::Base
   include FriendlyId
+  include PgSearch
 
   attr_readonly   :coste_convertido
 
   belongs_to :carta, inverse_of: :versiones, touch: true
-  delegate :nombre, to: :carta, allow_nil: true
   belongs_to :expansion, touch: true
   has_many :imagenes, order: 'created_at ASC',
             inverse_of: :version, dependent: :destroy
@@ -21,6 +21,7 @@ class Version < ActiveRecord::Base
   accepts_nested_attributes_for :imagenes, reject_if: :all_blank
 
   before_save :ver_si_es_canonica, :convertir_coste
+  before_save :actualizar_path_de_imagenes, if: :numero_changed?
 
   validates_uniqueness_of :numero, scope: :expansion_id, message: :no_es_unico_en_la_expansion
   validates_presence_of :carta, inverse_of: :versiones
@@ -33,7 +34,13 @@ class Version < ActiveRecord::Base
   scope :poder,   where(senda: 'Poder')
   scope :neutral, where(senda: 'Neutral')
 
+  delegate :nombre, to: :carta, allow_nil: true
   delegate :nombre_y_expansiones, to: :carta, allow_nil: true
+  delegate :nombre, to: :expansion, allow_nil: true, prefix: true
+
+  multisearchable against: [ :coste, :nombre, :tipo, :supertipo, :subtipo,
+    :senda, :texto, :ambientacion, :fue, :res, :expansion_nombre, :rareza,
+    :arte ], if: :persisted?
 
   def self.normales
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
@@ -84,6 +91,10 @@ class Version < ActiveRecord::Base
     self.supertipo == 'Demonio'
   end
 
+  def arte
+    self.artistas.collect(&:nombre).join(', ')
+  end
+
   private
 
     # Usá `slug` para llamar a esto
@@ -101,5 +112,16 @@ class Version < ActiveRecord::Base
 
     def convertir_coste
       self.coste_convertido = Version.coste_convertido(self.coste)
+    end
+
+    def actualizar_path_de_imagenes
+      imagenes.each do |i|
+        Imagen.estilos.each do |estilo|
+          nuevo = i.archivo.path(estilo)
+          viejo = nuevo.gsub numero_justificado, numero_was.to_s.rjust(3, '0')
+
+          File.rename(viejo, nuevo) if File.exists?(viejo)
+        end
+      end
     end
 end

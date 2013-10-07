@@ -64,7 +64,7 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def texto
-    object.texto.split('/').collect do |cara|
+    object.texto.split(' / ').collect do |cara|
       h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
         cara
       end

@@ -11,9 +11,6 @@ es:
       mazo:
         principal: 'Mazo principal'
         suplente: 'Mazo suplente'
-        publico: 'Público'
-      lista:
-        publica: 'Pública'
     errors:
       models:
         version:
@@ -38,3 +35,6 @@ es:
       ilustraciones:
         one:    '1 ilustración'
         other:  '%{count} ilustraciones'
+  busquedas:
+    form:
+      texto: 'Busca listas, mazos, expansiones, cartas, artistas, lo que sea!'
