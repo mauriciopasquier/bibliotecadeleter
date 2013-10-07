@@ -43,3 +43,6 @@
       = link_to 'Nueva versión', new_carta_version_path(@carta), class: 'btn btn-info'
     - if can? :create, Carta
       = link_to 'Nueva carta', new_carta_path, class: 'btn btn-info'
+    - if can? :destroy, @carta
+      = link_to 'Eliminar carta', @carta, method: :delete,
+        data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
