@@ -32,6 +32,12 @@ class Cita
     'Lo bueno de estos artefactos, es que saben repararse solos',
     'Atrás quedaron los días donde los caminantes viajaban largas distancias por nuevas noticias' ]
 
+  NO_ENCONTRAR = [
+    'Si desconoces lo que buscas, tu batalla ya ha terminado',
+    '¿Cómo ganar una batalla, si ni siquiera encuentras a tu enemigo?',
+    'Hay recuerdos que no deberían ser recordados',
+    'Tiempos pasados fueron grabados, en lugares difíciles de encontrar'
+  ]
 
   def self.random_para(accion, semilla = nil)
     case accion
@@ -41,6 +47,8 @@ class Cita
         CREAR[semilla || rand(CREAR.size)]
       when :actualizar
         ACTUALIZAR[semilla || rand(ACTUALIZAR.size)]
+      when :no_encontrar
+        NO_ENCONTRAR[semilla || rand(NO_ENCONTRAR.size)]
       else
     end
   end

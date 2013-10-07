@@ -1,15 +1,6 @@
 %h1= titulo
 
-= form_for :documento, url: busqueda_index_path, html: { class: 'form expansion' } do |f|
-  = f.error_messages
-
-  .row-fluid
-    .span12
-      = f.label :busqueda, t('.busqueda')
-      = f.text_field :busqueda, class: 'span12', required: true, autofocus: true
-  .row-fluid
-    .span12
-      = f.submit 'Buscar', class: 'btn btn-success'
+= render 'form'
 
 .row-fluid.botones
   .span12

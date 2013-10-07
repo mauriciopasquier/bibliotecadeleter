@@ -4,9 +4,6 @@ class DocumentosController < ApplicationController
 
   skip_authorization_check
 
-  def new
-  end
-
   def create
     session.delete(:busqueda)
     session.merge! parametros_permitidos
@@ -15,8 +12,22 @@ class DocumentosController < ApplicationController
 
   def index
     @busqueda = session[:busqueda]
-    @documentos = PgSearch.multisearch(@busqueda).reorder(
-      'searchable_type, pg_search_rank').includes(:searchable)
+    @documentos = PgSearch.multisearch(@busqueda
+      ).reorder(
+        'searchable_type, pg_search_rank'
+      ).includes(
+        :searchable
+      ).accessible_by(
+        current_ability
+      ).select("ts_headline(
+          pg_search_documents.content,
+          plainto_tsquery(
+            'spanish', ''' ' || unaccent('#{@busqueda}') || ' ''' || ':*'),
+          'StartSel=\"<strong class=text-info>\", StopSel=\"</strong>\"'
+        ) AS extracto"
+      )
+
+    flash[:error] = Cita.random_para :no_encontrar if @documentos.empty?
 
     respond_with @documentos
   end
