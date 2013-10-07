@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Artista < ActiveRecord::Base
   include FriendlyId
+  include PgSearch
 
   has_and_belongs_to_many :ilustraciones, class_name: 'Imagen'
   has_many :cartas, through: :ilustraciones
@@ -10,6 +11,8 @@ class Artista < ActiveRecord::Base
   friendly_id :nombre, use: :slugged
 
   validates_presence_of :nombre
+
+  multisearchable against: :nombre
 
   # TODO scope ilustraciones_sin_colaboracion
   # TODO scope última_colaboracion (por lanzamiento, created_at)

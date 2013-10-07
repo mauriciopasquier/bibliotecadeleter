@@ -66,7 +66,7 @@ class ListasController < ApplicationController
 
     def parametros_permitidos
       params.require(:lista).permit(
-        :nombre, :publica,
+        :nombre, :visible,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ]

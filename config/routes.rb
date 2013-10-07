@@ -50,15 +50,17 @@ BibliotecaDelEter::Application.routes.draw do
 
     r.resources :cartas, except: [ :edit ] do
       r.resources :versiones, only: [ :new, :edit, :destroy ]
-
-      collection do
-        match 'buscar' => 'cartas#buscar', via: [:get, :post], as: :buscar
-      end
-
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
     end
 
     r.resources :expansiones
+
+    # Buscar documentos (search documents)
+    r.resource :busqueda, only: [:new, :show, :create] do
+      collection do
+        match 'cartas' => 'cartas#buscar', via: [:get, :post], as: :cartas
+      end
+    end
   end
 
   with_options path_names: masculinos do |r|

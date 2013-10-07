@@ -1,7 +1,7 @@
 %h1= titulo
 .row-fluid
   .span12
-    = search_form_for @busqueda,  url: buscar_cartas_path,
+    = search_form_for @busqueda,  url: cartas_busqueda_path,
                                   html: { method: :post, class: 'form-search'} do |f|
 
       .row-fluid
@@ -39,15 +39,18 @@
               options_for_select(campos_de_busqueda, seleccionadas(:campo)),
               multiple: true, class: 'span12', title: 'Cualquier lado'
 
-
-      .row-fluid.botones
+      .row-fluid
         .span12
           = f.submit class: 'btn btn-success'
 
+.row-fluid.botones
+  .span12
+    = link_to 'Búsqueda global', new_busqueda_path, class: 'btn btn-info'
+
 .row-fluid
   .span12
-    %h2.plegable Resultados
     - if params[:q].present?
+      %h2.plegable Resultados
       .row-fluid
         .span12= label_tag t '.encontradas', count: @cartas.count
     .row-fluid

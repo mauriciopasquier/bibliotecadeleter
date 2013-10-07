@@ -10,3 +10,8 @@ end
 
 # yaml_db
 Rake::Task['db:data:load_dir'].invoke
+
+# pg_search
+%w{Carta Version Expansion Artista Usuario}.each do |modelo|
+  Rake::Task['pg_search:multisearch:rebuild'].invoke(modelo)
+end

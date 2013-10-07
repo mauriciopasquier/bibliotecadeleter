@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Expansion < ActiveRecord::Base
   include FriendlyId
+  include PgSearch
 
   has_many :versiones, order: 'slug ASC', dependent: :destroy
   has_many :cartas, through: :versiones
@@ -12,6 +13,8 @@ class Expansion < ActiveRecord::Base
   validates_uniqueness_of :nombre
 
   scope :grandes, where('total >= ?', 100)
+
+  multisearchable against: [ :nombre, :saga, :notas ]
 
   # Determina de qué expansión son las promocionales
   def base

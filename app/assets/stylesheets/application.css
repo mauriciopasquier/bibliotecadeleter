@@ -27,5 +27,6 @@
  *= require listas
  *= require inicio
  *= require mazos
+ *= require busquedas
  *= require bootstrap-checkbox
  */

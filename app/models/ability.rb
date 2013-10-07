@@ -31,12 +31,25 @@ class Ability
       can :create, apocrifos
       can :manage, [ Lista, Mazo ], usuario_id: @usuario.id
       can :manage, Usuario, id: @usuario.id
+
+      # Puede leer documentos de búsqueda de recursos no visibles si son suyos
+      [ Mazo, Lista ].each do |modelo|
+        can :read, PgSearch::Document,
+          searchable_type: modelo.name,
+          searchable_id: @usuario.send("#{modelo.name.downcase}_ids")
+      end
     end
 
     def anonimo
       can :read, :all
-      cannot :read, Mazo, publico: false
-      cannot :read, Lista, publica: false
+      cannot :read, [ Mazo, Lista ], visible: false
+
+      # No puede leer documentos de búsqueda de recursos no visibles
+      [ Mazo, Lista ].each do |modelo|
+        cannot :read, PgSearch::Document,
+          searchable_type: modelo.name,
+          searchable_id: modelo.where(visible: false).pluck(:id)
+      end
     end
 
     # Ordenadas por prioridad de mayor a menor, para la aplicación de reglas

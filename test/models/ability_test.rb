@@ -40,20 +40,20 @@ describe Ability do
     end
 
     it 'no leen cosas privadas de otros usuarios' do
-      [ build_stubbed(:mazo, publico: false, usuario: @usuario),
-        build_stubbed(:lista, publica: false, usuario: @usuario)
-      ].each do |coso|
-        subject.can?(:read, coso ).must_equal true,
-          "No lee #{coso.class.name} privado propio"
+      [:mazo, :lista].each do |modelo|
+        recurso = build_stubbed(modelo, visible: false, usuario: @usuario)
+
+        subject.can?(:read, recurso ).must_equal true,
+          "No lee #{recurso.class.name} privado propio"
       end
 
       otro = create(:usuario)
 
-      [ build_stubbed(:mazo, publico: false, usuario: otro),
-        build_stubbed(:lista, publica: false, usuario: otro)
-      ].each do |coso|
-        subject.can?(:read, coso ).wont_equal true,
-          "Lee #{coso.class.name} privado ajeno"
+      [:mazo, :lista].each do |modelo|
+        recurso = build_stubbed(modelo, visible: false, usuario: otro)
+
+        subject.can?(:read, recurso ).wont_equal true,
+          "Lee #{recurso.class.name} privado ajeno"
       end
     end
 
@@ -79,11 +79,11 @@ describe Ability do
     end
 
     it 'no leen cosas privadas' do
-      [ build_stubbed(:mazo, publico: false),
-        build_stubbed(:lista, publica: false)
-      ].each do |coso|
-        subject.can?(:read, coso).wont_equal true,
-          "Lee #{coso.class.name} privado"
+      [:mazo, :lista].each do |modelo|
+        recurso = build_stubbed(modelo, visible: false)
+
+        subject.can?(:read, recurso ).wont_equal true,
+          "Lee #{recurso.class.name} privado"
       end
     end
   end

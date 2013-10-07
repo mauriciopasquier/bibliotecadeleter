@@ -1,0 +1,7 @@
+## Instalación
+
+...
+
+como superusuario de postgresql en la bd de la aplicación:
+
+    create extension unaccent;

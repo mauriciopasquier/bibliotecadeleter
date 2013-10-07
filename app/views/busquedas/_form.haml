@@ -1,0 +1,9 @@
+= form_for :busqueda, url: busqueda_path, html: { class: 'form expansion' } do |f|
+
+  .row-fluid
+    .span12
+      = label_tag 'busqueda[texto]', t('.texto')
+      = text_field_tag 'busqueda[texto]', @busqueda, class: 'span12', required: true, autofocus: true
+  .row-fluid
+    .span12
+      = f.submit 'Buscar', class: 'btn btn-success'

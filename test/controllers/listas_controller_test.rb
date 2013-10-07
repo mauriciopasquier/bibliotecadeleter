@@ -42,10 +42,10 @@ describe ListasController do
         cantidad: lista.slots.first.cantidad.next }
 
       lista.slots.count.must_equal 1
-      lista.publica.must_equal true
+      lista.visible.must_equal true
 
       put :update, usuario_id: @usuario, id: lista, lista: {
-        publica: false, nombre: 'otro' }.merge(slots_attributes: {
+        visible: false, nombre: 'otro' }.merge(slots_attributes: {
           '0' => nuevo_slot, '1' => viejo_slot }
         )
 
