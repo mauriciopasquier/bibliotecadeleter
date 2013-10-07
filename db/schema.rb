@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006225514) do
+ActiveRecord::Schema.define(:version => 20131007193002) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -63,6 +63,23 @@ ActiveRecord::Schema.define(:version => 20131006225514) do
   end
 
   add_index "expansiones", ["slug"], :name => "index_expansiones_on_slug", :unique => true
+
+  create_table "expansiones_formatos", :id => false, :force => true do |t|
+    t.integer "expansion_id"
+    t.integer "formato_id"
+  end
+
+  add_index "expansiones_formatos", ["expansion_id"], :name => "index_expansiones_formatos_on_expansion_id"
+  add_index "expansiones_formatos", ["formato_id"], :name => "index_expansiones_formatos_on_formato_id"
+
+  create_table "formatos", :force => true do |t|
+    t.string   "nombre",     :null => false
+    t.string   "slug",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "formatos", ["slug"], :name => "index_formatos_on_slug", :unique => true
 
   create_table "imagenes", :force => true do |t|
     t.integer  "version_id"

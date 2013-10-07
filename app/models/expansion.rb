@@ -6,6 +6,7 @@ class Expansion < ActiveRecord::Base
   has_many :versiones, order: 'slug ASC', dependent: :destroy
   has_many :cartas, through: :versiones
   has_many :imagenes, through: :versiones, order: 'versiones.slug ASC'
+  has_and_belongs_to_many :formatos
 
   friendly_id :nombre, use: :slugged
 

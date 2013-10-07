@@ -2,7 +2,7 @@
 class Ability
   include CanCan::Ability
 
-  @@canones = [ Carta, Expansion, Version, Artista, Imagen ]
+  @@canones = [ Carta, Expansion, Version, Artista, Imagen, Formato ]
   @@apocrifos = [ Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente ]
   @@modelos = @@canones + @@apocrifos
 

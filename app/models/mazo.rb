@@ -44,7 +44,9 @@ class Mazo < ActiveRecord::Base
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
 
-  def nombres_de_las_cartas
-    (cartas + cartas_suplentes + cartas_de_demonio).uniq.collect(&:nombre).join(' ')
-  end
+  private
+
+    def nombres_de_las_cartas
+      (cartas + cartas_suplentes + cartas_de_demonio).uniq.collect(&:nombre).join(' ')
+    end
 end

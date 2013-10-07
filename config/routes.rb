@@ -1,5 +1,4 @@
 BibliotecaDelEter::Application.routes.draw do
-
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
@@ -65,6 +64,8 @@ BibliotecaDelEter::Application.routes.draw do
 
   with_options path_names: masculinos do |r|
     r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ]
+
+    r.resources :formatos
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
