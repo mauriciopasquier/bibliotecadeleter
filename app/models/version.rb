@@ -21,6 +21,7 @@ class Version < ActiveRecord::Base
   accepts_nested_attributes_for :imagenes, reject_if: :all_blank
 
   before_save :ver_si_es_canonica, :convertir_coste
+  before_save :actualizar_path_de_imagenes, if: :numero_changed?
 
   validates_uniqueness_of :numero, scope: :expansion_id, message: :no_es_unico_en_la_expansion
   validates_presence_of :carta, inverse_of: :versiones
@@ -111,5 +112,16 @@ class Version < ActiveRecord::Base
 
     def convertir_coste
       self.coste_convertido = Version.coste_convertido(self.coste)
+    end
+
+    def actualizar_path_de_imagenes
+      imagenes.each do |i|
+        Imagen.estilos.each do |estilo|
+          nuevo = i.archivo.path(estilo)
+          viejo = nuevo.gsub numero_justificado, numero_was.to_s.rjust(3, '0')
+
+          File.rename(viejo, nuevo) if File.exists?(viejo)
+        end
+      end
     end
 end
