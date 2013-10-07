@@ -65,6 +65,7 @@
     - version.imagenes.each do |imagen|
       = fc.fields_for :imagenes, imagen do |fi|
 
+        = fi.hidden_field :id
         .row-fluid
           .span7
             = fi.label :arte
