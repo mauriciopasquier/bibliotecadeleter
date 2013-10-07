@@ -52,7 +52,7 @@ describe SugerenciasController do
 
           valores[:value].must_equal version.nombre_y_expansion
           valores[:label].must_equal version.nombre_y_expansion
-          valores[:version_id].must_equal version.id.to_s
+          valores[:id].must_equal version.id.to_s
         end
       end
 
@@ -66,7 +66,7 @@ describe SugerenciasController do
 
         valores[:value].must_equal @carta.nombre_y_expansiones
         valores[:label].must_equal @carta.nombre_y_expansiones
-        valores[:version_id].must_equal @carta.canonica.id.to_s
+        valores[:id].must_equal @carta.canonica.id.to_s
       end
 
       it 'sugiere sólo demonios' do
@@ -80,7 +80,7 @@ describe SugerenciasController do
 
         valores[:value].must_equal version.nombre_y_expansion
         valores[:label].must_equal version.nombre_y_expansion
-        valores[:version_id].must_equal version.id.to_s
+        valores[:id].must_equal version.id.to_s
       end
 
       it 'sugiere por sendas' do
@@ -144,6 +144,7 @@ describe SugerenciasController do
         llave.must_equal expansion.id.to_s
         valores['value'].must_equal expansion.nombre
         valores['label'].must_equal expansion.nombre
+        valores['id'].must_equal expansion.id
       end
     end
   end

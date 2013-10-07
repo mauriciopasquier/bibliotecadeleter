@@ -20,7 +20,7 @@ $(document)
 $(document)
   .on 'railsAutocomplete.select', '.autocomplete-versiones', (evento, data) ->
     # El controlador devuelve el hash con version_id explícitamente
-    $(this).siblings('.version_id').val(data.item.version_id)
+    $(this).siblings('.version_id').val(data.item.id)
 
 $(document)
   .on 'page:change', ->

@@ -26,7 +26,7 @@ module AutocompletarColumnas
         hash[elem.send(llave)] = {
           label: elem.send(valor),
           value: elem.send(valor),
-          version_id: elem.send(llave)
+          id: elem.send(llave)
         }
         hash
       end
