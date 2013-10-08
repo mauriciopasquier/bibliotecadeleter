@@ -13379,14 +13379,14 @@ versiones:
     - '2'
     - Locura
     - '"No existe bestia alguna, que sea incapaz de dominar."'
-    - '35'
+    - '38'
     - Rara
     - '2013-08-23 17:55:08.617927'
-    - '2013-08-24 17:42:14.92137'
+    - '2013-10-08 22:06:40.5768'
     - '625'
     - true
     - '16'
-    - 035-origen
+    - 038-origen
     - '5'
     - '5'
   - - '703'
@@ -13463,7 +13463,7 @@ versiones:
     - '52'
     - Infrecuente
     - '2013-09-04 01:37:17.706997'
-    - '2013-09-04 01:37:17.852574'
+    - '2013-10-08 22:36:24.0983'
     - '629'
     - true
     - '16'
@@ -13525,7 +13525,7 @@ versiones:
     - '40'
     - Infrecuente
     - '2013-09-16 18:55:21.850184'
-    - '2013-09-16 18:55:21.865584'
+    - '2013-10-08 22:11:59.664624'
     - '632'
     - true
     - '16'
@@ -13546,7 +13546,7 @@ versiones:
     - '95'
     - Infrecuente
     - '2013-09-16 18:57:46.633378'
-    - '2013-09-16 18:57:46.692223'
+    - '2013-10-08 23:30:06.030576'
     - '633'
     - true
     - '16'
@@ -13562,14 +13562,14 @@ versiones:
     - 
     - Neutral
     - Solo el báculo se escucha entre las ruinas de la antigua citadela.
-    - '120'
+    - '119'
     - Infrecuente
     - '2013-09-16 18:59:38.154562'
-    - '2013-09-16 18:59:38.183481'
+    - '2013-10-08 23:43:40.477064'
     - '121'
     - false
     - '16'
-    - 120-origen
+    - 119-origen
     - '2'
     - '2'
   - - '712'
@@ -13668,7 +13668,7 @@ versiones:
     - '53'
     - Infrecuente
     - '2013-09-28 15:38:56.799391'
-    - '2013-09-28 15:38:56.815076'
+    - '2013-10-08 22:36:54.668365'
     - '638'
     - true
     - '16'
@@ -13688,7 +13688,7 @@ versiones:
     - '71'
     - Rara
     - '2013-09-28 15:41:05.61039'
-    - '2013-09-28 15:41:05.626174'
+    - '2013-10-08 23:26:35.948949'
     - '639'
     - true
     - '16'
@@ -13708,7 +13708,7 @@ versiones:
     - '81'
     - Común
     - '2013-09-28 15:43:22.263287'
-    - '2013-09-28 15:43:22.280084'
+    - '2013-10-08 23:26:57.599887'
     - '640'
     - true
     - '16'
@@ -13729,7 +13729,7 @@ versiones:
     - '102'
     - Rara
     - '2013-09-28 15:45:40.522615'
-    - '2013-09-28 15:45:40.537755'
+    - '2013-10-08 23:30:34.85275'
     - '641'
     - true
     - '16'
@@ -14027,7 +14027,7 @@ versiones:
     - '48'
     - Épica
     - '2013-10-07 18:28:34.052157'
-    - '2013-10-07 18:28:34.067139'
+    - '2013-10-08 22:22:06.386588'
     - '653'
     - true
     - '16'
@@ -14048,7 +14048,7 @@ versiones:
     - '67'
     - Épica
     - '2013-10-07 18:30:07.455843'
-    - '2013-10-07 18:30:07.469877'
+    - '2013-10-08 23:26:10.363225'
     - '654'
     - true
     - '16'
@@ -14069,7 +14069,7 @@ versiones:
     - '110'
     - Épica
     - '2013-10-07 18:32:28.164513'
-    - '2013-10-07 18:32:28.179133'
+    - '2013-10-08 23:30:58.04244'
     - '655'
     - true
     - '16'
@@ -14333,3 +14333,387 @@ versiones:
     - 141-origen
     - '5'
     - '5'
+  - - '751'
+    - "El aliado objetivo pierde todas sus habilidades hasta el final del turno.\r\nRéplica
+      {1} (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando
+      su Réplica)."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - '"¿Cómo llegué hasta aquí?"'
+    - '36'
+    - Común
+    - '2013-10-08 22:04:58.472169'
+    - '2013-10-08 22:04:58.505579'
+    - '657'
+    - true
+    - '16'
+    - 036-origen
+    - '1'
+    - '1'
+  - - '752'
+    - El demonio objetivo descarta 1 carta por cada Cyborg que controles.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - '"¡Me cansé de estas tonterías, EXTERMÍNENLOS!" -Baggrund.'
+    - '37'
+    - Épica
+    - '2013-10-08 22:06:07.888597'
+    - '2013-10-08 22:06:07.90226'
+    - '41'
+    - false
+    - '16'
+    - 037-origen
+    - '4'
+    - '4'
+  - - '753'
+    - Vínculo {0} (cuando sea puesta en el inferno desde el mazo, puedes pagar su
+      coste de vínculo y exiliarla) - Pon el ritual objetivo de coste 3 o menos de
+      tu inferno en tu mano.
+    - Aliado
+    - 
+    - Humano
+    - '1'
+    - '3'
+    - Locura
+    - '"Hay recuerdos que no deberían ser recordados."'
+    - '39'
+    - Común
+    - '2013-10-08 22:09:32.554157'
+    - '2013-10-08 22:09:32.574837'
+    - '43'
+    - false
+    - '16'
+    - 039-origen
+    - '2'
+    - '2'
+  - - '754'
+    - "Halo (no puede ser objetivo de cartas o habilidades enemigas).\r\n{2}, destruir
+      Cyborg astuto: El aliado objetivo tiene la habilidad de halo hasta el final
+      del turno."
+    - Aliado
+    - 
+    - Cyborg
+    - '2'
+    - '1'
+    - Locura
+    - Diseñados para no ser un problema.
+    - '43'
+    - Común
+    - '2013-10-08 22:13:31.433056'
+    - '2013-10-08 22:13:31.44855'
+    - '47'
+    - false
+    - '16'
+    - 043-origen
+    - '2'
+    - '2'
+  - - '755'
+    - Evasivo (no puede ser atacado).
+    - Aliado
+    - 
+    - Cyborg
+    - '3'
+    - '2'
+    - Locura
+    - '"¿Nunca te preguntaste por qué los líderes están bien informados?" -Guardia
+      de la Esfera de cristal'
+    - '44'
+    - Infrecuente
+    - '2013-10-08 22:18:28.841719'
+    - '2013-10-08 22:18:28.858327'
+    - '48'
+    - false
+    - '16'
+    - 044-origen
+    - '4'
+    - '4'
+  - - '756'
+    - 'X, destruir Cyborg reemplazable: Cancela el aliado objetivo de coste X.'
+    - Aliado
+    - 
+    - Cyborg
+    - '1'
+    - '2'
+    - Locura
+    - '"Buen diseño, rápido y efectivo. Lástima su corta vida útil." -Ingeniero de
+      la Esfera de cristal.'
+    - '45'
+    - Común
+    - '2013-10-08 22:19:22.296444'
+    - '2013-10-08 22:19:22.310993'
+    - '49'
+    - false
+    - '16'
+    - 045-origen
+    - '2'
+    - '2'
+  - - '757'
+    - Cuando Cyborg robaesencia entre en juego, cancela el aliado objetivo.
+    - Aliado
+    - Instantáneo
+    - Cyborg
+    - '2'
+    - '2'
+    - Locura
+    - Prefiere el sabor del alma, antes que el de la carne.
+    - '46'
+    - Rara
+    - '2013-10-08 22:20:25.561135'
+    - '2013-10-08 22:20:25.575971'
+    - '50'
+    - false
+    - '16'
+    - 046-origen
+    - '4'
+    - '4'
+  - - '758'
+    - 'Destruir Dardo de control neural: Toma el control del aliado enemigo objetivo
+      de FUE 3 o menos.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '47'
+    - Infrecuente
+    - '2013-10-08 22:21:38.45224'
+    - '2013-10-08 22:21:38.466162'
+    - '658'
+    - true
+    - '16'
+    - 047-origen
+    - '3'
+    - '3'
+  - - '759'
+    - Todos tus aliados son cyborg en adición a sus otros tipos. Siempre que un cyborg
+      no-ficha que controles sea puesto en un inferno desde el juego, pon en juego
+      una ficha de aliado {Locura} Cyborg 1 FUE, 1 RES con la habilidad de protector.
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '49'
+    - Rara
+    - '2013-10-08 22:25:05.823327'
+    - '2013-10-08 22:25:05.838045'
+    - '54'
+    - false
+    - '16'
+    - 049-origen
+    - '3'
+    - '3'
+  - - '760'
+    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - Gira
+      el aliado objetivo. No se endereza en la próxima restauración de su controlador.
+    - Arma
+    - 
+    - 
+    - '-1'
+    - '+0'
+    - Locura
+    - '"Dulces sueños."'
+    - '54'
+    - Común
+    - '2013-10-08 22:38:29.366317'
+    - '2013-10-08 22:38:29.380807'
+    - '659'
+    - true
+    - '16'
+    - 054-origen
+    - '2'
+    - '2'
+  - - '761'
+    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - El
+      demonio objetivo muestra su mano y descarta todos los rituales.
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Locura
+    - El destello del orbe desorienta el juicio de los infieles.
+    - '55'
+    - Rara
+    - '2013-10-08 23:20:06.686837'
+    - '2013-10-08 23:20:06.70571'
+    - '660'
+    - true
+    - '16'
+    - 055-origen
+    - '4'
+    - '4'
+  - - '762'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Puedes tomar
+      una carta.
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Locura
+    - No hace falta que sepas cómo usarlo, él te mostrará.
+    - '57'
+    - Infrecuente
+    - '2013-10-08 23:21:08.785531'
+    - '2013-10-08 23:21:08.799329'
+    - '57'
+    - false
+    - '16'
+    - 057-origen
+    - '3'
+    - '3'
+  - - '763'
+    - 'Destruir Robot autoensamblante: Pon el Cyborg objetivo de tu Inferno en tu
+      mano.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - '"Todo se transforma." -Viden'
+    - '58'
+    - Común
+    - '2013-10-08 23:22:01.146655'
+    - '2013-10-08 23:22:01.164623'
+    - '58'
+    - false
+    - '16'
+    - 058-origen
+    - '1'
+    - '1'
+  - - '764'
+    - 'Girar: Gira el aliado objetivo.'
+    - Aliado
+    - 
+    - Cyborg
+    - '2'
+    - '2'
+    - Locura
+    - Eficientes modelos de combate, los soldados cyborg pueden aturdir a sus enemigos
+      mucho antes de ser vistos.
+    - '60'
+    - Infrecuente
+    - '2013-10-08 23:22:56.663753'
+    - '2013-10-08 23:22:56.680041'
+    - '61'
+    - false
+    - '16'
+    - 060-origen
+    - '3'
+    - '3'
+  - - '765'
+    - Cancela la carta objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - '"¡Nada, NADA entrará sin mi permiso!" -Fáradt'
+    - '61'
+    - Común
+    - '2013-10-08 23:25:44.030106'
+    - '2013-10-08 23:25:44.053124'
+    - '62'
+    - false
+    - '16'
+    - 061-origen
+    - '3'
+    - '3'
+  - - '766'
+    - Mezcla las primeras siete cartas de tu inferno en tu mazo. Luego exilia Desgarrar
+      la realidad.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Mi conexión con tu mundo es más grande de lo que puedas siquiera conocer."
+      -Viden'
+    - '126'
+    - Infrecuente
+    - '2013-10-08 23:34:14.735275'
+    - '2013-10-08 23:34:14.755266'
+    - '136'
+    - false
+    - '16'
+    - 126-origen
+    - '4'
+    - '4'
+  - - '767'
+    - Espíritu de la Tierra tiene todos los tipos de aliado en cualquier zona en que
+      se encuentre.
+    - Aliado
+    - 
+    - Avatar
+    - '2'
+    - '2'
+    - Neutral
+    - '"Conóceme cual soy. ¡Soy la verdad! Agua, tierra, llama, aire, éter, vida,
+      mente, individualidad, esos ocho forman mi espectro actual y están suspendidos
+      de mí, como cuelgan las perlas de su hilo." -Mahabharata'
+    - '129'
+    - Infrecuente
+    - '2013-10-08 23:37:53.581002'
+    - '2013-10-08 23:37:53.596019'
+    - '661'
+    - true
+    - '16'
+    - 129-origen
+    - '2'
+    - '2'
+  - - '768'
+    - "Protector (puedes girarlo y hacer que defienda al atacante, en vez del defensor
+      propuesto).\r\nAl principio de cada restauración, endereza Vigilante obstinado."
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '3'
+    - Neutral
+    - 
+    - '148'
+    - Común
+    - '2013-10-08 23:40:35.185342'
+    - '2013-10-08 23:40:35.272212'
+    - '662'
+    - true
+    - '16'
+    - 148-origen
+    - '3'
+    - '3'
+  - - '769'
+    - Protector (puedes girarlo y hacer que defienda al atacante, en vez del defensor
+      propuesto).
+    - Aliado
+    - Instantáneo
+    - Bestia
+    - '2'
+    - '2'
+    - Neutral
+    - La luz que irradia su cola, atrae a las presas curiosas.
+    - '120'
+    - Común
+    - '2013-10-08 23:45:24.469295'
+    - '2013-10-08 23:45:24.484228'
+    - '122'
+    - false
+    - '16'
+    - 120-origen
+    - '3'
+    - '3'
