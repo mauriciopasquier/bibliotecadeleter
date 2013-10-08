@@ -40,19 +40,18 @@ describe SugerenciasController do
         )
       end
 
-      it 'sugiere cada versión' do
+      it 'sugiere sólo las cartas' do
         get :cartas, term: 'sa'
 
         must_respond_with :success
-        json.size.must_equal 2
+        json.size.must_equal 1
 
         json.each do |resultado|
-          valores = resultado.last.with_indifferent_access
-          version = @carta.versiones.find(resultado.first)
+          valores = resultado.last
 
-          valores[:value].must_equal version.nombre_y_expansion
-          valores[:label].must_equal version.nombre_y_expansion
-          valores[:id].must_equal version.id.to_s
+          valores['value'].must_equal @carta.nombre
+          valores['label'].must_equal @carta.nombre
+          valores['id'].must_equal @carta.id
         end
       end
 
@@ -62,11 +61,11 @@ describe SugerenciasController do
         must_respond_with :success
         json.size.must_equal 1
 
-        valores = json.first.last.with_indifferent_access
+        valores = json.first.last
 
-        valores[:value].must_equal @carta.nombre_y_expansiones
-        valores[:label].must_equal @carta.nombre_y_expansiones
-        valores[:id].must_equal @carta.canonica.id.to_s
+        valores['value'].must_equal @carta.nombre_y_expansiones
+        valores['label'].must_equal @carta.nombre_y_expansiones
+        valores['id'].must_equal @carta.canonica.id.to_s
       end
 
       it 'sugiere sólo demonios' do
@@ -76,11 +75,11 @@ describe SugerenciasController do
         must_respond_with :success
         json.size.must_equal 1
 
-        valores = json.first.last.with_indifferent_access
+        valores = json.first.last
 
-        valores[:value].must_equal version.nombre_y_expansion
-        valores[:label].must_equal version.nombre_y_expansion
-        valores[:id].must_equal version.id.to_s
+        valores['value'].must_equal version.nombre_y_expansion
+        valores['label'].must_equal version.nombre_y_expansion
+        valores['id'].must_equal version.id.to_s
       end
 
       it 'sugiere por sendas' do
@@ -103,7 +102,7 @@ describe SugerenciasController do
         must_respond_with :success
         json.size.must_equal 2
 
-        get :cartas, term: 'sa',
+        get :versiones, term: 'sa',
           sendas: ['neutral', 'locura']
 
         must_respond_with :success
@@ -166,6 +165,7 @@ describe SugerenciasController do
         )
       end
     end
+
     describe 'json' do
       it 'sugiere por nombres' do
         create(:artista, nombre: 'bogus')
@@ -181,6 +181,43 @@ describe SugerenciasController do
         llave.must_equal artista.id.to_s
         valores['value'].must_equal artista.nombre
         valores['label'].must_equal artista.nombre
+      end
+    end
+  end
+
+  describe 'versiones' do
+    describe 'rutas' do
+      it 'rutea al default' do
+        assert_routing(
+          { method: :get, path: '/sugerencias/versiones' },
+          { controller: 'sugerencias', action: 'versiones' }
+        )
+      end
+
+      it 'rutea con queries' do
+        assert_routing('sugerencias/versiones',
+          { controller: 'sugerencias', action: 'versiones', term: 'bag' },
+          { },
+          { term: 'bag' }
+        )
+      end
+    end
+
+    describe 'json' do
+      it 'sugiere por nombres' do
+        version = create(:version_con_carta)
+
+        get :versiones, term: version.nombre
+
+        must_respond_with :success
+        json.size.must_equal 1
+
+        llave, valores = json.first
+
+        llave.must_equal version.id.to_s
+        valores['value'].must_equal version.nombre_y_expansion
+        valores['label'].must_equal version.nombre_y_expansion
+        valores['id'].must_equal version.id.to_s
       end
     end
   end

@@ -28,6 +28,7 @@ BibliotecaDelEter::Application.routes.draw do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
     get 'expansiones', to: 'sugerencias#expansiones', as: :sugerir_expansiones
     get 'artistas', to: 'sugerencias#artistas', as: :sugerir_artistas
+    get 'versiones', to: 'sugerencias#versiones', as: :sugerir_versiones
     get 'valores_expansion_saga'
     get 'valores_version_tipo'
     get 'valores_version_subtipo'
