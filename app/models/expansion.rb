@@ -14,6 +14,7 @@ class Expansion < ActiveRecord::Base
   validates_uniqueness_of :nombre
 
   scope :grandes, where('total >= ?', 100)
+  scope :ordenadas, order('lanzamiento, created_at')
 
   multisearchable against: [ :nombre, :saga, :notas ]
 

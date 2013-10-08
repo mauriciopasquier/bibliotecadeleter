@@ -4,7 +4,7 @@
   .span12
     %dl.dl-horizontal
       %dt Expansiones
-      - formato.expansiones.each do |e|
+      - formato.expansiones.ordenadas.each do |e|
         %dd= link_to e.nombre, e
 
 .row-fluid.botones

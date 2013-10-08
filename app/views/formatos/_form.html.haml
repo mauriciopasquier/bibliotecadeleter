@@ -7,7 +7,7 @@
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
     .span6
       = f.label :expansiones
-      = f.collection_select :expansion_ids, Expansion.order(:lanzamiento), :id, :nombre,
+      = f.collection_select :expansion_ids, Expansion.ordenadas, :id, :nombre,
         { }, { multiple: true, class: 'span12' }
 
   .row-fluid.botones
