@@ -1,0 +1,15 @@
+%h1= titulo
+
+.row-fluid
+  .span12
+    %dl.dl-horizontal
+      %dt Expansiones
+      - formato.expansiones.each do |e|
+        %dd= link_to e.nombre, e
+
+.row-fluid.botones
+  .span12
+    - if can? :edit, formato
+      = link_to 'Editar', edit_formato_path(formato),
+        class: 'btn btn-warning'
+    = link_to 'Otros formatos', formatos_path, class: 'btn'

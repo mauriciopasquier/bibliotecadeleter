@@ -6,75 +6,74 @@ describe FormatosController do
   describe 'anónimamente' do
     it "accede a la lista" do
       get :index
-      assert_response :success
-      assert_not_nil assigns(:formatos)
+      must_respond_with :success
+      assigns(:formatos).wont_be_nil
     end
 
     it "no accede a new" do
       get :new
-      assert_redirected_to :root
+      must_redirect_to :root
     end
 
     it "no crea formatos" do
       post :create, formato: attributes_for(:formato)
-      assert_redirected_to :root
+      must_redirect_to :root
     end
 
-    it "muestra una expansión" do
+    it "muestra un formato" do
       get :show, id: create(:formato)
-      assert_response :success
+      must_respond_with :success
     end
 
     it "no accede a edit" do
       get :edit, id: create(:formato)
-      assert_redirected_to :root
+      must_redirect_to :root
     end
 
     it "no actualiza formatos" do
       put :update, id: create(:formato), formato: attributes_for(:formato)
-      assert_redirected_to :root
+      must_redirect_to :root
     end
 
     it "no destruye formatos" do
       delete :destroy, id: create(:formato)
-      assert_redirected_to :root
+      must_redirect_to :root
     end
   end
 
   describe 'logueado' do
+    before { loguearse }
     describe 'con permisos' do
       it "accede a new" do
-        loguearse
         autorizar { get :new }
-        assert_response :success
+        must_respond_with :success
       end
 
       it "crea formatos" do
-        loguearse
-        assert_difference('Formato.count') do
+        lambda do
           autorizar do
             post :create, formato: attributes_for(:formato)
           end
-        end
+        end.must_change 'Formato.count'
 
-        assert_redirected_to formato_path(assigns(:formato))
+        must_redirect_to formato_path(assigns(:formato))
       end
 
       it "accede a edit" do
-        loguearse
         autorizar { get :edit, id: create(:formato) }
-        assert_response :success
+        must_respond_with :success
       end
 
 
-      it "actualiza una expansión" do
-        loguearse
-        formato = create(:formato)
-        atributos = attributes_for(:formato)
+      it "actualiza un formato" do
+        formato, expansion = create(:formato), create(:expansion)
+        atributos = attributes_for(:formato, expansion_ids: [expansion.id])
+
         autorizar { put :update, id: formato, formato: atributos }
-        assert_redirected_to formato_path(assigns(:formato))
-        formato.reload
-        assert_equal atributos[:nombre], formato.nombre, "No actualiza el nombre"
+
+        must_redirect_to formato_path(assigns(:formato))
+        formato.reload.nombre.must_equal atributos[:nombre], "No actualiza el nombre"
+        formato.expansiones.include?(expansion).must_equal true
       end
     end
   end

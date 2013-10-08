@@ -1,0 +1,9 @@
+.row-fluid
+  .span1.controles-anidados
+    = link_to '-', '#', class: 'hidden remove btn btn-danger', data: no_turbolink
+    = label_tag :_destroy do
+      = f.check_box :_destroy
+      remover
+  .span11
+    = f.hidden_field :id, class: 'expansion_id'
+    = f.autocomplete_field :nombre, sugerir_expansiones_path, class: 'span12'

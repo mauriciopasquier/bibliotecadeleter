@@ -1,0 +1,15 @@
+= form_for formato, html: { class: 'form formato' } do |f|
+  = f.error_messages
+
+  .row-fluid
+    .span6
+      = f.label :nombre
+      = f.text_field :nombre, class: 'span12', required: true, autofocus: true
+    .span6
+      = f.label :expansiones
+      = f.collection_select :expansion_ids, Expansion.order(:lanzamiento), :id, :nombre,
+        { }, { multiple: true, class: 'span12' }
+
+  .row-fluid.botones
+    .span12
+      = f.submit 'Guardar', class: 'btn btn-success'

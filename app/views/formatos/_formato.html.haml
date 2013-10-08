@@ -1,0 +1,8 @@
+- cache formato do
+  .row-fluid
+    .span4.nombre
+      - if can? :read, formato
+        = link_to_mostrar formato, formato.nombre
+      - else
+        = formato.nombre
+    .span8.expansiones.hidden-phone= formato.expansiones_legales
