@@ -10,6 +10,12 @@
       = f.collection_select :expansion_ids, Expansion.ordenadas, :id, :nombre,
         { }, { multiple: true, class: 'span12' }
 
+  .row-fluid
+    .span12
+      = f.label :nombres_de_cartas_prohibidas, 'Cartas prohibidas'
+      = f.autocomplete_field :nombres_de_cartas_prohibidas, sugerir_cartas_path,
+        data: { delimiter: ', ' }, class: 'span12'
+
   .row-fluid.botones
     .span12
       = f.submit 'Guardar', class: 'btn btn-success'

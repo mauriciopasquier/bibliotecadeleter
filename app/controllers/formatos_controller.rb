@@ -50,7 +50,7 @@ class FormatosController < ApplicationController
 
     def parametros_permitidos
       params.require(:formato).permit(
-        :nombre, expansion_ids: []
+        :nombre, :nombres_de_cartas_prohibidas, expansion_ids: []
       )
     end
 end

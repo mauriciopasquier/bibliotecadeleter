@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131007235525) do
+ActiveRecord::Schema.define(:version => 20131008040721) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(:version => 20131007235525) do
   end
 
   add_index "cartas", ["slug"], :name => "index_cartas_on_slug", :unique => true
+
+  create_table "cartas_formatos", :id => false, :force => true do |t|
+    t.integer "carta_id"
+    t.integer "formato_id"
+  end
+
+  add_index "cartas_formatos", ["carta_id"], :name => "index_cartas_formatos_on_carta_id"
+  add_index "cartas_formatos", ["formato_id"], :name => "index_cartas_formatos_on_formato_id"
 
   create_table "expansiones", :force => true do |t|
     t.string   "nombre",       :null => false

@@ -1,11 +1,19 @@
 %h1= titulo
 
 .row-fluid
-  .span12
+  .span6
     %dl.dl-horizontal
       %dt Expansiones
       - formato.expansiones.ordenadas.each do |e|
         %dd= link_to e.nombre, e
+  .span6
+    %dl.dl-horizontal
+      %dt Cartas prohibidas
+      - if formato.cartas_prohibidas.any?
+        - formato.cartas_prohibidas.each do |c|
+          %dd= link_to c.nombre, c
+      - else
+        %dd Ninguna
 
 .row-fluid.botones
   .span12
