@@ -9,6 +9,8 @@ class Formato < ActiveRecord::Base
   validates_presence_of :nombre
   validates_uniqueness_of :nombre
 
+  default_scope order(:nombre)
+
   friendly_id :nombre, use: :slugged
 
   def nombres_de_cartas_prohibidas=(nombres)

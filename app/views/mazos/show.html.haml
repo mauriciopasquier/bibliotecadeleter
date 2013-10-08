@@ -1,7 +1,7 @@
 %h1
   = titulo
   = mazo.visibilidad_tag
-%h2= mazo.formato
+%h2= mazo.formato_objetivo.try(:nombre)
 
 .row-fluid
   #mazo.span12

@@ -32,6 +32,6 @@ class MazoDecorator < ListaDecorator
   end
 
   def formato
-    object.formato || 'Casual'
+    object.formato_objetivo.try(:nombre) || 'Casual'
   end
 end

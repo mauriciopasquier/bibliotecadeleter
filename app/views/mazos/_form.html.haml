@@ -6,8 +6,9 @@
       = f.label :nombre
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
     .span5
-      = f.label :formato
-      = f.text_field :formato, class: 'span12'
+      = f.label :formato_objetivo
+      = f.collection_select :formato_objetivo_id, Formato.all, :id, :nombre,
+        { include_blank: true }, class: 'span12'
     .span1
       = f.label :visible
       = f.check_box :visible, class: 'bootstrapear'

@@ -38,7 +38,7 @@
         - @usuario.mazos.recientes.each do |mazo|
           .row-fluid.span12
             .pull-left= link_to mazo.nombre, [usuario, mazo]
-            .pull-right= mazo.formato
+            .pull-right= mazo.decorate.formato
 
       -# TODO agregar la columna que falta
     .row-fluid
