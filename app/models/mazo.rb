@@ -17,6 +17,8 @@ class Mazo < ActiveRecord::Base
   # 1 suplente con cantidad de cartas según el formato
   has_one :suplente, inverse_of: :mazo, dependent: :destroy,
     include: :slots
+  belongs_to :formato_objetivo, class_name: 'Formato',
+    inverse_of: :mazos_dedicados
 
   has_many :versiones, through: :principal
   has_many :cartas, through: :principal

@@ -30,4 +30,8 @@ class MazoDecorator < ListaDecorator
   def visibilidad
     object.visible ? 'Público' : 'Privado'
   end
+
+  def formato
+    object.formato || 'Casual'
+  end
 end
