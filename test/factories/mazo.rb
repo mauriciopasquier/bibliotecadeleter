@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :mazo do
     nombre  { generate :cadena_unica }
-    formato { generate :cadena_unica }
+    formato_objetivo
     association :principal, strategy: :build
 
     factory :mazo_con_demonios do
