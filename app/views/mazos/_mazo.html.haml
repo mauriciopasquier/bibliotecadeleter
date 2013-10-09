@@ -6,7 +6,7 @@
       - if can? :delete, mazo
         = link_to_eliminar [@usuario, mazo], ''
       = link_to_mostrar [@usuario, mazo], mazo.nombre
-    .visibilidad.span2= mazo.visibilidad
+    .visibilidad.span2= mazo.visibilidad_tag
     .formato.span2= mazo.formato
     .cantidad.span2= mazo.principal_cantidad
     .cantidad.span2= mazo.suplente_cantidad
