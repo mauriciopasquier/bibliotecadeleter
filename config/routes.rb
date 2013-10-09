@@ -53,7 +53,11 @@ BibliotecaDelEter::Application.routes.draw do
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
     end
 
-    r.resources :expansiones
+    r.resources :expansiones do
+      member do
+        get 'info'
+      end
+    end
 
     # Buscar documentos (search documents)
     r.resource :busqueda, only: [:new, :show, :create] do

@@ -25,6 +25,11 @@ describe ExpansionesController do
       must_respond_with :success
     end
 
+    it "muestra los detalles de una expansión" do
+      get :info, id: create(:expansion)
+      must_respond_with :success
+    end
+
     it "no accede a edit" do
       get :edit, id: create(:expansion)
       must_redirect_to :root
@@ -56,7 +61,7 @@ describe ExpansionesController do
           end
         end.must_change 'Expansion.count'
 
-        must_redirect_to expansion_path(assigns(:expansion))
+        must_redirect_to info_expansion_path(assigns(:expansion))
       end
 
       it "accede a edit" do
@@ -70,7 +75,7 @@ describe ExpansionesController do
         atributos = attributes_for(:expansion)
         autorizar { put :update, id: expansion, expansion: atributos }
 
-        must_redirect_to expansion_path(assigns(:expansion))
+        must_redirect_to info_expansion_path(assigns(:expansion))
         atributos[:nombre].must_equal expansion.reload.nombre, "No actualiza el nombre"
         atributos[:total].must_equal expansion.total, "No actualiza el total"
         atributos[:lanzamiento].must_equal expansion.lanzamiento,

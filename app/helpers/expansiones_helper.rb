@@ -12,6 +12,8 @@ module ExpansionesHelper
         'Nueva expansión'
       when 'edit'
         expansion.nombre
+      when 'info'
+        "Detalles de #{expansion.nombre}"
       else
         nil
     end

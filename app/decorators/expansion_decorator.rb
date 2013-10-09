@@ -12,4 +12,10 @@ class ExpansionDecorator < ApplicationDecorator
   def to_s
     object.nombre
   end
+
+  def formatos
+    object.formatos.map do |f|
+      h.link_to f.nombre, f
+    end.join(' - ').html_safe
+  end
 end
