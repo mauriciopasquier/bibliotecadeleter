@@ -27,3 +27,7 @@ end
 Paperclip.interpolates :assets do |adjunto,  estilo|
   BibliotecaDelEter::Application.config.assets.prefix
 end
+
+Paperclip.interpolates :slug do |adjunto, estilo|
+  adjunto.instance.slug
+end

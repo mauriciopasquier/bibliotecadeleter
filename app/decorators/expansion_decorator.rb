@@ -18,4 +18,12 @@ class ExpansionDecorator < ApplicationDecorator
       h.link_to f.nombre, f
     end.join(' - ').html_safe
   end
+
+  def logo
+    [ h.image_tag(object.logo.url, class: 'lazy'),
+
+      h.content_tag(:noscript) do
+        h.x_image_tag(object.logo.url)
+      end ].join.html_safe
+  end
 end

@@ -57,7 +57,7 @@ class ExpansionesController < ApplicationController
 
     def parametros_permitidos
       params.require(:expansion).permit(
-        :nombre, :lanzamiento, :presentacion, :saga, :total, :notas
+        :nombre, :lanzamiento, :presentacion, :saga, :total, :notas, :logo
       )
     end
 end

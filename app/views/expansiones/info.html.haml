@@ -1,4 +1,9 @@
-%h1= titulo
+- unless @expansion.logo.present?
+  %h1= titulo
+- else
+  .row-fluid
+    .span12
+      .logo= expansion.logo
 
 .row-fluid
   .span12

@@ -12,18 +12,18 @@ class Imagen < ActiveRecord::Base
             :texto,
             to: :version
 
-  has_attached_file :archivo,
-    { url:  "/cartas/:style/:expansion/:numero-:carta:cara.:extension",
-      path: ":rails_root/public/cartas/:style/:expansion/:numero-:carta:cara.:extension",
-      default_url: ":assets/imagen-no-disponible-:style.png",
-      styles: {
-        arte: "190x190",
-        mini: "50%" },
-      convert_options: {
-        # Remueve información de esquemas de colores y EXIF
-        all: '-strip' },
-      processors: [ :cartas ]
-    }
+  has_attached_file :archivo, {
+    url:  "/cartas/:style/:expansion/:numero-:carta:cara.:extension",
+    path: ":rails_root/public/cartas/:style/:expansion/:numero-:carta:cara.:extension",
+    default_url: ":assets/imagen-no-disponible-:style.png",
+    styles: {
+      arte: "190x190",
+      mini: "50%" },
+    convert_options: {
+      # Remueve información de esquemas de colores y EXIF
+      all: '-strip' },
+    processors: [ :cartas ]
+  }
 
   def self.estilos
     [ :original, :mini, :arte ]
