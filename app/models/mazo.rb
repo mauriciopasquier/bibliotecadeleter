@@ -42,7 +42,7 @@ class Mazo < ActiveRecord::Base
   delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
 
   multisearchable against: [ :nombre, :usuario_nombre,
-    :nombres_de_las_cartas ], if: :persisted?
+    :nombres_de_las_cartas, :formato ], if: :persisted?
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
 
@@ -50,5 +50,9 @@ class Mazo < ActiveRecord::Base
 
     def nombres_de_las_cartas
       (cartas + cartas_suplentes + cartas_de_demonio).uniq.collect(&:nombre).join(' ')
+    end
+
+    def formato
+      formato_objetivo.try(:nombre)
     end
 end
