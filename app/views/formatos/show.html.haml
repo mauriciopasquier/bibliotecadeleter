@@ -4,15 +4,18 @@
   .span4
     %dl.dl-horizontal
       %dt Expansiones
-      - formato.expansiones.ordenadas.each do |e|
-        %dd= link_to e.nombre, e
+      - if formato.expansiones.any?
+        - formato.expansiones.ordenadas.each do |e|
+          %dd= link_to e.nombre, e
+      - else
+        %dd Cualquiera
   .span4
     %dl.dl-horizontal
       %dt Reglas
       %dd Demonios: #{formato.demonios}
       %dd Mazo principal: #{formato.principal}
-      %dd Mazo suplente: #{formato.suplente}
-      %dd Copias por carta: #{formato.copias}
+      %dd Mazo suplente: #{formato.suplente_o_no}
+      %dd Copias por carta: #{formato.copias_o_no}
       %dd Limitar sendas: #{formato.limite_por_sendas?}
 
   .span4
