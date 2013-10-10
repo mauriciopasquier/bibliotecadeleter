@@ -1,4 +1,4 @@
-= form_for formato, html: { class: 'form formato' } do |f|
+= form_for formato, html: { class: 'form form-horizontal formato' } do |f|
   = f.error_messages
 
   .row-fluid
@@ -15,6 +15,36 @@
       = f.label :nombres_de_cartas_prohibidas, 'Cartas prohibidas'
       = f.autocomplete_field :nombres_de_cartas_prohibidas, sugerir_cartas_path,
         data: { delimiter: ', ' }, class: 'span12'
+
+  %h2 Reglas
+
+  .row-fluid
+    .span12
+      .control-group
+        .control-label= f.label :demonios, 'Cantidad de demonios'
+        .controls
+          = f.text_field :demonios, class: 'span1'
+          %span.help-inline Por ejemplo, en formatos duales pueden ser 2
+      .control-group
+        .control-label= f.label :copias, 'Copias por carta'
+        .controls
+          = f.text_field :copias, class: 'span1'
+          %span.help-inline Cantidad de copias permitidas por carta (exceptuando las Ilimitadas)
+      .control-group
+        .control-label= f.label :principal, 'Cartas en el mazo'
+        .controls
+          = f.text_field :principal, class: 'span1'
+          %span.help-inline Cantidad máxima de cartas en el mazo principal
+      .control-group
+        .control-label= f.label :suplente, 'Cartas en el mazo suplente'
+        .controls
+          = f.text_field :suplente, class: 'span1'
+          %span.help-inline Cantidad máxima de cartas en el mazo suplente o sidedeck
+      .control-group
+        .control-label= f.label :limitar_sendas, '¿Limitar sendas según el demonio?'
+        .controls
+          = f.check_box_bootstrap :limitar_sendas, class: 'span1'
+          %span.help-inline Restringir las cartas permitidas a las sendas de los demonios y las neutrales
 
   .row-fluid.botones
     .span12

@@ -8,4 +8,8 @@ class FormatoDecorator < ApplicationDecorator
   def nombres_de_cartas_prohibidas
     object.cartas_prohibidas.collect(&:nombre).join(', ')
   end
+
+  def limite_por_sendas?
+    object.limitar_sendas ? 'Sí' : 'No'
+  end
 end

@@ -1,12 +1,21 @@
 %h1= titulo
 
 .row-fluid
-  .span6
+  .span4
     %dl.dl-horizontal
       %dt Expansiones
       - formato.expansiones.ordenadas.each do |e|
         %dd= link_to e.nombre, e
-  .span6
+  .span4
+    %dl.dl-horizontal
+      %dt Reglas
+      %dd Demonios: #{formato.demonios}
+      %dd Mazo principal: #{formato.principal}
+      %dd Mazo suplente: #{formato.suplente}
+      %dd Copias por carta: #{formato.copias}
+      %dd Limitar sendas: #{formato.limite_por_sendas?}
+
+  .span4
     %dl.dl-horizontal
       %dt Cartas prohibidas
       - if formato.cartas_prohibidas.any?
