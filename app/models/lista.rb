@@ -5,7 +5,7 @@ class Lista < ActiveRecord::Base
 
   belongs_to :usuario
   has_many :slots, as: :inventario, include: :version, dependent: :destroy
-  has_many :versiones, through: :slots
+  has_many :versiones, through: :slots, extend: VersionesContadas
   has_many :cartas, through: :versiones
 
   friendly_id :nombre, use: :scoped, scope: :usuario
@@ -33,6 +33,7 @@ class Lista < ActiveRecord::Base
     ], if: :lista?
 
   # Devuelve todos los slots tanto en esta lista como en `otra`
+  # TODO ver cómo scopearlo
   def comparar_con(otra)
     Slot.where(inventario_id: [self, otra]).menos(otra)
   end

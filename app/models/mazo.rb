@@ -8,7 +8,7 @@ class Mazo < ActiveRecord::Base
   # 1 o 2 demonios según el formato
   has_many :slots, as: :inventario, dependent: :destroy, include: :version
   has_many :demonios, through: :slots, source: :version,
-    conditions: { supertipo: 'Demonio' }
+    conditions: { supertipo: 'Demonio' }, extend: VersionesContadas
   has_many :cartas_de_demonio, through: :demonios, source: :carta
 
   # 1 principal con cantidad de cartas según el formato
@@ -20,10 +20,10 @@ class Mazo < ActiveRecord::Base
   belongs_to :formato_objetivo, class_name: 'Formato',
     inverse_of: :mazos_dedicados
 
-  has_many :versiones, through: :principal
-  has_many :cartas, through: :principal
-  has_many :versiones_suplentes, through: :suplente, source: :versiones
-  has_many :cartas_suplentes, through: :suplente, source: :cartas
+  # 2 listas: principal y suplente
+  has_many :listas
+  has_many :versiones, through: :listas, extend: VersionesContadas
+  has_many :cartas, through: :listas
 
   friendly_id :nombre, use: :scoped, scope: :usuario
 
@@ -49,7 +49,7 @@ class Mazo < ActiveRecord::Base
   private
 
     def nombres_de_las_cartas
-      (cartas + cartas_suplentes + cartas_de_demonio).uniq.collect(&:nombre).join(' ')
+      (cartas + cartas_de_demonio).uniq.collect(&:nombre).join(' ')
     end
 
     def formato
