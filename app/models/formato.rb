@@ -22,4 +22,12 @@ class Formato < ActiveRecord::Base
       end
     end
   end
+
+  def reglas
+    @reglas ||= Reglas.new(self)
+  end
+
+  def valido?(mazo)
+    (reglas.mazo = mazo).valid?
+  end
 end

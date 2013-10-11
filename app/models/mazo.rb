@@ -5,6 +5,8 @@ class Mazo < ActiveRecord::Base
 
   belongs_to :usuario
 
+  attr_accessor :reglas, :exigir_formato
+
   # 1 o 2 demonios según el formato
   has_many :slots, as: :inventario, dependent: :destroy, include: :version
   has_many :demonios, through: :slots, source: :version,
@@ -29,11 +31,14 @@ class Mazo < ActiveRecord::Base
 
   validates_presence_of :nombre, :principal, :usuario_id
   validates_uniqueness_of :nombre, scope: :usuario_id
+  validate  :cantidad_de_demonios_correcta, :cantidad_de_cartas_correcta,
+            :cantidad_de_cartas_suplentes_correcta, :copias_dentro_del_maximo,
+            :sendas_corresponden_con_demonios, if: :exigir_formato
 
   accepts_nested_attributes_for :principal, :suplente,
     allow_destroy: true, reject_if: :all_blank, update_only: true
   accepts_nested_attributes_for :slots,
-    allow_destroy: true, reject_if: :all_blank, limit: 2
+    allow_destroy: true, reject_if: :all_blank
 
   scope :visibles, where(visible: true)
   scope :recientes, order('updated_at desc').limit(10)
@@ -42,9 +47,18 @@ class Mazo < ActiveRecord::Base
   delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
 
   multisearchable against: [ :nombre, :usuario_nombre,
-    :nombres_de_las_cartas, :formato ], if: :persisted?
+    :nombres_de_las_cartas, :formato_nombre ], if: :persisted?
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
+  delegate :nombre, to: :formato_objetivo, allow_nil: true, prefix: :formato
+
+  def reglas
+    @reglas ||= Reglas.new(formato_objetivo, self)
+  end
+
+  def validar_en(formato)
+    Reglas.new(formato, self)
+  end
 
   private
 
@@ -52,7 +66,23 @@ class Mazo < ActiveRecord::Base
       (cartas + cartas_de_demonio).uniq.collect(&:nombre).join(' ')
     end
 
-    def formato
-      formato_objetivo.try(:nombre)
+    def cantidad_de_demonios_correcta
+      errors.add :demonios, :cantidad_mal unless reglas.demonios_validos?
+    end
+
+    def cantidad_de_cartas_correcta
+      errors.add :principal, :cantidad_mal unless reglas.mazo_principal_valido?
+    end
+
+    def cantidad_de_cartas_suplentes_correcta
+      errors.add :suplente, :cantidad_mal unless reglas.mazo_suplente_valido?
+    end
+
+    def copias_dentro_del_maximo
+      errors.add :base, :hay_copias_de_mas unless reglas.copias_validas?
+    end
+
+    def sendas_corresponden_con_demonios
+      errors.add :base, :cartas_en_las_sendas_incorrectas unless reglas.sendas_validas?
     end
 end

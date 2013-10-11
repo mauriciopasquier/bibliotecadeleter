@@ -1,0 +1,122 @@
+# encoding: utf-8
+require "./test/test_helper"
+
+describe Reglas do
+  describe 'cantidad de demonios' do
+    subject { Reglas.new build(:formato, demonios: 2) }
+
+    it 'falla sin demonios' do
+      subject.mazo = create(:mazo)
+      subject.demonios_validos?.wont_equal true
+    end
+
+    it 'falla con demonios insuficientes' do
+      subject.mazo = create(:mazo_con_demonios, cantidad: 1)
+      subject.demonios_validos?.wont_equal true
+    end
+
+    it 'falla con demonios de más' do
+      subject.mazo = create(:mazo_con_demonios, cantidad: 3)
+      subject.demonios_validos?.wont_equal true
+    end
+
+    it 'pasa con la cantidad exacta' do
+      subject.mazo = create(:mazo_con_demonios, cantidad: 2)
+      subject.demonios_validos?.must_equal true
+    end
+  end
+
+  describe 'cantidad en el mazo principal' do
+    subject { Reglas.new build(:formato, principal: 10) }
+
+    it 'falla con cartas insuficientes' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [build(:slot, cantidad: 5)]
+      })
+      subject.mazo_principal_valido?.wont_equal true
+    end
+
+    it 'falla con cartas de más' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [ build(:slot, cantidad: 15) ]
+      })
+      subject.mazo_principal_valido?.wont_equal true
+    end
+
+    it 'pasa con la cantidad exacta' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [ build(:slot, cantidad: 10) ]
+      })
+      subject.mazo_principal_valido?.must_equal true
+    end
+
+    it 'falla sin mazo principal' do
+      subject.mazo = build(:mazo, principal: nil)
+      subject.mazo_principal_valido?.wont_equal true
+    end
+  end
+
+  describe 'cantidad en el mazo suplente' do
+    subject { Reglas.new build(:formato, suplente: 10) }
+
+    it 'falla con cartas insuficientes' do
+      subject.mazo = create(:mazo, suplente_attributes: {
+        slots: [ build(:slot, cantidad: 5) ]
+      })
+      subject.mazo_suplente_valido?.wont_equal true
+    end
+
+    it 'falla con cartas de más' do
+      subject.mazo = create(:mazo, suplente_attributes: {
+        slots: [build(:slot, cantidad: 15)]
+      })
+      subject.mazo_suplente_valido?.wont_equal true
+    end
+
+    it 'pasa con cero cartas' do
+      subject.mazo = create(:mazo, suplente_attributes: { slots: [ ] })
+      subject.mazo_suplente_valido?.must_equal true
+    end
+
+    it 'pasa sin mazo suplente' do
+      subject.mazo = build(:mazo, suplente: nil)
+      subject.mazo_suplente_valido?.must_equal true
+    end
+
+    it 'pasa con la cantidad exacta' do
+      subject.mazo = create(:mazo, suplente_attributes: {
+        slots: [ build(:slot, cantidad: 10) ]
+      })
+      subject.mazo_suplente_valido?.must_equal true
+    end
+  end
+
+  describe 'cantidad de copias válidas' do
+    subject { Reglas.new build(:formato, copias: 2) }
+
+    it 'falla con más copias de las permitidas' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [ build(:slot, cantidad: 3) ]
+      })
+      subject.copias_validas?.wont_equal true
+    end
+
+    it 'pasa con las Ilimitadas' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots:  [ build(:slot, cantidad: 3,
+                  version: create(:version_con_carta, supertipo: 'Algo Ilimitado Pasa')) ]
+      })
+      subject.copias_validas?.must_equal true
+    end
+
+    it 'considera las copias totales (principal y suplente)' do
+      misma_carta = create(:version_con_carta)
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [ build(:slot, cantidad: 2, version: misma_carta) ]
+      }, suplente_attributes: {
+        slots: [ build(:slot, cantidad: 2, version: misma_carta) ]
+      })
+      subject.copias_validas?.wont_equal true
+    end
+  end
+end
