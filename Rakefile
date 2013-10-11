@@ -5,5 +5,3 @@
 require File.expand_path('../config/application', __FILE__)
 
 BibliotecaDelEter::Application.load_tasks
-
-MiniTest::Rails::Testing.default_tasks += %w{features}
