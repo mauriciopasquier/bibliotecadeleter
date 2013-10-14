@@ -9,7 +9,7 @@ class Reglas
   end
 
   validate  :demonios, :mazo_principal, :mazo_suplente, :copias, :sendas,
-            :prohibidas
+            :prohibidas, :expansiones
 
   # mazo.errors.add?
   def demonios
@@ -34,6 +34,10 @@ class Reglas
 
   def prohibidas
     errors.add :mazo, :hay_cartas_prohibidas unless cartas_permitidas?
+  end
+
+  def expansiones
+    errors.add :mazo, :cartas_en_expansiones_prohibidas unless expansiones_validas?
   end
 
   def demonios_validos?
@@ -88,6 +92,17 @@ class Reglas
       formato.cartas_prohibidas.merge(mazo.cartas).empty?
     else
       # válido si no hay cartas prohibidas
+      true
+    end
+  end
+
+  def expansiones_validas?
+    if formato.expansiones.any?
+      mazo.versiones.where(Version.arel_table['expansion_id'].not_in(
+        formato.expansiones.pluck(:id)
+      )).empty?
+    else
+      # válido si el formato no especifica expansiones
       true
     end
   end

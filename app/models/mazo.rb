@@ -34,7 +34,7 @@ class Mazo < ActiveRecord::Base
   validate  :cantidad_de_demonios_correcta, :cantidad_de_cartas_correcta,
             :cantidad_de_cartas_suplentes_correcta, :copias_dentro_del_maximo,
             :sendas_corresponden_con_demonios, :no_usar_cartas_prohibidas,
-            if: :exigir_formato
+            :solo_usar_expansiones_permitidas, if: :exigir_formato
 
   accepts_nested_attributes_for :principal, :suplente,
     allow_destroy: true, reject_if: :all_blank, update_only: true
@@ -89,5 +89,9 @@ class Mazo < ActiveRecord::Base
 
     def no_usar_cartas_prohibidas
       errors.add :base, :hay_cartas_prohibidas unless reglas.cartas_permitidas?
+    end
+
+    def solo_usar_expansiones_permitidas
+      errors.add :base, :cartas_en_expansiones_prohibidas unless reglas.expansiones_validas?
     end
 end

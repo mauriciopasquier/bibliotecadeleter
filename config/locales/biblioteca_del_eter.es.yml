@@ -29,6 +29,7 @@ es:
               hay_copias_de_mas: 'Cargaste copias de más de alguna carta'
               cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
               hay_cartas_prohibidas: 'Cargaste cartas prohibidas en el formato'
+              cartas_en_expansiones_prohibidas: 'Cargaste cartas de expansiones no permitidas'
   activemodel:
     errors:
       models:
@@ -41,6 +42,7 @@ es:
               hay_copias_de_mas: 'Cargaste copias de más de alguna carta'
               cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
               hay_cartas_prohibidas: 'Cargaste cartas prohibidas en el formato'
+              cartas_en_expansiones_prohibidas: 'Cargaste cartas de expansiones no permitidas'
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
     no_disponible:  "Imagen no disponible."

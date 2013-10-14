@@ -144,4 +144,32 @@ describe Reglas do
       subject.cartas_permitidas?.wont_equal true
     end
   end
+
+  describe 'expansiones' do
+    subject do
+      @expansion = create(:expansion)
+      Reglas.new create(:formato, expansiones: [ @expansion ])
+    end
+
+    it 'pasa sin expansiones definidas' do
+      Reglas.new(build(:formato)).expansiones_validas?.must_equal true
+    end
+
+    it 'pasa si todas las cartas son de expansiones permitidas' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [
+          create(:slot, cantidad: 1, version: create(:version_con_carta,
+          expansion_id: @expansion.id))
+        ]
+      })
+      subject.expansiones_validas?.must_equal true
+    end
+
+    it 'falla si alguna carta no es de expansiones permitidas' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [ create(:slot, cantidad: 1, version: create(:version_con_carta)) ]
+      })
+      subject.expansiones_validas?.wont_equal true
+    end
+  end
 end
