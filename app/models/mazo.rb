@@ -33,7 +33,8 @@ class Mazo < ActiveRecord::Base
   validates_uniqueness_of :nombre, scope: :usuario_id
   validate  :cantidad_de_demonios_correcta, :cantidad_de_cartas_correcta,
             :cantidad_de_cartas_suplentes_correcta, :copias_dentro_del_maximo,
-            :sendas_corresponden_con_demonios, if: :exigir_formato
+            :sendas_corresponden_con_demonios, :no_usar_cartas_prohibidas,
+            if: :exigir_formato
 
   accepts_nested_attributes_for :principal, :suplente,
     allow_destroy: true, reject_if: :all_blank, update_only: true
@@ -84,5 +85,9 @@ class Mazo < ActiveRecord::Base
 
     def sendas_corresponden_con_demonios
       errors.add :base, :cartas_en_las_sendas_incorrectas unless reglas.sendas_validas?
+    end
+
+    def no_usar_cartas_prohibidas
+      errors.add :base, :hay_cartas_prohibidas unless reglas.cartas_permitidas?
     end
 end

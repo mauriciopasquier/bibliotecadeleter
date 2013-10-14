@@ -8,7 +8,8 @@ class Reglas
     @formato = formato
   end
 
-  validate :demonios, :mazo_principal, :mazo_suplente, :copias, :sendas
+  validate  :demonios, :mazo_principal, :mazo_suplente, :copias, :sendas,
+            :prohibidas
 
   # mazo.errors.add?
   def demonios
@@ -29,6 +30,10 @@ class Reglas
 
   def sendas
     errors.add :mazo, :cartas_en_las_sendas_incorrectas unless sendas_validas?
+  end
+
+  def prohibidas
+    errors.add :mazo, :hay_cartas_prohibidas unless cartas_permitidas?
   end
 
   def demonios_validos?
@@ -74,6 +79,15 @@ class Reglas
       ).empty?
     else
       # válido si no hay límite de sendas
+      true
+    end
+  end
+
+  def cartas_permitidas?
+    if formato.cartas_prohibidas.any?
+      formato.cartas_prohibidas.merge(mazo.cartas).empty?
+    else
+      # válido si no hay cartas prohibidas
       true
     end
   end

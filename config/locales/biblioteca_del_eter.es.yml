@@ -28,6 +28,7 @@ es:
             base:
               hay_copias_de_mas: 'Cargaste copias de más de alguna carta'
               cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
+              hay_cartas_prohibidas: 'Cargaste cartas prohibidas en el formato'
   activemodel:
     errors:
       models:
@@ -39,6 +40,7 @@ es:
               cantidad_en_el_mazo_suplente_mal: 'Te faltan o sobran cartas en el mazo suplente'
               hay_copias_de_mas: 'Cargaste copias de más de alguna carta'
               cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
+              hay_cartas_prohibidas: 'Cargaste cartas prohibidas en el formato'
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
     no_disponible:  "Imagen no disponible."

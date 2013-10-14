@@ -119,4 +119,29 @@ describe Reglas do
       subject.copias_validas?.wont_equal true
     end
   end
+
+  describe 'cartas prohibidas' do
+    subject do
+      @prohibida = create(:carta_con_versiones, nombre: 'prohibida')
+      Reglas.new create(:formato, cartas_prohibidas: [ @prohibida ])
+    end
+
+    it 'pasa si el formato no tiene cartas prohibidas' do
+      Reglas.new(build(:formato)).cartas_permitidas?.must_equal true
+    end
+
+    it 'pasa si el mazo no usa cartas prohibidas' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [ create(:slot, cantidad: 1, version: create(:version_con_carta)) ]
+      })
+      subject.cartas_permitidas?.must_equal true
+    end
+
+    it 'falla si el mazo usa cartas prohibidas' do
+      subject.mazo = create(:mazo, principal_attributes: {
+        slots: [ create(:slot, cantidad: 1, version: @prohibida.canonica) ]
+      })
+      subject.cartas_permitidas?.wont_equal true
+    end
+  end
 end
