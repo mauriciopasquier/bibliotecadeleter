@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131010005431) do
+ActiveRecord::Schema.define(:version => 20131014161648) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -85,15 +85,16 @@ ActiveRecord::Schema.define(:version => 20131010005431) do
   add_index "expansiones_formatos", ["formato_id"], :name => "index_expansiones_formatos_on_formato_id"
 
   create_table "formatos", :force => true do |t|
-    t.string   "nombre",                           :null => false
-    t.string   "slug",                             :null => false
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.string   "nombre",                                :null => false
+    t.string   "slug",                                  :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.integer  "demonios",       :default => 1
     t.integer  "principal",      :default => 50
     t.integer  "suplente",       :default => 12
     t.integer  "copias",         :default => 4
     t.boolean  "limitar_sendas", :default => true
+    t.string   "tipo",           :default => "Abierto"
   end
 
   add_index "formatos", ["slug"], :name => "index_formatos_on_slug", :unique => true

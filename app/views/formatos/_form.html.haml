@@ -2,19 +2,22 @@
   = f.error_messages
 
   .row-fluid
-    .span6
+    .span4
       = f.label :nombre
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
+    .span2
+      = f.label :tipo
+      = f.select :tipo, Formato::TIPOS, { }, class: 'span12'
     .span6
-      = f.label :expansiones
-      = f.collection_select :expansion_ids, Expansion.ordenadas, :id, :nombre,
-        { }, { multiple: true, class: 'span12' }
-
-  .row-fluid
-    .span12
       = f.label :nombres_de_cartas_prohibidas, 'Cartas prohibidas'
       = f.autocomplete_field :nombres_de_cartas_prohibidas, sugerir_cartas_path,
         data: { delimiter: ', ' }, class: 'span12'
+
+  .row-fluid
+    .span12
+      = f.label :expansiones
+      = f.collection_select :expansion_ids, Expansion.ordenadas, :id, :nombre,
+        { }, { multiple: true, class: 'span12', title: 'Cualquiera' }
 
   %h2 Reglas
 
@@ -24,7 +27,7 @@
         .control-label= f.label :demonios, 'Cantidad de demonios'
         .controls
           = f.text_field :demonios, class: 'span1'
-          %span.help-inline Por ejemplo, en formatos duales pueden ser 2
+          %span.help-inline En formatos duales, por ejemplo, pueden ser 2
       .control-group
         .control-label= f.label :copias, 'Copias por carta'
         .controls

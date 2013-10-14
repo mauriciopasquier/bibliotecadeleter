@@ -67,12 +67,14 @@ describe FormatosController do
 
       it "actualiza un formato" do
         formato, expansion = create(:formato), create(:expansion)
-        atributos = attributes_for(:formato, expansion_ids: [expansion.id])
+        atributos = attributes_for(:formato, expansion_ids: [expansion.id],
+                                    tipo: 'Cerrado')
 
         autorizar { put :update, id: formato, formato: atributos }
 
         must_redirect_to formato_path(assigns(:formato))
         formato.reload.nombre.must_equal atributos[:nombre], "No actualiza el nombre"
+        formato.tipo.must_equal 'Cerrado', "No actualiza el nombre"
         formato.expansiones.include?(expansion).must_equal true
       end
     end
