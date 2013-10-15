@@ -38,4 +38,12 @@ class MazoDecorator < ListaDecorator
       'Casual'
     end
   end
+
+  def formatos_donde_es_legal
+    Formato.all.collect do |formato|
+      h.content_tag :li do
+        formato.reglas_para(object).valid? ? h.link_to(formato.nombre, formato) : nil
+      end
+    end.join.html_safe
+  end
 end

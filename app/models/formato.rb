@@ -30,7 +30,7 @@ class Formato < ActiveRecord::Base
     @reglas ||= Reglas.new(self)
   end
 
-  def valido?(mazo)
-    (reglas.mazo = mazo).valid?
+  def reglas_para(mazo)
+    Reglas.new(self, mazo)
   end
 end
