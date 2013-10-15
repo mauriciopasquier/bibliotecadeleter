@@ -68,7 +68,7 @@ class Reglas
 
   def copias_validas?
     if formato.copias.present?
-      if hay_cambios_en_las_listas?
+      if mazo.hay_cambios_en_las_listas?
         mazo.cartas_contadas.inject([]) do |sospechosas, version|
           sospechosas << Version.find(version.first) if version.last > formato.copias
           sospechosas
@@ -87,7 +87,7 @@ class Reglas
 
   def sendas_validas?
     if formato.limitar_sendas?
-      if hay_cambios_en_las_listas?
+      if mazo.hay_cambios_en_las_listas?
         mazo.slots_actuales.all? do |slot|
           sendas_permitidas.include? slot.version.senda
         end
@@ -106,7 +106,7 @@ class Reglas
 
   def cartas_permitidas?
     if formato.cartas_prohibidas.any?
-      if hay_cambios_en_las_listas?
+      if mazo.hay_cambios_en_las_listas?
         cartas = mazo.slots_actuales.inject([]) do |cartas, slot|
           cartas << slot.version.carta and cartas
         end
@@ -125,7 +125,7 @@ class Reglas
     # Buscar todas las cartas que no tengan al menos una versión en las
     # expansiones permitidas
     if formato.expansiones.any?
-      if hay_cambios_en_las_listas?
+      if mazo.hay_cambios_en_las_listas?
         mazo.slots_actuales.all? do |slot|
           (slot.version.carta.expansiones & formato.expansiones).any?
         end && mazo.slots.all? do |slot|
@@ -145,10 +145,6 @@ class Reglas
   end
 
   private
-
-    def hay_cambios_en_las_listas?
-      mazo.slots_actuales.any?(&:changed?)
-    end
 
     def sendas_permitidas
       (mazo.slots.collect { |s| s.version.senda } + ['Neutral']).uniq

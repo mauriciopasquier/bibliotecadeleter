@@ -5,8 +5,6 @@ class Mazo < ActiveRecord::Base
 
   belongs_to :usuario
 
-  attr_accessor :reglas, :exigir_formato
-
   # 1 o 2 demonios según el formato
   has_many :slots, as: :inventario, dependent: :destroy, include: :version
   has_many :demonios, through: :slots, source: :version,
@@ -55,18 +53,22 @@ class Mazo < ActiveRecord::Base
   scope :visibles, where(visible: true)
   scope :recientes, order('updated_at desc').limit(10)
 
+  attr_writer :reglas, :exigir_formato
+
   def reglas
     @reglas ||= Reglas.new(formato_objetivo, self)
   end
 
-  def validar_en(formato)
+  def exigir_formato
+    @exigir_formato ||= false
+  end
+
+  def reglas_para(formato)
     Reglas.new(formato, self)
   end
 
   def cartas_contadas
-    if persisted?
-      slots_de_cartas.group(:version_id).sum(:cantidad)
-    else
+    if hay_cambios_en_las_listas?
       totales = if suplente.present?
         suplente.slots.inject(Hash.new(0)) do |totales, slot|
           totales[slot.version_id] += slot.cantidad and totales
@@ -78,12 +80,18 @@ class Mazo < ActiveRecord::Base
       principal.slots.inject(totales) do |totales, slot|
         totales[slot.version_id] += slot.cantidad and totales
       end
+    else
+      slots_de_cartas.group(:version_id).sum(:cantidad)
     end
   end
 
   def slots_actuales
     (principal.present? ? principal.slots : []) +
     (suplente.present? ? suplente.slots : [])
+  end
+
+  def hay_cambios_en_las_listas?
+    slots_actuales.any?(&:changed?)
   end
 
   private
