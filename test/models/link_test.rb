@@ -6,7 +6,7 @@ describe Link do
     build(:link).valid?.must_equal true
   end
 
-  it "debe infleccionar bien" do
+  it "inflecciona bien" do
     "linkeable".pluralize.must_equal "linkeables"
     "linkeables".singularize.must_equal "linkeable"
 

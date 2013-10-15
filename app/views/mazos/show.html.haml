@@ -1,7 +1,14 @@
 %h1
   = titulo
   = mazo.visibilidad_tag
-%h2= mazo.formato
+
+- if mazo.formato_objetivo.present?
+  %p Diseñado para #{mazo.link_al_formato}
+
+%p
+  %ul.inline
+    Legal en
+    = mazo.formatos_donde_es_legal
 
 .row-fluid
   #mazo.span12

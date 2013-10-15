@@ -1,0 +1,39 @@
+- unless @expansion.logo.present?
+  %h1= titulo
+- else
+  .row-fluid
+    .span12
+      .logo= expansion.logo
+
+.row-fluid
+  .span12
+    %dl.dl-horizontal
+      - if expansion.lanzamiento?
+        %dt Lanzamiento
+        %dd= l expansion.lanzamiento
+      - if expansion.presentacion?
+        %dt Presentación
+        %dd= l expansion.presentacion
+      - if expansion.saga?
+        %dt Saga
+        %dd= expansion.saga
+      - if expansion.total?
+        %dt Total
+        %dd= expansion.total
+      %dt Legal en
+      %dd= expansion.formatos
+      - if expansion.notas?
+        %dt Notas
+        %dd= expansion.notas_con_formato
+
+.row-fluid.botones
+  .span12
+    - if can? :read, expansion
+      = link_to 'Galería', expansion, class: 'btn btn-info'
+    - if can? :edit, expansion
+      = link_to 'Editar', edit_expansion_path(expansion),
+        class: 'btn btn-warning'
+    = link_to 'Otras expansiones', expansiones_path, class: 'btn'
+    - if can? :destroy, expansion
+      = link_to 'Eliminar', expansion, method: :delete,
+        data: { confirm: t(:confirmar) }, class: 'btn btn-danger'

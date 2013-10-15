@@ -30,4 +30,20 @@ class MazoDecorator < ListaDecorator
   def visibilidad
     object.visible ? 'Público' : 'Privado'
   end
+
+  def link_al_formato
+    if formato = object.formato_objetivo.try(:nombre)
+      h.link_to formato, formato_objetivo
+    else
+      'Casual'
+    end
+  end
+
+  def formatos_donde_es_legal
+    Formato.all.collect do |formato|
+      h.content_tag :li do
+        formato.reglas_para(object).valid? ? h.link_to(formato.nombre, formato) : nil
+      end
+    end.join.html_safe
+  end
 end

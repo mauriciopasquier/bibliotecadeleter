@@ -19,9 +19,30 @@ es:
               no_es_unico_en_la_expansion: "debe ser único dentro de la expansión"
         mazo:
           attributes:
-            demonio:
-              falta_un_demonio: "debe tener un demonio"
-
+            demonios:
+              cantidad_mal: 'Te faltan o sobran'
+            principal:
+              cantidad_mal: 'Te faltan o sobran cartas'
+            suplente:
+              cantidad_mal: 'Te faltan o sobran cartas'
+            base:
+              hay_copias_de_mas: 'Cargaste copias de más de alguna carta'
+              cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
+              hay_cartas_prohibidas: 'Cargaste cartas prohibidas en el formato'
+              cartas_en_expansiones_prohibidas: 'Cargaste cartas de expansiones no permitidas'
+  activemodel:
+    errors:
+      models:
+        reglas:
+          attributes:
+            mazo:
+              cantidad_de_demonios_mal: 'Te faltan o sobran demonios'
+              cantidad_en_el_mazo_mal: 'Te faltan o sobran cartas en el mazo principal'
+              cantidad_en_el_mazo_suplente_mal: 'Te faltan o sobran cartas en el mazo suplente'
+              hay_copias_de_mas: 'Cargaste copias de más de alguna carta'
+              cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
+              hay_cartas_prohibidas: 'Cargaste cartas prohibidas en el formato'
+              cartas_en_expansiones_prohibidas: 'Cargaste cartas de expansiones no permitidas'
   confirmar:  "Mirá que no hay vuelta atrás..."
   imagen:
     no_disponible:  "Imagen no disponible."

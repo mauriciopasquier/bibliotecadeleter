@@ -1,0 +1,11 @@
+
+---
+cartas_formatos:
+  columns:
+  - carta_id
+  - formato_id
+  records: 
+  - - '21'
+    - '4'
+  - - '138'
+    - '4'

@@ -1,4 +1,4 @@
-= form_for expansion, html: { class: 'form expansion' } do |f|
+= form_for expansion, html: { class: 'form expansion', multipart: true } do |f|
   = f.error_messages
 
   .row-fluid
@@ -16,7 +16,8 @@
 
   .row-fluid
     .span6
-      -# TODO Logo?
+      = f.label :logo
+      = f.file_field :logo, class: 'span12'
     .span3
       = f.label :lanzamiento
       = f.text_field :lanzamiento, class: 'fecha span12'
@@ -29,6 +30,6 @@
       = f.label :notas
       = f.text_area :notas, class: 'span12'
 
-  .row-fluid
+  .row-fluid.botones
     .span12
       = f.submit 'Guardar', class: 'btn btn-success'

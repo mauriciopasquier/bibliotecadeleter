@@ -1,0 +1,10 @@
+%h1= titulo
+
+= render 'form'
+
+.row-fluid.botones
+  .span12
+    - if can? :read, formato
+      = link_to 'Ver', formato, class: 'btn'
+    - if can? :read, Formato
+      = link_to 'Todos los formatos', formatos_path, class: 'btn'

@@ -6,12 +6,10 @@ module ExpansionesHelper
     case params[:action]
       when 'index'
         'Todas las expansiones'
-      when 'show'
+      when 'show', 'edit', 'info'
         expansion.nombre
       when 'new'
         'Nueva expansión'
-      when 'edit'
-        expansion.nombre
       else
         nil
     end

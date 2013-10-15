@@ -1,0 +1,17 @@
+%h1= titulo
+
+= paginacion_tag @formatos
+
+#formatos.tabla-fluida
+  #encabezado.row-fluid
+    .span2.nombre= sort_link @busqueda, :nombre, opciones_de_ordenar
+    .span2.tipo= sort_link @busqueda, :tipo, opciones_de_ordenar
+    .span8.expansiones.hidden-phone Expansiones
+
+  = render @formatos
+
+.row-fluid.botones
+  .span12
+    - if can? :create, Formato
+      = link_to 'Cargar formato', new_formato_path,
+        class: 'btn btn-info'

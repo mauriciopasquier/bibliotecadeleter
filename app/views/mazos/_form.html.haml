@@ -5,13 +5,16 @@
     .span6
       = f.label :nombre
       = f.text_field :nombre, class: 'span12', required: true, autofocus: true
-    .span5
-      = f.label :formato
-      = f.text_field :formato, class: 'span12', required: true
+    .span4
+      = f.label :formato_objetivo, 'Formato al que apuntás'
+      = f.collection_select :formato_objetivo_id, Formato.all, :id, :nombre,
+        { include_blank: true }, class: 'span12', title: 'Indefinido'
+    .span1
+      = f.label :exigir_formato, '¿Legal?'
+      = f.check_box_bootstrap :exigir_formato, class: 'span12'
     .span1
       = f.label :visible
-      = f.check_box :visible, class: 'bootstrapear'
-      = f.label :visible, '&nbsp;'.html_safe, class: 'span12'
+      = f.check_box_bootstrap :visible, class: 'span12'
 
   .nestear
     .row-fluid

@@ -12,8 +12,12 @@ class SugerenciasController < ApplicationController
       when 'demonios'
         autocompletar_demonios
       else
-        autocompletar filtro(Carta.con_todo, :nombre, sendas_pedidas), :version_id, :nombre_y_expansion
+        autocompletar filtro(Carta, :nombre, sendas_pedidas), :id, :nombre
     end
+  end
+
+  def versiones
+    autocompletar filtro(Carta.con_todo, :nombre, sendas_pedidas), :version_id, :nombre_y_expansion
   end
 
   def expansiones

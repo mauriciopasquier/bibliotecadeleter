@@ -1,0 +1,37 @@
+%h1= titulo
+
+.row-fluid
+  .span4
+    %dl.dl-horizontal
+      %dt Expansiones
+      - if formato.expansiones.any?
+        - formato.expansiones.ordenadas.each do |e|
+          %dd= link_to e.nombre, e
+      - else
+        %dd Cualquiera
+  .span4
+    %dl.dl-horizontal
+      %dt Tipo
+      %dd= formato.tipo
+      %dt Reglas
+      %dd Demonios: #{formato.demonios}
+      %dd Mazo principal: #{formato.principal}
+      %dd Mazo suplente: #{formato.suplente_o_no}
+      %dd Copias por carta: #{formato.copias_o_no}
+      %dd Limitar sendas: #{formato.limite_por_sendas?}
+
+  .span4
+    %dl.dl-horizontal
+      %dt Cartas prohibidas
+      - if formato.cartas_prohibidas.any?
+        - formato.cartas_prohibidas.each do |c|
+          %dd= link_to c.nombre, c
+      - else
+        %dd Ninguna
+
+.row-fluid.botones
+  .span12
+    - if can? :edit, formato
+      = link_to 'Editar', edit_formato_path(formato),
+        class: 'btn btn-warning'
+    = link_to 'Otros formatos', formatos_path, class: 'btn'
