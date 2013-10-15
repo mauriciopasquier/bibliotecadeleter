@@ -88,7 +88,11 @@ class Version < ActiveRecord::Base
   end
 
   def demonio?
-    self.supertipo == 'Demonio'
+    self.supertipo.include? 'Demonio'
+  end
+
+  def ilimitada?
+    self.supertipo.include? 'Ilimitad'
   end
 
   def arte

@@ -41,7 +41,11 @@ class Reglas
   end
 
   def demonios_validos?
-    mazo.slots.sum(:cantidad) == formato.demonios
+    if mazo.changed?
+      mazo.slots.collect(&:cantidad).sum
+    else
+      mazo.slots.sum(:cantidad)
+    end == formato.demonios
   end
 
   def mazo_principal_valido?
@@ -64,10 +68,17 @@ class Reglas
 
   def copias_validas?
     if formato.copias.present?
-      mazo.versiones.con_total('>', formato.copias).where(
-        Version.arel_table[:supertipo].does_not_match('%ilimitad%').or(
-        Version.arel_table[:supertipo].eq(nil))
-      ).empty?
+      if hay_cambios_en_las_listas?
+        mazo.cartas_contadas.inject([]) do |sospechosas, version|
+          sospechosas << Version.find(version.first) if version.last > formato.copias
+          sospechosas
+        end.reject(&:ilimitada?)
+      else
+        mazo.versiones.con_total('>', formato.copias).where(
+          Version.arel_table[:supertipo].does_not_match('%ilimitad%').or(
+          Version.arel_table[:supertipo].eq(nil))
+        )
+      end.empty?
     else
       # válido si no se restringe la cantidad de copias por carta
       true
@@ -76,11 +87,17 @@ class Reglas
 
   def sendas_validas?
     if formato.limitar_sendas?
-      mazo.versiones.where(
-        Version.arel_table[:senda].not_in(
-          [ mazo.demonios.pluck(:senda).uniq + ['Neutral'] ]
-        )
-      ).empty?
+      if hay_cambios_en_las_listas?
+        mazo.slots_actuales.all? do |slot|
+          sendas_permitidas.include? slot.version.senda
+        end
+      else
+        mazo.versiones.where(
+          Version.arel_table[:senda].not_in(
+            [ mazo.demonios.pluck(:senda).uniq + ['Neutral'] ]
+          )
+        ).empty?
+      end
     else
       # válido si no hay límite de sendas
       true
@@ -89,7 +106,15 @@ class Reglas
 
   def cartas_permitidas?
     if formato.cartas_prohibidas.any?
-      formato.cartas_prohibidas.merge(mazo.cartas).empty?
+      if hay_cambios_en_las_listas?
+        cartas = mazo.slots_actuales.inject([]) do |cartas, slot|
+          cartas << slot.version.carta and cartas
+        end
+
+        formato.cartas_prohibidas.count == (formato.cartas_prohibidas - cartas).count
+      else
+        formato.cartas_prohibidas.merge(mazo.cartas).empty?
+      end
     else
       # válido si no hay cartas prohibidas
       true
@@ -97,13 +122,35 @@ class Reglas
   end
 
   def expansiones_validas?
+    # Buscar todas las cartas que no tengan al menos una versión en las
+    # expansiones permitidas
     if formato.expansiones.any?
-      mazo.versiones.where(Version.arel_table['expansion_id'].not_in(
-        formato.expansiones.pluck(:id)
-      )).empty?
+      if hay_cambios_en_las_listas?
+        mazo.slots_actuales.all? do |slot|
+          (slot.version.carta.expansiones & formato.expansiones).any?
+        end && mazo.slots.all? do |slot|
+          (slot.version.carta.expansiones & formato.expansiones).any?
+        end
+      else
+        ids = formato.expansiones.pluck(:id)
+        mazo.cartas.uniq.count ==
+          mazo.cartas.en_expansiones(ids).uniq.count &&
+        mazo.cartas_de_demonio.uniq.count ==
+          mazo.cartas_de_demonio.en_expansiones(ids).uniq.count
+      end
     else
       # válido si el formato no especifica expansiones
       true
     end
   end
+
+  private
+
+    def hay_cambios_en_las_listas?
+      mazo.slots_actuales.any?(&:changed?)
+    end
+
+    def sendas_permitidas
+      (mazo.slots.collect { |s| s.version.senda } + ['Neutral']).uniq
+    end
 end

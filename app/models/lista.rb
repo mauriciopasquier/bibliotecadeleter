@@ -40,7 +40,11 @@ class Lista < ActiveRecord::Base
 
   # Cantidad de cartas en la lista
   def cantidad
-    self.slots.sum(:cantidad)
+    if slots.any?(&:changed?)
+      slots.collect(&:cantidad).sum
+    else
+      slots.sum(:cantidad)
+    end
   end
 
   def nombres_de_las_cartas

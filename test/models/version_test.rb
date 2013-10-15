@@ -28,4 +28,16 @@ describe Version do
     build(:version_con_carta, numero: version.numero,
       expansion: version.expansion).valid?.must_equal false
   end
+
+  it 'detecta si es ilimitada' do
+    [ build(:version, supertipo: 'Ilimitado'),
+      build(:version, supertipo: 'Ilimitada'),
+      build(:version, supertipo: 'Ilimitada y más'),
+      build(:version, supertipo: 'E Ilimitada')
+    ].each do |version|
+      version.ilimitada?.must_equal true
+    end
+
+    build(:version).ilimitada?.wont_equal true
+  end
 end

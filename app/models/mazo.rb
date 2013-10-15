@@ -11,7 +11,8 @@ class Mazo < ActiveRecord::Base
   has_many :slots, as: :inventario, dependent: :destroy, include: :version
   has_many :demonios, through: :slots, source: :version,
     conditions: { supertipo: 'Demonio' }, extend: VersionesContadas
-  has_many :cartas_de_demonio, through: :demonios, source: :carta
+  has_many :cartas_de_demonio, through: :demonios, source: :carta,
+    extend: CartasEnExpansiones
 
   # 1 principal con cantidad de cartas según el formato
   has_one :principal, inverse_of: :mazo, dependent: :destroy,
@@ -24,8 +25,9 @@ class Mazo < ActiveRecord::Base
 
   # 2 listas: principal y suplente
   has_many :listas
+  has_many :slots_de_cartas, through: :listas, source: :slots
   has_many :versiones, through: :listas, extend: VersionesContadas
-  has_many :cartas, through: :listas
+  has_many :cartas, through: :listas, extend: CartasEnExpansiones
 
   friendly_id :nombre, use: :scoped, scope: :usuario
 
@@ -41,9 +43,6 @@ class Mazo < ActiveRecord::Base
   accepts_nested_attributes_for :slots,
     allow_destroy: true, reject_if: :all_blank
 
-  scope :visibles, where(visible: true)
-  scope :recientes, order('updated_at desc').limit(10)
-
   delegate :cantidad, to: :principal, prefix: true, allow_nil: true
   delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
 
@@ -53,12 +52,38 @@ class Mazo < ActiveRecord::Base
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
   delegate :nombre, to: :formato_objetivo, allow_nil: true, prefix: :formato
 
+  scope :visibles, where(visible: true)
+  scope :recientes, order('updated_at desc').limit(10)
+
   def reglas
     @reglas ||= Reglas.new(formato_objetivo, self)
   end
 
   def validar_en(formato)
     Reglas.new(formato, self)
+  end
+
+  def cartas_contadas
+    if persisted?
+      slots_de_cartas.group(:version_id).sum(:cantidad)
+    else
+      totales = if suplente.present?
+        suplente.slots.inject(Hash.new(0)) do |totales, slot|
+          totales[slot.version_id] += slot.cantidad and totales
+        end
+      else
+        Hash.new(0)
+      end
+
+      principal.slots.inject(totales) do |totales, slot|
+        totales[slot.version_id] += slot.cantidad and totales
+      end
+    end
+  end
+
+  def slots_actuales
+    (principal.present? ? principal.slots : []) +
+    (suplente.present? ? suplente.slots : [])
   end
 
   private
