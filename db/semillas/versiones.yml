@@ -1540,8 +1540,9 @@ versiones:
     - '1'
     - '1'
   - - '79'
-    - Destruye todos los aliados. Cada demonio pone una ficha de aliado muerte Diablo
-      2 FUE, 2 RES en juego por cada aliado que controlaba destruído de esta manera.
+    - "Destruye todos los aliados.\r\nCada demonio pone una ficha de aliado {muerte}
+      Diablo 2 FUE, 2 RES en juego por cada aliado que controlaba destruído de esta
+      manera."
     - Ritual
     - 
     - 
@@ -1552,7 +1553,7 @@ versiones:
     - '79'
     - Épica
     - '2013-02-19 17:50:27.79781'
-    - '2013-08-24 17:41:57.426632'
+    - '2013-10-16 06:13:33.283476'
     - '79'
     - true
     - '1'
@@ -3160,7 +3161,7 @@ versiones:
   - - '162'
     - Busca en tu mazo un escenario y ponlo en juego. Luego mezcla tu mazo.
     - Ritual
-    - 
+    - Instantáneo
     - 
     - 
     - 
@@ -3169,7 +3170,7 @@ versiones:
     - '162'
     - Infrecuente
     - '2013-02-19 17:51:25.393632'
-    - '2013-08-24 17:41:59.750393'
+    - '2013-10-16 06:32:26.381662'
     - '162'
     - true
     - '1'
@@ -13398,14 +13399,14 @@ versiones:
     - '2'
     - Muerte
     - Incluso el inferno se niega a abrazarlo.
-    - '59'
+    - '82'
     - Rara
     - '2013-08-23 17:56:47.245449'
-    - '2013-08-24 17:42:14.943802'
+    - '2013-10-16 05:30:37.600129'
     - '626'
     - true
     - '16'
-    - 059-origen
+    - 082-origen
     - '4'
     - '4'
   - - '704'
@@ -13421,7 +13422,7 @@ versiones:
     - '85'
     - Infrecuente
     - '2013-08-23 18:03:54.152116'
-    - '2013-08-24 17:42:14.966471'
+    - '2013-10-16 06:21:02.339832'
     - '627'
     - true
     - '16'
@@ -13484,7 +13485,7 @@ versiones:
     - '144'
     - Infrecuente
     - '2013-09-04 01:40:08.956653'
-    - '2013-09-04 01:40:09.00156'
+    - '2013-10-16 07:09:08.811481'
     - '630'
     - true
     - '16'
@@ -13788,7 +13789,7 @@ versiones:
     - '4'
     - Común
     - '2013-10-02 02:54:16.874468'
-    - '2013-10-02 03:03:19.481428'
+    - '2013-10-16 05:19:02.322912'
     - '6'
     - false
     - '16'
@@ -13808,7 +13809,7 @@ versiones:
     - '5'
     - Común
     - '2013-10-02 03:00:26.039727'
-    - '2013-10-02 03:00:26.061486'
+    - '2013-10-16 05:19:55.228455'
     - '8'
     - false
     - '16'
@@ -13855,7 +13856,9 @@ versiones:
     - 
     - 
   - - '726'
-    - Cuando juegues 3 o más rituales este turno, voltea Ubanna.
+    - "Cuando juegues 3 o más rituales este turno, voltea Ubanna. / Siempre que juegues
+      un ritual de coste 3 o más endereza Ubanna.\r\nGirar: Agrega 2 energías (sólo
+      para pagar rituales o costes de réplica)."
     - 
     - Demonio
     - 
@@ -13866,7 +13869,7 @@ versiones:
     - '3'
     - Infrecuente
     - '2013-10-02 03:09:11.95944'
-    - '2013-10-02 03:09:11.978147'
+    - '2013-10-16 05:56:26.522749'
     - '644'
     - true
     - '16'
@@ -13874,11 +13877,13 @@ versiones:
     - 
     - 
   - - '727'
-    - Cuando controles 4 o más objetos, voltea Ravel.
+    - "Cuando controles 4 o más objetos, voltea Ravel. / {X}, girar: Busca en tu mazo
+      un objeto de coste X o menos, muéstralo y ponlo en tu mano.\r\nGirar 2 objetos
+      enderezados que controles: Agrega {1}."
     - 
     - Demonio
     - 
-    - 
+    - '1'
     - 
     - Muerte
     - '"Una gota de esto, una pizca de aquello... Bien, sólo necesito tu corazón.
@@ -13886,7 +13891,7 @@ versiones:
     - '6'
     - Infrecuente
     - '2013-10-02 03:11:04.528597'
-    - '2013-10-02 03:11:04.544805'
+    - '2013-10-16 06:02:08.488103'
     - '645'
     - true
     - '16'
@@ -14366,7 +14371,7 @@ versiones:
     - '37'
     - Épica
     - '2013-10-08 22:06:07.888597'
-    - '2013-10-08 22:06:07.90226'
+    - '2013-10-16 05:28:56.648239'
     - '41'
     - false
     - '16'
@@ -14717,3 +14722,418 @@ versiones:
     - 120-origen
     - '3'
     - '3'
+  - - '770'
+    - Al final del turno de cada demonio, si ese demonio controla menos aliados que
+      uno de sus enemigos, Sehirlav le hace 2 puntos de daño a menos que pague {1}.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - '"Seca no significa menos nefasta." - Dicho de Sehirlav'
+    - '34'
+    - Infrecuente
+    - '2013-10-16 05:27:33.176918'
+    - '2013-10-16 05:27:33.191582'
+    - '663'
+    - true
+    - '16'
+    - 034-origen
+    - '0'
+    - '0'
+  - - '771'
+    - 'Destruir Altar de expiación: Pon el Diablo objetivo de tu Inferno en tu mano.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - '"Que esté enterrado no significa que esté muerto." -Unwaj'
+    - '64'
+    - Común
+    - '2013-10-16 05:32:44.6989'
+    - '2013-10-16 05:32:44.723456'
+    - '67'
+    - false
+    - '16'
+    - 064-origen
+    - '1'
+    - '1'
+  - - '772'
+    - 'Girar: Destruye el aliado objetivo girado.'
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '2'
+    - Muerte
+    - '"¡No te muevas! Ya nos ha visto…" -Transeúntes entrometidos'
+    - '65'
+    - Infrecuente
+    - '2013-10-16 05:33:31.007705'
+    - '2013-10-16 05:33:31.020002'
+    - '68'
+    - false
+    - '16'
+    - 065-origen
+    - '3'
+    - '3'
+  - - '773'
+    - "Destruir Bomba de proximidad: Cada demonio destruye un aliado que controle.\r\nRéplica
+      {2} (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando
+      su Réplica)."
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - '"¡Haz silencio! Quiero escuchar el sonido de los huesos quebrarse." - Miliciano
+      del Nuevo Orden'
+    - '68'
+    - Infrecuente
+    - '2013-10-16 05:37:01.991314'
+    - '2013-10-16 05:37:02.005303'
+    - '664'
+    - true
+    - '16'
+    - 068-origen
+    - '2'
+    - '2'
+  - - '774'
+    - Vínculo {0} (cuando sea puesta en el inferno desde el mazo, puedes pagar su
+      coste de vínculo y exiliarla) - Pon el objeto objetivo de coste 3 o menos de
+      tu inferno en tu mano.
+    - Aliado
+    - 
+    - Humano
+    - '1'
+    - '3'
+    - Muerte
+    - '"Es momento de volver a casa."'
+    - '69'
+    - Común
+    - '2013-10-16 05:39:42.371646'
+    - '2013-10-16 05:39:42.384063'
+    - '665'
+    - true
+    - '16'
+    - 069-origen
+    - '2'
+    - '2'
+  - - '775'
+    - "Evasivo (no puede ser atacado).\r\nGirar: El aliado objetivo no puede atacar
+      este turno.\r\nVínculo {0} (cuando sea puesta en el inferno desde el mazo, puedes
+      pagar su coste de vínculo y exiliarla) - Tu demonio tiene la habilidad de evasivo
+      hasta el final del turno."
+    - Aliado
+    - 
+    - Humano
+    - '3'
+    - '1'
+    - Muerte
+    - 
+    - '70'
+    - Rara
+    - '2013-10-16 05:43:13.467505'
+    - '2013-10-16 05:43:13.480634'
+    - '666'
+    - true
+    - '16'
+    - 070-origen
+    - '3'
+    - '3'
+  - - '776'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Puedes exiliar
+      la carta objetivo de un inferno.
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Muerte
+    - Ayuda a las criaturas en su camino al eterno olvido.
+    - '72'
+    - Infrecuente
+    - '2013-10-16 06:04:42.621396'
+    - '2013-10-16 06:04:42.638286'
+    - '71'
+    - false
+    - '16'
+    - 072-origen
+    - '3'
+    - '3'
+  - - '777'
+    - Golpe de gracia (cuando destruya a un aliado) - Endereza Diablo de dos cabezas.
+    - Aliado
+    - 
+    - Diablo
+    - '3'
+    - '4'
+    - Muerte
+    - Dos cabezas se alimentan más que una.
+    - '74'
+    - Rara
+    - '2013-10-16 06:06:08.051876'
+    - '2013-10-16 06:06:08.065684'
+    - '73'
+    - false
+    - '16'
+    - 074-origen
+    - '5'
+    - '5'
+  - - '778'
+    - '{X}, destruir Diablo de siete manos: Destruye el aliado objetivo de coste X.'
+    - Aliado
+    - 
+    - Diablo
+    - '1'
+    - '2'
+    - Muerte
+    - '"Demasiado frágil. La próxima vez haré un mayor esfuerzo." -Monje iniciado'
+    - '75'
+    - Común
+    - '2013-10-16 06:07:50.547068'
+    - '2013-10-16 06:07:50.560269'
+    - '74'
+    - false
+    - '16'
+    - 075-origen
+    - '2'
+    - '2'
+  - - '779'
+    - Cuando Diablo vulnerable sea objetivo de un ritual, destrúyelo.
+    - Aliado
+    - 
+    - Diablo
+    - '5'
+    - '5'
+    - Muerte
+    - '"Algunas veces me decepcionas." -Naamah'
+    - '76'
+    - Infrecuente
+    - '2013-10-16 06:11:18.943888'
+    - '2013-10-16 06:11:18.960384'
+    - '77'
+    - false
+    - '16'
+    - 076-origen
+    - '4'
+    - '4'
+  - - '780'
+    - "Destruye todos los aliados.\r\nCada demonio pone una ficha de aliado {muerte}
+      Diablo 2 FUE, 2 RES en juego por cada aliado que controlaba destruido de esta
+      manera."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - '"Es mejor quedarse en casa." Dicho de Gothika'
+    - '78'
+    - Épica
+    - '2013-10-16 06:14:37.321437'
+    - '2013-10-16 06:14:37.336414'
+    - '79'
+    - false
+    - '16'
+    - 078-origen
+    - '4'
+    - '4'
+  - - '781'
+    - "Evasivo (no puede ser atacado).\r\n{2}, destruir Gárgola diablo: El aliado
+      objetivo tiene la habilidad de Evasivo hasta el final del turno."
+    - Aliado
+    - 
+    - Diablo
+    - '2'
+    - '1'
+    - Muerte
+    - '"Vigilantes nocturnos, protejan nuestro majestuoso legado." -Unwaj'
+    - '80'
+    - Común
+    - '2013-10-16 06:16:58.985691'
+    - '2013-10-16 06:16:59.0011'
+    - '81'
+    - false
+    - '16'
+    - 080-origen
+    - '2'
+    - '2'
+  - - '782'
+    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - El
+      aliado objetivo obtiene -2 RES hasta el final del turno.
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '-1'
+    - Muerte
+    - Corrompe al portador, hasta que su propia sangre es drenada.
+    - '83'
+    - Común
+    - '2013-10-16 06:20:05.836035'
+    - '2013-10-16 06:20:05.849272'
+    - '667'
+    - true
+    - '16'
+    - 083-origen
+    - '3'
+    - '3'
+  - - '783'
+    - '{2}: Exilia la carta objetivo de un inferno.'
+    - Aliado
+    - 
+    - Diablo
+    - '1'
+    - '1'
+    - Muerte
+    - '"El fuego purifica las escrituras. Sus palabras no serán compartidas jamás."'
+    - '86'
+    - Común
+    - '2013-10-16 06:24:03.877062'
+    - '2013-10-16 06:24:03.896879'
+    - '668'
+    - true
+    - '16'
+    - 086-origen
+    - '1'
+    - '1'
+  - - '784'
+    - Destruye el aliado objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - '"Los muertos huelen horrible. Es preferible otra estatua en la plaza de piedra."
+      -Monje superior'
+    - '88'
+    - Común
+    - '2013-10-16 06:25:54.465934'
+    - '2013-10-16 06:25:54.48154'
+    - '85'
+    - false
+    - '16'
+    - 088-origen
+    - '3'
+    - '3'
+  - - '785'
+    - Exilia hasta tres cartas objetivo de un inferno.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Esta civilización nunca existió." -At Fjerne'
+    - '118'
+    - Común
+    - '2013-10-16 06:29:09.530691'
+    - '2013-10-16 06:29:09.545852'
+    - '120'
+    - false
+    - '16'
+    - 118-origen
+    - '1'
+    - '1'
+  - - '786'
+    - 'Destruir Joya de la plegaria: Pon el humano objetivo de tu inferno en tu mano.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - Recuerdo en vida, de los primeros fundadores.
+    - '136'
+    - Común
+    - '2013-10-16 06:30:50.160516'
+    - '2013-10-16 06:30:50.17577'
+    - '669'
+    - true
+    - '16'
+    - 136-origen
+    - '1'
+    - '1'
+  - - '787'
+    - Busca en tu mazo un escenario y ponlo en juego. Luego mezcla tu mazo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Esta es MI TIERRA, y estas son TUS REGLAS." -Comandante nungnarh'
+    - '138'
+    - Infrecuente
+    - '2013-10-16 06:32:06.082799'
+    - '2013-10-16 06:32:06.097329'
+    - '162'
+    - false
+    - '16'
+    - 138-origen
+    - '3'
+    - '3'
+  - - '788'
+    - Los costes de réplica cuestan {1} menos.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - Espacio, tiempo y entropía; en un laberinto perfecto sin entrada ni salida.
+    - '140'
+    - Rara
+    - '2013-10-16 07:08:35.179151'
+    - '2013-10-16 07:08:35.200593'
+    - '670'
+    - true
+    - '16'
+    - 140-origen
+    - '0'
+    - '0'
+  - - '789'
+    - "Furia.\r\nEstocada - Puedes mirar la carta del tope de tu mazo. Si es un rebelde
+      puedes ponerlo en juego sin pagar su coste."
+    - Aliado
+    - Único
+    - Humano Rebelde
+    - '3'
+    - '4'
+    - Neutral
+    - 
+    - '133'
+    - Rara
+    - '2013-10-16 07:23:09.81767'
+    - '2013-10-16 07:23:09.840899'
+    - '671'
+    - true
+    - '17'
+    - 133-promocionales-origen
+    - '5'
+    - '5'
+  - - '790'
+    - Los costes de réplica cuestan {1} menos.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - Espacio, tiempo y entropía; en un laberinto perfecto sin entrada ni salida.
+    - '140'
+    - Rara
+    - '2013-10-16 07:24:10.625967'
+    - '2013-10-16 07:24:10.643193'
+    - '670'
+    - false
+    - '17'
+    - 140-promocionales-origen
+    - '0'
+    - '0'

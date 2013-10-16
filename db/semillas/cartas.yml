@@ -36,7 +36,7 @@ cartas:
   - - '6'
     - Viden, el omnisciente
     - '2013-02-19 17:49:32.070155'
-    - '2013-10-02 03:03:19.495744'
+    - '2013-10-16 05:19:02.340314'
     - viden-el-omnisciente
   - - '7'
     - At Fjerne, el desterrado
@@ -46,7 +46,7 @@ cartas:
   - - '8'
     - Naamah, escultor de carne
     - '2013-02-19 17:49:34.765875'
-    - '2013-10-02 03:00:26.105439'
+    - '2013-10-16 05:19:55.246345'
     - naamah-escultor-de-carne
   - - '9'
     - Unwaj, nacida de la muerte
@@ -211,7 +211,7 @@ cartas:
   - - '41'
     - Asediar la mente
     - '2013-02-19 17:50:01.061394'
-    - '2013-10-08 22:06:07.990418'
+    - '2013-10-16 05:28:56.674587'
     - asediar-la-mente
   - - '42'
     - Bibliotecarios del éter
@@ -341,12 +341,12 @@ cartas:
   - - '67'
     - Altar de expiación
     - '2013-02-19 17:50:19.274593'
-    - '2013-08-24 17:44:36.61977'
+    - '2013-10-16 05:32:44.762118'
     - altar-de-expiacion
   - - '68'
     - Asesina daga de marfil
     - '2013-02-19 17:50:19.954418'
-    - '2013-08-24 17:44:36.623069'
+    - '2013-10-16 05:33:31.048144'
     - asesina-daga-de-marfil
   - - '69'
     - Buscador de materia perdida
@@ -361,7 +361,7 @@ cartas:
   - - '71'
     - Cuchillo de rito
     - '2013-02-19 17:50:21.950191'
-    - '2013-08-24 17:44:36.633028'
+    - '2013-10-16 06:04:42.670994'
     - cuchillo-de-rito
   - - '72'
     - Deformidad diablo
@@ -371,12 +371,12 @@ cartas:
   - - '73'
     - Diablo de dos cabezas
     - '2013-02-19 17:50:23.414811'
-    - '2013-08-24 17:44:36.639635'
+    - '2013-10-16 06:06:08.097431'
     - diablo-de-dos-cabezas
   - - '74'
     - Diablo de siete manos
     - '2013-02-19 17:50:24.093514'
-    - '2013-08-24 17:44:36.642919'
+    - '2013-10-16 06:07:50.590182'
     - diablo-de-siete-manos
   - - '75'
     - Diablo intocable
@@ -391,7 +391,7 @@ cartas:
   - - '77'
     - Diablo vulnerable
     - '2013-02-19 17:50:26.156148'
-    - '2013-08-24 17:44:36.652932'
+    - '2013-10-16 06:11:18.992546'
     - diablo-vulnerable
   - - '78'
     - Extenuar
@@ -401,7 +401,7 @@ cartas:
   - - '79'
     - Festival de vida nueva
     - '2013-02-19 17:50:27.653567'
-    - '2013-08-24 17:44:36.659549'
+    - '2013-10-16 06:14:37.366052'
     - festival-de-vida-nueva
   - - '80'
     - Fisura
@@ -411,7 +411,7 @@ cartas:
   - - '81'
     - Gárgola diablo
     - '2013-02-19 17:50:29.117199'
-    - '2013-08-24 17:44:36.666111'
+    - '2013-10-16 06:16:59.030356'
     - gargola-diablo
   - - '82'
     - Monjes de pergamino
@@ -431,7 +431,7 @@ cartas:
   - - '85'
     - Petrificar
     - '2013-02-19 17:50:31.882628'
-    - '2013-08-24 17:44:36.679339'
+    - '2013-10-16 06:25:54.51596'
     - petrificar
   - - '86'
     - Retroceder un instante
@@ -606,7 +606,7 @@ cartas:
   - - '120'
     - Arrasar las ruinas
     - '2013-02-19 17:50:56.470705'
-    - '2013-08-24 17:44:36.807139'
+    - '2013-10-16 06:29:09.581532'
     - arrasar-las-ruinas
   - - '121'
     - Báculo relámpago
@@ -816,7 +816,7 @@ cartas:
   - - '162'
     - Nueva tierra, nuevas reglas
     - '2013-02-19 17:51:25.371603'
-    - '2013-08-24 17:44:36.952534'
+    - '2013-10-16 06:32:26.387111'
     - nueva-tierra-nuevas-reglas
   - - '163'
     - Orbe tribal
@@ -3121,12 +3121,12 @@ cartas:
   - - '626'
     - Inmolado de la abadía
     - '2013-08-23 17:56:47.229667'
-    - '2013-08-24 17:44:38.905657'
+    - '2013-10-16 05:30:37.627703'
     - inmolado-de-la-abadia
   - - '627'
     - Manipulador de almas
     - '2013-08-23 18:03:54.136985'
-    - '2013-08-24 17:44:38.909029'
+    - '2013-10-16 06:21:02.365422'
     - manipulador-de-almas
   - - '628'
     - Bendición rúnica
@@ -3141,7 +3141,7 @@ cartas:
   - - '630'
     - Recluta de la rebelión
     - '2013-09-04 01:40:08.907079'
-    - '2013-09-04 01:40:09.144014'
+    - '2013-10-16 07:09:08.835383'
     - recluta-de-la-rebelion
   - - '631'
     - Carga de estimulantes
@@ -3211,12 +3211,12 @@ cartas:
   - - '644'
     - Ubanna, del ritual infinito
     - '2013-10-02 03:09:11.939843'
-    - '2013-10-02 03:09:12.030192'
+    - '2013-10-16 05:56:26.527547'
     - ubanna-del-ritual-infinito
   - - '645'
     - Ravel, maestro alquimista
     - '2013-10-02 03:11:04.503815'
-    - '2013-10-02 03:11:04.576428'
+    - '2013-10-16 06:02:08.498454'
     - ravel-maestro-alquimista
   - - '646'
     - Derú, de las raíces antiguas
@@ -3298,3 +3298,48 @@ cartas:
     - '2013-10-08 23:40:35.150417'
     - '2013-10-08 23:40:35.329764'
     - vigilante-obstinado
+  - - '663'
+    - Sehirlav, ciudad de lava seca
+    - '2013-10-16 05:27:33.155846'
+    - '2013-10-16 05:27:33.230998'
+    - sehirlav-ciudad-de-lava-seca
+  - - '664'
+    - Bomba de proximidad
+    - '2013-10-16 05:37:01.972012'
+    - '2013-10-16 05:37:02.036176'
+    - bomba-de-proximidad
+  - - '665'
+    - Buscador de reliquias perdidas
+    - '2013-10-16 05:39:42.352809'
+    - '2013-10-16 05:39:42.411928'
+    - buscador-de-reliquias-perdidas
+  - - '666'
+    - Cazador de ilusiones
+    - '2013-10-16 05:43:13.448947'
+    - '2013-10-16 05:43:13.547788'
+    - cazador-de-ilusiones
+  - - '667'
+    - Keris debilitante
+    - '2013-10-16 06:20:05.808557'
+    - '2013-10-16 06:20:05.880352'
+    - keris-debilitante
+  - - '668'
+    - Monaguillo de la basílica
+    - '2013-10-16 06:24:03.852566'
+    - '2013-10-16 06:24:03.932433'
+    - monaguillo-de-la-basilica
+  - - '669'
+    - Joya de la plegaria
+    - '2013-10-16 06:30:50.138749'
+    - '2013-10-16 06:30:50.208395'
+    - joya-de-la-plegaria
+  - - '670'
+    - Pandemonio, pasaje entre planos
+    - '2013-10-16 07:08:35.148807'
+    - '2013-10-16 07:24:10.679876'
+    - pandemonio-pasaje-entre-planos
+  - - '671'
+    - Grímnir, líder de la rebelión
+    - '2013-10-16 07:23:09.793445'
+    - '2013-10-16 07:23:09.911008'
+    - grimnir-lider-de-la-rebelion
