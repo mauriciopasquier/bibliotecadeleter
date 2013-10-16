@@ -13828,7 +13828,7 @@ versiones:
     - '8'
     - Común
     - '2013-10-02 03:05:09.401791'
-    - '2013-10-02 03:05:09.418874'
+    - '2013-10-16 07:46:14.112961'
     - '12'
     - false
     - '16'
@@ -13899,18 +13899,22 @@ versiones:
     - 
     - 
   - - '728'
-    - Cuando tengas más cartas en tu inferno que en tu mazo, voltea Derú.
+    - "Cuando tengas más cartas en tu inferno que en tu mazo, voltea Derú. / Las cartas
+      de tu inferno no pueden ser exiliadas por efectos que controlen tus enemigos.\r\nSiempre
+      que tu demonio fuera a recibir daño, en vez de eso pon esa cantidad de cartas
+      del tope de tu inferno en la parte inferior de tu mazo. Si no puedes, pierdes
+      el juego."
     - 
     - Demonio
     - 
-    - 
+    - '1'
     - 
     - Poder
     - '"Conozco las raíces de este mundo, pues he vivido en ellas. Tu no puedes detenerme."'
     - '7'
     - Infrecuente
     - '2013-10-02 03:13:26.64636'
-    - '2013-10-02 03:13:26.669777'
+    - '2013-10-16 07:45:24.620946'
     - '646'
     - true
     - '16'
