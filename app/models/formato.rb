@@ -12,9 +12,9 @@ class Formato < ActiveRecord::Base
   validates_uniqueness_of :nombre
   validates_inclusion_of :tipo, in: TIPOS
 
-  default_scope order(:nombre)
-
   friendly_id :nombre, use: :slugged
+
+  scope :ordenados, order('tipo, nombre')
 
   def nombres_de_cartas_prohibidas=(nombres)
     if nombres.present?

@@ -27,6 +27,12 @@
 
   .row-fluid
     .span12
+      = f.label :formatos, 'Formatos donde es legal'
+      = f.collection_select :formato_ids, Formato.where(tipo: 'Abierto'), :id, :nombre,
+        { }, { multiple: true, class: 'span12', title: 'Ninguno' }
+
+  .row-fluid
+    .span12
       = f.label :notas
       = f.text_area :notas, class: 'span12'
 
