@@ -20,10 +20,10 @@ class ExpansionDecorator < ApplicationDecorator
   end
 
   def logo
-    [ h.image_tag(object.logo.url, class: 'lazy'),
+    [ h.image_tag(object.base.logo.url, class: 'lazy'),
 
       h.content_tag(:noscript) do
-        h.x_image_tag(object.logo.url)
+        h.x_image_tag(object.base.logo.url)
       end ].join.html_safe
   end
 end
