@@ -49,6 +49,7 @@ class DocumentoDecorator < ApplicationDecorator
       @extracto ||= if object.respond_to?(:extracto)
         object.extracto
       else
+        # Si no se busca con ts_headline
         h.excerpt(object.content, enfasis, radius: 50)
       end
     end

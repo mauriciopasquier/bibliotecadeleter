@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006225514) do
+ActiveRecord::Schema.define(:version => 20131014161648) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -50,19 +50,54 @@ ActiveRecord::Schema.define(:version => 20131006225514) do
 
   add_index "cartas", ["slug"], :name => "index_cartas_on_slug", :unique => true
 
+  create_table "cartas_formatos", :id => false, :force => true do |t|
+    t.integer "carta_id"
+    t.integer "formato_id"
+  end
+
+  add_index "cartas_formatos", ["carta_id"], :name => "index_cartas_formatos_on_carta_id"
+  add_index "cartas_formatos", ["formato_id"], :name => "index_cartas_formatos_on_formato_id"
+
   create_table "expansiones", :force => true do |t|
-    t.string   "nombre",       :null => false
+    t.string   "nombre",            :null => false
     t.date     "lanzamiento"
     t.date     "presentacion"
     t.text     "notas"
     t.string   "saga"
     t.integer  "total"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.string   "slug",         :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "slug",              :null => false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "expansiones", ["slug"], :name => "index_expansiones_on_slug", :unique => true
+
+  create_table "expansiones_formatos", :id => false, :force => true do |t|
+    t.integer "expansion_id"
+    t.integer "formato_id"
+  end
+
+  add_index "expansiones_formatos", ["expansion_id"], :name => "index_expansiones_formatos_on_expansion_id"
+  add_index "expansiones_formatos", ["formato_id"], :name => "index_expansiones_formatos_on_formato_id"
+
+  create_table "formatos", :force => true do |t|
+    t.string   "nombre",                                :null => false
+    t.string   "slug",                                  :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.integer  "demonios",       :default => 1
+    t.integer  "principal",      :default => 50
+    t.integer  "suplente",       :default => 12
+    t.integer  "copias",         :default => 4
+    t.boolean  "limitar_sendas", :default => true
+    t.string   "tipo",           :default => "Abierto"
+  end
+
+  add_index "formatos", ["slug"], :name => "index_formatos_on_slug", :unique => true
 
   create_table "imagenes", :force => true do |t|
     t.integer  "version_id"
@@ -103,13 +138,13 @@ ActiveRecord::Schema.define(:version => 20131006225514) do
   add_index "listas", ["usuario_id"], :name => "index_listas_on_usuario_id"
 
   create_table "mazos", :force => true do |t|
-    t.string   "formato"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.integer  "usuario_id"
     t.string   "nombre"
-    t.string   "slug",                         :null => false
-    t.boolean  "visible",    :default => true
+    t.string   "slug",                                  :null => false
+    t.boolean  "visible",             :default => true
+    t.integer  "formato_objetivo_id"
   end
 
   add_index "mazos", ["slug"], :name => "index_mazos_on_slug"

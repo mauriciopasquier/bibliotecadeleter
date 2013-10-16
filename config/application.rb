@@ -60,11 +60,15 @@ module BibliotecaDelEter
     # TODO sacar con rails 4
     config.active_record.whitelist_attributes = false
 
-    # Enable the asset pipeline
-    config.assets.enabled = true
+    config.generators do |g|
+      g.test_framework :mini_test, spec: true, fixture: false
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+    end
 
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.4.1'
+    # Asset pipeline
+    config.assets.enabled = true
 
     # Traduzco el path
     config.assets.prefix = "/recursos"
@@ -73,13 +77,10 @@ module BibliotecaDelEter
     # http://guides.rubyonrails.org/asset_pipeline.html#local-precompilation
     config.assets.initialize_on_precompile = false
 
+    # Los pdfs van en documents
     config.assets.paths << Rails.root.join('app', 'assets', 'documents')
 
-    config.generators do |g|
-      g.test_framework :mini_test, spec: true, fixture: false
-      g.stylesheets false
-      g.javascripts false
-      g.helper false
-    end
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.5.0'
   end
 end

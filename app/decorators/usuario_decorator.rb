@@ -1,6 +1,5 @@
 # encoding: utf-8
 class UsuarioDecorator < ApplicationDecorator
-
   # Sí...
   def cantidad_faltante
     object.faltantes.map(&:cantidad).reduce(:+).try(:abs) || 0

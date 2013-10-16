@@ -12,6 +12,7 @@ class Carta < ActiveRecord::Base
             include: [ :expansion, :imagenes ]
   has_many :imagenes, through: :versiones, order: 'created_at ASC'
   has_many :expansiones, through: :versiones
+  has_and_belongs_to_many :formatos_donde_esta_prohibida, class_name: 'Formato'
 
   default_scope order(:nombre).includes(:canonica)
   scope :ultimas, reorder('created_at DESC')

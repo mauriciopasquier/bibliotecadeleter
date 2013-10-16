@@ -19,7 +19,7 @@ $(document)
 
 $(document)
   .on 'railsAutocomplete.select', '.autocomplete-versiones', (evento, data) ->
-    # El controlador devuelve el hash con version_id explícitamente
+    # El controlador devuelve el hash con version_id como 'id'
     $(this).siblings('.version_id').val(data.item.id)
 
 $(document)

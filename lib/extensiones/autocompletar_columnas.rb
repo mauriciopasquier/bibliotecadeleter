@@ -21,10 +21,10 @@ module AutocompletarColumnas
     end
 
     # Arma el json y lo devuelve
-    def autocompletar(resultados, llave, valor)
+    def autocompletar(resultados, llave, valor, label = nil)
       h = resultados.inject({}) do |hash, elem|
         hash[elem.send(llave)] = {
-          label: elem.send(valor),
+          label: elem.send(label || valor),
           value: elem.send(valor),
           id: elem.send(llave)
         }

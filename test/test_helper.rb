@@ -17,6 +17,11 @@ class MiniTest::Unit::TestCase
   include FactoryGirl::Syntax::Methods
 end
 
+class MiniTest::Spec
+  before { DatabaseCleaner.start }
+  after { DatabaseCleaner.clean }
+end
+
 class ActionController::TestCase
   include Devise::TestHelpers
 

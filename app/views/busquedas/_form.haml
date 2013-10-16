@@ -3,7 +3,7 @@
   .row-fluid
     .span12
       = label_tag 'busqueda[texto]', t('.texto')
-      = text_field_tag 'busqueda[texto]', @busqueda, class: 'span12', required: true, autofocus: true
+      = text_field_tag 'busqueda[texto]', @texto, class: 'span12', required: true, autofocus: true
   .row-fluid
     .span12
       = f.submit 'Buscar', class: 'btn btn-success'

@@ -12,7 +12,8 @@ class Cita
     'Adiós, adiós para siempre',
     'Destruiré mi hogar, para encontrar uno nuevo',
     'Todos los caminos conducen al olvido',
-    'Nota mental: no conjurar rituales desconocidos en la biblioteca' ]
+    'Nota mental: no conjurar rituales desconocidos en la biblioteca',
+    'El fuego purifica las escrituras. Sus palabras no serán compartidas jamás' ]
 
   CREAR = [
     'La materia es energía, al igual que el conocimiento',

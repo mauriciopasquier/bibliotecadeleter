@@ -1,0 +1,54 @@
+= form_for formato, html: { class: 'form form-horizontal formato' } do |f|
+  = f.error_messages
+
+  .row-fluid
+    .span4
+      = f.label :nombre
+      = f.text_field :nombre, class: 'span12', required: true, autofocus: true
+    .span2
+      = f.label :tipo
+      = f.select :tipo, Formato::TIPOS, { }, class: 'span12'
+    .span6
+      = f.label :nombres_de_cartas_prohibidas, 'Cartas prohibidas'
+      = f.autocomplete_field :nombres_de_cartas_prohibidas, sugerir_cartas_path,
+        data: { delimiter: ', ' }, class: 'span12'
+
+  .row-fluid
+    .span12
+      = f.label :expansiones
+      = f.collection_select :expansion_ids, Expansion.ordenadas, :id, :nombre,
+        { }, { multiple: true, class: 'span12', title: 'Cualquiera' }
+
+  %h2 Reglas
+
+  .row-fluid
+    .span12
+      .control-group
+        .control-label= f.label :demonios, 'Cantidad de demonios'
+        .controls
+          = f.text_field :demonios, class: 'span1'
+          %span.help-inline En formatos duales, por ejemplo, pueden ser 2
+      .control-group
+        .control-label= f.label :copias, 'Copias por carta'
+        .controls
+          = f.text_field :copias, class: 'span1'
+          %span.help-inline Cantidad de copias permitidas por carta (exceptuando las Ilimitadas)
+      .control-group
+        .control-label= f.label :principal, 'Cartas en el mazo'
+        .controls
+          = f.text_field :principal, class: 'span1'
+          %span.help-inline Cantidad máxima de cartas en el mazo principal
+      .control-group
+        .control-label= f.label :suplente, 'Cartas en el mazo suplente'
+        .controls
+          = f.text_field :suplente, class: 'span1'
+          %span.help-inline Cantidad máxima de cartas en el mazo suplente o sidedeck
+      .control-group
+        .control-label= f.label :limitar_sendas, '¿Limitar sendas según el demonio?'
+        .controls
+          = f.check_box_bootstrap :limitar_sendas, class: 'span1'
+          %span.help-inline Restringir las cartas permitidas a las sendas de los demonios y las neutrales
+
+  .row-fluid.botones
+    .span12
+      = f.submit 'Guardar', class: 'btn btn-success'

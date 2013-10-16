@@ -22,6 +22,10 @@ class ExpansionesController < ApplicationController
     respond_with(@expansion)
   end
 
+  def info
+    respond_with(@expansion)
+  end
+
   def new
     respond_with(@expansion)
   end
@@ -32,12 +36,12 @@ class ExpansionesController < ApplicationController
 
   def create
     @expansion.save
-    respond_with(@expansion)
+    respond_with(@expansion, location: info_expansion_path(@expansion))
   end
 
   def update
     @expansion.update_attributes(parametros_permitidos)
-    respond_with(@expansion)
+    respond_with(@expansion, location: info_expansion_path(@expansion))
   end
 
   def destroy
@@ -53,7 +57,8 @@ class ExpansionesController < ApplicationController
 
     def parametros_permitidos
       params.require(:expansion).permit(
-        :nombre, :lanzamiento, :presentacion, :saga, :total, :notas
+        :nombre, :lanzamiento, :presentacion, :saga, :total, :notas, :logo,
+        formato_ids: []
       )
     end
 end

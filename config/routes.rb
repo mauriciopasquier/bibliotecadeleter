@@ -1,5 +1,4 @@
 BibliotecaDelEter::Application.routes.draw do
-
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
@@ -29,6 +28,7 @@ BibliotecaDelEter::Application.routes.draw do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
     get 'expansiones', to: 'sugerencias#expansiones', as: :sugerir_expansiones
     get 'artistas', to: 'sugerencias#artistas', as: :sugerir_artistas
+    get 'versiones', to: 'sugerencias#versiones', as: :sugerir_versiones
     get 'valores_expansion_saga'
     get 'valores_version_tipo'
     get 'valores_version_subtipo'
@@ -53,7 +53,11 @@ BibliotecaDelEter::Application.routes.draw do
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
     end
 
-    r.resources :expansiones
+    r.resources :expansiones do
+      member do
+        get 'info'
+      end
+    end
 
     # Buscar documentos (search documents)
     r.resource :busqueda, only: [:new, :show, :create] do
@@ -65,6 +69,8 @@ BibliotecaDelEter::Application.routes.draw do
 
   with_options path_names: masculinos do |r|
     r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ]
+
+    r.resources :formatos
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do

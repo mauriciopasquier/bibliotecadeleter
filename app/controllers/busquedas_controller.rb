@@ -20,8 +20,9 @@ class BusquedasController < ApplicationController
       ).accessible_by(
         current_ability
       ).select("ts_headline(
+          'spanish',
           pg_search_documents.content,
-          plainto_tsquery(
+          to_tsquery(
             'spanish', ''' ' || unaccent('#{@texto}') || ' ''' || ':*'),
           'StartSel=\"<strong class=text-info>\", StopSel=\"</strong>\"'
         ) AS extracto"
