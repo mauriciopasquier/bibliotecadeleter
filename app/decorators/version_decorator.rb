@@ -65,8 +65,8 @@ class VersionDecorator < ApplicationDecorator
 
   def texto
     object.texto.split(' / ').collect do |cara|
-      h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
-        cara
+      h.content_tag(:div, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
+        estructurar(cara)
       end
     end.join.html_safe unless object.texto.nil?
   end
@@ -110,6 +110,13 @@ class VersionDecorator < ApplicationDecorator
         object.imagenes.any? || object.imagenes.build
     end
     self
+  end
+
+  # Envuelve las oraciones (delimitadas por '\r\n') en <p> y los ( ) en <i>
+  def estructurar(texto)
+    texto.split("\r\n").collect do |oracion|
+      h.content_tag :p, oracion.gsub('(', '<i>(').gsub(')', ')</i>').html_safe
+    end.join.html_safe
   end
 
   private
