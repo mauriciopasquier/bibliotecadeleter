@@ -40,10 +40,10 @@ class SugerenciasController < ApplicationController
 
     def autocompletar_demonios
       resultados = filtro Carta.con_todo, :nombre, {
-        versiones: { supertipo: 'Demonio' }
+        versiones: { supertipo: 'Demonio', canonica: true }
       }.deep_merge(sendas_pedidas)
 
-      autocompletar resultados, :version_id, :nombre_y_expansion
+      autocompletar resultados, :version_id, :nombre_y_expansiones
     end
 
     def sendas_pedidas

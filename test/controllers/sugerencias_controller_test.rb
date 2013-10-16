@@ -1,6 +1,7 @@
 # encoding: utf-8
 require "./test/test_helper"
 
+# FIXME no estoy testeando realmente las diferencias en nombre_y_expansion{,es}
 describe SugerenciasController do
   describe 'cartas' do
     describe 'rutas' do
