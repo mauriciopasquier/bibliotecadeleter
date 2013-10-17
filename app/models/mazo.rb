@@ -31,6 +31,7 @@ class Mazo < ActiveRecord::Base
 
   validates_presence_of :nombre, :principal, :usuario_id
   validates_uniqueness_of :nombre, scope: :usuario_id
+  validates_presence_of :formato_objetivo, if: :exigir_formato
   validate  :cantidad_de_demonios_correcta, :cantidad_de_cartas_correcta,
             :cantidad_de_cartas_suplentes_correcta, :copias_dentro_del_maximo,
             :sendas_corresponden_con_demonios, :no_usar_cartas_prohibidas,
@@ -54,9 +55,14 @@ class Mazo < ActiveRecord::Base
   scope :recientes, order('updated_at desc').limit(10)
 
   attr_writer :reglas, :exigir_formato
+  normalize_attribute :exigir_formato, with: :boolean
 
   def reglas
-    @reglas ||= Reglas.new(formato_objetivo, self)
+    if formato_objetivo.present?
+      @reglas ||= Reglas.new(formato_objetivo, self)
+    else
+      Reglas::Null.new
+    end
   end
 
   def exigir_formato

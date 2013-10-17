@@ -1,4 +1,14 @@
 class Reglas
+  class Null < Reglas
+    def demonios_validos?; false; end
+    def mazo_principal_valido?; false; end
+    def mazo_suplente_valido?; false; end
+    def copias_validas?; false; end
+    def sendas_validas?; false; end
+    def cartas_permitidas?; false; end
+    def expansiones_validas?; false; end
+  end
+
   include ActiveModel::Validations
 
   attr_accessor :formato, :mazo
@@ -149,4 +159,5 @@ class Reglas
     def sendas_permitidas
       (mazo.slots.collect { |s| s.version.senda } + ['Neutral']).uniq
     end
+
 end

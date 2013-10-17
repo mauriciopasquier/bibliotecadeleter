@@ -19,6 +19,8 @@ es:
               no_es_unico_en_la_expansion: "debe ser único dentro de la expansión"
         mazo:
           attributes:
+            formato_objetivo:
+              blank: 'Elegí un formato para verificar si es legal'
             demonios:
               cantidad_mal: 'Te faltan o sobran'
             principal:
