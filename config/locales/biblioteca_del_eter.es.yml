@@ -22,11 +22,11 @@ es:
             formato_objetivo:
               blank: 'Elegí un formato para verificar si es legal'
             demonios:
-              cantidad_mal: 'Te faltan o sobran'
+              cantidad_mal: '^Te faltan o sobran %{attribute}'
             principal:
-              cantidad_mal: 'Te faltan o sobran cartas'
+              cantidad_mal: '^Te faltan o sobran cartas en el %{attribute}'
             suplente:
-              cantidad_mal: 'Te faltan o sobran cartas'
+              cantidad_mal: '^Te faltan o sobran cartas en el %{attribute}'
             base:
               hay_copias_de_mas: 'Cargaste copias de más de alguna carta'
               cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
