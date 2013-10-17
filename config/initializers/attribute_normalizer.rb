@@ -14,4 +14,9 @@ AttributeNormalizer.configure do |config|
   # Also, You can add an specific attribute to default_attributes using one or
   # more normalizers:
   # config.add_default_attribute :name, :with => :truncate
+
+  # Convertir true, 'true', 1 y '1' en true
+  config.normalizers[:boolean] = lambda do |value, options|
+    [ true, 1, '1', 'true' ].any? { |truth| value == truth }
+  end
 end
