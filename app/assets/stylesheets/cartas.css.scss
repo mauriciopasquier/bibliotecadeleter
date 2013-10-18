@@ -1,27 +1,54 @@
+@import 'twitter/bootstrap/mixins';
 @import 'variables';
 
 #carta {
-  .nombre       { text-align: center; }
-  .tipos        { text-align: center; }
-  .senda        { text-align: right; }
-  .ambientacion { text-align: center;
-                  font-style: italic;
-                  font-size: small;   }
-  .rareza       { text-align: right; }
-  .arte {
-    text-align: left;
-    p { text-align: center; }
-  }
-  .caja-de-texto {
-    padding: 1em 0;
-  }
-  .terrenal {
-    border-top: 1px solid $gris-claro;
-    padding-top: 10px;
+  margin-top: 5px;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  .version-textual {
+    .nombre {
+      text-align: center;
+      font-size: x-large; }
+    .coste {
+      font-size: x-large; }
+    .tipos {
+      text-align: center; }
+    .senda {
+      text-align: right; }
+    .ambientacion {
+      text-align: center;
+      font-style: italic;
+      font-size: small; }
+    .rareza {
+      text-align: right; }
+    .stats {
+      font-size: x-large; }
+    .arte {
+      text-align: left;
+      p {
+        text-align: center; } }
+    .caja-de-texto {
+      padding: 1em 0; }
+    .terrenal {
+      border-top: 1px solid $gris-claro;
+      padding-top: 10px; }
   }
 
   ul {
     list-style-type: none;
+  }
+}
+
+
+.flechas {
+  text-align: center;
+  display: inline;
+  span.flecha {
+    vertical-align: bottom;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: monospace;
   }
 }
 

@@ -1,22 +1,9 @@
 namespace :extension do
   def conexion
-    require 'io/console'
-
     spec = ActiveRecord::Base.connection_config
 
-    spec[:username] = if ENV['usuario'].present?
-      ENV['usuario']
-    else
-      puts "Superusuario de la base de datos:"
-      STDIN.noecho(&:gets).chomp
-    end
-
-    spec[:password] = if ENV['password'].present?
-      ENV['password']
-    else
-      puts "Password del superusuario:"
-      STDIN.noecho(&:gets).chomp
-    end
+    spec[:username] = ENV['usuario'] || 'postgres'
+    spec[:password] = ENV['password'] || nil
 
     ActiveRecord::Base.establish_connection(spec).connection
   end

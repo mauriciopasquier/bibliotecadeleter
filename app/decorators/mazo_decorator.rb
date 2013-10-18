@@ -40,10 +40,11 @@ class MazoDecorator < ListaDecorator
   end
 
   def formatos_donde_es_legal
-    Formato.all.collect do |formato|
-      h.content_tag :li do
-        formato.reglas_para(object).valid? ? h.link_to(formato.nombre, formato) : nil
+    formatos = Formato.all.collect do |formato|
+      if formato.reglas_para(object).valid?
+        h.content_tag :li, h.link_to(formato.nombre, formato)
       end
-    end.join.html_safe
+    end
+    formatos.any? ? formatos.join.html_safe : h.content_tag(:li, 'ningún formato')
   end
 end
