@@ -123,7 +123,8 @@ class VersionDecorator < ApplicationDecorator
     h.content_tag :span do
       h.link_to "<span class='flecha'>←</span> #{object.anterior.nombre}".html_safe,
         h.en_expansion_carta_path(
-          object.anterior.carta, object.anterior.expansion), class: 'btn'
+          object.anterior.carta, object.anterior.expansion), class: 'btn',
+          id: 'anterior'
     end
   end
 
@@ -131,7 +132,8 @@ class VersionDecorator < ApplicationDecorator
     h.content_tag :span do
       h.link_to "#{object.siguiente.nombre} <span class='flecha'>→</span>".html_safe,
         h.en_expansion_carta_path(
-          object.siguiente.carta, object.siguiente.expansion), class: 'btn'
+          object.siguiente.carta, object.siguiente.expansion), class: 'btn',
+          id: 'siguiente'
     end
   end
 
