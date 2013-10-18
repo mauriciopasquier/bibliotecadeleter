@@ -466,17 +466,17 @@ cartas:
   - - '92'
     - Barahai alfa
     - '2013-02-19 17:50:36.770226'
-    - '2013-08-24 17:44:36.706311'
+    - '2013-10-18 00:11:48.170384'
     - barahai-alfa
   - - '93'
     - Barahai curioso
     - '2013-02-19 17:50:37.580289'
-    - '2013-08-24 17:44:36.710092'
+    - '2013-10-18 00:10:25.06574'
     - barahai-curioso
   - - '94'
     - Barahai leonino
     - '2013-02-19 17:50:38.381782'
-    - '2013-08-24 17:44:36.713742'
+    - '2013-10-18 00:09:31.566273'
     - barahai-leonino
   - - '95'
     - Barahai temerario
@@ -486,12 +486,12 @@ cartas:
   - - '96'
     - Barahai valiente
     - '2013-02-19 17:50:39.738881'
-    - '2013-08-24 17:44:36.721458'
+    - '2013-10-18 00:08:28.594029'
     - barahai-valiente
   - - '97'
     - Buscador de vida perdida
     - '2013-02-19 17:50:40.441253'
-    - '2013-08-24 17:44:36.725517'
+    - '2013-10-18 00:06:42.887346'
     - buscador-de-vida-perdida
   - - '98'
     - Caminante estanque de rocío
@@ -516,12 +516,12 @@ cartas:
   - - '102'
     - Corteza del renacimiento
     - '2013-02-19 17:50:43.961696'
-    - '2013-08-24 17:44:36.743883'
+    - '2013-10-18 00:05:12.612904'
     - corteza-del-renacimiento
   - - '103'
     - Cuchillas sagradas
     - '2013-02-19 17:50:44.647775'
-    - '2013-08-24 17:44:36.748101'
+    - '2013-10-18 00:04:06.017031'
     - cuchillas-sagradas
   - - '104'
     - Deformidad barahai
@@ -531,7 +531,7 @@ cartas:
   - - '105'
     - Fallecimiento fortuito
     - '2013-02-19 17:50:46.039239'
-    - '2013-08-24 17:44:36.754918'
+    - '2013-10-18 00:02:09.47469'
     - fallecimiento-fortuito
   - - '106'
     - Fuerza del bosque
@@ -561,7 +561,7 @@ cartas:
   - - '111'
     - Raíces del árbol sagrado
     - '2013-02-19 17:50:50.224059'
-    - '2013-08-24 17:44:36.776023'
+    - '2013-10-18 00:00:45.265232'
     - raices-del-arbol-sagrado
   - - '112'
     - Rito de florecimiento
@@ -611,7 +611,7 @@ cartas:
   - - '121'
     - Báculo relámpago
     - '2013-02-19 17:50:57.137917'
-    - '2013-10-08 23:43:40.482693'
+    - '2013-10-17 23:59:02.907561'
     - baculo-relampago
   - - '122'
     - Bestia cola de luz
@@ -756,7 +756,7 @@ cartas:
   - - '150'
     - Generador de luminium
     - '2013-02-19 17:51:17.138423'
-    - '2013-08-24 17:44:36.911899'
+    - '2013-10-17 23:58:23.184036'
     - generador-de-luminium
   - - '151'
     - Gothika
@@ -796,7 +796,7 @@ cartas:
   - - '158'
     - Lagarto escamacristal
     - '2013-02-19 17:51:22.6981'
-    - '2013-08-24 17:44:36.937462'
+    - '2013-10-17 23:57:22.532179'
     - lagarto-escamacristal
   - - '159'
     - Lago de almas perdidas
@@ -3131,7 +3131,7 @@ cartas:
   - - '628'
     - Bendición rúnica
     - '2013-08-23 18:06:05.240945'
-    - '2013-08-24 17:44:38.912382'
+    - '2013-10-18 00:17:31.625027'
     - bendicion-runica
   - - '629'
     - Maestro del éter
@@ -3196,7 +3196,7 @@ cartas:
   - - '641'
     - Cofradía natural
     - '2013-09-28 15:45:40.498645'
-    - '2013-10-08 23:30:34.939826'
+    - '2013-10-18 00:17:53.158898'
     - cofradia-natural
   - - '642'
     - Peste fúngica
@@ -3226,7 +3226,7 @@ cartas:
   - - '648'
     - Banza de la tribu
     - '2013-10-07 18:18:26.78647'
-    - '2013-10-07 18:18:27.051241'
+    - '2013-10-18 00:24:29.045195'
     - banza-de-la-tribu
   - - '649'
     - Encuentro desértico
@@ -3343,3 +3343,38 @@ cartas:
     - '2013-10-16 07:23:09.793445'
     - '2013-10-16 07:23:09.911008'
     - grimnir-lider-de-la-rebelion
+  - - '672'
+    - Adoratriz del bosque antiguo
+    - '2013-10-18 00:14:25.940312'
+    - '2013-10-18 00:14:26.067086'
+    - adoratriz-del-bosque-antiguo
+  - - '673'
+    - Barahai combativo
+    - '2013-10-18 00:15:57.313724'
+    - '2013-10-18 00:15:57.379935'
+    - barahai-combativo
+  - - '674'
+    - Elixir de saviaesencia
+    - '2013-10-18 00:20:01.857167'
+    - '2013-10-18 00:20:01.985763'
+    - elixir-de-saviaesencia
+  - - '675'
+    - Eraión, refugio del caído
+    - '2013-10-18 00:21:27.38453'
+    - '2013-10-18 00:21:27.459669'
+    - eraion-refugio-del-caido
+  - - '676'
+    - Espíritu de Eraión
+    - '2013-10-18 00:22:52.746038'
+    - '2013-10-18 00:22:53.010001'
+    - espiritu-de-eraion
+  - - '677'
+    - Rungu de la rabia
+    - '2013-10-18 00:25:55.110868'
+    - '2013-10-18 00:25:55.18548'
+    - rungu-de-la-rabia
+  - - '678'
+    - Venerador de héroes caídos
+    - '2013-10-18 00:29:36.209688'
+    - '2013-10-18 00:29:36.285879'
+    - venerador-de-heroes-caidos

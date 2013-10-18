@@ -2012,17 +2012,17 @@ versiones:
   - - '103'
     - Cuando el aliado equipado destruya un aliado, puedes mezclar la carta objetivo
       de tu Inferno en tu mazo.
-    - Aliado
+    - Arma
     - Instantáneo
     - 
-    - '2'
-    - '0'
+    - '+2'
+    - '+0'
     - Poder
     - La sangre que gotea de sus hojas, hace florecer incluso a los árboles secos.
     - '103'
     - Infrecuente
     - '2013-02-19 17:50:44.669561'
-    - '2013-08-24 17:41:58.186547'
+    - '2013-10-18 00:04:06.012831'
     - '103'
     - true
     - '1'
@@ -13444,7 +13444,7 @@ versiones:
     - '99'
     - Común
     - '2013-08-23 18:06:05.257269'
-    - '2013-08-24 17:42:14.988285'
+    - '2013-10-18 00:17:31.602207'
     - '628'
     - true
     - '16'
@@ -13566,7 +13566,7 @@ versiones:
     - '119'
     - Infrecuente
     - '2013-09-16 18:59:38.154562'
-    - '2013-10-08 23:43:40.477064'
+    - '2013-10-17 23:59:02.858498'
     - '121'
     - false
     - '16'
@@ -13730,7 +13730,7 @@ versiones:
     - '102'
     - Rara
     - '2013-09-28 15:45:40.522615'
-    - '2013-10-08 23:30:34.85275'
+    - '2013-10-18 00:17:53.127687'
     - '641'
     - true
     - '16'
@@ -13922,7 +13922,7 @@ versiones:
     - 
     - 
   - - '730'
-    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - Puede
+    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - Puedes
       anexar Banza de la tribu al aliado objetivo.
     - Arma
     - 
@@ -13934,7 +13934,7 @@ versiones:
     - '10'
     - Común
     - '2013-10-07 18:18:26.952285'
-    - '2013-10-07 18:18:26.978542'
+    - '2013-10-18 00:24:29.041415'
     - '648'
     - true
     - '16'
@@ -15141,3 +15141,365 @@ versiones:
     - 140-promocionales-origen
     - '0'
     - '0'
+  - - '791'
+    - 'Destruir Lagarto escamacristal: Agrega 1 energía.'
+    - Aliado
+    - 
+    - Reptil
+    - '1'
+    - '1'
+    - Neutral
+    - No son buscados por su carne, a pesar de su exquisito sabor.
+    - '137'
+    - Común
+    - '2013-10-17 23:57:22.343915'
+    - '2013-10-17 23:57:22.483408'
+    - '158'
+    - false
+    - '16'
+    - 137-origen
+    - '1'
+    - '1'
+  - - '792'
+    - "Generador de luminium entra en juego girado.\r\nGirar: Agrega {1}."
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Antiguo pero creativo diseño." -Bibliotecario de éter'
+    - '132'
+    - Infrecuente
+    - '2013-10-17 23:58:23.134753'
+    - '2013-10-17 23:58:23.150318'
+    - '150'
+    - false
+    - '16'
+    - 132-origen
+    - '2'
+    - '2'
+  - - '793'
+    - '3, girar: Pon una ficha de aliado poder Barahai 3 FUE, 3 RES en juego.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - Los barahai nacidos en este lugar sagrado, son bendecidos por la tierra en batalla.
+    - '112'
+    - Rara
+    - '2013-10-18 00:00:45.218529'
+    - '2013-10-18 00:00:45.23302'
+    - '111'
+    - false
+    - '16'
+    - 112-origen
+    - '2'
+    - '2'
+  - - '794'
+    - Destruye el aliado de menor RES (Si hay varios aliados con la menor RES, elige
+      uno).
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - '"Si el camino no conoces, en el Bosque de los primeros hijos no has de aventurarte."
+      Dicho barahai'
+    - '108'
+    - Común
+    - '2013-10-18 00:02:09.427198'
+    - '2013-10-18 00:02:09.441951'
+    - '105'
+    - false
+    - '16'
+    - 108-origen
+    - '1'
+    - '1'
+  - - '795'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Puedes mezclar
+      la carta objetivo de tu inferno en tu mazo.
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Poder
+    - La sangre que gotea de sus hojas, hace florecer incluso a los árboles secos.
+    - '104'
+    - Infrecuente
+    - '2013-10-18 00:03:23.309454'
+    - '2013-10-18 00:03:37.828449'
+    - '103'
+    - false
+    - '16'
+    - 104-origen
+    - '3'
+    - '3'
+  - - '796'
+    - 'Destruir Corteza del renacimiento: Pon el Barahai objetivo de tu inferno en
+      tu mano.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - El poder de los barahai nutre al bosque, como el bosque a los barahai.
+    - '103'
+    - Común
+    - '2013-10-18 00:05:12.548288'
+    - '2013-10-18 00:05:12.570233'
+    - '102'
+    - false
+    - '16'
+    - 103-origen
+    - '1'
+    - '1'
+  - - '797'
+    - Vínculo {0} (cuando sea puesta en el inferno desde el mazo, puedes pagar su
+      coste de vínculo y exiliarla) - Pon el aliado objetivo de coste 3 o menos de
+      tu inferno en tu mano.
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '1'
+    - Poder
+    - La vida en el Inferno tiene sus diferencias.
+    - '100'
+    - Común
+    - '2013-10-18 00:06:42.830021'
+    - '2013-10-18 00:06:42.844709'
+    - '97'
+    - false
+    - '16'
+    - 100-origen
+    - '2'
+    - '2'
+  - - '798'
+    - "Agresor (tu enemigo debe proponer un aliado con agresor como defensor).\r\n{2},
+      destruir Barahai valiente: El aliado objetivo tiene la habilidad de agresor
+      hasta el final del turno."
+    - Aliado
+    - 
+    - Barahai
+    - '2'
+    - '1'
+    - Poder
+    - Su coraje inspiró a los demás.
+    - '98'
+    - Común
+    - '2013-10-18 00:08:28.547418'
+    - '2013-10-18 00:08:28.562777'
+    - '96'
+    - false
+    - '16'
+    - 098-origen
+    - '2'
+    - '2'
+  - - '799'
+    - Furia (puede atacar inmediatamente).
+    - Aliado
+    - 
+    - Barahai
+    - '4'
+    - '1'
+    - Poder
+    - Aunque su rugido se escuche a varios kilómetros de distancia, seguramente ya
+      es demasiado tarde.
+    - '96'
+    - Infrecuente
+    - '2013-10-18 00:09:31.328725'
+    - '2013-10-18 00:09:31.34632'
+    - '94'
+    - false
+    - '16'
+    - 096-origen
+    - '4'
+    - '4'
+  - - '800'
+    - '{X}, destruir Barahai curioso: Destruye el objeto objetivo de coste X.'
+    - Aliado
+    - 
+    - Barahai
+    - '1'
+    - '2'
+    - Poder
+    - '"¿Me pregunto qué…?"'
+    - '94'
+    - Común
+    - '2013-10-18 00:10:25.016607'
+    - '2013-10-18 00:10:25.032105'
+    - '93'
+    - false
+    - '16'
+    - 094-origen
+    - '2'
+    - '2'
+  - - '801'
+    - Cuando Barahai alfa ataque, pon en juego dos fichas de aliado {poder} Barahai
+      3 FUE, 3 RES.
+    - Aliado
+    - 
+    - Barahai
+    - '7'
+    - '7'
+    - Poder
+    - Sus hermanos lo seguirían hasta el exilio eterno.
+    - '92'
+    - Épica
+    - '2013-10-18 00:11:48.120299'
+    - '2013-10-18 00:11:48.137487'
+    - '92'
+    - false
+    - '16'
+    - 092-origen
+    - '8'
+    - '8'
+  - - '802'
+    - Siempre que una carta sea mezclada en tu mazo, tu demonio obtiene +1 FUE hasta
+      el final del turno.
+    - Aliado
+    - 
+    - Humano
+    - '1'
+    - '4'
+    - Poder
+    - '"El bosque antiguo acepta cada sacrificio. Derú se fortalece, y yo seré recompensada."'
+    - '90'
+    - Rara
+    - '2013-10-18 00:14:26.015276'
+    - '2013-10-18 00:14:26.030502'
+    - '672'
+    - true
+    - '16'
+    - 090-origen
+    - '4'
+    - '4'
+  - - '803'
+    - Siempre que otro aliado no-ficha ataque, Barahai combativo obtiene +1 FUE hasta
+      el final del turno.
+    - Aliado
+    - 
+    - Barahai
+    - '1'
+    - '1'
+    - Poder
+    - 
+    - '93'
+    - Infrecuente
+    - '2013-10-18 00:15:57.335134'
+    - '2013-10-18 00:15:57.348219'
+    - '673'
+    - true
+    - '16'
+    - 093-origen
+    - '1'
+    - '1'
+  - - '804'
+    - 'Destruir Elixir de saviaesencia: Mezcla hasta 4 cartas objetivo de tu inferno
+      en tu mazo.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - '"Su principal ingrediente son las 4 gotas del extinto lago Eraión, lo cual
+      justifica con creces su precio." -Mercader de Trion'
+    - '105'
+    - Infrecuente
+    - '2013-10-18 00:20:01.903389'
+    - '2013-10-18 00:20:01.923448'
+    - '674'
+    - true
+    - '16'
+    - 105-origen
+    - '2'
+    - '2'
+  - - '805'
+    - Al final del turno de cada demonio, ese demonio pone la primera carta de su
+      inferno en el fondo de su mazo.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - 
+    - '106'
+    - Infrecuente
+    - '2013-10-18 00:21:27.408749'
+    - '2013-10-18 00:21:27.427748'
+    - '675'
+    - true
+    - '16'
+    - 106-origen
+    - '0'
+    - '0'
+  - - '806'
+    - Si Espíritu de Eraión fuera a ser puesto en un inferno desde el juego, mézclalo
+      en tu mazo en su lugar.
+    - Aliado
+    - 
+    - Avatar Rebelde
+    - '4'
+    - '4'
+    - Poder
+    - 
+    - '107'
+    - Rara
+    - '2013-10-18 00:22:52.765754'
+    - '2013-10-18 00:22:52.779695'
+    - '676'
+    - true
+    - '16'
+    - 107-origen
+    - '4'
+    - '4'
+  - - '807'
+    - Estocada (cuando el aliado equipado haga daño de combate a un demonio) - El
+      aliado objetivo tiene la habilidad de furia hasta el final del turno (puede
+      atacar inmediatamente).
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '+1'
+    - Poder
+    - 
+    - '114'
+    - Común
+    - '2013-10-18 00:25:55.132708'
+    - '2013-10-18 00:25:55.147468'
+    - '677'
+    - true
+    - '16'
+    - 114-origen
+    - '2'
+    - '2'
+  - - '808'
+    - Estocada (cuando haga daño de combate a un demonio) - Agrega {1} por cada aliado
+      en tu inferno.
+    - Aliado
+    - 
+    - Humano Rebelde
+    - '1'
+    - '4'
+    - Poder
+    - '"Los antiguos nos dan fuerza y sabiduría. Honrarlos con plegarias de sangre
+      enemiga es mi deber."'
+    - '115'
+    - Común
+    - '2013-10-18 00:29:36.239643'
+    - '2013-10-18 00:29:36.254188'
+    - '678'
+    - true
+    - '16'
+    - 115-origen
+    - '3'
+    - '3'
