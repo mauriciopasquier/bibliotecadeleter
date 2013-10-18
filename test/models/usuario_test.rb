@@ -26,6 +26,10 @@ describe Usuario do
       usuario.badges.must_equal usuario.medallas
     end
 
+    it 'medallas devuelve [] si no está creado el usuario' do
+      Usuario.new.medallas.must_equal []
+    end
+
     it 'asigna muchas medallas' do
       usuario = create(:usuario)
       actuales = usuario.medallas.size
