@@ -1,9 +1,9 @@
 .row-fluid
   #carta.span5
-    %h1= titulo
     .row-fluid
-      .span12
-        = render  partial: 'versiones/version_textual', object: version
+      .span12.version-textual
+        = render partial: 'versiones/version_textual', object: version
+    .row-fluid
       .span12
         %h3 Versiones
         %ul.versiones.nav.nav-pills
@@ -24,15 +24,22 @@
                   = v.control(coleccion_actual, '')
 
       - if @version.links.any?
-        .span12
-          %h3 Páginas relacionadas
-          %ul.links.nav.nav-pills
-            = render @version.links
+        .row-fluid
+          .span12
+            %h3 Páginas relacionadas
+            %ul.links.nav.nav-pills
+              = render @version.links
 
   .span7
-    = render  partial: 'layouts/galeria',
-              locals: { imagenes: version.imagenes,
-                        estilo: :original }
+    .row-fluid
+      = render  partial: 'layouts/galeria',
+                locals: { imagenes: version.imagenes,
+                          estilo: :original }
+    .row-fluid.flechas
+      .span12
+        = version.anterior
+        = link_to version.expansion.nombre, version.expansion, class: 'btn'
+        = version.siguiente
 
 .row-fluid.botones
   .span12

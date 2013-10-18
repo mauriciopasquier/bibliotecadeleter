@@ -99,6 +99,16 @@ class Version < ActiveRecord::Base
     self.artistas.collect(&:nombre).join(', ')
   end
 
+  def siguiente
+    expansion.versiones.where('numero > ?', numero).first ||
+    expansion.versiones.first
+  end
+
+  def anterior
+    expansion.versiones.where('numero < ?', numero).last ||
+    expansion.versiones.last
+  end
+
   private
 
     # Usá `slug` para llamar a esto

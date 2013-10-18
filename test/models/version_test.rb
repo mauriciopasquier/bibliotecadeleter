@@ -40,4 +40,44 @@ describe Version do
 
     build(:version).ilimitada?.wont_equal true
   end
+
+  describe 'lista circular' do
+    before do
+      @expansion = create(:expansion)
+      @primera = create(:version_con_carta, numero: 1, expansion: @expansion)
+      @segunda = create(:version_con_carta, numero: 2, expansion: @expansion)
+      @tercera = create(:version_con_carta, numero: 3, expansion: @expansion)
+    end
+
+    it 'devuelve la siguiente relativa' do
+      @primera.siguiente.must_equal @segunda
+      @segunda.siguiente.must_equal @tercera
+    end
+
+    it 'devuelve la siguiente circularmente' do
+      @tercera.siguiente.must_equal @primera
+    end
+
+    it 'devuelve la anterior relativa' do
+      @tercera.anterior.must_equal @segunda
+      @segunda.anterior.must_equal @primera
+    end
+
+    it 'devuelve la anterior circularmente' do
+       @primera.anterior.must_equal @tercera
+    end
+
+    it 'funciona con no consecutivas' do
+      una = create(:version_con_carta, numero: 50, expansion: @expansion)
+      otra = create(:version_con_carta, numero: 150, expansion: @expansion)
+
+      @tercera.siguiente.must_equal una
+      una.siguiente.must_equal otra
+      otra.siguiente.must_equal @primera
+
+      @primera.anterior.must_equal otra
+      otra.anterior.must_equal una
+      una.anterior.must_equal @tercera
+    end
+  end
 end

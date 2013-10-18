@@ -119,6 +119,22 @@ class VersionDecorator < ApplicationDecorator
     end.join.html_safe
   end
 
+  def anterior
+    h.content_tag :span do
+      h.link_to "<span class='flecha'>←</span> #{object.anterior.nombre}".html_safe,
+        h.en_expansion_carta_path(
+          object.anterior.carta, object.anterior.expansion), class: 'btn'
+    end
+  end
+
+  def siguiente
+    h.content_tag :span do
+      h.link_to "#{object.siguiente.nombre} <span class='flecha'>→</span>".html_safe,
+        h.en_expansion_carta_path(
+          object.siguiente.carta, object.siguiente.expansion), class: 'btn'
+    end
+  end
+
   private
 
     def cantidad_en(lista)
