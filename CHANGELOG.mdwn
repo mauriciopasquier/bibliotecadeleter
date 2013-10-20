@@ -1,0 +1,13 @@
+# Cambios
+
+## 1.5.3
+
+### Mejoras
+
+* Ver los demonios con popup en la lista de mazos
+* Agregar notas en los mazos y listas
+* Al ver un mazo las cartas se ordenan por coste además de tipo
+
+### Arreglos
+
+* Arregla un error de redirecciones al desloguearse
