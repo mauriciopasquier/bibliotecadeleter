@@ -5,14 +5,16 @@
 
     #listas.tabla-fluida
       #encabezado.row-fluid
-        .nombre.span4= sort_link @busqueda, :nombre, 'Nombre',
+        .nombre.span3= sort_link @busqueda, :nombre, 'Nombre',
           opciones_de_ordenar
-        .visibilidad.span2= sort_link @busqueda, :formato, 'Visibilidad',
+        .demonio.span3= sort_link @busqueda, 'slots_version_carta_nombre', 'Demonio',
+          opciones_de_ordenar
+        .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
           opciones_de_ordenar
         .formato.span2= sort_link @busqueda, :formato, 'Formato',
           opciones_de_ordenar
-        .cantidad.span2 Mazo principal
-        .cantidad.span2 Mazo suplente
+        .cantidad.span1 Principales
+        .cantidad.span1 Suplentes
 
       = render partial: 'mazo', collection: @mazos
   - else

@@ -160,6 +160,8 @@ GEM
     lazyload-rails (0.2.0)
       nokogiri (~> 1.5)
     libv8 (3.16.14.3)
+    loofah (1.2.1)
+      nokogiri (>= 1.4.4)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -357,6 +359,7 @@ DEPENDENCIES
   kaminari
   kramdown
   lazyload-rails
+  loofah
   mail_view
   merit
   minitest-rails

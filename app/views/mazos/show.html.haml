@@ -11,9 +11,9 @@
     = mazo.formatos_donde_es_legal
 
 .row-fluid
-  #mazo.span12
+  #mazo{class: span_del_mazo}
 
-    %h3 Mazo principal (#{mazo.principal_cantidad})
+    %h2 Mazo principal (#{mazo.principal_cantidad})
 
     - @mazo.slots.contados.each do |slot|
       = render partial: 'parte_del_mazo',
@@ -25,10 +25,14 @@
 
     - if @mazo.suplente.present?
       - reiniciar_separador
-      %h3 Mazo suplente (#{mazo.suplente_cantidad})
+      %h2 Mazo suplente (#{mazo.suplente_cantidad})
       - @mazo.suplente.slots.contados.each do |slot|
         = render partial: 'parte_del_mazo',
             locals: { slot: slot.decorate }
+
+  - if @mazo.notas?
+    #notas.span8
+      = mazo.notas_con_formato
 
 .row-fluid.botones
   .span12

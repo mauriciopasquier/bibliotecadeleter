@@ -14,6 +14,7 @@ gem 'inflections', require: false
 gem 'paperclip'
 gem 'squeel'
 gem 'amoeba'
+gem 'loofah'
 
 # View
 gem 'dynamic_form'

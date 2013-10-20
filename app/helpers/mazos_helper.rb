@@ -54,4 +54,8 @@ module MazosHelper
   def label_autocompletar
     :nombre_y_expansiones
   end
+
+  def span_del_mazo
+    "span#{@mazo.notas? ? 4 : 12}"
+  end
 end
