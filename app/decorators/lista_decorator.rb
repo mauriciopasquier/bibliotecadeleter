@@ -7,6 +7,7 @@ class ListaDecorator < ApplicationDecorator
     object.slots.each do |slot|
       slot.preparar
     end
+    self
   end
 
   def visibilidad_tag

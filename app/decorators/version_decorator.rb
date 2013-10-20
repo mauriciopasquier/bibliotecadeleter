@@ -114,7 +114,7 @@ class VersionDecorator < ApplicationDecorator
       when 'Demonio'
         object.imagenes.build if object.imagenes.count < 2
       else
-        object.imagenes.any? || object.imagenes.build
+        object.imagenes.build unless object.imagenes.any?
     end
     self
   end
