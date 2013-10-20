@@ -24,4 +24,10 @@ class ApplicationDecorator < Draper::Decorator
   def preparar
     raise NoMethodError
   end
+
+  def markdown_seguro(mdwn)
+    Loofah.fragment(
+      Kramdown::Document.new(mdwn).to_html
+    ).scrub!(:strip).to_s.html_safe
+  end
 end
