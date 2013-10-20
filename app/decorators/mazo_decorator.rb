@@ -53,4 +53,8 @@ class MazoDecorator < ListaDecorator
     end
     formatos.any? ? formatos.join.html_safe : h.content_tag(:li, 'ningún formato')
   end
+
+  def notas_con_formato
+    markdown_seguro(object.notas)
+  end
 end
