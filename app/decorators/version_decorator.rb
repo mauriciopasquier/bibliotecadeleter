@@ -144,11 +144,11 @@ class VersionDecorator < ApplicationDecorator
     end
   end
 
-  private
+  def cantidad_en(lista)
+    object.slot_en(lista).try(:cantidad) || 0
+  end
 
-    def cantidad_en(lista)
-      object.slot_en(lista).try(:cantidad) || 0
-    end
+  private
 
     def ruta(lista, cantidad)
       h.send("#{lista}_path",
