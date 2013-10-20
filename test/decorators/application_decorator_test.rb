@@ -58,4 +58,21 @@ describe ApplicationDecorator do
       d.nil_cycle(nil, 'string', name: :test).must_be_nil
     end
   end
+
+  # TODO testear que ciertas medallas habiliten poner links y stuff
+  describe '#markdown_seguro' do
+    subject { ApplicationDecorator.new(Modelo.new) }
+
+    it 'devuelve una cadena vacía si no hay input' do
+      [ [], '', nil ].each do |nada|
+        subject.markdown_seguro(nada).must_equal '', "Falla con #{nada}"
+      end
+    end
+
+    it 'blanquea todo por default' do
+      subject.markdown_seguro(
+        "<a href='http://somewhere.evil'>bla</a> <script>implode();</script>"
+      ).must_match '<a>bla</a>'
+    end
+  end
 end
