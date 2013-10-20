@@ -44,9 +44,12 @@ class ApplicationController < ActionController::Base
 
     # Redirije hacia atrás o en caso de no exister, vuelve al inicio
     def volver
+      session[:loop].nil? ? session[:loop] = 1 : session[:loop] += 1
       begin
+        raise ActionController::RedirectBackError if session[:loop] == 5
         redirect_to :back
       rescue ActionController::RedirectBackError
+        session.delete :loop
         redirect_to :root
       end
     end

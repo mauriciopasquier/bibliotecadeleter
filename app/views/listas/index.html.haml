@@ -1,16 +1,22 @@
 %h1= titulo
 #lista
-  = paginacion_tag @listas
+  - if @listas.any?
+    = paginacion_tag @listas
 
-  #listas.tabla-fluida
-    #encabezado.row-fluid
-      .nombre.span8= sort_link @busqueda, :nombre, 'Nombre',
-        opciones_de_ordenar
-      .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
-        opciones_de_ordenar
-      .cantidad.span2 Cantidad
+    #listas.tabla-fluida
+      #encabezado.row-fluid
+        .nombre.span8= sort_link @busqueda, :nombre, 'Nombre',
+          opciones_de_ordenar
+        .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
+          opciones_de_ordenar
+        .cantidad.span2 Cantidad
 
-    = render partial: 'lista', collection: @listas
+      = render partial: 'lista', collection: @listas
+  - else
+    .hero-unit
+      %blockquote
+        %p Este ala de la biblioteca parece estar vacío...
+        %small Homúnculo de la biblioteca
 
   .row-fluid.botones
     .span12
