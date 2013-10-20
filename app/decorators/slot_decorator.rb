@@ -8,14 +8,7 @@ class SlotDecorator < ApplicationDecorator
 
   def entrada
     [ "#{object.cantidad} x ",
-      link_con_popup ].join.html_safe
-  end
-
-  def link_con_popup
-    h.link_to object.version.carta, title: version.nombre do
-      [ version.nombre,
-        h.content_tag(:span, version.tag, clases_del_popup) ].join.html_safe
-    end
+      version.link_con_popup ].join.html_safe
   end
 
   def preparar
@@ -24,10 +17,4 @@ class SlotDecorator < ApplicationDecorator
     object.inventario ||= Lista.new
     self
   end
-
-  private
-
-    def clases_del_popup
-      { class: 'popup' + ( object.version.tipo == 'Escenario' ? ' escenario' : '') }
-    end
 end
