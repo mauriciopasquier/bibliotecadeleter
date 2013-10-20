@@ -46,7 +46,7 @@ class Mazo < ActiveRecord::Base
   delegate :cantidad, to: :suplente, prefix: true, allow_nil: true
 
   multisearchable against: [ :nombre, :usuario_nombre,
-    :nombres_de_las_cartas, :formato_nombre ], if: :persisted?
+    :nombres_de_las_cartas, :formato_nombre, :notas ], if: :persisted?
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
   delegate :nombre, to: :formato_objetivo, allow_nil: true, prefix: :formato

@@ -29,8 +29,8 @@ class Lista < ActiveRecord::Base
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
 
-  multisearchable against: [ :nombre, :usuario_nombre, :nombres_de_las_cartas
-    ], if: :lista?
+  multisearchable against: [ :nombre, :usuario_nombre, :nombres_de_las_cartas,
+    :notas ], if: :lista?
 
   # Devuelve todos los slots tanto en esta lista como en `otra`
   # TODO ver cómo scopearlo
