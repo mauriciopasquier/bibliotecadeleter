@@ -29,9 +29,10 @@ class ApplicationDecorator < Draper::Decorator
     if mdwn.blank?
       ''
     else
+      # TODO diferentes scrubs para diferentes medallas
       Loofah.fragment(
         Kramdown::Document.new(mdwn).to_html
-      ).scrub!(:strip).to_s.html_safe
+      ).scrub!(:whitewash).to_s.html_safe
     end
   end
 end

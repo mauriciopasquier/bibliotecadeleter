@@ -55,7 +55,7 @@ module MazosHelper
     :nombre_y_expansiones
   end
 
-  def ancho_de_la_lista
-    "span#{@mazo.notas? 4 : 12}"
+  def span_del_mazo
+    "span#{@mazo.notas? ? 4 : 12}"
   end
 end
