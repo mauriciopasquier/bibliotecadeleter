@@ -2,6 +2,11 @@
   = titulo
   = lista.visibilidad_tag
 
+- if @lista.notas.present?
+  .row-fluid
+    .span12
+      = lista.notas_con_formato
+
 .row-fluid
   .span12
     - if @versiones.any?

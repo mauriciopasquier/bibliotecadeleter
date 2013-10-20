@@ -18,4 +18,8 @@ class ListaDecorator < ApplicationDecorator
   def visibilidad
     object.visible ? 'Pública' : 'Privada'
   end
+
+  def notas_con_formato
+    markdown_seguro(object.notas)
+  end
 end

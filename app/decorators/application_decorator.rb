@@ -26,8 +26,12 @@ class ApplicationDecorator < Draper::Decorator
   end
 
   def markdown_seguro(mdwn)
-    Loofah.fragment(
-      Kramdown::Document.new(mdwn).to_html
-    ).scrub!(:strip).to_s.html_safe
+    if mdwn.blank?
+      ''
+    else
+      Loofah.fragment(
+        Kramdown::Document.new(mdwn).to_html
+      ).scrub!(:strip).to_s.html_safe
+    end
   end
 end
