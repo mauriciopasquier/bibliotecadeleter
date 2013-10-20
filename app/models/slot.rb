@@ -15,7 +15,9 @@ class Slot < ActiveRecord::Base
   end
 
   def self.contados
-    joins(:version).select('versiones.*, slots.cantidad').order('versiones.tipo')
+    joins(:version).select(
+      'versiones.*, slots.cantidad').order(
+        'versiones.tipo, versiones.coste_convertido')
   end
 
   private
