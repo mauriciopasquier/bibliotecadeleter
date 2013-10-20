@@ -39,6 +39,12 @@ class MazoDecorator < ListaDecorator
     end
   end
 
+  def link_a_demonios
+    demonios.collect do |demonio|
+      demonio.link_con_popup
+    end.join(', ').html_safe
+  end
+
   def formatos_donde_es_legal
     formatos = Formato.all.collect do |formato|
       if formato.reglas_para(object).valid?
