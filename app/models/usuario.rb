@@ -33,7 +33,10 @@ class Usuario < ActiveRecord::Base
   def medallas=(lista = [])
     Array.wrap(lista).each { |m| self.add_badge m.id }
   end
-  alias_method :medallas, :badges
+
+  def medallas
+    persisted? ? badges : []
+  end
 
   private
 

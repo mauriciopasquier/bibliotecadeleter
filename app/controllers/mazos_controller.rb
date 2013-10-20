@@ -7,11 +7,12 @@ class MazosController < ApplicationController
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario
-  load_and_authorize_resource through: :usuario
+  load_and_authorize_resource through: :usuario, except: :index
 
   respond_to :ficha, only: :show
 
   def index
+    @mazos = @usuario.mazos.accessible_by(current_ability)
     @busqueda = apply_scopes @mazos
     @mazos = PaginadorDecorator.decorate @busqueda.result
 
@@ -55,7 +56,7 @@ class MazosController < ApplicationController
 
     def parametros_permitidos
       params.require(:mazo).permit(
-        :nombre, :formato_objetivo_id, :visible, :exigir_formato,
+        :nombre, :formato_objetivo_id, :visible, :exigir_formato, :notas,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ],

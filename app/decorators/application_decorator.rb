@@ -24,4 +24,15 @@ class ApplicationDecorator < Draper::Decorator
   def preparar
     raise NoMethodError
   end
+
+  def markdown_seguro(mdwn)
+    if mdwn.blank?
+      ''
+    else
+      # TODO diferentes scrubs para diferentes medallas
+      Loofah.fragment(
+        Kramdown::Document.new(mdwn).to_html
+      ).scrub!(:whitewash).to_s.html_safe
+    end
+  end
 end

@@ -6,7 +6,7 @@ class ExpansionDecorator < ApplicationDecorator
   end
 
   def notas_con_formato
-    Kramdown::Document.new(object.notas).to_html.html_safe
+    markdown_seguro(object.notas)
   end
 
   def to_s

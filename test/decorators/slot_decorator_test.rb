@@ -1,9 +1,9 @@
 # encoding: utf-8
 require './test/test_helper'
 
-describe ListaDecorator do
+describe SlotDecorator do
   describe '#preparar' do
-    subject { build(:lista).decorate }
+    subject { build(:slot).decorate }
 
     it 'se devuelve a sí mismo' do
       subject.preparar.must_be_same_as subject

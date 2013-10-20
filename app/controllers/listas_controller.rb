@@ -7,12 +7,13 @@ class ListasController < ApplicationController
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario, except: [:coleccion]
-  load_and_authorize_resource through: :usuario, except: [:coleccion]
+  load_and_authorize_resource through: :usuario, except: [:coleccion, :index]
 
   before_filter :determinar_galeria, only: [:show]
 
   def index
-    @busqueda = apply_scopes @listas.normales
+    @listas = @usuario.listas.normales.accessible_by(current_ability)
+    @busqueda = apply_scopes @listas
     @listas = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@listas)
@@ -66,7 +67,7 @@ class ListasController < ApplicationController
 
     def parametros_permitidos
       params.require(:lista).permit(
-        :nombre, :visible,
+        :nombre, :visible, :notas,
         slots_attributes: [
           :id, :_destroy, :cantidad, :version_id
         ]

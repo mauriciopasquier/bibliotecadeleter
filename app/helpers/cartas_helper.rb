@@ -20,6 +20,7 @@ module CartasHelper
   end
 
   # Para el FormBuilder
+  # TODO usar .preparar?
   def nueva_version
     if @version
       @version

@@ -57,6 +57,17 @@ describe Ability do
       end
     end
 
+    it 'leen cosas públicas de otros usuarios' do
+      otro = create(:usuario)
+
+      [:mazo, :lista].each do |modelo|
+        recurso = build_stubbed(modelo, visible: true, usuario: otro)
+
+        subject.can?(:read, recurso ).must_equal true,
+          "No lee #{recurso.class.name} público ajeno"
+      end
+    end
+
     it 'no editan el canon' do
       subject.canones.each do |modelo|
         subject.can?(:update, modelo).wont_equal true, "Edita #{modelo}"

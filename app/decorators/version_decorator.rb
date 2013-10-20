@@ -11,6 +11,13 @@ class VersionDecorator < ApplicationDecorator
       h.en_expansion_carta_path(object.carta, object.expansion), opciones
   end
 
+  def link_con_popup
+    h.link_to object.carta, title: nombre, class: 'link-con-popup' do
+      [ nombre,
+        h.content_tag(:span, tag, clases_del_popup) ].join.html_safe
+    end
+  end
+
   def tag(estilo = :original)
     if imagenes.any?
       imagenes.first
@@ -107,7 +114,7 @@ class VersionDecorator < ApplicationDecorator
       when 'Demonio'
         object.imagenes.build if object.imagenes.count < 2
       else
-        object.imagenes.any? || object.imagenes.build
+        object.imagenes.build unless object.imagenes.any?
     end
     self
   end
@@ -148,5 +155,9 @@ class VersionDecorator < ApplicationDecorator
         version_id: object,
         cantidad: cantidad
       )
+    end
+
+    def clases_del_popup
+      { class: 'popup' + ( object.tipo == 'Escenario' ? ' escenario' : '') }
     end
 end

@@ -54,13 +54,9 @@ class Ability
 
     # Ordenadas por prioridad de mayor a menor, para la aplicación de reglas
     def medallas_por_prioridad
-      if @usuario.persisted?
-        @usuario.badges.sort do |medalla|
-          medalla.custom_fields[:prioridad]
-        end.collect(&:name)
-      else
-        []
-      end
+      @usuario.medallas.sort do |medalla|
+        medalla.custom_fields[:prioridad]
+      end.collect(&:name)
     end
 
 end
