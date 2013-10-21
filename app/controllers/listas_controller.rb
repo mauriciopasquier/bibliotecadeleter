@@ -8,8 +8,11 @@ class ListasController < ApplicationController
   before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario, except: [:coleccion]
   load_and_authorize_resource through: :usuario, except: [:coleccion, :index]
+  load_and_authorize_resource :version, only: [:update_slot]
 
   before_filter :determinar_galeria, only: [:show]
+
+  respond_to :json, only: [:update_slot]
 
   def index
     @listas = @usuario.listas.normales.accessible_by(current_ability)
@@ -43,6 +46,15 @@ class ListasController < ApplicationController
     respond_with(@usuario, @lista)
   end
 
+  def update_slot
+    cargar_o_crear_slot.update_attribute :cantidad, params[:cantidad]
+    @slot.destroy if @slot.cantidad == 0
+
+    respond_to do |format|
+      format.json { render json: @slot }
+    end
+  end
+
   def destroy
     @lista.destroy
     respond_with(@usuario, @lista)
@@ -72,5 +84,9 @@ class ListasController < ApplicationController
           :id, :_destroy, :cantidad, :version_id
         ]
       )
+    end
+
+    def cargar_o_crear_slot
+      @slot = @version.slot_en(@lista) || @lista.slots.build(version: @version)
     end
 end

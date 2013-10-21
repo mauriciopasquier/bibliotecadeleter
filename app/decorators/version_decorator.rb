@@ -86,27 +86,27 @@ class VersionDecorator < ApplicationDecorator
     end
   end
 
-  def control(lista, texto)
+  def control(lista, texto, objetos = nil)
     c = cantidad_en(lista)
     tipo = lista.class.name.downcase
+    path = "#{objetos.present? ? 'update_slot_usuario_lista' : tipo}_path"
 
     h.content_tag(:div, class: "control-#{tipo}") do
       [ h.content_tag(:span, texto, class: 'control-texto'),
 
-        h.link_to(ruta(tipo, c + 1), method: :put, remote: true,
+        h.link_to(ruta(path, objetos, cantidad: c + 1), method: :put, remote: true,
           class: 'update-listas agregar') do
             h.content_tag(:i, nil, class: 'icon-plus')
           end,
 
         h.content_tag(:span, c, class: 'cantidad'),
 
-        h.link_to(ruta(tipo, [0, c - 1].max), method: :put, remote: true,
+        h.link_to(ruta(path, objetos, cantidad: [0, c - 1].max), method: :put, remote: true,
           class: 'update-listas remover') do
             h.content_tag(:i, nil, class: 'icon-minus')
           end
       ].join.html_safe
     end
-
   end
 
   def preparar
@@ -150,11 +150,10 @@ class VersionDecorator < ApplicationDecorator
 
   private
 
-    def ruta(lista, cantidad)
-      h.send("#{lista}_path",
-        version_id: object,
-        cantidad: cantidad
-      )
+    def ruta(path, modelos, opciones)
+      opciones.reverse_merge!({ version_id: object })
+
+      h.send(path, *modelos, opciones)
     end
 
     def clases_del_popup
