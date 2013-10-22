@@ -8,6 +8,7 @@ class MazosController < ApplicationController
   before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario
   load_and_authorize_resource through: :usuario, except: :index
+  skip_authorize_resource only: :copiar
 
   respond_to :ficha, only: :show
 
@@ -47,6 +48,11 @@ class MazosController < ApplicationController
     respond_with(@usuario, @mazo)
   end
 
+  def copiar
+    @usuario = current_usuario
+    @mazo = @mazo.amoeba_dup
+    respond_with(@usuario, @mazo, template: 'mazos/new')
+  end
 
   private
 

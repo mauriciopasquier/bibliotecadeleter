@@ -64,5 +64,23 @@ describe MazosController do
       mazo.suplente.wont_be_nil
       mazo.visible.must_equal false
     end
+
+    it 'copia mazos' do
+      otro = create(:usuario)
+      mazo = create(:mazo_con_demonios, usuario: otro)
+
+      get :copiar, usuario_id: otro, id: mazo
+
+      (copia = assigns(:mazo)).wont_be_nil
+
+      copia.id.must_be_nil
+      copia.principal.wont_be_nil
+      copia.principal.id.must_be_nil
+      copia.formato_objetivo.must_equal mazo.formato_objetivo
+      copia.slots.first.tap do |demonio|
+        demonio.cantidad.must_equal mazo.slots.first.cantidad
+        demonio.version_id.must_equal mazo.slots.first.version_id
+      end
+    end
   end
 end
