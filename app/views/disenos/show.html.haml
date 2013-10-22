@@ -1,0 +1,27 @@
+.row-fluid
+  #diseno.span5
+    .row-fluid
+      .span12.version-textual
+        = render partial: 'diseno_textual', object: diseno
+
+  .span7
+    .row-fluid
+      %h3 Fundamento
+      .fundamento= diseno.fundamento
+
+.row-fluid.botones
+  .span12.flechas
+    = diseno.anterior
+    = link_to otros_disenos, usuario_disenos_path(@usuario), class: 'btn'
+    = diseno.siguiente
+
+  .span12
+    - if can? :edit, @diseno
+      = link_to 'Editar', edit_usuario_diseno_path(@usuario, @diseno),
+        class: 'btn btn-warning'
+    - if can? :create, Diseno
+      = link_to 'Nuevo diseño', new_usuario_diseno_path(@usuario),
+        class: 'btn btn-info'
+    - if can? :delete, @diseno
+      = link_to 'Eliminar', [@usuario, @diseno], method: :delete,
+        data: { confirm: t(:confirmar) }, class: 'btn btn-danger'

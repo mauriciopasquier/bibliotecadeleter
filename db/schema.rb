@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131020064244) do
+ActiveRecord::Schema.define(:version => 20131022171616) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -57,6 +57,25 @@ ActiveRecord::Schema.define(:version => 20131020064244) do
 
   add_index "cartas_formatos", ["carta_id"], :name => "index_cartas_formatos_on_carta_id"
   add_index "cartas_formatos", ["formato_id"], :name => "index_cartas_formatos_on_formato_id"
+
+  create_table "disenos", :force => true do |t|
+    t.string   "nombre",           :null => false
+    t.text     "texto"
+    t.string   "tipo"
+    t.string   "supertipo"
+    t.string   "subtipo"
+    t.string   "fue"
+    t.string   "res"
+    t.string   "senda"
+    t.text     "ambientacion"
+    t.text     "fundamento",       :null => false
+    t.string   "slug",             :null => false
+    t.string   "coste"
+    t.integer  "coste_convertido"
+    t.integer  "usuario_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "expansiones", :force => true do |t|
     t.string   "nombre",            :null => false

@@ -1,0 +1,11 @@
+%h1= titulo
+
+= render 'form'
+
+.row-fluid.botones
+  .span12
+    = link_to 'Mostrar', [@usuario, @diseno], class: 'btn'
+    - if can? :delete, @diseno
+      = link_to 'Eliminar', [@usuario, @diseno], method: :delete,
+        data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
+    = link_to otros_disenos, usuario_disenos_path(@usuario), class: 'btn'

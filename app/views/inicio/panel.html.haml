@@ -29,22 +29,29 @@
     .row-fluid
       .span4
         %h2 Listas recientes
-        - usuario.listas.normales.recientes.each do |lista|
-          .row-fluid.span12
-            .pull-left= link_to lista.nombre, [usuario, lista]
-            .pull-right
-              = lista.cantidad
-              = lista.decorate.visibilidad_tag
+        - usuario.listas.unscoped.normales.recientes.each do |lista|
+          .row-fluid
+            .span12
+              .pull-left= link_to lista.nombre, [usuario, lista]
+              .pull-right
+                = lista.cantidad
+                = lista.decorate.visibilidad_tag
       .span4
         %h2 Mazos recientes
-        - @usuario.mazos.recientes.each do |mazo|
-          .row-fluid.span12
-            .pull-left= link_to mazo.nombre, [usuario, mazo]
-            .pull-right
-              = mazo.decorate.link_al_formato
-              = mazo.decorate.visibilidad_tag
+        - @usuario.mazos.unscoped.recientes.each do |mazo|
+          .row-fluid
+            .span12
+              .pull-left= link_to mazo.nombre, [usuario, mazo]
+              .pull-right
+                = mazo.decorate.link_al_formato
+                = mazo.decorate.visibilidad_tag
+      .span4
+        %h2 Tus diseños
+        - @usuario.disenos.recientes.each do |delirio|
+          .row-fluid
+            .span12
+              .pull-left= link_to delirio.nombre, [usuario, delirio]
 
-      -# TODO agregar la columna que falta
     .row-fluid
       .span4
         - if can? :create, Lista
@@ -57,6 +64,12 @@
           = link_to 'Crear mazo', new_usuario_mazo_path(usuario),
             class: 'btn btn-info'
           = link_to 'Ver todos', usuario_mazos_path(@usuario), class: 'btn'
+
+      .span4
+        - if can? :create, Diseno
+          = link_to 'Crear diseño', new_usuario_diseno_path(usuario),
+            class: 'btn btn-info'
+          = link_to 'Ver todos', usuario_disenos_path(@usuario), class: 'btn'
 
   #carnet.tab-pane
     = render partial: 'devise/shared/edit_registrations',

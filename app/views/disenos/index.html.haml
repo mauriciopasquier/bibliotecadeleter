@@ -1,0 +1,26 @@
+%h1= titulo
+#lista
+  - if @disenos.any?
+    = paginacion_tag @disenos
+
+    #diseno.tabla-fluida
+      #encabezado.row-fluid
+        .nombre.span3= sort_link @busqueda, :nombre, opciones_de_ordenar
+        .texto.span4.hidden-phone Texto
+        .coste.span1.hidden-phone= sort_link @busqueda, :coste_convertido, 'Coste', opciones_de_ordenar
+        .senda.span1.visible-desktop= sort_link @busqueda, :canonica_senda, 'Senda', opciones_de_ordenar
+        .tipo.span3.hidden-phone Tipo
+
+      = render @disenos
+
+  - else
+    .hero-unit
+      %blockquote
+        %p Este ala de la biblioteca parece estar vacío...
+        %small Homúnculo de la biblioteca
+
+  .row-fluid.botones
+    .span12
+      - if can? :create, Diseno
+        = link_to 'Crear un diseño', new_usuario_diseno_path(current_usuario),
+          class: 'btn btn-info', data: no_turbolink
