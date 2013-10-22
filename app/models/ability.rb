@@ -3,7 +3,8 @@ class Ability
   include CanCan::Ability
 
   @@canones = [ Carta, Expansion, Version, Artista, Imagen, Formato ]
-  @@apocrifos = [ Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente ]
+  @@apocrifos = [
+    Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente, Diseno ]
   @@modelos = @@canones + @@apocrifos
 
   cattr_reader :canones, :apocrifos, :modelos
