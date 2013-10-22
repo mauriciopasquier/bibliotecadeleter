@@ -32,7 +32,9 @@ class Lista < ActiveRecord::Base
   multisearchable against: [ :nombre, :usuario_nombre, :nombres_de_las_cartas,
     :notas ], if: :lista?
 
-  # Agrupar y sumar los slots que referencian a una misma versión
+  # Agrupar y sumar los slots que referencian a una misma versión. Actualmente
+  # sólo se garantiza la unicidad de versión si todos los slots se guardan a la
+  # vez
   def slots_attributes=(slots)
     agrupados = slots.group_by do |_, v|
       v[:version_id]
@@ -43,11 +45,13 @@ class Lista < ActiveRecord::Base
       end
 
       if sumar.any?
+        # Seleccionamos uno donde acumular los demás
         elegido_id, elegido = sumar.shift
         elegido[:cantidad] = elegido[:cantidad].to_i
 
         sumados = sumar.collect do |_, slot|
           elegido[:cantidad] += slot[:cantidad].to_i
+          # Marcamos los ya sumados para destrucción
           slot[:_destroy] = true and slot
         end + [ elegido ]
 
