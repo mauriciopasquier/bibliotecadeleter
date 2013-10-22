@@ -17,6 +17,6 @@ AttributeNormalizer.configure do |config|
 
   # Convertir true, 'true', 1 y '1' en true
   config.normalizers[:boolean] = lambda do |value, options|
-    [ true, 1, '1', 'true' ].any? { |truth| value == truth }
+    ActiveRecord::ConnectionAdapters::Column.value_to_boolean value
   end
 end

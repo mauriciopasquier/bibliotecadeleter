@@ -36,17 +36,18 @@ describe ListasController do
     it "actualiza listas" do
       lista = create(:lista_con_slots, usuario: @usuario)
 
-      nuevo_slot = attributes_for(:slot)
+      nuevo_slot = attributes_for(:slot, version_id: 99)
       viejo_slot = {
         id: lista.slots.first.id,
-        cantidad: lista.slots.first.cantidad.next }
+        cantidad: lista.slots.first.cantidad.next,
+        version_id: lista.slots.first.id }
 
       lista.slots.count.must_equal 1
       lista.visible.must_equal true
 
       put :update, usuario_id: @usuario, id: lista, lista: {
         visible: false, nombre: 'otro' }.merge(slots_attributes: {
-          '0' => nuevo_slot, '1' => viejo_slot }
+          '0' => nuevo_slot, viejo_slot[:id].to_s => viejo_slot }
         )
 
       must_redirect_to usuario_lista_path(@usuario, assigns(:lista))

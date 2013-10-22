@@ -74,7 +74,11 @@ BibliotecaDelEter::Application.routes.draw do
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
-      resources :listas, path_names: femeninos
+      resources :listas, path_names: femeninos do
+        member do
+          put 'update_slot'
+        end
+      end
       r.resources :mazos
     end
   end

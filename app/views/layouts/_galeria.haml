@@ -23,6 +23,8 @@
       %ul.thumbs
         - imagenes.each do |v|
           %li{class: tipo_actual}
+            - if @lista.present?
+              .controles= v.control @lista, 'En esta lista', [@usuario, @lista]
             = v.link tipo_actual
             - if usuario_signed_in?
               = v.reserva_y_coleccion if v.respond_to? :reserva_y_coleccion
