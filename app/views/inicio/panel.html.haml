@@ -28,17 +28,21 @@
 
     .row-fluid
       .span4
-        %h2 Listas
+        %h2 Listas recientes
         - usuario.listas.normales.recientes.each do |lista|
           .row-fluid.span12
             .pull-left= link_to lista.nombre, [usuario, lista]
-            .pull-right= lista.cantidad
+            .pull-right
+              = lista.cantidad
+              = lista.decorate.visibilidad_tag
       .span4
-        %h2 Mazos
+        %h2 Mazos recientes
         - @usuario.mazos.recientes.each do |mazo|
           .row-fluid.span12
             .pull-left= link_to mazo.nombre, [usuario, mazo]
-            .pull-right= mazo.decorate.link_al_formato
+            .pull-right
+              = mazo.decorate.link_al_formato
+              = mazo.decorate.visibilidad_tag
 
       -# TODO agregar la columna que falta
     .row-fluid
