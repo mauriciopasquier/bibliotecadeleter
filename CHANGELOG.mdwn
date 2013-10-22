@@ -1,4 +1,4 @@
-# Cambios
+# Cambios recientes
 
 ## 1.5.4
 
@@ -61,6 +61,10 @@
 ### Arreglos
 
 - La búsqueda global muestra bien las coincidencias
+
+## 1.4.2 a 0.0.0
+
+- Todo lo demás :)
 
 [Origen]: http://bibliotecadeleter.com.ar/expansiones/origen
 [promocionales de Despertar]: http://bibliotecadeleter.com.ar/expansiones/promocionales-despertar

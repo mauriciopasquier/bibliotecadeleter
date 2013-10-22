@@ -23,6 +23,7 @@ BibliotecaDelEter::Application.routes.draw do
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales' => 'inicio#legales'
   get 'panel' => 'inicio#panel'
+  get 'cambios' => 'inicio#cambios'
 
   scope path: 'sugerencias', controller: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
