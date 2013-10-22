@@ -16,6 +16,7 @@
  *
  * Archivos de la aplicación a incluir
  *
+ *= require bootstrap-checkbox
  *= require layout
  *= require galeria
  *= require tabla_fluida
@@ -28,5 +29,5 @@
  *= require inicio
  *= require mazos
  *= require busquedas
- *= require bootstrap-checkbox
+ *= require disenos
  */
