@@ -79,7 +79,11 @@ BibliotecaDelEter::Application.routes.draw do
           put 'update_slot'
         end
       end
-      r.resources :mazos
+      r.resources :mazos do
+        member do
+          get 'copiar'
+        end
+      end
     end
   end
 
