@@ -62,3 +62,21 @@ es:
   busquedas:
     form:
       texto: 'Busca listas, mazos, expansiones, cartas, artistas, lo que sea!'
+  disenos:
+    form:
+      nombre: 'Puede ser una descripción de lo que buscás representar'
+      texto:  'Lo más prolijo posible y en lenguaje de reglas. Si te cuesta,
+              hacé lo mejor posible y dejá una explicación más detallada en el
+              Fundamento. Si estás haciendo un demonio, separá las caras así:
+              texto infernal / texto terrenal (sí, con espacios antes y después
+              de la /)'
+      ambientacion: 'Una buena ambientación puede aportar mucho a la idea final
+                    de la carta'
+      fundamento: 'Este es el punto más importante del diseño. En él se
+                  fundamenta lo que pretendés plasmar en la carta. ¿Es un
+                  personaje? ¿Es un lugar? ¿Es un elemento que vemos en la vida
+                  cotidiana? ¿Tiene alguna característica importante? ¿De dónde
+                  provienen sus habilidades? Todo dato que puedas aportar sobre
+                  el diseño ayuda a su interpretación, y en el caso de que su
+                  habilidad sea muy rara y no tenga un texto de reglas claro,
+                  podés explayarte acá'
