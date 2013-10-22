@@ -19,6 +19,13 @@ class Lista < ActiveRecord::Base
   scope :visibles, where(visible: true)
   scope :recientes, order('updated_at desc').limit(10)
 
+  # Para copiar listas (y suplentes, principales, etc) de un usuario a otro
+  amoeba do
+    nullify [ :usuario_id, :slug ]
+    clone [ :slots ]
+    propagate
+  end
+
   %w{Lista Coleccion Reserva Principal Suplente}.each do |tipo|
     define_method "#{tipo.downcase}?" do
       self.type == tipo

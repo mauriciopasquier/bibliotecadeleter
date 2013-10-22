@@ -3,6 +3,10 @@ class Slot < ActiveRecord::Base
   belongs_to :version, include: [ :carta, :expansion ]
   belongs_to :inventario, polymorphic: true
 
+  amoeba do
+    nullify :inventario_id
+  end
+
   # Restar las cantidades de los slots de `otra` lista de los slots de las
   # demás
   def self.menos(otra)
