@@ -119,13 +119,6 @@ class VersionDecorator < ApplicationDecorator
     self
   end
 
-  # Envuelve las oraciones (delimitadas por '\r\n') en <p> y los ( ) en <i>
-  def estructurar(texto)
-    texto.split("\r\n").collect do |oracion|
-      h.content_tag :p, oracion.gsub('(', '<i>(').gsub(')', ')</i>').html_safe
-    end.join.html_safe
-  end
-
   def anterior
     h.content_tag :span do
       h.link_to "<span class='flecha'>←</span> #{object.anterior.nombre}".html_safe,

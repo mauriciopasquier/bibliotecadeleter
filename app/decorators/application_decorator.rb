@@ -35,4 +35,11 @@ class ApplicationDecorator < Draper::Decorator
       ).scrub!(:whitewash).to_s.html_safe
     end
   end
+
+  # Envuelve las oraciones (delimitadas por '\r\n') en <p> y los ( ) en <i>
+  def estructurar(texto)
+    texto.split("\r\n").collect do |oracion|
+      h.content_tag :p, oracion.gsub('(', '<i>(').gsub(')', ')</i>').html_safe
+    end.join.html_safe
+  end
 end

@@ -1,6 +1,5 @@
 # encoding: utf-8
 class DisenoDecorator < ApplicationDecorator
-
   def linea_de_tipos
     (tipo + supertipo + subtipo).strip
   end
@@ -37,13 +36,6 @@ class DisenoDecorator < ApplicationDecorator
     end.join.html_safe unless object.texto.nil?
   end
 
-  # Envuelve las oraciones (delimitadas por '\r\n') en <p> y los ( ) en <i>
-  def estructurar(texto)
-    texto.split("\r\n").collect do |oracion|
-      h.content_tag :p, oracion.gsub('(', '<i>(').gsub(')', ')</i>').html_safe
-    end.join.html_safe
-  end
-
   def anterior
     h.content_tag :span do
       h.link_to "<span class='flecha'>←</span> #{object.anterior.nombre}".html_safe,
@@ -60,5 +52,9 @@ class DisenoDecorator < ApplicationDecorator
 
   def fundamento
     markdown_seguro(object.fundamento)
+  end
+
+  def extracto
+    object.texto.try(:truncate, 50) || ''
   end
 end

@@ -1,0 +1,13 @@
+- cache diseno do
+  .row-fluid{class: diseno.senda.downcase}
+    .nombre.span3
+      - if can? :update, diseno
+        = link_to_editar edit_usuario_diseno_path(@usuario, diseno), ''
+      - if can? :delete, diseno
+        = link_to_eliminar [@usuario, diseno], ''
+      - else
+      = link_to_mostrar [@usuario, diseno], diseno.nombre
+    .texto.span4.hidden-phone= diseno.extracto
+    .coste.span1.hidden-phone= diseno.coste
+    .senda.span1.visible-desktop= diseno.senda
+    .tipo.span3.hidden-phone= diseno.linea_de_tipos
