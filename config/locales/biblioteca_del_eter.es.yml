@@ -4,6 +4,7 @@ es:
       coleccion: 'Colección'
       principal: 'Mazo principal'
       suplente: 'Mazo suplente'
+      diseno: 'Diseño'
     attributes:
       usuario:
         password_confirmation: 'Repetí el password'
