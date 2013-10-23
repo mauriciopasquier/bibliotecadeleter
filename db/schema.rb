@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131022171616) do
+ActiveRecord::Schema.define(:version => 20131023020736) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -227,6 +227,30 @@ ActiveRecord::Schema.define(:version => 20131022171616) do
 
   add_index "slots", ["inventario_id", "inventario_type"], :name => "index_slots_on_inventario_id_and_inventario_type"
   add_index "slots", ["version_id"], :name => "index_slots_on_version_id"
+
+  create_table "tiendas", :force => true do |t|
+    t.string   "nombre",     :null => false
+    t.string   "direccion"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tiendas", ["nombre"], :name => "index_tiendas_on_nombre", :unique => true
+
+  create_table "torneos", :force => true do |t|
+    t.date     "fecha",          :null => false
+    t.integer  "tienda_id",      :null => false
+    t.string   "direccion"
+    t.integer  "formato_id",     :null => false
+    t.integer  "organizador_id", :null => false
+    t.integer  "juez_principal"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "torneos", ["fecha"], :name => "index_torneos_on_fecha"
+  add_index "torneos", ["organizador_id"], :name => "index_torneos_on_organizador_id"
+  add_index "torneos", ["tienda_id"], :name => "index_torneos_on_tienda_id"
 
   create_table "usuarios", :force => true do |t|
     t.string   "nick",                                   :null => false

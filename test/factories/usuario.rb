@@ -1,6 +1,6 @@
 # encoding: utf-8
 FactoryGirl.define do
-  factory :usuario do
+  factory :usuario, aliases: [ :organizador ] do
     nick { generate :cadena_unica }
     nombre { generate :cadena_unica }
     email
