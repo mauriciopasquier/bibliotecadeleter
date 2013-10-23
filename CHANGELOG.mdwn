@@ -1,5 +1,11 @@
 # Cambios recientes
 
+## 1.5.6
+
+### Arreglos
+
+- Arregla un problemita de permisos que duró 15 minutos :|
+
 ## 1.5.5
 
 ### Mejoras
