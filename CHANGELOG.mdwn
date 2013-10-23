@@ -1,5 +1,17 @@
 # Cambios recientes
 
+## 1.5.5
+
+### Mejoras
+
+- Se pueden subir diseños de cartas
+- Se puede ver la lista de los cambios en el sitio
+
+### Arreglos
+
+- No se recorre la galería si estás apretando alt (para no interferir con el
+  navegador)
+
 ## 1.5.4
 
 ### Mejoras

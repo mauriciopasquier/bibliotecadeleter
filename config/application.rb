@@ -81,6 +81,6 @@ module BibliotecaDelEter
     config.assets.paths << Rails.root.join('app', 'assets', 'documents')
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.5.4'
+    config.assets.version = '1.5.5'
   end
 end
