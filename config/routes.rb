@@ -23,6 +23,7 @@ BibliotecaDelEter::Application.routes.draw do
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales' => 'inicio#legales'
   get 'panel' => 'inicio#panel'
+  get 'cambios' => 'inicio#cambios'
 
   scope path: 'sugerencias', controller: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
@@ -74,12 +75,20 @@ BibliotecaDelEter::Application.routes.draw do
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
+
       resources :listas, path_names: femeninos do
         member do
           put 'update_slot'
         end
       end
-      r.resources :mazos
+
+      r.resources :mazos do
+        member do
+          get 'copiar'
+        end
+      end
+
+      r.resources :disenos
     end
   end
 

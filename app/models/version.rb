@@ -42,6 +42,13 @@ class Version < ActiveRecord::Base
     :senda, :texto, :ambientacion, :fue, :res, :expansion_nombre, :rareza,
     :arte ], if: :persisted?
 
+  # Para copiar una versión sin expansión ni imágenes, por ejemplo para las
+  # reediciones
+  amoeba do
+    exclude_field :imagenes
+    nullify [ :expansion_id, :slug, :numero ]
+  end
+
   def self.normales
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
   end
@@ -74,13 +81,6 @@ class Version < ActiveRecord::Base
 
   def prioridad
     Version.prioridad_de_senda(self.senda)
-  end
-
-  # Para copiar una versión sin expansión ni imágenes, por ejemplo para las
-  # reediciones
-  amoeba do
-    exclude_field :imagenes
-    nullify [ :expansion_id, :slug, :numero ]
   end
 
   def nombre_y_expansion

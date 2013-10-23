@@ -17,10 +17,11 @@ $(document)
 $(document)
   .on 'keydown', (tecla) ->
     Turbolinks.visit((
-      switch tecla.which
-        when 37 then $('#anterior')
-        when 39 then $('#siguiente')
-      ).attr('href'))
+      unless tecla.altKey
+        switch tecla.which
+          when 37 then $('#anterior')
+          when 39 then $('#siguiente')
+        ).attr('href'))
 
 jQuery ->
   bindearTodo()

@@ -39,4 +39,5 @@ db/semillas/sashes.yml
 db/semillas/merit_score_points.yml
 db/semillas/slots.yml
 db/semillas/usuarios.yml
+db/semillas/disenos.yml
 db/semillas/pg_search_documents.yml

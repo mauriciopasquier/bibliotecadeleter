@@ -6,42 +6,43 @@
   padding-left: 2em;
   padding-right: 2em;
 
-  .version-textual {
-    .nombre {
-      text-align: center;
-      font-size: x-large; }
-    .coste {
-      font-size: x-large; }
-    .tipos {
-      text-align: center; }
-    .senda {
-      text-align: right; }
-    .ambientacion {
-      text-align: center;
-      font-style: italic;
-      font-size: small; }
-    .rareza {
-      text-align: right; }
-    .stats {
-      font-size: x-large; }
-    .arte {
-      text-align: left;
-      p {
-        text-align: center; } }
-    .caja-de-texto {
-      padding: 1em 0; }
-    .terrenal {
-      border-top: 1px solid $gris-claro;
-      padding-top: 10px; }
-  }
-
   ul {
     list-style-type: none;
   }
 }
 
+.version-textual {
+  .nombre {
+    text-align: center;
+    font-size: x-large; }
+  .coste {
+    font-size: x-large; }
+  .tipos {
+    text-align: center; }
+  .senda {
+    text-align: right; }
+  .ambientacion {
+    text-align: center;
+    font-style: italic;
+    font-size: small; }
+  .rareza {
+    text-align: right; }
+  .stats {
+    font-size: x-large; }
+  .arte {
+    text-align: left;
+    p {
+      text-align: center; } }
+  .caja-de-texto {
+    padding: 1em 0; }
+  .terrenal {
+    border-top: 1px solid $gris-claro;
+    padding-top: 10px; }
+}
 
 .flechas {
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
   display: inline;
   span.flecha {

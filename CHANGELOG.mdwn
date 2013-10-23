@@ -1,13 +1,83 @@
-# Cambios
+# Cambios recientes
+
+## 1.5.5
+
+### Mejoras
+
+- Se pueden subir diseños de cartas
+- Se puede ver la lista de los cambios en el sitio
+
+### Arreglos
+
+- No se recorre la galería si estás apretando alt (para no interferir con el
+  navegador)
+
+## 1.5.4
+
+### Mejoras
+
+- Se puede ver y modificar la cantidad de copias de cada carta mientras se ven
+  las listas
+- Avisamos que los mails pueden ir a spam
+
+### Arreglos
+
+- Si se guarda la misma carta más de una vez en una lista o mazo, se suman y se
+  combinan
 
 ## 1.5.3
 
 ### Mejoras
 
-* Ver los demonios con popup en la lista de mazos
-* Agregar notas en los mazos y listas
-* Al ver un mazo las cartas se ordenan por coste además de tipo
+- Ver los demonios con popup en la lista de mazos
+- Agregar notas en los mazos y listas
+- Al ver un mazo las cartas se ordenan por coste además de tipo
 
 ### Arreglos
 
-* Arregla un error de redirecciones al desloguearse
+- Arregla un error de redirecciones al desloguearse
+
+## 1.5.2
+
+### Cartas
+
+- Se cargaron las cartas del mazo preconstruido poder, de [Origen][]
+
+### Mejoras
+
+- Arrancando desde cualquier carta, se puede recorrer la expansión entera donde
+  está, con clicks o cursores
+
+## 1.5.1
+
+### Arreglos
+
+- Arregla un error en la validación de los mazos
+- Cuando el mazo no es legal en ningún formato lo dice
+
+## 1.5.0
+
+### Cartas
+
+- Se cargaron los demonios de poder de [Origen][]
+- Se cargaron las imágenes de las cartas [promocionales de Despertar][]
+- Se cargaron las cartas [promocionales de Origen][]
+- Se cargaron las cartas de los mazos preconstruidos de locura y muerte, de [Origen][]
+
+### Mejoras
+
+- El sistema conoce los formatos y detecta en cuáles es legal cada mazo
+- Es más linda la versión textual de la carta
+- Ahora las expansiones tienen logo
+
+### Arreglos
+
+- La búsqueda global muestra bien las coincidencias
+
+## 1.4.2 a 0.0.0
+
+- Todo lo demás :)
+
+[Origen]: http://bibliotecadeleter.com.ar/expansiones/origen
+[promocionales de Despertar]: http://bibliotecadeleter.com.ar/expansiones/promocionales-despertar
+[promocionales de Origen]: http://bibliotecadeleter.com.ar/expansiones/promocionales-origen

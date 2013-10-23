@@ -1,0 +1,57 @@
+= form_for [@usuario, @diseno], html: { class: 'form diseno', multipart: true } do |f|
+  = f.error_messages
+
+  .row-fluid
+    .span6
+      = f.label :nombre
+      = f.text_field :nombre, class: 'span12', required: true, autofocus: true,
+        placeholder: t('.nombre')
+
+    .span3
+      = f.label :coste
+      = f.text_field :coste, class: 'span12'
+    .span3
+      = f.label :senda
+      = f.select :senda, sendas, { }, class: 'span12'
+
+  .row-fluid
+    .span4
+      = f.label 'Tipos'
+      = f.autocomplete_field :tipo, valores_version_tipo_path,
+        class: 'span12', placeholder: 'Aliado, Objeto, etc'
+    .span4
+      = f.label 'Supertipos'
+      = f.autocomplete_field :supertipo, valores_version_supertipo_path,
+         class: 'span12', placeholder: 'Demonio, Instantáneo, etc'
+    .span4
+      = f.label 'Subtipos'
+      = f.autocomplete_field :subtipo, valores_version_subtipo_path,
+         class: 'span12', placeholder: 'Reptil, Bot, etc'
+
+  .row-fluid
+    .span12
+      = f.label :texto
+      = f.text_area :texto, rows: 5, class: 'span12',
+        placeholder: t('.texto')
+
+  .row-fluid
+    .span12
+      = f.label 'Ambientación'
+      = f.text_area :ambientacion, rows: 5, class: 'span12',
+        placeholder: t('.ambientacion')
+
+  .row-fluid
+    .span2
+      = f.label 'Fuerza'
+      = f.text_field :fue, class: 'span12'
+    .span2.offset8
+      = f.label 'Resistencia'
+      = f.text_field :res, class: 'span12'
+
+  .row-fluid
+    .span12
+      = f.label 'Fundamento'
+      = f.text_area :fundamento, rows: 5, class: 'span12',
+        placeholder: t('.fundamento')
+
+  = f.submit 'Guardar', class: 'btn btn-success'

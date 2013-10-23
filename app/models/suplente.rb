@@ -12,6 +12,11 @@ class Suplente < Lista
 
   friendly_id :nombrar, use: :slugged
 
+  amoeba do
+    nullify :nombre
+    nullify :mazo_id
+  end
+
   private
 
     def nombrar

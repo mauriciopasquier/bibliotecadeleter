@@ -45,5 +45,8 @@
 
     = link_to 'Llevar a un torneo', usuario_mazo_path(@usuario, @mazo, format: :ficha),
       class: 'btn btn-info'
+    - if can?(:create, Mazo) && @usuario != current_usuario
+      = link_to 'Copiar', copiar_usuario_mazo_path(@usuario, @mazo),
+        class: 'btn btn-info'
 
     = link_to otros_mazos, usuario_mazos_path(@usuario), class: 'btn'

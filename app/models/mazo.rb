@@ -48,6 +48,12 @@ class Mazo < ActiveRecord::Base
   multisearchable against: [ :nombre, :usuario_nombre,
     :nombres_de_las_cartas, :formato_nombre, :notas ], if: :persisted?
 
+  # Para copiar mazos de un usuario a otro
+  amoeba do
+    nullify [ :usuario_id, :slug ]
+    clone [ :slots, :principal, :suplente ]
+  end
+
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
   delegate :nombre, to: :formato_objetivo, allow_nil: true, prefix: :formato
 
