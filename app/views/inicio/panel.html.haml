@@ -29,7 +29,7 @@
     .row-fluid
       .span4
         %h2 Listas recientes
-        - usuario.listas.unscoped.normales.recientes.each do |lista|
+        - usuario.listas.normales.recientes.each do |lista|
           .row-fluid
             .span12
               .pull-left= link_to lista.nombre, [usuario, lista]
@@ -38,7 +38,7 @@
                 = lista.decorate.visibilidad_tag
       .span4
         %h2 Mazos recientes
-        - @usuario.mazos.unscoped.recientes.each do |mazo|
+        - @usuario.mazos.recientes.each do |mazo|
           .row-fluid
             .span12
               .pull-left= link_to mazo.nombre, [usuario, mazo]
