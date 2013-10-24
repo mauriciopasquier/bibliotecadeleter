@@ -1,0 +1,17 @@
+%h1= titulo
+#lista
+  = paginacion_tag @torneos
+
+  #torneos.tabla-fluida
+    #encabezado.row-fluid
+      .fecha.span4= sort_link @busqueda, :fecha, opciones_de_ordenar
+      .tienda.span4= sort_link @busqueda, :tienda_id, opciones_de_ordenar
+      .formato.span4= sort_link @busqueda, :formato, opciones_de_ordenar
+
+    = render @torneos
+
+  .row-fluid.botones
+    .span12
+      - if can? :create, Torneo
+        = link_to 'Cargar torneo', new_torneo_path,
+          class: 'btn btn-info'

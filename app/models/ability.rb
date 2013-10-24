@@ -4,7 +4,8 @@ class Ability
 
   @@canones = [ Carta, Expansion, Version, Artista, Imagen, Formato ]
   @@apocrifos = [
-    Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente, Diseno ]
+    Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente, Diseno, Torneo
+  ]
   @@modelos = @@canones + @@apocrifos
 
   cattr_reader :canones, :apocrifos, :modelos
