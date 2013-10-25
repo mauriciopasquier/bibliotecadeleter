@@ -33,6 +33,7 @@ class Ability
       can :create, apocrifos
       can :manage, [ Diseno, Lista, Mazo ], usuario_id: @usuario.id
       can :manage, Usuario, id: @usuario.id
+      can :manage, Torneo, organizador_id: @usuario.id
 
       # Puede leer documentos de búsqueda de recursos no visibles si son suyos
       [ Mazo, Lista ].each do |modelo|

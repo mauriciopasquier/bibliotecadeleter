@@ -1,0 +1,43 @@
+%h1= titulo
+
+.row-fluid
+  .span6
+    %h2 ¿Quién?
+    %dl.dl-horizontal
+      %dt Organiza
+      %dd= link_to torneo.organizador.nick, torneo.organizador
+      - if torneo.juez_principal?
+        %dt Y juecea
+        %dd= torneo.juez_principal
+
+  .span6
+    %h2 ¿Cómo?
+    %dl.dl-horizontal
+      %dt Se juega
+      %dd= link_to torneo.formato_nombre, torneo.formato
+
+.row-fluid
+  .span6
+    %h2 ¿Dónde?
+    %dl.dl-horizontal
+      %dt En
+      %dd= torneo.tienda_nombre
+      - if torneo.tienda.direccion?
+        %dt Que está en
+        %dd= torneo.direccion
+
+  .span6
+    %h2 ¿Cuándo?
+    %dl.dl-horizontal
+      %dt El
+      %dd= l torneo.fecha
+
+.row-fluid.botones
+  .span12
+    - if can? :edit, torneo
+      = link_to 'Editar', edit_torneo_path(torneo),
+        class: 'btn btn-warning'
+    = link_to 'Otros torneos', torneos_path, class: 'btn'
+    - if can? :destroy, torneo
+      = link_to 'Eliminar', torneo, method: :delete,
+        data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
