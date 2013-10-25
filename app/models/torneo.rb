@@ -5,10 +5,18 @@ class Torneo < ActiveRecord::Base
   belongs_to :organizador, class_name: 'Usuario'
   belongs_to :formato
 
-  multisearchable against: [ :fecha, :direccion, :nombre_tienda,
-    :nombre_formato ], if: :persisted?
+  has_many :inscripciones
+  has_many :usuarios, through: :inscripciones
+  # TODO congelar los mazos en Inscripcion?
+  # has_many :mazos, through: :inscripciones
+
+  multisearchable against: [ :fecha, :direccion, :tienda_nombre,
+    :formato_nombre ], if: :persisted?
 
   validates_presence_of :fecha, :formato, :organizador, :tienda
+
+  accepts_nested_attributes_for :inscripciones,
+    allow_destroy: true, reject_if: :all_blank
 
   delegate :nombre, to: :formato, allow_nil: true, prefix: true
   delegate :nombre, to: :tienda, allow_nil: true, prefix: true
