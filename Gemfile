@@ -80,6 +80,7 @@ group :development do
   gem 'bullet'
   gem 'capistrano'
   gem 'quiet_assets'
+  gem 'better_errors'
 end
 
 group :test do
