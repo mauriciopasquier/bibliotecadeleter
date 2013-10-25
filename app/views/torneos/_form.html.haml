@@ -1,0 +1,21 @@
+= form_for torneo, html: { class: 'form torneo' } do |f|
+  = f.error_messages
+
+  .row-fluid
+    .span3
+      = f.label :fecha
+      = f.text_field :fecha, class: 'fecha span12'
+    .span3
+      = f.label :lugar, "Lugar o tienda"
+      = f.text_field :lugar, class: 'span12'
+    .span3
+      = f.label :direccion
+      = f.text_field :direccion, class: 'span12'
+    .span3
+      = f.label :formato, 'Formato al que apuntás'
+      = f.collection_select :formato_id, Formato.all, :id, :nombre,
+        { include_blank: true }, class: 'span12', title: 'Indefinido'
+
+  .row-fluid.botones
+    .span12
+      = f.submit 'Guardar', class: 'btn btn-success'
