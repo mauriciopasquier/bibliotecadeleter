@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131025014643) do
+ActiveRecord::Schema.define(:version => 20131025144158) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -254,10 +254,12 @@ ActiveRecord::Schema.define(:version => 20131025014643) do
     t.string   "juez_principal"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "slug",           :null => false
   end
 
   add_index "torneos", ["fecha"], :name => "index_torneos_on_fecha"
   add_index "torneos", ["organizador_id"], :name => "index_torneos_on_organizador_id"
+  add_index "torneos", ["slug"], :name => "index_torneos_on_slug"
   add_index "torneos", ["tienda_id"], :name => "index_torneos_on_tienda_id"
 
   create_table "usuarios", :force => true do |t|

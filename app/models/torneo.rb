@@ -1,4 +1,5 @@
 class Torneo < ActiveRecord::Base
+  include FriendlyId
   include PgSearch
 
   belongs_to :tienda
@@ -12,6 +13,8 @@ class Torneo < ActiveRecord::Base
 
   multisearchable against: [ :fecha, :direccion, :tienda_nombre,
     :formato_nombre ], if: :persisted?
+
+  friendly_id :fecha_lugar_formato, use: :slugged
 
   validates_presence_of :fecha, :formato, :organizador, :tienda
 
@@ -30,4 +33,10 @@ class Torneo < ActiveRecord::Base
   def lugar
     tienda.try :nombre
   end
+
+  private
+
+    def fecha_lugar_formato
+      [fecha, tienda_nombre, formato_nombre].join('-')
+    end
 end
