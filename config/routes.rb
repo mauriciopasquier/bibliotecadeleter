@@ -35,6 +35,7 @@ BibliotecaDelEter::Application.routes.draw do
     get 'valores_version_subtipo'
     get 'valores_version_supertipo'
     get 'valores_version_rareza'
+    get 'valores_torneo_juez_principal'
   end
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)

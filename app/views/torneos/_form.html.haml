@@ -2,19 +2,25 @@
   = f.error_messages
 
   .row-fluid
-    .span3
+    .span4
       = f.label :fecha
       = f.text_field :fecha, class: 'fecha span12'
-    .span3
-      = f.label :lugar, "Lugar o tienda"
-      = f.text_field :lugar, class: 'span12'
-    .span3
-      = f.label :direccion
-      = f.text_field :direccion, class: 'span12'
-    .span3
+    .span4
       = f.label :formato, 'Formato al que apuntás'
       = f.collection_select :formato_id, Formato.all, :id, :nombre,
         { include_blank: true }, class: 'span12', title: 'Indefinido'
+    .span4
+      = f.label :juez_principal
+      = f.autocomplete_field :juez_principal, valores_torneo_juez_principal_path,
+        class: 'span12'
+
+  .row-fluid
+    .span4
+      = f.label :lugar, "Lugar o tienda"
+      = f.text_field :lugar, class: 'span12'
+    .span8
+      = f.label :direccion
+      = f.text_field :direccion, class: 'span12'
 
   .row-fluid.botones
     .span12
