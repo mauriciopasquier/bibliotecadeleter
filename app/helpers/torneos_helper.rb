@@ -6,12 +6,10 @@ module TorneosHelper
     case params[:action]
       when 'index'
         'Todos los torneos'
-      when 'show'
-        "#{@torneo.formato} en #{@torneo.nombre_tienda} el #{@torneo.fecha}"
+      when 'show', 'edit'
+        torneo.identificador
       when 'new'
         'Nuevo torneo'
-      when 'edit'
-        @torneo.nombre
       when 'proximos'
         'Próximos torneos'
       else
