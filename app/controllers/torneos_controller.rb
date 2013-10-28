@@ -52,7 +52,10 @@ class TorneosController < ApplicationController
 
     def parametros_permitidos
       params.require(:torneo).permit(
-        :fecha, :direccion, :juez_principal, :tienda_id, :lugar, :formato_id
+        :fecha, :direccion, :juez_principal, :tienda_id, :lugar, :formato_id,
+        inscripciones_attributes: [
+          :id, :_destroy, :codigo, :participante
+        ]
       )
     end
 end

@@ -6,7 +6,8 @@ class Torneo < ActiveRecord::Base
   belongs_to :organizador, class_name: 'Usuario'
   belongs_to :formato
 
-  has_many :inscripciones
+  # TODO :restrict_with_exception con rails4
+  has_many :inscripciones, dependent: :restrict
   has_many :usuarios, through: :inscripciones
   # TODO congelar los mazos en Inscripcion?
   # has_many :mazos, through: :inscripciones

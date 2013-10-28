@@ -36,6 +36,8 @@ BibliotecaDelEter::Application.routes.draw do
     get 'valores_version_supertipo'
     get 'valores_version_rareza'
     get 'valores_torneo_juez_principal'
+    get 'valores_inscripcion_codigo'
+    get 'valores_inscripcion_participante'
   end
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)

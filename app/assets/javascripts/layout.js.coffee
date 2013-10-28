@@ -14,6 +14,13 @@ bindearTodo = ->
 
   $('img.lazy').lazyload()
 
+  $('form .nestear').nestedFields({
+    afterInsert: (item) ->
+      $(item).find('.controles-anidados').children().toggleClass('hidden')
+  })
+  # Si hay javascript oculta el checkbox y muestra el link remoto
+  $('.controles-anidados').children().toggleClass('hidden')
+
 $(document)
   .on 'click', '.plegable', ->
     $(this).toggleClass('plegado').nextAll().toggle('fast')

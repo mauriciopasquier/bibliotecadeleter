@@ -1,4 +1,4 @@
-= form_for torneo, html: { class: 'form torneo' } do |f|
+= form_for torneo.preparar, html: { class: 'form torneo' } do |f|
   = f.error_messages
 
   .row-fluid
@@ -21,6 +21,27 @@
     .span8
       = f.label :direccion
       = f.text_field :direccion, class: 'span12'
+
+  .nestear
+    .row-fluid
+      .span12.items
+        %h2 Inscriptos
+        .row-fluid
+          .span2.offset1= f.label :codigo
+          .span9= f.label :nombre
+        = f.nested_fields_for :inscripciones, show_empty: true,
+          render_template: false do |fi|
+          - if fi
+            .item= render partial: 'inscripcion',
+              locals: { f: fi }
+          - else
+            .empty Nadie todavía
+
+        = nested_fields_templates
+
+    .row-fluid
+      .span1
+        = link_to '+', '#', class: 'add btn', data: no_turbolink
 
   .row-fluid.botones
     .span12

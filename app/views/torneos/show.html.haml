@@ -2,35 +2,26 @@
 
 .row-fluid
   .span6
-    %h2 ¿Quién?
+    %h2 Detalles
     %dl.dl-horizontal
-      %dt Organiza
+      %dt organiza
       %dd= link_to torneo.organizador.nick, torneo.organizador
       - if torneo.juez_principal?
-        %dt Y juecea
+        %dt y juecea
         %dd= torneo.juez_principal
-
-  .span6
-    %h2 ¿Cómo?
-    %dl.dl-horizontal
-      %dt Se juega
+      %dt se juega
       %dd= link_to torneo.formato_nombre, torneo.formato
-
-.row-fluid
-  .span6
-    %h2 ¿Dónde?
-    %dl.dl-horizontal
-      %dt En
+      %dt en
       %dd= torneo.tienda_nombre
       - if torneo.tienda.direccion?
-        %dt Que está en
+        %dt que está en
         %dd= torneo.direccion
+      %dt el
+      %dd= l torneo.fecha
 
   .span6
-    %h2 ¿Cuándo?
-    %dl.dl-horizontal
-      %dt El
-      %dd= l torneo.fecha
+    %h2 Preinscriptos
+    = torneo.preinscriptos
 
 .row-fluid.botones
   .span12
