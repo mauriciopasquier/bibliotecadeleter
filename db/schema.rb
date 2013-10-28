@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131025153253) do
+ActiveRecord::Schema.define(:version => 20131028060710) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -217,6 +217,16 @@ ActiveRecord::Schema.define(:version => 20131025153253) do
     t.string   "searchable_type"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "rondas", :force => true do |t|
+    t.integer  "numero"
+    t.integer  "inscripcion_id"
+    t.integer  "oponente_id"
+    t.integer  "puntos"
+    t.integer  "partidas_ganadas"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "sashes", :force => true do |t|
