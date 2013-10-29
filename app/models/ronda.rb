@@ -1,7 +1,9 @@
 class Ronda < ActiveRecord::Base
-  belongs_to :inscripcion
+  belongs_to :inscripcion, inverse_of: :rondas
   has_one :torneo, through: :inscripcion
   belongs_to :oponente, class_name: 'Inscripcion'
+
+  validates_presence_of :inscripcion, :numero, :partidas_ganadas
 
   def puntuar
     self.puntos = case partidas_ganadas <=> oponente.partidas_ganadas_en(numero)
