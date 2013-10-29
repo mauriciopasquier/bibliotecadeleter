@@ -7,7 +7,7 @@ class Torneo < ActiveRecord::Base
   belongs_to :formato
 
   # TODO :restrict_with_exception con rails4
-  has_many :inscripciones, dependent: :restrict do
+  has_many :inscripciones, dependent: :restrict, inverse_of: :torneo do
     def posiciones
       joins(:rondas).group(
         'inscripciones.id'

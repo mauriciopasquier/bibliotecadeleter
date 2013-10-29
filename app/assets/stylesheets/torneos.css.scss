@@ -1,6 +1,9 @@
 @import 'variables';
 
 #posiciones {
+  .encabezados {
+    font-size: larger;
+    font-weight: bold; }
   .posicion { text-align: center; }
   .puntos   { text-align: center; }
   .partidas { text-align: center; }

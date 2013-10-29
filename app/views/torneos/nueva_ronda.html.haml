@@ -13,11 +13,9 @@
 
 .row-fluid.botones
   .span12
-    - if can? :delete, torneo
-      = link_to 'Cancelar', ronda_torneo_path(torneo, torneo.ultima_ronda),
-        method: :delete,
-        data: { confirm: t('.cancelar', ultima: torneo.ultima_ronda) },
-        class: 'btn btn-danger'
+    - if can? :read, torneo
+      = link_to 'Volver', ronda_torneo_path(torneo, torneo.ultima_ronda),
+        class: 'btn btn-warning'
     - if can? :read, torneo
       = link_to 'Este torneo', torneo, class: 'btn'
     - if can? :read, torneo

@@ -1,5 +1,5 @@
 class Inscripcion < ActiveRecord::Base
-  belongs_to :torneo
+  belongs_to :torneo, inverse_of: :inscripciones
   belongs_to :usuario, foreign_key: :codigo, primary_key: :codigo
   has_many :rondas, inverse_of: :inscripcion
 
