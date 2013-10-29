@@ -16,4 +16,12 @@ class Inscripcion < ActiveRecord::Base
   def partidas_ganadas
    rondas.sum(:partidas_ganadas)
   end
+
+  def partidas_ganadas_en(ronda)
+    rondas.where(numero: ronda).first.try(:partidas_ganadas) || 0
+  end
+
+  def ha_jugado_con?(inscripcion)
+    rondas.where(oponente_id: inscripcion.id).any?
+  end
 end

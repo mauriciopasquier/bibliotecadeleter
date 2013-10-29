@@ -76,7 +76,13 @@ BibliotecaDelEter::Application.routes.draw do
 
     r.resources :formatos
 
-    r.resources :torneos
+    r.resources :torneos do
+      member do
+        get 'jugar'
+        put 'jugar', to: 'torneos#jugar_ronda'
+        delete 'deshacer/:ronda', to: 'torneos#deshacer', as: :deshacer
+      end
+    end
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do

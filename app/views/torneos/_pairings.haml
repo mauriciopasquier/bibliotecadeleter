@@ -1,0 +1,19 @@
+- @uno = pairings.first
+- @otro = pairings.last
+.row-fluid
+  .span2= @uno.nombre_o_usuario
+  .span1
+    = f.fields_for :inscripciones, @uno do |fi|
+      = fi.fields_for :rondas, @uno.rondas.select {|r| r.numero == torneo.ronda_actual} do |fir|
+        = fir.text_field :partidas_ganadas, class: 'span12'
+        = fir.hidden_field :oponente_id
+        = fir.hidden_field :id
+        = fir.hidden_field :numero
+  .span2= @otro.nombre_o_usuario
+  .span1
+    = f.fields_for :inscripciones, @otro do |fi|
+      = fi.fields_for :rondas, @otro.rondas.select {|r| r.numero == torneo.ronda_actual} do |fir|
+        = fir.text_field :partidas_ganadas, class: 'span12'
+        = fir.hidden_field :oponente_id
+        = fir.hidden_field :id
+        = fir.hidden_field :numero

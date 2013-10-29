@@ -33,6 +33,10 @@ es:
               cartas_en_las_sendas_incorrectas: 'Hay cartas de sendas que no coinciden con los demonios'
               hay_cartas_prohibidas: 'Cargaste cartas prohibidas en el formato'
               cartas_en_expansiones_prohibidas: 'Cargaste cartas de expansiones no permitidas'
+        torneo:
+          attributes:
+            inscripciones:
+              insuficientes: 'Se necesitan 8 jugadores para oficializar el torneo'
   activemodel:
     errors:
       models:
@@ -80,3 +84,6 @@ es:
                   el diseño ayuda a su interpretación, y en el caso de que su
                   habilidad sea muy rara y no tenga un texto de reglas claro,
                   podés explayarte acá'
+  torneos:
+    jugar:
+      confirmar:  'Estás por deshacer la ronda %{ultima}'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131028060710) do
+ActiveRecord::Schema.define(:version => 20131028160557) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -266,6 +266,7 @@ ActiveRecord::Schema.define(:version => 20131028060710) do
     t.datetime "updated_at",                        :null => false
     t.string   "slug",                              :null => false
     t.boolean  "oficial",        :default => false
+    t.boolean  "jugado",         :default => false
   end
 
   add_index "torneos", ["fecha"], :name => "index_torneos_on_fecha"
