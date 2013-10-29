@@ -78,9 +78,14 @@ BibliotecaDelEter::Application.routes.draw do
 
     r.resources :torneos do
       member do
-        get 'jugar'
-        put 'jugar', to: 'torneos#jugar_ronda'
-        delete 'deshacer/:ronda', to: 'torneos#deshacer', as: :deshacer
+        get 'rondas/nueva(.:format)',
+          to: 'torneos#nueva_ronda', as: :nueva_ronda
+        post 'rondas(.:format)',
+          to: 'torneos#crear_ronda', as: :crear_ronda
+        get 'rondas/:numero(.:format)',
+          to: 'torneos#mostrar_ronda', as: :ronda
+        delete 'rondas/:numero(.:format)',
+          to: 'torneos#deshacer_ronda', as: :ronda
       end
     end
 

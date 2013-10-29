@@ -7,7 +7,18 @@ class Torneo < ActiveRecord::Base
   belongs_to :formato
 
   # TODO :restrict_with_exception con rails4
-  has_many :inscripciones, dependent: :restrict
+  has_many :inscripciones, dependent: :restrict do
+    def posiciones
+      joins(:rondas).group(
+        'inscripciones.id'
+      ).select(
+        'inscripciones.*,
+          sum(rondas.puntos) as puntaje,
+          sum(rondas.partidas_ganadas) as partidas'
+      ).order('puntaje desc, partidas desc')
+    end
+  end
+
   has_many :usuarios, through: :inscripciones
   has_many :rondas, through: :inscripciones, order: :numero
   # TODO congelar los mazos en Inscripcion?
@@ -27,6 +38,7 @@ class Torneo < ActiveRecord::Base
 
   delegate :nombre, to: :formato, allow_nil: true, prefix: true
   delegate :nombre, to: :tienda, allow_nil: true, prefix: true
+  delegate :posiciones, to: :inscripciones, allow_nil: true
 
   attr_writer :sistema
 

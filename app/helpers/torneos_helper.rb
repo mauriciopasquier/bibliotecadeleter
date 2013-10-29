@@ -12,8 +12,10 @@ module TorneosHelper
         'Nuevo torneo'
       when 'proximos'
         'Próximos torneos'
-      when 'jugar'
+      when 'nueva_ronda'
         "Pairings para la ronda #{torneo.ronda_actual}"
+      when 'mostrar_ronda'
+        "Posiciones después de la ronda #{torneo.ultima_ronda}"
       else
         nil
     end

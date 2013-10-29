@@ -44,20 +44,26 @@ class TorneosController < ApplicationController
     respond_with @torneo
   end
 
-  def jugar
-    @torneo.jugado = true if @torneo.valid?
+  # Acciones para rondas en masa (es más práctico que un nested resource)
+  def nueva_ronda
     respond_with @torneo
   end
 
-  def jugar_ronda
+  def crear_ronda
+    @torneo.jugado = true if @torneo.valid?
     @torneo.update_attributes(parametros_permitidos)
     @torneo.puntuar
-    redirect_to jugar_torneo_path(@torneo)
+    respond_with @torneo,
+      location: ronda_torneo_path(@torneo, @torneo.ultima_ronda)
   end
 
-  def deshacer
-    @torneo.rondas.where(numero: params[:ronda]).destroy_all
-    redirect_to @torneo.rondas.any? ? jugar_torneo_path(@torneo) : @torneo
+  def deshacer_ronda
+    @torneo.rondas.where(numero: params[:numero]).destroy_all
+    redirect_to @torneo.rondas.any? ? nueva_ronda_torneo_path(@torneo) : @torneo
+  end
+
+  def mostrar_ronda
+    respond_with @torneo
   end
 
   private
