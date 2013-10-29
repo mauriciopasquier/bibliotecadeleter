@@ -1,15 +1,20 @@
 %h1= titulo
 
-= form_for torneo.preparar, url: crear_ronda_torneo_path(torneo),
-  html: { method: :post, class: 'form torneo' } do |f|
+#nueva_ronda
+  = form_for torneo.preparar, url: crear_ronda_torneo_path(torneo),
+    html: { method: :post, class: 'form torneo' } do |f|
 
-  = f.error_messages
+    = f.error_messages
 
-  = render partial: 'pairings', collection: torneo.pairings, locals: { f: f }
+    .row-fluid
+      .span2.offset2 Partidas
+      .span2.offset2 Partidas
 
-  .row-fluid.botones
-    .span12
-      = f.submit 'Guardar', class: 'btn btn-success'
+    = render partial: 'pairings', collection: torneo.pairings, locals: { f: f }
+
+    .row-fluid.botones
+      .span12
+        = f.submit 'Guardar', class: 'btn btn-success'
 
 .row-fluid.botones
   .span12

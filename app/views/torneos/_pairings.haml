@@ -1,24 +1,34 @@
 - @uno = pairings.first
 - @otro = pairings.last
-.row-fluid
+.row-fluid.pairing
   .span2= @uno.nombre_o_usuario
-  .span1
-    = f.fields_for :inscripciones, @uno do |fi|
+  = f.fields_for :inscripciones, @uno do |fi|
+    .span2
       = fi.fields_for :rondas, @uno.rondas.select {|r| r.numero == torneo.ronda_actual} do |fir|
-        = fir.text_field :partidas_ganadas, class: 'span12',
+        = fir.text_field :partidas_ganadas, class: 'span12 puntos a',
           disabled: @otro.bye?
         = fir.hidden_field :oponente_id
         = fir.hidden_field :id
         = fir.hidden_field :numero
+
   .span2= @otro.nombre_o_usuario
-  .span1
-    - if @otro.bye?
-      = text_field_tag :bye, @otro.partidas_ganadas, class: 'span12',
-        disabled: true
-    - else
-      = f.fields_for :inscripciones, @otro do |fi|
+  - if @otro.bye?
+    .span2
+      = text_field_tag :bye, @otro.partidas_ganadas, class: 'span12', disabled: true
+  - else
+    = f.fields_for :inscripciones, @otro do |fi|
+      .span2
         = fi.fields_for :rondas, @otro.rondas.select {|r| r.numero == torneo.ronda_actual} do |fir|
-          = fir.text_field :partidas_ganadas, class: 'span12'
+          = fir.text_field :partidas_ganadas, class: 'span12 puntos b'
           = fir.hidden_field :oponente_id
           = fir.hidden_field :id
           = fir.hidden_field :numero
+
+  .span4.puntuar
+    - unless @otro.bye?
+      = link_to '2 - 0', '#', class: 'btn', data: no_turbolink.merge(a: 2, b: 0)
+      = link_to '2 - 1', '#', class: 'btn', data: no_turbolink.merge(a: 2, b: 1)
+      = link_to '1 - 1', '#', class: 'btn', data: no_turbolink.merge(a: 1, b: 1)
+      = link_to '0 - 0', '#', class: 'btn', data: no_turbolink.merge(a: 0, b: 0)
+      = link_to '1 - 2', '#', class: 'btn', data: no_turbolink.merge(a: 1, b: 2)
+      = link_to '0 - 2', '#', class: 'btn', data: no_turbolink.merge(a: 0, b: 2)

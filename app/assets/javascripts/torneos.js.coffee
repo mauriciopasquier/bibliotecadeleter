@@ -9,3 +9,11 @@ $(document)
     $(this).parent().prev()
       .children('.ac-codigo')
         .val(data.item.codigo)
+
+$(document)
+  .on 'click', '.puntuar .btn', (evento, data) ->
+    padre = $(this).parents('.pairing')
+    padre.find('.puntos.a')
+      .val($(this).data('a'))
+    padre.find('.puntos.b')
+      .val($(this).data('b'))
