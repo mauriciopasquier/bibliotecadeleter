@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131028160557) do
+ActiveRecord::Schema.define(:version => 20131029155806) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -131,11 +131,12 @@ ActiveRecord::Schema.define(:version => 20131028160557) do
   add_index "imagenes", ["version_id"], :name => "index_imagenes_on_version_id"
 
   create_table "inscripciones", :force => true do |t|
-    t.string   "participante", :null => false
-    t.string   "codigo",       :null => false
-    t.integer  "torneo_id",    :null => false
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string   "participante",                    :null => false
+    t.string   "codigo",                          :null => false
+    t.integer  "torneo_id",                       :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "dropeo",       :default => false
   end
 
   create_table "links", :force => true do |t|

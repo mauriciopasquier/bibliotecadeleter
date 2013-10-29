@@ -2,17 +2,19 @@
 
 #posiciones
   .row-fluid.encabezados
-    .posicion.span1 Posición
-    .puntos.span1.hidden-phone Puntos
-    .partidas.span1.hidden-phone Partidas
-    .span9 Nombre
+    .span1.posicion Posición
+    .span1.puntos.hidden-phone Puntos
+    .span1.partidas.hidden-phone Partidas
+    .span1.dropear ¿Dropeó?
+    .span8 Nombre
 
   - torneo.posiciones.each.with_index 1 do |participante, posicion|
     .row-fluid
-      .posicion.span1= posicion
-      .puntos.span1.hidden-phone= participante.puntaje
-      .partidas.span1.hidden-phone= participante.partidas
-      .span9= participante.decorate.nombre_o_usuario
+      .span1.posicion= posicion
+      .span1.puntos.hidden-phone= participante.puntaje
+      .span1.partidas.hidden-phone= participante.partidas
+      .span1.dropear= participante.decorate.dropear_link
+      .span8= participante.decorate.nombre_o_usuario
 
 .row-fluid.botones
   .span12

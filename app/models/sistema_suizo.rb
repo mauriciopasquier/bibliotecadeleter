@@ -57,8 +57,10 @@ class SistemaSuizo
     end
 
     def por_ranking
-      # 1. Agrupar por puntaje
-      grupos_rankeados = inscriptos.group_by {|i| i.puntos }.sort.reverse
+      # 1. Agrupar por puntaje ignorando a los dropeados
+      grupos_rankeados = inscriptos.reject {|i| i.dropeo }.group_by do |i|
+        i.puntos
+      end.sort.reverse
 
       pares = []
       while grupos_rankeados.any?

@@ -11,9 +11,13 @@ $(document)
         .val(data.item.codigo)
 
 $(document)
-  .on 'click', '.puntuar .btn', (evento, data) ->
+  .on 'click', '.puntuar .btn', (evento) ->
     padre = $(this).parents('.pairing')
     padre.find('.puntos.a')
       .val($(this).data('a'))
     padre.find('.puntos.b')
       .val($(this).data('b'))
+
+$(document)
+  .on 'ajax:success', 'a.dropear', (evento, data, status, xhr) ->
+    $(this).html(if data.dropeo then 'Sí' else 'No')

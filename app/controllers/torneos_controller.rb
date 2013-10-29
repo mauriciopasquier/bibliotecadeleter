@@ -8,6 +8,9 @@ class TorneosController < ApplicationController
   load_and_authorize_resource
   skip_authorization_check only: [ :index, :show ]
 
+  # TODO que funcione sin js
+  respond_to :json, only: [ :dropear ]
+
   def index
     @busqueda = apply_scopes @torneos
     @torneos = PaginadorDecorator.decorate @busqueda.result
@@ -66,6 +69,15 @@ class TorneosController < ApplicationController
     respond_with @torneo
   end
 
+  def dropear
+    @inscripcion = Inscripcion.find(params[:inscripcion_id]).toggle :dropeo
+    @inscripcion.save
+
+    respond_to do |format|
+      format.json { render json: @inscripcion}
+    end
+  end
+
   private
 
     def cargar_recurso
@@ -76,7 +88,7 @@ class TorneosController < ApplicationController
       params.require(:torneo).permit(
         :fecha, :direccion, :juez_principal, :tienda_id, :lugar, :formato_id,
         inscripciones_attributes: [
-          :id, :_destroy, :codigo, :participante, rondas_attributes: [
+          :id, :_destroy, :codigo, :participante, :dropeo, rondas_attributes: [
             :id, :_destroy, :oponente_id, :partidas_ganadas, :numero
           ]
         ]

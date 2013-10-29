@@ -78,6 +78,8 @@ BibliotecaDelEter::Application.routes.draw do
 
     r.resources :torneos do
       member do
+        put 'dropear/:inscripcion_id', to: 'torneos#dropear', as: :dropear_del
+
         get 'rondas/nueva(.:format)',
           to: 'torneos#nueva_ronda', as: :nueva_ronda
         post 'rondas(.:format)',

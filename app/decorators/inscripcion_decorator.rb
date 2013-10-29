@@ -2,6 +2,12 @@
 class InscripcionDecorator < ApplicationDecorator
   decorates_association :torneo
 
+  def dropear_link
+    h.link_to object.dropeo? ? 'Sí' : 'No',
+    h.dropear_del_torneo_path(object.torneo, object),
+    method: :put, remote: true, class: 'dropear'
+  end
+
   def nombre_o_usuario
     if object.usuario.present?
       h.link_to object.participante, object.usuario
