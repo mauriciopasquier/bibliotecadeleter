@@ -10,9 +10,16 @@ class InscripcionDecorator < ApplicationDecorator
     end
   end
 
-  def preparar(oponente_id)
+  def preparar(oponente)
+    partidas = if oponente.bye?
+      object.torneo.sistema.class::BYE[:partidas_ganadas]
+    else
+      nil
+    end
+
     object.rondas.build(
-      numero: torneo.ronda_actual, oponente_id: oponente_id
+      numero: torneo.ronda_actual, oponente_id: oponente.id,
+      partidas_ganadas: partidas
     )
     self
   end

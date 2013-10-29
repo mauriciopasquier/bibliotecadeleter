@@ -1,4 +1,12 @@
 class Ronda < ActiveRecord::Base
+  module RondaConBye
+    def oponente
+      super || Bye.new(torneo)
+    end
+  end
+
+  include RondaConBye
+
   belongs_to :inscripcion, inverse_of: :rondas
   has_one :torneo, through: :inscripcion
   belongs_to :oponente, class_name: 'Inscripcion'

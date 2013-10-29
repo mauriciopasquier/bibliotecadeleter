@@ -24,4 +24,8 @@ class Inscripcion < ActiveRecord::Base
   def ha_jugado_con?(inscripcion)
     rondas.where(oponente_id: inscripcion.id).any?
   end
+
+  def bye?
+    false
+  end
 end

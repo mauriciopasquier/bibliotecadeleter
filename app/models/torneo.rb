@@ -69,6 +69,10 @@ class Torneo < ActiveRecord::Base
     ultima_ronda < sistema.rondas
   end
 
+  def bye
+    Bye.new(self)
+  end
+
   private
 
     def cantidad_de_inscriptos

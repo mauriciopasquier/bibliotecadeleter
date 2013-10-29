@@ -21,8 +21,12 @@ class TorneoDecorator < ApplicationDecorator
 
   def pairings
     pairings = object.sistema.pairing(ronda_actual).collect do |par|
-      [ par.first.decorate.preparar(par.last.id),
-        par.last.decorate.preparar(par.first.id) ]
+      if par.first == par.last
+        par.push object.bye
+      end
+
+      [ par.first.decorate.preparar(par.last),
+        par.last.decorate.preparar(par.first) ]
     end
     pairings
   end

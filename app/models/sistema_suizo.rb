@@ -13,6 +13,8 @@ class SistemaSuizo
               victoria: 3,
               derrota: 0 }
 
+  BYE = { partidas_ganadas: 2 }
+
   def initialize(inscriptos)
     @inscriptos = inscriptos
     @corte = inscriptos.size > 128
