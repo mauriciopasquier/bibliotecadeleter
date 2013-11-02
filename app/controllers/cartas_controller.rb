@@ -43,7 +43,7 @@ class CartasController < ApplicationController
   end
 
   def buscar
-    @busqueda = Carta.search(params[:q])
+    @busqueda = Carta.search
 
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 
@@ -70,6 +70,13 @@ class CartasController < ApplicationController
       if params[:incluir]
         query = q.delete view_context.busqueda
         q.merge! "#{params[:incluir].join('_or_')}_cont" => query
+      end
+
+      if params[:formato]
+        exp = :versiones_expansion_id_eq_any
+        params[:q][exp] = (params[:formato].collect do |exps|
+          exps.split(', ')
+        end + Array.wrap(params[:q][exp])).flatten.uniq
       end
       q
     end
