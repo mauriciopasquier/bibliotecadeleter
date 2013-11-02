@@ -49,6 +49,11 @@ describe TorneosController do
         must_respond_with :success
       end
 
+      it "accede a edit" do
+        autorizar { get :edit, id: create(:torneo) }
+        must_respond_with :success
+      end
+
       it "crea torneos con tienda existente" do
         lambda do
           autorizar do
@@ -61,13 +66,21 @@ describe TorneosController do
         must_redirect_to torneo_path(assigns(:torneo))
       end
 
-      it "accede a edit" do
-        autorizar { get :edit, id: create(:torneo) }
-        must_respond_with :success
+      it "crea la tienda si no existe" do
+        lambda do
+          autorizar do
+            post :create, torneo: attributes_for(:torneo,
+              formato_id: create(:formato).id,
+              lugar: 'Planeta', direccion: 'Galería Caracol')
+          end
+        end.must_change 'Tienda.count'
+
+        tienda = Tienda.where(nombre: 'Planeta').first
+        tienda.wont_be_nil
+        tienda.direccion.must_equal 'Galería Caracol'
       end
 
-
-      it "actualiza una expansión" do
+      it "actualiza un torneo" do
         torneo = create(:torneo)
         atributos = attributes_for(:torneo, fecha: '2010-10-10')
         autorizar { put :update, id: torneo, torneo: atributos }
