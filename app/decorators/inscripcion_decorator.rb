@@ -29,4 +29,10 @@ class InscripcionDecorator < ApplicationDecorator
     )
     self
   end
+
+  def resultado(numero)
+    ronda = object.rondas.where(numero: numero).first.decorate
+
+    "#{ronda.resultado} #{ronda.oponente} #{ronda.partidas}".html_safe
+  end
 end

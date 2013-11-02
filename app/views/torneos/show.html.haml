@@ -22,7 +22,8 @@
   .span8
     - if torneo.rondas.any?
       %h2 Posiciones finales después de #{torneo.ultima_ronda} rondas
-      = render partial: 'posiciones', locals: { ronda: torneo.ultima_ronda }
+      = render partial: 'posiciones',
+        locals: { ronda: torneo.ultima_ronda, resultados: false }
     - else
       %h2 Preinscriptos
       = torneo.preinscriptos
