@@ -7,6 +7,23 @@
     = f.error_messages
 
     .row-fluid
+      .span12
+        .tiempo-de-ronda{ data: { tiempo: torneo.tiempo_de_ronda } }
+          .timer
+            .desc   {desc}
+            .reloj  {hnn}{sep}{mnn}{sep}{snn}
+
+    .row-fluid
+      .span12.controles-ronda
+        .pausa
+          = link_to '#', class: 'pausar btn', data: no_turbolink do
+            - content_tag(:i, nil, class: 'icon-pause')
+
+        .play
+          = link_to '#', class: 'reproducir btn', data: no_turbolink do
+            - content_tag(:i, nil, class: 'icon-play')
+
+    .row-fluid
       .span1.offset2 Partidas
       .span1.offset2 Partidas
 

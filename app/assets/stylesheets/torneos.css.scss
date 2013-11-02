@@ -15,3 +15,18 @@
 #nueva_ronda {
   .puntuar { text-align: center; }
 }
+
+.tiempo-de-ronda {
+  text-align: center;
+  font-weight: bold;
+  .reloj {
+    font-size: 4em;
+    line-height: 1em;
+  }
+  margin-bottom: 0.5em;
+}
+
+.controles-ronda {
+  text-align: center;
+  margin-bottom: 1em;
+}

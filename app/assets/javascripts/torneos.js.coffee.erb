@@ -1,0 +1,61 @@
+avisar = ->
+  # TODO sonido?
+  $('.tiempo-de-ronda').addClass('alert-error')
+  alarma.play()
+  alert('¡¡¡CUENTEN TURNOS!!!')
+
+alarma = new Audio "<%= asset_path('alarma-nuclear.wav') %>"
+
+tiempoDeRonda = ->
+  $('.tiempo-de-ronda').countdown({
+    until: $('.tiempo-de-ronda').data('tiempo')
+    compact: true
+    layout: $('.timer').html()
+    onExpiry: avisar
+    description: 'Tiempo de ronda'
+  })
+  $('.tiempo-de-ronda').countdown('pause')
+  $('.controles-ronda .pausa').addClass('hidden')
+
+$(document)
+  .on 'railsAutocomplete.select', '.ac-codigo', (evento, data) ->
+    $(this).parent().next()
+      .children('.ac-participante')
+        .val(data.item.participante)
+
+$(document)
+  .on 'railsAutocomplete.select', '.ac-participante', (evento, data) ->
+    $(this).parent().prev()
+      .children('.ac-codigo')
+        .val(data.item.codigo)
+
+$(document)
+  .on 'click', '.puntuar .btn', (evento) ->
+    padre = $(this).parents('.pairing')
+    padre.find('.puntos.a')
+      .val($(this).data('a'))
+    padre.find('.puntos.b')
+      .val($(this).data('b'))
+
+$(document)
+  .on 'click', '.pausar', (evento) ->
+    $('.controles-ronda .play').toggleClass('hidden')
+    $('.controles-ronda .pausa').toggleClass('hidden')
+    $('.tiempo-de-ronda').countdown('pause')
+
+$(document)
+  .on 'click', '.reproducir', (evento) ->
+    $('.controles-ronda .play').toggleClass('hidden')
+    $('.controles-ronda .pausa').toggleClass('hidden')
+    $('.tiempo-de-ronda').countdown('resume')
+
+$(document)
+  .on 'ajax:success', 'a.dropear', (evento, data, status, xhr) ->
+    $(this).html(if data.dropeo then "En la #{data.dropeo}" else 'No')
+
+$(document)
+  .on 'page:change', ->
+    tiempoDeRonda()
+
+jQuery ->
+  tiempoDeRonda()
