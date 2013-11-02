@@ -6,7 +6,8 @@
     #encabezado.row-fluid
       .fecha.span4= sort_link @busqueda, :fecha, opciones_de_ordenar
       .tienda.span4= sort_link @busqueda, :tienda_id, opciones_de_ordenar
-      .formato.span4= sort_link @busqueda, :formato, opciones_de_ordenar
+      .formato.span2= sort_link @busqueda, :formato, opciones_de_ordenar
+      .estado.span2= sort_link @busqueda, :estado, opciones_de_ordenar
 
     = render @torneos
 

@@ -24,6 +24,8 @@ BibliotecaDelEter::Application.routes.draw do
   get 'legales' => 'inicio#legales'
   get 'panel' => 'inicio#panel'
   get 'cambios' => 'inicio#cambios'
+  get 'canon' => 'inicio#canon'
+  get 'arena' => 'inicio#arena'
 
   scope path: 'sugerencias', controller: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
