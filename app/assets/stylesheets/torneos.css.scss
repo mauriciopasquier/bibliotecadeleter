@@ -1,0 +1,17 @@
+@import 'variables';
+
+#posiciones {
+  .encabezados {
+    font-size: larger;
+    font-weight: bold; }
+  .posicion { text-align: center; }
+  .puntos   { text-align: center; }
+  .partidas { text-align: center; }
+  .dropear  { text-align: center; }
+
+  .flechas { text-align: left; }
+}
+
+#nueva_ronda {
+  .puntuar { text-align: center; }
+}

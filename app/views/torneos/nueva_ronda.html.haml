@@ -1,0 +1,30 @@
+%h1= titulo
+
+#nueva_ronda
+  = form_for torneo.preparar, url: crear_ronda_torneo_path(torneo),
+    html: { method: :post, class: 'form torneo' } do |f|
+
+    = f.error_messages
+
+    .row-fluid
+      .span1.offset2 Partidas
+      .span1.offset2 Partidas
+
+    = render partial: 'pairings', collection: torneo.pairings, locals: { f: f }
+
+    .row-fluid.botones
+      .span12
+        = f.submit 'Guardar', class: 'btn btn-success'
+
+.row-fluid.botones
+  .span12
+    - if can? :read, torneo
+      = link_to 'Volver', ronda_torneo_path(torneo, torneo.ultima_ronda),
+        class: 'btn btn-warning'
+    - if can? :read, torneo
+      = link_to 'Este torneo', torneo, class: 'btn'
+    - if can? :read, torneo
+      = link_to 'Posiciones', ronda_torneo_path(torneo, torneo.ultima_ronda),
+        class: 'btn'
+    - if can? :read, Torneo
+      = link_to 'Otros torneos', torneos_path, class: 'btn'

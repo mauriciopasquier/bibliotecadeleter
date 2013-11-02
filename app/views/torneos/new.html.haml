@@ -1,0 +1,8 @@
+%h1= titulo
+
+= render 'form'
+
+.row-fluid.botones
+  .span12
+    - if can? :read, Torneo
+      = link_to 'Otros torneos', torneos_path, class: 'btn'

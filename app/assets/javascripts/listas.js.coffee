@@ -1,14 +1,6 @@
 href = (a, c) ->
   URI(a.href).setQuery('cantidad', c).toString()
 
-prepararNestedFields = ->
-  $('form.lista .nestear').nestedFields({
-    afterInsert: (item) ->
-      $(item).find('.controles-anidados').children().toggleClass('hidden')
-  })
-  # Si hay javascript oculta el checkbox y muestra el link remoto
-  $('.controles-anidados').children().toggleClass('hidden')
-
 $(document)
   .on 'ajax:success', '.update-listas', (evento, data, status, xhr) ->
     $(this).siblings('span.cantidad').html(data.cantidad)
@@ -21,10 +13,3 @@ $(document)
   .on 'railsAutocomplete.select', '.autocomplete-versiones', (evento, data) ->
     # El controlador devuelve el hash con version_id como 'id'
     $(this).siblings('.version_id').val(data.item.id)
-
-$(document)
-  .on 'page:change', ->
-    prepararNestedFields()
-
-jQuery ->
-  prepararNestedFields()

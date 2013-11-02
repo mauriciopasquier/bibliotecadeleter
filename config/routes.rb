@@ -24,6 +24,8 @@ BibliotecaDelEter::Application.routes.draw do
   get 'legales' => 'inicio#legales'
   get 'panel' => 'inicio#panel'
   get 'cambios' => 'inicio#cambios'
+  get 'canon' => 'inicio#canon'
+  get 'arena' => 'inicio#arena'
 
   scope path: 'sugerencias', controller: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
@@ -35,6 +37,9 @@ BibliotecaDelEter::Application.routes.draw do
     get 'valores_version_subtipo'
     get 'valores_version_supertipo'
     get 'valores_version_rareza'
+    get 'valores_torneo_juez_principal'
+    get 'valores_inscripcion_codigo'
+    get 'valores_inscripcion_participante'
   end
 
   # Rutas en castellano (i.e. cartas/nueva, cartas/2/editar)
@@ -72,6 +77,21 @@ BibliotecaDelEter::Application.routes.draw do
     r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ]
 
     r.resources :formatos
+
+    r.resources :torneos do
+      member do
+        put 'dropear/:inscripcion_id', to: 'torneos#dropear', as: :dropear_del
+
+        get 'rondas/nueva(.:format)',
+          to: 'torneos#nueva_ronda', as: :nueva_ronda
+        post 'rondas(.:format)',
+          to: 'torneos#crear_ronda', as: :crear_ronda
+        get 'rondas/:numero(.:format)',
+          to: 'torneos#mostrar_ronda', as: :ronda
+        delete 'rondas(.:format)',
+          to: 'torneos#deshacer_ronda', as: :ultima_ronda
+      end
+    end
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do

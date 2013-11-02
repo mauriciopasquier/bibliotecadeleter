@@ -11,6 +11,10 @@ class Usuario < ActiveRecord::Base
   has_many :listas, dependent: :destroy
   has_many :mazos, dependent: :destroy
   has_many :disenos, dependent: :destroy, order: :created_at
+  has_many :torneos_organizados, class_name: 'Torneo',
+    inverse_of: :organizador, foreign_key: :organizador_id
+  has_many :inscripciones, foreign_key: :codigo, primary_key: :codigo
+  has_many :torneos_jugados, through: :inscripciones
   has_one :coleccion, dependent: :destroy
   has_one :reserva, dependent: :destroy
 

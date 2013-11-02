@@ -1,0 +1,21 @@
+%h1= titulo
+
+#posiciones
+  = render partial: 'posiciones', locals: { ronda: @ronda }
+
+  .row-fluid.flechas
+    .span12
+      = torneo.anterior @ronda
+      = link_to 'Final', torneo, class: 'btn'
+      = torneo.siguiente @ronda
+
+.row-fluid.botones
+  .span12
+    - if can? :delete, torneo
+      = link_to 'Deshacer', ultima_ronda_torneo_path(torneo), method: :delete,
+        data: { confirm: t('.cancelar') }, class: 'btn btn-danger'
+    - if can? :edit, torneo
+      = link_to 'Siguente', @torneo.jugando? ? nueva_ronda_torneo_path(torneo) : @torneo,
+        class: 'btn btn-success'
+    - if can? :read, Torneo
+      = link_to 'Otros torneos', torneos_path, class: 'btn'

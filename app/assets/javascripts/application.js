@@ -34,3 +34,4 @@
 //= require paginacion
 //= require cartas
 //= require listas
+//= require torneos

@@ -1,0 +1,14 @@
+= f.hidden_field :id
+.row-fluid
+  .span1.controles-anidados
+    = link_to '-', '#', class: 'hidden remove btn btn-danger', data: no_turbolink
+    = label_tag :_destroy do
+      = f.check_box :_destroy
+      remover
+  .span2
+    = f.autocomplete_field :codigo, valores_inscripcion_codigo_path,
+      class: 'span12 ac-codigo'
+  .span9
+    = f.autocomplete_field :participante,
+      valores_inscripcion_participante_path,
+      class: 'span12 ac-participante'
