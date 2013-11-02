@@ -78,11 +78,12 @@ class TorneosController < ApplicationController
   end
 
   def dropear
-    @inscripcion = Inscripcion.find(inscripcion).toggle :dropeo
+    @inscripcion = Inscripcion.find(inscripcion)
+    @inscripcion.dropear_o_deshacer
     @inscripcion.save
 
     respond_to do |format|
-     format.json { render json: @inscripcion}
+      format.json { render json: @inscripcion }
     end
   end
 

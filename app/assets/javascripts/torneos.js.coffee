@@ -20,4 +20,4 @@ $(document)
 
 $(document)
   .on 'ajax:success', 'a.dropear', (evento, data, status, xhr) ->
-    $(this).html(if data.dropeo then 'Sí' else 'No')
+    $(this).html(if data.dropeo then "En la #{data.dropeo}" else 'No')

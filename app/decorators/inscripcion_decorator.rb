@@ -3,7 +3,7 @@ class InscripcionDecorator < ApplicationDecorator
   decorates_association :torneo
 
   def dropear_link
-    h.link_to object.dropeo? ? 'Sí' : 'No',
+    h.link_to object.dropeo.present? ? "En la #{object.dropeo}" : 'No',
     h.dropear_del_torneo_path(object.torneo, object),
     method: :put, remote: true, class: 'dropear'
   end

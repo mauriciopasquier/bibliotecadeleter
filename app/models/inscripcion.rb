@@ -38,6 +38,11 @@ class Inscripcion < ActiveRecord::Base
     false
   end
 
+  def dropear_o_deshacer
+    self.dropeo = dropeo? ? nil : torneo.ultima_ronda
+    dropeo?
+  end
+
   def puntuar(ronda)
     rondas.where(numero: ronda).first.puntuar
   end

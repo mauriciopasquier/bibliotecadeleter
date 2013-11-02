@@ -6,6 +6,10 @@ describe Inscripcion do
     build(:inscripcion).valid?.must_equal true
   end
 
+  it 'al principio no ha dropeado' do
+    build(:inscripcion).dropeo?.must_equal false
+  end
+
   describe '#puntos' do
     it 'suma todas las rondas' do
       create(:inscripcion, rondas_attributes: {
@@ -56,6 +60,27 @@ describe Inscripcion do
 
     it 'es falso si no ha jugado' do
       subject.ha_jugado_con?(create(:inscripcion)).wont_equal true
+    end
+  end
+
+  describe '#dropear_o_deshacer' do
+    subject { create(:inscripcion) }
+
+    it 'dropea en la última ronda' do
+      mock = MiniTest::Mock.new.expect(:ultima_ronda, 2)
+
+      subject.stub :torneo, mock do
+        subject.dropear_o_deshacer.must_equal true
+        mock.verify
+        subject.dropeo.must_equal 2
+      end
+    end
+
+    it 'deshace el dropeo' do
+      subject.dropeo = 1
+      subject.dropear_o_deshacer.must_equal false
+      subject.dropeo.must_be_nil
+      subject.dropeo?.must_equal false
     end
   end
 end
