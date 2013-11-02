@@ -14,6 +14,6 @@ Rake::Task['db:data:load_dir'].invoke
 # pg_search
 Rake::Task['extension:unaccent'].invoke
 
-%w{Mazo Lista Version Expansion Artista}.each do |modelo|
+%w{Mazo Lista Version Expansion Artista Torneo}.each do |modelo|
   Rake::Task['pg_search:multisearch:rebuild'].invoke(modelo)
 end

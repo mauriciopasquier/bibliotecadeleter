@@ -15,6 +15,7 @@
 /tmp
 /app/assets/stylesheets/scaffolds.css.scss
 TODO*
+trunk.mdwn
 
 # Ignoro todo lo que depende del deploy
 config/environments/production.rb

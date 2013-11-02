@@ -27,6 +27,8 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es
 //= require bootstrap-select
 //= require jquery.lazyload
+//= require jquery.countdown
+//= require jquery.countdown-es
 //
 //= Archivos de la aplicación a incluir
 //
@@ -34,3 +36,4 @@
 //= require paginacion
 //= require cartas
 //= require listas
+//= require torneos

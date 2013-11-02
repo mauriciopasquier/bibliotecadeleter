@@ -60,7 +60,17 @@ module CartasHelper
       when :rareza
         params[:q][:versiones_rareza_eq_any] if params[:q].present?
       when :expansion
-        params[:q][:versiones_expansion_id_eq_any] if params[:q].present?
+        if params[:q].present?
+          menos = if params[:formato].present?
+            params[:formato].collect { |exps| exps.split(', ') }
+          else
+            [ ]
+          end
+
+          params[:q][:versiones_expansion_id_eq_any].try :-, menos.flatten
+        end
+      when :formato
+        params[:formato]
       when :campo
         params[:incluir]
     end

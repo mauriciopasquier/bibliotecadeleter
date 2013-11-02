@@ -13,6 +13,7 @@
  *= require jquery.ui.autocomplete
  *= require bootstrap-datepicker
  *= require bootstrap-select
+ *= require jquery.countdown
  *
  * Archivos de la aplicación a incluir
  *
@@ -30,4 +31,6 @@
  *= require mazos
  *= require busquedas
  *= require disenos
+ *= require torneos
+ *= require timer
  */

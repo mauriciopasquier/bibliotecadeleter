@@ -1,0 +1,30 @@
+.row-fluid.encabezados
+  .span1.posicion
+    .visible-desktop Posición
+    .hidden-desktop N°
+  .span1.puntos.hidden-phone
+    .visible-desktop Puntos
+    .hidden-desktop Pts
+  .span1.partidas.hidden-phone
+    .visible-desktop Partidas
+    .hidden-desktop Pds
+  .span1.dropear.hidden-phone
+    .visible-desktop Dropeó?
+    .hidden-desktop Drop
+  - if resultados
+    .span4 Nombre
+    .span4 Resultados
+  - else
+    .span8 Nombre
+
+- torneo.posiciones_en(ronda).each.with_index 1 do |participante, posicion|
+  .row-fluid
+    .span1.posicion= posicion
+    .span1.puntos.hidden-phone= participante.puntaje
+    .span1.partidas.hidden-phone= participante.partidas
+    .span1.dropear.hidden-phone= participante.decorate.dropear_link
+    - if resultados
+      .span4= participante.decorate.nombre_o_usuario
+      .span4= participante.decorate.resultado(ronda)
+    - else
+      .span8= participante.decorate.nombre_o_usuario

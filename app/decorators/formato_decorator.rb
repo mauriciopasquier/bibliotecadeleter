@@ -24,4 +24,8 @@ class FormatoDecorator < ApplicationDecorator
   def suplente_o_no
     object.suplente || 'El resto'
   end
+
+  def ids_de_expansion
+    object.expansion_ids.join(', ')
+  end
 end

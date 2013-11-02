@@ -56,7 +56,13 @@ GEM
     attribute_normalizer (1.1.0)
     awesome_nested_fields (0.6.4)
       rails (>= 3.0.0)
+    awesome_print (1.1.0)
     bcrypt-ruby (3.1.2)
+    better_errors (0.9.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.1.1.7)
       railties (>= 3.0)
     bootstrap-sass-rails (2.3.2.1)
@@ -100,6 +106,7 @@ GEM
     coffee-script-source (1.6.3)
     daemons (1.1.9)
     database_cleaner (1.0.1)
+    debug_inspector (0.0.2)
     devise (3.1.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -295,6 +302,7 @@ GEM
       activerecord (>= 3.0)
       activesupport (>= 3.0)
       polyamorous (~> 0.6.0)
+    state_machine (1.2.0)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
@@ -333,6 +341,9 @@ DEPENDENCIES
   amoeba
   attribute_normalizer
   awesome_nested_fields
+  awesome_print
+  better_errors
+  binding_of_caller
   bootstrap-datepicker-rails
   bootstrap-sass-rails (< 3.0.0)
   bootstrap-select-rails
@@ -381,6 +392,7 @@ DEPENDENCIES
   selenium-webdriver
   sitemap
   squeel
+  state_machine
   strong_parameters!
   therubyracer
   thin

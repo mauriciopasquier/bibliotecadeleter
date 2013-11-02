@@ -1,10 +1,18 @@
 # Cambios recientes
 
+## 1.6.0
+
+### Mejoras
+
+* Se pueden crear torneos, y jugarlos!
+* Se pueden cargar tiendas y su dirección
+* Agrego por formato a la búsqueda
+
 ## 1.5.6
 
 ### Arreglos
 
-- Arregla un problemita de permisos que duró 15 minutos :|
+- Arregla un problemita de permisos que duró 15 minutos :(
 
 ## 1.5.5
 

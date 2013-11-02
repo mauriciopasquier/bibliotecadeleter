@@ -4,7 +4,9 @@ class Ability
 
   @@canones = [ Carta, Expansion, Version, Artista, Imagen, Formato ]
   @@apocrifos = [
-    Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente, Diseno ]
+    Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente, Diseno, Torneo,
+    Inscripcion
+  ]
   @@modelos = @@canones + @@apocrifos
 
   cattr_reader :canones, :apocrifos, :modelos
@@ -32,6 +34,10 @@ class Ability
       can :create, apocrifos
       can :manage, [ Diseno, Lista, Mazo ], usuario_id: @usuario.id
       can :manage, Usuario, id: @usuario.id
+
+      # Puede organizar sus propios torneos
+      can :manage, Torneo, organizador_id: @usuario.id
+      can :manage, Inscripcion, torneo_id: @usuario.torneos_organizado_ids
 
       # Puede leer documentos de búsqueda de recursos no visibles si son suyos
       [ Mazo, Lista ].each do |modelo|

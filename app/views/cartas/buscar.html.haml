@@ -21,13 +21,16 @@
         .span2= label_tag 'En las expansiones'
         .span4
           = select_tag 'q[versiones_expansion_id_eq_any]',
-              options_from_collection_for_select(expansiones, :id, :nombre, seleccionadas(:expansion)),
-              multiple: true, class: 'span12', title: 'Todas'
+              options_from_collection_for_select(expansiones.order(:lanzamiento),
+              :id, :nombre, seleccionadas(:expansion)), multiple: true,
+              class: 'span12', title: 'Todas'
 
-        .span2= label_tag 'Y mostrarlas estilo'
+        .span2= label_tag 'Y/o en los formatos'
         .span4
-          = select_tag 'mostrar[tipo]',
-              options_for_select(ImagenDecorator.estilos_para_select, tipo_actual), class: 'span12'
+          = select_tag 'formato',
+              options_from_collection_for_select(Formato.abiertos.decorate,
+              :ids_de_expansion, :nombre, seleccionadas(:formato)), multiple: true,
+              class: 'span12', title: 'Todos'
 
       .row-fluid
         .span2= f.label busqueda, 'Con el texto'
@@ -38,6 +41,13 @@
           = select_tag 'incluir',
               options_for_select(campos_de_busqueda, seleccionadas(:campo)),
               multiple: true, class: 'span12', title: 'Cualquier lado'
+
+      .row-fluid
+        .span2= label_tag 'Y mostrarlas estilo'
+        .span4
+          = select_tag 'mostrar[tipo]',
+              options_for_select(ImagenDecorator.estilos_para_select, tipo_actual),
+              class: 'span12'
 
       .row-fluid
         .span12

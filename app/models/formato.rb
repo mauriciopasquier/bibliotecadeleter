@@ -15,6 +15,7 @@ class Formato < ActiveRecord::Base
   friendly_id :nombre, use: :slugged
 
   scope :ordenados, order('tipo, nombre')
+  scope :abiertos, where(tipo: 'Abierto')
 
   def nombres_de_cartas_prohibidas=(nombres)
     if nombres.present?
