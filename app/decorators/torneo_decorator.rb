@@ -48,4 +48,8 @@ class TorneoDecorator < ApplicationDecorator
         h.ronda_torneo_path(object, numero), class: 'btn', id: 'siguiente'
     end
   end
+
+  def tiempo_de_ronda
+    object.sistema.class::TIEMPO[:ronda]
+  end
 end
