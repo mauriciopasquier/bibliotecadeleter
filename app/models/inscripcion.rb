@@ -7,6 +7,8 @@ class Inscripcion < ActiveRecord::Base
 
   accepts_nested_attributes_for :rondas, reject_if: :all_blank
 
+  before_create :desempatar
+
   normalize_attributes :codigo, :participante
 
   # requiere agrupamiento
@@ -15,7 +17,7 @@ class Inscripcion < ActiveRecord::Base
       'inscripciones.*,
       sum(rondas.puntos) as puntaje,
       sum(rondas.partidas_ganadas) as partidas'
-    ).order('puntaje desc, partidas desc')
+    ).order('puntaje desc, partidas desc').order(:desempate)
   end
 
   def puntos
@@ -46,4 +48,10 @@ class Inscripcion < ActiveRecord::Base
   def puntuar(ronda)
     rondas.where(numero: ronda).first.puntuar
   end
+
+  private
+
+    def desempatar
+      self.desempate = rand(10000)
+    end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131101190641) do
+ActiveRecord::Schema.define(:version => 20131102222337) do
 
   create_table "artistas", :force => true do |t|
     t.string   "nombre"
@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20131101190641) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "dropeo"
+    t.integer  "desempate",    :null => false
   end
 
   create_table "links", :force => true do |t|
