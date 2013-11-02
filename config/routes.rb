@@ -86,8 +86,8 @@ BibliotecaDelEter::Application.routes.draw do
           to: 'torneos#crear_ronda', as: :crear_ronda
         get 'rondas/:numero(.:format)',
           to: 'torneos#mostrar_ronda', as: :ronda
-        delete 'rondas/:numero(.:format)',
-          to: 'torneos#deshacer_ronda', as: :ronda
+        delete 'rondas(.:format)',
+          to: 'torneos#deshacer_ronda', as: :ultima_ronda
       end
     end
 

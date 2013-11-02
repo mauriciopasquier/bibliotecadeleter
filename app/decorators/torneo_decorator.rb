@@ -30,4 +30,22 @@ class TorneoDecorator < ApplicationDecorator
     end
     pairings
   end
+
+  def anterior(ronda)
+    numero = ronda - 1 > 0 ? ronda - 1 : object.ultima_ronda
+
+    h.content_tag :span do
+      h.link_to "<span class='flecha'>←</span> Ronda #{numero}".html_safe,
+        h.ronda_torneo_path(object, numero), class: 'btn', id: 'anterior'
+    end
+  end
+
+  def siguiente(ronda)
+    numero =  ronda + 1 <= object.ultima_ronda ? ronda + 1 : 1
+
+    h.content_tag :span do
+      h.link_to "Ronda #{numero} <span class='flecha'>→</span>".html_safe,
+        h.ronda_torneo_path(object, numero), class: 'btn', id: 'siguiente'
+    end
+  end
 end

@@ -85,7 +85,7 @@ es:
                   habilidad sea muy rara y no tenga un texto de reglas claro,
                   podés explayarte acá'
   torneos:
-    nueva_ronda:
-      cancelar:  'Estás por deshacer la ronda %{ultima}'
+    show:
+      cancelar:  'Estás por deshacer la última ronda'
     mostrar_ronda:
-      cancelar:  'Estás por deshacer esta ronda'
+      cancelar:  'Estás por deshacer la última ronda'

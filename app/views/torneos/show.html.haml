@@ -1,7 +1,7 @@
 %h1= titulo
 
 .row-fluid
-  .span6
+  .span4
     %h2 Detalles
     %dl.dl-horizontal
       %dt organiza
@@ -19,18 +19,25 @@
       %dt el
       %dd= l torneo.fecha
 
-  .span6
-    %h2 Preinscriptos
-    = torneo.preinscriptos
+  .span8
+    - if torneo.rondas.any?
+      %h2 Posiciones finales después de #{torneo.ultima_ronda} rondas
+      = render partial: 'posiciones', locals: { ronda: torneo.ultima_ronda }
+    - else
+      %h2 Preinscriptos
+      = torneo.preinscriptos
 
 .row-fluid.botones
   .span12
     - if can? :edit, torneo
       = link_to 'Editar', edit_torneo_path(torneo),
         class: 'btn btn-warning'
+    - if can?(:delete, torneo) && torneo.can_deshacer?
+      = link_to 'Anterior', ultima_ronda_torneo_path(torneo), method: :delete,
+        data: { confirm: t('.cancelar') }, class: 'btn btn-danger'
     - if torneo.quedan_rondas?
       - if can? :edit, torneo
-        = link_to 'Jugar', nueva_ronda_torneo_path(torneo),
+        = link_to 'Siguiente', nueva_ronda_torneo_path(torneo),
           class: 'btn btn-success'
     - else
       - if can? :read, torneo

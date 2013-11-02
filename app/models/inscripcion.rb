@@ -9,6 +9,15 @@ class Inscripcion < ActiveRecord::Base
 
   normalize_attributes :codigo, :participante
 
+  # requiere agrupamiento
+  def self.con_puntaje
+    select(
+      'inscripciones.*,
+      sum(rondas.puntos) as puntaje,
+      sum(rondas.partidas_ganadas) as partidas'
+    ).order('puntaje desc, partidas desc')
+  end
+
   def puntos
    rondas.sum(:puntos)
   end
@@ -27,5 +36,9 @@ class Inscripcion < ActiveRecord::Base
 
   def bye?
     false
+  end
+
+  def puntuar(ronda)
+    rondas.where(numero: ronda).first.puntuar
   end
 end

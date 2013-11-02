@@ -15,6 +15,7 @@ gem 'paperclip'
 gem 'squeel'
 gem 'amoeba'
 gem 'loofah'
+gem 'state_machine'
 
 # View
 gem 'dynamic_form'
@@ -82,6 +83,7 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'awesome_print'
 end
 
 group :test do

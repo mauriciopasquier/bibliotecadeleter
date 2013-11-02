@@ -49,32 +49,40 @@ class TorneosController < ApplicationController
 
   # Acciones para rondas en masa (es más práctico que un nested resource)
   def nueva_ronda
-    respond_with @torneo
+    @torneo.empezar
+    respond_with @torneo do |formato|
+      if @torneo.errors[:estado].any?
+        formato.html do
+          flash[:error] = @torneo.errors[:estado].join(', ')
+          redirect_to @torneo
+        end
+      end
+    end
   end
 
   def crear_ronda
-    @torneo.jugado = true if @torneo.valid?
     @torneo.update_attributes(parametros_permitidos)
     @torneo.puntuar
-    respond_with @torneo,
-      location: ronda_torneo_path(@torneo, @torneo.ultima_ronda)
+
+    respond_with @torneo
   end
 
   def deshacer_ronda
-    @torneo.rondas.where(numero: params[:numero]).destroy_all
+    @torneo.deshacer
     redirect_to @torneo.rondas.any? ? nueva_ronda_torneo_path(@torneo) : @torneo
   end
 
   def mostrar_ronda
+    @ronda = numero.to_i
     respond_with @torneo
   end
 
   def dropear
-    @inscripcion = Inscripcion.find(params[:inscripcion_id]).toggle :dropeo
+    @inscripcion = Inscripcion.find(inscripcion).toggle :dropeo
     @inscripcion.save
 
     respond_to do |format|
-      format.json { render json: @inscripcion}
+     format.json { render json: @inscripcion}
     end
   end
 
@@ -93,5 +101,14 @@ class TorneosController < ApplicationController
           ]
         ]
       )
+    end
+
+    # TODO grep params en todos lados
+    def inscripcion
+      params.require(:inscripcion_id)
+    end
+
+    def numero
+      params.require(:numero)
     end
 end

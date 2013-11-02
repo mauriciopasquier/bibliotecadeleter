@@ -9,18 +9,19 @@ class Torneo < ActiveRecord::Base
   # TODO :restrict_with_exception con rails4
   has_many :inscripciones, dependent: :restrict, inverse_of: :torneo do
     def posiciones
-      joins(:rondas).group(
-        'inscripciones.id'
-      ).select(
-        'inscripciones.*,
-          sum(rondas.puntos) as puntaje,
-          sum(rondas.partidas_ganadas) as partidas'
-      ).order('puntaje desc, partidas desc')
+      joins(:rondas).group('inscripciones.id').con_puntaje
+    end
+
+    def posiciones_en(ronda)
+      joins(:rondas).where(
+        'rondas.numero <= ?', ronda
+      ).group('inscripciones.id').con_puntaje
     end
   end
 
   has_many :usuarios, through: :inscripciones
-  has_many :rondas, through: :inscripciones, order: :numero
+  has_many :rondas, through: :inscripciones, order: :numero,
+    inverse_of: :torneo
   # TODO congelar los mazos en Inscripcion?
   # has_many :mazos, through: :inscripciones
 
@@ -29,16 +30,48 @@ class Torneo < ActiveRecord::Base
 
   friendly_id :fecha_lugar_formato, use: :slugged
 
+  # TODO jugado => propuesto => [ sancionado o rechazado]
+  state_machine :estado, initial: :abierto do
+    event :cerrar do
+      transition :abierto => :cerrado
+    end
+
+    event :empezar do
+      transition [ :abierto, :cerrado, :jugando ] => :jugando
+    end
+
+    event :puntuar do
+      transition :jugando => :jugado, unless: :quedan_rondas?
+      transition :jugando => same
+    end
+
+    event :abrir do
+      transition [ :abierto, :cerrado, :jugando ] => :abrir
+    end
+
+    event :deshacer do
+      transition :jugando => same, if: :quedan_rondas?
+      transition :jugando => :cerrado
+      transition :jugado => :jugando
+    end
+
+    before_transition on: :puntuar, do: :asignar_puntos
+    before_transition on: :abrir, do: :deshacer_rondas
+    before_transition on: :deshacer, do: :deshacer_ultima_ronda
+
+    state :propuesto do
+      validate :cantidad_de_inscriptos
+    end
+  end
+
   validates_presence_of :fecha, :formato, :organizador, :tienda
-  validate :cantidad_de_inscriptos,
-    if: Proc.new { |torneo| torneo.jugado? && torneo.oficial? }
 
   accepts_nested_attributes_for :inscripciones,
     allow_destroy: true, reject_if: :all_blank
 
   delegate :nombre, to: :formato, allow_nil: true, prefix: true
   delegate :nombre, to: :tienda, allow_nil: true, prefix: true
-  delegate :posiciones, to: :inscripciones, allow_nil: true
+  delegate :posiciones, :posiciones_en, to: :inscripciones, allow_nil: true
 
   attr_writer :sistema
 
@@ -61,10 +94,6 @@ class Torneo < ActiveRecord::Base
     rondas.pluck(:numero).last || 0
   end
 
-  def puntuar
-    rondas.where(numero: ultima_ronda).map &:puntuar
-  end
-
   def quedan_rondas?
     ultima_ronda < sistema.rondas
   end
@@ -81,5 +110,18 @@ class Torneo < ActiveRecord::Base
 
     def fecha_lugar_formato
       [fecha, tienda_nombre, formato_nombre].join('-')
+    end
+
+    def asignar_puntos
+      inscripciones.each { |i| i.puntuar ultima_ronda }
+    end
+
+    def deshacer_rondas
+      rondas.each { |r| r.destroy }
+    end
+
+    def deshacer_ultima_ronda
+      inscripciones.where(dropeo: ultima_ronda).update_all(dropeo: nil)
+      rondas.where(numero: ultima_ronda).destroy_all
     end
 end

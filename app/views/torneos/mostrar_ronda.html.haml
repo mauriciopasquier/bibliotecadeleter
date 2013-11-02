@@ -1,32 +1,21 @@
 %h1= titulo
 
 #posiciones
-  .row-fluid.encabezados
-    .span1.posicion Posición
-    .span1.puntos.hidden-phone Puntos
-    .span1.partidas.hidden-phone Partidas
-    .span1.dropear ¿Dropeó?
-    .span8 Nombre
+  = render partial: 'posiciones', locals: { ronda: @ronda }
 
-  - torneo.posiciones.each.with_index 1 do |participante, posicion|
-    .row-fluid
-      .span1.posicion= posicion
-      .span1.puntos.hidden-phone= participante.puntaje
-      .span1.partidas.hidden-phone= participante.partidas
-      .span1.dropear= participante.decorate.dropear_link
-      .span8= participante.decorate.nombre_o_usuario
+  .row-fluid.flechas
+    .span12
+      = torneo.anterior @ronda
+      = link_to 'Final', torneo, class: 'btn'
+      = torneo.siguiente @ronda
 
 .row-fluid.botones
   .span12
     - if can? :delete, torneo
-      = link_to 'Anterior', ronda_torneo_path(torneo, torneo.ultima_ronda),
-        method: :delete, data: { confirm: t('.cancelar') },
-        class: 'btn btn-danger'
-    - if torneo.quedan_rondas?
-      - if can? :edit, torneo
-        = link_to 'Siguente', nueva_ronda_torneo_path(torneo),
-          class: 'btn btn-success'
-    - if can? :read, torneo
-      = link_to 'Este torneo', torneo, class: 'btn'
+      = link_to 'Deshacer', ultima_ronda_torneo_path(torneo), method: :delete,
+        data: { confirm: t('.cancelar') }, class: 'btn btn-danger'
+    - if can? :edit, torneo
+      = link_to 'Siguente', @torneo.jugando? ? nueva_ronda_torneo_path(torneo) : @torneo,
+        class: 'btn btn-success'
     - if can? :read, Torneo
       = link_to 'Otros torneos', torneos_path, class: 'btn'
