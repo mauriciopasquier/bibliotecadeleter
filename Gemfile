@@ -68,6 +68,7 @@ group :assets do
   gem 'jquery-ui-rails'
   gem 'bootstrap-datepicker-rails'
   gem 'bootstrap-select-rails'
+  gem 'jquery-countdown-rails'
 end
 
 group :test, :development do
