@@ -14,6 +14,7 @@ class ReservasController < ApplicationController
     @versiones = PaginadorDecorator.decorate apply_scopes(@reserva.versiones)
     tipo_actual params[:mostrar].try(:[], :tipo) || :original
 
+    @tipo_de_lista = 'reserva'
     respond_with(@reserva, template: 'colecciones/show')
   end
 

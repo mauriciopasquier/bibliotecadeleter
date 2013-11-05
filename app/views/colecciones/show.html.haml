@@ -8,7 +8,9 @@
                           paginar: true }
     - else
       %p
-        Tu colección está vacía.
+        Tu
+        = @tipo_de_lista
+        está vacía.
         ¿Por qué no le
         #{link_to 'agregás', edit_coleccion_path}
         algunas cartas?
