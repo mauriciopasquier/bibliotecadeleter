@@ -11,7 +11,7 @@ module ColeccionesHelper
       when 'faltantes'
         '¡Hay que conseguir todo esto!'
       when 'edit'
-        'Editando la colección'
+        '¿Cómo editar la reserva y la colección?'
       else
         nil
     end

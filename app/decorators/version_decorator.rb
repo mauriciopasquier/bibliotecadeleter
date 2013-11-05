@@ -80,8 +80,8 @@ class VersionDecorator < ApplicationDecorator
 
   def reserva_y_coleccion
     h.content_tag(:div, class: 'controles') do
-      [ control(h.reserva_actual, 'Quiero'),
-        control(h.coleccion_actual, 'Tengo')
+      [ control(h.reserva_actual, h.t('colecciones.quiero')),
+        control(h.coleccion_actual, h.t('colecciones.tengo'))
       ].join.html_safe
     end
   end

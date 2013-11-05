@@ -5,11 +5,7 @@ module ListasHelper
   def titulo
     case params[:action]
       when 'index'
-        if @usuario == current_usuario
-          'Tus listas'
-        else
-          "Listas de #{@usuario.nick}"
-        end
+        usuario.actual? ? 'Tus listas' : "Listas de #{@usuario.nick}"
       when 'show'
         lista.nombre
       when 'new'
@@ -22,11 +18,7 @@ module ListasHelper
   end
 
   def otras_listas
-    if @usuario == current_usuario
-      "Tus otras listas"
-    else
-      "Listas de #{@usuario.nick}"
-    end
+    usuario.actual? ? 'Tus otras listas' : "Listas de #{@usuario.nick}"
   end
 
   def nuevo_slot
@@ -46,7 +38,7 @@ module ListasHelper
     content_tag :p do
       p = 'No hay cartas en la lista.'
 
-      if @usuario == current_usuario
+      if usuario.actual?
         p << '¿Por qué no le '
         p << link_to('agregás', edit_usuario_lista_path(@usuario, @lista))
         p << ' algunas?'

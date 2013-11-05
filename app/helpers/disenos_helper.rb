@@ -5,11 +5,7 @@ module DisenosHelper
   def titulo
     case params[:action]
       when 'index'
-        if @usuario == current_usuario
-          'Tus diseños'
-        else
-          "Diseños de #{@usuario.nick}"
-        end
+        usuario.actual? ? 'Tus diseños' : "Diseños de #{@usuario.nick}"
       when 'show'
         diseno.nombre
       when 'new'
@@ -22,11 +18,7 @@ module DisenosHelper
   end
 
   def otros_disenos
-    if @usuario == current_usuario
-      "Tus otros diseños"
-    else
-      "Diseños de #{@usuario.nick}"
-    end
+    usuario.actual? ? 'Tus otros diseños' : "Diseños de #{@usuario.nick}"
   end
 
   def diseno

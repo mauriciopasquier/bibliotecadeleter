@@ -13,6 +13,7 @@ class ColeccionesController < ApplicationController
   def show
     @versiones = PaginadorDecorator.decorate apply_scopes(@coleccion.versiones)
 
+    @tipo_de_lista = 'colección'
     respond_with(@coleccion)
   end
 

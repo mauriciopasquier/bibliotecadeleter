@@ -8,4 +8,8 @@ class UsuarioDecorator < ApplicationDecorator
   def cantidad_sobrante
     object.sobrantes.map(&:cantidad).reduce(:+) || 0
   end
+
+  def actual?
+    h.current_usuario == object
+  end
 end
