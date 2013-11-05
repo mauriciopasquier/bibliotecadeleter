@@ -89,3 +89,6 @@ es:
       cancelar:  'Estás por deshacer la última ronda'
     mostrar_ronda:
       cancelar:  'Estás por deshacer la última ronda'
+  colecciones:
+    quiero: 'Quiero'
+    tengo:  'Tengo'
