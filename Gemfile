@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.14'
+gem 'rails', '3.2.15'
 
 # Database
 gem 'pg'
@@ -80,7 +80,7 @@ end
 group :development do
   gem 'mail_view'
   gem 'bullet'
-  gem 'capistrano'
+  gem 'capistrano', '~> 2'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
