@@ -1,0 +1,11 @@
+%h1= titulo
+
+%ul.nav.nav-tabs
+  %li
+    %a{href: panel_usuario_path(@usuario)} Panel
+  %li.active
+    %a{href: carnet_usuario_path(@usuario)} Carnet
+
+#carnet.tab-pane.active
+  = render partial: 'devise/shared/edit_registrations',
+    locals: { requisitos: [] }

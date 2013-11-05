@@ -1,0 +1,10 @@
+%h1= titulo
+
+%ul.nav.nav-tabs
+  %li.active
+    %a{href: panel_usuario_path(@usuario)} Panel
+  %li
+    %a{href: carnet_usuario_path(@usuario)} Carnet
+
+#panel.tab-pane.active
+  = render partial: 'panel'

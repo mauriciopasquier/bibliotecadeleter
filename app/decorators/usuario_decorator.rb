@@ -9,6 +9,10 @@ class UsuarioDecorator < ApplicationDecorator
     object.sobrantes.map(&:cantidad).reduce(:+) || 0
   end
 
+  def antiguedad
+    h.distance_of_time_in_words(usuario.created_at, Date.today)
+  end
+
   def actual?
     h.current_usuario == object
   end

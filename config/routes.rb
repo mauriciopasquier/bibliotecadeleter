@@ -22,7 +22,6 @@ BibliotecaDelEter::Application.routes.draw do
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales' => 'inicio#legales'
-  get 'panel' => 'inicio#panel'
   get 'cambios' => 'inicio#cambios'
   get 'canon' => 'inicio#canon'
   get 'arena' => 'inicio#arena'
@@ -95,6 +94,14 @@ BibliotecaDelEter::Application.routes.draw do
 
     # Tiene que ir último para evitar conflictos por el path nulo
     r.resources :usuarios, path: '', only: :show do
+      collection do
+        get 'socios' => 'usuarios#index', as: ''
+      end
+
+      member do
+        get 'panel'
+        get 'carnet'
+      end
 
       resources :listas, path_names: femeninos do
         member do

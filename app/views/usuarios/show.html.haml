@@ -1,0 +1,15 @@
+%h1= titulo
+
+%ul.nav.nav-tabs{data: { tabs: true }}
+  %li.active
+    %a{href: panel_usuario_path(@usuario), data: { target: '#panel', toggle: 'tab'}} Panel
+  %li
+    %a{href: carnet_usuario_path(@usuario), data: { target: '#carnet', toggle: 'tab'}} Carnet
+
+.tab-content
+  #panel.tab-pane.active
+    = render partial: 'panel'
+
+  #carnet.tab-pane
+    = render partial: 'devise/shared/edit_registrations',
+      locals: { requisitos: [] }
