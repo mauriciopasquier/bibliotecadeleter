@@ -20,6 +20,20 @@ class Usuario < ActiveRecord::Base
 
   friendly_id :nick, use: :slugged
 
+  has_attached_file :avatar, {
+    url:  "/:slug.:extension",
+    styles: {
+      chico:    '80x80',
+      arte:     '190x190',
+      grande:   '256x256',
+      gigante:  '512x512'
+    },
+    convert_options: {
+      all: '-strip'
+    },
+    default_style: :normal
+  }
+
   after_create :crear_listas, :asociarse
 
   # Cartas que le faltan (cantidades negativas) o sobran a este usuario
