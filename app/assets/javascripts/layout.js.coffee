@@ -21,6 +21,13 @@ bindearTodo = ->
   # Si hay javascript oculta el checkbox y muestra el link remoto
   $('.controles-anidados').children().toggleClass('hidden')
 
+  # mejora el estilo default de los file uploaders
+  $("form :file").filestyle(
+    buttonText: 'Subir',
+    classText: 'span9 filestyle',
+    classButton: 'span3 filestyle'
+  )
+
 $(document)
   .on 'click', '.plegable', ->
     $(this).toggleClass('plegado').nextAll().toggle('fast')

@@ -59,3 +59,14 @@ button.close {
 .botones {
   margin-top: 1em;
 }
+
+// Para los estilos de file upload (tal vez estoy usando mal bootstrap)
+.row-fluid input[class*="span"].filestyle {
+  width: 80%;
+  float: left;
+}
+.row-fluid button.btn.filestyle {
+  margin-left: 0;
+  border-left: none;
+  width: 20%;
+}
