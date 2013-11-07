@@ -22,10 +22,10 @@ bindearTodo = ->
   $('.controles-anidados').children().toggleClass('hidden')
 
   # mejora el estilo default de los file uploaders
-  $("form :file").filestyle(
+  $("form.upload-normal :file").filestyle(
     buttonText: 'Subir'
-    classInput: 'span9 filestyle'
-    classButton: 'span3 filestyle btn'
+    classInput: 'filestyle'
+    classButton: 'filestyle btn'
     icon: false
   )
 

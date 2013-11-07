@@ -23,8 +23,8 @@ class Usuario < ActiveRecord::Base
 
   has_gravatar
   has_attached_file :avatar, {
-    url:  "/:slug-:style.:extension",
-    path: ":rails_root/public/system/avatares/:slug/:style.:extension",
+    url:  "/avatar/:slug/:style.:extension",
+    path: ":rails_root/public/avatar/:slug/:style.:extension",
     styles: {
       chico:    '80x80',
       arte:     '190x190',
@@ -33,7 +33,7 @@ class Usuario < ActiveRecord::Base
     convert_options: {
       all: '-strip'
     },
-    default_style: :chico
+    default_style: :arte
   }
 
   after_create :crear_listas, :asociarse

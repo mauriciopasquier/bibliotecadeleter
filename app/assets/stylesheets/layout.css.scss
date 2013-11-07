@@ -59,16 +59,3 @@ button.close {
 .botones {
   margin-top: 1em;
 }
-
-// Para los estilos de file upload
-.filestyle {
-  &[type='text'] {
-    width: 80%;
-    float: left;
-  }
-
-  &.btn {
-    margin-left: 0;
-    width: 20%;
-  }
-}

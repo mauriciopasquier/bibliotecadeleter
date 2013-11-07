@@ -1,0 +1,10 @@
+= form_for usuario,
+  html: { class: 'form-horizontal upload-normal avatar', multipart: true } do |f|
+  .row-fluid
+    .control-group
+      .control-label= usuario.algun_avatar_tag
+      .controls
+        = f.file_field :avatar, class: 'span12'
+        .botones
+          .span12
+            = f.submit class: 'btn btn-success'

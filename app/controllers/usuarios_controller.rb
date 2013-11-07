@@ -22,4 +22,17 @@ class UsuariosController < ApplicationController
   def carnet
     respond_with(@usuario)
   end
+
+  def update
+    @usuario.update_attributes(parametros_permitidos)
+    respond_with(@usuario)
+  end
+
+  private
+
+    def parametros_permitidos
+      params.require(:usuario).permit(
+        :avatar,
+      )
+    end
 end

@@ -7,7 +7,7 @@ module UsuariosHelper
     case params[:action]
       when 'index'
         'Registro de socios'
-      when 'show', 'carnet', 'panel'
+      when 'show', 'carnet', 'panel', 'avatar'
         usuario.nick
       else
         nil

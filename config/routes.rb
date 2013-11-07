@@ -93,7 +93,7 @@ BibliotecaDelEter::Application.routes.draw do
     end
 
     # Tiene que ir último para evitar conflictos por el path nulo
-    r.resources :usuarios, path: '', only: :show do
+    r.resources :usuarios, path: '', only: [ :show, :update ] do
       collection do
         get 'socios' => 'usuarios#index', as: ''
       end
@@ -101,6 +101,7 @@ BibliotecaDelEter::Application.routes.draw do
       member do
         get 'panel'
         get 'carnet'
+        get 'avatar'
       end
 
       resources :listas, path_names: femeninos do

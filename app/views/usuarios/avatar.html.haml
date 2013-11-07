@@ -1,12 +1,12 @@
 %h1= titulo
 
 %ul.nav.nav-tabs
-  %li.active
+  %li
     = link_to 'Panel', panel_usuario_path(@usuario)
   %li
     = link_to 'Carnet', carnet_usuario_path(@usuario)
-  %li
+  %li.active
     = link_to 'Avatar', avatar_usuario_path(@usuario)
 
 #panel.tab-pane.active
-  = render partial: 'panel'
+  = render partial: 'avatar'

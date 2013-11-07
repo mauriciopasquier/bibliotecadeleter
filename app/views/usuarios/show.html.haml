@@ -2,9 +2,14 @@
 
 %ul.nav.nav-tabs{data: { tabs: true }}
   %li.active
-    %a{href: panel_usuario_path(@usuario), data: { target: '#panel', toggle: 'tab'}} Panel
+    = link_to 'Panel', panel_usuario_path(@usuario),
+      data: { target: '#panel', toggle: 'tab' }
   %li
-    %a{href: carnet_usuario_path(@usuario), data: { target: '#carnet', toggle: 'tab'}} Carnet
+    = link_to 'Carnet', carnet_usuario_path(@usuario),
+      data: { target: '#carnet', toggle: 'tab' }
+  %li
+    = link_to 'Avatar', avatar_usuario_path(@usuario),
+      data: { target: '#avatar', toggle: 'tab' }
 
 .tab-content
   #panel.tab-pane.active
@@ -13,3 +18,6 @@
   #carnet.tab-pane
     = render partial: 'devise/shared/edit_registrations',
       locals: { requisitos: [] }
+
+  #avatar.tab-pane
+    = render partial: 'avatar'

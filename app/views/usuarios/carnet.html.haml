@@ -2,9 +2,11 @@
 
 %ul.nav.nav-tabs
   %li
-    %a{href: panel_usuario_path(@usuario)} Panel
+    = link_to 'Panel', panel_usuario_path(@usuario)
   %li.active
-    %a{href: carnet_usuario_path(@usuario)} Carnet
+    = link_to 'Carnet', carnet_usuario_path(@usuario)
+  %li
+    = link_to 'Avatar', avatar_usuario_path(@usuario)
 
 #carnet.tab-pane.active
   = render partial: 'devise/shared/edit_registrations',
