@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Usuario < ActiveRecord::Base
   include FriendlyId
+  include Gravtastic
 
   has_merit
 
@@ -20,18 +21,19 @@ class Usuario < ActiveRecord::Base
 
   friendly_id :nick, use: :slugged
 
+  has_gravatar
   has_attached_file :avatar, {
-    url:  "/:slug.:extension",
+    url:  "/:slug-:style.:extension",
+    path: ":rails_root/public/system/avatares/:slug/:style.:extension",
     styles: {
       chico:    '80x80',
       arte:     '190x190',
-      grande:   '256x256',
-      gigante:  '512x512'
+      grande:   '256x256'
     },
     convert_options: {
       all: '-strip'
     },
-    default_style: :normal
+    default_style: :chico
   }
 
   after_create :crear_listas, :asociarse

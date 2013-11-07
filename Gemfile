@@ -16,6 +16,7 @@ gem 'squeel'
 gem 'amoeba'
 gem 'loofah'
 gem 'state_machine'
+gem 'gravtastic'
 
 # View
 gem 'dynamic_form'

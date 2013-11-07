@@ -16,4 +16,18 @@ class UsuarioDecorator < ApplicationDecorator
   def actual?
     h.current_usuario == object
   end
+
+  # Si cargó un avatar, usarlo. Si no, defaultear a gravatar con default a
+  # nuestro missing.png
+  def algun_avatar
+    if object.avatar?
+      object.avatar.url
+    else
+      object.gravatar_url(default: object.avatar.url)
+    end
+  end
+
+  def algun_avatar_tag
+    h.x_image_tag(algun_avatar, alt: object.nick)
+  end
 end

@@ -132,6 +132,7 @@ GEM
     ffi (1.9.3)
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
+    gravtastic (3.2.6)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -362,6 +363,7 @@ DEPENDENCIES
   dynamic_form
   factory_girl_rails
   friendly_id
+  gravtastic
   haml-rails
   has_scope
   hirb
