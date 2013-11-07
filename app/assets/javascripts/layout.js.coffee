@@ -23,9 +23,10 @@ bindearTodo = ->
 
   # mejora el estilo default de los file uploaders
   $("form :file").filestyle(
-    buttonText: 'Subir',
-    classText: 'span9 filestyle',
-    classButton: 'span3 filestyle'
+    buttonText: 'Subir'
+    classInput: 'span9 filestyle'
+    classButton: 'span3 filestyle btn'
+    icon: false
   )
 
 $(document)

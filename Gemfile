@@ -70,6 +70,7 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'bootstrap-select-rails'
   gem 'jquery-countdown-rails'
+  gem 'bootstrap-filestyle-rails'
 end
 
 group :test, :development do
