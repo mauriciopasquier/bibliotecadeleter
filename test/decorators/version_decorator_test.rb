@@ -10,6 +10,7 @@ describe VersionDecorator do
     end
 
     it 'genera el marcado necesario para agregar/remover' do
+      skip 'stubear current_usuario'
       [ :coleccion, :reserva ].each do |tipo|
 
         render text: @deco.control(@usuario.send(tipo), 'Texto')

@@ -47,12 +47,6 @@ BibliotecaDelEter::Application.routes.draw do
 
   with_options path_names: femeninos do |r|
 
-    r.resource :coleccion,  except: [ :create, :destroy, :new ] do
-      get :faltantes
-      get :sobrantes
-    end
-    r.resource :reserva,    only: [ :show, :update ]
-
     r.resources :cartas, except: [ :edit ] do
       r.resources :versiones, only: [ :new, :edit, :destroy ]
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
@@ -117,6 +111,13 @@ BibliotecaDelEter::Application.routes.draw do
       end
 
       r.resources :disenos
+
+      resource :coleccion, path_names: femeninos,
+        except: [ :create, :destroy, :new ] do
+        get :faltantes
+        get :sobrantes
+      end
+      resource :reserva, path_names: femeninos, only: [ :show, :update, :edit ]
     end
   end
 

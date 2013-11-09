@@ -1,22 +1,22 @@
 .row-fluid
   .span4
-    .pull-left= link_to 'Todas tus cartas', coleccion_path
+    .pull-left= link_to 'Colección', usuario_coleccion_path(@usuario)
     .pull-right= coleccion_actual.cantidad
 
   .span4
-    .pull-left= link_to 'Tu reserva', reserva_path
+    .pull-left= link_to 'Reserva', usuario_reserva_path(@usuario)
     .pull-right= reserva_actual.cantidad
 
   .span4
     .pull-left
-      = link_to('Faltantes', faltantes_coleccion_path)
+      = link_to('Faltantes', faltantes_usuario_coleccion_path(@usuario))
       = '/'
-      = link_to('Sobrantes', sobrantes_coleccion_path)
+      = link_to('Sobrantes', sobrantes_usuario_coleccion_path(@usuario))
     .pull-right= "#{usuario.cantidad_faltante}/#{usuario.cantidad_sobrante}"
 
 .row-fluid
   .span4
-    %h2 Listas recientes
+    %h2 Listas
     - usuario.listas.normales.recientes.each do |lista|
       .row-fluid
         .span12
@@ -25,7 +25,7 @@
             = lista.cantidad
             = lista.decorate.visibilidad_tag
   .span4
-    %h2 Mazos recientes
+    %h2 Mazos
     - @usuario.mazos.recientes.each do |mazo|
       .row-fluid
         .span12
@@ -34,7 +34,7 @@
             = mazo.decorate.link_al_formato
             = mazo.decorate.visibilidad_tag
   .span4
-    %h2 Tus diseños
+    %h2 Diseños
     - @usuario.disenos.recientes.each do |delirio|
       .row-fluid
         .span12
@@ -43,18 +43,18 @@
 .row-fluid
   .span4
     - if can? :create, Lista
-      = link_to 'Crear lista', new_usuario_lista_path(usuario),
+      = link_to 'Crear lista', new_usuario_lista_path(current_usuario),
         class: 'btn btn-info'
       = link_to 'Ver todas', usuario_listas_path(@usuario), class: 'btn'
 
   .span4
     - if can? :create, Mazo
-      = link_to 'Crear mazo', new_usuario_mazo_path(usuario),
+      = link_to 'Crear mazo', new_usuario_mazo_path(current_usuario),
         class: 'btn btn-info'
       = link_to 'Ver todos', usuario_mazos_path(@usuario), class: 'btn'
 
   .span4
     - if can? :create, Diseno
-      = link_to 'Crear diseño', new_usuario_diseno_path(usuario),
+      = link_to 'Crear diseño', new_usuario_diseno_path(current_usuario),
         class: 'btn btn-info'
       = link_to 'Ver todos', usuario_disenos_path(@usuario), class: 'btn'

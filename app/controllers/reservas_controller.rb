@@ -3,7 +3,8 @@ class ReservasController < ApplicationController
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
 
-  load_and_authorize_resource through: :current_usuario, singleton: true
+  load_and_authorize_resource :usuario
+  load_and_authorize_resource through: :usuario, singleton: true
   load_and_authorize_resource :version, only: [:update]
 
   before_filter :determinar_galeria, only: [:show]
@@ -12,7 +13,6 @@ class ReservasController < ApplicationController
 
   def show
     @versiones = PaginadorDecorator.decorate apply_scopes(@reserva.versiones)
-    tipo_actual params[:mostrar].try(:[], :tipo) || :original
 
     @tipo_de_lista = 'reserva'
     respond_with(@reserva, template: 'colecciones/show')

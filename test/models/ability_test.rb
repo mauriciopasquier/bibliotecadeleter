@@ -43,7 +43,7 @@ describe Ability do
       [:mazo, :lista].each do |modelo|
         recurso = build_stubbed(modelo, visible: false, usuario: @usuario)
 
-        subject.can?(:read, recurso ).must_equal true,
+        subject.can?(:read, recurso).must_equal true,
           "No lee #{recurso.class.name} privado propio"
       end
 
@@ -52,9 +52,12 @@ describe Ability do
       [:mazo, :lista].each do |modelo|
         recurso = build_stubbed(modelo, visible: false, usuario: otro)
 
-        subject.can?(:read, recurso ).wont_equal true,
+        subject.can?(:read, recurso).wont_equal true,
           "Lee #{recurso.class.name} privado ajeno"
       end
+
+      subject.can?(:read, otro.coleccion).wont_equal true
+      subject.can?(:read, otro.reserva).wont_equal true
     end
 
     it 'leen cosas públicas de otros usuarios' do
@@ -63,7 +66,13 @@ describe Ability do
       [:mazo, :lista].each do |modelo|
         recurso = build_stubbed(modelo, visible: true, usuario: otro)
 
-        subject.can?(:read, recurso ).must_equal true,
+        subject.can?(:read, recurso).must_equal true,
+          "No lee #{recurso.class.name} público ajeno"
+      end
+
+      [otro.coleccion, otro.reserva].each do |recurso|
+        recurso.toggle! :visible
+        subject.can?(:read, recurso).must_equal true,
           "No lee #{recurso.class.name} público ajeno"
       end
     end
@@ -93,7 +102,7 @@ describe Ability do
       [:mazo, :lista].each do |modelo|
         recurso = build_stubbed(modelo, visible: false)
 
-        subject.can?(:read, recurso ).wont_equal true,
+        subject.can?(:read, recurso).wont_equal true,
           "Lee #{recurso.class.name} privado"
       end
     end

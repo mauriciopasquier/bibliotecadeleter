@@ -31,7 +31,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :tipo_actual, :activo?, :coleccion_actual, :reserva_actual
+  helper_method :tipo_actual, :activo?, :coleccion_actual, :coleccion_path,
+                :reserva_actual, :reserva_path
 
   protected
 
@@ -81,8 +82,16 @@ class ApplicationController < ActionController::Base
       current_usuario.try(:coleccion)
     end
 
+    def coleccion_path(args = nil)
+      usuario_coleccion_path(current_usuario, args)
+    end
+
     def reserva_actual
       current_usuario.try(:reserva)
+    end
+
+    def reserva_path(args = nil)
+      usuario_reserva_path(current_usuario, args)
     end
 
     # Para los mensajes de responders. Tenemos mayoría de modelos femeninos

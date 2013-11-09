@@ -15,11 +15,6 @@ feature "Usuario" do
       page.must_have_field "q_#{busqueda}"
     end
 
-    scenario "no puede entrar al panel" do
-      visit panel_path
-      current_path.must_equal root_path
-    end
-
     scenario 'se loguea' do
       usuario = create(:usuario)
 
@@ -33,7 +28,7 @@ feature "Usuario" do
         click_button I18n.t('devise.sessions.new.submit')
       end
 
-      page.must_have_link nil, href: panel_path
+      page.must_have_link nil, href: usuario_path(usuario)
       page.must_have_link nil, href: destroy_usuario_session_path
     end
   end
@@ -47,19 +42,19 @@ feature "Usuario" do
 
       page.must_have_link nil, href: legales_path
       page.must_have_link nil, href: 'http://playinferno.com'
-      page.must_have_link nil, href: panel_path
+      page.must_have_link nil, href: usuario_path(@usuario)
       page.must_have_link nil, href: destroy_usuario_session_path
       page.must_have_field "q_#{busqueda}"
     end
 
     scenario "visita su panel" do
-      visit panel_path
+      visit usuario_path(@usuario)
 
-      current_path.must_equal panel_path
-      page.must_have_link nil, href: coleccion_path
-      page.must_have_link nil, href: reserva_path
-      page.must_have_link nil, href: faltantes_coleccion_path
-      page.must_have_link nil, href: sobrantes_coleccion_path
+      current_path.must_equal usuario_path(@usuario)
+      page.must_have_link nil, href: usuario_coleccion_path(@usuario)
+      page.must_have_link nil, href: usuario_reserva_path(usuario)
+      page.must_have_link nil, href: faltantes_usuario_coleccion_path(@usuario)
+      page.must_have_link nil, href: sobrantes_usuario_coleccion_path(@usuario)
     end
 
   end
