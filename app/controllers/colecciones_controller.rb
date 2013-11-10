@@ -31,10 +31,13 @@ class ColeccionesController < ApplicationController
   end
 
   def faltantes
+    # autorizar también la reserva ya que usamos sus datos
+    authorize! :read, @usuario.reserva
+
     @versiones = PaginadorDecorator.decorate(
       apply_scopes(
         Version.where(
-          id: current_usuario.faltantes.map(&:version_id)
+          id: @usuario.faltantes.map(&:version_id)
         ).order('expansion_id desc').includes(:imagenes)
       )
     )
@@ -43,10 +46,13 @@ class ColeccionesController < ApplicationController
   end
 
   def sobrantes
+    # autorizar también la reserva ya que usamos sus datos
+    authorize! :read, @usuario.reserva
+
     @versiones = PaginadorDecorator.decorate(
       apply_scopes(
         Version.where(
-          id: current_usuario.sobrantes.map(&:version_id)
+          id: @usuario.sobrantes.map(&:version_id)
         ).order('expansion_id desc').includes(:imagenes)
       )
     )
