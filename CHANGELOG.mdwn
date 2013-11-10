@@ -1,5 +1,16 @@
 # Cambios recientes
 
+## 1.6.1
+
+### Mejoras
+
+* Avatares para los usuarios!
+* Explicación de las colecciones
+
+### Arreglos
+
+* Varias cosas en los paneles
+
 ## 1.6.0
 
 ### Mejoras
