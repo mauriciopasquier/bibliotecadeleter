@@ -15,7 +15,7 @@ class ReservasController < ApplicationController
     @versiones = PaginadorDecorator.decorate apply_scopes(@reserva.versiones)
 
     @tipo_de_lista = 'reserva'
-    respond_with(@reserva, template: 'colecciones/show')
+    respond_with @reserva, template: 'colecciones/show'
   end
 
   def update_slot
@@ -26,6 +26,12 @@ class ReservasController < ApplicationController
     end
   end
 
+  def update
+    @reserva.update_attributes parametros_permitidos
+
+    respond_with @usuario, @reserva, location: edit_usuario_coleccion_path(@usuario)
+  end
+
   private
 
     def cargar_o_crear_slot
@@ -34,6 +40,12 @@ class ReservasController < ApplicationController
 
     def determinar_galeria
       tipo_actual params[:mostrar].try(:[], :tipo) || :mini
+    end
+
+    def parametros_permitidos
+      params.require(:reserva).permit(
+        :nombre, :visible
+      )
     end
 
     def cantidad
