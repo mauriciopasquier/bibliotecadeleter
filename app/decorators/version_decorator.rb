@@ -145,7 +145,6 @@ class VersionDecorator < ApplicationDecorator
 
     def ruta(path, modelos, opciones)
       opciones.reverse_merge!({ version_id: object })
-
       h.send(path, *modelos, opciones)
     end
 

@@ -20,8 +20,8 @@
               = link_to "#{v.expansion}", en_expansion_carta_path(@carta, v.expansion)
               - if usuario_signed_in?
                 .controles{id: v.expansion.slug}
-                  = v.control(reserva_actual, '')
-                  = v.control(coleccion_actual, '')
+                  = v.control(reserva_actual, '', current_usuario)
+                  = v.control(coleccion_actual, '', current_usuario)
 
       - if @version.links.any?
         .row-fluid
