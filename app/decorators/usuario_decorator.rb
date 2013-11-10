@@ -30,4 +30,12 @@ class UsuarioDecorator < ApplicationDecorator
   def algun_avatar_tag
     h.x_image_tag(algun_avatar, alt: object.nick)
   end
+
+  def medallas
+    object.medallas.collect do |medalla|
+      h.content_tag :span, class: 'badge badge-inverse' do
+        medalla.name
+      end
+    end.join(' ').html_safe
+  end
 end

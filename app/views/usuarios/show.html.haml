@@ -1,23 +1,23 @@
-%h1= titulo
+#usuario
+  .tabbable.tabs-right
+    %ul#tabs-perfil.nav.nav-tabs{data: { tabs: true }}
+      %li.active
+        = link_to 'Panel', panel_usuario_path(@usuario),
+          data: { target: '#panel', toggle: 'tab' }
+      - if can? :update, @usuario
+        %li
+          = link_to 'Carnet', carnet_usuario_path(@usuario),
+            data: { target: '#carnet', toggle: 'tab' }
+        %li
+          = link_to 'Avatar', avatar_usuario_path(@usuario),
+            data: { target: '#avatar', toggle: 'tab' }
 
-%ul.nav.nav-tabs{data: { tabs: true }}
-  %li.active
-    = link_to 'Panel', panel_usuario_path(@usuario),
-      data: { target: '#panel', toggle: 'tab' }
-  %li
-    = link_to 'Carnet', carnet_usuario_path(@usuario),
-      data: { target: '#carnet', toggle: 'tab' }
-  %li
-    = link_to 'Avatar', avatar_usuario_path(@usuario),
-      data: { target: '#avatar', toggle: 'tab' }
+    #content-perfil.tab-content
+      #panel.tab-pane.active
+        = render partial: 'panel'
 
-.tab-content
-  #panel.tab-pane.active
-    = render partial: 'panel'
+      #carnet.tab-pane
+        = render partial: 'carnet'
 
-  #carnet.tab-pane
-    = render partial: 'devise/shared/edit_registrations',
-      locals: { requisitos: [] }
-
-  #avatar.tab-pane
-    = render partial: 'avatar'
+      #avatar.tab-pane
+        = render partial: 'avatar'
