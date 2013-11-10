@@ -28,6 +28,19 @@
 
   %p
     La diferencia entre la colección y la reserva te da las listas de
-    = link_to 'faltantes', faltantes_coleccion_path
+    = link_to 'faltantes', faltantes_usuario_coleccion_path(@usuario)
     y
-    #{link_to 'sobrantes', sobrantes_coleccion_path}.
+    #{link_to 'sobrantes', sobrantes_usuario_coleccion_path(@usuario)}.
+
+%h2 La colección
+= render partial: 'form',
+  locals: { lista: @usuario.coleccion, path: usuario_coleccion_path(@usuario) }
+
+%h2 La reserva
+= render partial: 'form',
+  locals: { lista: @usuario.reserva, path: usuario_reserva_path(@usuario) }
+
+.row-fluid.botones
+  .span12
+    = link_to 'Mostrar', [@usuario, @coleccion], class: 'btn'
+    = link_to 'Más listas', usuario_coleccion_path(@usuario), class: 'btn'

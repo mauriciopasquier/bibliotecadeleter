@@ -25,6 +25,7 @@ config/initializers/secret_token.rb
 config/initializers/devise.rb
 public/recursos
 public/system
+public/avatar
 
 # Ignoro las imágenes de paperclip hasta nuevo aviso
 public/cartas

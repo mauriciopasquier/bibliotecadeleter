@@ -1,0 +1,7 @@
+%h1= titulo
+.row-fluid
+  .span9.pull-right
+    = render partial: 'devise/shared/edit_registrations',
+      locals: { requisitos: [] }
+
+  = render partial: 'columna_izquierda'

@@ -16,6 +16,7 @@ gem 'squeel'
 gem 'amoeba'
 gem 'loofah'
 gem 'state_machine'
+gem 'gravtastic'
 
 # View
 gem 'dynamic_form'
@@ -69,6 +70,7 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'bootstrap-select-rails'
   gem 'jquery-countdown-rails'
+  gem 'bootstrap-filestyle-rails'
 end
 
 group :test, :development do

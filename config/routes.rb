@@ -22,7 +22,6 @@ BibliotecaDelEter::Application.routes.draw do
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales' => 'inicio#legales'
-  get 'panel' => 'inicio#panel'
   get 'cambios' => 'inicio#cambios'
   get 'canon' => 'inicio#canon'
   get 'arena' => 'inicio#arena'
@@ -47,12 +46,6 @@ BibliotecaDelEter::Application.routes.draw do
   femeninos   = { new: "nueva", edit: "editar" }
 
   with_options path_names: femeninos do |r|
-
-    r.resource :coleccion,  except: [ :create, :destroy, :new ] do
-      get :faltantes
-      get :sobrantes
-    end
-    r.resource :reserva,    only: [ :show, :update ]
 
     r.resources :cartas, except: [ :edit ] do
       r.resources :versiones, only: [ :new, :edit, :destroy ]
@@ -94,7 +87,16 @@ BibliotecaDelEter::Application.routes.draw do
     end
 
     # Tiene que ir último para evitar conflictos por el path nulo
-    r.resources :usuarios, path: '', only: :show do
+    r.resources :usuarios, path: '', only: [ :show, :update ] do
+      collection do
+        get 'socios' => 'usuarios#index', as: ''
+      end
+
+      member do
+        get 'panel'
+        get 'carnet'
+        get 'avatar'
+      end
 
       resources :listas, path_names: femeninos do
         member do
@@ -109,6 +111,18 @@ BibliotecaDelEter::Application.routes.draw do
       end
 
       r.resources :disenos
+
+      resource :coleccion, path_names: femeninos,
+        only: [ :show, :update, :edit ] do
+        get :faltantes
+        get :sobrantes
+        put 'update_slot'
+      end
+
+      resource :reserva, path_names: femeninos, only: [ :show, :update, :edit ] do
+        put 'update_slot'
+      end
+
     end
   end
 

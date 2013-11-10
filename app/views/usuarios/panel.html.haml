@@ -1,0 +1,14 @@
+#usuario
+  .tabbable.tabs-right
+    %ul.nav.nav-tabs
+      %li.active
+        = link_to 'Panel', panel_usuario_path(@usuario)
+      - if can? :update, @usuario
+        %li
+          = link_to 'Carnet', carnet_usuario_path(@usuario)
+        %li
+          = link_to 'Avatar', avatar_usuario_path(@usuario)
+
+    #content-perfil.tab-content
+      #panel.tab-pane.active
+        = render partial: 'panel'

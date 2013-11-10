@@ -89,7 +89,7 @@ class VersionDecorator < ApplicationDecorator
   def control(lista, texto, objetos = nil)
     c = cantidad_en(lista)
     tipo = lista.class.name.downcase
-    path = "#{objetos.present? ? 'update_slot_usuario_lista' : tipo}_path"
+    path = "update_slot_usuario_#{lista.class.name.downcase}_path"
 
     h.content_tag(:div, class: "control-#{tipo}") do
       [ h.content_tag(:span, texto, class: 'control-texto'),
