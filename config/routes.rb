@@ -113,11 +113,16 @@ BibliotecaDelEter::Application.routes.draw do
       r.resources :disenos
 
       resource :coleccion, path_names: femeninos,
-        except: [ :create, :destroy, :new ] do
+        only: [ :show, :update, :edit ] do
         get :faltantes
         get :sobrantes
+        put 'update_slot'
       end
-      resource :reserva, path_names: femeninos, only: [ :show, :update, :edit ]
+
+      resource :reserva, path_names: femeninos, only: [ :show, :update, :edit ] do
+        put 'update_slot'
+      end
+
     end
   end
 
