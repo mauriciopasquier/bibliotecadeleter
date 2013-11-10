@@ -80,8 +80,8 @@ class VersionDecorator < ApplicationDecorator
 
   def reserva_y_coleccion
     h.content_tag(:div, class: 'controles') do
-      [ control(h.reserva_actual, 'Quiero'),
-        control(h.coleccion_actual, 'Tengo')
+      [ control(h.reserva_actual, h.t('colecciones.quiero')),
+        control(h.coleccion_actual, h.t('colecciones.tengo'))
       ].join.html_safe
     end
   end
@@ -89,7 +89,7 @@ class VersionDecorator < ApplicationDecorator
   def control(lista, texto, objetos = nil)
     c = cantidad_en(lista)
     tipo = lista.class.name.downcase
-    path = "#{objetos.present? ? 'update_slot_usuario_lista' : tipo}_path"
+    path = "update_slot_usuario_#{lista.class.name.downcase}_path"
 
     h.content_tag(:div, class: "control-#{tipo}") do
       [ h.content_tag(:span, texto, class: 'control-texto'),
@@ -145,7 +145,6 @@ class VersionDecorator < ApplicationDecorator
 
     def ruta(path, modelos, opciones)
       opciones.reverse_merge!({ version_id: object })
-
       h.send(path, *modelos, opciones)
     end
 

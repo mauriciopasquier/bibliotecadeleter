@@ -7,10 +7,12 @@
                 locals: { imagenes: @versiones,
                           paginar: true }
     - else
-      %p
-        Tu colección está vacía.
-        ¿Por qué no le
-        #{link_to 'agregás', edit_coleccion_path}
-        algunas cartas?
+      = render partial: 'comunes/ala_vacia'
 
-= link_to 'Tus otras listas', usuario_listas_path(current_usuario), class: 'btn'
+.row-fluid.botones
+  .span12
+    - if can? :edit, @coleccion
+      = link_to 'Editar', edit_usuario_coleccion_path(@usuario),
+        class: 'btn btn-warning'
+
+    = link_to 'Más listas', usuario_listas_path(@usuario), class: 'btn'

@@ -5,6 +5,7 @@ namespace :configs do
   desc "Crea el directorio para los archivos de configuración"
   task :directorios, roles: :app do
     run "mkdir -p #{shared_path}/cartas"
+    run "mkdir -p #{shared_path}/avatares"
     run "mkdir -p #{shared_path}/config"
     run "mkdir -p #{shared_path}/backups-yml"
   end
@@ -31,6 +32,9 @@ namespace :configs do
 
     # Crea el link simbólico para las imágenes de las cartas
     run "ln -s #{shared_path}/cartas #{release_path}/public/cartas"
+
+    # Crea el link simbólico para los avatares
+    run "ln -s #{shared_path}/avatares #{release_path}/public/avatar"
 
     run "mkdir -p #{release_path}/tmp"
     run "ln -s #{shared_path}/sockets #{release_path}/tmp/"

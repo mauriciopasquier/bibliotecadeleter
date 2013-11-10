@@ -1,0 +1,8 @@
+%h1= titulo
+
+#usuarios.tabla-fluida
+  .row-fluid
+    .span10= sort_link @busqueda, :nick, 'Nick', opciones_de_ordenar
+    .span2= sort_link @busqueda, :created_at, 'Antiguedad', opciones_de_ordenar
+
+  = render @usuarios

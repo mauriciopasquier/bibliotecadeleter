@@ -5,11 +5,7 @@ module MazosHelper
   def titulo
     case params[:action]
       when 'index'
-        if @usuario == current_usuario
-          'Tus mazos'
-        else
-          "Mazos de #{@usuario.nick}"
-        end
+        usuario.actual? ? 'Tus mazos' : "Mazos de #{@usuario.nick}"
       when 'show'
         mazo.nombre
       when 'new'
@@ -22,11 +18,7 @@ module MazosHelper
   end
 
   def otros_mazos
-    if @usuario == current_usuario
-      "Tus otros mazos"
-    else
-      "Mazos de #{@usuario.nick}"
-    end
+    usuario.actual? ? 'Tus otros mazos' : "Mazos de #{@usuario.nick}"
   end
 
   def separador_para(tipo)

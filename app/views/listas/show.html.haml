@@ -14,7 +14,7 @@
                 locals: { imagenes: @versiones,
                           paginar: true }
     - else
-      = lista_vacia
+      = render partial: 'comunes/ala_vacia'
 
 .row-fluid.botones
   .span12
@@ -25,4 +25,4 @@
       = link_to 'Eliminar', [@usuario, @lista], method: :delete,
         data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
 
-    = link_to otras_listas, usuario_listas_path(@usuario), class: 'btn'
+    = link_to 'Más listas', usuario_listas_path(@usuario), class: 'btn'

@@ -3,6 +3,7 @@
 # Opciones que hay que definir en la configuración:
 #   backup_remoto: directorio donde se guardan los backups en el server
 #   backup_local:  directorio donde se guardan los backups en la máquina local
+# TODO backupear los avatares
 namespace :backup do
   # Depende de +yaml_db+
   desc "Genera un backup en .yml"

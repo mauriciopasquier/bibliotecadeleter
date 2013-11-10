@@ -100,6 +100,10 @@ module ApplicationHelper
     { 'no-turbolink' => true }
   end
 
+  def usuario
+    @decorador_usuario ||= @usuario.decorate
+  end
+
   private
 
     def alerta(tipo)

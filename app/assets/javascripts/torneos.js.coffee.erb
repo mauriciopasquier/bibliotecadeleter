@@ -6,7 +6,7 @@ avisar = ->
 
 alarma = new Audio "<%= asset_path('alarma-nuclear.wav') %>"
 
-tiempoDeRonda = ->
+bindings = ->
   $('.tiempo-de-ronda').countdown({
     until: $('.tiempo-de-ronda').data('tiempo')
     compact: true
@@ -55,7 +55,7 @@ $(document)
 
 $(document)
   .on 'page:change', ->
-    tiempoDeRonda()
+    bindings()
 
 jQuery ->
-  tiempoDeRonda()
+  bindings()

@@ -1,6 +1,6 @@
 # Hay que bindear tanto cuando se carga la página como cuando turbolinks la
 # pide (el page:change)
-bindearTodo = ->
+bindings = ->
   # muestra el botón para cerrar la flash si hay js
   $('.alert button.close').show()
   $('.alert').alert()
@@ -21,6 +21,14 @@ bindearTodo = ->
   # Si hay javascript oculta el checkbox y muestra el link remoto
   $('.controles-anidados').children().toggleClass('hidden')
 
+  # mejora el estilo default de los file uploaders
+  $("form.upload-normal :file").filestyle(
+    buttonText: 'Subir'
+    classInput: 'filestyle'
+    classButton: 'filestyle btn'
+    icon: false
+  )
+
 $(document)
   .on 'click', '.plegable', ->
     $(this).toggleClass('plegado').nextAll().toggle('fast')
@@ -35,7 +43,7 @@ $(document)
 $(document)
   .on 'page:change', ->
     $('#cargando').hide()
-    bindearTodo()
+    bindings()
 
 jQuery ->
-  bindearTodo()
+  bindings()

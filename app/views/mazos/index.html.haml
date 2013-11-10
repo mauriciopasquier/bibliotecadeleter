@@ -18,10 +18,7 @@
 
       = render partial: 'mazo', collection: @mazos
   - else
-    .hero-unit
-      %blockquote
-        %p Este ala de la biblioteca parece estar vacío...
-        %small Homúnculo de la biblioteca
+    = render partial: 'comunes/ala_vacia'
 
   .row-fluid.botones
     .span12

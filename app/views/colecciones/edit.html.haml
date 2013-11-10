@@ -1,0 +1,46 @@
+%h1= titulo
+
+.hero-unit
+  %p
+    Tu colección representa el total que tenés de cada carta. Podés explorar el
+    sitio, la
+    = link_to 'galería de cartas', cartas_path
+    o empezar por
+    = link_to 'cualquier carta', Carta.offset(rand(Carta.count)).first
+    y clickear en los
+    %i.icon-plus
+    y
+    %i.icon-minus
+    de
+    %b #{t 'colecciones.tengo'}
+    para modificarla. Si querés recorrer la expansión completa, probá con los
+    cursores o los botones que tienen las flechas.
+
+  %p
+    Tu reserva representa la cantidad de copias de cada carta que querés guardar,
+    si tenés de más, o conseguir, si te faltan. La reserva se modifica con los
+    %i.icon-plus
+    y
+    %i.icon-minus
+    de
+    %b #{t 'colecciones.quiero'}
+    para modificarla.
+
+  %p
+    La diferencia entre la colección y la reserva te da las listas de
+    = link_to 'faltantes', faltantes_usuario_coleccion_path(@usuario)
+    y
+    #{link_to 'sobrantes', sobrantes_usuario_coleccion_path(@usuario)}.
+
+%h2 La colección
+= render partial: 'form',
+  locals: { lista: @usuario.coleccion, path: usuario_coleccion_path(@usuario) }
+
+%h2 La reserva
+= render partial: 'form',
+  locals: { lista: @usuario.reserva, path: usuario_reserva_path(@usuario) }
+
+.row-fluid.botones
+  .span12
+    = link_to 'Mostrar', [@usuario, @coleccion], class: 'btn'
+    = link_to 'Más listas', usuario_coleccion_path(@usuario), class: 'btn'

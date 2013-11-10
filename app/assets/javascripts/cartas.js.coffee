@@ -1,16 +1,11 @@
-# Hay que bindear tanto cuando se carga la página como cuando turbolinks la
-# pide (el page:change)
-bindearTodo = ->
+bindings = ->
   # mejora el estilo default de los file uploaders
   $("form.carta :file").filestyle(
-    buttonText: 'Subir',
-    classText: 'span9 filestyle',
-    classButton: 'span3 filestyle'
+    buttonText: 'Subir'
+    classInput: 'span9 filestyle'
+    classButton: 'span3 filestyle btn'
+    icon: false
   )
-
-$(document)
-  .on 'page:change', ->
-    bindearTodo()
 
 # TODO bindear 36 = inicio y 35 = fin para primera y última carta
 # TODO testear que estén los tags
@@ -23,5 +18,9 @@ $(document)
           when 39 then $('#siguiente')
         ).attr('href'))
 
+$(document)
+  .on 'page:change', ->
+    bindings()
+
 jQuery ->
-  bindearTodo()
+  bindings()

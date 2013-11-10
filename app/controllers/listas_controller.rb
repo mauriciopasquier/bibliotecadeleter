@@ -6,8 +6,8 @@ class ListasController < ApplicationController
 
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create
-  load_and_authorize_resource :usuario, except: [:coleccion]
-  load_and_authorize_resource through: :usuario, except: [:coleccion, :index]
+  load_and_authorize_resource :usuario
+  load_and_authorize_resource through: :usuario, except: [:index]
   load_and_authorize_resource :version, only: [:update_slot]
 
   before_filter :determinar_galeria, only: [:show]
@@ -57,13 +57,6 @@ class ListasController < ApplicationController
 
   def destroy
     @lista.destroy
-    respond_with(@usuario, @lista)
-  end
-
-  def coleccion
-    @usuario = current_usuario
-    @lista = @usuario.coleccion
-    authorize! :read, @lista
     respond_with(@usuario, @lista)
   end
 

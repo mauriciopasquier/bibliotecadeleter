@@ -5,11 +5,7 @@ module ListasHelper
   def titulo
     case params[:action]
       when 'index'
-        if @usuario == current_usuario
-          'Tus listas'
-        else
-          "Listas de #{@usuario.nick}"
-        end
+        "Listas de #{@usuario.nick}"
       when 'show'
         lista.nombre
       when 'new'
@@ -18,14 +14,6 @@ module ListasHelper
         lista.nombre
       else
         nil
-    end
-  end
-
-  def otras_listas
-    if @usuario == current_usuario
-      "Tus otras listas"
-    else
-      "Listas de #{@usuario.nick}"
     end
   end
 
@@ -40,19 +28,6 @@ module ListasHelper
   # variable de instancia
   def lista
     @decorator ||= @lista.decorate
-  end
-
-  def lista_vacia
-    content_tag :p do
-      p = 'No hay cartas en la lista.'
-
-      if @usuario == current_usuario
-        p << '¿Por qué no le '
-        p << link_to('agregás', edit_usuario_lista_path(@usuario, @lista))
-        p << ' algunas?'
-      end
-      p.html_safe
-    end
   end
 
   def label_autocompletar

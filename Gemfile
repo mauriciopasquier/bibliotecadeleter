@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.14'
+gem 'rails', '3.2.15'
 
 # Database
 gem 'pg'
@@ -16,6 +16,7 @@ gem 'squeel'
 gem 'amoeba'
 gem 'loofah'
 gem 'state_machine'
+gem 'gravtastic'
 
 # View
 gem 'dynamic_form'
@@ -68,6 +69,8 @@ group :assets do
   gem 'jquery-ui-rails'
   gem 'bootstrap-datepicker-rails'
   gem 'bootstrap-select-rails'
+  gem 'jquery-countdown-rails'
+  gem 'bootstrap-filestyle-rails'
 end
 
 group :test, :development do
@@ -79,7 +82,7 @@ end
 group :development do
   gem 'mail_view'
   gem 'bullet'
-  gem 'capistrano'
+  gem 'capistrano', '~> 2'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'

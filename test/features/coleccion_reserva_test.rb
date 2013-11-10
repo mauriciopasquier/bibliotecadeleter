@@ -11,10 +11,6 @@ feature 'Colección/Reserva' do
         en_expansion_carta_path(version.carta, expansion: version.expansion)
       page.wont_have_content 'Quiero'
       page.wont_have_content 'Tengo'
-      page.wont_have_link nil,
-        href: reserva_path(cantidad: 1, version_id: version.id)
-      page.wont_have_link nil,
-        href: coleccion_path(cantidad: 1, version_id: version.id)
     end
   end
 

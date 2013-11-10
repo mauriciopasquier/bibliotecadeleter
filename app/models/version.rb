@@ -118,7 +118,7 @@ class Version < ActiveRecord::Base
 
     # La primer versión de cada carta es la canónica
     def ver_si_es_canonica
-      unless carta.versiones.where(canonica: true).any?
+      unless Version.where(carta_id: carta_id, canonica: true).any?
         self.canonica = true
       end
       true # Para que siga guardandola

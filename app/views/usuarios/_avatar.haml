@@ -1,0 +1,13 @@
+%h1= titulo
+.row-fluid
+  .span9.pull-right
+    = form_for usuario,
+      html: { class: 'form-horizontal upload-normal avatar', multipart: true } do |f|
+      .row-fluid
+        .span12
+          = f.file_field :avatar, class: 'span12'
+      .row-fluid.botones
+        .span12
+          = f.submit class: 'btn btn-success'
+
+  = render partial: 'columna_izquierda'
