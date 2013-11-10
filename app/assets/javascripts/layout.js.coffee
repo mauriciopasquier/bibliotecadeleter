@@ -1,6 +1,6 @@
 # Hay que bindear tanto cuando se carga la página como cuando turbolinks la
 # pide (el page:change)
-bindearTodo = ->
+bindings = ->
   # muestra el botón para cerrar la flash si hay js
   $('.alert button.close').show()
   $('.alert').alert()
@@ -43,7 +43,7 @@ $(document)
 $(document)
   .on 'page:change', ->
     $('#cargando').hide()
-    bindearTodo()
+    bindings()
 
 jQuery ->
-  bindearTodo()
+  bindings()
