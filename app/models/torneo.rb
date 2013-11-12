@@ -50,9 +50,21 @@ class Torneo < ActiveRecord::Base
     end
 
     event :deshacer do
-      transition :jugando => same, if: :quedan_rondas?
+      transition :jugando => same, unless: :primera_ronda?
       transition :jugando => :cerrado
       transition :jugado => :jugando
+    end
+
+    event :reportar do
+      transition :jugado => :reportado
+    end
+
+    event :sancionar do
+      transition :reportado => :oficial
+    end
+
+    event :rechazar do
+      transition :propuesto => :jugado
     end
 
     before_transition on: :puntuar, do: :asignar_puntos
@@ -107,6 +119,10 @@ class Torneo < ActiveRecord::Base
   end
 
   private
+
+    def primera_ronda?
+      ultima_ronda == 1
+    end
 
     def cantidad_de_inscriptos
       errors.add(:inscripciones, :insuficientes) if inscripciones.size < 8
