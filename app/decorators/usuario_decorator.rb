@@ -40,4 +40,8 @@ class UsuarioDecorator < ApplicationDecorator
       end
     end.join(' ').html_safe
   end
+
+  def nombre_o_nick
+    object.nombre.present? ? object.nombre : object.nick
+  end
 end

@@ -1,6 +1,7 @@
 # encoding: utf-8
 class TorneoDecorator < ApplicationDecorator
   decorates_association :inscripciones
+  decorates_association :organizador
 
   def identificador
     "#{object.formato_nombre} en #{object.tienda_nombre} el #{object.fecha}"
@@ -51,5 +52,9 @@ class TorneoDecorator < ApplicationDecorator
 
   def tiempo_de_ronda
     object.sistema.class::TIEMPO[:ronda]
+  end
+
+  def organizador_link
+    h.link_to organizador.nombre_o_nick, organizador
   end
 end

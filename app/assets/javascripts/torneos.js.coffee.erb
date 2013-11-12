@@ -30,6 +30,11 @@ $(document)
         .val(data.item.codigo)
 
 $(document)
+  .on 'railsAutocomplete.select', '#ac-lugar', (evento, data) ->
+    $('#ac-direccion')
+      .val(data.item.direccion)
+
+$(document)
   .on 'click', '.puntuar .btn', (evento) ->
     padre = $(this).parents('.pairing')
     padre.find('.puntos.a')

@@ -46,7 +46,7 @@ class Inscripcion < ActiveRecord::Base
   end
 
   def puntuar(ronda)
-    rondas.where(numero: ronda).first.puntuar
+    rondas.where(numero: ronda).first.try(:puntuar)
   end
 
   private

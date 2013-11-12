@@ -46,20 +46,32 @@ class Torneo < ActiveRecord::Base
     end
 
     event :abrir do
-      transition [ :abierto, :cerrado, :jugando ] => :abrir
+      transition [ :abierto, :cerrado, :jugando ] => :abierto
     end
 
     event :deshacer do
-      transition :jugando => same, if: :quedan_rondas?
+      transition :jugando => same, unless: :primera_ronda?
       transition :jugando => :cerrado
       transition :jugado => :jugando
+    end
+
+    event :reportar do
+      transition :jugado => :reportado
+    end
+
+    event :sancionar do
+      transition :reportado => :oficial
+    end
+
+    event :rechazar do
+      transition :reportado=> :jugado
     end
 
     before_transition on: :puntuar, do: :asignar_puntos
     before_transition on: :abrir, do: :deshacer_rondas
     before_transition on: :deshacer, do: :deshacer_ultima_ronda
 
-    state :propuesto do
+    state :reportado do
       validate :cantidad_de_inscriptos
     end
   end
@@ -75,6 +87,10 @@ class Torneo < ActiveRecord::Base
 
   attr_writer :sistema
 
+  def self.estados
+    state_machines[:estado].states.collect &:human_name
+  end
+
   # Permite cargar una tienda nueva por el nombre desde el torneo mismo.
   def lugar=(nombre)
     self.tienda = Tienda.find_or_initialize_by_nombre(nombre) do |tienda|
@@ -87,7 +103,7 @@ class Torneo < ActiveRecord::Base
   end
 
   def sistema
-    @sistema ||= SistemaSuizo.new(inscripciones)
+    @sistema ||= SistemaSuizo.new(inscripciones, false)
   end
 
   def ultima_ronda
@@ -103,6 +119,10 @@ class Torneo < ActiveRecord::Base
   end
 
   private
+
+    def primera_ronda?
+      ultima_ronda == 1
+    end
 
     def cantidad_de_inscriptos
       errors.add(:inscripciones, :insuficientes) if inscripciones.size < 8

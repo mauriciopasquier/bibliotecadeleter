@@ -36,12 +36,12 @@
 .row-fluid.botones
   .span12
     - if can? :read, torneo
-      = link_to 'Volver', ronda_torneo_path(torneo, torneo.ultima_ronda),
+      = link_to 'Volver', torneo,
         class: 'btn btn-warning'
     - if can? :read, torneo
       = link_to 'Este torneo', torneo, class: 'btn'
-    - if can? :read, torneo
+    - if can?(:read, torneo) && torneo.rondas.any?
       = link_to 'Posiciones', ronda_torneo_path(torneo, torneo.ultima_ronda),
-        class: 'btn'
+        class: 'btn btn-info'
     - if can? :read, Torneo
       = link_to 'Otros torneos', torneos_path, class: 'btn'

@@ -87,6 +87,10 @@ es:
   torneos:
     show:
       cancelar:  'Estás por deshacer la última ronda'
+      nueva_ronda:
+        abierto:  '¡Jugar!'
+        cerrado:  '¡Jugar!'
+        jugando:  'Siguiente'
     mostrar_ronda:
       cancelar:  'Estás por deshacer la última ronda'
   colecciones:

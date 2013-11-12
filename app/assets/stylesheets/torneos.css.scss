@@ -1,15 +1,29 @@
+@import 'twitter/bootstrap/mixins';
 @import 'variables';
+
+#estados {
+  a { margin-right: 5px; }
+}
 
 #posiciones {
   .encabezados {
-    font-size: larger;
-    font-weight: bold; }
+    font-weight: bold;
+    border-bottom: 1px solid $gris-claro;
+    margin-bottom: 1em; }
   .posicion { text-align: center; }
   .puntos   { text-align: center; }
   .partidas { text-align: center; }
   .dropear  { text-align: center; }
 
   .flechas { text-align: left; }
+
+  .fila {
+    @include border-radius(5px);
+
+    &:hover {
+      background-color: $gris-claro;
+    }
+  }
 }
 
 #nueva_ronda {
