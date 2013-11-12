@@ -1,5 +1,16 @@
 # Cambios recientes
 
+## 1.6.3
+
+### Mejoras
+
+* Se pueden armar torneos con menos de 8 inscriptos
+* Al crear torneos se autocompleta la tienda y la dirección :P
+
+### Arreglos
+
+* Algunos errores al dropear inscriptos y moverse por los torneos
+
 ## 1.6.2
 
 ### Mejoras
