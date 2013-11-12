@@ -7,6 +7,7 @@
     .hidden-desktop Pts
   .span1.partidas.hidden-phone
     .visible-desktop Partidas
+    .visible-desktop ganadas
     .hidden-desktop Pds
   .span1.dropear.hidden-phone
     .visible-desktop Dropeó?
@@ -18,7 +19,7 @@
     .span8 Nombre
 
 - torneo.posiciones_en(ronda).each.with_index 1 do |participante, posicion|
-  .row-fluid
+  .row-fluid.fila
     .span1.posicion= posicion
     .span1.puntos.hidden-phone= participante.puntaje
     .span1.partidas.hidden-phone= participante.partidas
