@@ -36,9 +36,9 @@
     - if can?(:delete, torneo) && torneo.can_deshacer?
       = link_to 'Anterior', ultima_ronda_torneo_path(torneo), method: :delete,
         data: { confirm: t('.cancelar') }, class: 'btn btn-danger'
-    - if torneo.quedan_rondas?
+    - if torneo.can_empezar?
       - if can? :edit, torneo
-        = link_to 'Siguiente', nueva_ronda_torneo_path(torneo),
+        = link_to t(".nueva_ronda.#{torneo.estado}"), nueva_ronda_torneo_path(torneo),
           class: 'btn btn-success'
     - else
       - if can? :read, torneo

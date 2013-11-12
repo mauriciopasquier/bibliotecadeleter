@@ -87,7 +87,7 @@ class Torneo < ActiveRecord::Base
   end
 
   def sistema
-    @sistema ||= SistemaSuizo.new(inscripciones)
+    @sistema ||= SistemaSuizo.new(inscripciones, false)
   end
 
   def ultima_ronda
