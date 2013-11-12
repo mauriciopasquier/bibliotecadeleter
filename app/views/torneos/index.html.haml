@@ -13,7 +13,8 @@
 
   #torneos.tabla-fluida
     #encabezado.row-fluid
-      .fecha.span4= sort_link @busqueda, :fecha, opciones_de_ordenar
+      .fecha.span2= sort_link @busqueda, :fecha, opciones_de_ordenar
+      .organizador.span2= sort_link @busqueda, :organizador_id, opciones_de_ordenar
       .tienda.span4= sort_link @busqueda, :tienda_id, opciones_de_ordenar
       .formato.span2= sort_link @busqueda, :formato, opciones_de_ordenar
       .estado.span2= sort_link @busqueda, :estado, opciones_de_ordenar

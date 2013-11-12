@@ -1,10 +1,11 @@
 - cache torneo do
   .row-fluid
-    .fecha.span4
+    .fecha.span2
       - if can? :read, torneo
-        = link_to_mostrar torneo, torneo.fecha
+        = link_to_mostrar torneo, l(torneo.fecha)
       - else
-        = torneo.fecha
+        = l torneo.fecha
+    .organizador.span2= torneo.organizador_link
     .tienda.span4= torneo.tienda_nombre
     .formato.span2= torneo.formato_nombre
     .estado.span2= torneo.estado
