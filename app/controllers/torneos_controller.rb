@@ -49,7 +49,6 @@ class TorneosController < ApplicationController
 
   # Acciones para rondas en masa (es más práctico que un nested resource)
   def nueva_ronda
-    @torneo.empezar
     respond_with @torneo do |formato|
       if @torneo.errors[:estado].any?
         formato.html do
@@ -61,6 +60,7 @@ class TorneosController < ApplicationController
   end
 
   def crear_ronda
+    @torneo.empezar
     @torneo.update_attributes(parametros_permitidos)
     @torneo.puntuar
 

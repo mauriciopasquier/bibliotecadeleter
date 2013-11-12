@@ -21,7 +21,7 @@
 
   .span8
     - if torneo.rondas.any?
-      %h2 Posiciones finales después de #{torneo.ultima_ronda} rondas
+      %h2 Posiciones después de #{torneo.ultima_ronda} rondas
       = render partial: 'posiciones',
         locals: { ronda: torneo.ultima_ronda, resultados: false }
     - else
