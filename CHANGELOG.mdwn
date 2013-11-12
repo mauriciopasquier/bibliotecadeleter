@@ -1,5 +1,15 @@
 # Cambios recientes
 
+## 1.6.2
+
+### Mejoras
+
+* Fuego en el avatar para todos y todas!
+
+### Arreglos
+
+* Arreglo un error en las expansiones
+
 ## 1.6.1
 
 ### Mejoras
