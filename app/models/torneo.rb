@@ -46,7 +46,7 @@ class Torneo < ActiveRecord::Base
     end
 
     event :abrir do
-      transition [ :abierto, :cerrado, :jugando ] => :abrir
+      transition [ :abierto, :cerrado, :jugando ] => :abierto
     end
 
     event :deshacer do
@@ -74,6 +74,10 @@ class Torneo < ActiveRecord::Base
   delegate :posiciones, :posiciones_en, to: :inscripciones, allow_nil: true
 
   attr_writer :sistema
+
+  def self.estados
+    state_machines[:estado].states.collect &:human_name
+  end
 
   # Permite cargar una tienda nueva por el nombre desde el torneo mismo.
   def lugar=(nombre)

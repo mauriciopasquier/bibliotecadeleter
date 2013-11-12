@@ -1,4 +1,13 @@
 %h1= titulo
+
+#estados.row-fluid
+  .span2
+    .texto Con alguno de los estados
+  .span8
+    .row-fluid= filtros_de_estado
+  .span2
+    = link_to 'Todos', torneos_path, class: 'btn btn-success'
+
 #lista
   = paginacion_tag @torneos
 

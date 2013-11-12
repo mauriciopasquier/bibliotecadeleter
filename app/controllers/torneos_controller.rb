@@ -1,6 +1,7 @@
 class TorneosController < ApplicationController
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
+  has_scope :with_estados, as: :estado, type: :array, only: :index
   has_scope :search, as: :q, type: :hash, default: { s: 'fecha asc' }, only: :index
 
   # TODO sacar cuando cancan contemple strong_parameters
