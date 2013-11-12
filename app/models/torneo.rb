@@ -64,14 +64,14 @@ class Torneo < ActiveRecord::Base
     end
 
     event :rechazar do
-      transition :propuesto => :jugado
+      transition :reportado=> :jugado
     end
 
     before_transition on: :puntuar, do: :asignar_puntos
     before_transition on: :abrir, do: :deshacer_rondas
     before_transition on: :deshacer, do: :deshacer_ultima_ronda
 
-    state :propuesto do
+    state :reportado do
       validate :cantidad_de_inscriptos
     end
   end
