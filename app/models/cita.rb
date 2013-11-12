@@ -1,3 +1,4 @@
+# Todos fragmentos de la ambientación de cartas
 class Cita
 
   DESTRUIR = [
