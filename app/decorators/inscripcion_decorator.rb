@@ -3,9 +3,13 @@ class InscripcionDecorator < ApplicationDecorator
   decorates_association :torneo
 
   def dropear_link
-    h.link_to object.dropeo.present? ? "En la #{object.dropeo}" : 'No',
-    h.dropear_del_torneo_path(object.torneo, object),
-    method: :put, remote: true, class: 'dropear'
+    texto = object.dropeo.present? ? "En la #{object.dropeo}" : 'No'
+    if object.torneo.jugando?
+      h.link_to texto, h.dropear_del_torneo_path(object.torneo, object),
+      method: :put, remote: true, class: 'dropear'
+    else
+      texto
+    end
   end
 
   def nombre_o_usuario
@@ -31,8 +35,11 @@ class InscripcionDecorator < ApplicationDecorator
   end
 
   def resultado(numero)
-    ronda = object.rondas.where(numero: numero).first.decorate
-
-    "#{ronda.resultado} #{ronda.oponente} #{ronda.partidas}".html_safe
+    ronda = object.rondas.where(numero: numero).first.try :decorate
+    if ronda
+      "#{ronda.resultado} #{ronda.oponente} #{ronda.partidas}".html_safe
+    else
+      'Fue enviado al exilio eterno'
+    end
   end
 end

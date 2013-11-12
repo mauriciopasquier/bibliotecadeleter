@@ -24,4 +24,19 @@ module TorneosHelper
   def torneo
     @decorador_torneo ||= @torneo.decorate
   end
+
+  def filtros_de_estado
+    Torneo.estados.collect do |estado|
+      previos = params[:estado] || []
+
+      proximos = if previos.include? estado
+        previos - [ estado ]
+      else
+        previos + [ estado ]
+      end
+
+      link_to estado, proximos.any? ? torneos_path(estado: proximos) : torneos_path,
+        class: 'btn' + (previos.include?(estado) ? ' btn-info' : '')
+    end.join.html_safe
+  end
 end

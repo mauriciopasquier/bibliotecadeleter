@@ -12,6 +12,7 @@ class Ronda < ActiveRecord::Base
   belongs_to :oponente, class_name: 'Inscripcion'
 
   validates_presence_of :inscripcion, :numero, :partidas_ganadas
+  validates_uniqueness_of :numero, scope: :inscripcion_id
 
   def puntuar
     self.puntos = case partidas_ganadas <=> oponente.partidas_ganadas_en(numero)

@@ -17,10 +17,11 @@
   .row-fluid
     .span4
       = f.label :lugar, "Lugar o tienda"
-      = f.text_field :lugar, class: 'span12'
+      = f.autocomplete_field :lugar, valores_tienda_nombre_path,
+        class: 'span12', id: 'ac-lugar'
     .span8
       = f.label :direccion
-      = f.text_field :direccion, class: 'span12'
+      = f.text_field :direccion, class: 'span12', id: 'ac-direccion'
 
   .nestear
     .row-fluid

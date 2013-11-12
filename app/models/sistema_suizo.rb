@@ -3,7 +3,7 @@ class SistemaSuizo
 
   validate :cantidad_de_inscriptos
 
-  attr_accessor :inscriptos, :corte
+  attr_accessor :inscriptos, :corte, :estricto
 
   TIEMPO = {  ronda: 50.minutes,
               registro: 20.minutes,
@@ -15,9 +15,12 @@ class SistemaSuizo
 
   BYE = { partidas_ganadas: 2 }
 
-  def initialize(inscriptos)
+  # +estricto+ determina si se exige un mínimo de 8 jugadores para hacer
+  # pairings
+  def initialize(inscriptos, estricto = true)
     @inscriptos = inscriptos
     @corte = inscriptos.size > 128
+    @estricto = estricto
   end
 
   def pairing(ronda)
@@ -30,7 +33,10 @@ class SistemaSuizo
 
   def rondas
     case inscriptos.size
-      when 0..7     then 0
+      when 0..1     then 0
+      when 2        then estricto ? 0 : 1
+      when 3..4     then estricto ? 0 : 2
+      when 5..7     then estricto ? 0 : 3
       when 8        then 3
       when 9..16    then 4
       when 17..32   then 5
