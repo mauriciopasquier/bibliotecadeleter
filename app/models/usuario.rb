@@ -25,6 +25,7 @@ class Usuario < ActiveRecord::Base
   has_attached_file :avatar, {
     url:  "/avatar/:slug/:style.:extension",
     path: ":rails_root/public/avatar/:slug/:style.:extension",
+    default_url: "/avatar-no-disponible-:style.jpg",
     styles: {
       chico:    '80x80',
       arte:     '190x190',

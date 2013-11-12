@@ -32,7 +32,7 @@ class UsuariosController < ApplicationController
 
     def parametros_permitidos
       params.require(:usuario).permit(
-        :avatar,
+        :avatar
       )
     end
 end

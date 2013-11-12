@@ -23,7 +23,9 @@ class UsuarioDecorator < ApplicationDecorator
     if object.avatar?
       object.avatar.url
     else
-      object.gravatar_url(default: object.avatar.url, size: 190)
+      object.gravatar_url(
+        default: h.request.base_url + object.avatar.url, size: 190
+      )
     end
   end
 

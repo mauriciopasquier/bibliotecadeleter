@@ -5,7 +5,8 @@ namespace :configs do
   desc "Crea el directorio para los archivos de configuración"
   task :directorios, roles: :app do
     run "mkdir -p #{shared_path}/cartas"
-    run "mkdir -p #{shared_path}/avatares"
+    # Asume que el grupo es el mismo que el del server
+    run "mkdir -p #{shared_path}/avatares && chmod g+w #{shared_path}/avatares"
     run "mkdir -p #{shared_path}/config"
     run "mkdir -p #{shared_path}/backups-yml"
   end
