@@ -1,5 +1,11 @@
 # Cambios recientes
 
+## 1.6.4
+
+### Arreglos
+
+* Arregla el listado de [socios][]
+
 ## 1.6.3
 
 ### Mejoras
@@ -127,3 +133,4 @@
 [Origen]: http://bibliotecadeleter.com.ar/expansiones/origen
 [promocionales de Despertar]: http://bibliotecadeleter.com.ar/expansiones/promocionales-despertar
 [promocionales de Origen]: http://bibliotecadeleter.com.ar/expansiones/promocionales-origen
+[socios]: http://bibliotecadeleter.com.ar/socios
