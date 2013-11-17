@@ -28,14 +28,14 @@ button.close {
 }
 
 #cargando {
-  @include border-radius(50px);
+  @include border-radius(30px);
   background: transparent $fondo 0 100% fixed;
   border: solid 1px $gris-claro;
   position: fixed;
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   right: 10px;
-  top: 50px;
+  top: 60px;
   left: auto;
   display: none;
 }
