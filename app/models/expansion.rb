@@ -34,6 +34,6 @@ class Expansion < ActiveRecord::Base
   end
 
   def abrir_sobre
-    Sobre.new.abrir(versiones)
+    Sobre.abrir(versiones)
   end
 end

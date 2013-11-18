@@ -9,6 +9,11 @@ class Sobre
     @proporcion_epica = opciones[:proporcion_epica]
   end
 
+  def self.abrir(cartas)
+    new.abrir(cartas)
+  end
+
+  # TODO tener en cuenta las fichas
   def abrir(cartas)
     cartas.where(rareza: rara_o_epica).scoped.sample(raras) +
     cartas.where(rareza: 'Infrecuente').scoped.sample(infrecuentes) +
