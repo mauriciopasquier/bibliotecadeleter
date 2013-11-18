@@ -56,6 +56,7 @@ BibliotecaDelEter::Application.routes.draw do
     r.resources :expansiones do
       member do
         get 'info'
+        get 'sobre'
       end
     end
 

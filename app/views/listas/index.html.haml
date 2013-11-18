@@ -5,8 +5,9 @@
 
     #listas.tabla-fluida
       #encabezado.row-fluid
-        .nombre.span8= sort_link @busqueda, :nombre, 'Nombre',
+        .nombre.span4= sort_link @busqueda, :nombre, 'Nombre',
           opciones_de_ordenar
+        .notas.span4 Notas
         .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
           opciones_de_ordenar
         .cantidad.span2 Cantidad

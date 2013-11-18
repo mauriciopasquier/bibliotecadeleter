@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Biblioteca Del Eter | ¡Error!</title>
+    <title>Todo el conocimiento del Inferno | ¡Algo anda mal!</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href="/recursos/application.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/recursos/application.js" type="text/javascript"></script>
@@ -22,28 +22,52 @@
             </a>
             <ul class='nav'>
               <li id='buscar'>
-                <form accept-charset="UTF-8" action="/cartas/buscar" class="form-search navbar-search" id="carta_search" method="post">
+                <form accept-charset="UTF-8" action="/busqueda/cartas" class="form-search navbar-search" id="carta_search" method="post">
                   <div class='input-append'>
-                    <input class="search-query input-medium"
-                          id="q_versiones_tipo_or_versiones_supertipo_or_versiones_subtipo_or_versiones_texto_or_versiones_ambientacion_or_nombre_cont"
-                          name="q[versiones_tipo_or_versiones_supertipo_or_versiones_subtipo_or_versiones_texto_or_versiones_ambientacion_or_nombre_cont]"
-                          type="text" />
+                    <input class="search-query input-small"
+                      id="q_versiones_tipo_or_versiones_supertipo_or_versiones_subtipo_or_versiones_texto_or_versiones_ambientacion_or_nombre_cont"
+                      name="q[versiones_tipo_or_versiones_supertipo_or_versiones_subtipo_or_versiones_texto_or_versiones_ambientacion_or_nombre_cont]"
+                      type="text" />
                     <input class="btn" name="navbar" type="submit" value="Buscar" />
                   </div>
                 </form>
-                <a href="/cartas/buscar" class="imagen"><i class="icon-search icon-white"></i></a>
+                <a href="/busqueda/cartas" class="imagen"><i class="icon-search icon-white"></i></a>
               </li>
             </ul>
             <div class='nav-collapse collapse'>
               <ul class='nav'>
-                <li><a href="/cartas">Cartas</a></li>
-                <li><a href="/artistas">Artistas</a></li>
-                <li><a href="/expansiones">Expansiones</a></li>
+                <li><a href="/recepcion/carnet/nuevo"><i class="icon-book icon-white"></i></a></li>
+                <li><a href="/recepcion/entrar"><i class="icon-arrow-up icon-white"></i></a></li>
+              </ul>
+              <ul class='nav'>
+                <li class='dropdown'>
+                  <a href="/canon" class="dropdown-toggle" data-target="#" data-toggle="dropdown" id="canon" role="button">Cánon
+                  <b class='caret'></b>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li><a href="/cartas">Cartas</a></li>
+                    <li><a href="/artistas">Artistas</a></li>
+                    <li><a href="/expansiones">Expansiones</a></li>
+                    <li class='divider'></li>
+                    <li><a href="http://playinferno.com">Página oficial</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class='nav'>
+                <li class='dropdown'>
+                  <a href="/arena" class="dropdown-toggle" data-target="#" data-toggle="dropdown" id="canon" role="button">Arena
+                  <b class='caret'></b>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li><a href="/torneos">Torneos</a></li>
+                    <li class='divider'></li>
+                    <li><a href="http://playinferno.com/index.php/torneos/ranking">Ranking</a></li>
+                  </ul>
+                </li>
               </ul>
               <ul class='nav pull-right'>
-                <li><a href="http://playinferno.com">Página oficial</a></li>
-                <li><a href="http://foro.playinferno.com">Foro</a></li>
                 <li><a href="/legales">Legales</a></li>
+                <li><a href="/cambios">Cambios</a></li>
               </ul>
             </div>
           </div>
@@ -53,7 +77,7 @@
       <div class='container-fluid' id='contenido'>
         <div class='row-fluid'>
           <div class='span12'>
-            <h1>¡Error!</h1>
+            <h1>¡Algo anda mal!</h1>
             <div class='hero-unit'>
               <blockquote>
                 <p>No existe este registro en la Biblioteca del Éter o en la red...</p>

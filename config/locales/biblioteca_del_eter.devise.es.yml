@@ -40,14 +40,37 @@ es:
           help:           "Una sugerencia..."
         titulo:           "Cambiar el password"
         submit:           "¡Cambialo!"
+      send_instructions:  Vas a recibir un correo con instrucciones sobre cómo
+                          resetear tu contraseña en unos pocos minutos. Revisá
+                          el spam por si algún infiel intervino el envío.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos,
+                                  vas a recibir un correo con instrucciones
+                                  sobre cómo resetear tu contraseña en tu
+                                  bandeja de entrada. Revisá el spam por si
+                                  algún infiel intervino el envío.
     confirmations:
       new:
         titulo:           "¿Se te escapó algún mail?"
         submit:           "¡Mandame la confirmación!"
+      send_instructions:  Vas a recibir un correo con instrucciones sobre cómo
+                          confirmar tu cuenta en unos pocos minutos. Revisá el
+                          spam por si algún infiel intervino el envío.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos,
+                                  vas a recibir un correo con instrucciones
+                                  sobre cómo confirmar tu cuenta en unos pocos
+                                  minutos. Revisá el spam por si algún infiel
+                                  intervino el envío.
     unlocks:
       new:
         titulo:           "¿Estás bloqueado?"
         submit:           "¡Mandame instrucciones!"
+      send_instructions:  Vas a recibir instrucciones para desbloquear tu
+                          cuenta en unos pocos minutos. Revisá el spam por si
+                          algún infiel intervino el envío.
+      send_paranoid_instructions: Si tu cuenta existe, vas a recibir
+                                  instrucciones para desbloquear tu cuenta en
+                                  unos pocos minutos. Revisá el spam por si
+                                  algún infiel intervino el envío.
     shared:
       links:
         sign_in:            "Entrar"

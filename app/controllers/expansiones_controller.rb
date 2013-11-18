@@ -22,6 +22,13 @@ class ExpansionesController < ApplicationController
     respond_with(@expansion)
   end
 
+  def sobre
+    @versiones = Draper::CollectionDecorator.decorate @expansion.abrir_sobre
+    tipo_actual params[:mostrar].try(:[], :tipo) || :mini
+
+    respond_with(@expansion)
+  end
+
   def info
     respond_with(@expansion)
   end

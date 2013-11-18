@@ -23,4 +23,8 @@ class ListaDecorator < ApplicationDecorator
   def notas_con_formato
     markdown_seguro(object.notas)
   end
+
+  def extracto
+    h.excerpt object.notas, '', radius: 80
+  end
 end
