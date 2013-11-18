@@ -12,7 +12,7 @@ class Ability
   cattr_reader :canones, :apocrifos, :modelos
 
   def initialize(usuario = nil)
-    alias_action :buscar, :info, :panel, to: :read
+    alias_action :buscar, :info, :panel, :sobre, to: :read
     alias_action :carnet, :avatar, to: :update
 
     @usuario = usuario || Usuario.new # guest user (not logged in)
