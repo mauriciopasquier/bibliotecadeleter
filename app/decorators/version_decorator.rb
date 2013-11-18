@@ -101,7 +101,8 @@ class VersionDecorator < ApplicationDecorator
           end
       end
 
-      tags << h.content_tag(:span, c, class: 'cantidad')
+      cantidad = "#{h.can?(:edit, lista) ? '' : 'x '}#{c}"
+      tags << h.content_tag(:span, cantidad, class: 'cantidad')
 
       if h.can? :edit, lista
         tags <<  h.link_to(ruta(path, objetos, cantidad: [0, c - 1].max),
