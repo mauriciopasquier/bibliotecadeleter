@@ -49,6 +49,10 @@ class Version < ActiveRecord::Base
     nullify [ :expansion_id, :slug, :numero ]
   end
 
+  def self.no_fichas
+    where arel_table[:supertipo].not_eq('Ficha').or(arel_table[:supertipo].eq(nil))
+  end
+
   def self.normales
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
   end
