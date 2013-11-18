@@ -17,9 +17,9 @@ class Sobre
 
   # TODO tener en cuenta las fichas
   def abrir(cartas)
-    cartas.where(rareza: rara_o_epica).scoped.sample(raras) +
-    cartas.where(rareza: 'Infrecuente').scoped.sample(infrecuentes) +
-    cartas.where(rareza: 'Común').scoped.sample(comunes)
+    cartas.where(rareza: rara_o_epica).no_fichas.sample(raras) +
+    cartas.where(rareza: 'Infrecuente').no_fichas.sample(infrecuentes) +
+    cartas.where(rareza: 'Común').no_fichas.sample(comunes)
   end
 
   # Para poder forzar una rareza:
