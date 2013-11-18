@@ -1,6 +1,8 @@
 class Sobre
   attr_accessor :raras, :infrecuentes, :comunes, :proporcion_epica
 
+  # proporcion_epica indica cada cuántos sobres una carta épica reemplaza a una
+  # rara (en general es en 1 de 5 sobres)
   def initialize(opciones = {})
     opciones.reverse_merge! raras: 1, infrecuentes: 3, comunes: 6, proporcion_epica: 0.2
     @raras = opciones[:raras]
@@ -20,7 +22,11 @@ class Sobre
     cartas.where(rareza: 'Común').scoped.sample(comunes)
   end
 
+  # Para poder forzar una rareza:
+  # - proporción 0.0 => Rara
+  # - proporción 1.0 => Épica
+  # Uso <= porque rand puede dar 0 pero no 1
   def rara_o_epica
-    rand > proporcion_epica ? 'Rara' : 'Épica'
+    proporcion_epica <= rand ? 'Rara' : 'Épica'
   end
 end
