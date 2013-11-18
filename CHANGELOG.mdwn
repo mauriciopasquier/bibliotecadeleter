@@ -1,50 +1,59 @@
 # Cambios recientes
 
+### Mejoras
+
+- Podemos ver lo que se siente al abrir un [sobre][] de Origen o cualquier otra
+  expansión (recargar la página es recargar el sobre)
+
+### Arreglos
+
+- Se sugiere revisar el spam cuando se manda un mail
+
 ## 1.6.4
 
 ### Arreglos
 
-* Arregla el listado de [socios][]
+- Arregla el listado de [socios][]
 
 ## 1.6.3
 
 ### Mejoras
 
-* Se pueden armar torneos con menos de 8 inscriptos
-* Al crear torneos se autocompleta la tienda y la dirección :P
+- Se pueden armar torneos con menos de 8 inscriptos
+- Al crear torneos se autocompleta la tienda y la dirección :P
 
 ### Arreglos
 
-* Algunos errores al dropear inscriptos y moverse por los torneos
+- Algunos errores al dropear inscriptos y moverse por los torneos
 
 ## 1.6.2
 
 ### Mejoras
 
-* Fuego en el avatar para todos y todas!
+- Fuego en el avatar para todos y todas!
 
 ### Arreglos
 
-* Arreglo un error en las expansiones
+- Arreglo un error en las expansiones
 
 ## 1.6.1
 
 ### Mejoras
 
-* Avatares para los usuarios!
-* Explicación de las colecciones
+- Avatares para los usuarios!
+- Explicación de las colecciones
 
 ### Arreglos
 
-* Varias cosas en los paneles
+- Varias cosas en los paneles
 
 ## 1.6.0
 
 ### Mejoras
 
-* Se pueden crear torneos, y jugarlos!
-* Se pueden cargar tiendas y su dirección
-* Agrego por formato a la búsqueda
+- Se pueden crear torneos, y jugarlos!
+- Se pueden cargar tiendas y su dirección
+- Agrego por formato a la búsqueda
 
 ## 1.5.6
 
@@ -134,3 +143,4 @@
 [promocionales de Despertar]: http://bibliotecadeleter.com.ar/expansiones/promocionales-despertar
 [promocionales de Origen]: http://bibliotecadeleter.com.ar/expansiones/promocionales-origen
 [socios]: http://bibliotecadeleter.com.ar/socios
+[sobre]: http://bibliotecadeleter.com.ar/expansiones/origen/sobre
