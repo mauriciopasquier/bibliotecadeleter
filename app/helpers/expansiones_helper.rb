@@ -10,6 +10,8 @@ module ExpansionesHelper
         expansion.nombre
       when 'new'
         'Nueva expansión'
+      when 'sobre'
+        'Lo que podría tocarte'
       else
         nil
     end

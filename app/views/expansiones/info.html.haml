@@ -30,6 +30,8 @@
   .span12
     - if can? :read, expansion
       = link_to 'Galería', expansion, class: 'btn btn-info'
+      = link_to 'Abrir un sobre!', sobre_expansion_path(expansion),
+        class: 'btn btn-success'
     - if can? :edit, expansion
       = link_to 'Editar', edit_expansion_path(expansion),
         class: 'btn btn-warning'
