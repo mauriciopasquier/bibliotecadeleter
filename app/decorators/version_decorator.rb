@@ -92,20 +92,25 @@ class VersionDecorator < ApplicationDecorator
     path = "update_slot_usuario_#{lista.class.name.downcase}_path"
 
     h.content_tag(:div, class: "control-#{tipo}") do
-      [ h.content_tag(:span, texto, class: 'control-texto'),
+      tags = [ h.content_tag(:span, texto, class: 'control-texto') ]
 
-        h.link_to(ruta(path, objetos, cantidad: c + 1), method: :put, remote: true,
-          class: 'update-listas agregar') do
+      if h.can? :edit, lista
+        tags << h.link_to(ruta(path, objetos, cantidad: c + 1), method: :put,
+          remote: true, class: 'update-listas agregar') do
             h.content_tag(:i, nil, class: 'icon-plus')
-          end,
+          end
+      end
 
-        h.content_tag(:span, c, class: 'cantidad'),
+      tags << h.content_tag(:span, c, class: 'cantidad')
 
-        h.link_to(ruta(path, objetos, cantidad: [0, c - 1].max), method: :put, remote: true,
-          class: 'update-listas remover') do
+      if h.can? :edit, lista
+        tags <<  h.link_to(ruta(path, objetos, cantidad: [0, c - 1].max),
+          method: :put, remote: true, class: 'update-listas remover') do
             h.content_tag(:i, nil, class: 'icon-minus')
           end
-      ].join.html_safe
+      end
+
+      tags.join.html_safe
     end
   end
 
