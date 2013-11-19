@@ -1,5 +1,12 @@
 # Cambios recientes
 
+## 1.6.7
+
+### Arreglos
+
+- Ya se puede ordenar los mazos por formato
+- Le dijimos a google dónde estamos
+
 ## 1.6.6
 
 ### Arreglos
