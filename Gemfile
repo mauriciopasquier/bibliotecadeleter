@@ -10,7 +10,7 @@ gem 'yaml_db', github: 'mauriciopasquier/yaml_db', branch: 'order-join-tables'
 
 # Model
 gem 'attribute_normalizer'
-gem 'inflections', require: false
+gem 'inflections', require: 'inflections/es'
 gem 'paperclip'
 gem 'squeel'
 gem 'amoeba'
