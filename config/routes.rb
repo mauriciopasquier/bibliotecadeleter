@@ -1,4 +1,7 @@
 BibliotecaDelEter::Application.routes.draw do
+
+  mount Forem::Engine, at: '/foros'
+
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)

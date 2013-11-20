@@ -2,6 +2,7 @@
 require "application_responder"
 
 class ApplicationController < ActionController::Base
+
   self.responder = ApplicationResponder
   respond_to :html
 
@@ -10,7 +11,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   # Cancan
-  alias_method  :current_user, :current_usuario
+  def current_user
+    current_usuario
+  end
+
+  # Forem
+  alias_method :forem_user, :current_user
 
   # Asegura que revisemos la autorización en cada acción, excepto en los
   # controladores de devise
@@ -32,7 +38,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :tipo_actual, :activo?, :coleccion_actual, :coleccion_path,
-                :reserva_actual, :reserva_path
+                :reserva_actual, :reserva_path, :forem_user
 
   protected
 
