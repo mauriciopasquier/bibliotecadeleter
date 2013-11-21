@@ -1,6 +1,6 @@
 - if usuario_signed_in?
-  = link_to current_usuario do
+  = link_to main_app.usuario_path(current_usuario) do
     - content_tag(:i, nil, class: 'icon-user icon-white')
 - else
-  = link_to new_usuario_registration_path do
+  = link_to main_app.new_usuario_registration_path do
     - content_tag(:i, nil, class: 'icon-book icon-white')
