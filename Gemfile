@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.15'
+gem 'rails', '4.0.1'
 
 # Database
 gem 'pg'
@@ -35,8 +35,8 @@ gem 'prawn'
 # Controller
 gem 'responders'
 gem 'has_scope'
-# TODO sacar con rails 4
-gem 'strong_parameters', github: 'mauriciopasquier/strong_parameters', branch: 'permit-filters-array'
+gem 'jbuilder', '~> 1.2'
+
 
 # Server
 gem 'thin'
@@ -57,21 +57,20 @@ gem 'i18n_country_select'
 # Development
 gem 'minitest-rails'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'jquery-rails'
-  gem 'bootstrap-sass-rails', '< 3.0.0'
-  gem 'therubyracer'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'uri-js-rails'
-  gem 'turbolinks'
-  gem 'jquery-ui-rails'
-  gem 'bootstrap-datepicker-rails'
-  gem 'bootstrap-select-rails'
-  gem 'jquery-countdown-rails'
-  gem 'bootstrap-filestyle-rails'
-end
+# Assets
+gem 'sass-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'bootstrap-sass-rails', '< 3.0.0'
+gem 'therubyracer'
+gem 'uglifier', '>= 1.3.0'
+gem 'uri-js-rails'
+gem 'turbolinks'
+gem 'jquery-ui-rails'
+gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-select-rails'
+gem 'jquery-countdown-rails'
+gem 'bootstrap-filestyle-rails'
 
 group :test, :development do
   gem 'factory_girl_rails'
@@ -96,4 +95,9 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'database_cleaner'
+end
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
 end
