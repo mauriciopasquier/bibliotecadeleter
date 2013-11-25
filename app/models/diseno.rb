@@ -21,8 +21,8 @@ class Diseno < ActiveRecord::Base
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
 
-  scope :visibles, where(visible: true)
-  scope :recientes, order('updated_at desc').limit(10)
+  scope :visibles, -> { where(visible: true) }
+  scope :recientes, -> { order('updated_at desc').limit(10) }
 
   def siguiente
     usuario.disenos.where('created_at > ?', created_at).first ||

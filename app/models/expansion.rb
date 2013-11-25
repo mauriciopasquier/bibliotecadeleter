@@ -3,9 +3,9 @@ class Expansion < ActiveRecord::Base
   include FriendlyId
   include PgSearch
 
-  has_many :versiones, order: 'slug ASC', dependent: :destroy
+  has_many :versiones, -> { order('slug ASC') }, dependent: :destroy
   has_many :cartas, through: :versiones
-  has_many :imagenes, through: :versiones, order: 'versiones.slug ASC'
+  has_many :imagenes, -> { order('versiones.slug ASC') }, through: :versiones
   has_and_belongs_to_many :formatos
 
   friendly_id :nombre, use: :slugged
@@ -13,8 +13,8 @@ class Expansion < ActiveRecord::Base
   validates_presence_of :nombre
   validates_uniqueness_of :nombre
 
-  scope :grandes, where('total >= ?', 100)
-  scope :ordenadas, order('lanzamiento, created_at')
+  scope :grandes, -> { where('total >= ?', 100) }
+  scope :ordenadas, -> { order('lanzamiento, created_at') }
 
   has_attached_file :logo, {
     url:  "/expansiones/:slug.:extension",

@@ -94,7 +94,7 @@ class Reglas
 
         formato.cartas_prohibidas.count == (formato.cartas_prohibidas - cartas).count
       else
-        formato.cartas_prohibidas.merge(mazo.cartas).empty?
+        formato.cartas_prohibidas.merge(mazo.cartas.to_a).empty?
       end
     else
       # válido si no hay cartas prohibidas

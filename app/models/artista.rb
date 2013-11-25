@@ -32,5 +32,5 @@ class Artista < ActiveRecord::Base
     con_ilustraciones.con_cantidad.reorder('cantidad DESC').limit(5)
   end
 
-  default_scope order(:nombre)
+  default_scope { order(:nombre) }
 end

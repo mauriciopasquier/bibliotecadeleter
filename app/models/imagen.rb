@@ -36,7 +36,7 @@ class Imagen < ActiveRecord::Base
         # Evita duplicación de artistas
         self.artistas.clear
         nombres.split(',').map(&:strip).each do |artista|
-          self.artistas << Artista.find_or_create_by_nombre(artista) unless artista.blank?
+          self.artistas << Artista.find_or_create_by(nombre: artista) unless artista.blank?
         end
         self.artistas.map(&:touch)
       end

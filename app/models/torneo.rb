@@ -6,21 +6,21 @@ class Torneo < ActiveRecord::Base
   belongs_to :organizador, class_name: 'Usuario'
   belongs_to :formato
 
-  # TODO :restrict_with_exception con rails4
-  has_many :inscripciones, dependent: :restrict, inverse_of: :torneo do
-    def posiciones
-      joins(:rondas).group('inscripciones.id').con_puntaje
-    end
+  has_many :inscripciones, dependent: :restrict_with_error,
+    inverse_of: :torneo do
+      def posiciones
+        joins(:rondas).group('inscripciones.id').con_puntaje
+      end
 
-    def posiciones_en(ronda)
-      joins(:rondas).where(
-        'rondas.numero <= ?', ronda
-      ).group('inscripciones.id').con_puntaje
+      def posiciones_en(ronda)
+        joins(:rondas).where(
+          'rondas.numero <= ?', ronda
+        ).group('inscripciones.id').con_puntaje
+      end
     end
-  end
 
   has_many :usuarios, through: :inscripciones
-  has_many :rondas, through: :inscripciones, order: :numero,
+  has_many :rondas, -> { order(:numero) }, through: :inscripciones,
     inverse_of: :torneo
   # TODO congelar los mazos en Inscripcion?
   # has_many :mazos, through: :inscripciones

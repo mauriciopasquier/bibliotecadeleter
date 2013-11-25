@@ -6,18 +6,18 @@ class Mazo < ActiveRecord::Base
   belongs_to :usuario
 
   # 1 o 2 demonios según el formato
-  has_many :slots, as: :inventario, dependent: :destroy, include: :version
-  has_many :demonios, through: :slots, source: :version,
-    conditions: { supertipo: 'Demonio' }, extend: VersionesContadas
+  has_many :slots, as: :inventario, dependent: :destroy
+  has_many :demonios, -> { where(supertipo: 'Demonio') }, through: :slots,
+    source: :version, extend: VersionesContadas
   has_many :cartas_de_demonio, through: :demonios, source: :carta,
     extend: CartasEnExpansiones
 
   # 1 principal con cantidad de cartas según el formato
-  has_one :principal, inverse_of: :mazo, dependent: :destroy,
-    include: :slots
+  has_one :principal, -> { includes(:slots) }, inverse_of: :mazo,
+    dependent: :destroy
   # 1 suplente con cantidad de cartas según el formato
-  has_one :suplente, inverse_of: :mazo, dependent: :destroy,
-    include: :slots
+  has_one :suplente, -> { includes(:slots) }, inverse_of: :mazo,
+    dependent: :destroy
   belongs_to :formato_objetivo, class_name: 'Formato',
     inverse_of: :mazos_dedicados
 
@@ -57,8 +57,8 @@ class Mazo < ActiveRecord::Base
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
   delegate :nombre, to: :formato_objetivo, allow_nil: true, prefix: :formato
 
-  scope :visibles, where(visible: true)
-  scope :recientes, order('updated_at desc').limit(10)
+  scope :visibles, -> { where(visible: true) }
+  scope :recientes, -> { order('updated_at desc').limit(10) }
 
   attr_writer :reglas, :exigir_formato
   normalize_attribute :exigir_formato, with: :boolean
