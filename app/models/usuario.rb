@@ -60,6 +60,11 @@ class Usuario < ActiveRecord::Base
     persisted? ? badges : []
   end
 
+  # Forem necesita esto
+  def to_s
+    nick
+  end
+
   private
 
     def crear_listas
