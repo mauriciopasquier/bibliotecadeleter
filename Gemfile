@@ -41,7 +41,7 @@ gem 'jbuilder', '~> 1.2'
 # Server
 gem 'thin'
 gem 'cache_digests'
-gem 'rails3_libmemcached_store'
+gem 'libmemcached_store'
 gem 'rack-protection'
 
 # Autenticación/autorización
