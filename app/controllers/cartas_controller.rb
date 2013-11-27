@@ -33,7 +33,7 @@ class CartasController < ApplicationController
   end
 
   def update
-    @carta.update_attributes(parametros_permitidos)
+    @carta.update parametros_permitidos
     respond_with(@carta, location: en_expansion_carta_path(@carta, expansion))
   end
 

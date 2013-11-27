@@ -33,7 +33,7 @@ class FormatosController < ApplicationController
   end
 
   def update
-    @formato.update_attributes(parametros_permitidos)
+    @formato.update parametros_permitidos
     respond_with(@formato)
   end
 

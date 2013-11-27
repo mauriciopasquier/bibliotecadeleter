@@ -36,7 +36,7 @@ class DisenosController < ApplicationController
   end
 
   def update
-    @diseno.update_attributes(parametros_permitidos)
+    @diseno.update parametros_permitidos
     respond_with(@usuario, @diseno)
   end
 

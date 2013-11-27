@@ -39,7 +39,7 @@ class TorneosController < ApplicationController
 
   def update
     @torneo.organizador = current_usuario
-    @torneo.update_attributes(parametros_permitidos)
+    @torneo.update parametros_permitidos
     respond_with @torneo
   end
 
@@ -61,7 +61,7 @@ class TorneosController < ApplicationController
 
   def crear_ronda
     @torneo.empezar
-    @torneo.update_attributes(parametros_permitidos)
+    @torneo.update parametros_permitidos
     @torneo.puntuar
 
     respond_with @torneo do |formato|

@@ -39,7 +39,7 @@ class MazosController < ApplicationController
   end
 
   def update
-    @mazo.update_attributes(parametros_permitidos)
+    @mazo.update parametros_permitidos
     respond_with(@usuario, @mazo)
   end
 
