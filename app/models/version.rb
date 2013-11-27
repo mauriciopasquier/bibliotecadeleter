@@ -26,7 +26,7 @@ class Version < ActiveRecord::Base
   validates_uniqueness_of :numero, scope: :expansion_id, message: :no_es_unico_en_la_expansion
   validates_presence_of :carta, inverse_of: :versiones
 
-  scope :costeadas, -> { where(Version.arel_table['coste_convertido'].not_eq(nil)) }
+  scope :costeadas, -> { where.not(coste_convertido: nil) }
   scope :demonios, -> { where(supertipo: 'Demonio') }
   scope :caos,    -> { where(senda: 'Caos') }
   scope :locura,  -> { where(senda: 'Locura') }

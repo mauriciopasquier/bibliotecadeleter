@@ -93,7 +93,7 @@ class Torneo < ActiveRecord::Base
 
   # Permite cargar una tienda nueva por el nombre desde el torneo mismo.
   def lugar=(nombre)
-    self.tienda = Tienda.find_or_initialize_by_nombre(nombre) do |tienda|
+    self.tienda = Tienda.find_or_initialize_by(nombre: nombre) do |tienda|
       tienda.direccion = direccion
     end
   end
