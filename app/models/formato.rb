@@ -22,7 +22,7 @@ class Formato < ActiveRecord::Base
       # Evita duplicación
       cartas_prohibidas.clear
       nombres.split(',').map(&:strip).each do |carta|
-        self.cartas_prohibidas << Carta.find_by_nombre(carta) unless carta.blank?
+        self.cartas_prohibidas << Carta.find_by(nombre: carta) unless carta.blank?
       end
     end
   end
