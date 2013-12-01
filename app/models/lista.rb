@@ -4,7 +4,7 @@ class Lista < ActiveRecord::Base
   include PgSearch
 
   belongs_to :usuario
-  has_many :slots, as: :inventario, include: :version, dependent: :destroy
+  has_many :slots, as: :inventario, dependent: :destroy
   has_many :versiones, through: :slots, extend: VersionesContadas
   has_many :cartas, through: :versiones
 
@@ -15,9 +15,6 @@ class Lista < ActiveRecord::Base
 
   accepts_nested_attributes_for :slots, allow_destroy: true,
     reject_if: :all_blank
-
-  scope :visibles, where(visible: true)
-  scope :recientes, order('updated_at desc').limit(10)
 
   # Para copiar listas (y suplentes, principales, etc) de un usuario a otro
   amoeba do
@@ -32,7 +29,9 @@ class Lista < ActiveRecord::Base
     end
   end
 
-  scope :normales, where(type: 'Lista')
+  scope :visibles, -> { where(visible: true) }
+  scope :recientes, -> { order('updated_at desc').limit(10) }
+  scope :normales, -> { where(type: 'Lista') }
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
 

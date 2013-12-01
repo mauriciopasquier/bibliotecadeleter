@@ -27,7 +27,7 @@ class ReservasController < ApplicationController
   end
 
   def update
-    @reserva.update_attributes parametros_permitidos
+    @reserva.update parametros_permitidos
 
     respond_with @usuario, @reserva, location: edit_usuario_coleccion_path(@usuario)
   end

@@ -47,7 +47,7 @@ class ExpansionesController < ApplicationController
   end
 
   def update
-    @expansion.update_attributes(parametros_permitidos)
+    @expansion.update parametros_permitidos
     respond_with(@expansion, location: info_expansion_path(@expansion))
   end
 

@@ -42,7 +42,7 @@ class ListasController < ApplicationController
   end
 
   def update
-    @lista.update_attributes(parametros_permitidos)
+    @lista.update parametros_permitidos
     respond_with(@usuario, @lista)
   end
 

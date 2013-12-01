@@ -61,7 +61,7 @@ class ColeccionesController < ApplicationController
   end
 
   def update
-    @coleccion.update_attributes parametros_permitidos
+    @coleccion.update parametros_permitidos
 
     respond_with @usuario, @coleccion, location: edit_usuario_coleccion_path(@usuario)
   end

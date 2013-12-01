@@ -1,6 +1,6 @@
 # encoding: utf-8
 class Slot < ActiveRecord::Base
-  belongs_to :version, include: [ :carta, :expansion ]
+  belongs_to :version
   belongs_to :inventario, polymorphic: true
 
   amoeba do

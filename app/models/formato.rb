@@ -14,15 +14,15 @@ class Formato < ActiveRecord::Base
 
   friendly_id :nombre, use: :slugged
 
-  scope :ordenados, order('tipo, nombre')
-  scope :abiertos, where(tipo: 'Abierto')
+  scope :ordenados, -> { order('tipo, nombre') }
+  scope :abiertos, -> { where(tipo: 'Abierto') }
 
   def nombres_de_cartas_prohibidas=(nombres)
     if nombres.present?
       # Evita duplicación
       cartas_prohibidas.clear
       nombres.split(',').map(&:strip).each do |carta|
-        self.cartas_prohibidas << Carta.find_by_nombre(carta) unless carta.blank?
+        self.cartas_prohibidas << Carta.find_by(nombre: carta) unless carta.blank?
       end
     end
   end
