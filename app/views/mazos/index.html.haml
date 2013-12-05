@@ -4,7 +4,7 @@
     = paginacion_tag @mazos
 
     #listas.tabla-fluida
-      #encabezado.row-fluid
+      .encabezado.row-fluid
         .nombre.span3= sort_link @busqueda, :nombre, 'Nombre',
           opciones_de_ordenar
         .demonio.span3= sort_link @busqueda, 'slots_version_carta_nombre', 'Demonio',

@@ -3,7 +3,7 @@
   = paginacion_tag @artistas
 
   #artistas.tabla-fluida
-    #encabezado.row-fluid
+    .encabezado.row-fluid
       .nombre.span8= sort_link @busqueda, :nombre, 'Nombre',
         opciones_de_ordenar
       .cantidad.span4.hidden-phone= sort_link @busqueda, :cantidad,

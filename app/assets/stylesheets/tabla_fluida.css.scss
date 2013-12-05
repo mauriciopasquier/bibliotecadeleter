@@ -28,7 +28,7 @@
   }
 
   // Hover
-  .row-fluid:not(#encabezado) {
+  .row-fluid:not(.encabezado) {
     &:hover {
       background-color: $gris-oscuro;
       color: $gris-claro;
@@ -43,7 +43,7 @@
     padding-left: 10px;
   }
 
-  #encabezado {
+  .encabezado {
     font-weight: bold;
     background-color: $gris-claro;
   }
