@@ -1,8 +1,8 @@
 .forums.tabla-fluida
   .encabezado.row-fluid
-    .desc-and-last-post.span6= t('forum', scope: 'forem.general')
-    .topics-count.span2= t('topics', scope: 'forem.general')
-    .posts-count.span2= t('posts', scope: 'forem.general')
-    .views-count.span2= t('forem.forums.index.views')
+    .desc-and-last-post.span9= t('forum', scope: 'forem.general')
+    .topics-count.hidden-phone.span1= t('topics', scope: 'forem.general')
+    .posts-count.hidden-phone.span1= t('posts', scope: 'forem.general')
+    .views-count.hidden-phone.span1= t('forem.forums.index.views')
 
   = render category.forums

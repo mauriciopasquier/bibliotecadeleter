@@ -1,0 +1,17 @@
+@import 'twitter/bootstrap/variables';
+@import 'variables';
+
+.forums {
+  &.tabla-fluida {
+    a { color: $linkColor; }
+
+    .row-fluid:not(.encabezado) {
+      &:hover {
+        a {
+          // Sobreescribo el default de .tabla-fluida
+          color: $linkColor;
+        }
+      }
+    }
+  }
+}
