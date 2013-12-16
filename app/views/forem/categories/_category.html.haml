@@ -1,4 +1,5 @@
 - if can?(:read, category)
   .category{id: "category_#{category.id}"}
-    %h2= link_to forem_emojify(category.name), [forem, category]
+    - unless params[:controller] == 'forem/categories' && params[:action] == 'show'
+      %h2= link_to forem_emojify(category.name), [forem, category]
     = render "/forem/forums/listing", category: category
