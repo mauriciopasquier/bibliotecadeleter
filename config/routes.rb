@@ -1,6 +1,6 @@
 BibliotecaDelEter::Application.routes.draw do
 
-  mount Forem::Engine, at: '/foros'
+  mount Forem::Engine, at: '/antesala'
 
   root to: 'inicio#bienvenida'
 
