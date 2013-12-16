@@ -1,8 +1,11 @@
-= simple_form_for [forem, @forum, @topic] do |f|
-  = f.input :subject
+= form_for [forem, @forum, @topic], html: { class: 'form topic'} do |f|
 
-  = f.simple_fields_for :posts do |post|
+  .row-fluid
+    .span12
+      = f.label :subject
+      = f.text_field :subject
+
+  = f.fields_for :posts do |post|
     = render partial: "forem/posts/form", locals: { f: post }
-  
-  = f.submit class: "btn btn-primary"
-`
+
+  = f.submit class: "btn btn-success"

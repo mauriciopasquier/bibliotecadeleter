@@ -1,0 +1,7 @@
+es:
+  activerecord:
+    attributes:
+      forem/topic:
+        subject: Tema
+      forem/post:
+        text: Texto
