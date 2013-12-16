@@ -1,5 +1,5 @@
 .forum
-  = render partial: 'forem/forums/head', locals: { :forum => @forum }
+  = render partial: 'forem/forums/head', locals: { forum: @forum }
 
   = forem_pages_widget(@topics)
   %table.topics.table-striped.table{cellspacing: '0'}
@@ -18,3 +18,5 @@
       = render @topics
 
   = forem_pages_widget(@topics)
+
+  = render partial: 'forem/forums/foot', locals: { forum: @forum }

@@ -6,3 +6,5 @@
   = render partial: "form", locals: { f: f }
   = f.submit t("forem.post.buttons.edit"),
     class: "btn btn-primary"
+
+= render partial: 'forem/forums/foot', locals: { forum: @topic.forum }
