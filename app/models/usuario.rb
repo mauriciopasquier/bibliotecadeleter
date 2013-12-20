@@ -60,9 +60,14 @@ class Usuario < ActiveRecord::Base
     persisted? ? badges : []
   end
 
-  # Forem necesita esto
+  # Forem necesita estos
   def to_s
     nick
+  end
+
+  # Este está definido en el initializer
+  def avatar_decorado
+    decorate.algun_avatar
   end
 
   private
