@@ -3,12 +3,13 @@ $color-base: #0088cc;
 $gris-claro: #ccc;
 $gris-oscuro: #333;
 $borde-de-carta: lighten(black, 3%);
+$gris-clarisimo: #f5f5f5;
 
-$caos:    #dd9f65;
-$locura:  #749ee3;
-$muerte:  #77658b;
-$poder:   #98bf66;
-$neutral: #a4989f;
+$caos:    lighten(#dd9f65, 20%);
+$locura:  lighten(#749ee3, 20%);
+$muerte:  lighten(#77658b, 20%);
+$poder:   lighten(#98bf66, 20%);
+$neutral: lighten(#a4989f, 20%);
 
 // Dimensiones
 $altura-linea:  18px;
