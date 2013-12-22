@@ -1,10 +1,12 @@
 - if can?(:read, forum)
   .row-fluid.forum
     .span9
+
       %span
         = link_to forem_emojify(forum.title), forem.forum_path(forum), class: "title"
         = '|'
         %span.description= forem_format(forum.description)
+
       %div
         = t('forem.forums.index.last_post')
         %span.last_post
@@ -16,6 +18,7 @@
               = "#{time_ago_in_words(last_post.created_at)} #{t("ago")}"
           - else
             = t('forem.forums.index.none')
+
     .topics-count.hidden-phone.span1= topics_count(forum)
     .posts-count.hidden-phone.span1= posts_count(forum)
     .views-count.hidden-phone.span1= forum.views_count

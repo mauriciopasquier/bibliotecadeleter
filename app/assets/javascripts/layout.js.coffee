@@ -12,7 +12,9 @@ bindings = ->
 
   $('select').selectpicker()
 
-  $('img.lazy').lazyload()
+  $('img.lazy').lazyload({
+    threshold: 250
+  })
 
   $('form .nestear').nestedFields({
     afterInsert: (item) ->
