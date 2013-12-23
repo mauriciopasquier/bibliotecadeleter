@@ -3,6 +3,7 @@ es:
     attributes:
       forem/topic:
         subject: Tema
+        forum: Foro
       forem/post:
         text: Texto
   forem:

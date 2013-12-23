@@ -1,12 +1,23 @@
-= simple_form_for [forem, :admin, @topic] do |f|
-  = f.input :subject
-  = f.association :forum , label: "Forum"
-  = f.label :locked
-  = f.check_box :locked
-  = f.label :pinned
-  = f.check_box :pinned
-  = f.label :hidden
-  = f.check_box :hidden
+= form_for [forem, :admin, @topic], html: { class: 'form' } do |f|
 
-  %br
-  = f.submit class: "btn btn-primary"
+  .row-fluid
+    .span3
+      = f.label :subject
+      = f.text_field :subject, class: 'span12', required: true, autofocus: true
+    .span3
+      = f.label :forum
+      = f.collection_select :forum_id, Forem::Forum.all, :id, :name, { },
+        class: 'span12'
+    .span2
+      = f.label :locked
+      = f.check_box_bootstrap :locked, class: 'span6'
+    .span2
+      = f.label :pinned
+      = f.check_box_bootstrap :pinned, class: 'span6'
+    .span2
+      = f.label :hidden
+      = f.check_box_bootstrap :hidden, class: 'span6'
+
+  .row-fluid.botones
+    .span12
+      = f.submit class: "btn btn-success"

@@ -24,10 +24,10 @@
         forem.edit_admin_topic_path(@topic), class: "btn btn-warning"
       = link_to t(".hide.#{@topic.hidden}"),
         forem.toggle_hide_admin_topic_path(@topic), method: :put,
-        class: "btn"
+        class: (@topic.hidden? ? 'btn-success' : 'btn-warning') + " btn"
       = link_to t(".lock.#{@topic.locked}"),
         forem.toggle_lock_admin_topic_path(@topic), method: :put,
-        class: "btn"
+        class: (@topic.locked? ? 'btn-success' : 'btn-warning') + " btn"
       = link_to t(".pin.#{@topic.pinned}"),
         forem.toggle_pin_admin_topic_path(@topic), method: :put,
         class: "btn"

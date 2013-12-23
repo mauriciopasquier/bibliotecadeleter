@@ -12,8 +12,10 @@
 %hr
 
 = form_for [forem, @topic, @post], html: { class: 'form post' } do |f|
+
   = render partial: "form", locals: { f: f }
-  .row-fluid
+
+  .row-fluid.botones
     .span12
       = f.submit t("forem.post.buttons.reply"), class: "btn btn-success"
 

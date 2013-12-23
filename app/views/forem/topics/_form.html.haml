@@ -8,4 +8,6 @@
   = f.fields_for :posts do |post|
     = render partial: "forem/posts/form", locals: { f: post }
 
-  = f.submit class: "btn btn-success"
+  .row-fluid.botones
+    .span12
+      = f.submit class: "btn btn-success"
