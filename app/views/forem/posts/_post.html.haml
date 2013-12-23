@@ -1,6 +1,6 @@
-%a{name: "post-#{post.id}"}
-.row
-  .post.span12{id: "post_#{post_counter + 1}", class: cycle('odd', 'even')}
+= link_to '', "post-#{post.id}", name: "post-#{post.id}"
+.row-fluid
+  %span.span11.post{id: "post_#{post_counter + 1}"}
     - if post.pending_review?
       .moderation.alert
         = t(".pending_review")
@@ -11,36 +11,41 @@
             = form_tag forem.forum_moderate_posts_path(post.topic.forum), method: :put do
               = render "/forem/posts/moderation_tools", post: post
 
+  .row-fluid
     .user.span2
       .username
         = link_to_if Forem.user_profile_links, post.user, [main_app, post.user]
-      .icon= forem_avatar(post.user, size: 60)
+      .icon.hidden-phone
+        = post.user.decorate.algun_avatar_tag
 
-    .contents.span7
+    .contents.span10
       %a{href: "#post-#{post.id}"}
-        %time{datetime: post.created_at.to_s(:db)}= "#{time_ago_in_words(post.created_at)} #{t("ago")}"
-      = forem_format(post.text)
-
+        %time{datetime: post.created_at.to_s(:db)}
+          = "#{time_ago_in_words(post.created_at).capitalize} #{t("ago")}"
       - if post.reply_to
+        = '|'
         .in-reply-to
           = link_to "#{t("forem.post.in_reply_to")} #{post.reply_to.user}", "#post-#{post.reply_to.id}"
 
+      .texto= forem_format(post.text)
+
       - if forem_user
-        .btn-group
+        .acciones-post
           - if can?(:reply, post.topic)
             - if post.topic.can_be_replied_to?
-              = link_to t('reply', scope: 'forem.topic'),
-                forem.new_topic_post_path(post.topic, reply_to_id: post.id),
-                class: "btn btn-primary"
-              = link_to t('quote', scope: 'forem.topic'),
-                forem.new_topic_post_path(post.topic, reply_to_id: post.id, quote: true),
-                class: "btn btn-success"
+              = link_to forem.new_topic_post_path(post.topic, reply_to_id: post.id),
+                title: t('reply', scope: 'forem.topic') do
+                %i.icon-comment
+              = link_to forem.new_topic_post_path(post.topic, reply_to_id: post.id, quote: true),
+                title: t('quote', scope: 'forem.topic') do
+                %i.icon-retweet
           - if post.owner_or_admin?(forem_user)
             - if can?(:edit_post, post.topic.forum)
-              = link_to t('edit', scope: 'forem.post'),
-                forem.edit_topic_post_path(post.topic, post),
-                class: "btn btn-info"
+              = link_to forem.edit_topic_post_path(post.topic, post),
+                title: t('edit', scope: 'forem.post') do
+                %i.icon-pencil
+
             - if can?(:destroy_post, post.topic.forum)
-              = link_to t('delete', scope: 'forem.topic'),
-                forem.topic_post_path(post.topic, post), method: :delete,
-                data: { confirm: t("are_you_sure") }, class: "btn btn-danger"
+              = link_to forem.topic_post_path(post.topic, post), method: :delete,
+                title: t('delete', scope: 'forem.topic'), data: { confirm: t("are_you_sure") } do
+                %i.icon-remove

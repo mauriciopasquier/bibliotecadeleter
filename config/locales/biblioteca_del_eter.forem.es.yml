@@ -8,3 +8,18 @@ es:
   forem:
     post:
       new: Responder a
+    topic:
+      links:
+        edit: Modificar
+    topics:
+      show:
+        unsubscribe: Desubscribirse
+        hide:
+          'true': Mostrar
+          'false': Ocultar
+        lock:
+          'true': Habilitar
+          'false': Bloquear
+        pin:
+          'true': Desfijar
+          'false': Fijar
