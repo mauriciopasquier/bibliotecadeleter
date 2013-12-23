@@ -51,3 +51,6 @@ es:
           add_a_new_member: 'Agregar un miembro'
           current_members: 'Actuales'
           remove_member: 'Remover del grupo'
+      forums:
+        index:
+          moderators: 'Moderadores'

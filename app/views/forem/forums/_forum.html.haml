@@ -11,6 +11,7 @@
         = t('forem.forums.index.last_post')
         %span.last_post
           - if last_post = forum.last_post_for(forem_user)
+            en
             = link_to(forem_emojify(last_post.topic.subject), forem.forum_topic_path(forum, last_post.topic))
             = t('by')
             = link_to last_post.user, main_app.usuario_path(last_post.user)
