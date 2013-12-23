@@ -8,6 +8,10 @@ es:
         text: Texto
       forem/group:
         name: Nombre
+      forem/forum:
+        title: Título
+        category: Categoría
+        description: Descripción
     models:
       forem/group: Grupo
   forem:
@@ -41,6 +45,7 @@ es:
         members: 'Miembros'
       forum:
         index: 'Foros'
+        moderator_groups: 'Moderadores'
       groups:
         show:
           add_a_new_member: 'Agregar un miembro'

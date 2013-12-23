@@ -1,8 +1,23 @@
-= simple_form_for [forem, :admin, @forum] do |f|
-  = f.association :category, :include_blank: false
-  = f.input :title
-  = f.input :description, as: :text
+= form_for [forem, :admin, @forum], html: { class: 'form' } do |f|
 
-  %h3= t('forem.admin.forum.moderator_groups')
-  = f.association :moderators, as: :check_boxes
-  = f.submit class: "btn btn-primary"
+  .row-fluid
+    .span6
+      = f.label :title
+      = f.text_field :title, class: 'span12'
+    .span6
+      = f.label :category
+      = f.collection_select :category_id, Forem::Category.all, :id, :name, { },
+        class: 'span12'
+
+  .row-fluid
+    .span6
+      = f.label :description
+      = f.text_area :description, class: 'span12'
+    .span6
+      = f.label :moderators, t('forem.admin.forum.moderator_groups')
+      = f.collection_select :moderator_ids, Forem::Group.all, :id, :name, {},
+        multiple: true, class: 'span12', title: 'Ninguno'
+
+  .row-fluid.botones
+    .span12
+      = f.submit class: "btn btn-success"
