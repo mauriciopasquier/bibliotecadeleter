@@ -50,3 +50,7 @@
 
   .acciones { padding-right: 10px; }
 }
+
+@media (max-width: 767px) {
+  .tabla-fluida .row-fluid > :first-child { padding-left: 0; }
+}
