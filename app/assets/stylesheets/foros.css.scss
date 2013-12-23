@@ -41,3 +41,13 @@ form.post {
     }
   }
 }
+
+#groups {
+  &.tabla-fluida {
+    .miembros { text-align: center; }
+  }
+}
+
+#members {
+  .iconos { text-align: center; }
+}

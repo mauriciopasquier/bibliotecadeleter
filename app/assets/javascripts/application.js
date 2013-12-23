@@ -30,7 +30,7 @@
 //= require jquery.countdown
 //= require jquery.countdown-es
 //
-//= Archivos de la aplicación a incluir
+// Archivos de la aplicación a incluir
 //
 //= require layout
 //= require paginacion

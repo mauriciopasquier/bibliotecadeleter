@@ -1,25 +1,22 @@
-%h2= t('forem.admin.group.index')
+%h1= t('forem.admin.group.index')
 
-= link_to t('back_to_admin', scope: "forem.admin"), forem.admin_root_path
-%br
-%br
+#groups.tabla-fluida
+  .encabezado.row-fluid
+    .span10.nombre Nombre
+    .span2.miembros.hidden-phone Miembros
 
-= link_to t('forem.admin.group.new'), forem.new_admin_group_path, class: "btn btn-primary"
+  - @groups.each do |group|
+    .row-fluid
+      .span10.nombre
+        = link_to_eliminar forem.admin_group_path(group), ''
+        = link_to_editar forem.admin_group_path(group), ''
+        = link_to_mostrar forem.admin_group_path(group), forem_emojify(group.name)
+      .span2.miembros.hidden-phone
+        = group.memberships.count
 
-%table#groups.index.table.table-striped{cellspacing: '0'}
-  %thead
-    %tr
-      %th= t('edit', scope: 'forem.admin.groups')
-      %th= t('delete', scope: 'forem.admin.groups')
-      %th= t('name', scope: 'forem.admin.groups')
-  %tbody
-    - @groups.each do |group|
-      %tr
-        %td
-          = link_to t('edit', scope: 'forem.admin.groups'),
-            forem.admin_group_path(group)
-        %td
-          = link_to t('delete', scope: 'forem.admin.groups'),
-            forem.admin_group_path(group), method: :delete
-        %td
-          = link_to forem_emojify(group.name), forem.admin_group_path(group)
+.row-fluid.botones
+  .span12
+    = link_to t('back_to_admin', scope: "forem.admin"), forem.admin_root_path,
+      class: 'btn'
+    = link_to t('forem.admin.group.new'), forem.new_admin_group_path,
+      class: "btn btn-info"

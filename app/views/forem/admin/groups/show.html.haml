@@ -1,42 +1,33 @@
-%h2= t('forem.admin.group.members', group: forem_emojify(@group.name))
-= link_to t('back_to_groups', scope: "forem.admin"), admin_groups_path
+%h1= t('forem.admin.group.members', group: forem_emojify(@group.name))
 
-.row
-  %h3= t('.add_a_new_member')
-  = form_tag add_admin_group_members_url(@group) do
-    %p
-      = text_field_tag "user_id"
-    %p.span1
-      = submit_tag t(".add_member"), class: "btn btn-primary"
+-# TODO que funcione sin js
+= form_tag add_admin_group_members_url(@group) do
+  .row-fluid
+    .span5
+      = label_tag :user, t('.add_a_new_member')
+      = hidden_field_tag 'user_id'
+      = autocomplete_field_tag 'usuario', '', main_app.sugerir_usuarios_path,
+        id_element: '#user_id', class: 'span12'
+      = submit_tag t(".add_member"), class: "btn btn-success"
 
-- if @group.members.any?
-  %h3= t('.current_members')
-  .row
-    %ul#members
-      - @group.members.each do |member|
-        %li
-          = member.to_s
-          = '|'
-          = link_to t('forem.admin.groups.show.remove_member'),
-            admin_group_member_url(@group, member),
-            method: :delete, confirm: t('confirmar')
+    .span6.tabla-fluid
+      = label_tag t('.current_members')
+      - if @group.members.any?
+        #members
+          - @group.members.each do |member|
+            .row-fluid
+              .span1.iconos
+                = link_to admin_group_member_url(@group, member),
+                  title: t('forem.admin.groups.show.remove_member'),
+                  method: :delete, confirm: t('confirmar') do
+                  %i.icon-remove
+              .span11
+                = link_to member, member.nick
+      - else
+        .row-fluid
+          .span12 Ninguno
 
-:javascript
-  $("#user_id").select2({
-    containerCssClass: "span5",
-    ajax: {
-      url: #{forem.admin_user_autocomplete_url},
-      data: function(term, page) {
-        return { "term": term }
-      },
-      results: function(data, page) {
-        return { results: data };
-      }
-    },
-    formatResult: function(result) {
-      return result.identifier;
-    },
-    formatSelection: function(result) {
-      return result.identifier;
-    }
-  });
+.row-fluid
+  .span12
+    = link_to t('back_to_groups', scope: "forem.admin"), admin_groups_path,
+      class: 'btn'

@@ -1,3 +1,8 @@
-= simple_form_for([forem, :admin, @group]) do |f|
-  = f.input :name
-  = f.submit :class: "btn btn-primary"
+= form_for [forem, :admin, @group], html: { class: 'form group' } do |f|
+  .row-fluid
+    .span12
+      = f.label :name
+      = f.text_field :name, class: 'span12'
+  .row-fluid.botones
+    .span12
+      = f.submit class: "btn btn-success"

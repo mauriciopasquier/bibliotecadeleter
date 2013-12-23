@@ -6,6 +6,10 @@ es:
         forum: Foro
       forem/post:
         text: Texto
+      forem/group:
+        name: Nombre
+    models:
+      forem/group: Grupo
   forem:
     post:
       new: Responder a
@@ -24,3 +28,21 @@ es:
         pin:
           'true': Desfijar
           'false': Fijar
+    admin:
+      area: 'Organizar la antesala'
+      welcome: 'Toda antesala del inferno necesita reglas:'
+      back_to_forums: 'Volver a la antesala'
+      back_to_groups: 'Todos los grupos'
+      back_to_admin: 'Organización'
+      category:
+        index: 'Categorías'
+      group:
+        index: 'Grupos'
+        members: 'Miembros'
+      forum:
+        index: 'Foros'
+      groups:
+        show:
+          add_a_new_member: 'Agregar un miembro'
+          current_members: 'Actuales'
+          remove_member: 'Remover del grupo'

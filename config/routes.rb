@@ -34,6 +34,7 @@ BibliotecaDelEter::Application.routes.draw do
     get 'expansiones', to: 'sugerencias#expansiones', as: :sugerir_expansiones
     get 'artistas', to: 'sugerencias#artistas', as: :sugerir_artistas
     get 'versiones', to: 'sugerencias#versiones', as: :sugerir_versiones
+    get 'usuarios', to: 'sugerencias#usuarios', as: :sugerir_usuarios
     get 'valores_expansion_saga'
     get 'valores_version_tipo'
     get 'valores_version_subtipo'
