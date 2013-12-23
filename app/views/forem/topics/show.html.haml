@@ -16,7 +16,7 @@
           class: "btn btn-warning"
     - if @topic.user == forem_user || forem_admin?
       = link_to t(".delete"), forem.forum_topic_path(@forum, @topic),
-        method: :delete, data: { confirm: t("are_you_sure") },
+        method: :delete, data: { confirm: t("confirmar") },
         class: "btn btn-danger"
 
     - if forem_admin?

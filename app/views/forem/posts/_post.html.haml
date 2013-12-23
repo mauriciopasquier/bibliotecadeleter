@@ -47,5 +47,5 @@
 
             - if can?(:destroy_post, post.topic.forum)
               = link_to forem.topic_post_path(post.topic, post), method: :delete,
-                title: t('delete', scope: 'forem.topic'), data: { confirm: t("are_you_sure") } do
+                title: t('delete', scope: 'forem.topic'), data: { confirm: t("confirmar") } do
                 %i.icon-remove
