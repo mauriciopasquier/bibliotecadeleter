@@ -1,8 +1,11 @@
-.forums.tabla-fluida
-  .encabezado.row-fluid
-    .desc-and-last-post.span9= t('forum', scope: 'forem.general')
-    .topics-count.hidden-phone.span1= t('topics', scope: 'forem.general')
-    .posts-count.hidden-phone.span1= t('posts', scope: 'forem.general')
-    .views-count.hidden-phone.span1= t('forem.forums.index.views')
+- if category.forums.any?
+  .forums.tabla-fluida
+    .encabezado.row-fluid
+      .desc-and-last-post.span9= t('forum', scope: 'forem.general')
+      .topics-count.hidden-phone.span1= t('topics', scope: 'forem.general')
+      .posts-count.hidden-phone.span1= t('posts', scope: 'forem.general')
+      .views-count.hidden-phone.span1= t('forem.forums.index.views')
 
-  = render category.forums
+    = render category.forums
+- else
+  %strong No hay foros acá.
