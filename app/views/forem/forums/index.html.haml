@@ -3,7 +3,9 @@
 
   = render @categories
 
-%footer#admin_link
-  - if forem_admin?
-    = link_to t("area", scope: "forem.admin"), forem.admin_root_path,
-      class: 'btn btn-warning'
+- if forem_admin?
+  %footer#admin_link
+    .row-fluid.botones
+      .span12
+        = link_to t("area", scope: "forem.admin"), forem.admin_root_path,
+          class: 'btn btn-warning'

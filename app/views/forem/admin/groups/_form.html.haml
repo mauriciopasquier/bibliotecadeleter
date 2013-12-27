@@ -2,7 +2,7 @@
   .row-fluid
     .span12
       = f.label :name
-      = f.text_field :name, class: 'span12'
+      = f.text_field :name, class: 'span12', required: true, autofocus: true
   .row-fluid.botones
     .span12
       = f.submit class: "btn btn-success"

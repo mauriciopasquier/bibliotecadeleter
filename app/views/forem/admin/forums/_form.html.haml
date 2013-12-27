@@ -3,11 +3,11 @@
   .row-fluid
     .span6
       = f.label :title
-      = f.text_field :title, class: 'span12'
+      = f.text_field :title, class: 'span12', required: true, autofocus: true
     .span6
       = f.label :category
       = f.collection_select :category_id, Forem::Category.all, :id, :name, { },
-        class: 'span12'
+        class: 'span12', required: true
 
   .row-fluid
     .span6
