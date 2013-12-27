@@ -2,6 +2,10 @@ BibliotecaDelEter::Application.routes.draw do
 
   mount Forem::Engine, at: '/antesala'
 
+  if Rails.env.development?
+    mount MailPreview => 'mail'
+  end
+
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
@@ -130,9 +134,5 @@ BibliotecaDelEter::Application.routes.draw do
       end
 
     end
-  end
-
-  if Rails.env.development?
-    mount MailPreview => 'mail'
   end
 end
