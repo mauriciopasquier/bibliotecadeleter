@@ -1,7 +1,7 @@
 @import 'twitter/bootstrap/variables';
 @import 'variables';
 
-.forums, #posts, #forums {
+.forums, #posts, #forums, #groups, #categories {
   &.tabla-fluida {
     a { color: $linkColor; }
 
@@ -34,10 +34,18 @@ form.post {
   display: inline;
 }
 
-.acciones-post, .acciones-forum {
+.acciones-post, .acciones-forum, .acciones-category, .acciones-group {
   a {
     &:hover, &:focus {
       text-decoration: none;
+    }
+  }
+
+  .texto {
+    display: inline;
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $linkColor;
     }
   }
 }

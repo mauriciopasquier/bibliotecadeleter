@@ -12,8 +12,11 @@ es:
         title: Título
         category: Categoría
         description: Descripción
+      forem/category:
+        name: Nombre
     models:
       forem/group: Grupo
+      forem/category: Categoría
   forem:
     post:
       new: Responder a
@@ -32,6 +35,9 @@ es:
         pin:
           'true': Desfijar
           'false': Fijar
+    forums:
+      index:
+        title: 'La antesala del Inferno'
     admin:
       area: 'Organizar la antesala'
       welcome: 'Toda antesala del inferno necesita reglas:'
@@ -40,6 +46,7 @@ es:
       back_to_admin: 'Organización'
       category:
         index: 'Categorías'
+        edit: 'Editar %{title}'
       group:
         index: 'Grupos'
         members: 'Miembros'
