@@ -1,7 +1,7 @@
 @import 'twitter/bootstrap/variables';
 @import 'variables';
 
-.forums, #posts, #forums, #groups, #categories {
+.topics, .forums, #posts, #forums, #groups, #categories {
   &.tabla-fluida {
     a { color: $linkColor; }
 
@@ -11,6 +11,8 @@
           // Sobreescribo el default de .tabla-fluida
           color: $linkColor;
         }
+        // Bootstrap por default lo hace con los a > i, en forem hay i sueltos
+        i { background-image: $iconos-blancos; }
       }
     }
   }

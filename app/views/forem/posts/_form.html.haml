@@ -1,7 +1,7 @@
 .row-fluid
   .span12
     = f.label :text
-    = f.text_area :text, class: "field span12", autofocus: true
+    = f.text_area :text, class: "field span12", autofocus: true, required: true
 
 - if params[:reply_to_id]
   = f.hidden_field :reply_to_id, value: params[:reply_to_id]

@@ -35,6 +35,8 @@ es:
         pin:
           'true': Desfijar
           'false': Fijar
+    forum:
+      moderator_tools: 'Organizar este foro'
     forums:
       index:
         title: 'La antesala del Inferno'
