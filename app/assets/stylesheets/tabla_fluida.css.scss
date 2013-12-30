@@ -3,8 +3,10 @@
 .tabla-fluida {
   a { color: $gris-oscuro; }
 
+  i { padding: 2px; }
+
   & > .row-fluid {
-    * { padding: 2px; }
+    div { padding: 2px; }
 
     &:nth-child(even) {
       background-color: white;
