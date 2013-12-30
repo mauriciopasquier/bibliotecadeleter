@@ -1,6 +1,6 @@
-%h2= t('.title', :forum => forum)
+%h1= t('.title', :forum => forum)
 
-%h3= t('posts_count', count: @posts.count, scope: 'forem.general')
+%h2= t('posts_count', count: @posts.count, scope: 'forem.general')
 
 = form_tag forem.forum_moderate_posts_url(forum), method: :put do
   #posts
@@ -12,7 +12,7 @@
       = render posts, mass_moderation: true
   = submit_tag "Moderate", class: "btn btn-primary"
 
-%h3= t('topics_count', count: @topics.count, scope: 'forem.forum')
+%h2= t('topics_count', count: @topics.count, scope: 'forem.forum')
 
 #topics
   - @topics.limit(25).each_with_index do |topic, topic_counter|

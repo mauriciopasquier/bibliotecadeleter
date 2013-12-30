@@ -20,6 +20,9 @@ es:
   forem:
     post:
       new: Responder a
+    posts:
+      moderation:
+        moderate: Aceptar
     topic:
       links:
         edit: Modificar

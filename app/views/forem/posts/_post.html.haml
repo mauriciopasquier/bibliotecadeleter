@@ -1,15 +1,16 @@
 = link_to '', "post-#{post.id}", name: "post-#{post.id}"
 .row-fluid
-  %span.span11.post{id: "post_#{post_counter + 1}"}
-    - if post.pending_review?
-      .moderation.alert
-        = t(".pending_review")
-        - if forem_admin_or_moderator?(post.topic.forum)
-          - if local_assigns[:mass_moderation]
-            = render "/forem/posts/moderation_tools", post: post
-          - else
-            = form_tag forem.forum_moderate_posts_path(post.topic.forum), method: :put do
+  - if post.pending_review?
+    .row-fluid
+      .span10.offset1.post{id: "post_#{post_counter + 1}"}
+        .moderation.alert.alert-error
+          = t(".pending_review")
+          - if forem_admin_or_moderator?(post.topic.forum)
+            - if local_assigns[:mass_moderation]
               = render "/forem/posts/moderation_tools", post: post
+            - else
+              = form_tag forem.forum_moderate_posts_path(post.topic.forum), method: :put do
+                = render "/forem/posts/moderation_tools", post: post
 
   .row-fluid
     .user.span2

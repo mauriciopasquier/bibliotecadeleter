@@ -1,14 +1,9 @@
-%p
-  = f.radio_button "moderation_option", "approve"
-  = f.label "moderation_option_approve",
-    t('approve', scope: 'forem.posts.moderation'),
-    class: "label label-success"
-%p
-  = f.radio_button "moderation_option", "spam"
-  = f.label "moderation_option_spam",
-    t('spam', scope: 'forem.posts.moderation'),
-    class: "label label-important"
+.row-fluid
+  .span12
+    = f.select :moderation_option, [ [ t('approve', scope: 'forem.posts.moderation'), 'approve' ],
+      [ t('spam', scope: 'forem.posts.moderation'), 'spam'] ]
 
-%br
-= f.submit t('moderate', scope: 'forem.posts.moderation'),
-  class: "btn btn-primary"
+.row-fluid
+  .span12
+    = f.submit t('moderate', scope: 'forem.posts.moderation'),
+      class: "btn btn-success"
