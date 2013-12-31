@@ -1,7 +1,8 @@
 .row-fluid
   .span12
     = f.select :moderation_option, [ [ t('approve', scope: 'forem.posts.moderation'), 'approve' ],
-      [ t('spam', scope: 'forem.posts.moderation'), 'spam'] ]
+      [ t('spam', scope: 'forem.posts.moderation'), 'spam'] ],
+      { prompt: 'Postergar' }
 
 .row-fluid
   .span12

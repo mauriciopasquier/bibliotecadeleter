@@ -18,6 +18,9 @@ es:
       forem/group: Grupo
       forem/category: Categoría
   forem:
+    general:
+      posts_count:
+        zero: No hay mensajes
     post:
       new: Responder a
     posts:
@@ -40,9 +43,14 @@ es:
           'false': Fijar
     forum:
       moderator_tools: 'Organizar este foro'
+      topics_count:
+        zero: No hay temas
     forums:
       index:
         title: 'La antesala del Inferno'
+    moderation:
+      index:
+        title: 'Organizar este lío'
     admin:
       area: 'Organizar la antesala'
       welcome: 'Toda antesala del inferno necesita reglas:'

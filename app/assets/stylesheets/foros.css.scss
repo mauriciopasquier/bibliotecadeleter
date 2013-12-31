@@ -5,6 +5,14 @@
   &.tabla-fluida {
     a { color: $linkColor; }
 
+    // Para no sobreescribir los estilos de bootstrap-select en la moderación
+    .moderation {
+      .bootstrap-select {
+        .text { color: $gris-oscuro; }
+        li a:hover .text { color: white; }
+      }
+    }
+
     .row-fluid:not(.encabezado) {
       &:hover {
         a {
@@ -64,4 +72,10 @@ form.post {
 
 .forum {
   .description, .acciones-forum { display: inline; }
+}
+
+#posts {
+  .moderation {
+    margin: 1em;
+  }
 }
