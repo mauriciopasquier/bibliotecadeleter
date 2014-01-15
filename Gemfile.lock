@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/mauriciopasquier/yaml_db.git
-  revision: 533d9eb4ec1b7b4d5dcae4dbecaa0c5c0434ef91
+  revision: 58b5f0a167c2def187c1ebbc9f57210324efab8e
   branch: order-join-tables
   specs:
     yaml_db (0.2.3)
