@@ -32,6 +32,7 @@
 //
 // Archivos de la aplicación a incluir
 //
+//= require eter
 //= require layout
 //= require paginacion
 //= require cartas

@@ -11,12 +11,11 @@ bindings = ->
 # TODO testear que estén los tags
 $(document)
   .on 'keydown', (tecla) ->
-    Turbolinks.visit((
+    unless $('.flechas').length == 0
       unless tecla.altKey
         switch tecla.which
-          when 37 then $('#anterior')
-          when 39 then $('#siguiente')
-        ).attr('href'))
+          when 37 then Eter.visitar '#anterior'
+          when 39 then Eter.visitar '#siguiente'
 
 $(document)
   .on 'page:change', ->
