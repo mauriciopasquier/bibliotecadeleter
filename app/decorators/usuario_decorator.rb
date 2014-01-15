@@ -29,8 +29,13 @@ class UsuarioDecorator < ApplicationDecorator
     end
   end
 
-  def algun_avatar_tag
-    h.x_image_tag(algun_avatar, alt: object.nick)
+  def algun_avatar_tag(lazy = 'lazy')
+    [ h.image_tag(algun_avatar, alt: object.nick, class: lazy),
+
+      h.content_tag(:noscript) do
+        h.x_image_tag(algun_avatar, alt: object.nick)
+      end
+    ].join.html_safe
   end
 
   def medallas

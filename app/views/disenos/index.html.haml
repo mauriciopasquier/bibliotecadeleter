@@ -4,7 +4,7 @@
     = paginacion_tag @disenos
 
     #diseno.tabla-fluida
-      #encabezado.row-fluid
+      .encabezado.row-fluid
         .nombre.span3= sort_link @busqueda, :nombre, opciones_de_ordenar
         .texto.span4.hidden-phone Texto
         .coste.span1.hidden-phone= sort_link @busqueda, :coste_convertido, 'Coste', opciones_de_ordenar

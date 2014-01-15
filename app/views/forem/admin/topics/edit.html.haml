@@ -1,0 +1,10 @@
+= render partial: 'forem/forums/head', locals: { forum: @topic.forum }
+
+%h2= t("forem.topic.edit", subject: @topic.subject)
+
+= render "form"
+
+.row-fluid.botones
+  .span12
+    = link_to t('back_to_admin', scope: "forem.admin"), forem.admin_root_path,
+      class: 'btn'

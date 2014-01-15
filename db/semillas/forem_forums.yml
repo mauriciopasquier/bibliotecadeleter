@@ -1,0 +1,53 @@
+
+---
+forem_forums:
+  columns:
+  - id
+  - name
+  - description
+  - category_id
+  - views_count
+  - slug
+  records: 
+  - - '2'
+    - Mercado
+    - Lleno de tiendas y lugares donde comprar, vender y jugar
+    - '2'
+    - '1'
+    - mercado
+  - - '3'
+    - Portal
+    - ¿A qué otros juegos llevará este portal?
+    - '3'
+    - '1'
+    - portal
+  - - '5'
+    - Recepción
+    - Donde el homúnculo despliega sus encantos y recibe críticas sobre la Biblioteca
+    - '1'
+    - '5'
+    - recepcion
+  - - '6'
+    - Sala de Entrenamiento
+    - Diseño y construcción de mazos competitivos
+    - '2'
+    - '1'
+    - sala-de-entrenamiento
+  - - '7'
+    - Calabozos
+    - Adonde se ocultan los temas parias que no tienen lugar en otra parte
+    - '3'
+    - '0'
+    - calabozos
+  - - '8'
+    - Taller
+    - Donde se diseñan cartas y se cometen los mayores sacrilegios
+    - '1'
+    - '0'
+    - taller
+  - - '9'
+    - Salón principal
+    - Las voces que vienen del salón hablan de todo lo relacionado al Inferno
+    - '1'
+    - '0'
+    - salon-principal

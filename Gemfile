@@ -10,7 +10,7 @@ gem 'yaml_db', github: 'mauriciopasquier/yaml_db', branch: 'order-join-tables'
 
 # Model
 gem 'attribute_normalizer'
-gem 'inflections', require: false
+gem 'inflections', require: 'inflections/es'
 gem 'paperclip'
 gem 'squeel'
 gem 'amoeba'
@@ -54,6 +54,8 @@ gem 'merit'
 gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'i18n_country_select'
+
+gem 'forem', github: 'radar/forem', branch: 'rails4'
 
 # Development
 gem 'minitest-rails'

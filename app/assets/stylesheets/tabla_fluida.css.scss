@@ -3,38 +3,45 @@
 .tabla-fluida {
   a { color: $gris-oscuro; }
 
-  .row-fluid {
-    * { padding: 2px; }
+  i { padding: 2px; }
+
+  & > .row-fluid {
+    div { padding: 2px; }
 
     &:nth-child(even) {
       background-color: white;
       &.caos    { background-color: $caos; }
       &.locura  { background-color: $locura; }
-      &.muerte  { background-color: $muerte;
-                  color: $gris-claro;
-                  a { color: $gris-claro; } }
+      &.muerte  { background-color: $muerte; }
       &.poder   { background-color: $poder; }
       &.neutral { background-color: $neutral; }
     }
 
     &:nth-child(odd)  {
-      background-color: $gris-claro;
+      background-color: $gris-clarisimo;
       &.caos    { background-color: darken($caos, 10%); }
       &.locura  { background-color: darken($locura, 10%); }
       &.muerte  { background-color: darken($muerte, 10%); }
       &.poder   { background-color: darken($poder, 10%); }
       &.neutral { background-color: darken($neutral, 10%); }
-    }
-  }
 
-  // Hover
-  .row-fluid:not(#encabezado) {
-    &:hover {
-      background-color: $gris-oscuro;
-      color: $gris-claro;
-      a {
+      &.encabezado {
+        font-weight: bold;
+        background-color: white;
+        border-bottom: 1px solid $gris-claro;
+        margin-bottom: 2px;
+      }
+    }
+
+    // Hover
+    &:not(.encabezado) {
+      &:hover {
+        background-color: $gris-oscuro;
         color: $gris-claro;
-        i { background-image: $iconos-blancos; }
+        a {
+          color: $gris-claro;
+          i { background-image: $iconos-blancos; }
+        }
       }
     }
   }
@@ -43,11 +50,9 @@
     padding-left: 10px;
   }
 
-  #encabezado {
-    font-weight: bold;
-    background-color: $gris-claro;
-  }
-
   .acciones { padding-right: 10px; }
+}
 
+@media (max-width: 767px) {
+  .tabla-fluida .row-fluid > :first-child { padding-left: 0; }
 }

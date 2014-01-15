@@ -60,4 +60,7 @@ BibliotecaDelEter::Application.configure do
 
   # Para precompilación local de assets
   config.assets.prefix = "/dev-#{config.assets.prefix[1..-1]}"
+
+  # Para ver las cosas cargadas con paperclip
+  config.serve_static_assets = true
 end

@@ -1,0 +1,8 @@
+%h1= t("forem.forum.edit", title: forem_emojify(@forum.title)).html_safe
+
+= render "form"
+
+.row-fluid.botones
+  .span12
+    = link_to t('back_to_admin', scope: "forem.admin"), forem.admin_root_path,
+      class: 'btn'

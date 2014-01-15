@@ -1,6 +1,6 @@
 - if usuario_signed_in?
-  = link_to destroy_usuario_session_path, method: :delete, class: 'logout' do
+  = link_to main_app.destroy_usuario_session_path, method: :delete, class: 'logout' do
     - content_tag(:i, nil, class: 'icon-arrow-down icon-white')
 - else
-  = link_to new_usuario_session_path do
+  = link_to main_app.new_usuario_session_path do
     - content_tag(:i, nil, class: 'icon-arrow-up icon-white')

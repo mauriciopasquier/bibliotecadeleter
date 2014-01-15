@@ -1,0 +1,18 @@
+%h1= t('forem.admin.area')
+
+.row-fluid
+  .span3
+    %p= t('forem.admin.welcome')
+  .span9
+    = link_to t('forem.admin.forum.index'), forem.admin_forums_path,
+      class: 'btn btn-warning'
+    = link_to t('forem.admin.category.index'), forem.admin_categories_path,
+      class: 'btn btn-warning'
+    = link_to t('forem.admin.group.index'), forem.admin_groups_path,
+      class: 'btn btn-warning'
+
+%footer#admin_link
+  .row-fluid.botones
+    .span12
+      = link_to t(:back_to_forums, scope: 'forem.admin'), forem.root_path,
+        class: 'btn'

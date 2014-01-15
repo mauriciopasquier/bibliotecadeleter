@@ -1,0 +1,30 @@
+%h1= t('.title', :forum => forum)
+
+%h2
+  = t('posts_count', count: @posts.count, scope: 'forem.general')
+  para moderar
+
+- if @posts.any?
+  = form_tag forem.forum_moderate_posts_url(forum), method: :put do
+    #posts
+      - @posts.limit(25).group_by(&:topic).each do |topic, posts|
+        .row-fluid
+          .span12
+            = forem_emojify(topic.forum.title)
+            &raquo;
+            = forem_emojify(topic.subject)
+        = render posts, mass_moderation: true
+      .row-fluid.botones
+        .span12
+          = submit_tag "Moderar todos", class: "btn btn-success"
+
+%h2
+  = t('topics_count', count: @topics.count, scope: 'forem.forum')
+  para moderar
+
+#topics
+  - @topics.limit(25).each_with_index do |topic, topic_counter|
+    .topic{id: "topic_#{topic_counter + 1}", class: cycle('odd', 'even')}
+      .moderation.alert
+        = link_to forem_emojify(topic.subject),
+          forem.forum_topic_path(forum, topic)
