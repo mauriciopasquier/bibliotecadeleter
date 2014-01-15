@@ -28,10 +28,15 @@ BibliotecaDelEter::Application.routes.draw do
     }
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
-  get 'legales' => 'inicio#legales'
-  get 'cambios' => 'inicio#cambios'
-  get 'canon' => 'inicio#canon'
-  get 'arena' => 'inicio#arena'
+  get 'legales'   => 'inicio#legales'
+  get 'cambios'   => 'inicio#cambios'
+  get 'canon'     => 'inicio#canon'
+  get 'arena'     => 'inicio#arena'
+  get 'herejias'  => 'inicio#herejias'
+
+  get 'mazos'   => 'mazos#todo'
+  get 'listas'  => 'listas#todo'
+  get 'disenos' => 'disenos#todo'
 
   scope path: 'sugerencias', controller: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
@@ -132,7 +137,6 @@ BibliotecaDelEter::Application.routes.draw do
       resource :reserva, path_names: femeninos, only: [ :show, :update, :edit ] do
         put 'update_slot'
       end
-
     end
   end
 end

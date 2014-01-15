@@ -2,11 +2,11 @@
   .row-fluid{class: diseno.senda.downcase}
     .nombre.span3
       - if can? :update, diseno
-        = link_to_editar edit_usuario_diseno_path(@usuario, diseno), ''
+        = link_to_editar edit_usuario_diseno_path(usuario.diseno, diseno), ''
       - if can? :delete, diseno
-        = link_to_eliminar [@usuario, diseno], ''
+        = link_to_eliminar [diseno.usuario, diseno], ''
       - else
-      = link_to_mostrar [@usuario, diseno], diseno.nombre
+      = link_to_mostrar [diseno.usuario, diseno], diseno.nombre
     .texto.span4.hidden-phone= diseno.extracto
     .coste.span1.hidden-phone= diseno.coste
     .senda.span1.visible-desktop= diseno.senda
