@@ -17,12 +17,12 @@
           - @group.members.each do |member|
             .row-fluid
               .span1.iconos
-                = link_to admin_group_member_url(@group, member),
+                = link_to admin_group_member_url(@group, member.id),
                   title: t('forem.admin.groups.show.remove_member'),
                   method: :delete, confirm: t('confirmar') do
                   %i.icon-remove
               .span11
-                = link_to member, member.nick
+                = link_to member.nick, main_app.usuario_path(member)
       - else
         .row-fluid
           .span12 Ninguno

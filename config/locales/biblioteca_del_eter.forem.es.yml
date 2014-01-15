@@ -71,6 +71,7 @@ es:
           add_a_new_member: 'Agregar un miembro'
           current_members: 'Actuales'
           remove_member: 'Remover del grupo'
+          member_removed: 'Miembro removido (o desmembrado!)'
       forums:
         index:
           moderators: 'Moderadores'
