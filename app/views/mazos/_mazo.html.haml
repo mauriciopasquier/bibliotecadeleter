@@ -1,13 +1,16 @@
-- cache mazo do
+- cache "#{params[:action]}/#{mazo.cache_key}" do
   .row-fluid
     .nombre.span3
       - if can? :update, mazo
-        = link_to_editar edit_usuario_mazo_path(@usuario, mazo), ''
+        = link_to_editar edit_usuario_mazo_path(mazo.usuario, mazo), ''
       - if can? :delete, mazo
-        = link_to_eliminar [@usuario, mazo], ''
-      = link_to_mostrar [@usuario, mazo], mazo.nombre
+        = link_to_eliminar [mazo.usuario, mazo], ''
+      = link_to_mostrar [mazo.usuario, mazo], mazo.nombre
     .demonio.span3= mazo.link_a_demonios
-    .visibilidad.span2= mazo.visibilidad_tag
+    - if params[:action] == 'todo'
+      .usuario.span2= link_to mazo.usuario.nick, mazo.usuario
+    - else
+      .visibilidad.span2= mazo.visibilidad_tag
     .formato.span2= mazo.link_al_formato
     .cantidad.span1= mazo.principal_cantidad
     .cantidad.span1= mazo.suplente_cantidad

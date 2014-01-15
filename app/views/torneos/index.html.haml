@@ -12,7 +12,7 @@
   = paginacion_tag @torneos
 
   #torneos.tabla-fluida
-    #encabezado.row-fluid
+    .encabezado.row-fluid
       .fecha.span2= sort_link @busqueda, :fecha, opciones_de_ordenar
       .organizador.span2= sort_link @busqueda, :organizador_id, opciones_de_ordenar
       .tienda.span4= sort_link @busqueda, :tienda_id, opciones_de_ordenar

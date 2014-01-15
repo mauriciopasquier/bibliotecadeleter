@@ -1,0 +1,23 @@
+.row-fluid.topic{class: topic.locked? ? 'locked' : 'unlocked'}
+  .span1.icon
+    - if topic.locked?
+      %i.icon-lock
+    - if topic.pinned?
+      %i.icon-magnet
+    - if topic.hidden?
+      %i.icon-icon-eye-close
+    - if forem_user && view = topic.view_for(forem_user)
+      - if topic.posts.exists?(["created_at > ?", view.updated_at])
+        %i.new_posts.icon-exclamation-sign
+  .span5.byline
+    %span= new_since_last_view_text(topic)
+    %span.subject= link_to forem_emojify(topic.subject), forem.forum_topic_path(@forum, topic)
+    = '|'
+    %span.started-by
+      = t "started_by"
+      - usuario = relevant_posts(topic).first.user
+      = link_to usuario.nick, main_app.usuario_path(usuario)
+  .span4.latest-post
+    = link_to_latest_post(topic)
+  .span1.posts-count.text-center= relevant_posts(topic).count
+  .span1.views-count.text-center= topic.views_count

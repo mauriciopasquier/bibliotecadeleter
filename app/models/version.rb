@@ -7,7 +7,7 @@ class Version < ActiveRecord::Base
 
   belongs_to :carta, inverse_of: :versiones, touch: true
   belongs_to :expansion, touch: true
-  has_many :imagenes, order: 'created_at ASC',
+  has_many :imagenes, -> { order('created_at ASC') },
             inverse_of: :version, dependent: :destroy
   has_many :artistas, through: :imagenes
   has_many :links, as: :linkeable, dependent: :destroy
@@ -26,13 +26,13 @@ class Version < ActiveRecord::Base
   validates_uniqueness_of :numero, scope: :expansion_id, message: :no_es_unico_en_la_expansion
   validates_presence_of :carta, inverse_of: :versiones
 
-  scope :costeadas, where(Version.arel_table['coste_convertido'].not_eq(nil))
-  scope :demonios, where(supertipo: 'Demonio')
-  scope :caos,    where(senda: 'Caos')
-  scope :locura,  where(senda: 'Locura')
-  scope :muerte,  where(senda: 'Muerte')
-  scope :poder,   where(senda: 'Poder')
-  scope :neutral, where(senda: 'Neutral')
+  scope :costeadas, -> { where.not(coste_convertido: nil) }
+  scope :demonios, -> { where(supertipo: 'Demonio') }
+  scope :caos,    -> { where(senda: 'Caos') }
+  scope :locura,  -> { where(senda: 'Locura') }
+  scope :muerte,  -> { where(senda: 'Muerte') }
+  scope :poder,   -> { where(senda: 'Poder') }
+  scope :neutral, -> { where(senda: 'Neutral') }
 
   delegate :nombre, to: :carta, allow_nil: true
   delegate :nombre_y_expansiones, to: :carta, allow_nil: true

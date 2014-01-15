@@ -1,4 +1,11 @@
 BibliotecaDelEter::Application.routes.draw do
+
+  mount Forem::Engine, at: '/antesala'
+
+  if Rails.env.development?
+    mount MailPreview => 'mail'
+  end
+
   root to: 'inicio#bienvenida'
 
   # TODO patchear devise para cambiar nested path_names (i.e. password/new)
@@ -21,16 +28,22 @@ BibliotecaDelEter::Application.routes.draw do
     }
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
-  get 'legales' => 'inicio#legales'
-  get 'cambios' => 'inicio#cambios'
-  get 'canon' => 'inicio#canon'
-  get 'arena' => 'inicio#arena'
+  get 'legales'   => 'inicio#legales'
+  get 'cambios'   => 'inicio#cambios'
+  get 'canon'     => 'inicio#canon'
+  get 'arena'     => 'inicio#arena'
+  get 'herejias'  => 'inicio#herejias'
+
+  get 'mazos'   => 'mazos#todo'
+  get 'listas'  => 'listas#todo'
+  get 'disenos' => 'disenos#todo'
 
   scope path: 'sugerencias', controller: 'sugerencias' do
     get 'cartas/(:filtro)', to: 'sugerencias#cartas', as: :sugerir_cartas
     get 'expansiones', to: 'sugerencias#expansiones', as: :sugerir_expansiones
     get 'artistas', to: 'sugerencias#artistas', as: :sugerir_artistas
     get 'versiones', to: 'sugerencias#versiones', as: :sugerir_versiones
+    get 'usuarios', to: 'sugerencias#usuarios', as: :sugerir_usuarios
     get 'valores_expansion_saga'
     get 'valores_version_tipo'
     get 'valores_version_subtipo'
@@ -124,11 +137,6 @@ BibliotecaDelEter::Application.routes.draw do
       resource :reserva, path_names: femeninos, only: [ :show, :update, :edit ] do
         put 'update_slot'
       end
-
     end
-  end
-
-  if Rails.env.development?
-    mount MailPreview => 'mail'
   end
 end

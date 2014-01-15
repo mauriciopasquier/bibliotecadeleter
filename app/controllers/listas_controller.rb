@@ -2,12 +2,14 @@
 class ListasController < ApplicationController
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
-  has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
+  has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' },
+    only: [ :index, :todo ]
 
   # TODO sacar cuando cancan contemple strong_parameters
   before_filter :cargar_recurso, only: :create
-  load_and_authorize_resource :usuario
-  load_and_authorize_resource through: :usuario, except: [:index]
+  load_and_authorize_resource :usuario, except: :todo
+  load_and_authorize_resource through: :usuario, except: [:index, :todo]
+  authorize_resource only: [:todo]
   load_and_authorize_resource :version, only: [:update_slot]
 
   before_filter :determinar_galeria, only: [:show]
@@ -20,6 +22,14 @@ class ListasController < ApplicationController
     @listas = PaginadorDecorator.decorate @busqueda.result
 
     respond_with(@listas)
+  end
+
+  def todo
+    @listas = Lista.normales.accessible_by(current_ability)
+    @busqueda = apply_scopes @listas
+    @listas = PaginadorDecorator.decorate @busqueda.result
+
+    respond_with @listas, template: 'listas/index'
   end
 
   def show
@@ -42,7 +52,7 @@ class ListasController < ApplicationController
   end
 
   def update
-    @lista.update_attributes(parametros_permitidos)
+    @lista.update parametros_permitidos
     respond_with(@usuario, @lista)
   end
 

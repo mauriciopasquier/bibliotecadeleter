@@ -10,4 +10,4 @@ use ::Rack::Protection::JsonCsrf
 use ::Rack::Protection::PathTraversal
 use ::Rack::Protection::XSSHeader
 
-run BibliotecaDelEter::Application
+run Rails.application

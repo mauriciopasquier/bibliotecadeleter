@@ -4,13 +4,16 @@
     = paginacion_tag @mazos
 
     #listas.tabla-fluida
-      #encabezado.row-fluid
+      .encabezado.row-fluid
         .nombre.span3= sort_link @busqueda, :nombre, 'Nombre',
           opciones_de_ordenar
         .demonio.span3= sort_link @busqueda, 'slots_version_carta_nombre', 'Demonio',
           opciones_de_ordenar
-        .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
-          opciones_de_ordenar
+        - if params[:action] == 'todo'
+          .usuario.span2= sort_link @busqueda, :usuario_id, 'Socio'
+        - else
+          .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
+            opciones_de_ordenar
         .formato.span2= sort_link @busqueda, :formato_objetivo_id, 'Formato',
           opciones_de_ordenar
         .cantidad.span1 Principales

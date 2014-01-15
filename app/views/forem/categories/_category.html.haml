@@ -1,0 +1,8 @@
+- if can?(:read, category)
+  .category{id: "category_#{category.id}"}
+
+    -# Sólo mostrar el título en el forums/index
+    - unless params[:controller] == 'forem/categories' && params[:action] == 'show'
+      %h2= link_to forem_emojify(category.name), [forem, category]
+
+    = render "/forem/forums/listing", category: category

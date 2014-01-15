@@ -1,3 +1,4 @@
 .columna-izquierda.span3.pull-left
-  .avatar= usuario.algun_avatar_tag
+  .avatar
+    = x_image_tag(usuario.algun_avatar, alt: usuario.nick)
   .medallas= usuario.medallas

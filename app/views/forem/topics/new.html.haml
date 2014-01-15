@@ -1,0 +1,7 @@
+= render partial: 'forem/forums/head', locals: { forum: @topic.forum }
+
+%h2= t("forem.topic.new")
+
+= render "form"
+
+= render partial: 'forem/forums/foot', locals: { forum: @topic.forum }

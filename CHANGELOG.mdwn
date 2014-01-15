@@ -1,5 +1,19 @@
 # Cambios recientes
 
+## 1.7.0
+
+### Mejoras
+
+- Hay [foros][]!!!
+- Actualización general del sistema... si no podés loguearte por alguna razón
+  probá borrando las cookies :|
+
+### Arreglos
+
+- Ya se puede ordenar los mazos por formato
+- Se pueden recorrer todas las listas (cartas, artistas, expansiones, etc) con
+  las flechas del teclado
+
 ## 1.6.7
 
 ### Arreglos
@@ -159,3 +173,4 @@
 [promocionales de Origen]: http://bibliotecadeleter.com.ar/expansiones/promocionales-origen
 [socios]: http://bibliotecadeleter.com.ar/socios
 [sobre]: http://bibliotecadeleter.com.ar/expansiones/origen/sobre
+[foros]: http://bibliotecadeleter.com.ar/antesala

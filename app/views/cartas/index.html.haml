@@ -4,7 +4,7 @@
 
   -# TODO en vez de esconder elementos y chau, mostrarlos cuando clickee en la fila
   #cartas.tabla-fluida
-    #encabezado.row-fluid
+    .encabezado.row-fluid
       -# TODO sort_link debería agregar el orden ya pedido (ordenar por senda y coste)
       .nombre.span3= sort_link @busqueda, :nombre, opciones_de_ordenar
       .coste.span1.hidden-phone= sort_link @busqueda, :canonica_coste_convertido, 'Coste', opciones_de_ordenar

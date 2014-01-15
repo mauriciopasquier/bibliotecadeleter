@@ -1,0 +1,13 @@
+= form_for [forem, @forum, @topic], html: { class: 'form topic'} do |f|
+
+  .row-fluid
+    .span12
+      = f.label :subject
+      = f.text_field :subject, class: 'span12', required: true, autofocus: true
+
+  = f.fields_for :posts do |post|
+    = render partial: "forem/posts/form", locals: { f: post }
+
+  .row-fluid.botones
+    .span12
+      = f.submit class: "btn btn-success"

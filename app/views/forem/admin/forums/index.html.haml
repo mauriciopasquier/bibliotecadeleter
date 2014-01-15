@@ -1,0 +1,69 @@
+%h1= t("forem.admin.forum.index")
+
+- @forums.group_by(&:category).each do |category, forums|
+
+  %h2
+    - if category.present?
+      = link_to category.name, forem.edit_admin_category_path(category)
+    - else
+      = t('.no_category')
+
+  #forums.tabla-fluida
+    .encabezado.row-fluid
+      .span8= t('forum', scope: 'forem.general')
+      .span2
+        .visible-desktop= t('.moderators')
+        .hidden-desktop Mods
+      .span1.hidden-phone= t('topics', scope: 'forem.general')
+      .span1.hidden-phone= t('posts', scope: 'forem.general')
+
+    - forums.each do |forum|
+      .row-fluid.forum
+        .span8
+          .acciones-forum
+            = link_to forem.admin_forum_path(forum), method: :delete,
+              title: t('delete', scope: 'forem.admin.forums'),
+              data: { confirm: t("confirmar") } do
+              %i.icon-remove
+            = link_to forem.edit_admin_forum_path(forum),
+              title: t('edit', scope: 'forem.admin.forums') do
+              %i.icon-pencil
+            = link_to forem.forum_path(forum) do
+              %i.icon-zoom-in
+              .texto= forem_emojify(forum.title)
+          = '|'
+          .description= forem_format(forum.description)
+
+          .ultimo
+            #{t('.last_post')}:
+            - if last_post = forum.posts.last
+              en
+              = link_to(forem_emojify(last_post.topic.subject),
+                forem.forum_topic_path(forum, last_post.topic))
+              = t('by')
+              = link_to last_post.user, last_post.user.nick
+              %time{datetime: last_post.created_at.to_s(:db)}
+                = "#{time_ago_in_words(last_post.created_at)} #{t("ago")}"
+            - else
+              = t('.none')
+
+        .span2
+          .moderators
+            - if forum.moderators.exists?
+              = forum.moderators.map { |moderator| link_to moderator, [forem, :admin, moderator] }.to_sentence.html_safe
+            - else
+              = t('.none')
+
+        .span1.hidden-phone
+          = forum.topics.count
+        .span1.hidden-phone
+          = forum.posts.count
+
+.row-fluid.botones
+  .span12
+    = link_to t("forem.admin.forum.new_link"), forem.new_admin_forum_path,
+      class: "btn btn-info"
+    = link_to t('back_to_admin', scope: "forem.admin"), forem.admin_root_path,
+      class: 'btn'
+    = link_to t(:back_to_forums, scope: 'forem.admin'), forem.root_path,
+      class: 'btn'

@@ -13,7 +13,7 @@ class CartasController < ApplicationController
   before_filter :check_barra_de_busqueda, only: :buscar
 
   def index
-    # TODO con rails 4 sacar sólo el order
+    # FIXME hasta rails 4.1 except o unscope todavía no sacan el default_scope
     @busqueda = apply_scopes @cartas.reorder('')
     @cartas = PaginadorDecorator.decorate @busqueda.result
     respond_with(@cartas)
@@ -33,7 +33,7 @@ class CartasController < ApplicationController
   end
 
   def update
-    @carta.update_attributes(parametros_permitidos)
+    @carta.update parametros_permitidos
     respond_with(@carta, location: en_expansion_carta_path(@carta, expansion))
   end
 

@@ -4,12 +4,15 @@
     = paginacion_tag @listas
 
     #listas.tabla-fluida
-      #encabezado.row-fluid
+      .encabezado.row-fluid
         .nombre.span4= sort_link @busqueda, :nombre, 'Nombre',
           opciones_de_ordenar
         .notas.span4 Notas
-        .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
-          opciones_de_ordenar
+        - if params[:action] == 'todo'
+          .usuario.span2= sort_link @busqueda, :usuario_id, 'Socio'
+        - else
+          .visibilidad.span2= sort_link @busqueda, :visible, 'Visibilidad',
+            opciones_de_ordenar
         .cantidad.span2 Cantidad
 
       = render partial: 'lista', collection: @listas

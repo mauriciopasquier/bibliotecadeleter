@@ -50,7 +50,7 @@ module ApplicationHelper
 
   def link_to_mostrar(recurso, texto = 'Mostrar')
     link_to recurso, title: 'Mostrar' do
-      content_tag(:i, nil, class: 'icon-zoom-in') + texto
+      content_tag(:i, nil, class: 'icon-search') + texto
     end
   end
 
@@ -62,7 +62,7 @@ module ApplicationHelper
 
   def link_to_eliminar(recurso, texto = 'Eliminar')
     link_to recurso, method: :delete, data: { confirm: t(:confirmar) }, title: 'Eliminar' do
-      content_tag(:i, nil, class: 'icon-remove-circle') + texto
+      content_tag(:i, nil, class: 'icon-remove') + texto
     end
   end
 

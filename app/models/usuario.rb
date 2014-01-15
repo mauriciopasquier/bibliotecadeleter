@@ -11,7 +11,7 @@ class Usuario < ActiveRecord::Base
   has_many :links, as: :linkeable, dependent: :destroy
   has_many :listas, dependent: :destroy
   has_many :mazos, dependent: :destroy
-  has_many :disenos, dependent: :destroy, order: :created_at
+  has_many :disenos, -> { order(:created_at) }, dependent: :destroy
   has_many :torneos_organizados, class_name: 'Torneo',
     inverse_of: :organizador, foreign_key: :organizador_id
   has_many :inscripciones, foreign_key: :codigo, primary_key: :codigo
@@ -58,6 +58,16 @@ class Usuario < ActiveRecord::Base
 
   def medallas
     persisted? ? badges : []
+  end
+
+  # Forem necesita estos
+  def to_s
+    nick
+  end
+
+  # Este está definido en el initializer
+  def avatar_decorado
+    decorate.algun_avatar
   end
 
   private

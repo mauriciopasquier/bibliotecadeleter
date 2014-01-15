@@ -5,3 +5,11 @@
 como superusuario de postgresql en la bd de la aplicación:
 
     create extension unaccent;
+
+## Guía de estilo
+
+* azul (`btn-info`): nuevo
+* amarillo (`btn-warning`): editar
+* verde (`btn-success`): guardar
+* rojo (`btn-danger`): borrar irreversiblemente
+* gris (`btn`): navegar, mostrar, volver

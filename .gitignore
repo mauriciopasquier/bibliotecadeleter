@@ -47,3 +47,8 @@ db/semillas/torneos.yml
 db/semillas/inscripciones.yml
 db/semillas/rondas.yml
 db/semillas/tiendas.yml
+db/semillas/forem_memberships.yml
+db/semillas/forem_posts.yml
+db/semillas/forem_subscriptions.yml
+db/semillas/forem_topics.yml
+db/semillas/forem_views.yml

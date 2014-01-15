@@ -1,0 +1,81 @@
+@import 'twitter/bootstrap/variables';
+@import 'variables';
+
+.topics, .forums, #posts, #forums, #groups, #categories {
+  &.tabla-fluida {
+    a { color: $linkColor; }
+
+    // Para no sobreescribir los estilos de bootstrap-select en la moderación
+    .moderation {
+      .bootstrap-select {
+        .text { color: $gris-oscuro; }
+        li a:hover .text { color: white; }
+      }
+    }
+
+    .row-fluid:not(.encabezado) {
+      &:hover {
+        a {
+          // Sobreescribo el default de .tabla-fluida
+          color: $linkColor;
+        }
+        // Bootstrap por default lo hace con los a > i, en forem hay i sueltos
+        i { background-image: $iconos-blancos; }
+      }
+    }
+  }
+}
+
+.post {
+  .user {
+    .icon {
+      margin-right: 1em;
+    }
+  }
+}
+
+form.post {
+  textarea {
+    height: $altura-linea * 20;
+  }
+}
+
+.in-reply-to {
+  display: inline;
+}
+
+.acciones-post, .acciones-forum, .acciones-category, .acciones-group {
+  a {
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .texto {
+    display: inline;
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $linkColor;
+    }
+  }
+}
+
+#groups {
+  &.tabla-fluida {
+    .miembros { text-align: center; }
+  }
+}
+
+#members {
+  .iconos { text-align: center; }
+}
+
+.forum {
+  .description, .acciones-forum { display: inline; }
+}
+
+#posts {
+  .moderation {
+    margin: 1em;
+  }
+}

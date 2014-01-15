@@ -24,7 +24,7 @@ class UsuariosController < ApplicationController
   end
 
   def update
-    @usuario.update_attributes(parametros_permitidos)
+    @usuario.update parametros_permitidos
     respond_with(@usuario)
   end
 

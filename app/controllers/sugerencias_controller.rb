@@ -32,6 +32,10 @@ class SugerenciasController < ApplicationController
     autocompletar filtro(Artista, :nombre), :id, :nombre
   end
 
+  def usuarios
+    autocompletar filtro(Usuario, :nick), :id, :nick
+  end
+
   private
 
     def autocompletar_canonicas

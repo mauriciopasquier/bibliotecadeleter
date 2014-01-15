@@ -7,41 +7,53 @@
       %span.icon-bar.minifuego
     %ul.nav
       %li#buscar
-        = search_form_for barra_de_busqueda, url: cartas_busqueda_path,
+        = search_form_for barra_de_busqueda, url: main_app.cartas_busqueda_path,
             html: { method: :post, class: 'form-search navbar-search' } do |s|
           .input-append
             = s.text_field busqueda, class: 'search-query input-small', size: nil
             = s.submit 'Buscar', name: 'navbar', class: 'btn'
         = link_to content_tag(:i, nil, class: "icon-search icon-white"),
-            cartas_busqueda_path, class: 'imagen'
+            main_app.cartas_busqueda_path, class: 'imagen'
     .nav-collapse.collapse
       %ul.nav
         %li= render 'devise/menu/registration_items'
         %li= render 'devise/menu/login_items'
       %ul.nav
         %li.dropdown
-          = link_to canon_path, role: 'button', class: 'dropdown-toggle',
+          = link_to main_app.canon_path, role: 'button', class: 'dropdown-toggle',
           id: 'canon', data: { toggle: "dropdown", target: '#' } do
             Cánon
             %b.caret
           %ul.dropdown-menu{role: 'menu'}
-            %li= link_to 'Cartas', cartas_path
-            %li= link_to 'Artistas', artistas_path
-            %li= link_to 'Expansiones', expansiones_path
+            %li= link_to 'Cartas', main_app.cartas_path
+            %li= link_to 'Artistas', main_app.artistas_path
+            %li= link_to 'Expansiones', main_app.expansiones_path
             %li.divider
             %li= link_to 'Página oficial', 'http://playinferno.com'
       %ul.nav
         %li.dropdown
-          = link_to arena_path, role: 'button', class: 'dropdown-toggle',
-          id: 'canon', data: { toggle: "dropdown", target: '#' } do
+          = link_to main_app.herejias_path, role: 'button', class: 'dropdown-toggle',
+          id: 'herejias', data: { toggle: "dropdown", target: '#' } do
+            Herejías
+            %b.caret
+          %ul.dropdown-menu{role: 'menu'}
+            %li= link_to 'Foros', main_app.forem_path
+            %li.divider
+            %li= link_to 'Mazos', main_app.mazos_path
+            %li= link_to 'Diseños', main_app.disenos_path
+            %li= link_to 'Listas', main_app.listas_path
+            %li= link_to 'Socios', main_app.usuarios_path
+      %ul.nav
+        %li.dropdown
+          = link_to main_app.arena_path, role: 'button', class: 'dropdown-toggle',
+          id: 'arena', data: { toggle: "dropdown", target: '#' } do
             Arena
             %b.caret
           %ul.dropdown-menu{role: 'menu'}
-            %li= link_to 'Torneos', torneos_path
+            %li= link_to 'Torneos', main_app.torneos_path
             -# TODO %li= link_to 'Tiendas', tiendas_path
             %li.divider
             %li= link_to 'Ranking', 'http://playinferno.com/index.php/torneos/ranking'
-      -# TODO Herejía para todo lo user made
       %ul.nav.pull-right
-        %li= link_to 'Legales', legales_path
-        %li= link_to 'Cambios', cambios_path
+        %li= link_to 'Legales', main_app.legales_path
+        %li= link_to 'Cambios', main_app.cambios_path

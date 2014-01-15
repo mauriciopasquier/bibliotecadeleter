@@ -1,0 +1,10 @@
+%p #{@user.nick}:
+
+%p
+  = I18n.t('received_reply', scope: 'forem.topic')
+  Podés ver el tema
+  #{link_to 'acá', forem.forum_topic_url(@post.topic.forum_id, @post.topic)}.
+
+%p
+  Para ignorar esta cacofonía de voces incomprensibles, seguí
+  #{link_to 'este link', forem.unsubscribe_forum_topic_url(@post.topic.forum, @post.topic)}.
