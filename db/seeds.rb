@@ -22,4 +22,5 @@ end
 bs = Forem::Group.find_by(name: 'Bibliotecarios')
 BIBLIOTECARIO.usuarios.each do |b|
   bs.members << b unless bs.members.include? b
+  b.update(forem_admin: true, forem_state: 'approved')
 end
