@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131120134065) do
+ActiveRecord::Schema.define(version: 20140117022225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -339,9 +339,9 @@ ActiveRecord::Schema.define(version: 20131120134065) do
     t.integer  "cantidad"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "inventario_id"
+    t.integer  "inventario_id",   null: false
     t.string   "inventario_type"
-    t.integer  "version_id"
+    t.integer  "version_id",      null: false
   end
 
   add_index "slots", ["inventario_id", "inventario_type"], name: "index_slots_on_inventario_id_and_inventario_type", using: :btree
