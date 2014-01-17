@@ -3,6 +3,8 @@ class Slot < ActiveRecord::Base
   belongs_to :version
   belongs_to :inventario, polymorphic: true
 
+  validates_presence_of :version_id
+
   amoeba do
     nullify :inventario_id
   end
@@ -20,7 +22,7 @@ class Slot < ActiveRecord::Base
 
   def self.contados
     joins(:version).select(
-      'versiones.*, slots.cantidad').order(
+      'versiones.*, slots.*').order(
         'versiones.tipo, versiones.coste_convertido')
   end
 
