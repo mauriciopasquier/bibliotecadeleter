@@ -1,5 +1,17 @@
 # Cambios recientes
 
+## 1.7.2
+
+### Arreglos
+
+- Lista de socios completa
+
+## 1.7.1
+
+### Arreglos
+
+- Arreglado un bug al crear o mostrar mazos y listas
+
 ## 1.7.0
 
 ### Mejoras
