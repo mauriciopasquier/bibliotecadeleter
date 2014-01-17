@@ -40,7 +40,7 @@ describe ListasController do
       viejo_slot = {
         id: lista.slots.first.id,
         cantidad: lista.slots.first.cantidad.next,
-        version_id: lista.slots.first.id }
+        version_id: lista.slots.first.version_id }
 
       lista.slots.count.must_equal 1
       lista.visible.must_equal true
@@ -55,6 +55,19 @@ describe ListasController do
       lista.reload
       lista.slots.count.must_equal 2
       lista.nombre.must_equal 'otro'
+    end
+
+    it "rechaza slots vacíos" do
+      lista = create(:lista_con_slots, usuario: @usuario)
+
+      nuevo_slot = attributes_for(:slot)
+      nuevo_slot[:version_id].must_be_nil
+
+      put :update, usuario_id: @usuario, id: lista, lista: {
+        slots_attributes: { '0' => nuevo_slot } }
+
+      must_render_template :edit
+      assigns(:lista).errors.first.wont_be_nil
     end
   end
 end
