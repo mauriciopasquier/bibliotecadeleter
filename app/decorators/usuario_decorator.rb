@@ -10,7 +10,7 @@ class UsuarioDecorator < ApplicationDecorator
   end
 
   def antiguedad
-    h.distance_of_time_in_words(usuario.created_at, Date.today)
+    h.distance_of_time_in_words(usuario.created_at, DateTime.now)
   end
 
   def actual?
