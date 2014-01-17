@@ -31,6 +31,8 @@ module ApplicationHelper
           else
             nil
         end
+      when /^forem\//
+        'Foros'
       else
         nil
     end
