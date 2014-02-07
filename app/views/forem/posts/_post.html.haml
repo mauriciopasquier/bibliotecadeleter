@@ -11,11 +11,11 @@
             = render "/forem/posts/moderation_tools", post: post
 
   .row-fluid
-    .user.span2
+    .user.span2.text-center
       .username
         = link_to_if Forem.user_profile_links, post.user, [main_app, post.user]
       .icon.hidden-phone
-        = post.user.decorate.algun_avatar_tag
+        = post.user.decorate.algun_avatar_tag(:chico)
 
     .contents.span10
       %a{href: "#post-#{post.id}"}

@@ -119,7 +119,8 @@ describe Reglas do
     describe 'cartas prohibidas' do
       subject do
         @prohibida = create(:carta_con_versiones, nombre: 'prohibida')
-        Reglas.new create(:formato, cartas_prohibidas: [ @prohibida ])
+        @mazo = create(:mazo)
+        Reglas.new create(:formato, cartas_prohibidas: [ @prohibida ]), @mazo
       end
 
       it 'pasa si el formato no tiene cartas prohibidas' do
@@ -127,15 +128,19 @@ describe Reglas do
       end
 
       it 'pasa si el mazo no usa cartas prohibidas' do
-        subject.mazo = create(:mazo, principal_attributes: {
-          slots: [ create(:slot, cantidad: 1, version: create(:version_con_carta)) ]
+        subject.mazo.update(principal_attributes: {
+          slots: [
+            create(:slot, cantidad: 1, version: create(:version_con_carta), inventario: subject.mazo)
+          ]
         })
         subject.cartas_permitidas?.must_equal true
       end
 
       it 'falla si el mazo usa cartas prohibidas' do
-        subject.mazo = create(:mazo, principal_attributes: {
-          slots: [ create(:slot, cantidad: 1, version: @prohibida.canonica) ]
+        subject.mazo.update(principal_attributes: {
+          slots: [
+            create(:slot, cantidad: 1, inventario: subject.mazo, version: @prohibida.canonica)
+          ]
         })
         subject.cartas_permitidas?.wont_equal true
       end
@@ -144,7 +149,8 @@ describe Reglas do
     describe 'expansiones' do
       subject do
         @expansion = create(:expansion)
-        Reglas.new create(:formato, expansiones: [ @expansion ])
+        @mazo = create(:mazo)
+        Reglas.new create(:formato, expansiones: [ @expansion ]), @mazo
       end
 
       it 'pasa sin expansiones definidas' do
@@ -152,30 +158,32 @@ describe Reglas do
       end
 
       it 'pasa si todas las cartas son de expansiones permitidas' do
-        subject.mazo = create(:mazo, principal_attributes: {
+        subject.mazo.update(principal_attributes: {
           slots: [
-            create(:slot, cantidad: 1, version: create(:version_con_carta,
-            expansion_id: @expansion.id))
+            create(:slot, cantidad: 1, inventario: subject.mazo,
+              version: create(:version_con_carta, expansion_id: @expansion.id))
           ]
         })
         subject.expansiones_validas?.must_equal true
       end
 
       it 'falla si alguna carta no es de expansiones permitidas' do
-        subject.mazo = create(:mazo, principal_attributes: {
-          slots: [ create(:slot, cantidad: 1, version: create(:version_con_carta)) ]
+        subject.mazo.update(principal_attributes: {
+          slots: [
+            create(:slot, cantidad: 1, inventario: subject.mazo, version: create(:version_con_carta))
+          ]
         })
         subject.expansiones_validas?.wont_equal true
       end
 
       it 'falla si algún demonio no es de expansiones permitidas' do
         subject.mazo = create(:mazo, slots: [
-          create(:slot, cantidad: 1,
+          create(:slot, cantidad: 1, inventario: subject.mazo,
             version: create(:version_con_carta, supertipo: 'Demonio'))
           ], principal_attributes: {
           slots: [
-            create(:slot, cantidad: 1, version: create(:version_con_carta,
-            expansion_id: @expansion.id))
+            create(:slot, cantidad: 1, inventario: subject.mazo,
+            version: create(:version_con_carta, expansion_id: @expansion.id))
         ]})
         subject.expansiones_validas?.wont_equal true
       end
@@ -339,7 +347,7 @@ describe Reglas do
       it 'pasa si todas las cartas son de expansiones permitidas' do
         subject.mazo = build(:mazo, principal_attributes: {
           slots: [
-            create(:slot, cantidad: 1, version: create(:version_con_carta,
+            build(:slot, cantidad: 1, version: create(:version_con_carta,
             expansion_id: @expansion.id))
           ]
         })
