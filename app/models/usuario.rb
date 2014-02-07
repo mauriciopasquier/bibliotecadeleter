@@ -70,6 +70,13 @@ class Usuario < ActiveRecord::Base
     decorate.algun_avatar
   end
 
+  # TODO unificar API con Imagen
+  def estilos
+    avatar.styles.inject({}) do |hash, estilo|
+      hash[estilo.first] = estilo.last.geometry and hash
+    end
+  end
+
   private
 
     def crear_listas

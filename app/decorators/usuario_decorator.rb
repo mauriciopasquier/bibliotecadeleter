@@ -19,21 +19,22 @@ class UsuarioDecorator < ApplicationDecorator
 
   # Si cargó un avatar, usarlo. Si no, defaultear a gravatar con default a
   # nuestro missing.png
-  def algun_avatar
+  def algun_avatar(estilo = :arte)
     if object.avatar?
-      object.avatar.url
+      object.avatar.url(estilo)
     else
       object.gravatar_url(
-        default: h.request.base_url + object.avatar.url, size: 190
+        default: h.request.base_url + object.avatar.url,
+        size: object.estilos[estilo].split('x').first
       )
     end
   end
 
-  def algun_avatar_tag(lazy = 'lazy')
-    [ h.image_tag(algun_avatar, alt: object.nick, class: lazy),
+  def algun_avatar_tag(estilo = :arte, lazy = 'lazy')
+    [ h.image_tag(algun_avatar(estilo), alt: object.nick, class: lazy),
 
       h.content_tag(:noscript) do
-        h.x_image_tag(algun_avatar, alt: object.nick)
+        h.x_image_tag(algun_avatar(estilo), alt: object.nick)
       end
     ].join.html_safe
   end
