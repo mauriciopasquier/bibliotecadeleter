@@ -1,5 +1,13 @@
 # Cambios recientes
 
+## 1.7.4
+
+### Mejoras
+
+- Todas las cartas de [Origen][] cargadas, excepto:
+  - La versión normal de [Grímnir][] (existe?)
+  - La versión corregida en buena calidad de la [Adoratriz][]
+
 ## 1.7.3
 
 ### Arreglos
@@ -193,3 +201,5 @@
 [socios]: http://bibliotecadeleter.com.ar/socios
 [sobre]: http://bibliotecadeleter.com.ar/expansiones/origen/sobre
 [foros]: http://bibliotecadeleter.com.ar/antesala
+[Grímnir]: http://bibliotecadeleter.com.ar/cartas/grimnir-lider-de-la-rebelion/origen
+[Adoratriz]: http://bibliotecadeleter.com.ar/cartas/adoratriz-del-bosque-antiguo
