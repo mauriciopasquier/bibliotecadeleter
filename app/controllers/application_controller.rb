@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :agregar_parametros_permitidos, if: :devise_controller?
 
-  protect_from_forgery
+  protect_from_forgery with: :reset_session
 
   # Cancan
   def current_user

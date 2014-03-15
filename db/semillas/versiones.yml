@@ -13586,7 +13586,7 @@ versiones:
     - '66'
     - Infrecuente
     - '2013-09-17 22:49:01.007576'
-    - '2013-09-17 22:49:01.032374'
+    - '2014-03-12 15:16:43.434791'
     - '634'
     - true
     - '16'
@@ -13669,7 +13669,7 @@ versiones:
     - '53'
     - Infrecuente
     - '2013-09-28 15:38:56.799391'
-    - '2013-10-08 22:36:54.668365'
+    - '2014-03-12 15:10:28.184904'
     - '638'
     - true
     - '16'
@@ -13952,10 +13952,10 @@ versiones:
     - 
     - Caos
     - Un kirch nunca caza solo.
-    - '18'
+    - '16'
     - Común
     - '2013-10-07 18:20:56.373457'
-    - '2013-10-07 18:20:56.436713'
+    - '2014-03-12 14:48:15.375895'
     - '649'
     - true
     - '16'
@@ -14003,7 +14003,7 @@ versiones:
     - '3'
     - '3'
   - - '734'
-    - Réplica {1} (cuando juegues esta carta, puedes jugar las copias de tu inferno
+    - Réplica {2} (cuando juegues esta carta, puedes jugar las copias de tu inferno
       pagando su Réplica).
     - Arma
     - 
@@ -14015,7 +14015,7 @@ versiones:
     - '32'
     - Infrecuente
     - '2013-10-07 18:26:34.92359'
-    - '2013-10-07 18:26:34.938561'
+    - '2014-03-12 15:00:02.590284'
     - '652'
     - true
     - '16'
@@ -14316,7 +14316,7 @@ versiones:
     - '125'
     - Común
     - '2013-10-07 18:55:20.922822'
-    - '2013-10-07 18:55:20.937321'
+    - '2014-03-15 03:50:10.483438'
     - '128'
     - false
     - '16'
@@ -14739,7 +14739,7 @@ versiones:
     - '34'
     - Infrecuente
     - '2013-10-16 05:27:33.176918'
-    - '2013-10-16 05:27:33.191582'
+    - '2014-03-12 15:02:27.870042'
     - '663'
     - true
     - '16'
@@ -15095,7 +15095,7 @@ versiones:
     - '140'
     - Rara
     - '2013-10-16 07:08:35.179151'
-    - '2013-10-16 07:08:35.200593'
+    - '2014-03-15 04:03:51.928427'
     - '670'
     - true
     - '16'
@@ -15361,7 +15361,7 @@ versiones:
     - '8'
     - '8'
   - - '802'
-    - Siempre que una carta sea mezclada en tu mazo, tu demonio obtiene +1 FUE hasta
+    - Siempre que un efecto devuelva cartas a tu mazo, tu demonio obtiene +1 FUE hasta
       el final del turno.
     - Aliado
     - 
@@ -15373,7 +15373,7 @@ versiones:
     - '90'
     - Rara
     - '2013-10-18 00:14:26.015276'
-    - '2013-10-18 00:14:26.030502'
+    - '2014-03-15 04:14:27.627418'
     - '672'
     - true
     - '16'
@@ -15401,7 +15401,7 @@ versiones:
     - '1'
     - '1'
   - - '804'
-    - 'Destruir Elixir de saviaesencia: Mezcla hasta 4 cartas objetivo de tu inferno
+    - 'Exilia Elixir de saviaesencia: Mezcla hasta 4 cartas objetivo de tu inferno
       en tu mazo.'
     - Objeto
     - 
@@ -15414,7 +15414,7 @@ versiones:
     - '105'
     - Infrecuente
     - '2013-10-18 00:20:01.903389'
-    - '2013-10-18 00:20:01.923448'
+    - '2014-03-15 03:34:08.099233'
     - '674'
     - true
     - '16'
@@ -15434,7 +15434,7 @@ versiones:
     - '106'
     - Infrecuente
     - '2013-10-18 00:21:27.408749'
-    - '2013-10-18 00:21:27.427748'
+    - '2014-03-15 03:34:30.654299'
     - '675'
     - true
     - '16'
@@ -15503,3 +15503,841 @@ versiones:
     - 115-origen
     - '3'
     - '3'
+  - - '809'
+    - Acudir a las bestias cuesta {3} menos si 4 o más recursos que controlas fueron
+      destruídos este turno. Pon en juego 4 fichas de aliado {Caos} Kirch 1 FUE, 1
+      RES.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - Las profundas fisuras no son la mayor preocupación del viajero.
+    - '9'
+    - Infrecuente
+    - '2014-03-12 14:46:23.134491'
+    - '2014-03-12 14:46:23.176069'
+    - '679'
+    - true
+    - '16'
+    - 009-origen
+    - '5'
+    - '5'
+  - - '810'
+    - Cuando Gusano del gran desierto entre en juego, hace 3 puntos de daño a todos
+      los aliados enemigos.
+    - Aliado
+    - 
+    - Elemental
+    - '6'
+    - '6'
+    - Caos
+    - '"Ten cuidado, o las arenas del Gran desierto te tragarán." Refrán Nungnarh'
+    - '18'
+    - Rara
+    - '2014-03-12 14:53:35.313485'
+    - '2014-03-12 14:53:35.317457'
+    - '26'
+    - false
+    - '16'
+    - 018-origen-7814e91f-108f-478f-8569-efd72c9cbf07
+    - '8'
+    - '8'
+  - - '811'
+    - 
+    - Aliado
+    - Instantáneo
+    - Kirch
+    - '1'
+    - '1'
+    - Caos
+    - 
+    - '26'
+    - Común
+    - '2014-03-12 14:55:05.716315'
+    - '2014-03-12 14:55:05.719612'
+    - '680'
+    - true
+    - '16'
+    - 026-origen
+    - '1'
+    - '1'
+  - - '812'
+    - Tu demonio hace X puntos de daño al aliado objetivo, donde X es la cantidad
+      de aliados que controlas.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Caos
+    - Los guerreros Nungnarh juegan a ver cuán lejos puede llegar el prisionero.
+    - '27'
+    - Común
+    - '2014-03-12 14:56:32.434635'
+    - '2014-03-12 14:56:32.438123'
+    - '34'
+    - false
+    - '16'
+    - 027-origen
+    - '3'
+    - '3'
+  - - '813'
+    - Siempre que el aliado equipado haga daño de combate, los aliados que controlas
+      obtienen +1 FUE hasta el final del turno.
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+1'
+    - Caos
+    - 
+    - '29'
+    - Rara
+    - '2014-03-12 14:58:13.215148'
+    - '2014-03-12 14:58:13.218787'
+    - '681'
+    - true
+    - '16'
+    - 029-origen
+    - '3'
+    - '3'
+  - - '814'
+    - Estocada (cuando haga daño de combate a un demonio) - El demonio objetivo destruye
+      un recurso que controle.
+    - Aliado
+    - 
+    - Humano Rebelde
+    - '1'
+    - '3'
+    - Caos
+    - 
+    - '33'
+    - Infrecuente
+    - '2014-03-12 15:02:06.166741'
+    - '2014-03-12 15:02:06.170284'
+    - '682'
+    - true
+    - '16'
+    - 033-origen
+    - '3'
+    - '3'
+  - - '815'
+    - Cuando un Kirch entre en juego bajo tu control, tu demonio hace 1 punto de daño
+      al aliado objetivo.
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - El corazón de la Cordillera de fuego, no es un lugar muy visitado.
+    - '35'
+    - Rara
+    - '2014-03-12 15:03:43.157575'
+    - '2014-03-12 15:03:43.161418'
+    - '38'
+    - false
+    - '16'
+    - 035-origen
+    - '3'
+    - '3'
+  - - '816'
+    - Cambia el/los objetivo/s del ritual o habilidad objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - '"Muchas gracias. ¡Justo lo que necesitaba!" -Ubanna'
+    - '41'
+    - Rara
+    - '2014-03-12 15:05:48.659593'
+    - '2014-03-12 15:05:48.663867'
+    - '44'
+    - false
+    - '16'
+    - 041-origen
+    - '5'
+    - '5'
+  - - '817'
+    - 
+    - Aliado
+    - Instantáneo
+    - Cyborg
+    - '1'
+    - '4'
+    - Locura
+    - 
+    - '42'
+    - Común
+    - '2014-03-12 15:06:39.593882'
+    - '2014-03-12 15:06:39.597209'
+    - '683'
+    - true
+    - '16'
+    - 042-origen
+    - '2'
+    - '2'
+  - - '818'
+    - "Evasivo (no puede ser atacado).\r\nPrevén todo el daño que Firio fuera a recibir
+      de demonios."
+    - Aliado
+    - Único
+    - Humano
+    - '2'
+    - '2'
+    - Locura
+    - 
+    - '50'
+    - Rara
+    - '2014-03-12 15:08:41.619491'
+    - '2014-03-12 15:08:41.622707'
+    - '684'
+    - true
+    - '16'
+    - 050-origen
+    - '3'
+    - '3'
+  - - '819'
+    - 'Girar: Endereza el aliado objetivo (juega esta habilidad sólo durante un turno
+      enemigo).'
+    - Aliado
+    - 
+    - Humano
+    - '1'
+    - '1'
+    - Locura
+    - 
+    - '51'
+    - Infrecuente
+    - '2014-03-12 15:09:58.776596'
+    - '2014-03-12 15:09:58.780001'
+    - '685'
+    - true
+    - '16'
+    - 051-origen
+    - '1'
+    - '1'
+  - - '820'
+    - "Cancela la carta con Réplica objetivo; cancela la habilidad de Réplica objetivo;
+      ó cancela la carta objetivo de coste 2 (elige uno).\r\nRéplica {2}."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - En solo un pequeño instante, todo el trabajo fue arruinado.
+    - '56'
+    - Rara
+    - '2014-03-12 15:12:14.190851'
+    - '2014-03-12 15:12:14.195035'
+    - '686'
+    - true
+    - '16'
+    - 056-origen
+    - '2'
+    - '2'
+  - - '821'
+    - Mira la mano del demonio objetivo y elige una carta. Ese demonio la descarta.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - '"No te escucho. ¿Me hablabas a mí?" -Baggrund'
+    - '59'
+    - Común
+    - '2014-03-12 15:13:06.472803'
+    - '2014-03-12 15:13:06.477227'
+    - '59'
+    - false
+    - '16'
+    - 059-origen
+    - '2'
+    - '2'
+  - - '822'
+    - Gira todos los aliados.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - La información en grandes cantidades puede ser abrumadora.
+    - '62'
+    - Infrecuente
+    - '2014-03-12 15:14:28.804344'
+    - '2014-03-12 15:14:28.808312'
+    - '687'
+    - true
+    - '16'
+    - 062-origen
+    - '4'
+    - '4'
+  - - '823'
+    - Siempre que un aliado no ficha sea puesto en un inferno desde el juego puedes
+      pagar {1}. Si lo haces, pon en juego una ficha de aliado {Muerte} Diablo 2 FUE,
+      2 RES.
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '63'
+    - Rara
+    - '2014-03-12 15:16:07.881752'
+    - '2014-03-12 15:16:07.885187'
+    - '688'
+    - true
+    - '16'
+    - 063-origen
+    - '4'
+    - '4'
+  - - '824'
+    - Exilia un aliado de tu inferno. Pon X contadores de daño sobre cualquier cantidad
+      de aliados enemigos, donde X es la FUE del aliado exiliado.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '73'
+    - Infrecuente
+    - '2014-03-12 15:18:26.819966'
+    - '2014-03-12 15:18:26.823774'
+    - '689'
+    - true
+    - '16'
+    - 073-origen
+    - '3'
+    - '3'
+  - - '825'
+    - El aliado objetivo tiene FUE 0 hasta el final del turno.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - '"Te veo algo cansado…" -Naamah'
+    - '77'
+    - Común
+    - '2014-03-12 15:20:24.359742'
+    - '2014-03-12 15:20:24.363431'
+    - '78'
+    - false
+    - '16'
+    - 077-origen
+    - '1'
+    - '1'
+  - - '826'
+    - 
+    - Aliado
+    - Instantáneo
+    - Diablo
+    - '2'
+    - '2'
+    - Muerte
+    - 
+    - '79'
+    - Común
+    - '2014-03-12 15:24:11.46621'
+    - '2014-03-12 15:24:11.469454'
+    - '690'
+    - true
+    - '16'
+    - 079-origen
+    - '2'
+    - '2'
+  - - '827'
+    - 'El aliado equipado tiene la habilidad de "Girar: El aliado objetivo obtiene
+      -2 FUE, -2 RES hasta el final del turno".'
+    - Arma
+    - Único
+    - 
+    - '+0'
+    - '+2'
+    - Muerte
+    - '"Debes sentirte orgulloso. No todos tienen la fortuna de morir en mis manos."
+      - Suma sacerdotisa'
+    - '84'
+    - Rara
+    - '2014-03-12 15:26:28.541449'
+    - '2014-03-12 15:26:28.544839'
+    - '691'
+    - true
+    - '16'
+    - 084-origen
+    - '4'
+    - '4'
+  - - '828'
+    - 'Destruir Osario antiguo: Pon el aliado objetivo de coste 4 o menos de tu inferno
+      en juego.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - Ningún secreto está suficientemente enterrado.
+    - '87'
+    - Infrecuente
+    - '2014-03-12 15:28:01.391768'
+    - '2014-03-12 15:28:01.396174'
+    - '692'
+    - true
+    - '16'
+    - 087-origen
+    - '3'
+    - '3'
+  - - '829'
+    - Exilia todos los objetos. Luego ponlos en juego bajo el control de su demonio.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '89'
+    - Rara
+    - '2014-03-12 15:29:56.30406'
+    - '2014-03-12 15:29:56.307618'
+    - '693'
+    - true
+    - '16'
+    - 089-origen
+    - '4'
+    - '4'
+  - - '830'
+    - Los aliados que controlas obtienen +2 FUE hasta el final del turno.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - '"Cada ser posee una definición propia de justicia." -Seguidor de Arasunu'
+    - '91'
+    - Rara
+    - '2014-03-15 03:30:26.993262'
+    - '2014-03-15 03:30:27.049274'
+    - '91'
+    - false
+    - '16'
+    - 091-origen
+    - '5'
+    - '5'
+  - - '831'
+    - 
+    - Aliado
+    - Instantáneo
+    - Barahai
+    - '3'
+    - '2'
+    - Poder
+    - 
+    - '97'
+    - Común
+    - '2014-03-15 03:31:54.08246'
+    - '2014-03-15 03:31:54.086449'
+    - '694'
+    - true
+    - '16'
+    - 097-origen
+    - '3'
+    - '3'
+  - - '832'
+    - El aliado equipado puede atacar aliados con Evasivo como si no tuvieran esa
+      habilidad.
+    - Arma
+    - Único
+    - 
+    - '+2'
+    - '+1'
+    - Poder
+    - '"¿Crees estar a salvo porque no puedo verte? ¡Puedo oler tu miedo desde aquí!"'
+    - '109'
+    - Rara
+    - '2014-03-15 03:37:36.110401'
+    - '2014-03-15 03:37:36.114828'
+    - '696'
+    - true
+    - '16'
+    - 109-origen
+    - '3'
+    - '3'
+  - - '833'
+    - La FUE y RES de Primogénito del bosque es igual al número de recursos que controlas.
+    - Aliado
+    - 
+    - Elemental
+    - X
+    - X
+    - Poder
+    - Por su savia recorre la historia de la tierra que una vez existió.
+    - '111'
+    - Rara
+    - '2014-03-15 03:38:37.157813'
+    - '2014-03-15 03:38:37.161631'
+    - '109'
+    - false
+    - '16'
+    - 111-origen
+    - '7'
+    - '7'
+  - - '834'
+    - Busca en tus recursos hasta 2 cartas de aliado y muéstralas. Luego ponlas en
+      tu mano.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - '"No maldigas este suelo hoy, pues estarás huyendo de él mañana." -Dicho de
+      los Hermanos de la tierra.'
+    - '113'
+    - Infrecuente
+    - '2014-03-15 03:40:49.706717'
+    - '2014-03-15 03:40:49.710702'
+    - '697'
+    - true
+    - '16'
+    - 113-origen
+    - '3'
+    - '3'
+  - - '835'
+    - '{2}: Prevén el siguiente punto de daño que fuera a hacerse al aliado objetivo
+      hasta el final del turno.'
+    - Aliado
+    - 
+    - Humano
+    - '1'
+    - '2'
+    - Poder
+    - '"Conoce a tu enemigo, y anticipa sus movimientos."'
+    - '116'
+    - Infrecuente
+    - '2014-03-15 03:42:52.523036'
+    - '2014-03-15 03:42:52.526886'
+    - '698'
+    - true
+    - '16'
+    - 116-origen
+    - '2'
+    - '2'
+  - - '836'
+    - Siempre que un demonio fuese a hacer daño a un aliado, prevén 1 punto de ese
+      daño.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '121'
+    - Infrecuente
+    - '2014-03-15 03:44:39.354252'
+    - '2014-03-15 03:44:39.357785'
+    - '699'
+    - true
+    - '16'
+    - 121-origen
+    - '0'
+    - '0'
+  - - '837'
+    - 'Destruir Botiquín médico: Remueve todo el daño sobre aliado objetivo.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Toma el mío, lo necesitarás mas que yo." -Últimas palabras del guía'
+    - '122'
+    - Común
+    - '2014-03-15 03:45:33.665653'
+    - '2014-03-15 03:45:33.669415'
+    - '124'
+    - false
+    - '16'
+    - 122-origen
+    - '1'
+    - '1'
+  - - '838'
+    - Vinculo {0} (cuando sea puesta en el inferno desde el mazo, puedes pagar su
+      coste de vínculo y exiliarla) - Pon la carta objetivo de coste 2 o menos de
+      tu inferno en tu mano.
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '1'
+    - Neutral
+    - 
+    - '123'
+    - Común
+    - '2014-03-15 03:49:13.356225'
+    - '2014-03-15 03:49:13.359741'
+    - '700'
+    - true
+    - '16'
+    - 123-origen
+    - '2'
+    - '2'
+  - - '839'
+    - Busca en tu mazo hasta 3 cartas con réplica y ponlas en tu inferno. Luego mezcla
+      tu mazo.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - '"La respuesta a nuestras preguntas no puede estar en una única escritura, ni
+      en un solo libro." - Erudito rebelde'
+    - '127'
+    - Infrecuente
+    - '2014-03-15 03:51:59.913299'
+    - '2014-03-15 03:51:59.916583'
+    - '701'
+    - true
+    - '16'
+    - 127-origen
+    - '2'
+    - '2'
+  - - '840'
+    - Golpe de gracia (cuando el aliado equipado destruya un aliado) - Puedes poner
+      el aliado destruido en juego bajo tu control desde el inferno de su demonio
+      (si el aliado fue movido a otra zona no vuelve al juego).
+    - Arma
+    - Instantáneo
+    - 
+    - '+2'
+    - '+0'
+    - Neutral
+    - 
+    - '128'
+    - Épica
+    - '2014-03-15 03:54:25.277256'
+    - '2014-03-15 03:54:25.281787'
+    - '142'
+    - false
+    - '16'
+    - 128-origen
+    - '5'
+    - '5'
+  - - '841'
+    - Pon el aliado objetivo en la parte superior del mazo de su demonio. Réplica
+      {2} (cuando juegues esta carta, puedes jugar las copias de tu inferno pagando
+      su Réplica)
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '130'
+    - Rara
+    - '2014-03-15 03:55:57.703478'
+    - '2014-03-15 03:55:57.707053'
+    - '702'
+    - true
+    - '16'
+    - 130-origen
+    - '3'
+    - '3'
+  - - '842'
+    - "Pon la carta objetivo del exilio en tu inferno.\r\nRéplica {2} (cuando juegues
+      esta carta, puedes jugar las copias de tu inferno pagando su Réplica)."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '131'
+    - Rara
+    - '2014-03-15 03:57:43.159626'
+    - '2014-03-15 03:57:43.16266'
+    - '703'
+    - true
+    - '16'
+    - 131-origen
+    - '4'
+    - '4'
+  - - '843'
+    - 'Girar, descarta una carta: Cancela el combate en curso. Si la carta descartada
+      para pagar esta habilidad es un escenario, puedes ponerlo en juego desde tu
+      inferno (juega esta habilidad sólo si un demonio enemigo está atacando a tu
+      demonio).'
+    - Objeto
+    - Único
+    - 
+    - 
+    - 
+    - Neutral
+    - '"¿A dónde deseas viajar?" - Ravel'
+    - '134'
+    - Épica
+    - '2014-03-15 03:59:26.709384'
+    - '2014-03-15 03:59:26.712973'
+    - '704'
+    - true
+    - '16'
+    - 134-origen
+    - '3'
+    - '3'
+  - - '844'
+    - Guantes de luminium no puede equiparse a un aliado que ya tenga otro Guantes
+      de luminium equipado. Si una habilidad del aliado equipado fuera a disparar,
+      en vez de eso dispara 2 veces.
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Neutral
+    - 
+    - '135'
+    - Infrecuente
+    - '2014-03-15 04:00:39.556681'
+    - '2014-03-15 04:00:39.560199'
+    - '705'
+    - true
+    - '16'
+    - 135-origen
+    - '4'
+    - '4'
+  - - '845'
+    - El aliado equipado obtiene +1 FUE por cada otro aliado que controles, que comparta
+      un tipo de aliado con él.
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '+0'
+    - Neutral
+    - 
+    - '139'
+    - Rara
+    - '2014-03-15 04:03:27.514161'
+    - '2014-03-15 04:03:27.520443'
+    - '163'
+    - false
+    - '16'
+    - 139-origen
+    - '4'
+    - '4'
+  - - '846'
+    - Destruye el objeto o arma objetivo.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - '"Ya no necesitarás esto." -Zustatek'
+    - '143'
+    - Común
+    - '2014-03-15 04:06:14.638835'
+    - '2014-03-15 04:06:28.113812'
+    - '168'
+    - false
+    - '16'
+    - 143-origen
+    - '2'
+    - '2'
+  - - '847'
+    - "Pon la carta objetivo de tu inferno en tu mano.\r\nRéplica {2} (cuando juegues
+      esta carta, puedes jugar las copias de tu inferno pagando su Réplica)."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '145'
+    - Común
+    - '2014-03-15 04:09:09.892816'
+    - '2014-03-15 04:09:09.897998'
+    - '707'
+    - true
+    - '16'
+    - 145-origen
+    - '3'
+    - '3'
+  - - '848'
+    - Al principio de tu restauración puedes mirar las primeras 3 cartas de tu mazo.
+      Pon una de esas cartas en tu inferno, otra en tu mano y la otra en juego boca
+      abajo como recurso. Si lo haces, sáltate tu fase de tomar carta y poner recurso.
+    - Objeto
+    - Único
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '146'
+    - Épica
+    - '2014-03-15 04:11:17.051066'
+    - '2014-03-15 04:11:17.054411'
+    - '708'
+    - true
+    - '16'
+    - 146-origen
+    - '2'
+    - '2'
+  - - '849'
+    - Las habilidades activadas que no sean de energía no pueden activarse.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - Sin vida, sin conocimiento, sin futuro.
+    - '147'
+    - Infrecuente
+    - '2014-03-15 04:12:18.417882'
+    - '2014-03-15 04:12:18.421396'
+    - '176'
+    - false
+    - '16'
+    - 147-origen
+    - '0'
+    - '0'
+  - - '850'
+    - "Furia.\r\nEstocada - Puedes mirar la carta del tope de tu mazo. Si es un rebelde
+      puedes ponerlo en juego sin pagar su coste."
+    - Aliado
+    - Único
+    - Humano Rebelde
+    - '3'
+    - '4'
+    - Neutral
+    - 
+    - '133'
+    - Rara
+    - '2014-03-15 04:16:40.042193'
+    - '2014-03-15 04:16:40.046252'
+    - '671'
+    - false
+    - '16'
+    - 133-origen
+    - '5'
+    - '5'

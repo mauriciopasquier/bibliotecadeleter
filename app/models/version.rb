@@ -135,10 +135,12 @@ class Version < ActiveRecord::Base
     def actualizar_path_de_imagenes
       imagenes.each do |i|
         Imagen.estilos.each do |estilo|
-          nuevo = i.archivo.path(estilo)
-          viejo = nuevo.gsub numero_justificado, numero_was.to_s.rjust(3, '0')
 
-          File.rename(viejo, nuevo) if File.exists?(viejo)
+          if nuevo = i.archivo.path(estilo)
+            viejo = nuevo.gsub numero_justificado, numero_was.to_s.rjust(3, '0')
+            File.rename(viejo, nuevo) if File.exists?(viejo)
+          end
+
         end
       end
     end
