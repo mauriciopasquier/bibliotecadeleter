@@ -1,5 +1,11 @@
 # Cambios recientes
 
+## 1.7.5
+
+### Mejoras
+
+- El input para subir archivos funciona mejor en varios tamaños de pantalla
+
 ## 1.7.4
 
 ### Mejoras
