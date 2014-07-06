@@ -38,3 +38,4 @@
 //= require cartas
 //= require listas
 //= require torneos
+//= require expansiones

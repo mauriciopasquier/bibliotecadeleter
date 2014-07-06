@@ -7,3 +7,17 @@ dl.notas {
     text-align: center;
   }
 }
+
+@media(min-width: 760px) {
+  // Para los estilos de file upload
+  form.expansion {
+    .filestyle {
+      &[type='text'] {
+        float: left;
+      }
+
+      &.btn {
+      }
+    }
+  }
+}
