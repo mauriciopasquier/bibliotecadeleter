@@ -8,7 +8,7 @@ class CartasController < ApplicationController
   before_filter :cargar_recurso, only: :create
   load_and_authorize_resource
 
-  before_filter :cargar_version, only: [ :show, :update ]
+  before_filter :cargar_version, only: :show
   before_filter :check_espia
   before_filter :check_barra_de_busqueda, only: :buscar
 
@@ -33,6 +33,10 @@ class CartasController < ApplicationController
   end
 
   def update
+    # Cargamos la versión que estamos intentando crear por si hay error,
+    # asumiendo que sólo se envía una versión a la vez
+    @version = Version.new parametros_permitidos[:versiones_attributes].values.first
+
     @carta.update parametros_permitidos
     respond_with(@carta, location: en_expansion_carta_path(@carta, expansion))
   end
