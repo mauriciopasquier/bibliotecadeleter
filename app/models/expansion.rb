@@ -3,7 +3,8 @@ class Expansion < ActiveRecord::Base
   include FriendlyId
   include PgSearch
 
-  has_many :versiones, -> { order('slug ASC') }, dependent: :destroy
+  has_many :versiones, -> { order('slug ASC') }, dependent: :destroy,
+    inverse_of: :expansion
   has_many :cartas, through: :versiones
   has_many :imagenes, -> { order('versiones.slug ASC') }, through: :versiones
   has_and_belongs_to_many :formatos

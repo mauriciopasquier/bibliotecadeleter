@@ -3,7 +3,7 @@ class Version < ActiveRecord::Base
   include FriendlyId
   include PgSearch
 
-  attr_readonly   :coste_convertido
+  attr_readonly :coste_convertido
 
   belongs_to :carta, inverse_of: :versiones, touch: true
   belongs_to :expansion, touch: true
@@ -24,7 +24,7 @@ class Version < ActiveRecord::Base
   before_save :actualizar_path_de_imagenes, if: :numero_changed?
 
   validates_uniqueness_of :numero, scope: :expansion_id, message: :no_es_unico_en_la_expansion
-  validates_presence_of :carta, inverse_of: :versiones
+  validates_presence_of :carta, :expansion
 
   scope :costeadas, -> { where.not(coste_convertido: nil) }
   scope :demonios, -> { where(supertipo: 'Demonio') }
@@ -117,7 +117,7 @@ class Version < ActiveRecord::Base
 
     # Usá `slug` para llamar a esto
     def expansion_y_numero
-      "#{numero_justificado}-#{expansion.try(:slug) || 'huerfanas'}"
+      "#{numero_justificado}-#{expansion.try(:slug)}"
     end
 
     # TODO gracias a la errata hay que determinar la canónica a mano, o preferir la última
