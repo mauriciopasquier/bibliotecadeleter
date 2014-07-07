@@ -8,7 +8,7 @@ class CartasController < ApplicationController
   before_filter :cargar_recurso, only: :create
   load_and_authorize_resource
 
-  before_filter :cargar_version, only: :show
+  before_filter :cargar_version, only: [ :show, :update ]
   before_filter :check_espia
   before_filter :check_barra_de_busqueda, only: :buscar
 
