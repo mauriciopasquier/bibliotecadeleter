@@ -10,6 +10,7 @@ class Suplente < Lista
 
   delegate :usuario_id, to: :mazo, allow_nil: true
 
+  # TODO revisar si se puede cambiar a nombre
   friendly_id :nombrar, use: :slugged
 
   amoeba do

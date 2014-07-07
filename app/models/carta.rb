@@ -36,4 +36,10 @@ class Carta < ActiveRecord::Base
   def nombre_y_expansion
     self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion})")
   end
+
+  private
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end

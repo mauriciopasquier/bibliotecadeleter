@@ -34,4 +34,10 @@ class Formato < ActiveRecord::Base
   def reglas_para(mazo)
     Reglas.new(self, mazo)
   end
+
+  private
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end

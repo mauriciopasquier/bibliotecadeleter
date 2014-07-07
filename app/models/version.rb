@@ -120,6 +120,11 @@ class Version < ActiveRecord::Base
       "#{numero_justificado}-#{expansion.try(:slug)}"
     end
 
+    # Los slugs no se regeneran siempre
+    def should_generate_new_friendly_id?
+      expansion_id_changed? || numero_changed? || super
+    end
+
     # TODO gracias a la errata hay que determinar la canónica a mano, o preferir la última
     # La primer versión de cada carta es la canónica
     def ver_si_es_canonica

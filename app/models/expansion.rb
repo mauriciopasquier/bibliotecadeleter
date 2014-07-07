@@ -37,4 +37,10 @@ class Expansion < ActiveRecord::Base
   def abrir_sobre
     Sobre.abrir(versiones)
   end
+
+  private
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end

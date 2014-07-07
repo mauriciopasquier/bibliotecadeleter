@@ -92,4 +92,8 @@ class Usuario < ActiveRecord::Base
       skip_reconfirmation!
       self.add_badge SOCIO.id
     end
+
+    def should_generate_new_friendly_id?
+      nick_changed? || super
+    end
 end

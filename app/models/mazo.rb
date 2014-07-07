@@ -139,4 +139,8 @@ class Mazo < ActiveRecord::Base
     def solo_usar_expansiones_permitidas
       errors.add :base, :cartas_en_expansiones_prohibidas unless reglas.expansiones_validas?
     end
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end
