@@ -36,8 +36,8 @@ class VersionDecorator < ApplicationDecorator
 
   def supertipo
     if object.supertipo?
-      if object.tipo =~ /Arma/i and object.supertipo =~ /nstantáneo/
-        " #{object.supertipo.gsub('nstantáneo', 'nstantánea')}"
+      if object.tipo =~ /Arma/i
+        " #{object.supertipo.gsub('nstantáneo', 'nstantánea').gsub('nico', 'nica')}"
       else
         " #{object.supertipo}"
       end
