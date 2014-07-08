@@ -4,7 +4,8 @@
 
   #expansiones.tabla-fluida
     .encabezado.row-fluid
-      .nombre.span4= sort_link @busqueda, :nombre, opciones_de_ordenar
+      .nombre.span3= sort_link @busqueda, :nombre, opciones_de_ordenar
+      .codigo.span1= sort_link @busqueda, :codigo, opciones_de_ordenar
       .lanzamiento.span2.hidden-phone= sort_link @busqueda, :lanzamiento, opciones_de_ordenar
       .presentacion.span2.visible-desktop= sort_link @busqueda, :presentacion, 'Presentación',
         opciones_de_ordenar

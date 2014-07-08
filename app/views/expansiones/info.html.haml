@@ -20,6 +20,9 @@
       - if expansion.total?
         %dt Total
         %dd= expansion.total
+      - if expansion.codigo?
+        %dt Código
+        %dd= expansion.codigo
       %dt Legal en
       %dd= expansion.formatos
       - if expansion.notas?
