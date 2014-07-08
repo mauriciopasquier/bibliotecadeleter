@@ -13727,14 +13727,14 @@ versiones:
     - 
     - Poder
     - Carne, sangre y metal. Alimentos de un bosque insaciable.
-    - '102'
+    - '101'
     - Rara
     - '2013-09-28 15:45:40.522615'
-    - '2013-10-18 00:17:53.127687'
+    - '2014-07-08 01:59:26.994936'
     - '641'
     - true
     - '16'
-    - 102-origen
+    - 101-origen
     - '3'
     - '3'
   - - '720'
@@ -16322,7 +16322,8 @@ versiones:
     - '0'
     - '0'
   - - '850'
-    - "Furia.\r\nEstocada - Puedes mirar la carta del tope de tu mazo. Si es un rebelde
+    - "Furia (puede atacar inmediatamente).\r\nEstocada (cuando haga daño de combate
+      a un demonio) - Puedes mirar la carta del tope de tu mazo. Si es un rebelde
       puedes ponerlo en juego sin pagar su coste."
     - Aliado
     - Único
@@ -16334,7 +16335,7 @@ versiones:
     - '133'
     - Rara
     - '2014-03-15 04:16:40.042193'
-    - '2014-03-15 04:16:40.046252'
+    - '2014-07-08 01:49:54.723172'
     - '671'
     - false
     - '16'
@@ -17562,5 +17563,102 @@ versiones:
     - false
     - '18'
     - 062-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '916'
+    - 
+    - Aliado
+    - Ficha
+    - Kirch
+    - '1'
+    - '1'
+    - Caos
+    - 
+    - '149'
+    - Común
+    - '2014-07-08 01:46:23.689879'
+    - '2014-07-08 01:46:23.704331'
+    - '181'
+    - false
+    - '16'
+    - 149-origen
+    - 
+    - 
+  - - '917'
+    - Protector (Puedes girarlo y hacer que defienda al atacante, en vez del defensor
+      propuesto).
+    - Aliado
+    - Ficha
+    - Cyborg
+    - '1'
+    - '1'
+    - Locura
+    - 
+    - '150'
+    - Común
+    - '2014-07-08 01:47:31.190388'
+    - '2014-07-08 01:47:31.201366'
+    - '182'
+    - false
+    - '16'
+    - 150-origen
+    - 
+    - 
+  - - '918'
+    - 
+    - Aliado
+    - Ficha
+    - Diablo
+    - '2'
+    - '2'
+    - Muerte
+    - 
+    - '151'
+    - Común
+    - '2014-07-08 01:48:04.059742'
+    - '2014-07-08 01:48:04.070039'
+    - '183'
+    - false
+    - '16'
+    - 151-origen
+    - 
+    - 
+  - - '919'
+    - 
+    - Aliado
+    - Ficha
+    - Barahai
+    - '3'
+    - '3'
+    - Poder
+    - 
+    - '152'
+    - Común
+    - '2014-07-08 01:48:42.771928'
+    - '2014-07-08 01:48:42.781592'
+    - '184'
+    - false
+    - '16'
+    - 152-origen
+    - 
+    - 
+  - - '920'
+    - El aliado objetivo tiene la habilidad de Agresor hasta el final del turno (tu
+      enemigo debe proponer un aliado con agresor como defensor).
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Poder
+    - '"Eres la clave. ¡Enorgulléceme!" -Lapátt'
+    - '102'
+    - Común
+    - '2014-07-08 02:01:43.459127'
+    - '2014-07-08 02:01:43.468106'
+    - '101'
+    - false
+    - '16'
+    - 102-origen
     - '1'
     - '1'
