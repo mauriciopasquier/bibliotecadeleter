@@ -144,4 +144,8 @@ class Torneo < ActiveRecord::Base
       inscripciones.where(dropeo: ultima_ronda).update_all(dropeo: nil)
       rondas.where(numero: ultima_ronda).destroy_all
     end
+
+    def should_generate_new_friendly_id?
+      fecha_changed? || super
+    end
 end

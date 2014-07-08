@@ -26,4 +26,9 @@ class ExpansionDecorator < ApplicationDecorator
         h.x_image_tag(object.base.logo.url)
       end ].join.html_safe
   end
+
+  # Código con fallback a nombre
+  def codigo_o_nombre
+    object.codigo || object.nombre
+  end
 end

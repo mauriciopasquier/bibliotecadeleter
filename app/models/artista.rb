@@ -33,4 +33,10 @@ class Artista < ActiveRecord::Base
   end
 
   default_scope { order(:nombre) }
+
+  private
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end

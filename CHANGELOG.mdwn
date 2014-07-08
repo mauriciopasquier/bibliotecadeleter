@@ -1,5 +1,11 @@
 # Cambios recientes
 
+## 7/7/2014
+
+- Subimos entero [Esenciales: Ubanna][]
+- Subimos varias cartas que faltaban en [Origen][] (Grímnir, las fichas, Coraje repentino)
+- No versionamos más los cambios recientes (sale fecha!)
+
 ## 1.7.5
 
 ### Mejoras
@@ -209,3 +215,4 @@
 [foros]: http://bibliotecadeleter.com.ar/antesala
 [Grímnir]: http://bibliotecadeleter.com.ar/cartas/grimnir-lider-de-la-rebelion/origen
 [Adoratriz]: http://bibliotecadeleter.com.ar/cartas/adoratriz-del-bosque-antiguo
+[Esenciales: Ubanna]: http://bibliotecadeleter.com.ar/expansiones/esenciales-ubanna

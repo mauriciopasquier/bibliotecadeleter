@@ -3991,12 +3991,12 @@ versiones:
     - '16'
     - Rara
     - '2013-02-19 17:59:26.598943'
-    - '2013-08-24 17:42:00.910312'
+    - '2014-03-15 05:05:37.018037'
     - '200'
     - true
     - '3'
     - 016-insania
-    - '2'
+    - '3'
     - '2'
   - - '205'
     - 'Vínculo 0: Tu demonio hace 1 punto de daño al demonio objetivo'
@@ -5263,8 +5263,8 @@ versiones:
     - '1'
     - '1'
   - - '268'
-    - Cuando Yelmo de la Verdad entra en juego, Elige un demonio. Ese demonio juega
-      mostrando su mano mientras yelmo de la verdad permanezca en juego.
+    - Cuando Yelmo de la Verdad entra en juego, elige un demonio. Ese demonio juega
+      mostrando su mano mientras Yelmo de la verdad permanezca en juego.
     - Objeto
     - 
     - 
@@ -5275,7 +5275,7 @@ versiones:
     - '80'
     - Común
     - '2013-02-19 18:00:13.507438'
-    - '2013-08-24 17:42:02.287541'
+    - '2014-07-07 21:10:59.671257'
     - '264'
     - true
     - '3'
@@ -5342,7 +5342,7 @@ versiones:
     - '0'
     - '0'
   - - '272'
-    - Exilia la Carta Objetivo de un Inferno. Recobrar 2
+    - "Exilia la carta objetivo de un inferno.\r\nRecobrar {2}."
     - Ritual
     - Instantáneo
     - 
@@ -5353,7 +5353,7 @@ versiones:
     - '84'
     - Común
     - '2013-02-19 18:00:16.268046'
-    - '2013-08-24 17:42:02.515861'
+    - '2014-07-07 22:40:04.552365'
     - '268'
     - true
     - '3'
@@ -5537,20 +5537,20 @@ versiones:
     - '3'
     - '3'
   - - '282'
-    - 'Demonio Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Evasivo
-      mientras haya Thanatos. Demonio Poseído es un Vampiro además de sus otros tipos
-      mientras haya Thanatos. '
+    - "Diablo poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Evasivo
+      mientras haya Thanatos.\r\nDiablo poseído es un vampiro además de sus otros
+      tipos mientras haya Thanatos."
     - Aliado
     - 
     - Diablo
     - '1'
     - '1'
     - Muerte
-    - '"Los Diablos son vulnerables a los cambios de entorno"'
+    - Los diablos son vulnerables a los cambios de entorno.
     - '94'
     - Infrecuente
     - '2013-02-19 18:00:23.521805'
-    - '2013-08-24 17:42:02.74732'
+    - '2014-07-07 22:54:34.992903'
     - '278'
     - true
     - '3'
@@ -8452,7 +8452,7 @@ versiones:
     - '2'
     - '2'
   - - '429'
-    - Gira el aliado objetivo. Recobrar {1}.
+    - "Gira el aliado objetivo.\r\nRecobrar {1}."
     - Ritual
     - Instantáneo
     - 
@@ -8463,7 +8463,7 @@ versiones:
     - '51'
     - Común
     - '2013-02-19 18:04:26.640537'
-    - '2013-08-24 17:42:06.429855'
+    - '2014-07-07 21:08:05.144158'
     - '419'
     - true
     - '5'
@@ -8547,7 +8547,7 @@ versiones:
     - '3'
     - '3'
   - - '434'
-    - El aliado objetivo obtiene -4 FUE hasta el final del turno. Recobrar {1}.
+    - "El aliado objetivo obtiene -4 FUE hasta el final del turno.\r\nRecobrar {1}."
     - Ritual
     - Instantáneo
     - 
@@ -8558,7 +8558,7 @@ versiones:
     - '56'
     - Común
     - '2013-02-19 18:04:30.233154'
-    - '2013-08-24 17:42:06.554331'
+    - '2014-07-07 22:38:34.283139'
     - '424'
     - true
     - '5'
@@ -10633,9 +10633,9 @@ versiones:
     - 
     - 
   - - '542'
-    - Furia. Siempre que Azzam ataque, los humanos que controlas obtienen +1 FUE hasta
-      el final del turno. Vínculo [Destruye 3 recursos que controles] - Pon en juego
-      tres fichas de aliado humano 2 FUE, 2 RES.
+    - "Furia.\r\nSiempre que Azzam ataque, los humanos que controlas obtienen +1 FUE
+      hasta el final del turno.\r\nVínculo [Destruye 3 recursos que controles] - Pon
+      en juego tres fichas de aliado humano 2 FUE, 2 RES."
     - Aliado
     - Único
     - Humano
@@ -10646,7 +10646,7 @@ versiones:
     - '7'
     - Épica
     - '2013-03-03 20:19:23.37232'
-    - '2013-08-24 17:42:10.380994'
+    - '2014-07-06 23:43:17.214581'
     - '526'
     - true
     - '8'
@@ -13727,14 +13727,14 @@ versiones:
     - 
     - Poder
     - Carne, sangre y metal. Alimentos de un bosque insaciable.
-    - '102'
+    - '101'
     - Rara
     - '2013-09-28 15:45:40.522615'
-    - '2013-10-18 00:17:53.127687'
+    - '2014-07-08 01:59:26.994936'
     - '641'
     - true
     - '16'
-    - 102-origen
+    - 101-origen
     - '3'
     - '3'
   - - '720'
@@ -16322,7 +16322,8 @@ versiones:
     - '0'
     - '0'
   - - '850'
-    - "Furia.\r\nEstocada - Puedes mirar la carta del tope de tu mazo. Si es un rebelde
+    - "Furia (puede atacar inmediatamente).\r\nEstocada (cuando haga daño de combate
+      a un demonio) - Puedes mirar la carta del tope de tu mazo. Si es un rebelde
       puedes ponerlo en juego sin pagar su coste."
     - Aliado
     - Único
@@ -16334,10 +16335,1330 @@ versiones:
     - '133'
     - Rara
     - '2014-03-15 04:16:40.042193'
-    - '2014-03-15 04:16:40.046252'
+    - '2014-07-08 01:49:54.723172'
     - '671'
     - false
     - '16'
     - 133-origen
     - '5'
     - '5'
+  - - '852'
+    - "Furia.\r\nSiempre que Azzam ataque, los humanos que controlas obtienen +1 FUE
+      hasta el final del turno.\r\nVínculo [Destruye 3 recursos que controles] - Pon
+      en juego tres fichas de aliado humano 2 FUE, 2 RES."
+    - Aliado
+    - Único
+    - Humano
+    - '5'
+    - '5'
+    - Caos
+    - 
+    - '1'
+    - Épica
+    - '2014-03-15 05:03:00.828525'
+    - '2014-07-07 01:04:36.754598'
+    - '526'
+    - false
+    - '18'
+    - 001-esenciales-ubanna
+    - '6'
+    - '6'
+  - - '853'
+    - Al Principio de tu restauración, tu demonio hace 2 puntos de daño al aliado
+      objetivo.
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '2'
+    - Promocional
+    - '2014-03-15 05:05:26.188488'
+    - '2014-07-07 01:03:49.139761'
+    - '200'
+    - false
+    - '18'
+    - 002-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '854'
+    - Tu demonio hace 1 daño al aliado o demonio objetivo. Recobrar {1}.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '3'
+    - Promocional
+    - '2014-03-15 05:06:22.048515'
+    - '2014-07-07 01:03:49.066685'
+    - '202'
+    - false
+    - '18'
+    - 003-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '855'
+    - Siempre que una ficha de aliado entre en juego bajo tu control. Puedes equipar
+      Cimitarra de Cristal a esa ficha.
+    - Arma
+    - Único
+    - 
+    - '+2'
+    - '+2'
+    - Caos
+    - 
+    - '4'
+    - Promocional
+    - '2014-03-15 05:06:55.447374'
+    - '2014-07-07 01:03:49.029615'
+    - '203'
+    - false
+    - '18'
+    - 004-esenciales-ubanna
+    - '4'
+    - '4'
+  - - '856'
+    - Siempre que un aliado reciba daño, Hornos de hierro hace esa misma cantidad
+      de daño al controlador de ese aliado
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '5'
+    - Promocional
+    - '2014-03-15 05:07:57.610339'
+    - '2014-07-07 01:03:48.992346'
+    - '206'
+    - false
+    - '18'
+    - 005-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '857'
+    - Tu demonio hace 1 daño al aliado.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '6'
+    - Promocional
+    - '2014-03-15 05:08:25.962944'
+    - '2014-07-07 01:03:48.955222'
+    - '207'
+    - false
+    - '18'
+    - 006-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '858'
+    - Furia.
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '2'
+    - Caos
+    - 
+    - '7'
+    - Promocional
+    - '2014-03-15 05:09:40.977313'
+    - '2014-07-07 01:03:48.918779'
+    - '209'
+    - false
+    - '18'
+    - 007-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '859'
+    - 'Destruir Inyección sangrearena: Pon en juego una ficha de aliado {Caos} Kirch
+      FUE 1 RES 1 con la habilidad de Furia.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '8'
+    - Promocional
+    - '2014-03-15 05:10:50.46436'
+    - '2014-07-07 01:02:43.094159'
+    - '210'
+    - false
+    - '18'
+    - 008-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '862'
+    - "Kirch Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Furia mientras
+      haya Thanatos.\r\nKirch Poseído es un vampiro además de sus otros tipos mientras
+      haya Thanatos."
+    - Aliado
+    - 
+    - Kirch
+    - '1'
+    - '1'
+    - Caos
+    - 
+    - '9'
+    - Infrecuente
+    - '2014-07-07 18:07:51.504009'
+    - '2014-07-07 18:45:03.258379'
+    - '214'
+    - false
+    - '18'
+    - 009-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '863'
+    - Tu demonio hace 1 punto de daño al aliado o demonio objetivo. Si hay Thanatos,
+      en vez de eso, hace 3 puntos de daño al aliado o demonio objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '10'
+    - Infrecuente
+    - '2014-07-07 20:50:40.684083'
+    - '2014-07-07 20:51:18.471723'
+    - '217'
+    - false
+    - '18'
+    - 010-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '864'
+    - Thanatos.
+    - Arma
+    - 
+    - 
+    - '+0'
+    - '+1'
+    - Caos
+    - 
+    - '11'
+    - Infrecuente
+    - '2014-07-07 20:52:05.239388'
+    - '2014-07-07 20:52:05.246872'
+    - '388'
+    - false
+    - '18'
+    - 011-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '865'
+    - Siempre que el aliado equipado ataque a un demonio, Quiebrahuesos hace 5 puntos
+      de daño a tu demonio.
+    - Arma
+    - 
+    - 
+    - '+5'
+    - '+5'
+    - Caos
+    - 
+    - '12'
+    - Épica
+    - '2014-07-07 20:52:55.374169'
+    - '2014-07-07 20:52:55.377959'
+    - '390'
+    - false
+    - '18'
+    - 012-esenciales-ubanna
+    - '5'
+    - '5'
+  - - '866'
+    - Siempre que Tanger sea equipado, tu demonio puede hacer 1 punto de daño al demonio
+      objetivo.
+    - Aliado
+    - Único
+    - Vampiro
+    - '3'
+    - '3'
+    - Caos
+    - 
+    - '13'
+    - Rara
+    - '2014-07-07 20:53:59.50177'
+    - '2014-07-07 20:53:59.510362'
+    - '394'
+    - false
+    - '18'
+    - 013-esenciales-ubanna
+    - '5'
+    - '5'
+  - - '867'
+    - Tu Demonio hace X puntos de dalo al aliado o demonio objetivo.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - 
+    - '14'
+    - Rara
+    - '2014-07-07 20:54:49.561848'
+    - '2014-07-07 20:54:49.570569'
+    - '229'
+    - false
+    - '18'
+    - 014-esenciales-ubanna
+    - X1
+    - '1'
+  - - '868'
+    - Halo. Evasivo.
+    - Aliado
+    - 
+    - Cyborg
+    - '2'
+    - '1'
+    - Locura
+    - 
+    - '15'
+    - Rara
+    - '2014-07-07 20:56:28.605228'
+    - '2014-07-07 20:56:28.613984'
+    - '405'
+    - false
+    - '18'
+    - 015-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '869'
+    - Cyborg Poseído obtiene +1 de FUE, +1 de RES y tiene la habilidad de Halo mientras
+      haya Thanatos. Cyborg Poseído es un vampiro además de sus otros tipos mientras
+      haya Thanatos.
+    - Aliado
+    - 
+    - Cyborg
+    - '1'
+    - '1'
+    - Locura
+    - 
+    - '16'
+    - Infrecuente
+    - '2014-07-07 20:59:16.225468'
+    - '2014-07-07 20:59:16.23388'
+    - '239'
+    - false
+    - '18'
+    - 016-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '870'
+    - Siempre que un aliado enemigo ataque a tu demonio, su controlador puede pagar
+      {2}. Si no lo hace, cancela el combate.
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '17'
+    - Épica
+    - '2014-07-07 21:01:58.899841'
+    - '2014-07-07 21:01:58.913397'
+    - '244'
+    - false
+    - '18'
+    - 017-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '871'
+    - 'Destruir droide explorador: Pon un ritual de tu Inferno en tu mano'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '18'
+    - Infrecuente
+    - '2014-07-07 21:02:37.853136'
+    - '2014-07-07 21:02:37.861193'
+    - '245'
+    - false
+    - '18'
+    - 018-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '872'
+    - Cancela la carta objetivo de coste 2 o menos. Si hay Thanatos, en vez de eso
+      cancela la carta objetivo de coste 4 o menos.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '19'
+    - Común
+    - '2014-07-07 21:03:20.075269'
+    - '2014-07-07 21:03:20.084747'
+    - '248'
+    - false
+    - '18'
+    - 019-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '873'
+    - Cancela el ritual objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '20'
+    - Infrecuente
+    - '2014-07-07 21:04:16.059293'
+    - '2014-07-07 21:04:16.066694'
+    - '411'
+    - false
+    - '18'
+    - 020-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '874'
+    - Minotanke obtiene la habilidad de Halo mientras haya Thanatos
+    - Aliado
+    - Instantáneo
+    - Cyborg
+    - '5'
+    - '3'
+    - Locura
+    - 
+    - '21'
+    - Infrecuente
+    - '2014-07-07 21:05:04.37619'
+    - '2014-07-07 21:05:04.3845'
+    - '251'
+    - false
+    - '18'
+    - 021-esenciales-ubanna
+    - '5'
+    - '5'
+  - - '875'
+    - Gana el control del aliado enemigo objetivo hasta el final del turno. Endereza
+      ese aliado, y tiene la habilidad de Furia hasta el final del turno.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '22'
+    - Infrecuente
+    - '2014-07-07 21:05:40.362463'
+    - '2014-07-07 21:06:15.475892'
+    - '254'
+    - false
+    - '18'
+    - 022-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '876'
+    - Mira la mano del demonio enemigo objetivo y elige una carta. Busca en su inferno,
+      mano y mazo todas las copias de esa carta y exílialas. Luego, ese demonio mezcla
+      su mazo. Exilia Robar cordura.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '23'
+    - Épica
+    - '2014-07-07 21:07:13.171204'
+    - '2014-07-07 21:07:13.179083'
+    - '258'
+    - false
+    - '18'
+    - 023-esenciales-ubanna
+    - '4'
+    - '4'
+  - - '877'
+    - "Gira el aliado objetivo.\r\nRecobrar {1}."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '24'
+    - Común
+    - '2014-07-07 21:07:54.485368'
+    - '2014-07-07 21:07:54.493269'
+    - '419'
+    - false
+    - '18'
+    - 024-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '878'
+    - Mira la mano del demonio objetivo y elige una carta que no sea aliado. Luego
+      ese demonio descarta esa carta.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '25'
+    - Común
+    - '2014-07-07 21:09:08.214972'
+    - '2014-07-07 21:09:21.405065'
+    - '263'
+    - false
+    - '18'
+    - 025-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '879'
+    - Cuando Yelmo de la Verdad entre en juego, elige un demonio. Ese demonio juega
+      mostrando su mano mientras Yelmo de la verdad esté en juego.
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - 
+    - '26'
+    - Común
+    - '2014-07-07 21:10:12.095894'
+    - '2014-07-07 21:10:22.184758'
+    - '264'
+    - false
+    - '18'
+    - 026-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '880'
+    - Endereza el aliado objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '27'
+    - Infrecuente
+    - '2014-07-07 22:33:49.816947'
+    - '2014-07-07 22:33:49.826563'
+    - '423'
+    - false
+    - '18'
+    - 027-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '881'
+    - "El aliado objetivo obtiene -4 FUE hasta el final del turno.\r\nRecobrar {1}."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '28'
+    - Común
+    - '2014-07-07 22:38:23.975002'
+    - '2014-07-07 22:38:23.981729'
+    - '424'
+    - false
+    - '18'
+    - 028-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '882'
+    - "Tu demonio hace 2 puntos de daño al aliado o demonio objetivo.\r\nSi no hay
+      Thanatos, pon las dos cartas superiores de tu mazo en tu inferno."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '29'
+    - Rara
+    - '2014-07-07 22:39:26.658566'
+    - '2014-07-07 22:39:26.666651'
+    - '427'
+    - false
+    - '18'
+    - 029-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '883'
+    - "Exilia la carta objetivo de un inferno.\r\nRecobrar {2}."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '30'
+    - Común
+    - '2014-07-07 22:40:30.20115'
+    - '2014-07-07 22:40:30.210825'
+    - '268'
+    - false
+    - '18'
+    - 030-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '884'
+    - Cuando Cántico sorginak entre en juego, el aliado objetivo obtiene -2 FUE hasta
+      el final del turno.
+    - Aliado
+    - Instantáneo
+    - Humano
+    - '3'
+    - '2'
+    - Muerte
+    - 
+    - '31'
+    - Común
+    - '2014-07-07 22:49:51.638236'
+    - '2014-07-07 22:49:51.646558'
+    - '272'
+    - false
+    - '18'
+    - 031-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '885'
+    - '{1}, girar: el aliado objetivo no puede atacar este turno. Démona le hace 1
+      punto de daño a ese aliado.'
+    - Objeto
+    - Único
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '32'
+    - Rara
+    - '2014-07-07 22:50:50.719706'
+    - '2014-07-07 22:50:50.728061'
+    - '274'
+    - false
+    - '18'
+    - 032-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '886'
+    - Cada enemigo exilia las primeras 4 cartas de su inferno.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '33'
+    - Común
+    - '2014-07-07 22:51:45.20438'
+    - '2014-07-07 22:51:45.212504'
+    - '430'
+    - false
+    - '18'
+    - 033-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '887'
+    - "Diablo poseído obtiene +1 FUE, +1 RES y tiene la habilidad de Evasivo mientras
+      haya Thanatos.\r\nDiablo poseído es un vampiro además de sus otros tipos mientras
+      haya Thanatos."
+    - Aliado
+    - 
+    - Diablo
+    - '1'
+    - '1'
+    - Muerte
+    - 
+    - '34'
+    - Infrecuente
+    - '2014-07-07 22:52:52.291367'
+    - '2014-07-07 22:53:09.564583'
+    - '278'
+    - false
+    - '18'
+    - 034-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '888'
+    - Pon un aliado objetivo que controles y un aliado objetivo que no controles en
+      la mano de sus demonios.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '35'
+    - Infrecuente
+    - '2014-07-07 22:56:26.385614'
+    - '2014-07-07 22:56:26.392656'
+    - '280'
+    - false
+    - '18'
+    - 035-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '889'
+    - "Exilia las 2 primeras cartas de tu inferno: Gruwek obtiene +1 FUE hasta el
+      final del turno.\r\nExilia la primera carta de tu mazo: Pon Gruwek del juego
+      a tu mano."
+    - Aliado
+    - 
+    - Abominación
+    - '2'
+    - '1'
+    - Muerte
+    - 
+    - '36'
+    - Épica
+    - '2014-07-07 22:57:37.062731'
+    - '2014-07-07 22:57:37.071032'
+    - '438'
+    - false
+    - '18'
+    - 036-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '890'
+    - Golpe de gracia - Endereza el aliado equipado.
+    - Arma
+    - Único
+    - 
+    - '+2'
+    - '+2'
+    - Muerte
+    - 
+    - '37'
+    - Rara
+    - '2014-07-07 23:07:58.070579'
+    - '2014-07-07 23:07:58.094516'
+    - '284'
+    - false
+    - '18'
+    - 037-esenciales-ubanna
+    - '4'
+    - '4'
+  - - '891'
+    - Los aliados tienen 0 FUE y 1 RES hasta el final del turno.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '38'
+    - Épica
+    - '2014-07-07 23:18:36.35733'
+    - '2014-07-07 23:18:36.369603'
+    - '291'
+    - false
+    - '18'
+    - 038-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '892'
+    - Pon el aliado objetivo de tu inferno en juego. Si hay Thanatos, tiene la habilidad
+      de furia hasta el final del turno.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Muerte
+    - 
+    - '39'
+    - Infrecuente
+    - '2014-07-07 23:19:17.019236'
+    - '2014-07-07 23:19:17.028774'
+    - '441'
+    - false
+    - '18'
+    - 039-esenciales-ubanna
+    - '5'
+    - '5'
+  - - '893'
+    - "Evasivo.\r\nCuando Vurdalak entre en juego, pon 3 contadores de daño distribuidos
+      sobre cualquier cantidad de aliados enemigos.\r\n{0}: Mueve un contador de daño
+      de un aliado enemigo objetivo a otro aliado objetivo del mismo controlador."
+    - Aliado
+    - Único
+    - Vampiro
+    - '2'
+    - '3'
+    - Muerte
+    - 
+    - '40'
+    - Épica
+    - '2014-07-07 23:20:26.474105'
+    - '2014-07-07 23:20:26.482221'
+    - '298'
+    - false
+    - '18'
+    - 040-esenciales-ubanna
+    - '4'
+    - '4'
+  - - '894'
+    - Siempre que el aliado equipado haga daño de combate, pon en juego esa misma
+      cantidad de fichas aliado {poder} Planta 0 Fue, 1 Res.
+    - Arma
+    - 
+    - 
+    - '+1'
+    - '+0'
+    - Poder
+    - 
+    - '41'
+    - Rara
+    - '2014-07-07 23:21:28.000108'
+    - '2014-07-07 23:21:28.007182'
+    - '448'
+    - false
+    - '18'
+    - 041-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '895'
+    - "Baku no puede ser objetivo de rituales.\r\nGirar un aliado enderezado que controles:
+      gira el aliado objetivo."
+    - Aliado
+    - Único
+    - Reptil Vampiro
+    - '2'
+    - '2'
+    - Poder
+    - 
+    - '42'
+    - Épica
+    - '2014-07-07 23:22:05.773089'
+    - '2014-07-07 23:22:05.783201'
+    - '300'
+    - false
+    - '18'
+    - 042-esenciales-ubanna
+    - '4'
+    - '4'
+  - - '896'
+    - Barahai aguerrido tiene la habilidad de Agresor mientras permanezca enderezado.
+    - Aliado
+    - 
+    - Barahai
+    - '1'
+    - '2'
+    - Poder
+    - 
+    - '43'
+    - Común
+    - '2014-07-07 23:22:48.68352'
+    - '2014-07-07 23:22:48.688287'
+    - '301'
+    - false
+    - '18'
+    - 043-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '897'
+    - "Barahai Poseído obtiene +1 FUE, +1 RES y tiene la habilidad de Agresor mientras
+      haya Thanatos.\r\nBarahai Poseído es un vampiro además de sus otros tipos mientras
+      haya Thanatos."
+    - Aliado
+    - 
+    - Barahai
+    - '1'
+    - '1'
+    - Poder
+    - 
+    - '44'
+    - Infrecuente
+    - '2014-07-07 23:23:35.948189'
+    - '2014-07-07 23:23:35.95479'
+    - '303'
+    - false
+    - '18'
+    - 044-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '898'
+    - 'Gira un aliado enderezado que controles: Comandante de Trion obtiene +1 FUE
+      hasta el final del turno.'
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '4'
+    - Poder
+    - 
+    - '45'
+    - Infrecuente
+    - '2014-07-07 23:24:22.11446'
+    - '2014-07-07 23:24:22.125794'
+    - '310'
+    - false
+    - '18'
+    - 045-esenciales-ubanna
+    - '4'
+    - '4'
+  - - '899'
+    - "El aliado objetivo obtiene +1 FUE y tiene la habilidad de Furia hasta el final
+      del turno.\r\nRecobrar {1}."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - 
+    - '46'
+    - Común
+    - '2014-07-07 23:25:14.451013'
+    - '2014-07-07 23:26:16.91288'
+    - '312'
+    - false
+    - '18'
+    - 046-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '900'
+    - Agrega {2}. Si hay Thanatos, en vez de eso agrega {3}.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - 
+    - '47'
+    - Común
+    - '2014-07-07 23:28:22.469216'
+    - '2014-07-07 23:28:22.476084'
+    - '313'
+    - false
+    - '18'
+    - 047-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '901'
+    - Cuando Elemental de la enramada entre en juego, puedes mirar tus recursos y
+      elegir una carta que no sea ritual, Si lo haces, ponla en juego.
+    - Aliado
+    - 
+    - Elemental
+    - '3'
+    - '3'
+    - Poder
+    - 
+    - '48'
+    - Épica
+    - '2014-07-07 23:29:11.267417'
+    - '2014-07-07 23:29:11.275266'
+    - '462'
+    - false
+    - '18'
+    - 048-esenciales-ubanna
+    - '7'
+    - '7'
+  - - '902'
+    - Guardián de Tresia es un aliado Golem 5 FUE, 5 RES mientras tengas siete o mas
+      cartas en tu mano.
+    - Objeto
+    - Único
+    - 
+    - 
+    - 
+    - Poder
+    - 
+    - '49'
+    - Épica
+    - '2014-07-07 23:29:56.935169'
+    - '2014-07-07 23:29:56.943123'
+    - '318'
+    - false
+    - '18'
+    - 049-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '903'
+    - Si Pacificadora barahai fuera a ser puesta en un inferno, en vez de eso, ponla
+      boca abajo como recurso bajo el control de su demonio.
+    - Aliado
+    - 
+    - Barahai
+    - '1'
+    - '1'
+    - Poder
+    - 
+    - '50'
+    - Común
+    - '2014-07-07 23:31:05.278294'
+    - '2014-07-07 23:31:05.287334'
+    - '321'
+    - false
+    - '18'
+    - 050-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '904'
+    - Pon el aliado objetivo que no sea ficha como recurso bajo el control de su demonio.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Poder
+    - 
+    - '51'
+    - Infrecuente
+    - '2014-07-07 23:32:05.632313'
+    - '2014-07-07 23:32:05.640444'
+    - '330'
+    - false
+    - '18'
+    - 051-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '905'
+    - Al final del turno de cada demonio, ese demonio gira todos sus recursos.
+    - Escenario
+    - 
+    - 
+    - 
+    - 
+    - Poder
+    - 
+    - '52'
+    - Rara
+    - '2014-07-07 23:33:28.632394'
+    - '2014-07-07 23:33:28.640539'
+    - '331'
+    - false
+    - '18'
+    - 052-esenciales-ubanna
+    - '0'
+    - '0'
+  - - '906'
+    - 
+    - Aliado
+    - Único
+    - Humano
+    - '2'
+    - '2'
+    - Poder
+    - 
+    - '53'
+    - Rara
+    - '2014-07-07 23:34:06.071556'
+    - '2014-07-07 23:34:06.097529'
+    - '332'
+    - false
+    - '18'
+    - 053-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '907'
+    - "Exilia la carta objetivo de un inferno.\r\nRecobrar [Exilia una carta de tu
+      inferno]."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '54'
+    - Común
+    - '2014-07-07 23:35:04.894427'
+    - '2014-07-07 23:35:04.902756'
+    - '523'
+    - false
+    - '18'
+    - 054-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '908'
+    - "Bendición de Ubanna.\r\nDestruye el aliado, objeto o arma objetivo."
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '55'
+    - Rara
+    - '2014-07-07 23:36:12.417579'
+    - '2014-07-07 23:36:12.425533'
+    - '538'
+    - false
+    - '18'
+    - 055-esenciales-ubanna
+    - '5'
+    - '5'
+  - - '909'
+    - Busca en tu mazo un humano, muéstralo y ponlo en tu mano. Luego mezcla tu mazo.
+      Si hay Thanatos, puedes buscar un vampiro en su lugar.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '56'
+    - Infrecuente
+    - '2014-07-07 23:40:06.75653'
+    - '2014-07-07 23:40:06.761484'
+    - '533'
+    - false
+    - '18'
+    - 056-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '910'
+    - Cuando Combatiente tenaz entre en juego, puedes poner la carta objetivo de tu
+      inferno en tu mano.
+    - Aliado
+    - 
+    - Humano Rebelde
+    - '2'
+    - '2'
+    - Neutral
+    - 
+    - '57'
+    - Infrecuente
+    - '2014-07-07 23:42:18.097465'
+    - '2014-07-07 23:42:18.10639'
+    - '603'
+    - false
+    - '18'
+    - 057-esenciales-ubanna
+    - '3'
+    - '3'
+  - - '911'
+    - "Pon la carta no-recurso objetivo en la mano de su demonio.\r\nRecobrar {3}."
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '58'
+    - Común
+    - '2014-07-07 23:44:00.305558'
+    - '2014-07-07 23:44:00.31395'
+    - '473'
+    - false
+    - '18'
+    - 058-esenciales-ubanna
+    - '4'
+    - '4'
+  - - '912'
+    - 'Exilia un aliado de tu inferno, girar: Pon en juego una ficha de aliado, que
+      es una copia del aliado objetivo que controles.'
+    - Objeto
+    - 
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '59'
+    - Épica
+    - '2014-07-07 23:44:49.071045'
+    - '2014-07-07 23:44:49.078887'
+    - '530'
+    - false
+    - '18'
+    - 059-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '913'
+    - Tu demonio hace 3 puntos de daño al aliado atacante objetivo.
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Neutral
+    - 
+    - '60'
+    - Común
+    - '2014-07-07 23:45:21.08787'
+    - '2014-07-07 23:45:21.095824'
+    - '478'
+    - false
+    - '18'
+    - 060-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '914'
+    - "Thanatos.\r\nCuando Heraldo de Ubanna entre en juego, cancela la habilidad
+      objetivo en la cadena."
+    - Aliado
+    - Instantáneo
+    - Avatar
+    - '1'
+    - '1'
+    - Neutral
+    - 
+    - '61'
+    - Infrecuente
+    - '2014-07-07 23:46:02.096963'
+    - '2014-07-07 23:46:02.104998'
+    - '509'
+    - false
+    - '18'
+    - 061-esenciales-ubanna
+    - '2'
+    - '2'
+  - - '915'
+    - Hija del valor no puede atacar a aliados.
+    - Aliado
+    - 
+    - Humano
+    - '2'
+    - '1'
+    - Neutral
+    - 
+    - '62'
+    - Infrecuente
+    - '2014-07-07 23:46:37.498086'
+    - '2014-07-07 23:46:37.506218'
+    - '153'
+    - false
+    - '18'
+    - 062-esenciales-ubanna
+    - '1'
+    - '1'
+  - - '916'
+    - 
+    - Aliado
+    - Ficha
+    - Kirch
+    - '1'
+    - '1'
+    - Caos
+    - 
+    - '149'
+    - Común
+    - '2014-07-08 01:46:23.689879'
+    - '2014-07-08 01:46:23.704331'
+    - '181'
+    - false
+    - '16'
+    - 149-origen
+    - 
+    - 
+  - - '917'
+    - Protector (Puedes girarlo y hacer que defienda al atacante, en vez del defensor
+      propuesto).
+    - Aliado
+    - Ficha
+    - Cyborg
+    - '1'
+    - '1'
+    - Locura
+    - 
+    - '150'
+    - Común
+    - '2014-07-08 01:47:31.190388'
+    - '2014-07-08 01:47:31.201366'
+    - '182'
+    - false
+    - '16'
+    - 150-origen
+    - 
+    - 
+  - - '918'
+    - 
+    - Aliado
+    - Ficha
+    - Diablo
+    - '2'
+    - '2'
+    - Muerte
+    - 
+    - '151'
+    - Común
+    - '2014-07-08 01:48:04.059742'
+    - '2014-07-08 01:48:04.070039'
+    - '183'
+    - false
+    - '16'
+    - 151-origen
+    - 
+    - 
+  - - '919'
+    - 
+    - Aliado
+    - Ficha
+    - Barahai
+    - '3'
+    - '3'
+    - Poder
+    - 
+    - '152'
+    - Común
+    - '2014-07-08 01:48:42.771928'
+    - '2014-07-08 01:48:42.781592'
+    - '184'
+    - false
+    - '16'
+    - 152-origen
+    - 
+    - 
+  - - '920'
+    - El aliado objetivo tiene la habilidad de Agresor hasta el final del turno (tu
+      enemigo debe proponer un aliado con agresor como defensor).
+    - Ritual
+    - Instantáneo
+    - 
+    - 
+    - 
+    - Poder
+    - '"Eres la clave. ¡Enorgulléceme!" -Lapátt'
+    - '102'
+    - Común
+    - '2014-07-08 02:01:43.459127'
+    - '2014-07-08 02:01:43.468106'
+    - '101'
+    - false
+    - '16'
+    - 102-origen
+    - '1'
+    - '1'

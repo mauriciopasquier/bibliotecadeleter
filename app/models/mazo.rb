@@ -28,6 +28,7 @@ class Mazo < ActiveRecord::Base
   has_many :cartas, through: :listas, extend: CartasEnExpansiones
 
   friendly_id :nombre, use: :scoped, scope: :usuario
+  slugs_dependientes_en :principal, :suplente, dependencias: [:usuario_id, :nombre]
 
   validates_presence_of :nombre, :principal, :usuario_id
   validates_uniqueness_of :nombre, scope: :usuario_id
@@ -71,6 +72,7 @@ class Mazo < ActiveRecord::Base
     end
   end
 
+  # nil por default
   def exigir_formato
     @exigir_formato ||= false
   end
@@ -138,5 +140,9 @@ class Mazo < ActiveRecord::Base
 
     def solo_usar_expansiones_permitidas
       errors.add :base, :cartas_en_expansiones_prohibidas unless reglas.expansiones_validas?
+    end
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
     end
 end

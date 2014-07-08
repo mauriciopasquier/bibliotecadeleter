@@ -3,12 +3,14 @@ class Expansion < ActiveRecord::Base
   include FriendlyId
   include PgSearch
 
-  has_many :versiones, -> { order('slug ASC') }, dependent: :destroy
+  has_many :versiones, -> { order('slug ASC') }, dependent: :destroy,
+    inverse_of: :expansion
   has_many :cartas, through: :versiones
   has_many :imagenes, -> { order('versiones.slug ASC') }, through: :versiones
   has_and_belongs_to_many :formatos
 
   friendly_id :nombre, use: :slugged
+  slugs_dependientes_en :versiones, dependencias: :nombre
 
   validates_presence_of :nombre
   validates_uniqueness_of :nombre
@@ -24,6 +26,8 @@ class Expansion < ActiveRecord::Base
 
   multisearchable against: [ :nombre, :saga, :notas ]
 
+  normalize_attribute :codigo, with: :upcase
+
   # Determina de qué expansión son las promocionales
   def base
     if slug =~ /promocionales/
@@ -36,4 +40,10 @@ class Expansion < ActiveRecord::Base
   def abrir_sobre
     Sobre.abrir(versiones)
   end
+
+  private
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end

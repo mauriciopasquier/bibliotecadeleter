@@ -88,4 +88,10 @@ class Lista < ActiveRecord::Base
   def nombres_de_las_cartas
     cartas.collect(&:nombre).join(' ')
   end
+
+  protected
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end

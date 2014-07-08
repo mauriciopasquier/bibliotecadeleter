@@ -17,7 +17,7 @@
                   .control-texto= 'Tengo'
           - carta.versiones.each do |v|
             %li
-              = link_to "#{v.expansion}", en_expansion_carta_path(@carta, v.expansion)
+              = link_to "#{v.expansion.codigo_o_nombre}", en_expansion_carta_path(@carta, v.expansion)
               - if usuario_signed_in?
                 .controles{id: v.expansion.slug}
                   = v.control(reserva_actual, '', current_usuario)

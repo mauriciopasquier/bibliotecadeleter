@@ -6,8 +6,8 @@ describe Version do
     create(:version_con_carta).valid?.must_equal true
   end
 
-  it "debe crear una version huérfana" do
-    create(:version_con_carta, expansion: nil).slug.must_match /huerfanas/
+  it "no debe crear versiones huérfanas" do
+    build(:version_con_carta, expansion: nil).valid?.wont_equal true
   end
 
   it "debe crearse solo una versión canónica" do

@@ -9,7 +9,7 @@ gem 'pg_search'
 gem 'yaml_db', github: 'mauriciopasquier/yaml_db', branch: 'order-join-tables'
 
 # Model
-gem 'attribute_normalizer'
+gem 'attribute_normalizer', github: 'mdeering/attribute_normalizer'
 gem 'inflections', require: 'inflections/es'
 gem 'paperclip'
 gem 'squeel'

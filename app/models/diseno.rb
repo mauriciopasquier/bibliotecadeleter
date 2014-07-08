@@ -39,4 +39,8 @@ class Diseno < ActiveRecord::Base
     def convertir_coste
       self.coste_convertido = Version.coste_convertido(self.coste)
     end
+
+    def should_generate_new_friendly_id?
+      nombre_changed? || super
+    end
 end
