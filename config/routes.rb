@@ -29,7 +29,8 @@ BibliotecaDelEter::Application.routes.draw do
 
   # Estáticas al principio por prioridad sobre los recursos sin scope
   get 'legales'   => 'inicio#legales'
-  get 'cambios'   => 'inicio#cambios'
+  get 'cambios/(:fecha)' => 'inicio#cambios', as: :cambios, fecha: /201[2,3,4]|recientes/
+  get 'cambios/recientes' => 'inicio#cambios', as: :cambios_recientes
   get 'canon'     => 'inicio#canon'
   get 'arena'     => 'inicio#arena'
   get 'herejias'  => 'inicio#herejias'

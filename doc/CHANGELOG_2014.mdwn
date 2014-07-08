@@ -1,0 +1,67 @@
+# Cambios durante el 2014
+
+[2012](/cambios/2012) \|
+[2013](/cambios/2013) \|
+[2014](/cambios/2014) \|
+[todos](/cambios)
+
+## 7/7/2014
+
+- Subimos entero [Esenciales: Ubanna][]
+- Subimos varias cartas que faltaban en [Origen][] (Grímnir, las fichas, Coraje repentino)
+- No versionamos más los cambios recientes (sale fecha!)
+- Reorganizamos esta página
+
+## 1.7.5
+
+### Mejoras
+
+- El input para subir archivos funciona mejor en varios tamaños de pantalla
+
+## 1.7.4
+
+### Mejoras
+
+- Todas las cartas de [Origen][] cargadas, excepto:
+  - La versión normal de [Grímnir][] (existe?)
+  - La versión corregida en buena calidad de la [Adoratriz][]
+
+## 1.7.3
+
+### Arreglos
+
+- Avatares más chicos en los foros
+- Tooltips del menú de usuario :|
+
+## 1.7.2
+
+### Arreglos
+
+- Lista de socios completa
+
+## 1.7.1
+
+### Arreglos
+
+- Arreglado un bug al crear o mostrar mazos y listas
+
+## 1.7.0
+
+### Mejoras
+
+- Hay [foros][]!!!
+- Actualización general del sistema... si no podés loguearte por alguna razón
+  probá borrando las cookies :|
+
+### Arreglos
+
+- Ya se puede ordenar los mazos por formato
+- Se pueden recorrer todas las listas (cartas, artistas, expansiones, etc) con
+  las flechas del teclado
+
+[foros]: http://bibliotecadeleter.com.ar/antesala
+[Grímnir]: http://bibliotecadeleter.com.ar/cartas/grimnir-lider-de-la-rebelion/origen
+[Adoratriz]: http://bibliotecadeleter.com.ar/cartas/adoratriz-del-bosque-antiguo
+[Origen]: http://bibliotecadeleter.com.ar/expansiones/origen
+[Esenciales: Ubanna]: http://bibliotecadeleter.com.ar/expansiones/esenciales-ubanna
+

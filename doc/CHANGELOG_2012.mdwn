@@ -1,0 +1,36 @@
+# Cambios durante el 2012
+
+[2012](/cambios/2012) \|
+[2013](/cambios/2013) \|
+[2014](/cambios/2014) \|
+[todos](/cambios)
+
+## Mucho desarrollo (pero el sitio no estaba online)
+
+- Carga completa de las [PIP de Conquista][CON:PIP]
+- Carga de las promocionales para [Despertar][DSP:P], [Insania][INS:P]
+  y [Conquista][CON:P]
+- Carga completa de [Despertar][], [Insania][] y [Conquista][]
+- Imágenes de las cartas
+- [Expansiones][]
+- [Artistas][]
+- [Cartas][] y versiones
+- [Socios][]
+
+## Nacimiento
+
+    Date:   Mon Dec 24 20:32:37 2012 -0300
+
+        Commit inicial rails 2.3.9
+
+[Socios]: http://bibliotecadeleter.com.ar/socios
+[Cartas]: http://bibliotecadeleter.com.ar/cartas
+[Artistas]: http://bibliotecadeleter.com.ar/artistas
+[Expansiones]: http://bibliotecadeleter.com.ar/expansiones
+[Despertar]: http://bibliotecadeleter.com.ar/expansiones/despertar
+[Insania]: http://bibliotecadeleter.com.ar/expansiones/insania
+[Conquista]: http://bibliotecadeleter.com.ar/expansiones/conquista
+[DSP:P]: http://bibliotecadeleter.com.ar/expansiones/promocionales-despertar
+[INS:P]: http://bibliotecadeleter.com.ar/expansiones/promocionales-insania
+[CON:P]: http://bibliotecadeleter.com.ar/expansiones/promocionales-conquista
+[CON:PIP]: http://bibliotecadeleter.com.ar/expansiones/pip-conquista
