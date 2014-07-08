@@ -10,7 +10,7 @@ class Expansion < ActiveRecord::Base
   has_and_belongs_to_many :formatos
 
   friendly_id :nombre, use: :slugged
-  slugs_dependientes_en :versiones
+  slugs_dependientes_en :versiones, dependencias: :nombre
 
   validates_presence_of :nombre
   validates_uniqueness_of :nombre

@@ -14,7 +14,7 @@ class Formato < ActiveRecord::Base
   validates_inclusion_of :tipo, in: TIPOS
 
   friendly_id :nombre, use: :slugged
-  slugs_dependientes_en :torneos
+  slugs_dependientes_en :torneos, dependencias: :nombre
 
   scope :ordenados, -> { order('tipo, nombre') }
   scope :abiertos, -> { where(tipo: 'Abierto') }

@@ -4,5 +4,5 @@ class Tienda < ActiveRecord::Base
 
   has_many :torneos, inverse_of: :tienda
 
-  slugs_dependientes_en :torneos
+  slugs_dependientes_en :torneos, dependencias: :nombre
 end

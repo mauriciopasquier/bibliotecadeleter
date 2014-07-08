@@ -28,7 +28,7 @@ class Mazo < ActiveRecord::Base
   has_many :cartas, through: :listas, extend: CartasEnExpansiones
 
   friendly_id :nombre, use: :scoped, scope: :usuario
-  slugs_dependientes_en :principal, :suplente
+  slugs_dependientes_en :principal, :suplente, dependencias: [:usuario_id, :nombre]
 
   validates_presence_of :nombre, :principal, :usuario_id
   validates_uniqueness_of :nombre, scope: :usuario_id

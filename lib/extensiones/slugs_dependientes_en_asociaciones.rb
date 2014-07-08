@@ -29,12 +29,20 @@ module SlugsDependientesEnAsociaciones
   end
 
   module ClassMethods
-    # TODO agregar opciones para regenerar condicionalmente
+    # Recibe una lista de asociaciones y opciones:
+    #
+    #   dependencias: lista de columnas de las que dependen los slugs de las
+    #   asociaciones. Si una cambió, se regeneran.
     def slugs_dependientes_en_asociaciones(*asociaciones)
+      opciones = asociaciones.extract_options!
+      dependencias = Array.wrap(opciones[:dependencias])
+
       # Definimos el método que regenera los slugs en cada asociación
       define_method "regenerar_slugs_asociados" do
-        asociaciones.each do |asociacion|
-          regenerar_asociacion asociacion
+        if dependencias.any? { |dep| send("#{dep}_changed?") }
+          asociaciones.each do |asociacion|
+            regenerar_asociacion asociacion
+          end
         end
       end
 
