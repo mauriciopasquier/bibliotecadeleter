@@ -96,3 +96,5 @@ es:
   colecciones:
     quiero: 'Quiero'
     tengo:  'Tengo'
+  ransack:
+    search: 'Buscar'
