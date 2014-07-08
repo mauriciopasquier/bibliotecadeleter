@@ -2,7 +2,6 @@
 AttributeNormalizer.configure do |config|
   # The default normalizers if no :with option or block is given is to apply
   # the :strip and :blank normalizers (in that order).
-  # You can change this if you would like as follows:
   # config.default_normalizers = :strip, :blank
 
   # You can enable the attribute normalizers automatically if the specified
@@ -15,8 +14,8 @@ AttributeNormalizer.configure do |config|
   # more normalizers:
   # config.add_default_attribute :name, :with => :truncate
 
-  # Convertir true, 'true', 1 y '1' en true
-  config.normalizers[:boolean] = lambda do |value, options|
-    ActiveRecord::ConnectionAdapters::Column.value_to_boolean value
+  # Todo en mayúsculas
+  config.normalizers[:upcase] = lambda do |value, options|
+    value.is_a?(String) ? value.upcase : value
   end
 end

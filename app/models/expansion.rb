@@ -26,6 +26,8 @@ class Expansion < ActiveRecord::Base
 
   multisearchable against: [ :nombre, :saga, :notas ]
 
+  normalize_attribute :codigo, with: :upcase
+
   # Determina de qué expansión son las promocionales
   def base
     if slug =~ /promocionales/

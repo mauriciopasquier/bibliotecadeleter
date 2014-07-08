@@ -29,11 +29,6 @@ class ExpansionDecorator < ApplicationDecorator
 
   # Código con fallback a nombre
   def codigo_o_nombre
-    codigo || object.nombre
-  end
-
-  # Código en mayúsculas
-  def codigo
-    object.codigo.try(:upcase)
+    object.codigo || object.nombre
   end
 end

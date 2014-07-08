@@ -72,6 +72,7 @@ class Mazo < ActiveRecord::Base
     end
   end
 
+  # nil por default
   def exigir_formato
     @exigir_formato ||= false
   end
