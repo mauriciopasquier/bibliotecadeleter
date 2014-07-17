@@ -93,7 +93,6 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'turn'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
   gem 'database_cleaner'
 end
 

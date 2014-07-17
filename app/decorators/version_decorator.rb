@@ -96,6 +96,7 @@ class VersionDecorator < ApplicationDecorator
 
       if h.can? :edit, lista
         tags << h.link_to(ruta(path, objetos, cantidad: c + 1), method: :put,
+          title: "Agregar a #{lista.nombre}",
           remote: true, class: 'update-listas agregar') do
             h.content_tag(:i, nil, class: 'icon-plus')
           end
@@ -106,6 +107,7 @@ class VersionDecorator < ApplicationDecorator
 
       if h.can? :edit, lista
         tags <<  h.link_to(ruta(path, objetos, cantidad: [0, c - 1].max),
+          title: "Remover de #{lista.nombre}",
           method: :put, remote: true, class: 'update-listas remover') do
             h.content_tag(:i, nil, class: 'icon-minus')
           end

@@ -4,8 +4,8 @@ class ReservasController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
 
   load_and_authorize_resource :usuario
-  load_and_authorize_resource through: :usuario, singleton: true
-  load_and_authorize_resource :version, only: [:update_slot]
+  load_resource through: :usuario, singleton: true
+  load_resource :version, only: [:update_slot]
 
   before_filter :determinar_galeria, only: [:show]
 
