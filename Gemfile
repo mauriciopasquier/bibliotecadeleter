@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.8'
 
 # Database
 gem 'pg'
@@ -9,7 +9,7 @@ gem 'pg_search'
 gem 'yaml_db', github: 'mauriciopasquier/yaml_db', branch: 'order-join-tables'
 
 # Model
-gem 'attribute_normalizer', github: 'mdeering/attribute_normalizer'
+gem 'attribute_normalizer'
 gem 'inflections', require: 'inflections/es'
 gem 'paperclip'
 gem 'squeel'
@@ -22,12 +22,11 @@ gem 'gravtastic'
 gem 'dynamic_form'
 gem 'haml-rails'
 gem 'draper'
-gem 'kaminari', '0.14.1'
+gem 'kaminari'
 gem 'friendly_id'
 gem 'ransack'
 gem 'sitemap'
-# 1.0.11 tiene mal las dependencias con Rails 4
-gem 'rails3-jquery-autocomplete', github: 'mauriciopasquier/rails3-jquery-autocomplete'
+gem 'rails3-jquery-autocomplete'
 gem 'awesome_nested_fields'
 gem 'kramdown'
 gem 'lazyload-rails'
@@ -38,16 +37,14 @@ gem 'responders'
 gem 'has_scope'
 gem 'jbuilder', '~> 1.2'
 
-
 # Server
 gem 'thin'
-gem 'cache_digests'
 gem 'libmemcached_store'
 gem 'rack-protection'
 
 # Autenticación/autorización
 gem 'devise'
-gem 'cancan'
+gem 'cancancan'
 gem 'merit'
 
 # I18n

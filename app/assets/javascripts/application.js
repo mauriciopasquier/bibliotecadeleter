@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.autocomplete
+//= require jquery-ui/autocomplete
 //= require jquery.nested-fields
 //= require URI
 //= require turbolinks

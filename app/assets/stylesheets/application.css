@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require bootstrap
- *= require jquery.ui.autocomplete
+ *= require jquery-ui/autocomplete
  *= require bootstrap-datepicker
  *= require bootstrap-select
  *= require jquery.countdown

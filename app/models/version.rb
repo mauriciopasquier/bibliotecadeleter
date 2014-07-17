@@ -105,12 +105,14 @@ class Version < ActiveRecord::Base
 
   def siguiente
     expansion.versiones.where('numero > ?', numero).first ||
-    expansion.versiones.first
+    # FIXME bug en el cache de asociaciones?
+    expansion.reload.versiones.first
   end
 
   def anterior
     expansion.versiones.where('numero < ?', numero).last ||
-    expansion.versiones.last
+    # FIXME bug en el cache de asociaciones?
+    expansion.reload.versiones.last
   end
 
   private
