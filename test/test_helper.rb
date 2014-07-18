@@ -97,6 +97,7 @@ class Object
   include BibliotecaDelEter::Expectations
 end
 
+# Registrando el driver podemos pasar opciones como el profile a usar
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new app, browser: :firefox, profile: 'selenium'
 end
