@@ -121,14 +121,7 @@ class Version < ActiveRecord::Base
 
   def actualizar_path_de_imagenes
     imagenes.each do |i|
-      Imagen.estilos.each do |estilo|
-
-        if nuevo = i.archivo.path(estilo)
-          viejo = nuevo.gsub numero_normalizado, Version.normalizar_numero(numero_was)
-          File.rename(viejo, nuevo) if File.exists?(viejo)
-        end
-
-      end
+      i.actualizar_path Version.normalizar_numero(numero_was), numero_normalizado
     end
   end
 

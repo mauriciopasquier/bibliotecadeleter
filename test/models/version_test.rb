@@ -41,6 +41,23 @@ describe Version do
     build(:version).ilimitada?.wont_equal true
   end
 
+  describe '#actualizar_path_de_imagenes' do
+    subject { create(:version_con_carta) }
+
+    it 'regenera el path de las imágenes' do
+      viejo = subject.numero_normalizado
+      subject.numero = subject.numero + 1
+
+      imagen = MiniTest::Mock.new.expect :actualizar_path, nil,
+        [ viejo, subject.numero_normalizado ]
+
+      subject.stub :imagenes, [ imagen ] do
+        subject.save
+        imagen.verify
+      end
+    end
+  end
+
   describe 'lista circular' do
     before do
       @expansion = create(:expansion)
