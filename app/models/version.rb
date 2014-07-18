@@ -57,6 +57,10 @@ class Version < ActiveRecord::Base
     where arel_table[:supertipo].not_eq('Demonio').or(arel_table[:supertipo].eq(nil))
   end
 
+  def self.normalizar_numero(n)
+    n.to_s.rjust(3, '0')
+  end
+
   # Devuelve el slot en el que esta versión está en la `lista`
   def slot_en(lista)
     lista.slots.where(version_id: id).first
@@ -66,8 +70,8 @@ class Version < ActiveRecord::Base
     coste.present? ? coste.to_s.gsub(/\D/, '').to_i : nil
   end
 
-  def numero_justificado
-    numero.to_s.rjust(3, '0')
+  def numero_normalizado
+    Version.normalizar_numero numero
   end
 
   # Para ordenar los resultados con +sort_by+
@@ -117,9 +121,9 @@ class Version < ActiveRecord::Base
 
   private
 
-    # Usá `slug` para llamar a esto
+    # Usá `slug` en vez de llamar a este método públicamente
     def expansion_y_numero
-      "#{numero_justificado}-#{expansion.try(:slug)}"
+      "#{numero_normalizado}-#{expansion.try(:slug)}"
     end
 
     # Los slugs no se regeneran siempre
@@ -145,7 +149,7 @@ class Version < ActiveRecord::Base
         Imagen.estilos.each do |estilo|
 
           if nuevo = i.archivo.path(estilo)
-            viejo = nuevo.gsub numero_justificado, numero_was.to_s.rjust(3, '0')
+            viejo = nuevo.gsub numero_normalizado, Version.normalizar_numero(numero_was)
             File.rename(viejo, nuevo) if File.exists?(viejo)
           end
 
