@@ -18,6 +18,9 @@ class Carta < ActiveRecord::Base
 
   accepts_nested_attributes_for :versiones, allow_destroy: true
 
+  # TODO testear si puedo usar should_generate_...
+  before_save :actualizar_path_de_imagenes, if: :nombre_changed?
+
   validates_uniqueness_of :nombre
   validates_presence_of :nombre
 
@@ -35,6 +38,10 @@ class Carta < ActiveRecord::Base
   # Funciona con el scope con_todo
   def nombre_y_expansion
     self.nombre + (self.expansion.nil? ? '' : " (#{self.expansion})")
+  end
+
+  def actualizar_path_de_imagenes
+    versiones.each(&:actualizar_path_de_imagenes)
   end
 
   private

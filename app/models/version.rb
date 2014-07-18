@@ -119,6 +119,19 @@ class Version < ActiveRecord::Base
     expansion.reload.versiones.last
   end
 
+  def actualizar_path_de_imagenes
+    imagenes.each do |i|
+      Imagen.estilos.each do |estilo|
+
+        if nuevo = i.archivo.path(estilo)
+          viejo = nuevo.gsub numero_normalizado, Version.normalizar_numero(numero_was)
+          File.rename(viejo, nuevo) if File.exists?(viejo)
+        end
+
+      end
+    end
+  end
+
   private
 
     # Usá `slug` en vez de llamar a este método públicamente
@@ -142,18 +155,5 @@ class Version < ActiveRecord::Base
 
     def convertir_coste
       self.coste_convertido = Version.coste_convertido(self.coste)
-    end
-
-    def actualizar_path_de_imagenes
-      imagenes.each do |i|
-        Imagen.estilos.each do |estilo|
-
-          if nuevo = i.archivo.path(estilo)
-            viejo = nuevo.gsub numero_normalizado, Version.normalizar_numero(numero_was)
-            File.rename(viejo, nuevo) if File.exists?(viejo)
-          end
-
-        end
-      end
     end
 end
