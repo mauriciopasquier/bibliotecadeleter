@@ -24,7 +24,7 @@ class UsuarioDecorator < ApplicationDecorator
       object.avatar.url(estilo)
     else
       object.gravatar_url(
-        default: h.request.base_url + object.avatar.url,
+        default: h.request.base_url + object.avatar.url(estilo),
         size: object.estilos[estilo].split('x').first
       )
     end
