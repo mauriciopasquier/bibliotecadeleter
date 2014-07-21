@@ -5,10 +5,10 @@ Forem.avatar_user_method = :avatar_decorado
 Forem.user_profile_links = true
 Forem.per_page = 20
 
+# Usar nuestro layout según https://github.com/radar/forem/wiki/Theming
+Forem.layout = 'application'
+
 # Rails.application.config.to_prepare do
-#   If you want to change the layout that Forem uses, uncomment and customize the next line:
-#   Forem::ApplicationController.layout "forem"
-#
 #   If you want to add your own cancan Abilities to Forem, uncomment and
 #   customize the next line:
 #   Forem::Ability.register_ability(Ability)

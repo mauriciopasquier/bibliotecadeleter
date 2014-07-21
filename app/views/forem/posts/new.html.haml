@@ -11,7 +11,7 @@
 
 %hr
 
-= form_for [forem, @topic, @post], html: { class: 'form post' } do |f|
+= form_for [forem, @topic.forum, @topic, @post], html: { class: 'form post' } do |f|
 
   = render partial: "form", locals: { f: f }
 
