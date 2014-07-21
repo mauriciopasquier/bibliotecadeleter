@@ -1,1 +1,9 @@
--# TODO: links a cartas, artistas, expansiones y oficial para los no js
+%h1= titulo
+
+.row-fluid
+  .span12
+    %ul.menu.nav.nav-list.nav-stacked
+      %li= link_to 'Cartas', cartas_path
+      %li= link_to 'Artistas', artistas_path
+      %li= link_to 'Expansiones', expansiones_path
+      %li= link_to 'Página oficial', 'http://playinferno.com'
