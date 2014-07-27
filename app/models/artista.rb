@@ -8,10 +8,9 @@ class Artista < ActiveRecord::Base
   has_many :versiones, through: :ilustraciones
   has_many :links, as: :linkeable, dependent: :destroy
 
-  friendly_id :nombre, use: :slugged
-
   validates_presence_of :nombre
 
+  friendly_id :nombre, use: :slugged
   multisearchable against: :nombre
 
   # TODO scope ilustraciones_sin_colaboracion

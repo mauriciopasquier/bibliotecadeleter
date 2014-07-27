@@ -5,8 +5,6 @@ class ListasController < ApplicationController
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' },
     only: [ :index, :todo ]
 
-  # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario, except: :todo
   load_and_authorize_resource through: :usuario, except: [:index, :todo]
   authorize_resource only: [:todo]
@@ -52,7 +50,7 @@ class ListasController < ApplicationController
   end
 
   def update
-    @lista.update parametros_permitidos
+    @lista.update lista_params
     respond_with(@usuario, @lista)
   end
 
@@ -76,11 +74,7 @@ class ListasController < ApplicationController
       tipo_actual params[:mostrar].try(:[], :tipo) || :original
     end
 
-    def cargar_recurso
-      @lista = Lista.new(parametros_permitidos)
-    end
-
-    def parametros_permitidos
+    def lista_params
       params.require(:lista).permit(
         :nombre, :visible, :notas,
         slots_attributes: [

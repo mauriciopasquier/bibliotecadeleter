@@ -4,8 +4,8 @@ class ColeccionesController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
 
   load_and_authorize_resource :usuario
-  load_and_authorize_resource through: :usuario, singleton: true
-  load_and_authorize_resource :version, only: [:update_slot]
+  load_resource through: :usuario, singleton: true
+  load_resource :version, only: [:update_slot]
 
   before_filter :determinar_galeria, only: [:show, :faltantes, :sobrantes]
 
@@ -61,7 +61,7 @@ class ColeccionesController < ApplicationController
   end
 
   def update
-    @coleccion.update parametros_permitidos
+    @coleccion.update coleccion_params
 
     respond_with @usuario, @coleccion, location: edit_usuario_coleccion_path(@usuario)
   end
@@ -76,7 +76,7 @@ class ColeccionesController < ApplicationController
       tipo_actual params[:mostrar].try(:[], :tipo) || :mini
     end
 
-    def parametros_permitidos
+    def coleccion_params
       params.require(:coleccion).permit(
         :nombre, :visible
       )

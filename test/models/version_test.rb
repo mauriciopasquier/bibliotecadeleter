@@ -12,7 +12,7 @@ describe Version do
 
   it "debe crearse solo una versión canónica" do
     carta = create(:carta_con_versiones, cantidad_de_versiones: 3)
-    versiones = carta.versiones
+    versiones = carta.reload.versiones
     versiones.must_include carta.canonica
     versiones.collect(&:canonica).count {|c| c}.must_equal 1
     versiones.collect(&:canonica).count {|c| !c}.must_equal 2
@@ -39,6 +39,23 @@ describe Version do
     end
 
     build(:version).ilimitada?.wont_equal true
+  end
+
+  describe '#actualizar_path_de_imagenes' do
+    subject { create(:version_con_carta) }
+
+    it 'regenera el path de las imágenes' do
+      viejo = subject.numero_normalizado
+      subject.numero = subject.numero + 1
+
+      imagen = MiniTest::Mock.new.expect :actualizar_path, nil,
+        [ viejo, subject.numero_normalizado ]
+
+      subject.stub :imagenes, [ imagen ] do
+        subject.save
+        imagen.verify
+      end
+    end
   end
 
   describe 'lista circular' do

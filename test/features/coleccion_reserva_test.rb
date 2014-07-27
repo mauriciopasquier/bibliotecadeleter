@@ -3,7 +3,7 @@ require "./test/test_helper"
 
 feature 'Colección/Reserva' do
   feature 'anónimamente' do
-    scenario "no ve los links" do
+    scenario "no hay rastros de colección/reserva" do
       version = create(:version_con_carta)
       visit expansion_path(version.expansion)
       current_path.must_equal expansion_path(version.expansion)
@@ -15,14 +15,16 @@ feature 'Colección/Reserva' do
   end
 
   feature 'logueado' do
-    background { @usuario = loguearse }
+    background do
+      @usuario = loguearse
+      @version = create(:version_con_carta)
+
+      visit en_expansion_carta_path(@version.carta, expansion: @version.expansion)
+    end
+
     after { logout }
 
-    scenario "actualiza con ajax", js: true do
-      version = create(:version_con_carta)
-      visit en_expansion_carta_path(version.carta, expansion: version.expansion)
-      current_path.must_equal en_expansion_carta_path(version.carta, expansion: version.expansion)
-
+    scenario "ve la estructura de colección/reserva" do
       within '#falsos.controles' do
         within '.control-reserva' do
           page.must_have_selector '.control-texto', text: 'Quiero'
@@ -32,36 +34,40 @@ feature 'Colección/Reserva' do
         end
       end
 
-      within "##{version.expansion.slug}.controles" do
+      within "##{@version.expansion.slug}.controles" do
         within '.control-reserva' do
           page.must_have_selector '.cantidad', text: 0
-          @usuario.reserva.cantidad.must_equal 0
           page.must_have_selector 'a.update-listas.agregar i', count: 1
           page.must_have_selector 'a.update-listas.remover i', count: 1
-
-          find('a.agregar').click
-          sleep 3
-          @usuario.reserva.cantidad.must_equal 1
-          page.must_have_selector '.cantidad', text: 1
-          find('a.remover').click
-          sleep 2
-          @usuario.reserva.cantidad.must_equal 0
-          page.must_have_selector '.cantidad', text: 0
         end
 
         within '.control-coleccion' do
           page.must_have_selector '.cantidad', text: 0
-          @usuario.coleccion.cantidad.must_equal 0
           page.must_have_selector 'a.update-listas.agregar i', count: 1
           page.must_have_selector 'a.update-listas.remover i', count: 1
+        end
+      end
+    end
 
-          find('a.agregar').click
-          sleep 3
-          @usuario.coleccion.cantidad.must_equal 1
+    scenario "actualiza la reserva con ajax", js: true do
+      within "##{@version.expansion.slug}.controles" do
+        within('.control-reserva') do
+          page.must_have_selector '.cantidad', text: 0
+          click_link 'Agregar a'
           page.must_have_selector '.cantidad', text: 1
-          find('a.remover').click
-          sleep 2
-          @usuario.coleccion.cantidad.must_equal 0
+          click_link 'Remover de'
+          page.must_have_selector '.cantidad', text: 0
+        end
+      end
+    end
+
+    scenario "actualiza la colección con ajax", js: true do
+      within "##{@version.expansion.slug}.controles" do
+        within '.control-coleccion' do
+          page.must_have_selector '.cantidad', text: 0
+          click_link 'Agregar a'
+          page.must_have_selector '.cantidad', text: 1
+          click_link 'Remover de'
           page.must_have_selector '.cantidad', text: 0
         end
       end

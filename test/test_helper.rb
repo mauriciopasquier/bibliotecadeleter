@@ -57,9 +57,6 @@ class Capybara::Rails::TestCase
   include ApplicationHelper
   include Warden::Test::Helpers # login_as
 
-  # Porque desarrollo en una torta
-  Capybara.default_wait_time = 15
-
   # Transactional fixtures do not work with Selenium tests, because Capybara
   # uses a separate server thread, which the transactions would be hidden
   # from. We hence use DatabaseCleaner to truncate our test database.
@@ -84,6 +81,7 @@ class Capybara::Rails::TestCase
   end
 end
 
+# Infectamos las assertions con el estilo de Expectations de minitest spec
 module BibliotecaDelEter::Expectations
   infect_an_assertion :assert_redirected_to, :must_redirect_to
   infect_an_assertion :assert_template, :must_render_template
@@ -93,12 +91,15 @@ module BibliotecaDelEter::Expectations
   infect_an_assertion :assert_select, :must_select
 end
 
+# Incluimos estas Expectations en Object para poder usarlas sobre cualquier
+# cosa
 class Object
   include BibliotecaDelEter::Expectations
 end
 
+# Registrando el driver podemos pasar opciones como el profile a usar
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
+  Capybara::Selenium::Driver.new app, browser: :firefox, profile: 'selenium'
 end
 
 class Draper::TestCase

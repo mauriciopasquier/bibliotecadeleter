@@ -4,8 +4,6 @@ class ExpansionesController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }, only: :index
 
-  # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource
 
   def index
@@ -47,7 +45,7 @@ class ExpansionesController < ApplicationController
   end
 
   def update
-    @expansion.update parametros_permitidos
+    @expansion.update expansion_params
     respond_with(@expansion, location: info_expansion_path(@expansion))
   end
 
@@ -58,11 +56,7 @@ class ExpansionesController < ApplicationController
 
   private
 
-    def cargar_recurso
-      @expansion = Expansion.new(parametros_permitidos)
-    end
-
-    def parametros_permitidos
+    def expansion_params
       params.require(:expansion).permit(
         :nombre, :codigo, :lanzamiento, :presentacion, :saga, :total, :notas,
         :logo,

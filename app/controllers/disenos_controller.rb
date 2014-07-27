@@ -5,8 +5,6 @@ class DisenosController < ApplicationController
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' },
     only: [ :index, :todo ]
 
-  # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario, except: :todo
   load_and_authorize_resource through: :usuario, except: [:index, :todo]
   authorize_resource only: [:todo]
@@ -46,7 +44,7 @@ class DisenosController < ApplicationController
   end
 
   def update
-    @diseno.update parametros_permitidos
+    @diseno.update diseno_params
     respond_with @usuario, @diseno
   end
 
@@ -57,11 +55,7 @@ class DisenosController < ApplicationController
 
   private
 
-    def cargar_recurso
-      @diseno = Diseno.new(parametros_permitidos)
-    end
-
-    def parametros_permitidos
+    def diseno_params
       params.require(:diseno).permit(
         :nombre, :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
         :ambientacion, :coste, :id, :_destroy, :fundamento

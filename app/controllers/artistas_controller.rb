@@ -35,5 +35,4 @@ class ArtistasController < ApplicationController
       end
       @busqueda = Artista.search(params[:q])
     end
-
 end

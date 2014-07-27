@@ -15,6 +15,12 @@ module InicioHelper
         'La letra chica de los contratos demoníacos'
       when 'panel'
         "#{current_usuario.nick}"
+      when 'herejias'
+        'Las herejías de los infernales'
+      when 'arena'
+        'El combate en la arena'
+      when 'canon'
+        'La palabra demoníaca'
       else
         nil
     end

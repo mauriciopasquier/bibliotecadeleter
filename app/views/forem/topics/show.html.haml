@@ -10,7 +10,7 @@
 
   #menu
     - if @topic.can_be_replied_to? && can?(:reply, @topic)
-      = link_to t(".reply"), forem.new_topic_post_path(@topic),
+      = link_to t(".reply"), forem.new_forum_topic_post_path(@forum, @topic),
         class: "btn btn-info"
     - if forem_user
       - if !@topic.subscriber?(forem_user.id)
@@ -28,15 +28,15 @@
 
     - if forem_admin?
       = link_to t('forem.topic.links.edit'),
-        forem.edit_admin_topic_path(@topic), class: "btn btn-warning"
+        forem.edit_admin_forum_topic_path(@forum, @topic), class: "btn btn-warning"
       = link_to t(".hide.#{@topic.hidden}"),
-        forem.toggle_hide_admin_topic_path(@topic), method: :put,
+        forem.toggle_hide_admin_forum_topic_path(@forum, @topic), method: :put,
         class: (@topic.hidden? ? 'btn-success' : 'btn-warning') + " btn"
       = link_to t(".lock.#{@topic.locked}"),
-        forem.toggle_lock_admin_topic_path(@topic), method: :put,
+        forem.toggle_lock_admin_forum_topic_path(@forum, @topic), method: :put,
         class: (@topic.locked? ? 'btn-success' : 'btn-warning') + " btn"
       = link_to t(".pin.#{@topic.pinned}"),
-        forem.toggle_pin_admin_topic_path(@topic), method: :put,
+        forem.toggle_pin_admin_forum_topic_path(@forum, @topic), method: :put,
         class: "btn"
 
   = paginacion_tag(@posts, mostrar_cantidad: false)

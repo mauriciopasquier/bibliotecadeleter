@@ -37,6 +37,8 @@ class Usuario < ActiveRecord::Base
     default_style: :arte
   }
 
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
   after_create :crear_listas, :asociarse
 
   # Cartas que le faltan (cantidades negativas) o sobran a este usuario

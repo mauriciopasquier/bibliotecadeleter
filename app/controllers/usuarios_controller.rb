@@ -24,13 +24,13 @@ class UsuariosController < ApplicationController
   end
 
   def update
-    @usuario.update parametros_permitidos
+    @usuario.update usuario_params
     respond_with(@usuario)
   end
 
   private
 
-    def parametros_permitidos
+    def usuario_params
       params.require(:usuario).permit(
         :avatar
       )
