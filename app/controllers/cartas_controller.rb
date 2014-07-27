@@ -4,8 +4,6 @@ class CartasController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' }
 
-  # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource
 
   before_filter :cargar_version, only: :show
@@ -35,9 +33,9 @@ class CartasController < ApplicationController
   def update
     # Cargamos la versión que estamos intentando crear por si hay error,
     # asumiendo que sólo se envía una versión a la vez
-    @version = Version.new parametros_permitidos[:versiones_attributes].values.first
+    @version = Version.new carta_params[:versiones_attributes].values.first
 
-    @carta.update parametros_permitidos
+    @carta.update carta_params
     respond_with(@carta, location: en_expansion_carta_path(@carta, expansion))
   end
 
@@ -107,11 +105,7 @@ class CartasController < ApplicationController
       end
     end
 
-    def cargar_recurso
-      @carta = Carta.new(parametros_permitidos)
-    end
-
-    def parametros_permitidos
+    def carta_params
       params.require(:carta).permit(
         :nombre,
         versiones_attributes: [

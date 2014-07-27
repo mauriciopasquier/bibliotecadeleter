@@ -61,7 +61,7 @@ class ColeccionesController < ApplicationController
   end
 
   def update
-    @coleccion.update parametros_permitidos
+    @coleccion.update coleccion_params
 
     respond_with @usuario, @coleccion, location: edit_usuario_coleccion_path(@usuario)
   end
@@ -76,7 +76,7 @@ class ColeccionesController < ApplicationController
       tipo_actual params[:mostrar].try(:[], :tipo) || :mini
     end
 
-    def parametros_permitidos
+    def coleccion_params
       params.require(:coleccion).permit(
         :nombre, :visible
       )

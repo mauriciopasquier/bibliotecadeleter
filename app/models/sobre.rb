@@ -15,7 +15,6 @@ class Sobre
     new.abrir(cartas)
   end
 
-  # TODO tener en cuenta las fichas
   def abrir(cartas)
     cartas.where(rareza: rara_o_epica).no_fichas.sample(raras) +
     cartas.where(rareza: 'Infrecuente').no_fichas.sample(infrecuentes) +

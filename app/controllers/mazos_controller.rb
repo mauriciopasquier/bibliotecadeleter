@@ -5,8 +5,6 @@ class MazosController < ApplicationController
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' },
     only: [ :index, :todo ]
 
-  # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource :usuario, except: :todo
   load_and_authorize_resource through: :usuario, except: [:index, :todo]
   authorize_resource only: [:todo]
@@ -49,7 +47,7 @@ class MazosController < ApplicationController
   end
 
   def update
-    @mazo.update parametros_permitidos
+    @mazo.update mazo_params
     respond_with @usuario, @mazo
   end
 
@@ -66,11 +64,7 @@ class MazosController < ApplicationController
 
   private
 
-    def cargar_recurso
-      @mazo = Mazo.new parametros_permitidos
-    end
-
-    def parametros_permitidos
+    def mazo_params
       params.require(:mazo).permit(
         :nombre, :formato_objetivo_id, :visible, :exigir_formato, :notas,
         slots_attributes: [

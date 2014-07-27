@@ -6,7 +6,7 @@ class BusquedasController < ApplicationController
 
   def create
     session.delete(:texto)
-    session.merge! parametros_permitidos
+    session.merge! busqueda_params
     redirect_to busqueda_path
   end
 
@@ -37,7 +37,7 @@ class BusquedasController < ApplicationController
 
   private
 
-    def parametros_permitidos
+    def busqueda_params
       params.require(:busqueda).permit(:texto)
     end
 end

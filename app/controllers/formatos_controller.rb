@@ -4,8 +4,6 @@ class FormatosController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'tipo asc' }, only: :index
 
-  # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource
 
   def index
@@ -33,7 +31,7 @@ class FormatosController < ApplicationController
   end
 
   def update
-    @formato.update parametros_permitidos
+    @formato.update formato_params
     respond_with(@formato)
   end
 
@@ -44,11 +42,7 @@ class FormatosController < ApplicationController
 
   private
 
-    def cargar_recurso
-      @formato = Formato.new(parametros_permitidos)
-    end
-
-    def parametros_permitidos
+    def formato_params
       params.require(:formato).permit(
         :nombre, :nombres_de_cartas_prohibidas, { expansion_ids: [] },
         :limitar_sendas, :suplente, :principal, :demonios, :copias, :tipo

@@ -4,8 +4,6 @@ class TorneosController < ApplicationController
   has_scope :with_estados, as: :estado, type: :array, only: :index
   has_scope :search, as: :q, type: :hash, default: { s: 'fecha asc' }, only: :index
 
-  # TODO sacar cuando cancan contemple strong_parameters
-  before_filter :cargar_recurso, only: :create
   load_and_authorize_resource
   skip_authorization_check only: [ :index, :show ]
 
@@ -39,7 +37,7 @@ class TorneosController < ApplicationController
 
   def update
     @torneo.organizador = current_usuario
-    @torneo.update parametros_permitidos
+    @torneo.update torneo_params
     respond_with @torneo
   end
 
@@ -61,7 +59,7 @@ class TorneosController < ApplicationController
 
   def crear_ronda
     @torneo.empezar
-    @torneo.update parametros_permitidos
+    @torneo.update torneo_params
     @torneo.puntuar
 
     respond_with @torneo do |formato|
@@ -95,11 +93,7 @@ class TorneosController < ApplicationController
 
   private
 
-    def cargar_recurso
-      @torneo = Torneo.new(parametros_permitidos)
-    end
-
-    def parametros_permitidos
+    def torneo_params
       params.require(:torneo).permit(
         :fecha, :direccion, :juez_principal, :tienda_id, :lugar, :formato_id,
         inscripciones_attributes: [

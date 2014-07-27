@@ -27,7 +27,7 @@ class ReservasController < ApplicationController
   end
 
   def update
-    @reserva.update parametros_permitidos
+    @reserva.update reserva_params
 
     respond_with @usuario, @reserva, location: edit_usuario_coleccion_path(@usuario)
   end
@@ -42,7 +42,7 @@ class ReservasController < ApplicationController
       tipo_actual params[:mostrar].try(:[], :tipo) || :mini
     end
 
-    def parametros_permitidos
+    def reserva_params
       params.require(:reserva).permit(
         :nombre, :visible
       )
