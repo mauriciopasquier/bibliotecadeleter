@@ -5,6 +5,10 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+## 27/7/2014
+
+- Muchos cambios internos!
+
 ## 7/7/2014
 
 - Subimos entero [Esenciales: Ubanna][]
