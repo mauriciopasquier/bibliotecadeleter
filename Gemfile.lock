@@ -177,8 +177,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mail_view (2.0.4)
-      tilt
     memcached (1.8.0)
     merit (2.1.2)
       ambry (~> 0.3.0)
@@ -211,7 +209,7 @@ GEM
     net-ssh (2.9.1)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    nokogiri (1.6.2.1)
+    nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     paperclip (4.2.0)
@@ -388,7 +386,6 @@ DEPENDENCIES
   lazyload-rails
   libmemcached_store
   loofah
-  mail_view
   merit
   minitest-rails
   minitest-rails-capybara

@@ -56,6 +56,7 @@ gem 'forem', github: 'radar/forem', branch: 'rails4'
 
 # Development
 gem 'minitest-rails'
+gem 'awesome_print'
 
 # Assets
 gem 'sass-rails', '~> 4.0.0'
@@ -79,13 +80,11 @@ group :test, :development do
 end
 
 group :development do
-  gem 'mail_view'
   gem 'bullet'
   gem 'capistrano', '~> 2'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'awesome_print'
   gem 'ruby-graphviz'
 end
 
