@@ -11,7 +11,7 @@ describe Version do
   end
 
   it "debe crearse solo una versión canónica" do
-    carta = create(:carta_con_versiones, cantidad_de_versiones: 3)
+    carta = create(:carta, :con_versiones, cantidad_de_versiones: 3)
     versiones = carta.reload.versiones
     versiones.must_include carta.canonica
     versiones.collect(&:canonica).count {|c| c}.must_equal 1
