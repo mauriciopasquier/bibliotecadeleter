@@ -112,4 +112,8 @@ class TorneosController < ApplicationController
     def numero
       params.require(:numero)
     end
+
+    def interpolation_options
+      { del: 'del' }
+    end
 end
