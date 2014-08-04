@@ -5,6 +5,9 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+- Ya funciona la posición en los torneos
+- Ya no se cierra la sesión antes de que termine la ronda
+
 ## 27/7/2014
 
 - Muchos cambios internos!
