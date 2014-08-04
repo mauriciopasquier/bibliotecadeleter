@@ -177,6 +177,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_view (2.0.4)
+      tilt
     memcached (1.8.0)
     merit (2.1.2)
       ambry (~> 0.3.0)
@@ -386,6 +388,7 @@ DEPENDENCIES
   lazyload-rails
   libmemcached_store
   loofah
+  mail_view
   merit
   minitest-rails
   minitest-rails-capybara

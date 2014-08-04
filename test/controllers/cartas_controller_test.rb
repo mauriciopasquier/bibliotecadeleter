@@ -20,7 +20,7 @@ describe CartasController do
     end
 
     it "muestra una carta" do
-      get :show, id: create(:carta_con_versiones)
+      get :show, id: create(:carta, :con_versiones)
       assert_response :success
     end
 

@@ -13,9 +13,9 @@ describe Inscripcion do
   describe '#puntos' do
     it 'suma todas las rondas' do
       create(:inscripcion, rondas_attributes: {
-        '0' => attributes_for(:ronda, puntos: 1),
-        '1' => attributes_for(:ronda, puntos: 2),
-        '2' => attributes_for(:ronda, puntos: 3)
+        '0' => attributes_for(:ronda, numero: 1, puntos: 1),
+        '1' => attributes_for(:ronda, numero: 2, puntos: 2),
+        '2' => attributes_for(:ronda, numero: 3, puntos: 3)
       }).puntos.must_equal 6
     end
   end
@@ -81,6 +81,58 @@ describe Inscripcion do
       subject.dropear_o_deshacer.must_equal false
       subject.dropeo.must_be_nil
       subject.dropeo?.must_equal false
+    end
+  end
+
+  describe '.posicionadas' do
+    subject { Inscripcion }
+
+    let(:tercera) do
+      create(:inscripcion, rondas_attributes: {
+        '0' => attributes_for(:ronda, puntos: 3, partidas_ganadas: 3)
+      })
+    end
+
+    let(:segunda) do
+      create(:inscripcion, rondas_attributes: {
+        '0' => attributes_for(:ronda, puntos: 3, partidas_ganadas: 3)
+      })
+    end
+
+    let(:primera) do
+      primera = create(:inscripcion, rondas_attributes: {
+        '0' => attributes_for(:ronda, puntos: 3, partidas_ganadas: 3)
+      })
+    end
+
+    it 'ordena por puntos' do
+      tercera.rondas.first.update puntos: 1
+      segunda.rondas.first.update puntos: 2
+      primera.rondas.first.update puntos: 3
+
+      subject.posicionadas.first.must_equal primera
+      subject.posicionadas.second.must_equal segunda
+      subject.posicionadas.third.must_equal tercera
+    end
+
+    it 'ordena por puntos y después por partidas ganadas' do
+      tercera.rondas.first.update partidas_ganadas: 1
+      segunda.rondas.first.update partidas_ganadas: 2
+      primera.rondas.first.update partidas_ganadas: 3
+
+      subject.posicionadas.first.must_equal primera
+      subject.posicionadas.second.must_equal segunda
+      subject.posicionadas.third.must_equal tercera
+    end
+
+    it 'ordena por puntos, partidas ganadas y por último desempata' do
+      tercera.update desempate: 1
+      segunda.update desempate: 2
+      primera.update desempate: 3
+
+      subject.posicionadas.first.must_equal primera
+      subject.posicionadas.second.must_equal segunda
+      subject.posicionadas.third.must_equal tercera
     end
   end
 end

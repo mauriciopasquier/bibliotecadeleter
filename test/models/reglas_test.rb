@@ -118,7 +118,7 @@ describe Reglas do
 
     describe 'cartas prohibidas' do
       subject do
-        @prohibida = create(:carta_con_versiones, nombre: 'prohibida')
+        @prohibida = create(:carta, :con_versiones, nombre: 'prohibida')
         @mazo = create(:mazo)
         Reglas.new create(:formato, cartas_prohibidas: [ @prohibida ]), @mazo
       end
@@ -311,7 +311,7 @@ describe Reglas do
 
     describe 'cartas prohibidas' do
       subject do
-        @prohibida = create(:carta_con_versiones, nombre: 'prohibida')
+        @prohibida = create(:carta, :con_versiones, nombre: 'prohibida')
         Reglas.new create(:formato, cartas_prohibidas: [ @prohibida ])
       end
 

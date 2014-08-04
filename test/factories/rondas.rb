@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :ronda do
-    numero { 1 + rand(7) }
+    numero 1
     partidas_ganadas { rand(3) }
 
     inscripcion

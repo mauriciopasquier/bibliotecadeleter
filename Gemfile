@@ -86,6 +86,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'ruby-graphviz'
+  # TODO sacar con rails 4.1
+  gem 'mail_view'
 end
 
 group :test do

@@ -11,13 +11,12 @@ class Inscripcion < ActiveRecord::Base
 
   normalize_attributes :codigo, :participante
 
-  # requiere agrupamiento
-  def self.con_puntaje
-    select(
+  def self.posicionadas
+    joins(:rondas).group('inscripciones.id').select(
       'inscripciones.*,
       sum(rondas.puntos) as puntaje,
       sum(rondas.partidas_ganadas) as partidas'
-    ).order('puntaje desc, partidas desc').order(:desempate)
+    ).order('puntaje desc, partidas desc, desempate desc')
   end
 
   def puntos
