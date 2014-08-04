@@ -7,18 +7,7 @@ class Torneo < ActiveRecord::Base
   belongs_to :formato
 
   has_many :inscripciones, dependent: :restrict_with_error,
-    inverse_of: :torneo do
-      def posiciones
-        joins(:rondas).group('inscripciones.id').con_puntaje
-      end
-
-      def posiciones_en(ronda)
-        joins(:rondas).where(
-          'rondas.numero <= ?', ronda
-        ).group('inscripciones.id').con_puntaje
-      end
-    end
-
+    inverse_of: :torneo
   has_many :usuarios, through: :inscripciones
   has_many :rondas, -> { order(:numero) }, through: :inscripciones,
     inverse_of: :torneo
@@ -83,7 +72,6 @@ class Torneo < ActiveRecord::Base
 
   delegate :nombre, to: :formato, allow_nil: true, prefix: true
   delegate :nombre, to: :tienda, allow_nil: true, prefix: true
-  delegate :posiciones, :posiciones_en, to: :inscripciones, allow_nil: true
 
   attr_writer :sistema
 
@@ -116,6 +104,14 @@ class Torneo < ActiveRecord::Base
 
   def bye
     Bye.new(self)
+  end
+
+  def posiciones
+    inscripciones.posicionadas
+  end
+
+  def posiciones_en(ronda)
+    posiciones.where('rondas.numero <= ?', ronda)
   end
 
   private
