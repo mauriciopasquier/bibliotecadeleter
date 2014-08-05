@@ -1,12 +1,7 @@
 - cache carta do
   .row-fluid{class: carta.canonica.senda.downcase}
     .nombre.span3
-      - if can? :delete, carta
-        = link_to_eliminar carta, ''
-      - if can? :read, carta
-        = link_to_mostrar carta, carta.nombre
-      - else
-        = carta.nombre
+      = link_to_mostrar carta, carta.nombre
     .coste.span1.hidden-phone= carta.canonica.coste
     .senda.span1.visible-desktop= carta.canonica.senda
     .senda.span1.visible-desktop= carta.canonica.rareza

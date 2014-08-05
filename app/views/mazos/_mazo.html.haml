@@ -1,10 +1,7 @@
-- cache "#{params[:action]}/#{mazo.cache_key}" do
+-# Si estamos en la vista de todos los mazos, hay un link al usuario
+- cache [params[:action], mazo] do
   .row-fluid
     .nombre.span3
-      - if can? :update, mazo
-        = link_to_editar edit_usuario_mazo_path(mazo.usuario, mazo), ''
-      - if can? :delete, mazo
-        = link_to_eliminar [mazo.usuario, mazo], ''
       = link_to_mostrar [mazo.usuario, mazo], mazo.nombre
     .demonio.span3= mazo.link_a_demonios
     - if params[:action] == 'todo'

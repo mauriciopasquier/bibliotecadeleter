@@ -5,8 +5,11 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+## 5/8/2014
+
 - Ya funciona la posición en los torneos
 - Ya no se cierra la sesión antes de que termine la ronda
+- Arreglos del cache
 
 ## 27/7/2014
 

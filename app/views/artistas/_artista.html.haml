@@ -1,8 +1,5 @@
 - cache artista do
   .row-fluid
     .nombre.span8
-      - if can? :read, artista
-        = link_to_mostrar artista, artista.nombre
-      - else
-        = artista.nombre
+      = link_to_mostrar artista, artista.nombre
     .cantidad.span4.hidden-phone= artista.cantidad

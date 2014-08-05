@@ -1,10 +1,6 @@
-- cache "#{params[:action]}/#{lista.cache_key}" do
+- cache [params[:action], lista] do
   .row-fluid
     .nombre.span4
-      - if can? :update, lista
-        = link_to_editar edit_usuario_lista_path(lista.usuario, lista), ''
-      - if can? :delete, lista
-        = link_to_eliminar [lista.usuario, lista], ''
       = link_to_mostrar [lista.usuario, lista], lista.nombre
     .notas.span4= lista.extracto
     - if params[:action] == 'todo'

@@ -1,9 +1,6 @@
 - cache formato do
   .row-fluid
     .span2.nombre
-      - if can? :read, formato
-        = link_to_mostrar formato, formato.nombre
-      - else
-        = formato.nombre
+      = link_to_mostrar formato, formato.nombre
     .span2.tipo.hidden-phone= formato.tipo
     .span8.expansiones.hidden-phone= formato.expansiones_legales
