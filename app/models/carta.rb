@@ -44,6 +44,17 @@ class Carta < ActiveRecord::Base
     versiones.each(&:actualizar_path_de_imagenes)
   end
 
+  # La cantidad de esta carta en todas sus versiones para la lista
+  def cantidad(lista = nil)
+    if lista.present?
+      versiones.to_a.sum do |version|
+        version.slot_en(lista).try(:cantidad) || 0
+      end
+    else
+      0
+    end
+  end
+
   private
 
     def should_generate_new_friendly_id?
