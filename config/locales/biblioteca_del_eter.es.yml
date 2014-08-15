@@ -96,5 +96,9 @@ es:
   colecciones:
     quiero: 'Quiero'
     tengo:  'Tengo'
+  slots:
+    te_faltan:
+      one:  "(te falta 1)"
+      other:  "(te faltan %{count})"
   ransack:
     search: 'Buscar'

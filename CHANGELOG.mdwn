@@ -5,6 +5,10 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+## 15/8/2014
+
+- Algo útil en los mazos: cuántas cartas de cada una te faltan para armarlo
+
 ## 5/8/2014
 
 - Ya funciona la posición en los torneos

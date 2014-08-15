@@ -6,7 +6,7 @@ FactoryGirl.define do
     # Para crear una carta con versiones
     #
     #   create :carta, :con_versiones
-    #   create :carta, :con_versiones, cantidad: 10
+    #   create :carta, :con_versiones, cantidad_de_versiones: 10
     trait :con_versiones do
       ignore { cantidad_de_versiones 1 }
 

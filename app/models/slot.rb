@@ -1,7 +1,8 @@
 # encoding: utf-8
 class Slot < ActiveRecord::Base
   belongs_to :version
-  belongs_to :inventario, polymorphic: true
+  belongs_to :inventario, polymorphic: true, touch: true
+  has_one :carta, through: :version
 
   validates_presence_of :version_id
 

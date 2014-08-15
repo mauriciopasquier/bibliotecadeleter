@@ -19,4 +19,21 @@ describe Carta do
       end
     end
   end
+
+  describe '#cantidad' do
+    subject { create(:carta, :con_versiones, cantidad_de_versiones: 2) }
+    let(:lista) { create(:lista) }
+
+    it 'sin especificar una lista la cantidad es 0' do
+      subject.cantidad.must_equal 0
+      subject.cantidad(nil).must_equal 0
+    end
+
+    it 'cuenta todas las versiones' do
+      subject.reload.versiones.each do |v|
+        lista.slots.create version_id: v.id, cantidad: 3
+      end
+      subject.cantidad(lista).must_equal 6
+    end
+  end
 end
