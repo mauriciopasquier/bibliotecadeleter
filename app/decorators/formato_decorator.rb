@@ -1,9 +1,9 @@
 class FormatoDecorator < ApplicationDecorator
   def expansiones_legales
     if object.expansiones.any?
-      object.expansiones.ordenadas.map do |e|
+      object.expansiones.grandes.ordenadas.map do |e|
         h.link_to e.nombre, e
-      end.join.html_safe
+      end.join(', ').html_safe
     else
       'Cualquiera'
     end

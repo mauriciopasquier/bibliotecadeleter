@@ -114,6 +114,6 @@ class TorneosController < ApplicationController
     end
 
     def interpolation_options
-      { del: 'del' }
+      super.merge del: 'del'
     end
 end
