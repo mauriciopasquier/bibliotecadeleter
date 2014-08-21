@@ -17662,3 +17662,187 @@ versiones:
     - 102-origen
     - '1'
     - '1'
+  - - '921'
+    - "{1}, girar: Pon en juego una ficha de aliado Imaginario 0 FUE, 1 RES con habilidad
+      Evasivo.\r\nCuando controles 5 o más fichas Imaginario, voltea Gorundar."
+    - 
+    - Demonio
+    - 
+    - '2'
+    - 
+    - Locura
+    - '"Puerta. La''ahv. Kurashaj. Profundo. ¡Tú! Nudassin. ¿Mío?, Vysharra. Mío.
+      Más. Menos. ¿Tú? Adenkur. ¡Puerta! ¡Tú!"'
+    - '3'
+    - Común
+    - '2014-08-21 03:57:16.888109'
+    - '2014-08-21 03:57:17.010933'
+    - '709'
+    - true
+    - '19'
+    - 003-descenso
+    - 
+    - 
+  - - '922'
+    - 'No se pueden jugar escenarios. Si controlas al menos 1 aliado, 1 arma y 1 objeto,
+      voltea Yoku. / {1}, girar, descartar una carta: busca en tu mazo una carta de
+      igual o menor coste a la carta descartada. Mezcla tu mazo y pon la carta elegida
+      en el tope.'
+    - 
+    - Demonio
+    - 
+    - '1'
+    - 
+    - Poder
+    - '"Primero gané sus corazones; luego, sus riquezas; ahora, tengo su ciudad. Pronto
+      tendré mi imperio, y todo, TODO será mío."'
+    - '8'
+    - Infrecuente
+    - '2014-08-21 04:01:25.021428'
+    - '2014-08-21 04:01:25.130384'
+    - '710'
+    - true
+    - '19'
+    - 008-descenso
+    - 
+    - 
+  - - '923'
+    - "Acuático (al comienzo de tu restauración, si no hay Acqua, pon un contador
+      de daño sobre este aliado).\r\nFuria (puede atacar inmediatamente)."
+    - Aliado
+    - 
+    - Pez
+    - '4'
+    - '1'
+    - Caos
+    - Los sahuagin los veneran, creyéndolos hijos del Dios de la Guerra.
+    - '26'
+    - Común
+    - '2014-08-21 04:03:53.649911'
+    - '2014-08-21 04:03:53.653836'
+    - '711'
+    - true
+    - '19'
+    - 026-descenso
+    - '5'
+    - '5'
+  - - '924'
+    - El aliado objetivo tiene la habilidad de Furia, +1 FUE y -1 RES hasta el final
+      del turno.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Caos
+    - '"¡Avanza! ¡Reclama tu gloria!" - Orvuk'
+    - '29'
+    - Común
+    - '2014-08-21 04:05:35.998237'
+    - '2014-08-21 04:05:36.003052'
+    - '712'
+    - true
+    - '19'
+    - 029-descenso
+    - '2'
+    - '2'
+  - - '925'
+    - Mira la mano del demonio objetivo y elige una carta de aliado. Ese demonio descarta
+      esa carta.
+    - Ritual
+    - 
+    - 
+    - 
+    - 
+    - Locura
+    - Gorundar pronuncia palabras initeligibles... con resultados devastadores.
+    - '45'
+    - Común
+    - '2014-08-21 04:08:38.6477'
+    - '2014-08-21 04:08:38.652203'
+    - '713'
+    - true
+    - '19'
+    - 045-descenso
+    - '1'
+    - '1'
+  - - '926'
+    - Mientras los demonios enemigos no tengan cartas en su mano, Seguidor de Nas'qyr
+      obtiene +2 FUE y +1 RES.
+    - Aliado
+    - 
+    - Sahuagin
+    - '1'
+    - '1'
+    - Locura
+    - Expertos en destruir mentes debilitadas.
+    - '65'
+    - Común
+    - '2014-08-21 04:14:59.41578'
+    - '2014-08-21 04:14:59.419666'
+    - '714'
+    - true
+    - '19'
+    - 065-descenso
+    - '2'
+    - '2'
+  - - '927'
+    - 'Girar: Mira la primer carta de tu mazo. Puedes ponerla en tu inferno.'
+    - Aliado
+    - 
+    - Humano
+    - '0'
+    - '1'
+    - Muerte
+    - Malas intenciones. Buenos resultados.
+    - '79'
+    - Común
+    - '2014-08-21 04:19:01.308751'
+    - '2014-08-21 04:19:01.312496'
+    - '715'
+    - true
+    - '19'
+    - 079-descenso
+    - '1'
+    - '1'
+  - - '928'
+    - Cuando Exploradora púrpura entre en juego, pon la primera carta de tu mazo en
+      juego girada como recurso. Exploradora púrpura hace un punto de daño a tu demonio
+      o a un aliado que controles.
+    - Aliado
+    - 
+    - Humano
+    - '1'
+    - '1'
+    - Poder
+    - 
+    - '113'
+    - Rara
+    - '2014-08-21 04:21:11.487165'
+    - '2014-08-21 04:21:11.492409'
+    - '716'
+    - true
+    - '19'
+    - 113-descenso
+    - '2'
+    - '2'
+  - - '929'
+    - Cuando Sahuagin de Colección entre en juego, busca un aliado en tu mazo y ponlo
+      en tu inferno. Luego mezcla tu mazo.
+    - Aliado
+    - 
+    - Sahuagin
+    - '1'
+    - '1'
+    - Muerte
+    - Un magnífico ejemplar de las galerías.
+    - '91'
+    - Común
+    - '2014-08-21 04:22:47.47074'
+    - '2014-08-21 04:22:47.474451'
+    - '717'
+    - true
+    - '19'
+    - 091-descenso
+    - '2'
+    - '2'

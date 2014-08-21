@@ -24,6 +24,9 @@ class Expansion < ActiveRecord::Base
     convert_options: { all: '-strip' }
   }
 
+  validates_attachment :logo,
+    content_type: { content_type: %w{image/jpeg image/gif image/png} }
+
   multisearchable against: [ :nombre, :saga, :notas ]
 
   normalize_attribute :codigo, with: :upcase

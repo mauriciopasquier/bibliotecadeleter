@@ -37,7 +37,8 @@ class Usuario < ActiveRecord::Base
     default_style: :arte
   }
 
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+  validates_attachment :avatar,
+    content_type: { content_type: %w{image/jpeg image/gif image/png} }
 
   after_create :crear_listas, :asociarse
 

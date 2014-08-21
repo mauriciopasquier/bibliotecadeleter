@@ -15,7 +15,8 @@ class Ability
     alias_action :buscar, :info, :panel, :sobre, :todo, to: :read
     alias_action :carnet, :avatar, to: :update
 
-    @usuario = usuario || Usuario.new # guest user (not logged in)
+    # Iniciar un invitado si no hay usuario logueado
+    @usuario = usuario || Usuario.new
 
     # Permisos para todos y todas
     anonimo
@@ -66,5 +67,4 @@ class Ability
         medalla.custom_fields[:prioridad]
       end.collect(&:name)
     end
-
 end

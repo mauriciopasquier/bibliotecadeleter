@@ -17,7 +17,7 @@
 
 .row-fluid
   .span4
-    %h3 Últimas cartas subidas
+    %h3 Últimas cartas
     %ul.menu.nav.nav-list.nav-stacked
       - cartas.ultimas.limit(5).each do |c|
         %li= link_to c.nombre, c
