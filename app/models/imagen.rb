@@ -25,6 +25,9 @@ class Imagen < ActiveRecord::Base
     processors: [ :cartas ]
   }
 
+  validates_attachment :archivo,
+    content_type: { content_type: %w{image/jpeg image/png} }
+
   def self.estilos
     [ :original, :mini, :arte ]
   end
