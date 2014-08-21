@@ -5,6 +5,11 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+## 21/8/2014
+
+- Los spoilers de [Descenso][] hasta el momento
+- Lista de [formatos][] de torneo
+
 ## 15/8/2014
 
 - Algo útil en los mazos: cuántas cartas de cada una te faltan para armarlo
@@ -78,4 +83,5 @@
 [Adoratriz]: http://bibliotecadeleter.com.ar/cartas/adoratriz-del-bosque-antiguo
 [Origen]: http://bibliotecadeleter.com.ar/expansiones/origen
 [Esenciales: Ubanna]: http://bibliotecadeleter.com.ar/expansiones/esenciales-ubanna
-
+[Descenso]: http://bibliotecadeleter.com.ar/expansiones/descenso
+[formatos]: http://bibliotecadeleter.com.ar/formatos

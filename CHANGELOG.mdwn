@@ -5,6 +5,11 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+## 21/8/2014
+
+- Los spoilers de [Descenso][] hasta el momento
+- Lista de [formatos][] de torneo
+
 ## 15/8/2014
 
 - Algo útil en los mazos: cuántas cartas de cada una te faltan para armarlo
@@ -274,5 +279,7 @@
 [CON:PIP]: http://bibliotecadeleter.com.ar/expansiones/pip-conquista
 [Origen]: http://bibliotecadeleter.com.ar/expansiones/origen
 [Destino]: http://bibliotecadeleter.com.ar/expansiones/destino
+[Descenso]: http://bibliotecadeleter.com.ar/expansiones/descenso
+[formatos]: http://bibliotecadeleter.com.ar/formatos
 [promocionales de Despertar]: http://bibliotecadeleter.com.ar/expansiones/promocionales-despertar
 [promocionales de Origen]: http://bibliotecadeleter.com.ar/expansiones/promocionales-origen
