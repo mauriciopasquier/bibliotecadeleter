@@ -42,7 +42,10 @@ class TorneosController < ApplicationController
   end
 
   def destroy
-    @torneo.destroy
+    unless @torneo.destroy
+      @falla = @torneo.errors.full_messages.join ', '
+    end
+
     respond_with @torneo
   end
 

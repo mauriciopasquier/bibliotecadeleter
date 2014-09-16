@@ -106,7 +106,13 @@ class ApplicationController < ActionController::Base
         del: 'de la',
         cita_crear: Cita.random_para(:crear),
         cita_actualizar: Cita.random_para(:actualizar),
-        cita_destruir: Cita.random_para(:destruir)
+        cita_destruir: Cita.random_para(:destruir),
+        falla: falla
       }
+    end
+
+    # Para especificar en cada acción el mensaje de falla
+    def falla
+      @falla || '¿Por qué no pruebas de nuevo?'
     end
 end

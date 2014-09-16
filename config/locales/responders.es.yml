@@ -22,5 +22,5 @@ es:
         alert_html:
           <blockquote>
             <p>El registro %{del} %{resource_name} no pudo ser destruido.</p>
-            <small>¿Por qué no pruebas de nuevo?</small>
+            <small>%{fallo}</small>
           </blockquote>
