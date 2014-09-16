@@ -44,7 +44,10 @@ class TiendasController < ApplicationController
 
     def tienda_params
       params.require(:tienda).permit(
-        :nombre, :direccion
+        :nombre, :region, :direccion,
+        links_attributes: [
+          :nombre, :url, :id
+        ]
       )
     end
 end
