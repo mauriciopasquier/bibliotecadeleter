@@ -52,7 +52,8 @@
           %ul.dropdown-menu{role: 'menu'}
             %li= link_to 'Torneos', main_app.torneos_path
             %li= link_to 'Formatos', main_app.formatos_path
-            -# TODO %li= link_to 'Tiendas', tiendas_path
+            %li.divider
+            %li= link_to 'Tiendas', main_app.tiendas_path
             %li.divider
             %li= link_to 'Ranking', 'http://playinferno.com/index.php/torneos/ranking'
       %ul.nav.pull-right
