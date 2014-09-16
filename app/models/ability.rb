@@ -49,6 +49,13 @@ class Ability
       end
     end
 
+    def tratante
+      # Puede crear tiendas
+      can :create, Tienda
+      # Puede administrar sus tiendas
+      can :manage, Tienda, tienda_id: @usuario.tienda_ids
+    end
+
     def anonimo
       can :read, :all
       cannot :read, [ Mazo, Lista ], visible: false

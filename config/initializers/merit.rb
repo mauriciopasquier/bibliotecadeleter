@@ -23,9 +23,13 @@ end
 # `@usuario.add_badge(CONSTANTE.id)`
 # Prioridad es para ordenar las reglas de CanCan
 BIBLIOTECARIO = Merit::Badge.create! id: 1, name: 'bibliotecario',
-  description: 'De los que mantienen este caos andando',
+  description: 'Los Bibliotecarios del Éter se encargan de que cada tomo tenga su lugar y cada socio su merecido',
   custom_fields: { prioridad: 1 }
 
 SOCIO = Merit::Badge.create! id: 2, name: 'socio',
-  description: 'Sacó el carnet',
+  description: 'Los Socios de la Biblioteca sólo han dado su primer paso hacia el poder y conocimiento que esta ofrece',
   custom_fields: { prioridad: 90 }
+
+TRATANTE = Merit::Badge.create! id: 3, name: 'tratante',
+  description: 'Los tratantes ofrecen conocimiento a cambio de riqueza y poder',
+  custom_fields: { prioridad: 45 }
