@@ -80,6 +80,8 @@ BibliotecaDelEter::Application.routes.draw do
         match 'cartas' => 'cartas#buscar', via: [:get, :post], as: :cartas
       end
     end
+
+    r.resources :tiendas
   end
 
   with_options path_names: masculinos do |r|

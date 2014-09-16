@@ -18,6 +18,7 @@ class Usuario < ActiveRecord::Base
   has_many :torneos_jugados, through: :inscripciones
   has_one :coleccion, dependent: :destroy
   has_one :reserva, dependent: :destroy
+  has_and_belongs_to_many :tiendas
 
   friendly_id :nick, use: :slugged
 
