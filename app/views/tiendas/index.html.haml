@@ -1,0 +1,18 @@
+%h1= titulo
+
+= paginacion_tag @tiendas
+
+#tiendas.tabla-fluida
+  .encabezado.row-fluid
+    .span2.nombre= sort_link @busqueda, :nombre, opciones_de_ordenar
+    .span2.region= sort_link @busqueda, :region, opciones_de_ordenar
+    .span4.direccion= sort_link @busqueda, :direccion, opciones_de_ordenar
+    .span4.links.hidden-phone Páginas
+
+  = render @tiendas
+
+.row-fluid.botones
+  .span12
+    - if can? :create, Tienda
+      = link_to 'Cargar tienda', new_tienda_path,
+        class: 'btn btn-info'
