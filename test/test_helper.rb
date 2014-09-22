@@ -6,7 +6,6 @@ require 'minitest/rails'
 require 'minitest/rails/capybara'
 
 DatabaseCleaner.clean_with :truncation
-DatabaseCleaner.strategy = :transaction
 
 class MiniTest::Unit::TestCase
   # Para llamar a los métodos core de FactoryGirl directamente (build,
@@ -46,19 +45,13 @@ class ActionController::TestCase
   end
 end
 
-# Capybara is intended to be used for automating a browser to test your
-# application’s features. This is different than the integration tests that
-# Rails provides, so you must use the Capybara::Rails::TestCase for your
-# feature tests.
+# Tests de integración
 class Capybara::Rails::TestCase
   include ApplicationHelper
   include Warden::Test::Helpers # login_as
 
-  # Transactional fixtures do not work with Selenium tests, because Capybara
-  # uses a separate server thread, which the transactions would be hidden
-  # from. We hence use DatabaseCleaner to truncate our test database.
+  # No podemos usar transacciones con selenium
   DatabaseCleaner.strategy = :truncation
-  # Stop ActiveRecord from wrapping tests in transactions
   self.use_transactional_fixtures = false
 
   after do
