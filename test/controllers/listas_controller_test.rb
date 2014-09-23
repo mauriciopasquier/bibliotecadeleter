@@ -2,7 +2,6 @@
 require "./test/test_helper"
 
 describe ListasController do
-
   describe 'logueado' do
     before { @usuario = loguearse }
 

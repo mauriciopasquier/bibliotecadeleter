@@ -87,12 +87,30 @@ describe Ability do
       subject.can?(:manage, @usuario).must_equal true
       subject.can?(:manage, create(:usuario)).wont_equal true
     end
+
+    it 'no cambian slots ajenos' do
+      [:lista, :reserva, :coleccion].each do |modelo|
+        recurso = build_stubbed(modelo, visible: true)
+
+        subject.can?(:update_slot, recurso).wont_equal true,
+          "Edita slots de #{recurso.class.name.pluralize}"
+      end
+    end
+
+    it 'cambian slots propios' do
+      [:lista, :reserva, :coleccion].each do |modelo|
+        recurso = build_stubbed(modelo, usuario: @usuario)
+
+        subject.can?(:update_slot, recurso).must_equal true,
+          "No edita slots propios de #{recurso.class.name.pluralize}"
+      end
+    end
   end
 
-  describe 'para anónimos' do
+  describe 'los anónimos' do
     subject { Ability.new }
 
-    it 'leen todo' do
+    it 'leen todo lo público' do
       subject.modelos.each do |modelo|
         subject.can?(:read, modelo).must_equal true, "No lee #{modelo}"
       end
@@ -104,6 +122,31 @@ describe Ability do
 
         subject.can?(:read, recurso).wont_equal true,
           "Lee #{recurso.class.name} privado"
+      end
+    end
+
+    it 'no crean nada' do
+      Ability.modelos.each do |modelo|
+        subject.can?(:create, modelo).wont_equal true,
+          "Crea #{modelo.name.pluralize}"
+      end
+    end
+
+    it 'no editan nada' do
+      [:mazo, :lista, :diseno, :torneo, :inscripcion].each do |modelo|
+        recurso = create modelo
+
+        subject.can?(:update, recurso).wont_equal true,
+          "Edita #{recurso.class.name.pluralize}"
+      end
+    end
+
+    it 'no cambian slots' do
+      [:lista, :reserva, :coleccion].each do |modelo|
+        recurso = build_stubbed(modelo, visible: true)
+
+        subject.can?(:update_slot, recurso).wont_equal true,
+          "Edita slots de #{recurso.class.name.pluralize}"
       end
     end
   end
