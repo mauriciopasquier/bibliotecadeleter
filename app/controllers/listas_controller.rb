@@ -55,7 +55,7 @@ class ListasController < ApplicationController
   end
 
   def update_slot
-    cargar_o_crear_slot.update_attribute :cantidad, params[:cantidad]
+    cargar_o_crear_slot.update_attribute :cantidad, cantidad
     @slot.destroy if @slot.cantidad == 0
 
     respond_to do |format|
@@ -85,5 +85,9 @@ class ListasController < ApplicationController
 
     def cargar_o_crear_slot
       @slot = @version.slot_en(@lista) || @lista.slots.build(version: @version)
+    end
+
+    def cantidad
+      params.require :cantidad
     end
 end

@@ -37,6 +37,9 @@ es:
           attributes:
             inscripciones:
               insuficientes: 'Se necesitan 8 jugadores para oficializar el torneo'
+            base:
+              restrict_dependent_destroy:
+                many: 'Hay jugadores inscriptos al torneo. Primero deberías desinscribirlos'
   activemodel:
     errors:
       models:

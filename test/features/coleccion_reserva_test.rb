@@ -1,9 +1,9 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 feature 'Colección/Reserva' do
   feature 'anónimamente' do
-    scenario "no hay rastros de colección/reserva" do
+    scenario 'no hay rastros de colección/reserva' do
       version = create(:version_con_carta)
       visit expansion_path(version.expansion)
       current_path.must_equal expansion_path(version.expansion)
@@ -24,7 +24,7 @@ feature 'Colección/Reserva' do
 
     after { logout }
 
-    scenario "ve la estructura de colección/reserva" do
+    scenario 've la estructura de colección/reserva' do
       within '#falsos.controles' do
         within '.control-reserva' do
           page.must_have_selector '.control-texto', text: 'Quiero'
@@ -49,7 +49,7 @@ feature 'Colección/Reserva' do
       end
     end
 
-    scenario "actualiza la reserva con ajax", js: true do
+    scenario 'actualiza la reserva con ajax', js: true do
       within "##{@version.expansion.slug}.controles" do
         within('.control-reserva') do
           page.must_have_selector '.cantidad', text: 0
@@ -61,7 +61,7 @@ feature 'Colección/Reserva' do
       end
     end
 
-    scenario "actualiza la colección con ajax", js: true do
+    scenario 'actualiza la colección con ajax', js: true do
       within "##{@version.expansion.slug}.controles" do
         within '.control-coleccion' do
           page.must_have_selector '.cantidad', text: 0

@@ -13,5 +13,8 @@ FactoryGirl.define do
     end
 
     factory :principal, class: Principal, parent: :lista
+
+    factory :coleccion, class: Coleccion, parent: :lista
+    factory :reserva, class: Reserva, parent: :lista
   end
 end

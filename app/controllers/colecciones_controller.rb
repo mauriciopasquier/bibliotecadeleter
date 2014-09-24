@@ -4,8 +4,8 @@ class ColeccionesController < ApplicationController
   has_scope :per, as: :mostrar, using: :cantidad
 
   load_and_authorize_resource :usuario
-  load_resource through: :usuario, singleton: true
-  load_resource :version, only: [:update_slot]
+  load_and_authorize_resource through: :usuario, singleton: true
+  load_and_authorize_resource :version, only: [:update_slot]
 
   before_filter :determinar_galeria, only: [:show, :faltantes, :sobrantes]
 
@@ -24,6 +24,7 @@ class ColeccionesController < ApplicationController
 
   def update_slot
     cargar_o_crear_slot.update_attribute(:cantidad, cantidad)
+    @slot.destroy if @slot.cantidad == 0
 
     respond_to do |format|
       format.json { render json: @slot }
@@ -42,6 +43,7 @@ class ColeccionesController < ApplicationController
       )
     )
 
+    @tipo_de_lista = 'faltantes'
     respond_with @coleccion, template: 'colecciones/show'
   end
 
@@ -57,6 +59,7 @@ class ColeccionesController < ApplicationController
       )
     )
 
+    @tipo_de_lista = 'sobrantes'
     respond_with @coleccion, template: 'colecciones/show'
   end
 

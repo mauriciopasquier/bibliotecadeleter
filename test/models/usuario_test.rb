@@ -1,22 +1,27 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Usuario do
-  it "es válido" do
+  it 'es válido' do
     build(:usuario).valid?.must_equal true
   end
 
-  describe 'listas personales' do
-    it "debe crear la Colección" do
-      coleccion = create(:usuario).coleccion
-      coleccion.wont_be_nil
-      coleccion.coleccion?.must_equal true
+  describe 'sus listas personales' do
+    subject { create(:usuario) }
+
+    it 'incluyen una Colección' do
+      subject.coleccion.wont_be_nil
+      subject.coleccion.must_be :coleccion?
     end
 
-    it "debe crear la Reserva" do
-      reserva = create(:usuario).reserva
-      reserva.wont_be_nil
-      reserva.reserva?.must_equal true
+    it 'incluyen una Reserva' do
+      subject.reserva.wont_be_nil
+      subject.reserva.must_be :reserva?
+    end
+
+    it 'son privadas inicialmente' do
+      subject.coleccion.wont_be :visible?
+      subject.reserva.wont_be :visible?
     end
   end
 
