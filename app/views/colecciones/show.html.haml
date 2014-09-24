@@ -11,8 +11,8 @@
 
 .row-fluid.botones
   .span12
-    - if can? :edit, @coleccion
+    - if can? :edit, @usuario.coleccion
       = link_to 'Editar', edit_usuario_coleccion_path(@usuario),
         class: 'btn btn-warning'
-
+    = link_a_lista_opuesta
     = link_to 'Más listas', usuario_listas_path(@usuario), class: 'btn'

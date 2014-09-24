@@ -106,6 +106,21 @@ module ApplicationHelper
     @decorador_usuario ||= @usuario.decorate
   end
 
+  # Cuando estamos viendo la Colección de un @usuario, queremos linkear a la
+  # Reserva, y viceversa
+  def link_a_lista_opuesta
+    case @tipo_de_lista
+    when 'colección'
+      if can? :read, @usuario.reserva
+        link_to 'Reserva', [@usuario, :reserva], class: 'btn'
+      end
+    when 'reserva'
+      if can? :read, @usuario.coleccion
+        link_to 'Colección', [@usuario, :coleccion], class: 'btn'
+      end
+    end
+  end
+
   private
 
     def alerta(tipo)
