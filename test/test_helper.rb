@@ -64,16 +64,22 @@ class Capybara::Rails::TestCase
   # Stop ActiveRecord from wrapping tests in transactions
   self.use_transactional_fixtures = false
 
-  teardown do
+  after do
     DatabaseCleaner.clean       # Truncate the database
     Capybara.reset_sessions!    # Forget the (simulated) browser state
     Capybara.use_default_driver # Revert Capybara.current_driver to Capybara.default_driver
+    # Limpiar los hooks de warden para todos los request (ver +loguearse_como+)
+    Warden::Manager._on_request.clear
+    Warden.test_reset!
   end
 
-  # http://www.10hacks.com/rspec-capybara-devise-login-tests/
   def loguearse_como(usuario)
-    login_as usuario, scope: :usuario
-    return usuario
+    # Este debería ser el default de Warden
+    Warden::Manager.on_request do |proxy|
+      proxy.set_user usuario, scope: :usuario
+    end
+
+    usuario
   end
 
   def loguearse
