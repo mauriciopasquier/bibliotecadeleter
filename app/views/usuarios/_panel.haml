@@ -48,20 +48,18 @@
           = link_to 'Ver todas', usuario_listas_path(@usuario), class: 'btn'
 
 
-    - if can? :read, @usuario.coleccion
-      .row-fluid
-        .span12
-          %h2 Coleccion
-          .row-fluid
-            .span12
-              = link_to 'Colección', usuario_coleccion_path(@usuario)
-              = '/'
-              = link_to 'Reserva', usuario_reserva_path(@usuario)
-          .row-fluid
-            .span12
-              = link_to('Faltantes', faltantes_usuario_coleccion_path(@usuario))
-              = '/'
-              = link_to('Sobrantes', sobrantes_usuario_coleccion_path(@usuario))
+    .row-fluid
+      .span12
+        %h2 Colección
+        .row-fluid
+          .span12
+            - if can? :read, @usuario.coleccion
+              = link_to 'Colección', [@usuario, :coleccion], class: 'btn'
+            - if can? :read, @usuario.reserva
+              = link_to 'Reserva', [@usuario, :reserva], class: 'btn'
+            - if can?(:read, @usuario.coleccion) && can?(:read, @usuario.reserva)
+              = link_to 'Faltantes', faltantes_usuario_coleccion_path(@usuario), class: 'btn'
+              = link_to 'Sobrantes', sobrantes_usuario_coleccion_path(@usuario), class: 'btn'
 
 
   = render partial: 'columna_izquierda'

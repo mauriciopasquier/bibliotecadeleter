@@ -1,4 +1,5 @@
 %h1= titulo
+
 #lista
   - if @listas.any?
     = paginacion_tag @listas
@@ -24,3 +25,10 @@
       - if can? :create, Lista
         = link_to 'Crear una lista', new_usuario_lista_path(current_usuario),
           class: 'btn btn-info', data: no_turbolink
+
+      -# Puede ser que estemos viendo todas las listas del sitio, por lo que no
+      -# habría @usuario
+      - if @usuario.present? && can?(:read, @usuario.coleccion)
+        = link_to 'Colección', [@usuario, :coleccion], class: 'btn'
+      - if @usuario.present? && can?(:read, @usuario.reserva)
+        = link_to 'Reserva', [@usuario, :reserva], class: 'btn'

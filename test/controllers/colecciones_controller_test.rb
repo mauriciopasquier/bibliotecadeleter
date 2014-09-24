@@ -50,9 +50,26 @@ describe ColeccionesController do
         must_respond_with :success
         json['cantidad'].must_equal 999
         @usuario.reload
-        @usuario.coleccion.slots.count.must_equal 1
         @usuario.coleccion.slots.first.cantidad.must_equal 999
-        @usuario.coleccion.slots.first.version.must_equal version
+      end
+
+      it 'los crea si no existían' do
+        @usuario.coleccion.slots.must_be :empty?
+
+        put :update_slot, usuario_id: @usuario, version_id: version.id,
+          cantidad: 1, format: :json
+
+        @usuario.coleccion.slots.count.must_equal 1
+      end
+
+      it 'los elimina cuando la cantidad es cero' do
+        @usuario.coleccion.slots.create version: version, cantidad: 1
+        @usuario.coleccion.slots.count.must_equal 1
+
+        put :update_slot, usuario_id: @usuario, version_id: version.id,
+          cantidad: 0, format: :json
+
+        @usuario.reload.coleccion.slots.must_be :empty?
       end
 
       it 'no actualiza los de otros usuarios' do
