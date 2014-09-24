@@ -5,7 +5,7 @@ module ColeccionesHelper
   def titulo
     case params[:action]
       when 'show'
-        "La colección de #{@usuario.nick}"
+        "La #{@tipo_de_lista} de #{@usuario.nick}"
       when 'sobrantes'
         "La basura que le sobra a #{@usuario.nick}"
       when 'faltantes'
@@ -19,5 +19,10 @@ module ColeccionesHelper
 
   def coleccion
     @decorador_coleccion ||= @coleccion.decorate
+  end
+
+  # TODO Dejar de usar strings para esto
+  def ocultar_boton_si(tipo_de_lista)
+    'btn' + (tipo_de_lista == @tipo_de_lista ? ' hide' : '')
   end
 end

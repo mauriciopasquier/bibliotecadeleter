@@ -14,5 +14,13 @@
     - if can? :edit, @usuario.coleccion
       = link_to 'Editar', edit_usuario_coleccion_path(@usuario),
         class: 'btn btn-warning'
-    = link_a_lista_opuesta
+
+    - if can? :read, @usuario.coleccion
+      = link_to 'Colección', [@usuario, :coleccion], class: ocultar_boton_si('colección')
+    - if can? :read, @usuario.reserva
+      = link_to 'Reserva', [@usuario, :reserva], class: ocultar_boton_si('reserva')
+    - if can?(:read, @usuario.coleccion) && can?(:read, @usuario.reserva)
+      = link_to 'Faltantes', faltantes_usuario_coleccion_path(@usuario), class: ocultar_boton_si('faltantes')
+      = link_to 'Sobrantes', sobrantes_usuario_coleccion_path(@usuario), class: ocultar_boton_si('sobrantes')
+
     = link_to 'Más listas', usuario_listas_path(@usuario), class: 'btn'

@@ -42,6 +42,7 @@ class ColeccionesController < ApplicationController
       )
     )
 
+    @tipo_de_lista = 'faltantes'
     respond_with @coleccion, template: 'colecciones/show'
   end
 
@@ -57,6 +58,7 @@ class ColeccionesController < ApplicationController
       )
     )
 
+    @tipo_de_lista = 'sobrantes'
     respond_with @coleccion, template: 'colecciones/show'
   end
 
