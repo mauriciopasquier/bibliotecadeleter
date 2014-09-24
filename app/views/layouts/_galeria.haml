@@ -23,10 +23,13 @@
       %ul.thumbs
         - imagenes.each do |v|
           %li{class: tipo_actual}
+            -# FIXME generalizar sin variables de instancia
             - if @lista.present?
               .controles= v.control @lista, 'En esta lista', [@usuario, @lista]
             - elsif @coleccion.present?
               .controles= v.control @coleccion, '', @usuario
+            - elsif @reserva.present?
+              .controles= v.control @reserva, '', @usuario
             = v.link tipo_actual
             - if usuario_signed_in?
               = v.reserva_y_coleccion if v.respond_to? :reserva_y_coleccion

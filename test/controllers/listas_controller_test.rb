@@ -90,7 +90,7 @@ describe ListasController do
       slot.reload.cantidad.must_equal 999
     end
 
-    it 'no actualiza slots de otros usuarios' do
+    it 'no le carga slots a otros usuarios' do
       lista = create :lista_con_slots, usuario: create(:usuario)
       slot = lista.slots.first
 
@@ -99,6 +99,30 @@ describe ListasController do
 
       must_respond_with :redirect
       slot.reload.cantidad.wont_equal 999
+    end
+
+    describe 'slots' do
+      before { @lista = create(:lista, usuario: @usuario) }
+      let(:version) { create(:version_con_carta) }
+
+      it 'los crea si no existían' do
+        @lista.slots.must_be :empty?
+
+        put :update_slot, usuario_id: @usuario, id: @lista,
+          version_id: version.id, cantidad: 1, format: :json
+
+        @lista.slots.count.must_equal 1
+      end
+
+      it 'los elimina cuando la cantidad es cero' do
+        @lista.slots.create version: version, cantidad: 1
+        @lista.slots.count.must_equal 1
+
+        put :update_slot, usuario_id: @usuario, id: @lista,
+          version_id: version.id, cantidad: 0, format: :json
+
+        @lista.reload.slots.must_be :empty?
+      end
     end
   end
 end

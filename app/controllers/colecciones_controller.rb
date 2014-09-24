@@ -24,6 +24,7 @@ class ColeccionesController < ApplicationController
 
   def update_slot
     cargar_o_crear_slot.update_attribute(:cantidad, cantidad)
+    @slot.destroy if @slot.cantidad == 0
 
     respond_to do |format|
       format.json { render json: @slot }

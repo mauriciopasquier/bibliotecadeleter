@@ -3,6 +3,7 @@ href = (a, c) ->
 
 $(document)
   .on 'ajax:success', '.update-listas', (evento, data, status, xhr) ->
+    # TODO actualizar los controles de quiero/tengo si estoy viendo esas listas
     $(this).siblings('span.cantidad').html(data.cantidad)
     $(this).parent().children('.update-listas.agregar')
       .attr('href', href(this, data.cantidad + 1))
