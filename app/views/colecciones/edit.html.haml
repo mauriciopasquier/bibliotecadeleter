@@ -42,5 +42,6 @@
 
 .row-fluid.botones
   .span12
-    = link_to 'Mostrar', [@usuario, @coleccion], class: 'btn'
-    = link_to 'Más listas', usuario_coleccion_path(@usuario), class: 'btn'
+    = link_to 'Colección', [@usuario, :coleccion], class: 'btn'
+    = link_to 'Reserva', [@usuario, :reserva], class: 'btn'
+    = link_to 'Más listas', usuario_listas_path(@usuario), class: 'btn'

@@ -26,14 +26,14 @@ describe ListasController do
     end
 
     it 'edita listas' do
-      lista = create(:lista_con_slots, usuario: @usuario)
+      lista = create :lista_con_slots, usuario: @usuario
 
       get :edit, usuario_id: @usuario, id: lista
       must_respond_with :success
     end
 
     it 'actualiza listas' do
-      lista = create(:lista_con_slots, usuario: @usuario, visible: true, nombre: 'uno')
+      lista = create :lista_con_slots, usuario: @usuario, visible: true, nombre: 'uno'
 
       put :update, usuario_id: @usuario, id: lista, lista: { visible: false, nombre: 'otro' }
 
@@ -45,7 +45,7 @@ describe ListasController do
     end
 
     it 'actualiza slots mediante la lista' do
-      lista = create(:lista_con_slots, usuario: @usuario)
+      lista = create :lista_con_slots, usuario: @usuario
 
       lista.slots.count.must_equal 1
       viejo_slot = lista.slots.first
@@ -66,7 +66,7 @@ describe ListasController do
     end
 
     it 'rechaza slots vacíos' do
-      lista = create(:lista_con_slots, usuario: @usuario)
+      lista = create :lista_con_slots, usuario: @usuario
       nuevo_slot = attributes_for(:slot)
 
       nuevo_slot[:version_id].must_be_nil
@@ -76,6 +76,29 @@ describe ListasController do
 
       must_render_template :edit
       assigns(:lista).errors.first.wont_be_nil
+    end
+
+    it 'actualiza slots directamente' do
+      lista = create :lista_con_slots, usuario: @usuario
+      slot = lista.slots.first
+
+      put :update_slot, usuario_id: @usuario, id: lista,
+        version_id: slot.version_id, cantidad: 999, format: :json
+
+      must_respond_with :success
+      json['cantidad'].must_equal 999
+      slot.reload.cantidad.must_equal 999
+    end
+
+    it 'no actualiza slots de otros usuarios' do
+      lista = create :lista_con_slots, usuario: create(:usuario)
+      slot = lista.slots.first
+
+      put :update_slot, usuario_id: lista.usuario, id: lista,
+        version_id: slot.version_id, cantidad: 999, format: :json
+
+      must_respond_with :redirect
+      slot.reload.cantidad.wont_equal 999
     end
   end
 end
