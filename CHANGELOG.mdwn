@@ -5,6 +5,10 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+## 24/9/2014
+
+- Arreglos varios en las listas, colección y reserva de cartas
+
 ## 21/8/2014
 
 - Los spoilers de [Descenso][] hasta el momento
