@@ -14,7 +14,7 @@ describe SlotDecorator do
     subject { create(:slot, cantidad: 4).decorate }
     let(:h) { MiniTest::Mock.new }
     let(:lista) do
-      create :lista, slots_attributes: { '0' => { version_id: subject.id, cantidad: 2 } }
+      create :lista, slots_attributes: { '0' => { version_id: subject.version_id, cantidad: 2 } }
     end
 
     it 'compara con la coleccion actual' do
