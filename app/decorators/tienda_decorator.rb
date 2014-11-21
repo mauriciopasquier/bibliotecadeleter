@@ -6,7 +6,7 @@ class TiendaDecorator < ApplicationDecorator
   end
 
   def ubicacion
-    [ direccion, region].join ', en '
+    [direccion, region].join ', en '
   end
 
   def region
