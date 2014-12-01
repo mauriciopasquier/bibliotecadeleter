@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :agregar_parametros_permitidos, if: :devise_controller?
 
-  protect_from_forgery with: :reset_session
+  protect_from_forgery with: :null_session
 
   # Cancan
   def current_user
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
         :nick, :codigo, :nombre ]
     end
 
-    # Redirije hacia atrás o en caso de no exister, vuelve al inicio
+    # Redirije hacia atrás o en caso de no existir, vuelve al inicio
     def volver
       session[:loop].nil? ? session[:loop] = 1 : session[:loop] += 1
       begin
