@@ -5,6 +5,10 @@
 [2014](/cambios/2014) \|
 [todos](/cambios)
 
+## 01/12/2014
+
+- Arreglos en problemas de sesión
+
 ## 24/9/2014
 
 - Arreglos varios en las listas, colección y reserva de cartas

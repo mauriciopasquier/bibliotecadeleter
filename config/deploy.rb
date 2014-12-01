@@ -23,7 +23,7 @@ set :scm,         :git
 set :repository,  'git@repo.hackcoop.com.ar:mpj/eter.git'
 
 # if you want to clean up old releases on each deploy uncomment this:
-set :keep_releases, 5
+set :keep_releases, 2
 
 # Evita que capistrano haga un clone completo del repositorio cada deploy
 set :deploy_via, :remote_cache

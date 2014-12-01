@@ -35,3 +35,6 @@
       = link_to 'Editar', edit_formato_path(formato),
         class: 'btn btn-warning'
     = link_to 'Otros formatos', formatos_path, class: 'btn'
+    - if can? :destroy, formato
+      = link_to 'Eliminar', formato, method: :delete,
+        data: { confirm: t(:confirmar) }, class: 'btn btn-danger'
