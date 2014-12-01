@@ -22,7 +22,8 @@ class Cita
     'Cambio mi riqueza por nuevo conocimiento',
     'Ya nos servirás luego...',
     'Disfruto ver como mis creaciones causan dolor',
-    'La ciudad debe crecer, el bosque deberá buscar otro lugar' ]
+    'La ciudad debe crecer, el bosque deberá buscar otro lugar',
+    'Oh señor mío, ¿nueva tarea tendrá usted?' ]
 
   ACTUALIZAR = [
     'La ignorancia es penada por ley',
