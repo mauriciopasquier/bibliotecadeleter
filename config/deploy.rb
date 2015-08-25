@@ -1,50 +1,48 @@
-require 'bundler/capistrano'
+# config valid only for current version of Capistrano
+lock '3.4.0'
 
-load 'lib/recipes/configs'
-load 'lib/recipes/utils'
-load 'lib/recipes/db'
-load 'lib/recipes/passenger'
-load 'lib/recipes/precompilar_localmente'
-load 'lib/recipes/backup'
+set :application, 'my_app_name'
+set :repo_url, 'git@example.com:me/my_repo.git'
 
-# Multistage
-set :stages, ['localhost', 'staging', 'production']
-set :default_stage, 'localhost'
-require 'capistrano/ext/multistage'
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-# Común para todos los stages
-set :application, 'BibliotecaDelEter'
+# Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, '/var/www/my_app_name'
 
-# Para que bash cargue .bashrc y los demás archivos como si se logueara alguien
-set :default_shell, 'bash -l'
-set :use_sudo,    false
-set :ssh_options, { forward_agent: true}
-set :scm,         :git
-set :repository,  'git@repo.hackcoop.com.ar:mpj/eter.git'
+# Default value for :scm is :git
+# set :scm, :git
 
-# if you want to clean up old releases on each deploy uncomment this:
-set :keep_releases, 2
+# Default value for :format is :pretty
+# set :format, :pretty
 
-# Evita que capistrano haga un clone completo del repositorio cada deploy
-set :deploy_via, :remote_cache
+# Default value for :log_level is :debug
+# set :log_level, :debug
 
-# Para los stages?
-set :rails_env, 'production'
+# Default value for :pty is false
+# set :pty, true
 
-# Variables de las librerías o configuraciones personales
-set :assets_prefix, 'recursos'
-set :backup_remoto, 'backups-yml'
-set :backup_local, 'tmp/backups'
-set :imagenes_seed, 'semillas'
-set :config_path, 'tmp/config'
-set :rake, "RAILS_ENV=#{rails_env} bundle exec rake"
-set :rsync, 'rsync -avzh --rsh=ssh'
+# Default value for :linked_files is []
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
-after   'deploy:setup',             'configs:directorios'
-after   'deploy:setup',             'configs:archivos'
-after   'deploy:setup',             'configs:imagenes'
-before  'deploy:finalize_update',   'configs:links'
-before  'deploy:finalize_update',   'backup'
-after   'backup',                   'deploy:migrate'
-after   'deploy:update_code',       'deploy:assets:precompilar_localmente'
-after   'deploy:restart',           'deploy:cleanup'
+# Default value for linked_dirs is []
+# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# Default value for keep_releases is 5
+# set :keep_releases, 5
+
+namespace :deploy do
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
+end
