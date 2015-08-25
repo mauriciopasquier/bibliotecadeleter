@@ -6,7 +6,7 @@ FactoryGirl.define do
     association :principal, strategy: :build
 
     factory :mazo_con_demonios do
-      ignore { cantidad 1 }
+      transient { cantidad 1 }
       after(:build) do |mazo, params|
         FactoryGirl.create_list(:slot,
                                 params.cantidad,

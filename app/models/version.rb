@@ -45,7 +45,7 @@ class Version < ActiveRecord::Base
   # Para copiar una versión sin expansión ni imágenes, por ejemplo para las
   # reediciones
   amoeba do
-    exclude_field :imagenes
+    exclude_association :imagenes
     nullify [ :expansion_id, :slug, :numero ]
   end
 

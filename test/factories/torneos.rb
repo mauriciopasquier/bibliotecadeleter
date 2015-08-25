@@ -8,7 +8,7 @@ FactoryGirl.define do
     organizador
 
     factory :torneo_con_inscriptos do
-      ignore { cantidad 1 }
+      transient { cantidad 1 }
       after(:build) do |torneo, params|
         FactoryGirl.create_list(:inscripcion,
                                 params.cantidad, torneo: torneo)
