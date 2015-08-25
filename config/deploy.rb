@@ -20,7 +20,7 @@ set :default_shell, 'bash -l'
 set :use_sudo,    false
 set :ssh_options, { forward_agent: true}
 set :scm,         :git
-set :repository,  'git@repo.hackcoop.com.ar:mpj/eter.git'
+set :repository,  'git@github.com:mauriciopasquier/bibliotecadeleter.git'
 
 # if you want to clean up old releases on each deploy uncomment this:
 set :keep_releases, 2
