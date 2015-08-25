@@ -1,6 +1,5 @@
 # encoding: utf-8
 module ApplicationHelper
-
   def mensajes(lista)
     lista.collect do |tipo, mensaje|
       content_tag(:div, class: "#{alerta(tipo)}") do
