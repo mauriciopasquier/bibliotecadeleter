@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.8'
+gem 'rails', '4.0.13'
 
 # Database
 gem 'pg'
@@ -10,7 +10,7 @@ gem 'yaml_db', github: 'mauriciopasquier/yaml_db', branch: 'order-join-tables'
 
 # Model
 gem 'attribute_normalizer'
-gem 'inflections', require: 'inflections/es'
+gem 'inflections', '0.0.5', require: 'inflections/es'
 gem 'paperclip'
 gem 'squeel'
 gem 'amoeba'
@@ -24,7 +24,7 @@ gem 'haml-rails'
 gem 'draper'
 gem 'kaminari'
 gem 'friendly_id'
-gem 'ransack'
+gem 'ransack', '1.6.5'
 gem 'sitemap'
 gem 'rails3-jquery-autocomplete'
 gem 'awesome_nested_fields'

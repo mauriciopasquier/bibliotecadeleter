@@ -4,7 +4,7 @@ FactoryGirl.define do
     nombre  { generate :cadena_unica }
 
     factory :artista_con_links do
-      ignore { cantidad_de_links 1 }
+      transient { cantidad_de_links 1 }
       after(:build) do |artista, params|
         FactoryGirl.create_list(  :link,
                                   params.cantidad_de_links,
