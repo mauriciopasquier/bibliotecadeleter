@@ -22,10 +22,11 @@ class Usuario < ActiveRecord::Base
   friendly_id :nick, use: :slugged
 
   has_gravatar
+  # FIXME acercar al default de paperclip
   has_attached_file :avatar, {
-    url:  "/avatar/:slug/:style.:extension",
-    path: ":rails_root/public/avatar/:slug/:style.:extension",
-    default_url: "/avatar-no-disponible-:style.jpg",
+    url:  '/system/:class/:attachment/:slug/:style.:extension',
+    path: ':rails_root/public/system/:class/:attachment/:slug/:style.:extension',
+    default_url: '/avatar-no-disponible-:style.jpg',
     styles: {
       chico:    '80x80',
       arte:     '190x190',
