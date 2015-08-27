@@ -11,7 +11,10 @@ set :repo_url, 'git@github.com:mauriciopasquier/bibliotecadeleter.git'
 # set :deploy_to, '/var/www/my_app_name'
 
 set :linked_files, fetch(:linked_files, []).push(
-  'config/database.yml'
+  'config/database.yml',
+  'config/environments/production.rb',
+  'config/initializers/secret_token.rb',
+  'config/initializers/devise.rb'
 )
 set :linked_dirs, fetch(:linked_dirs, []).push(
   'log',

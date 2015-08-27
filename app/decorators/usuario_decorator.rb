@@ -30,11 +30,12 @@ class UsuarioDecorator < ApplicationDecorator
     end
   end
 
+  # FIXME deprecate segundo argumento
   def algun_avatar_tag(estilo = :arte, lazy = 'lazy')
-    [ h.image_tag(algun_avatar(estilo), alt: object.nick, class: lazy),
+    [ h.image_tag(algun_avatar(estilo), alt: object.nick, class: lazy, lazy: true),
 
       h.content_tag(:noscript) do
-        h.x_image_tag(algun_avatar(estilo), alt: object.nick)
+        h.rails_image_tag(algun_avatar(estilo), alt: object.nick)
       end
     ].join.html_safe
   end

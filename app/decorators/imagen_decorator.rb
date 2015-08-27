@@ -14,10 +14,10 @@ class ImagenDecorator < ApplicationDecorator
   # alt: nil es para poder copiar y pegar el texto sin repeticiones
   def tag(estilo = :original)
     [ h.image_tag(object.archivo.url(estilo),
-        alt: nil, class: 'lazy'),
+        alt: nil, class: 'lazy', lazy: true),
 
       h.content_tag(:noscript) do
-        h.x_image_tag(object.archivo.url(estilo),
+        h.rails_image_tag(object.archivo.url(estilo),
           alt: nil)
       end ].join.html_safe
   end
