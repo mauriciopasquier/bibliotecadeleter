@@ -3,7 +3,7 @@ BibliotecaDelEter::Application.routes.draw do
   mount Forem::Engine, at: '/antesala'
 
   if Rails.env.development?
-    mount MailPreview => 'mail'
+    mount MailView => 'mail'
   end
 
   root to: 'inicio#bienvenida'
