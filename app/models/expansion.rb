@@ -18,6 +18,7 @@ class Expansion < ActiveRecord::Base
   scope :grandes, -> { where('total >= ?', 100) }
   scope :ordenadas, -> { order('lanzamiento, created_at') }
 
+  # FIXME acercar al default de paperclip? Habría que sacarlas del repo..
   has_attached_file :logo, {
     url:  "/expansiones/:slug.:extension",
     path: ":rails_root/public/expansiones/:slug.:extension",

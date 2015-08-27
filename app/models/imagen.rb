@@ -12,9 +12,10 @@ class Imagen < ActiveRecord::Base
             :texto,
             to: :version
 
+  # FIXME acercar al default de paperclip
   has_attached_file :archivo, {
-    url:  "/cartas/:style/:expansion/:numero-:carta:cara.:extension",
-    path: ":rails_root/public/cartas/:style/:expansion/:numero-:carta:cara.:extension",
+    url:  "/system/cartas/:style/:expansion/:numero-:carta:cara.:extension",
+    path: ":rails_root/public/system/cartas/:style/:expansion/:numero-:carta:cara.:extension",
     default_url: ":assets/imagen-no-disponible-:style.png",
     styles: {
       arte: "190x190",
