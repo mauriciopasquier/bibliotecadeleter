@@ -1,5 +1,9 @@
-server 'bibliotecadeleter.com.ar', :app, :web, :db, primary: true
+server 'bibliotecadeleter.com.ar', user: 'apps', roles: %w{:app web db}
+
 set :stage_name, 'production'
-set :user, 'apps'
 set :deploy_to, '/srv/http/bibliotecadeleter.com.ar'
-set :branch, 'master'
+
+set :default_env, {
+  path: '~/.gem/ruby/2.2.0/bin:$PATH',
+  gem_home: '~/.gem/ruby/2.2.0'
+}

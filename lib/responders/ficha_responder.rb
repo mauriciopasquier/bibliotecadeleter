@@ -53,7 +53,8 @@ module FichaResponder
       "#{@ficha.slug}.pdf"
     end
 
+    # FIXME adjuntar al mazo
     def archivo
-      Rails.root.join 'public', 'system', nombre
+      Rails.root.join 'public', 'system', 'mazos', 'fichas', nombre
     end
 end
