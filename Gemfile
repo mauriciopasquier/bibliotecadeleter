@@ -83,6 +83,7 @@ group :development do
   gem 'bullet'
   gem 'capistrano'
   gem 'capistrano-rails'
+  gem 'capistrano-passenger'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
