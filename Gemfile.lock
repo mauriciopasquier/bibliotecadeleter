@@ -50,6 +50,8 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    airbrussh (0.7.0)
+      sshkit (>= 1.6.1, != 1.7.0)
     ambry (0.3.1)
     amoeba (3.0.0)
       activerecord (>= 3.2.6)
@@ -369,6 +371,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrussh
   amoeba
   attribute_normalizer
   awesome_nested_fields
