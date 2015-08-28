@@ -4,7 +4,7 @@ avisar = ->
   alarma.play()
   alert('¡¡¡CUENTEN TURNOS!!!')
 
-alarma = new Audio "<%= asset_path('alarma-nuclear.wav') %>"
+alarma = new Audio "<%= asset_url('alarma-nuclear.wav') %>"
 
 bindings = ->
   $('.tiempo-de-ronda').countdown({
