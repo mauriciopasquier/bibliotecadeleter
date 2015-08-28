@@ -9,11 +9,15 @@ namespace :eter do
   task :backup do
     on roles(:app) do
       within current_path do
-        info 'Generando data.yml'
         with rails_env: fetch(:rails_env) do
+          info 'Generando db/data.yml'
           execute :rake, 'db:data:dump'
+
+          info 'Moviendo db/data.yml al repositorio'
           execute :mv, 'db/data.yml', 'db/backup'
+
           within 'db/backup' do
+            info 'Commiteando. Si falla, es que no había cambios'
             execute :git, "commit -qam '#{Time.now}'", raise_on_non_zero_exit: false
           end
         end

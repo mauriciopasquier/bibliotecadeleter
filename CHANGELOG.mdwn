@@ -3,7 +3,14 @@
 [2012](/cambios/2012) \|
 [2013](/cambios/2013) \|
 [2014](/cambios/2014) \|
+[2015](/cambios/2015) \|
 [todos](/cambios)
+
+## 28/08/2015
+
+- Volvemos a estar arriba, esta vez en nuestro hogar definitivo
+- El código está [liberado][], quien sepa diseño y/o ruby on rails y quiera
+  colaborar, avise!
 
 ## 01/12/2014
 
@@ -291,3 +298,4 @@
 [formatos]: http://bibliotecadeleter.com.ar/formatos
 [promocionales de Despertar]: http://bibliotecadeleter.com.ar/expansiones/promocionales-despertar
 [promocionales de Origen]: http://bibliotecadeleter.com.ar/expansiones/promocionales-origen
+[liberado]: https://github.com/mauriciopasquier/bibliotecadeleter
