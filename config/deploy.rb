@@ -29,4 +29,4 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
 
 set :assets_prefix, 'recursos'
 
-#after 'deploy:started', 'eter:backup'
+after 'deploy:started', 'eter:backup'
