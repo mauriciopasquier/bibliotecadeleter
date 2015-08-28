@@ -3,6 +3,7 @@
 [2012](/cambios/2012) \|
 [2013](/cambios/2013) \|
 [2014](/cambios/2014) \|
+[2015](/cambios/2015) \|
 [todos](/cambios)
 
 ## 1.6.7
