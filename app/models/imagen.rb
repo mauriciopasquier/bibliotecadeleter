@@ -61,4 +61,9 @@ class Imagen < ActiveRecord::Base
       end
     end
   end
+
+  # Es una contracara si no es cara
+  def contracara?
+    !cara
+  end
 end

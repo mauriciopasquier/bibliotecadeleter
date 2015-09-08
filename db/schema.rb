@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707235806) do
+ActiveRecord::Schema.define(version: 20150908233254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -220,12 +220,13 @@ ActiveRecord::Schema.define(version: 20140707235806) do
 
   create_table "imagenes", force: true do |t|
     t.integer  "version_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "archivo_file_name"
     t.string   "archivo_content_type"
     t.integer  "archivo_file_size"
     t.datetime "archivo_updated_at"
+    t.boolean  "cara",                 default: true
   end
 
   add_index "imagenes", ["version_id"], name: "index_imagenes_on_version_id", using: :btree

@@ -1,8 +1,8 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Imagen do
-  it "es válida" do
+  it 'es válida' do
     build_stubbed(:imagen).valid?.must_equal true
   end
 
@@ -25,6 +25,21 @@ describe Imagen do
 
       imagen.artistas.count.must_equal 3
       imagen.arte.must_equal nombres
+    end
+  end
+
+  describe '#cara' do
+    it 'es verdadera por default' do
+      build(:imagen).cara.must_equal true
+    end
+
+    it 'sabe si es cara' do
+      build(:imagen).must_be :cara?
+      build(:imagen, cara: false).wont_be :cara?
+    end
+
+    it 'tiene su opuesto en #contracara' do
+      build(:imagen, cara: false).must_be :contracara?
     end
   end
 end
