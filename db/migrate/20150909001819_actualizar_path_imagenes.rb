@@ -59,12 +59,15 @@ class ActualizarPathImagenes < ActiveRecord::Migration
   def up
     Imagen.all.each do |imagen|
       if File.exists?(imagen.archivo.path)
-        imagen.archivo2 = File.open(imagen.archivo.path)
+        f = File.open(imagen.archivo.path)
+        imagen.archivo2 = f
         imagen.save
 
         if imagen.version.demonio?
           File.delete imagen.archivo.path
         end
+
+        f.close
       end
     end
   end
