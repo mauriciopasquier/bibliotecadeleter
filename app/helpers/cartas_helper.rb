@@ -26,7 +26,8 @@ module CartasHelper
       @version
     else
       @version = @carta.versiones.build
-      2.times { @version.imagenes.build }
+      @version.imagenes.build
+      @version.imagenes.build(cara: false)
       @version = @version.decorate
     end
   end

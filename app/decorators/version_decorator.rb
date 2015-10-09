@@ -62,7 +62,7 @@ class VersionDecorator < ApplicationDecorator
 
   def arte
     imagenes.collect do |i|
-      h.content_tag(:p, class: nil_cycle(nil, 'terrenal', name: 'arte')) do
+      h.content_tag(:p, class: i.contracara? ? 'terrenal' : nil) do
         i.artistas.collect do |a|
           h.link_to(a.nombre, a)
         end.join(' - ').html_safe

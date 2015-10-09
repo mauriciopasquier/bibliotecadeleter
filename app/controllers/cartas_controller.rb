@@ -112,7 +112,7 @@ class CartasController < ApplicationController
           :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
           :ambientacion, :numero, :rareza, :coste, :id, :_destroy,
           :expansion_id, imagenes_attributes: [
-            :arte, :archivo, :id
+            :arte, :archivo, :cara, :id
           ]
         ]
       )

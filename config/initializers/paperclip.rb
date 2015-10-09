@@ -12,17 +12,11 @@ Paperclip.interpolates :carta do |adjunto, estilo|
   adjunto.instance.version.carta.to_param
 end
 
-# FIXME pasar a definir la cara como un atributo de la imagen. 'cara' por
-# default, 'contracara' la segunda
 Paperclip.interpolates :cara do |adjunto, estilo|
-  if adjunto.instance.archivo_file_name =~ /-.terrenal/
-    '-terrenal'
+  if adjunto.instance.contracara?
+    '-contracara'
   else
-    if adjunto.instance.archivo_file_name =~ /-.infernal/
-    '-infernal'
-    else
-      nil
-    end
+    nil
   end
 end
 

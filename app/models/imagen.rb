@@ -12,22 +12,20 @@ class Imagen < ActiveRecord::Base
             :texto,
             to: :version
 
-  # FIXME acercar al default de paperclip
-  has_attached_file :archivo, {
-    url:  "/system/cartas/:style/:expansion/:numero-:carta:cara.:extension",
-    path: ":rails_root/public/system/cartas/:style/:expansion/:numero-:carta:cara.:extension",
-    default_url: ":assets/imagen-no-disponible-:style.png",
+  has_attached_file :archivo,
+    url:  '/system/cartas/:style/:expansion/:numero-:carta:cara.:extension',
+    path: ':rails_root/public/system/cartas/:style/:expansion/:numero-:carta:cara.:extension',
+    default_url: ':assets/imagen-no-disponible-:style.png',
     styles: {
-      arte: "190x190",
-      mini: "50%" },
+      arte: '190x190',
+      mini: '50%' },
     convert_options: {
       # Remueve información de esquemas de colores y EXIF
       all: '-strip' },
     processors: [ :cartas ]
-  }
 
-  validates_attachment :archivo,
-    content_type: { content_type: %w{image/jpeg image/png} }
+  validates :archivo,
+    attachment_content_type: { content_type: %w{image/jpeg image/png} }
 
   def self.estilos
     [ :original, :mini, :arte ]
@@ -60,5 +58,10 @@ class Imagen < ActiveRecord::Base
         File.rename(viejo, nuevo) if File.exists?(viejo)
       end
     end
+  end
+
+  # Es una contracara si no es cara
+  def contracara?
+    !cara
   end
 end
