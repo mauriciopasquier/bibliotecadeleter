@@ -66,13 +66,14 @@
       = fc.fields_for :imagenes, imagen do |fi|
 
         = fi.hidden_field :id
+        = fi.hidden_field :cara
         .row-fluid
           .span7
             = fi.label :arte
             = fi.autocomplete_field :arte,
               sugerir_artistas_path, data: { delimiter: ', ' },
               class: 'span12',
-              placeholder: placeholder_del_arte
+              placeholder: placeholder_del_arte(imagen)
           .span5
             = fi.label :archivo
             .control-group.row-fluid
