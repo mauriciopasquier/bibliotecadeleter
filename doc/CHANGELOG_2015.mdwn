@@ -6,6 +6,10 @@
 [2015](/cambios/2015) \|
 [todos](/cambios)
 
+## 09/10/2015
+
+- Arreglos para cargar las cartas desde la misma Biblioteca
+
 ## 28/08/2015
 
 - Volvemos a estar arriba, esta vez en nuestro hogar definitivo
