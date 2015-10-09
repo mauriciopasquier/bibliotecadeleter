@@ -1,16 +1,16 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Version do
-  it "es válida" do
+  it 'es válida' do
     create(:version_con_carta).valid?.must_equal true
   end
 
-  it "no debe crear versiones huérfanas" do
+  it 'no debe crear versiones huérfanas' do
     build(:version_con_carta, expansion: nil).valid?.wont_equal true
   end
 
-  it "debe crearse solo una versión canónica" do
+  it 'debe crearse solo una versión canónica' do
     carta = create(:carta, :con_versiones, cantidad_de_versiones: 3)
     versiones = carta.reload.versiones
     versiones.must_include carta.canonica
@@ -18,12 +18,12 @@ describe Version do
     versiones.collect(&:canonica).count {|c| !c}.must_equal 2
   end
 
-  it "el coste convertido debe derivarse del coste" do
+  it 'el coste convertido debe derivarse del coste' do
     version = create(:version_con_carta)
     version.coste_convertido.must_equal Version.coste_convertido(version.coste)
   end
 
-  it "número es único en la expansión" do
+  it 'número es único en la expansión' do
     version = create(:version_con_carta)
     build(:version_con_carta, numero: version.numero,
       expansion: version.expansion).valid?.must_equal false
@@ -41,19 +41,33 @@ describe Version do
     build(:version).ilimitada?.wont_equal true
   end
 
-  describe '#actualizar_path_de_imagenes' do
+  describe '#imagenes' do
     subject { create(:version_con_carta) }
 
-    it 'regenera el path de las imágenes' do
-      viejo = subject.numero_normalizado
-      subject.numero = subject.numero + 1
+    it 'rechaza las que no tienen ni artista ni archivo' do
+      lambda do
+        subject.update imagenes_attributes: [attributes_for(:imagen, arte: '', archivo: '')]
+      end.wont_change 'Imagen.count'
+    end
 
-      imagen = MiniTest::Mock.new.expect :actualizar_path, nil,
-        [ viejo, subject.numero_normalizado ]
+    it 'permite imágenes sólo con datos de artista' do
+      lambda do
+        subject.update imagenes_attributes: [attributes_for(:imagen, arte: 'Juan Salvo', archivo: '')]
+      end.must_change 'Imagen.count'
+    end
 
-      subject.stub :imagenes, [ imagen ] do
-        subject.save
-        imagen.verify
+    describe '#actualizar_path_de_imagenes' do
+      it 'regenera el path de las imágenes' do
+        viejo = subject.numero_normalizado
+        subject.numero = subject.numero + 1
+
+        imagen = MiniTest::Mock.new.expect :actualizar_path, nil,
+          [ viejo, subject.numero_normalizado ]
+
+        subject.stub :imagenes, [ imagen ] do
+          subject.save
+          imagen.verify
+        end
       end
     end
   end

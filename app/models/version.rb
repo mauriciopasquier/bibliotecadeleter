@@ -18,7 +18,7 @@ class Version < ActiveRecord::Base
   normalize_attributes  :texto, :tipo, :supertipo, :subtipo, :fue, :res, :senda,
                         :ambientacion, :rareza, :coste
 
-  accepts_nested_attributes_for :imagenes, reject_if: :all_blank
+  accepts_nested_attributes_for :imagenes, reject_if: :ni_artista_ni_archivo
 
   before_save :ver_si_es_canonica, :convertir_coste
   before_save :actualizar_path_de_imagenes, if: :numero_changed?
@@ -123,6 +123,10 @@ class Version < ActiveRecord::Base
     imagenes.each do |i|
       i.actualizar_path Version.normalizar_numero(numero_was), numero_normalizado
     end
+  end
+
+  def ni_artista_ni_archivo(atributos)
+    atributos[:arte].blank? && atributos[:adjunto].blank?
   end
 
   private
