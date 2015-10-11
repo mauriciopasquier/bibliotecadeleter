@@ -46,7 +46,7 @@ class Imagen < ActiveRecord::Base
   end
 
   def arte
-    self.artistas.reorder(:nombre).collect(&:nombre).join(', ')
+    (persisted? ? artistas.reorder(:nombre) : artistas).collect(&:nombre).join(', ')
   end
 
   # TODO testear

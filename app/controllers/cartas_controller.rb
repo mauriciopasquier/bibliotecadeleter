@@ -26,16 +26,14 @@ class CartasController < ApplicationController
   end
 
   def create
-    @carta.save
+    construir_version_para_corregir unless @carta.save
+
     respond_with(@carta)
   end
 
   def update
-    # Cargamos la versión que estamos intentando crear por si hay error,
-    # asumiendo que sólo se envía una versión a la vez
-    @version = Version.new carta_params[:versiones_attributes].values.first
+    construir_version_para_corregir unless @carta.update(carta_params)
 
-    @carta.update carta_params
     respond_with(@carta, location: en_expansion_carta_path(@carta, expansion))
   end
 
@@ -116,5 +114,11 @@ class CartasController < ApplicationController
           ]
         ]
       )
+    end
+
+    # Cargamos la versión que estamos intentando crear por si hay error,
+    # asumiendo que sólo se envía una versión a la vez
+    def construir_version_para_corregir
+      @version = Version.new carta_params[:versiones_attributes].values.first
     end
 end

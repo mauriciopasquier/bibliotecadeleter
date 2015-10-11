@@ -28,8 +28,8 @@ module CartasHelper
       @version = @carta.versiones.build
       @version.imagenes.build
       @version.imagenes.build(cara: false)
-      @version = @version.decorate
-    end
+      @version
+    end.decorate
   end
 
   # Nada bloqueado en el form de cartas
