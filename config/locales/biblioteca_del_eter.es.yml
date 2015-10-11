@@ -13,6 +13,9 @@ es:
         principal: 'Mazo principal'
         suplente: 'Mazo suplente'
     errors:
+      template:
+        header: '¡Este libro está mal!'
+        body: 'Específicamente tiene estos errores:'
       models:
         version:
           attributes:
