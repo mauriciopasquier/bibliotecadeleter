@@ -84,22 +84,6 @@ class Capybara::Rails::TestCase
   end
 end
 
-# Infectamos las assertions con el estilo de Expectations de minitest spec
-module BibliotecaDelEter::Expectations
-  infect_an_assertion :assert_redirected_to, :must_redirect_to
-  infect_an_assertion :assert_template, :must_render_template
-  infect_an_assertion :assert_response, :must_respond_with
-  infect_an_assertion :assert_difference, :must_change
-  infect_an_assertion :assert_no_difference, :wont_change
-  infect_an_assertion :assert_select, :must_select
-end
-
-# Incluimos estas Expectations en Object para poder usarlas sobre cualquier
-# cosa
-class Object
-  include BibliotecaDelEter::Expectations
-end
-
 # Registrando el driver podemos pasar opciones como el profile a usar
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new app, browser: :firefox, profile: 'selenium'
