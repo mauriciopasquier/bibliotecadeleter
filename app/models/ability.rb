@@ -2,7 +2,7 @@
 class Ability
   include CanCan::Ability
 
-  @@canones = [ Carta, Expansion, Version, Artista, Imagen, Formato ]
+  @@canones = [Carta, Expansion, Version, Artista, Imagen, Formato]
   @@apocrifos = [
     Lista, Mazo, Link, Coleccion, Reserva, Principal, Suplente, Diseno, Torneo,
     Inscripcion
@@ -34,7 +34,7 @@ class Ability
 
     def socio
       can :create, apocrifos
-      can :manage, [ Diseno, Lista, Mazo ], usuario_id: @usuario.id
+      can :manage, [Diseno, Lista, Mazo], usuario_id: @usuario.id
       can :manage, Usuario, id: @usuario.id
 
       # Puede organizar sus propios torneos
@@ -42,7 +42,7 @@ class Ability
       can :manage, Inscripcion, torneo_id: @usuario.torneos_organizado_ids
 
       # Puede leer documentos de búsqueda de recursos no visibles si son suyos
-      [ Mazo, Lista ].each do |modelo|
+      [Mazo, Lista].each do |modelo|
         can :read, PgSearch::Document,
           searchable_type: modelo.name,
           searchable_id: @usuario.send("#{modelo.name.downcase}_ids")
@@ -51,10 +51,10 @@ class Ability
 
     def anonimo
       can :read, :all
-      cannot :read, [ Mazo, Lista ], visible: false
+      cannot :read, [Mazo, Lista], visible: false
 
       # No puede leer documentos de búsqueda de recursos no visibles
-      [ Mazo, Lista ].each do |modelo|
+      [Mazo, Lista].each do |modelo|
         cannot :read, PgSearch::Document,
           searchable_type: modelo.name,
           searchable_id: modelo.where(visible: false).pluck(:id)

@@ -10,48 +10,48 @@ class ExpansionesController < ApplicationController
     @busqueda = apply_scopes @expansiones
     @expansiones = PaginadorDecorator.decorate @busqueda.result
 
-    respond_with(@expansiones)
+    respond_with @expansiones
   end
 
   def show
     @versiones = PaginadorDecorator.decorate apply_scopes(@expansion.versiones)
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 
-    respond_with(@expansion)
+    respond_with @expansion
   end
 
   def sobre
     @versiones = Draper::CollectionDecorator.decorate @expansion.abrir_sobre
     tipo_actual params[:mostrar].try(:[], :tipo) || :mini
 
-    respond_with(@expansion)
+    respond_with @expansion
   end
 
   def info
-    respond_with(@expansion)
+    respond_with @expansion
   end
 
   def new
-    respond_with(@expansion)
+    respond_with @expansion
   end
 
   def edit
-    respond_with(@expansion)
+    respond_with @expansion
   end
 
   def create
     @expansion.save
-    respond_with(@expansion, location: info_expansion_path(@expansion))
+    respond_with @expansion, location: info_expansion_path(@expansion)
   end
 
   def update
     @expansion.update expansion_params
-    respond_with(@expansion, location: info_expansion_path(@expansion))
+    respond_with @expansion, location: info_expansion_path(@expansion)
   end
 
   def destroy
     @expansion.destroy
-    respond_with(@expansion)
+    respond_with @expansion
   end
 
   private
