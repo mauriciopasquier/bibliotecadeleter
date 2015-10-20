@@ -16,4 +16,11 @@
                           paginar: true }
 
 .row-fluid.botones
-  .span12= link_to 'Otros artistas', artistas_path, class: 'btn'
+  .span12
+    - if can? :edit, @artista
+      = link_to 'Editar',
+        edit_artista_path(@artista), class: 'btn btn-warning'
+    = link_to 'Otros artistas', artistas_path, class: 'btn'
+    - if can? :destroy, @artista
+      = link_to 'Eliminar', @artista, method: :delete,
+        data: { confirm: t(:confirmar) }, class: 'btn btn-danger'

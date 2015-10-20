@@ -62,8 +62,8 @@ BibliotecaDelEter::Application.routes.draw do
 
   with_options path_names: femeninos do |r|
 
-    r.resources :cartas, except: [ :edit ] do
-      r.resources :versiones, only: [ :new, :edit, :destroy ]
+    r.resources :cartas, except: [:edit] do
+      r.resources :versiones, only: [:new, :edit, :destroy]
       get ':expansion', to: 'cartas#show', as: :en_expansion, on: :member
     end
 
@@ -83,7 +83,7 @@ BibliotecaDelEter::Application.routes.draw do
   end
 
   with_options path_names: masculinos do |r|
-    r.resources :artistas, except: [ :new, :create, :edit, :update, :delete ]
+    r.resources :artistas, except: [:new, :create]
 
     r.resources :formatos
 
@@ -103,7 +103,7 @@ BibliotecaDelEter::Application.routes.draw do
     end
 
     # Tiene que ir último para evitar conflictos por el path nulo
-    r.resources :usuarios, path: '', only: [ :show, :update ] do
+    r.resources :usuarios, path: '', only: [:show, :update] do
       collection do
         get 'socios' => 'usuarios#index', as: ''
       end
@@ -135,7 +135,7 @@ BibliotecaDelEter::Application.routes.draw do
         put 'update_slot'
       end
 
-      resource :reserva, path_names: femeninos, only: [ :show, :update, :edit ] do
+      resource :reserva, path_names: femeninos, only: [:show, :update, :edit] do
         put 'update_slot'
       end
     end
