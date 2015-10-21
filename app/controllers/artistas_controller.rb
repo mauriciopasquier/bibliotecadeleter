@@ -22,7 +22,25 @@ class ArtistasController < ApplicationController
     respond_with @artista
   end
 
+  def edit
+    respond_with @artista
+  end
+
+  def update
+    @artista.update artista_params
+    respond_with @artista
+  end
+
+  def destroy
+    @artista.destroy
+    respond_with @artista
+  end
+
   private
+
+    def artista_params
+      params.require(:artista).permit :nombre
+    end
 
     def decorar_artista
       @artista = @artista.decorate

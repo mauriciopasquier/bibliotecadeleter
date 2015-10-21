@@ -1,0 +1,11 @@
+= form_for @artista, html: { class: 'form artista' } do |f|
+  = f.error_messages
+
+  .row-fluid
+    .span12
+      = f.label :nombre
+      = f.text_field :nombre, class: 'span12', required: true, autofocus: true
+
+  .row-fluid.botones
+    .span12
+      = f.submit 'Guardar', class: 'btn btn-success'

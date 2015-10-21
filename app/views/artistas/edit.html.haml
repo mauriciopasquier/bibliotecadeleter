@@ -1,0 +1,10 @@
+%h1= titulo
+
+= render 'form'
+
+.row-fluid.botones
+  .span12
+    - if can? :read, @artista
+      = link_to 'Ver', @artista, class: 'btn'
+    - if can? :read, Artista
+      = link_to 'Otros artistas', artistas_path, class: 'btn'
