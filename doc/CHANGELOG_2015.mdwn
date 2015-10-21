@@ -6,6 +6,10 @@
 [2015](/cambios/2015) \|
 [todos](/cambios)
 
+## 20/10/2015
+
+- Varios arreglos en las interfaces de carga
+
 ## 09/10/2015
 
 - Arreglos para cargar las cartas desde la misma Biblioteca
