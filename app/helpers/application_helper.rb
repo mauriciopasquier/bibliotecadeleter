@@ -68,7 +68,7 @@ module ApplicationHelper
   end
 
   def placeholder_del_arte(imagen)
-    [ (imagen.cara? ? 'Lado infernal.' : 'Lado terrenal.'),
+    [ "Lado #{imagen.nombre_de_cara}.",
       'Si hay varios artistas, separalos con ','.'].join(' ')
   end
 
