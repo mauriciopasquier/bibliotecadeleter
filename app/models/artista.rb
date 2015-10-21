@@ -10,6 +10,8 @@ class Artista < ActiveRecord::Base
 
   validates :nombre, presence: true, uniqueness: true
 
+  before_destroy :verificar_que_no_tenga_ilustraciones
+
   friendly_id :nombre, use: :slugged
   multisearchable against: :nombre
 
@@ -35,6 +37,10 @@ class Artista < ActiveRecord::Base
   default_scope { order(:nombre) }
 
   private
+
+    def verificar_que_no_tenga_ilustraciones
+      ilustraciones.empty?
+    end
 
     def should_generate_new_friendly_id?
       nombre_changed? || super

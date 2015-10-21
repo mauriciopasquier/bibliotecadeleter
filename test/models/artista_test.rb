@@ -17,6 +17,12 @@ describe Artista do
     build(:artista, nombre: artista.nombre).wont_be :valid?
   end
 
+  it 'no se puede eliminar si tiene ilustraciones' do
+    artista.ilustraciones << imagen
+
+    artista.destroy.must_equal false
+  end
+
   describe '.con_cantidad' do
     it 'agrega la cantidad de ilustraciones para cada artista' do
       artista.ilustraciones << imagen
