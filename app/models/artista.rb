@@ -10,6 +10,7 @@ class Artista < ActiveRecord::Base
 
   validates :nombre, presence: true, uniqueness: true
 
+  after_save :touch_ilustraciones
   before_destroy :verificar_que_no_tenga_ilustraciones
 
   friendly_id :nombre, use: :slugged
@@ -37,6 +38,12 @@ class Artista < ActiveRecord::Base
   default_scope { order(:nombre) }
 
   private
+
+    def touch_ilustraciones
+      if nombre_changed? || slug_changed?
+        ilustraciones.find_each { |i| i.touch }
+      end
+    end
 
     def verificar_que_no_tenga_ilustraciones
       ilustraciones.empty?
