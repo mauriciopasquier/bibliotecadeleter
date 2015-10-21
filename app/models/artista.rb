@@ -8,7 +8,7 @@ class Artista < ActiveRecord::Base
   has_many :versiones, through: :ilustraciones
   has_many :links, as: :linkeable, dependent: :destroy
 
-  validates_presence_of :nombre
+  validates :nombre, presence: true, uniqueness: true
 
   friendly_id :nombre, use: :slugged
   multisearchable against: :nombre
@@ -16,7 +16,8 @@ class Artista < ActiveRecord::Base
   # TODO scope ilustraciones_sin_colaboracion
   # TODO scope última_colaboracion (por lanzamiento, created_at)
 
-  # scope que devuelve el número de cartas dibujadas por cada artista
+  # scope que devuelve el número de cartas dibujadas por cada artista. No
+  # devuelve artistas sin ilustraciones
   def self.con_cantidad
     joins(:ilustraciones)
       .group('artistas.id')

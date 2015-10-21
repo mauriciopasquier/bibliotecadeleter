@@ -9,6 +9,14 @@ describe Artista do
     build(:artista).valid?.must_equal true
   end
 
+  it 'require nombre' do
+    build(:artista, nombre: nil).wont_be :valid?
+  end
+
+  it 'require nombre único' do
+    build(:artista, nombre: artista.nombre).wont_be :valid?
+  end
+
   describe '.con_cantidad' do
     it 'agrega la cantidad de ilustraciones para cada artista' do
       artista.ilustraciones << imagen
