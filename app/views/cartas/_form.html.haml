@@ -25,7 +25,7 @@
       .span4
         = fc.label 'Supertipos'
         = fc.autocomplete_field :supertipo, valores_version_supertipo_path,
-           class: 'span12', placeholder: 'Demonio, Instantáneo, etc'
+           class: 'span12 supertipo', placeholder: 'Demonio, Instantáneo, etc'
       .span4
         = fc.label 'Subtipos'
         = fc.autocomplete_field :subtipo, valores_version_subtipo_path,
@@ -63,20 +63,21 @@
         = fc.text_field :res, class: 'span12'
 
     - version.imagenes.each do |imagen|
-      = fc.fields_for :imagenes, imagen do |fi|
+      .linea-de-arte{class: imagen.nombre_de_cara}
+        = fc.fields_for :imagenes, imagen do |fi|
 
-        = fi.hidden_field :id
-        = fi.hidden_field :cara
-        .row-fluid
-          .span7
-            = fi.label :arte
-            = fi.autocomplete_field :arte,
-              sugerir_artistas_path, data: { delimiter: ', ' },
-              class: 'span12',
-              placeholder: placeholder_del_arte(imagen)
-          .span5
-            = fi.label :archivo
-            .control-group.row-fluid
-              = fi.file_field :archivo, class: 'span12'
+          = fi.hidden_field :id
+          = fi.hidden_field :cara
+          .row-fluid
+            .span7
+              = fi.label :arte
+              = fi.autocomplete_field :arte,
+                sugerir_artistas_path, data: { delimiter: ', ' },
+                class: 'span12',
+                placeholder: placeholder_del_arte(imagen)
+            .span5
+              = fi.label :archivo
+              .control-group.row-fluid
+                = fi.file_field :archivo, class: 'span12'
 
   = f.submit 'Guardar', class: 'btn btn-success'
