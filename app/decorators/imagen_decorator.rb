@@ -35,6 +35,10 @@ class ImagenDecorator < ApplicationDecorator
     version.linea_de_tipos
   end
 
+  def nombre_de_cara
+    object.cara? ? 'infernal' : 'terrenal'
+  end
+
   private
 
     def nombre_disponible
