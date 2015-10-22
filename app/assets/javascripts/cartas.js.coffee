@@ -8,7 +8,7 @@ bindings = ->
   )
 
   # Siempre hay un sólo input.supertipo
-  if $('input.supertipo')[0].value != 'Demonio'
+  if $('input.supertipo')[0] && $('input.supertipo')[0].value != 'Demonio'
     $('.linea-de-arte.terrenal').hide()
 
 # TODO bindear 36 = inicio y 35 = fin para primera y última carta
