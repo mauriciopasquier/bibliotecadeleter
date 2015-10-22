@@ -14,7 +14,7 @@ class ImagenDecorator < ApplicationDecorator
   # alt: nil es para poder copiar y pegar el texto sin repeticiones
   def tag(estilo = :original)
     [ h.image_tag(object.archivo.url(estilo),
-        alt: nil, width: object.ancho(estilo), height: object.alto(estilo),
+        alt: nil, size: size(estilo),
         class: 'lazy', lazy: true),
 
       h.content_tag(:noscript) do
@@ -38,6 +38,18 @@ class ImagenDecorator < ApplicationDecorator
 
   def nombre_de_cara
     object.cara? ? 'infernal' : 'terrenal'
+  end
+
+  # En algún lado pasamos nil por :original
+  def size(estilo)
+    case estilo
+    when :mini, 'mini'
+      object.geometria_mini
+    when :arte, 'arte'
+      object.geometria_arte
+    else
+      object.geometria_original
+    end
   end
 
   private

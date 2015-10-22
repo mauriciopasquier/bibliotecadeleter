@@ -1,5 +1,7 @@
 # encoding: utf-8
 class Imagen < ActiveRecord::Base
+  store_accessor :metadatos, :geometria_original, :geometria_mini, :geometria_arte
+
   belongs_to :version, touch: true, inverse_of: :imagenes
   has_one :carta, through: :version
   has_one :expansion, through: :version
@@ -27,8 +29,10 @@ class Imagen < ActiveRecord::Base
   validates :archivo,
     attachment_content_type: { content_type: %w{image/jpeg image/png} }
 
+  before_save :guardar_metadatos_de_archivos
+
   def self.estilos
-    [ :original, :mini, :arte ]
+    [:original, :mini, :arte]
   end
 
   # Atributo virtual para el FormBuilder
@@ -65,17 +69,17 @@ class Imagen < ActiveRecord::Base
     !cara
   end
 
-  def geometria(estilo)
-    # con memoization
-    @geometrias ||= {}
-    @geometrias[estilo] ||= Paperclip::Geometry.from_file archivo.path(estilo)
+  def guardar_metadatos_de_archivos
+    if archivo_updated_at_changed?
+      guardar_metadatos_de_archivos!
+    end
   end
 
-  def ancho(estilo)
-    geometria(estilo).width
-  end
-
-  def alto(estilo)
-    geometria(estilo).height
+  def guardar_metadatos_de_archivos!
+    Imagen.estilos.each do |estilo|
+      if File.exists?(archivo.path(estilo))
+        send "geometria_#{estilo}=", Paperclip::Geometry.from_file(archivo.path(estilo)).to_s
+      end
+    end
   end
 end

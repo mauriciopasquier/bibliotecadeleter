@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021001615) do
+ActiveRecord::Schema.define(version: 20151022062404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "unaccent"
+  enable_extension "hstore"
 
   create_table "artistas", force: true do |t|
     t.string   "nombre"
@@ -228,6 +229,7 @@ ActiveRecord::Schema.define(version: 20151021001615) do
     t.integer  "archivo_file_size"
     t.datetime "archivo_updated_at"
     t.boolean  "cara",                 default: true
+    t.hstore   "metadatos",            default: {}
   end
 
   add_index "imagenes", ["version_id"], name: "index_imagenes_on_version_id", using: :btree

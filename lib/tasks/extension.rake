@@ -1,3 +1,4 @@
+# TODO Y U NO USE MIGRATION
 namespace :extension do
   def conexion
     spec = ActiveRecord::Base.connection_config
