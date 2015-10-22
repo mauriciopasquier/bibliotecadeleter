@@ -60,3 +60,8 @@ button.close {
 .botones {
   margin-top: 1em;
 }
+
+// Ocultar las imágenes lazy para mostrarlas sólo con js
+.lazy {
+  display: none;
+}

@@ -12,8 +12,9 @@ bindings = ->
 
   $('select').selectpicker()
 
-  $('img.lazy').lazyload({
+  $('img.lazy').show().lazyload({
     threshold: 250
+    effect: 'fadeIn'
   })
 
   $('form .nestear').nestedFields({
