@@ -64,4 +64,18 @@ class Imagen < ActiveRecord::Base
   def contracara?
     !cara
   end
+
+  def geometria(estilo)
+    # con memoization
+    @geometrias ||= {}
+    @geometrias[estilo] ||= Paperclip::Geometry.from_file archivo.path(estilo)
+  end
+
+  def ancho(estilo)
+    geometria(estilo).width
+  end
+
+  def alto(estilo)
+    geometria(estilo).height
+  end
 end
