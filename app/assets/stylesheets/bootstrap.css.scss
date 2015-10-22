@@ -26,7 +26,7 @@ blockquote { border-color: darken($gris-claro, 25%); }
 
 @media(min-width: 600px) {
   #buscar {
-    .imagen { display: none; }
+    .imagen-de-busqueda { display: none; }
   }
 }
 

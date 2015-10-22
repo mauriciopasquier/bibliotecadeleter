@@ -13,7 +13,7 @@
             = s.text_field busqueda, class: 'search-query input-small', size: nil
             = s.submit 'Buscar', name: 'navbar', class: 'btn'
         = link_to content_tag(:i, nil, class: "icon-search icon-white"),
-            main_app.cartas_busqueda_path, class: 'imagen'
+            main_app.cartas_busqueda_path, class: 'imagen-de-busqueda'
     .nav-collapse.collapse
       %ul.nav
         %li= render 'devise/menu/registration_items'
