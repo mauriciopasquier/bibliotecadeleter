@@ -15,7 +15,7 @@ class Expansion < ActiveRecord::Base
   validates_presence_of :nombre
   validates_uniqueness_of :nombre
 
-  scope :grandes, -> { where('total >= ?', 100) }
+  scope :grandes, -> { where('total >= ?', 65) }
   scope :ordenadas, -> { order('lanzamiento, created_at') }
 
   # FIXME acercar al default de paperclip? Habría que sacarlas del repo..

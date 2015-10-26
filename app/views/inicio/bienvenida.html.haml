@@ -31,8 +31,8 @@
       %li= link_to '...todos los artistas', artistas_path
 
   .span4
-    %h3 Expansiones grandes
+    %h3 Últimas expansiones
     %ul.menu.nav.nav-list.nav-stacked
-      - expansiones.order('lanzamiento desc').grandes.each do |e|
+      - expansiones.order('lanzamiento desc').grandes.limit(5).each do |e|
         %li= link_to e.nombre, e
       %li= link_to '...todas las expansiones', expansiones_path
