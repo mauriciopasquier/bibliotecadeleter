@@ -6,6 +6,12 @@
 [2015](/cambios/2015) \|
 [todos](/cambios)
 
+## 26/10/2015
+
+- Mejoras en [Las Galerías][]
+- Ya estaba [liberado][] el código, pero sin licencia. Ahora el sitio es
+  [AGPL][]
+
 ## 20/10/2015
 
 - Varios arreglos en las interfaces de carga
@@ -21,3 +27,5 @@
   colaborar, avise!
 
 [liberado]: https://github.com/mauriciopasquier/bibliotecadeleter
+[Las Galerías]: https://bibliotecadeleter.com.ar/cartas/las-galerias
+[AGPL]: https://www.gnu.org/licenses/agpl-3.0.html
