@@ -1,7 +1,7 @@
 %h1= titulo
 .hero-unit
   %p
-    = link_to 'Inferno', 'http://inferno.com.ar'
+    = link_to 'Inferno', Rails.configuration.sitio_oficial
     es &copy; de OMG! entretenimiento.
     Este sitio es
     != "#{link_to 'Software libre', 'https://es.wikipedia.org/wiki/Software_libre'},"
@@ -10,7 +10,7 @@
     y fue hecho principalmente con
     != "#{link_to 'Ruby on Rails', 'http://rubyonrails.org'},"
     = link_to 'Bootstrap', 'http://getbootstrap.com'
-    (y mucho mucho amor). La imagen de los fuegos del infierno es de
+    y mucho mucho amor. La imagen de los fuegos del infierno es de
     != "#{link_to 'WebTreats', 'http://webtreats.mysitemyway.com/5-abstract-inferno-seamless-textures/'}."
     La alarma de tiempo de ronda es de
     != "#{link_to 'FreeSound', 'http://www.freesound.org/people/rene___/sounds/56778/'}."
@@ -18,5 +18,5 @@
     Gracias a los infernales del viejo foro, que copiaron todas las cartas de
     Despertar, Insania y Conquista en planillas de cálculo (de donde sacamos los
     textos), y gracias al staff de
-    = link_to 'Inferno', 'http://playinferno.com'
+    = link_to 'Inferno', Rails.configuration.sitio_oficial
     por poner a disposición las imágenes de las cartas.
