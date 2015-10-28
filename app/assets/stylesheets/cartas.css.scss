@@ -15,7 +15,8 @@
   .nombre {
     text-align: center;
     font-size: x-large;
-    .infernal { padding-bottom: 10px; }
+    .infernal, .terrenal {
+      padding-bottom: 10px; }
   }
   .coste {
     font-size: x-large; }
