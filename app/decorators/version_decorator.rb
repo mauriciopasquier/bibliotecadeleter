@@ -78,6 +78,14 @@ class VersionDecorator < ApplicationDecorator
     end.join.html_safe unless object.texto.nil?
   end
 
+  def nombre_doble
+    object.nombre.split(' / ').collect do |cara|
+      h.content_tag(:div, class: nil_cycle('infernal', 'terrenal', name: 'nombre')) do
+        cara
+      end
+    end.join.html_safe
+  end
+
   def reserva_y_coleccion
     h.content_tag(:div, class: 'controles') do
       [ control(h.reserva_actual, h.t('colecciones.quiero'), h.current_usuario),
