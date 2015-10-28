@@ -2,6 +2,9 @@
 class VersionDecorator < ApplicationDecorator
   decorates_association :imagenes, with: PaginadorDecorator
   decorates_association :expansion
+  decorates_association :carta
+
+  delegate :nombre, to: :carta
 
   # genera una imagen/link a la versión.
   # `estilo` es uno de los estilos de `Paperclip`, :original por default.
@@ -136,19 +139,23 @@ class VersionDecorator < ApplicationDecorator
   end
 
   def anterior
+    _anterior = object.anterior.decorate
+
     h.content_tag :span do
-      h.link_to "<span class='flecha'>←</span> #{object.anterior.nombre}".html_safe,
+      h.link_to "<span class='flecha'>←</span> #{_anterior.nombre}".html_safe,
         h.en_expansion_carta_path(
-          object.anterior.carta, object.anterior.expansion), class: 'btn',
+          _anterior.carta, _anterior.expansion), class: 'btn',
           id: 'anterior'
     end
   end
 
   def siguiente
+    _siguiente = object.siguiente.decorate
+
     h.content_tag :span do
-      h.link_to "#{object.siguiente.nombre} <span class='flecha'>→</span>".html_safe,
+      h.link_to "#{_siguiente.nombre} <span class='flecha'>→</span>".html_safe,
         h.en_expansion_carta_path(
-          object.siguiente.carta, object.siguiente.expansion), class: 'btn',
+          _siguiente.carta, _siguiente.expansion), class: 'btn',
           id: 'siguiente'
     end
   end

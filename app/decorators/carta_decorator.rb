@@ -18,4 +18,9 @@ class CartaDecorator < ApplicationDecorator
       h.link_to e.nombre, e
     end.join(', ').html_safe
   end
+
+  # Las cartas con nombre doble quedan larguísimas en todas partes, usamos sólo el primero
+  def nombre
+    object.nombre.split(' / ').first
+  end
 end
