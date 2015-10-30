@@ -59,7 +59,7 @@
 ### Arreglos
 
 - Avatares más chicos en los foros
-- Tooltips del menú de usuario :|
+- Tooltips del menú de usuario
 
 ## 1.7.2
 
@@ -79,7 +79,7 @@
 
 - Hay [foros][]!!!
 - Actualización general del sistema... si no podés loguearte por alguna razón
-  probá borrando las cookies :|
+  probá borrando las cookies
 
 ### Arreglos
 
