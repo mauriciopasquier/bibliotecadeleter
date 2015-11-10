@@ -21,7 +21,7 @@ Paperclip.interpolates :cara do |adjunto, estilo|
 end
 
 Paperclip.interpolates :assets do |adjunto,  estilo|
-  BibliotecaDelEter::Application.config.assets.prefix
+  Rails.application.config.assets.prefix
 end
 
 Paperclip.interpolates :slug do |adjunto, estilo|

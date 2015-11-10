@@ -1,5 +1,4 @@
-BibliotecaDelEter::Application.routes.draw do
-
+Rails.application.routes.draw do
   mount Forem::Engine, at: '/antesala'
 
   if Rails.env.development?

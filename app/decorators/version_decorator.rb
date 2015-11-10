@@ -75,7 +75,7 @@ class VersionDecorator < ApplicationDecorator
 
   def texto
     object.texto.split(' / ').collect do |cara|
-      h.content_tag(:div, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
+      h.content_tag(:div, class: h.cycle('infernal', 'terrenal', name: 'texto')) do
         estructurar(cara)
       end
     end.join.html_safe unless object.texto.nil?
@@ -83,7 +83,7 @@ class VersionDecorator < ApplicationDecorator
 
   def nombre_doble
     object.nombre.split(' / ').collect do |cara|
-      h.content_tag(:div, class: nil_cycle('infernal', 'terrenal', name: 'nombre')) do
+      h.content_tag(:div, class: h.cycle('infernal', 'terrenal', name: 'nombre')) do
         cara
       end
     end.join.html_safe

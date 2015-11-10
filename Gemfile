@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.13'
+gem 'rails', '4.1.13'
 
 # Database
 gem 'pg'
@@ -15,7 +15,7 @@ gem 'paperclip'
 gem 'squeel'
 gem 'amoeba'
 gem 'loofah'
-gem 'state_machine'
+gem 'state_machines-activerecord'
 gem 'gravtastic'
 
 # View
@@ -59,12 +59,12 @@ gem 'minitest-rails'
 gem 'awesome_print'
 
 # Assets
-gem 'sass-rails', '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'bootstrap-sass-rails', '< 3.0.0'
 gem 'therubyracer'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 gem 'uri-js-rails'
 gem 'turbolinks'
 gem 'jquery-ui-rails'
@@ -95,7 +95,6 @@ end
 
 group :test do
   gem 'minitest-rails-capybara'
-  gem 'turn'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
 end

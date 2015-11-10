@@ -32,15 +32,6 @@ describe ApplicationDecorator do
     end
   end
 
-  describe '#nil_cycle' do
-    let(:d) { ApplicationDecorator.new(Modelo.new) }
-    it 'mantiene nil en el ciclo' do
-      d.nil_cycle(nil, 'string', name: :test).must_be_nil
-      d.nil_cycle(nil, 'string', name: :test).must_equal 'string'
-      d.nil_cycle(nil, 'string', name: :test).must_be_nil
-    end
-  end
-
   # TODO testear que ciertas medallas habiliten poner links y stuff
   describe '#markdown_seguro' do
     subject { ApplicationDecorator.new(Modelo.new) }

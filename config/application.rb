@@ -5,7 +5,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module BibliotecaDelEter
   class Application < Rails::Application
@@ -24,8 +24,12 @@ module BibliotecaDelEter
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :es
 
+    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+    config.time_zone = 'Buenos Aires'
+
     # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
+    config.encoding = 'utf-8'
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
@@ -41,22 +45,5 @@ module BibliotecaDelEter
       g.javascripts false
       g.helper false
     end
-
-    # Asset pipeline
-    config.assets.enabled = true
-
-    # Traduzco el path
-    config.assets.prefix = "/recursos"
-
-    # Para precompilación local de assets
-    # http://guides.rubyonrails.org/asset_pipeline.html#local-precompilation
-    config.assets.initialize_on_precompile = false
-
-    # Los pdfs van en documents
-    config.assets.paths << Rails.root.join('app', 'assets', 'documents')
-    config.assets.paths << Rails.root.join('app', 'assets', 'sounds')
-
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.8'
   end
 end
