@@ -30,7 +30,7 @@ class DisenoDecorator < ApplicationDecorator
 
   def texto
     object.texto.split(' / ').collect do |cara|
-      h.content_tag(:div, class: nil_cycle(nil, 'terrenal', name: 'texto')) do
+      h.content_tag(:div, class: h.cycle('infernal', 'terrenal', name: 'texto')) do
         estructurar(cara)
       end
     end.join.html_safe unless object.texto.nil?

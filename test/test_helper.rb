@@ -8,13 +8,15 @@ require 'minitest/rails/capybara'
 DatabaseCleaner.clean_with :truncation
 DatabaseCleaner.strategy = :transaction
 
-class MiniTest::Unit::TestCase
+class ActiveSupport::TestCase
   # Para llamar a los métodos core de FactoryGirl directamente (build,
   # build_stubbed, create, attributes_for, y los *_list)
   include FactoryGirl::Syntax::Methods
 end
 
 class MiniTest::Spec
+  include FactoryGirl::Syntax::Methods
+
   before { DatabaseCleaner.start }
   after { DatabaseCleaner.clean }
 end
