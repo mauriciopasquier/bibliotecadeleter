@@ -9,7 +9,7 @@ feature "Usuario" do
 
       page.must_have_content "Bienvenido mortal"
       page.must_have_link nil, href: legales_path
-      page.must_have_link nil, href: 'http://playinferno.com'
+      page.must_have_link nil, href: Rails.configuration.sitio_oficial
       page.must_have_link nil, href: new_usuario_registration_path
       page.must_have_link nil, href: new_usuario_session_path
       page.must_have_field "q_#{busqueda}"
@@ -41,7 +41,7 @@ feature "Usuario" do
       visit root_path
 
       page.must_have_link nil, href: legales_path
-      page.must_have_link nil, href: 'http://playinferno.com'
+      page.must_have_link nil, href: Rails.configuration.sitio_oficial
       page.must_have_link nil, href: usuario_path(@usuario)
       page.must_have_link nil, href: destroy_usuario_session_path
       page.must_have_field "q_#{busqueda}"
