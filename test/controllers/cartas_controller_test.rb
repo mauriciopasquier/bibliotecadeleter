@@ -2,6 +2,10 @@
 require "./test/test_helper"
 
 describe CartasController do
+  describe 'búsqueda' do
+    it 'funciona'
+  end
+
   describe 'anónimamente' do
     it "accede a la lista" do
       get :index

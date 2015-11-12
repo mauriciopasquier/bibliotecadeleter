@@ -57,7 +57,7 @@ class CartasController < ApplicationController
       Carta.none
     end
 
-    if @cartas.count == 1
+    if @cartas.size == 1
       redirect_to @cartas.first
     else
       @cartas = @cartas.decorate
