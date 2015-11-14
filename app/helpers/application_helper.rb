@@ -109,7 +109,7 @@ module ApplicationHelper
 
     def alerta(tipo)
       'alert alert-block fade in ' +
-      case tipo
+      case tipo.to_sym
         when :error
           'alert-error'
         when :notice, :success
