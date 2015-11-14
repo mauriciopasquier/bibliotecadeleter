@@ -76,4 +76,9 @@ module CartasHelper
         params[:incluir]
     end
   end
+
+  # Extrae de los parámetros de búsqueda el campo de texto, para mantenerlo en el form
+  def texto_de_busqueda
+    params[:q][busqueda] if params[:q].present?
+  end
 end
