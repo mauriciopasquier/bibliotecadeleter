@@ -23,8 +23,9 @@
       - if expansion.codigo?
         %dt Código
         %dd= expansion.codigo
-      %dt Legal en
-      %dd= expansion.formatos
+      - if expansion.formatos.present?
+        %dt Legal en
+        %dd= expansion.formatos
       - if expansion.notas?
         %dt Notas
         %dd= expansion.notas_con_formato
