@@ -19,7 +19,11 @@ class Expansion < ActiveRecord::Base
   scope :ordenadas, -> { order('lanzamiento, created_at') }
 
   has_attached_file :logo, {
-    convert_options: { all: '-strip' }
+    styles: {
+      normalizado: '450x'
+    },
+    convert_options: { all: '-strip' },
+    default_style: :normalizado
   }
 
   validates_attachment :logo,
