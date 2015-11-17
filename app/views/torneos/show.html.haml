@@ -31,25 +31,21 @@
 
 .row-fluid.botones
   .span12
-    - if can? :edit, torneo
+    - if can? :edit, @torneo
       = link_to 'Editar', edit_torneo_path(torneo),
         class: 'btn btn-warning'
-
-    - if can?(:delete, torneo) && torneo.can_deshacer?
+    - if can?(:delete, @torneo) && torneo.can_deshacer?
       = link_to 'Anterior', ultima_ronda_torneo_path(torneo), method: :delete,
         data: { confirm: t('.cancelar') }, class: 'btn btn-danger'
-
-    - if torneo.can_empezar?
-      - if can? :edit, torneo
+    - if @torneo.can_empezar?
+      - if can? :edit, @torneo
         = link_to t(".nueva_ronda.#{torneo.estado}"), nueva_ronda_torneo_path(torneo),
           class: 'btn btn-success'
     - else
-      - if can? :read, torneo
+      - if can? :read, @torneo
         = link_to 'Posiciones', ronda_torneo_path(torneo, torneo.ultima_ronda),
           class: 'btn btn-info'
-
     = link_to 'Otros torneos', torneos_path, class: 'btn'
-
-    - if can? :destroy, torneo
+    - if can? :destroy, @torneo
       = link_to 'Eliminar', torneo, method: :delete,
         data: { confirm: t(:confirmar) }, class: 'btn btn-danger'

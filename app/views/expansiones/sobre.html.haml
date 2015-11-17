@@ -8,14 +8,14 @@
 
 .row-fluid.botones
   .span12
-    - if can? :read, expansion
+    - if can? :read, @expansion
       = link_to 'Galería', expansion, class: 'btn btn-info'
       = link_to 'Detalles', info_expansion_path(expansion),
         class: 'btn btn-info'
-    - if can? :edit, expansion
+    - if can? :edit, @expansion
       = link_to 'Editar', edit_expansion_path(expansion),
         class: 'btn btn-warning'
     = link_to 'Otras expansiones', expansiones_path, class: 'btn'
-    - if can? :destroy, expansion
+    - if can? :destroy, @expansion
       = link_to 'Eliminar', expansion, method: :delete,
         data: { confirm: t(:confirmar) }, class: 'btn btn-danger'

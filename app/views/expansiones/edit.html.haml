@@ -4,7 +4,7 @@
 
 .row-fluid.botones
   .span12
-    - if can? :read, expansion
+    - if can? :read, @expansion
       = link_to 'Ver', info_expansion_path(expansion), class: 'btn'
       = link_to 'Galería', expansion, class: 'btn'
     - if can? :read, Expansion
