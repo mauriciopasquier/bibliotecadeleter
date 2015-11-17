@@ -17,7 +17,7 @@ class Imagen < ActiveRecord::Base
   has_attached_file :archivo,
     url:  '/system/cartas/:style/:expansion/:numero-:carta:cara.:extension',
     path: ':rails_root/public/system/cartas/:style/:expansion/:numero-:carta:cara.:extension',
-    default_url: ':assets/imagen-no-disponible-:style.png',
+    default_url: '/imagen-no-disponible-:style.png',
     styles: {
       arte: '190x190',
       mini: '50%' },
