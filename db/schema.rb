@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022062404) do
+ActiveRecord::Schema.define(version: 20151124032445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -111,10 +111,11 @@ ActiveRecord::Schema.define(version: 20151022062404) do
   add_index "expansiones_formatos", ["formato_id"], name: "index_expansiones_formatos_on_formato_id", using: :btree
 
   create_table "forem_categories", force: true do |t|
-    t.string   "name",       null: false
+    t.string   "name",                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.integer  "position",   default: 0
   end
 
   add_index "forem_categories", ["slug"], name: "index_forem_categories_on_slug", unique: true, using: :btree
@@ -125,6 +126,7 @@ ActiveRecord::Schema.define(version: 20151022062404) do
     t.integer "category_id"
     t.integer "views_count", default: 0
     t.string  "slug"
+    t.integer "position",    default: 0
   end
 
   add_index "forem_forums", ["slug"], name: "index_forem_forums_on_slug", unique: true, using: :btree

@@ -1,17 +1,17 @@
-%h1= t("forem.admin.category.index")
+%h1= t('forem.admin.category.index')
 
 #categories.tabla-fluida
   .encabezado.row-fluid
     .span8.nombre Nombre
     .span4.foros.hidden-phone Foros
 
-  - @category.each do |category|
+  - @categories.each do |category|
     .row-fluid
       .span8.nombre
         .acciones-category
           = link_to forem.admin_category_path(category), method: :delete,
             title: t('delete', scope: 'forem.admin.categories'),
-            data: { confirm: t("confirmar") } do
+            data: { confirm: t('confirmar') } do
             %i.icon-remove
 
           = link_to forem.edit_admin_category_path(category),
@@ -27,9 +27,9 @@
 
 .row-fluid.botones
   .span12
-    = link_to t("forem.admin.category.new_link"), forem.new_admin_category_path,
-      class: "btn btn-info"
-    = link_to t('back_to_admin', scope: "forem.admin"), forem.admin_root_path,
+    = link_to t('forem.admin.category.new_link'), forem.new_admin_category_path,
+      class: 'btn btn-info'
+    = link_to t('back_to_admin', scope: 'forem.admin'), forem.admin_root_path,
       class: 'btn'
     = link_to t(:back_to_forums, scope: 'forem.admin'), forem.root_path,
       class: 'btn'
