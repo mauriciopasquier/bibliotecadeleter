@@ -142,6 +142,10 @@ GEM
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     ffi (1.9.10)
+    forem-redcarpet (1.0.2)
+      nokogiri
+      pygments.rb (= 0.5.4)
+      redcarpet (= 3.0.0)
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
     gemoji (2.1.0)
@@ -242,6 +246,7 @@ GEM
       arel
     polyamorous (1.1.0)
       activerecord (>= 3.0)
+    posix-spawn (0.3.11)
     prawn (2.0.2)
       pdf-core (~> 0.6.0)
       ttfunk (~> 1.4.0)
@@ -251,6 +256,9 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    pygments.rb (0.5.4)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.5.5)
@@ -286,6 +294,7 @@ GEM
       i18n
       polyamorous (~> 1.1)
     rdoc (4.2.0)
+    redcarpet (3.0.0)
     ref (2.0.0)
     request_store (1.2.0)
     responders (1.1.2)
@@ -369,6 +378,7 @@ GEM
     workflow (1.0.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -398,6 +408,7 @@ DEPENDENCIES
   dynamic_form
   factory_girl_rails
   forem!
+  forem-redcarpet
   friendly_id
   gravtastic
   haml-rails

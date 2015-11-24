@@ -1,5 +1,5 @@
-Forem.user_class = "Usuario"
-Forem.email_from_address = "homunculo@bibliotecadeleter.com.ar"
+Forem.user_class = 'Usuario'
+Forem.email_from_address = 'homunculo@bibliotecadeleter.com.ar'
 # If you do not want to use gravatar for avatars then specify the method to use here:
 Forem.avatar_user_method = :avatar_decorado
 Forem.user_profile_links = true
