@@ -10,7 +10,7 @@ class MazosController < ApplicationController
   authorize_resource only: [:todo]
   skip_authorize_resource only: :copiar
 
-  respond_to :ficha, only: :show
+  respond_to :pdf, :ficha, only: :show
 
   def index
     @mazos = @usuario.mazos.accessible_by(current_ability)
