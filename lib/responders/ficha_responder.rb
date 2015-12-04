@@ -5,6 +5,9 @@ module FichaResponder
     @ficha = FichaDeRegistroDecorator.new resource,
       context: { usuario: controller.current_usuario }
 
+    # Garantizamos un lugar donde guardarla
+    FileUtils.mkdir_p directorio
+
     # Empieza con una bounding_box (los márgenes) de 487 x 734
     Prawn::Document.generate archivo, template: ficha_en_blanco do |f|
       f.with_options overflow: :shrink_to_fit, height: 10 do |fo|
@@ -40,21 +43,27 @@ module FichaResponder
       end
     end
 
-    controller.send_file archivo, type: Mime::PDF, filename: nombre
+    controller.send_file archivo, type: Mime::PDF, filename: nombre_de_archivo
   end
+  alias_method :to_pdf, :to_ficha
 
   private
 
+    # TODO deshardcodear un poco esto
     def ficha_en_blanco
       Rails.root.join 'app', 'assets', 'documents', 'ficha-de-registro.pdf'
     end
 
-    def nombre
-      "#{@ficha.slug}.pdf"
+    def nombre_de_archivo
+      [resource.usuario.to_param, '-', @ficha.to_param, '.pdf'].join
     end
 
     # FIXME adjuntar al mazo
     def archivo
-      Rails.root.join 'public', 'system', 'mazos', 'fichas', nombre
+      directorio.join nombre_de_archivo
+    end
+
+    def directorio
+      Rails.root.join 'public', 'system', 'mazos', 'fichas'
     end
 end
