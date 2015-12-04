@@ -30,7 +30,8 @@ gem 'rails3-jquery-autocomplete'
 gem 'awesome_nested_fields'
 gem 'kramdown'
 gem 'lazyload-rails'
-gem 'prawn'
+gem 'prawn', '~> 0.12'
+gem 'prawn-templates'
 
 # Controller
 gem 'responders'
