@@ -66,9 +66,12 @@ class ApplicationController < ActionController::Base
       elemento == params[:mostrar].try(:[], :cantidad)
     end
 
-    # En el controlador porque usa params
+    # Detecta el tipo de galería a mostrar.
     def tipo_actual(tipo = nil)
-      (@tipo ||= (tipo || params[:tipo])).try :to_sym
+      default = tipo || params[:tipo] || 'original'
+      tipo_sanitizado = default.to_sym if %w{original mini arte}.include?(default)
+
+      @tipo ||= tipo_sanitizado
     end
 
     def no_existe
