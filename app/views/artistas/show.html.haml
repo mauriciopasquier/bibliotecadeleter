@@ -10,7 +10,7 @@
 - if @artista.ilustraciones.size > 0
   .row-fluid
     .span12
-      %h2.plegable Galería
+      %h2 Galería
       = render  partial: 'layouts/galeria',
                 locals: { imagenes: @ilustraciones,
                           paginar: true }
