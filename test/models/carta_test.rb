@@ -3,7 +3,7 @@ require './test/test_helper'
 
 describe Carta do
   it 'es válida' do
-    build(:carta).valid?.must_equal true
+    build(:carta).must_be :valid?
   end
 
   describe '#actualizar_path_de_imagenes' do

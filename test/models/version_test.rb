@@ -3,11 +3,11 @@ require './test/test_helper'
 
 describe Version do
   it 'es válida' do
-    create(:version_con_carta).valid?.must_equal true
+    create(:version_con_carta).must_be :valid?
   end
 
   it 'no debe crear versiones huérfanas' do
-    build(:version_con_carta, expansion: nil).valid?.wont_equal true
+    build(:version_con_carta, expansion: nil).wont_be :valid?
   end
 
   it 'debe crearse solo una versión canónica' do
@@ -26,7 +26,8 @@ describe Version do
   it 'número es único en la expansión' do
     version = create(:version_con_carta)
     build(:version_con_carta, numero: version.numero,
-      expansion: version.expansion).valid?.must_equal false
+      expansion: version.expansion
+    ).wont_be :valid?
   end
 
   it 'detecta si es ilimitada' do

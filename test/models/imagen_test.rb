@@ -3,7 +3,7 @@ require './test/test_helper'
 
 describe Imagen do
   it 'es válida' do
-    build_stubbed(:imagen).valid?.must_equal true
+    build_stubbed(:imagen).must_be :valid?
   end
 
   describe '#arte' do

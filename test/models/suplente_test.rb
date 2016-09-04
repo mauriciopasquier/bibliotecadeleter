@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Suplente do
   it 'deriva sus atributos del mazo' do
@@ -11,7 +11,7 @@ describe Suplente do
     suplente.nombre.must_be_nil
     suplente.usuario_id.must_equal mazo.usuario_id
 
-    mazo.valid?.must_equal true
+    mazo.must_be :valid?
 
     suplente.nombre.wont_be_nil
     suplente.nombre.must_equal "1-#{mazo.nombre}-suplente"

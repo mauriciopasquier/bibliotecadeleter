@@ -1,8 +1,8 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Diseno do
-  it "es válido" do
-    build(:diseno).valid?.must_equal true
+  it 'es válido' do
+    build(:diseno).must_be :valid?
   end
 end

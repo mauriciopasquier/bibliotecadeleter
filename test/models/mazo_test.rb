@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Mazo do
   describe '#reglas' do

@@ -3,7 +3,7 @@ require './test/test_helper'
 
 describe Usuario do
   it 'es válido' do
-    build(:usuario).valid?.must_equal true
+    build(:usuario).must_be :valid?
   end
 
   describe 'sus listas personales' do

@@ -1,9 +1,9 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Torneo do
-  it "es válido" do
-    build(:torneo).valid?.must_equal true
+  it 'es válido' do
+    build(:torneo).must_be :valid?
   end
 
   describe '#posiciones' do

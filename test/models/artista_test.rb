@@ -6,7 +6,7 @@ describe Artista do
   let(:imagen) { create :imagen }
 
   it 'es válido' do
-    build(:artista).valid?.must_equal true
+    build(:artista).must_be :valid?
   end
 
   it 'require nombre' do

@@ -1,13 +1,13 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Inscripcion do
   it 'es válida' do
-    build(:inscripcion).valid?.must_equal true
+    build(:inscripcion).must_be :valid?
   end
 
   it 'al principio no ha dropeado' do
-    build(:inscripcion).dropeo?.must_equal false
+    build(:inscripcion).wont_be :dropeo?
   end
 
   describe '#puntos' do

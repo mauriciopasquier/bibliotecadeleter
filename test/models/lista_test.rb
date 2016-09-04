@@ -1,9 +1,9 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe Lista do
-  it "es válida" do
-    build(:lista).valid?.must_equal true
+  it 'es válida' do
+    build(:lista).must_be :valid?
   end
 
   it 'calcula la cantidad de cartas en todos los slots' do

@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
 describe 'NullRelation' do
   it 'debe devolver una relación vacía' do
