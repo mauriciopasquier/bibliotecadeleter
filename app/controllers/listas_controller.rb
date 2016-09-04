@@ -3,7 +3,7 @@ class ListasController < ApplicationController
   has_scope :pagina, default: 1
   has_scope :per, as: :mostrar, using: :cantidad
   has_scope :search, as: :q, type: :hash, default: { s: 'nombre asc' },
-    only: [ :index, :todo ]
+    only: [:index, :todo]
 
   load_and_authorize_resource :usuario, except: :todo
   load_and_authorize_resource through: :usuario, except: [:index, :todo]

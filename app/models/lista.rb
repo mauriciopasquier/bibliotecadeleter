@@ -18,8 +18,8 @@ class Lista < ActiveRecord::Base
 
   # Para copiar listas (y suplentes, principales, etc) de un usuario a otro
   amoeba do
-    nullify [ :usuario_id, :slug ]
-    clone [ :slots ]
+    nullify [:usuario_id, :slug]
+    clone [:slots]
     propagate
   end
 
@@ -35,8 +35,9 @@ class Lista < ActiveRecord::Base
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
 
-  multisearchable against: [ :nombre, :usuario_nombre, :nombres_de_las_cartas,
-    :notas ], if: :lista?
+  multisearchable against: [:nombre, :usuario_nombre, :nombres_de_las_cartas,
+    :notas],
+    if: :lista?
 
   # Agrupar y sumar los slots que referencian a una misma versión. Actualmente
   # sólo se garantiza la unicidad de versión si todos los slots se guardan a la
@@ -59,7 +60,7 @@ class Lista < ActiveRecord::Base
           elegido[:cantidad] += slot[:cantidad].to_i
           # Marcamos los ya sumados para destrucción
           slot[:_destroy] = true and slot
-        end + [ elegido ]
+        end + [elegido]
 
         destruir.collect(&:last) + sumados
       else

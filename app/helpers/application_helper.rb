@@ -26,7 +26,7 @@ module ApplicationHelper
       when /^devise\//
         case a = params[:action]
           when 'edit', 'new'
-            t "#{c.gsub('/','.')}.#{a}.titulo"
+            t "#{c.gsub('/', '.')}.#{a}.titulo"
           else
             nil
         end
@@ -68,12 +68,15 @@ module ApplicationHelper
   end
 
   def placeholder_del_arte(imagen)
-    [ "Lado #{imagen.nombre_de_cara}.",
-      'Si hay varios artistas, separalos con ','.'].join(' ')
+    [
+      "Lado #{imagen.nombre_de_cara}.",
+      'Si hay varios artistas, separalos con ', '.'
+    ].join(' ')
   end
 
   def busqueda
-    [ versiones_tipos,
+    [
+      versiones_tipos,
       'versiones_texto',
       'versiones_ambientacion',
       'nombre'

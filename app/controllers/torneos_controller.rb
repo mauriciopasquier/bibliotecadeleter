@@ -5,10 +5,10 @@ class TorneosController < ApplicationController
   has_scope :search, as: :q, type: :hash, default: { s: 'fecha asc' }, only: :index
 
   load_and_authorize_resource
-  skip_authorization_check only: [ :index, :show ]
+  skip_authorization_check only: [:index, :show]
 
   # TODO que funcione sin js
-  respond_to :json, only: [ :dropear ]
+  respond_to :json, only: [:dropear]
 
   def index
     @busqueda = apply_scopes @torneos

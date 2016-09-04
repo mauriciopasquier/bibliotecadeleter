@@ -18,10 +18,12 @@ module ListasHelper
   end
 
   def nuevo_slot
-    Slot.new( inventario_id: @lista.id,
-              inventario_type: @lista.class.name,
-              version: Version.new,
-              cantidad: 1)
+    Slot.new(
+      inventario_id: @lista.id,
+      inventario_type: @lista.class.name,
+      version: Version.new,
+      cantidad: 1
+    )
   end
 
   # Para acceder al modelo decorado. Si es necesario no decorarlo, está la

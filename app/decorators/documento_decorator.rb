@@ -35,7 +35,7 @@ class DocumentoDecorator < ApplicationDecorator
         when 'Version'
           h.en_expansion_carta_path(recurso.carta, recurso.expansion)
         when 'Lista', 'Mazo'
-          h.url_for [ recurso.usuario, recurso ]
+          h.url_for [recurso.usuario, recurso]
         else
           h.url_for recurso
       end

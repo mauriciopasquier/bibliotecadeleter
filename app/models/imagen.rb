@@ -24,7 +24,7 @@ class Imagen < ActiveRecord::Base
     convert_options: {
       # Remueve información de esquemas de colores y EXIF
       all: '-strip' },
-    processors: [ :cartas ]
+    processors: [:cartas]
 
   validates :archivo,
     attachment_content_type: { content_type: %w{image/jpeg image/png} }

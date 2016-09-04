@@ -33,10 +33,12 @@ module MazosHelper
   end
 
   def nuevo_slot(inventario, cantidad = 4)
-    Slot.new( version: Version.new,
-              inventario_id: inventario.id,
-              inventario_type: inventario.class.name,
-              cantidad: cantidad )
+    Slot.new(
+      version: Version.new,
+      inventario_id: inventario.id,
+      inventario_type: inventario.class.name,
+      cantidad: cantidad
+    )
   end
 
   def mazo

@@ -8,8 +8,10 @@ class SlotDecorator < ApplicationDecorator
   end
 
   def entrada
-    [ "#{object.cantidad} x ",
-      version.link_con_popup ].join.html_safe
+    [
+      "#{object.cantidad} x ",
+      version.link_con_popup
+    ].join.html_safe
   end
 
   def preparar

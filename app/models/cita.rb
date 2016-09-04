@@ -1,4 +1,5 @@
 # Todos fragmentos de la ambientación de cartas
+# TODO Convertir a ActiveRecord y guardar las citas en la bd
 class Cita
 
   DESTRUIR = [
@@ -14,7 +15,8 @@ class Cita
     'Destruiré mi hogar, para encontrar uno nuevo',
     'Todos los caminos conducen al olvido',
     'Nota mental: no conjurar rituales desconocidos en la biblioteca',
-    'El fuego purifica las escrituras. Sus palabras no serán compartidas jamás' ]
+    'El fuego purifica las escrituras. Sus palabras no serán compartidas jamás'
+  ]
 
   CREAR = [
     'La materia es energía, al igual que el conocimiento',
@@ -23,7 +25,8 @@ class Cita
     'Ya nos servirás luego...',
     'Disfruto ver como mis creaciones causan dolor',
     'La ciudad debe crecer, el bosque deberá buscar otro lugar',
-    'Oh señor mío, ¿nueva tarea tendrá usted?' ]
+    'Oh señor mío, ¿nueva tarea tendrá usted?'
+  ]
 
   ACTUALIZAR = [
     'La ignorancia es penada por ley',
@@ -33,7 +36,8 @@ class Cita
     '¿Eso es todo lo que tienes? ¡No me hagas reír!',
     'Una puerta abierta puede cruzarse en dos direcciones',
     'Lo bueno de estos artefactos, es que saben repararse solos',
-    'Atrás quedaron los días donde los caminantes viajaban largas distancias por nuevas noticias' ]
+    'Atrás quedaron los días donde los caminantes viajaban largas distancias por nuevas noticias'
+  ]
 
   NO_ENCONTRAR = [
     'Si desconoces lo que buscas, tu batalla ya ha terminado',

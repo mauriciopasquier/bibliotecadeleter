@@ -88,7 +88,7 @@ module PaginacionHelper
       hash = HashWithIndifferentAccess.new mostrar: { cantidad: cantidad }
       # Si el link se pasa del total por menos de una página
       if cantidad * (pagina - 1) >= total
-        hash.merge!( pagina: cantidad == total ? nil : total/cantidad + 1 )
+        hash.merge!(pagina: cantidad == total ? nil : total / cantidad + 1)
       end
       hash
     end

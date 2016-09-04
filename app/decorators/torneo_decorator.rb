@@ -26,8 +26,10 @@ class TorneoDecorator < ApplicationDecorator
         par.push object.bye
       end
 
-      [ par.first.decorate.preparar(par.last),
-        par.last.decorate.preparar(par.first) ]
+      [
+        par.first.decorate.preparar(par.last),
+        par.last.decorate.preparar(par.first)
+      ]
     end
     pairings
   end

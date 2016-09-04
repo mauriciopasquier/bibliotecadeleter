@@ -16,8 +16,10 @@ class VersionDecorator < ApplicationDecorator
 
   def link_con_popup
     h.link_to object.carta, title: nombre, class: 'link-con-popup' do
-      [ nombre,
-        h.content_tag(:span, tag, clases_del_popup) ].join.html_safe
+      [
+        nombre,
+        h.content_tag(:span, tag, clases_del_popup)
+      ].join.html_safe
     end
   end
 
@@ -91,7 +93,8 @@ class VersionDecorator < ApplicationDecorator
 
   def reserva_y_coleccion
     h.content_tag(:div, class: 'controles') do
-      [ control(h.reserva_actual, h.t('colecciones.quiero'), h.current_usuario),
+      [
+        control(h.reserva_actual, h.t('colecciones.quiero'), h.current_usuario),
         control(h.coleccion_actual, h.t('colecciones.tengo'), h.current_usuario)
       ].join.html_safe
     end
@@ -103,7 +106,7 @@ class VersionDecorator < ApplicationDecorator
     path = "update_slot_usuario_#{lista.class.name.downcase}_path"
 
     h.content_tag(:div, class: "control-#{tipo}") do
-      tags = [ h.content_tag(:span, texto, class: 'control-texto') ]
+      tags = [h.content_tag(:span, texto, class: 'control-texto')]
 
       if h.can? :edit, lista
         tags << h.link_to(ruta(path, objetos, cantidad: c + 1), method: :put,
@@ -172,6 +175,6 @@ class VersionDecorator < ApplicationDecorator
     end
 
     def clases_del_popup
-      { class: 'popup' + ( object.tipo == 'Escenario' ? ' escenario' : '') }
+      { class: 'popup' + (object.tipo == 'Escenario' ? ' escenario' : '') }
     end
 end

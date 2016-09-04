@@ -43,9 +43,11 @@ class ApplicationController < ActionController::Base
 
     def agregar_parametros_permitidos
       devise_parameter_sanitizer.for(:account_update) << [
-        :nick, :codigo, :nombre ]
+        :nick, :codigo, :nombre
+      ]
       devise_parameter_sanitizer.for(:sign_up) << [
-        :nick, :codigo, :nombre ]
+        :nick, :codigo, :nombre
+      ]
     end
 
     # Redirije hacia atrás o en caso de no existir, vuelve al inicio

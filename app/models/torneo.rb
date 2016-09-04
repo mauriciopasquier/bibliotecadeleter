@@ -14,19 +14,20 @@ class Torneo < ActiveRecord::Base
   # TODO congelar los mazos en Inscripcion?
   # has_many :mazos, through: :inscripciones
 
-  multisearchable against: [ :fecha, :direccion, :tienda_nombre,
-    :formato_nombre ], if: :persisted?
+  multisearchable against: [:fecha, :direccion, :tienda_nombre,
+    :formato_nombre],
+    if: :persisted?
 
   friendly_id :fecha_lugar_formato, use: :slugged
 
-  # TODO jugado => propuesto => [ sancionado o rechazado]
+  # TODO jugado => propuesto => [sancionado o rechazado]
   state_machine :estado, initial: :abierto do
     event :cerrar do
       transition :abierto => :cerrado
     end
 
     event :empezar do
-      transition [ :abierto, :cerrado, :jugando ] => :jugando
+      transition [:abierto, :cerrado, :jugando] => :jugando
     end
 
     event :puntuar do
@@ -35,7 +36,7 @@ class Torneo < ActiveRecord::Base
     end
 
     event :abrir do
-      transition [ :abierto, :cerrado, :jugando ] => :abierto
+      transition [:abierto, :cerrado, :jugando] => :abierto
     end
 
     event :deshacer do
@@ -53,7 +54,7 @@ class Torneo < ActiveRecord::Base
     end
 
     event :rechazar do
-      transition :reportado=> :jugado
+      transition :reportado => :jugado
     end
 
     before_transition on: :puntuar, do: :asignar_puntos

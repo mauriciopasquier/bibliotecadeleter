@@ -19,7 +19,7 @@ namespace :assets do
     manifest_data["assets"].each do |logical_path, digested_path|
       logical_pathname = Pathname.new logical_path
 
-      if Rails.configuration.nondigested_assets.any? {|testpath| logical_pathname.fnmatch?(testpath, File::FNM_PATHNAME) }
+      if Rails.configuration.nondigested_assets.any? { |testpath| logical_pathname.fnmatch?(testpath, File::FNM_PATHNAME) }
         full_digested_path    = File.join(asset_path, digested_path)
         full_nondigested_path = File.join(asset_path, logical_path)
 

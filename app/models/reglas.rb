@@ -75,7 +75,7 @@ class Reglas
       else
         mazo.versiones.where(
           Version.arel_table[:senda].not_in(
-            [ mazo.demonios.pluck(:senda).uniq + ['Neutral'] ]
+            [mazo.demonios.pluck(:senda).uniq + ['Neutral']]
           )
         ).empty?
       end

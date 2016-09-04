@@ -9,8 +9,10 @@ class SlotFichaDeRegistroDecorator < ApplicationDecorator
   end
 
   def completa
-    [ cantidad,
+    [
+      cantidad,
       Prawn::Text::NBSP * 15,
-      carta ].join
+      carta
+    ].join
   end
 end

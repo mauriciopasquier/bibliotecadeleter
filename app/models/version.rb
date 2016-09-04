@@ -38,15 +38,16 @@ class Version < ActiveRecord::Base
   delegate :nombre_y_expansiones, to: :carta, allow_nil: true
   delegate :nombre, to: :expansion, allow_nil: true, prefix: true
 
-  multisearchable against: [ :coste, :nombre, :tipo, :supertipo, :subtipo,
+  multisearchable against: [:coste, :nombre, :tipo, :supertipo, :subtipo,
     :senda, :texto, :ambientacion, :fue, :res, :expansion_nombre, :rareza,
-    :arte ], if: :persisted?
+    :arte],
+    if: :persisted?
 
   # Para copiar una versión sin expansión ni imágenes, por ejemplo para las
   # reediciones
   amoeba do
     exclude_association :imagenes
-    nullify [ :expansion_id, :slug, :numero ]
+    nullify [:expansion_id, :slug, :numero]
   end
 
   def self.no_fichas

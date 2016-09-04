@@ -20,11 +20,13 @@ class ExpansionDecorator < ApplicationDecorator
   end
 
   def logo
-    [ h.image_tag(object.base.logo.url, class: 'lazy', lazy: true),
+    [
+      h.image_tag(object.base.logo.url, class: 'lazy', lazy: true),
 
       h.content_tag(:noscript) do
         h.rails_image_tag(object.base.logo.url)
-      end ].join.html_safe
+      end
+    ].join.html_safe
   end
 
   # Código con fallback a nombre

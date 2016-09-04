@@ -15,9 +15,9 @@ class Diseno < ActiveRecord::Base
 
   friendly_id :nombre, use: :scoped, scope: :usuario
 
-  multisearchable against: [ :coste, :nombre, :tipo, :supertipo, :subtipo,
-    :senda, :texto, :ambientacion, :fue, :res, :usuario_nombre
-    ], if: :persisted?
+  multisearchable against: [:coste, :nombre, :tipo, :supertipo, :subtipo,
+    :senda, :texto, :ambientacion, :fue, :res, :usuario_nombre],
+    if: :persisted?
 
   delegate :nombre, to: :usuario, allow_nil: true, prefix: true
 

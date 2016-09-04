@@ -2,7 +2,7 @@
 class Formato < ActiveRecord::Base
   include FriendlyId
 
-  TIPOS = [ 'Abierto', 'Cerrado' ]
+  TIPOS = ['Abierto', 'Cerrado']
 
   has_and_belongs_to_many :expansiones
   has_many :mazos_dedicados, inverse_of: :formato_objetivo

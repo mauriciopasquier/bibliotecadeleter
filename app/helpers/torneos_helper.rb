@@ -30,9 +30,9 @@ module TorneosHelper
       previos = params[:estado] || []
 
       proximos = if previos.include? estado
-        previos - [ estado ]
+        previos - [estado]
       else
-        previos + [ estado ]
+        previos + [estado]
       end
 
       link_to estado, proximos.any? ? torneos_path(estado: proximos) : torneos_path,

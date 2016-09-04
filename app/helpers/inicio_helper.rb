@@ -3,8 +3,8 @@ module InicioHelper
   def buscar_demonios
     cartas_busqueda_path(
       incluir: [versiones_tipos],
-      q: {  busqueda => 'demonio',
-            'versiones_senda_eq_any' => sendas } )
+      q: { busqueda => 'demonio', 'versiones_senda_eq_any' => sendas }
+    )
   end
 
   def titulo

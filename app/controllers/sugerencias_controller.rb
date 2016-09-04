@@ -3,8 +3,8 @@ class SugerenciasController < ApplicationController
   autocompletar_valores :version, :tipo, :supertipo, :subtipo
   autocompletar_valores :torneo, :juez_principal
   autocompletar_valores :inscripcion, :codigo, :participante,
-    incluir: [ :codigo, :participante ]
-  autocompletar_valores :tienda, :nombre, incluir: [ :nombre, :direccion ]
+    incluir: [:codigo, :participante]
+  autocompletar_valores :tienda, :nombre, incluir: [:nombre, :direccion]
 
   skip_authorization_check
   respond_to :json
