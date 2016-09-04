@@ -128,7 +128,7 @@ Rails.application.routes.draw do
       r.resources :disenos
 
       resource :coleccion, path_names: femeninos,
-        only: [ :show, :update, :edit ] do
+        only: [:show, :update, :edit] do
         get :faltantes
         get :sobrantes
         put 'update_slot'

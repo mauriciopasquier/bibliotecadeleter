@@ -14,8 +14,8 @@ describe Version do
     carta = create(:carta, :con_versiones, cantidad_de_versiones: 3)
     versiones = carta.reload.versiones
     versiones.must_include carta.canonica
-    versiones.collect(&:canonica).count {|c| c}.must_equal 1
-    versiones.collect(&:canonica).count {|c| !c}.must_equal 2
+    versiones.collect(&:canonica).count { |c| c }.must_equal 1
+    versiones.collect(&:canonica).count { |c| !c }.must_equal 2
   end
 
   it 'el coste convertido debe derivarse del coste' do

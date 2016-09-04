@@ -3,7 +3,7 @@
   .span2= @uno.nombre_o_usuario
   = f.fields_for :inscripciones, @uno do |fi|
     .span1
-      = fi.fields_for :rondas, @uno.rondas.select {|r| r.numero == torneo.ronda_actual} do |fir|
+      = fi.fields_for :rondas, @uno.rondas.select { |r| r.numero == torneo.ronda_actual } do |fir|
         = fir.text_field :partidas_ganadas, class: 'span12 puntos a',
           disabled: @otro.bye?
         -# Los inputs deshabilitados no se envían, asique duplico acá el valor

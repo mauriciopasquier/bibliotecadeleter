@@ -1,4 +1,4 @@
-# Every time assets:precompile is called, trigger nondigested compilation afterwards. 
+# Every time assets:precompile is called, trigger nondigested compilation afterwards.
 Rake::Task['assets:precompile'].enhance do
   Rake::Task['assets:nondigested'].invoke
 end

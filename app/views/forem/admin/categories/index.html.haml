@@ -23,7 +23,7 @@
             .texto= link_to forem_emojify(category.name), [forem, category]
 
       .span4.foros.hidden-phone
-        = category.forums.collect {|f| link_to f.name, f}.to_sentence.html_safe
+        = category.forums.collect { |f| link_to f.name, f }.to_sentence.html_safe
 
 .row-fluid.botones
   .span12

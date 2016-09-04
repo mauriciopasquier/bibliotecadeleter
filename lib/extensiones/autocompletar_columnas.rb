@@ -56,7 +56,8 @@ module AutocompletarColumnas
 
         define_method("valores_#{modelo}_#{columna}") do
           valores = modelo.to_s.classify.constantize.select(
-            [ "distinct #{columna} as value",
+            [
+              "distinct #{columna} as value",
               *incluir
             ].join(', ')
           )

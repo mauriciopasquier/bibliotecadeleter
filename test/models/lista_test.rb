@@ -8,7 +8,7 @@ describe Lista do
 
   it 'calcula la cantidad de cartas en todos los slots' do
     lista = create(:lista_con_slots, cantidad: 5)
-    lista.slots.inject(0) {|t, s| t += s.cantidad }.must_equal lista.cantidad
+    lista.slots.inject(0) { |t, s| t += s.cantidad }.must_equal lista.cantidad
   end
 
   describe '#slot_attributes' do
