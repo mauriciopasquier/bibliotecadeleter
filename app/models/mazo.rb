@@ -84,7 +84,7 @@ class Mazo < ActiveRecord::Base
 
   def cartas_contadas
     if hay_cambios_en_las_listas?
-      totales = if suplente.present?
+      totales_suplente = if suplente.present?
         suplente.slots.inject(Hash.new(0)) do |totales, slot|
           totales[slot.version_id] += slot.cantidad and totales
         end
@@ -92,7 +92,7 @@ class Mazo < ActiveRecord::Base
         Hash.new(0)
       end
 
-      principal.slots.inject(totales) do |totales, slot|
+      principal.slots.inject(totales_suplente) do |totales, slot|
         totales[slot.version_id] += slot.cantidad and totales
       end
     else

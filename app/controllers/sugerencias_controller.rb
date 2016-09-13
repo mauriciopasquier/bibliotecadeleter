@@ -55,7 +55,9 @@ class SugerenciasController < ApplicationController
     end
 
     def sendas_pedidas
-      if (sendas = Array.wrap(params[:sendas])).any?
+      sendas = Array.wrap(params[:sendas])
+
+      if sendas.any?
         { versiones: { senda: sendas.map(&:capitalize) } }
       else
         { }

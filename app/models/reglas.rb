@@ -94,8 +94,8 @@ class Reglas
   def cartas_permitidas?
     if formato.cartas_prohibidas.any?
       if mazo.hay_cambios_en_las_listas?
-        cartas = mazo.slots_actuales.inject([]) do |cartas, slot|
-          cartas << slot.version.carta and cartas
+        cartas = mazo.slots_actuales.inject([]) do |lista, slot|
+          lista << slot.version.carta and lista
         end
 
         formato.cartas_prohibidas.count == (formato.cartas_prohibidas - cartas).count

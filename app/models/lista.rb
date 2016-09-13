@@ -42,8 +42,8 @@ class Lista < ActiveRecord::Base
   # Agrupar y sumar los slots que referencian a una misma versión. Actualmente
   # sólo se garantiza la unicidad de versión si todos los slots se guardan a la
   # vez
-  def slots_attributes=(slots)
-    agrupados = slots.group_by do |_, v|
+  def slots_attributes=(slots_params)
+    agrupados = slots_params.group_by do |_, v|
       v[:version_id]
     end.collect do |version_id, slots|
       # Los marcados para destrucción no se suman pero deben 'guardarse'

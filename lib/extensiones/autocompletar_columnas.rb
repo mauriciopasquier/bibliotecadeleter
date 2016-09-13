@@ -22,10 +22,8 @@ module AutocompletarColumnas
 
     # Arma el json y lo devuelve
     def autocompletar(resultados, llave, valor, label = nil, otros = [])
-      h = resultados.inject({}) do |hash, elem|
-
-        hash[elem.send(llave)] = {
-
+      h = resultados.inject({}) do |elementos, elem|
+        elementos[elem.send(llave)] = {
           label: elem.send(label || valor),
           value: elem.send(valor),
           id: elem.send(llave)
@@ -35,8 +33,9 @@ module AutocompletarColumnas
           hash
         end)
 
-        hash
+        elementos
       end
+
       render json: h
     end
 

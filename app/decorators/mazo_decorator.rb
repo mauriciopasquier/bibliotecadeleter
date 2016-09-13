@@ -32,7 +32,9 @@ class MazoDecorator < ListaDecorator
   end
 
   def link_al_formato
-    if formato = object.formato_objetivo.try(:nombre)
+    formato = object.formato_objetivo.try(:nombre)
+
+    if formato.present?
       h.link_to formato, formato_objetivo
     else
       'Casual'

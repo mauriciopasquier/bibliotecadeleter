@@ -56,8 +56,9 @@ class Imagen < ActiveRecord::Base
   # TODO testear
   def actualizar_path(viejo_nombre, nuevo_nombre)
     Imagen.estilos.each do |estilo|
+      nuevo = archivo.path(estilo)
 
-      if nuevo = archivo.path(estilo)
+      if nuevo.present?
         viejo = nuevo.gsub nuevo_nombre, viejo_nombre
         File.rename(viejo, nuevo) if File.exists?(viejo)
       end

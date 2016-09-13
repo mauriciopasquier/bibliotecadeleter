@@ -16,7 +16,9 @@ module SlugsDependientesEnAsociaciones
 
     # Trata de regenera el slug de todos los registros asociados
     def regenerar_asociacion(asociacion)
-      if as = self.send(asociacion)
+      as = self.send(asociacion)
+
+      if as.present?
         # Si es un modelo
         if as.respond_to? :regenerar_slug
           as.regenerar_slug
