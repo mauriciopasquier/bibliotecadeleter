@@ -1,9 +1,0 @@
-
----
-forem_groups:
-  columns:
-  - id
-  - name
-  records: 
-  - - '1'
-    - Bibliotecarios
