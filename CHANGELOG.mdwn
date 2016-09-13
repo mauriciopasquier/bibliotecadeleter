@@ -4,7 +4,13 @@
 [2013](/cambios/2013) \|
 [2014](/cambios/2014) \|
 [2015](/cambios/2015) \|
+[2016](/cambios/2016) \|
 [todos](/cambios)
+
+## 13/09/2016
+
+- Varios arreglos internos en el código y el server
+- Adiós a los foros
 
 ## 26/10/2015
 
@@ -97,7 +103,7 @@
 
 ### Mejoras
 
-- Hay [foros][]!!!
+- Hay foros!!!
 - Actualización general del sistema... si no podés loguearte por alguna razón
   probá borrando las cookies
 
@@ -291,7 +297,6 @@
 
 [socios]: http://bibliotecadeleter.com.ar/socios
 [sobre]: http://bibliotecadeleter.com.ar/expansiones/origen/sobre
-[foros]: http://bibliotecadeleter.com.ar/antesala
 [mazos]: http://bibliotecadeleter.com.ar/mazos
 [Grímnir]: http://bibliotecadeleter.com.ar/cartas/grimnir-lider-de-la-rebelion/origen
 [Adoratriz]: http://bibliotecadeleter.com.ar/cartas/adoratriz-del-bosque-antiguo

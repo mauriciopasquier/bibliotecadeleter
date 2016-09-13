@@ -1,0 +1,13 @@
+# Cambios en el 2016
+
+[2012](/cambios/2012) \|
+[2013](/cambios/2013) \|
+[2014](/cambios/2014) \|
+[2015](/cambios/2015) \|
+[2016](/cambios/2016) \|
+[todos](/cambios)
+
+## 13/09/2016
+
+- Varios arreglos internos en el código y el server
+- Adiós a los foros

@@ -4,6 +4,7 @@
 [2013](/cambios/2013) \|
 [2014](/cambios/2014) \|
 [2015](/cambios/2015) \|
+[2016](/cambios/2016) \|
 [todos](/cambios)
 
 ## 01/12/2014
@@ -77,7 +78,7 @@
 
 ### Mejoras
 
-- Hay [foros][]!!!
+- Hay foros!!!
 - Actualización general del sistema... si no podés loguearte por alguna razón
   probá borrando las cookies
 
@@ -87,7 +88,6 @@
 - Se pueden recorrer todas las listas (cartas, artistas, expansiones, etc) con
   las flechas del teclado
 
-[foros]: http://bibliotecadeleter.com.ar/antesala
 [Grímnir]: http://bibliotecadeleter.com.ar/cartas/grimnir-lider-de-la-rebelion/origen
 [Adoratriz]: http://bibliotecadeleter.com.ar/cartas/adoratriz-del-bosque-antiguo
 [Origen]: http://bibliotecadeleter.com.ar/expansiones/origen
