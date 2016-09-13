@@ -23,7 +23,7 @@
   - else
     = f.fields_for :inscripciones, @otro do |fi|
       .span1
-        = fi.fields_for :rondas, @otro.rondas.select {|r| r.numero == torneo.ronda_actual} do |fir|
+        = fi.fields_for :rondas, @otro.rondas.select { |r| r.numero == torneo.ronda_actual } do |fir|
           = fir.text_field :partidas_ganadas, class: 'span12 puntos b'
           = fir.hidden_field :oponente_id
           = fir.hidden_field :id
