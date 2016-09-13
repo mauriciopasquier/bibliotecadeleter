@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  mount Forem::Engine, at: '/antesala'
-
   if Rails.env.development?
     mount MailView => 'mail'
   end

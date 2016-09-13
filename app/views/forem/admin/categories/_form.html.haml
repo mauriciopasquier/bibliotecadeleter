@@ -1,9 +1,0 @@
-= form_for [forem, :admin, @category], html: { class: 'form category' } do |f|
-  .row-fluid
-    .span12
-      = f.label :name
-      = f.text_field :name, class: 'span12', required: true, autofocus: true
-
-  .row-fluid.botones
-    .span12
-      = f.submit class: "btn btn-success"

@@ -53,9 +53,6 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'i18n_country_select'
 
-gem 'forem', github: 'radar/forem', branch: 'rails4'
-gem 'forem-redcarpet'
-
 # Development
 gem 'minitest-rails'
 gem 'awesome_print'
