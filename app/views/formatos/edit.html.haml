@@ -4,7 +4,7 @@
 
 .row-fluid.botones
   .span12
-    - if can? :read, formato
+    - if can? :read, @formato
       = link_to 'Ver', formato, class: 'btn'
     - if can? :read, Formato
       = link_to 'Todos los formatos', formatos_path, class: 'btn'

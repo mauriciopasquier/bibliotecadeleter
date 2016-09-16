@@ -28,6 +28,7 @@ class Ability
 
   private
 
+    # :manage es cualquier acción, no sólo CRUD
     def bibliotecario
       can :manage, canones
     end
