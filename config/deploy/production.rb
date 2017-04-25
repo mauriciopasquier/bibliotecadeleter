@@ -7,6 +7,6 @@ set :deploy_to, '/srv/http/bibliotecadeleter.com.ar'
 set :passenger_restart_with_touch, true
 
 set :default_env, {
-  path: '~/.gem/ruby/2.3.0/bin:$PATH',
-  gem_home: '~/.gem/ruby/2.3.0'
+  path: '/home/apps/.rbenv/versions/2.4.1/bin/:$PATH',
+  gem_home: '/home/apps/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0'
 }
