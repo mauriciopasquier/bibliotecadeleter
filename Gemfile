@@ -6,7 +6,7 @@ gem 'rails', '4.1.13'
 gem 'pg'
 gem 'pg_search'
 # Rama con un parche para que las join tables salgan ordenadas
-gem 'yaml_db', github: 'mauriciopasquier/yaml_db', branch: 'order-join-tables'
+gem 'yaml_db'
 
 # Model
 gem 'attribute_normalizer'
