@@ -5,7 +5,6 @@ gem 'rails', '4.1.13'
 # Database
 gem 'pg'
 gem 'pg_search'
-# Rama con un parche para que las join tables salgan ordenadas
 gem 'yaml_db'
 
 # Model
