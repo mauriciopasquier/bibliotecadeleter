@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.13'
+# FIXME 4.2.8 es la primera en soportar ruby 2.4
+gem 'rails', '4.2.8'
 
 # Database
 gem 'pg'

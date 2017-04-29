@@ -17,10 +17,3 @@ Rake::Task['extension:unaccent'].invoke
 %w{Diseno Mazo Lista Version Expansion Artista Torneo}.each do |modelo|
   Rake::Task['pg_search:multisearch:rebuild'].invoke(modelo)
 end
-
-# Agregar bibliotecarios al grupo de forem
-bs = Forem::Group.find_by(name: 'Bibliotecarios')
-BIBLIOTECARIO.usuarios.each do |b|
-  bs.members << b unless bs.members.include? b
-  b.update(forem_admin: true, forem_state: 'approved')
-end

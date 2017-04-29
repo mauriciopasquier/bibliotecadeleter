@@ -1,19 +1,16 @@
-# encoding: utf-8
-require './test/test_helper'
+require 'test_helper'
 
 describe VersionDecorator do
+  subject { build(:version).decorate }
 
   describe '#control' do
-    before do
-      @deco = build(:version).decorate
-      @usuario = create(:usuario)
-    end
+    let(:usuario) { create(:usuario) }
 
     it 'genera el marcado necesario para agregar/remover' do
       skip 'stubear current_usuario'
       [ :coleccion, :reserva ].each do |tipo|
 
-        render text: @deco.control(@usuario.send(tipo), 'Texto')
+        render text: subject.control(usuario.send(tipo), 'Texto')
 
         [ ".control-#{tipo} .update-listas.agregar",
           ".control-#{tipo} span.cantidad",
@@ -24,8 +21,6 @@ describe VersionDecorator do
   end
 
   describe '#preparar' do
-    subject { build(:version).decorate }
-
     it 'se devuelve decorada' do
       subject.preparar.must_be_same_as subject
     end

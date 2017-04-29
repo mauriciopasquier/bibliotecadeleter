@@ -39,6 +39,9 @@ module BibliotecaDelEter
     # like if you have constraints or database-specific column types
     # config.active_record.schema_format = :sql
 
+    # Lanzar errores en callbacks
+    config.active_record.raise_in_transactional_callbacks = true
+
     config.generators do |g|
       g.test_framework :mini_test, spec: true, fixture: false
       g.stylesheets false

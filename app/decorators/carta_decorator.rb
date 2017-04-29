@@ -1,4 +1,3 @@
-# encoding: utf-8
 class CartaDecorator < ApplicationDecorator
   with_options with: PaginadorDecorator do |d|
     d.decorates_association :versiones
@@ -21,6 +20,6 @@ class CartaDecorator < ApplicationDecorator
 
   # Las cartas con nombre doble quedan larguísimas en todas partes, usamos sólo el primero
   def nombre
-    object.nombre.split(' / ').first
+    object.nombre && object.nombre.split(' / ').first
   end
 end

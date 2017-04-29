@@ -116,7 +116,7 @@ class TorneosController < ApplicationController
       params.require(:numero)
     end
 
-    def interpolation_options
+    def flash_interpolation_options
       super.merge del: 'del'
     end
 end

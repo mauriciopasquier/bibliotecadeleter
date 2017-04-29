@@ -48,7 +48,8 @@ class Lista < ActiveRecord::Base
     end.collect do |version_id, slots|
       # Los marcados para destrucción no se suman pero deben 'guardarse'
       destruir, sumar = slots.partition do |_, v|
-        ActiveRecord::ConnectionAdapters::Column.value_to_boolean v[:_destroy]
+        # FIXME No depender de internals de rails
+        ActiveRecord::ConnectionAdapters::Column::TRUE_VALUES.include? v[:_destroy]
       end
 
       if sumar.any?
