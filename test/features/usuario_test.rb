@@ -1,13 +1,12 @@
-# encoding: utf-8
-require "./test/test_helper"
+require './test/test_helper'
 
-feature "Usuario" do
-  feature "anónimamente" do
+feature 'Usuario' do
+  feature 'anónimamente' do
 
-    scenario "visita la bienvenida" do
+    scenario 'visita la bienvenida' do
       visit root_path
 
-      page.must_have_content "Bienvenido mortal"
+      page.must_have_content 'Bienvenido mortal'
       page.must_have_link nil, href: legales_path
       page.must_have_link nil, href: Rails.configuration.sitio_oficial
       page.must_have_link nil, href: new_usuario_registration_path
@@ -33,11 +32,11 @@ feature "Usuario" do
     end
   end
 
-  feature "logueado" do
+  feature 'logueado' do
     background { @usuario = loguearse }
     after { logout }
 
-    scenario "visita la bienvenida" do
+    scenario 'visita la bienvenida' do
       visit root_path
 
       page.must_have_link nil, href: legales_path
@@ -47,7 +46,7 @@ feature "Usuario" do
       page.must_have_field "q_#{busqueda}"
     end
 
-    scenario "visita su panel" do
+    scenario 'visita su panel' do
       visit usuario_path(@usuario)
 
       current_path.must_equal usuario_path(@usuario)

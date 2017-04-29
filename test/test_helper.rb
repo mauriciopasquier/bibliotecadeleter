@@ -87,9 +87,9 @@ class Capybara::Rails::TestCase
   end
 end
 
-# Registrando el driver podemos pasar opciones como el profile a usar
+# Registrando el driver podemos pasar opciones
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new app, browser: :firefox, profile: 'selenium'
+  Capybara::Selenium::Driver.new app, browser: :chrome, args: ['--incognito']
 end
 
 class Draper::TestCase

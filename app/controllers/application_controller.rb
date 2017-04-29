@@ -105,7 +105,7 @@ class ApplicationController < ActionController::Base
     end
 
     # Para los mensajes de responders. Tenemos mayoría de modelos femeninos
-    def interpolation_options
+    def flash_interpolation_options
       {
         del: 'de la',
         cita_crear: Cita.random_para(:crear),
